@@ -208,3 +208,19 @@ function removePopup() {
 }
 
 // ---------------------------------------------------------------------------------------------
+// Slick Slider
+
+$(document).ready(function () {
+  $(".slider-thumbnails").slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: ".slider",
+    focusOnSelect: true,
+  });
+
+  $(".slider").slick({
+    infinite: false,
+    asNavFor: ".slider-thumbnails",
+  });
+});

@@ -2,10 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joglo</title>
 
+    <!-- Build Css -->
+    <link rel="stylesheet" href="dist/output.css" />
+
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,21 +16,176 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="dist/output.css" />
-
+    <!-- MapBox GL -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
       rel="stylesheet"
     />
 
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <style>
+      .product {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .product {
+          flex-direction: row;
+        }
+
+        .product-images {
+          width: 50%;
+        }
+
+        .product-description {
+          margin-left: 36px;
+        }
+      }
+
+      /* Thumbnails Slider */
+      .slider-thumbnails {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+
+      .slider-thumbnails .slick-slide {
+        padding: 15px;
+        transition: transform 0.3s ease-out;
+      }
+
+      .slider-thumbnails .slick-slide:focus img {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+      }
+
+      .slider-thumbnails .slick-slide img {
+        max-width: 100%;
+        border: solid 5px #fff;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.3s ease-out;
+        border-radius: 3px;
+      }
+
+      /* Main Slider */
+      .slider {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        border: solid 9px #fff;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        border-radius: 5px;
+      }
+
+      .slider .slick-slide {
+      }
+
+      .slider .slick-slide img {
+        width: 100%;
+      }
+
+      /* make button larger and change their positions */
+      .slick-prev,
+      .slick-next {
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+      }
+
+      .slick-prev {
+        left: 5px;
+      }
+
+      .slick-next {
+        right: 5px;
+      }
+
+      .slick-prev:before,
+      .slick-next:before {
+        font-size: 40px;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+
+      /* General slick slider styling */
+      .slick-slide:focus,
+      .slick-slide:focus {
+        outline: none;
+        /* remove default outline when on :focus */
+      }
+
+      /* hide dots and arrow buttons when slider is not hovered */
+      .slick-slider:not(:hover) .slick-arrow,
+      .slick-slider:not(:hover) .slick-dots {
+        opacity: 0;
+      }
+
+      /* transition effects for opacity */
+      .slick-arrow {
+        transition: opacity 0.5s ease-out;
+      }
+
+      /* Style Scrollbar */
+
+      .scrollbar-firefox {
+        overflow-y: scroll;
+        scrollbar-width: thin;
+      }
+
+      .scrollbar::-webkit-scrollbar-track-piece:end {
+        background: transparent;
+      }
+
+      .scrollbar::-webkit-scrollbar-track-piece:start {
+        background: transparent;
+      }
+
+      .scrollbar::-webkit-scrollbar {
+        width: 5px;
+        height: auto;
+      }
+
+      .scrollbar::-webkit-scrollbar-track {
+        border-radius: 100vh;
+        display: none;
+      }
+
+      .scrollbar::-webkit-scrollbar-thumb {
+        background: rgb(161 161 170);
+        border-radius: 100vh;
+        border: 2px solid rgb(161 161 170);
+        /* margin-top: 10% !important;
+        top: 20% !important; */
+        position: relative !important;
+      }
+    </style>
+
+    <!--  -->
     <!-- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
-
   </head>
-
   <body class="">
-<div class="min-h-screen bg-gray-100 flex flex-col">
-      <!-- Header -->
+    <div class="min-h-screen bg-gray-100 flex flex-col">
       <!-- Section1 -->
       <div
         class="w-full h-20 bg-slate-50 flex flex-row items-center justify-between px-10"
@@ -391,7 +549,6 @@
           Save Search
         </button>
       </div>
-
       <!-- Section3 -->
       <div class="flex-grow grid grid-cols-2">
         <div class="">
@@ -399,8 +556,9 @@
             <div id="map" class="w-full h-full shadow-lg"></div>
           </div>
         </div>
-        <div class="px-4 pt-6 flex flex-col">
-          <div class="h-[77vh] overflow-y-auto border border-red-500">
+        <div class="px-4 pt-3 flex flex-col">
+          <!-- Bagan Card Info -->
+          <div class="h-[79vh] overflow-y-auto hidden">
             <div class="font-semibold text-xl">Real Estate & Homes Forsale</div>
             <div class="flex flex-row justify-between items-center mt-1">
               <div class="font-semibold">500 Result</div>
@@ -467,120 +625,462 @@
                 </div>
               </div>
             </div>
-
             <div class="mt-2 grid grid-cols-2 gap-y-4">
-              <!--  -->
-              <div
-                class="w-[22.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
-              data-card-map="1534" onmouseenter="getDataCard(this)" onmouseleave="removePopup()">
-                <a href="#">
-                  <img
-                    class="rounded-t-lg"
-                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                    alt=""
-                  />
-                </a>
-                <div class="p-5">
+              <!-- Card 1 -->
+              <div class="mt-2 grid grid-cols-2 gap-y-4">
+                <div
+                  class="w-[22.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
+                  data-card-map="1534"
+                  onmouseenter="getDataCard(this)"
+                  onmouseleave="removePopup()"
+                >
                   <a href="#">
-                    <h5
-                      class="mb-2 text-xl font-bold tracking-tight text-gray-900"
-                    >
-                      Home 1
-                    </h5>
+                    <img
+                      class="rounded-t-lg"
+                      src="https://flowbite.com/docs/images/blog/image-1.jpg"
+                      alt=""
+                    />
                   </a>
-                  <p class="mb-3 font-normal text-gray-700">
-                    <p class="line-clamp-3">
-                    #1 Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aspernatur placeat in aliquam nam, nulla expedita ex dignissimos deserunt qui harum sequi atque modi quaerat eaque iusto quibusdam laborum iste.
-                    </p>
-
-                  </p>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5
+                        class="mb-2 text-xl font-bold tracking-tight text-gray-900"
+                      >
+                        Home 1
+                      </h5>
+                    </a>
+                    <div class="mb-3 font-normal text-gray-700">
+                      <p class="line-clamp-3">
+                        #1 Here are the biggest enterprise technology
+                        acquisitions of 2021 so far, in reverse chronological
+                        order. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Adipisci aspernatur placeat in aliquam
+                        nam, nulla expedita ex dignissimos deserunt qui harum
+                        sequi atque modi quaerat eaque iusto quibusdam laborum
+                        iste.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div
-                class="w-[22.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map" data-card-map="1399"
-              onmouseenter="getDataCard(this)" onmouseleave="removePopup()">
-                <a href="#">
-                  <img
-                    class="rounded-t-lg"
-                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                    alt=""
-                  />
-                </a>
-                <div class="p-5">
+              <!-- Card 2 -->
+              <div class="mt-2 grid grid-cols-2 gap-y-4">
+                <div
+                  class="w-[22.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
+                  data-card-map="1399"
+                  onmouseenter="getDataCard(this)"
+                  onmouseleave="removePopup()"
+                >
                   <a href="#">
-                    <h5
-                      class="mb-2 text-xl font-bold tracking-tight text-gray-900"
-                    >
-                      Home 2
-                    </h5>
+                    <img
+                      class="rounded-t-lg"
+                      src="https://flowbite.com/docs/images/blog/image-1.jpg"
+                      alt=""
+                    />
                   </a>
-                  <p class="mb-3 font-normal text-gray-700">
-                    <p class="line-clamp-3">
-                    #2 Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aspernatur placeat in aliquam nam, nulla expedita ex dignissimos deserunt qui harum sequi atque modi quaerat eaque iusto quibusdam laborum iste.
-                    </p>
-
-                  </p>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5
+                        class="mb-2 text-xl font-bold tracking-tight text-gray-900"
+                      >
+                        Home 1
+                      </h5>
+                    </a>
+                    <div class="mb-3 font-normal text-gray-700">
+                      <p class="line-clamp-3">
+                        #1 Here are the biggest enterprise technology
+                        acquisitions of 2021 so far, in reverse chronological
+                        order. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Adipisci aspernatur placeat in aliquam
+                        nam, nulla expedita ex dignissimos deserunt qui harum
+                        sequi atque modi quaerat eaque iusto quibusdam laborum
+                        iste.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <!--  -->
-              <div
-                class="w-[22.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
-                data-card-map="1076" onmouseenter="getDataCard(this)" onmouseleave="removePopup()">
-                <a href="#">
-                  <img
-                    class="rounded-t-lg"
-                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                    alt=""
-                  />
-                </a>
-                <div class="p-5">
+              <!-- Card 3 -->
+              <div class="mt-2 grid grid-cols-2 gap-y-4">
+                <div
+                  class="w-[22.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
+                  data-card-map="1076"
+                  onmouseenter="getDataCard(this)"
+                  onmouseleave="removePopup()"
+                >
                   <a href="#">
-                    <h5
-                      class="mb-2 text-xl font-bold tracking-tight text-gray-900"
-                    >
-                      Home 3
-                    </h5>
+                    <img
+                      class="rounded-t-lg"
+                      src="https://flowbite.com/docs/images/blog/image-1.jpg"
+                      alt=""
+                    />
                   </a>
-                  <p class="mb-3 font-normal text-gray-700">
-                    <p class="line-clamp-3">
-                    #1 Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aspernatur placeat in aliquam nam, nulla expedita ex dignissimos deserunt qui harum sequi atque modi quaerat eaque iusto quibusdam laborum iste.
-                    </p>
-
-                  </p>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5
+                        class="mb-2 text-xl font-bold tracking-tight text-gray-900"
+                      >
+                        Home 1
+                      </h5>
+                    </a>
+                    <div class="mb-3 font-normal text-gray-700">
+                      <p class="line-clamp-3">
+                        #1 Here are the biggest enterprise technology
+                        acquisitions of 2021 so far, in reverse chronological
+                        order. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Adipisci aspernatur placeat in aliquam
+                        nam, nulla expedita ex dignissimos deserunt qui harum
+                        sequi atque modi quaerat eaque iusto quibusdam laborum
+                        iste.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div
-                class="w-[22.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map" data-card-map="852"
-              onmouseenter="getDataCard(this)" onmouseleave="removePopup()">
-                <a href="#">
-                  <img
-                    class="rounded-t-lg"
-                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                    alt=""
-                  />
-                </a>
-                <div class="p-5">
+              <!-- Card 4 -->
+              <div class="mt-2 grid grid-cols-2 gap-y-4">
+                <div
+                  class="w-[22.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
+                  data-card-map="852"
+                  onmouseenter="getDataCard(this)"
+                  onmouseleave="removePopup()"
+                >
                   <a href="#">
-                    <h5
-                      class="mb-2 text-xl font-bold tracking-tight text-gray-900"
-                    >
-                      Home 4
-                    </h5>
+                    <img
+                      class="rounded-t-lg"
+                      src="https://flowbite.com/docs/images/blog/image-1.jpg"
+                      alt=""
+                    />
                   </a>
-                  <p class="mb-3 font-normal text-gray-700">
-                    <p class="line-clamp-3">
-                    #2 Here are the biggest enterprise technology acquisitions of
-                    2021 so far, in reverse chronological order. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aspernatur placeat in aliquam nam, nulla expedita ex dignissimos deserunt qui harum sequi atque modi quaerat eaque iusto quibusdam laborum iste.
-                    </p>
-
-                  </p>
+                  <div class="p-5">
+                    <a href="#">
+                      <h5
+                        class="mb-2 text-xl font-bold tracking-tight text-gray-900"
+                      >
+                        Home 1
+                      </h5>
+                    </a>
+                    <div class="mb-3 font-normal text-gray-700">
+                      <p class="line-clamp-3">
+                        #1 Here are the biggest enterprise technology
+                        acquisitions of 2021 so far, in reverse chronological
+                        order. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Adipisci aspernatur placeat in aliquam
+                        nam, nulla expedita ex dignissimos deserunt qui harum
+                        sequi atque modi quaerat eaque iusto quibusdam laborum
+                        iste.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <!--  -->
+            </div>
+          </div>
+          <!-- Bagan  Card Detail -->
+          <div class="h-[79vh] overflow-y-auto scrollbar scrollbar-firefox">
+            <div class="flex flex-col">
+              <!-- Konten Card -->
+              <div class="container">
+                <div class="product">
+                  <div class="product-images">
+                    <div class="slider">
+                      <div>
+                        <img
+                          data-lazy="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                          alt="Image 1"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          data-lazy="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
+                          alt="Image 2"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          data-lazy="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                          alt="Image 3"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          data-lazy="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
+                          alt="Image 4"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          data-lazy="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                          alt="Image 5"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          data-lazy="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
+                          alt="Image 6"
+                        />
+                      </div>
+                    </div>
 
+                    <div class="slider-thumbnails">
+                      <div>
+                        <img
+                          src="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                          alt="Thumbnail 1"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
+                          alt="Thumbnail 2"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                          alt="Thumbnail 3"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
+                          alt="Thumbnail 4"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                          alt="Thumbnail 5"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
+                          alt="Thumbnail 6"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-description">
+                    <div class="flex flex-col">
+                      <div
+                        class="font-bold text-[25px] line-clamp-2 border border-red-500"
+                      >
+                        Himawari di Springhill Yume Lagoon
+                      </div>
+                      <div class="text-gray-500">Babakan Madang, Bogor</div>
+                      <div class="font-bold text-[25px] py-4">Rp21.000.000</div>
+
+                      <div
+                        class="tabs text-sm font-medium text-center text-gray-500 border-b border-gray-200"
+                      >
+                        <ul class="flex flex-wrap -mb-px border-red-500">
+                          <li class="mr-2">
+                            <a
+                              href="#"
+                              data-tab="detail"
+                              class="tab inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                              >Detail Properti</a
+                            >
+                          </li>
+                          <li class="mr-2">
+                            <a
+                              href="#"
+                              data-tab="fasilitas"
+                              class="tab inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                              >Fasilitas</a
+                            >
+                          </li>
+                          <li class="mr-2">
+                            <a
+                              href="#"
+                              data-tab="deskripsi"
+                              class="tab inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                              >Deskripsi</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="tab-content border-blue-500">
+                        <div id="detail" class="tab-pane block">
+                          <div class="flex flex-col">
+                            <div class="font-bold text-xl py-5">
+                              Detail Properti
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="font-semibold">Sertifikat</div>
+                              <div>SHM</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="font-semibold">Carpots</div>
+                              <div>2</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="font-semibold">Interior</div>
+                              <div>Non Furnished</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="font-semibold">Tipe Properti</div>
+                              <div>Rumah</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="font-semibold">
+                                Orientasi Bangunan
+                              </div>
+                              <div>Barat Laut</div>
+                            </div>
+                            <!--  -->
+                          </div>
+                        </div>
+                        <div id="fasilitas" class="tab-pane hidden">
+                          <div class="flex flex-col">
+                            <div class="font-bold text-xl py-5">Fasilitas</div>
+                            <div class="font-semibold pb-5">
+                              Fasilitas Rumah
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2">
+                              <div>
+                                <div class="flex flex-row">
+                                  <div class="mr-2">
+                                    <span class="material-symbols-outlined">
+                                      ac_unit
+                                    </span>
+                                  </div>
+                                  <div>Ac</div>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="flex flex-row">
+                                  <div class="mr-2">
+                                    <span class="material-symbols-outlined">
+                                      ac_unit
+                                    </span>
+                                  </div>
+                                  <div>Ac</div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2">
+                              <div>
+                                <div class="flex flex-row">
+                                  <div class="mr-2">
+                                    <span class="material-symbols-outlined">
+                                      ac_unit
+                                    </span>
+                                  </div>
+                                  <div>Ac</div>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="flex flex-row">
+                                  <div class="mr-2">
+                                    <span class="material-symbols-outlined">
+                                      ac_unit
+                                    </span>
+                                  </div>
+                                  <div>Ac</div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2">
+                              <div>
+                                <div class="flex flex-row">
+                                  <div class="mr-2">
+                                    <span class="material-symbols-outlined">
+                                      ac_unit
+                                    </span>
+                                  </div>
+                                  <div>Ac</div>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="flex flex-row">
+                                  <div class="mr-2">
+                                    <span class="material-symbols-outlined">
+                                      ac_unit
+                                    </span>
+                                  </div>
+                                  <div>Ac</div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2">
+                              <div>
+                                <div class="flex flex-row">
+                                  <div class="mr-2">
+                                    <span class="material-symbols-outlined">
+                                      ac_unit
+                                    </span>
+                                  </div>
+                                  <div>Ac</div>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="flex flex-row">
+                                  <div class="mr-2">
+                                    <span class="material-symbols-outlined">
+                                      ac_unit
+                                    </span>
+                                  </div>
+                                  <div>Ac</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--  -->
+                          </div>
+                        </div>
+                        <div id="deskripsi" class="tab-pane hidden">
+                          <div class="flex flex-col">
+                            <div class="font-bold text-xl py-5">Deskripsi</div>
+                            <!--  -->
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="font-semibold">Sertifikat</div>
+                              <div>SHM</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="font-semibold">Carpots</div>
+                              <div>2</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="font-semibold">Interior</div>
+                              <div>Non Furnished</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="font-semibold">Tipe Properti</div>
+                              <div>Rumah</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-2 gap-4">
+                              <div class="font-semibold">
+                                Orientasi Bangunan
+                              </div>
+                              <div>Barat Laut</div>
+                            </div>
+                            <!--  -->
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--  -->
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -588,7 +1088,18 @@
     </div>
   </body>
 
+  <!-- JQuery -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  ></script>
+
+  <!-- Slick JS -->
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+
+  <!-- Script main -->
   <script src="main.js"></script>
-
-
 </html>
