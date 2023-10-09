@@ -23,3 +23,37 @@ html {
   left: 0;
   right: 0;
 } */
+
+/* Navigator MapboxGL */
+.mapboxgl-ctrl-top-right {
+  right: 1vh !important;
+  top: 32vh !important;
+}
+
+.my-location-button .mapboxgl-ctrl-icon {
+  background-image: url("../src/images/my-location.png") !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  background-size: cover !important;
+  width: 65% !important;
+  height: 65% !important;
+}
+
+.mapboxgl-ctrl-group button {
+  background-color: white !important;
+  width: 27px !important;
+  height: 27px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.my-location-button {
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+}
+
+.mapboxgl-ctrl-group:not(:empty) {
+  box-shadow: none !important;
+}
