@@ -45,7 +45,7 @@ var map = new mapboxgl.Map({
 // Fungsi untuk menambahkan titik
 const IzinAjib = () => {
   fetch(
-    `http://localhost:8000/geojson_izin_galian/galian_utilitas_ajib.geojson`
+    `https://jakarta.pintoinvest.com/v1/geojson_izin_galian/galian_utilitas_izin.geojson`
   )
     .then((response) => response.json())
     .then((data) => {
@@ -84,34 +84,36 @@ const IzinAjib = () => {
 
   // Pop up
   map.on("mouseenter", "layer-ajib-galian", (e) => {
+    console.log(e.features[0].properties);
+
     map.getCanvas().style.cursor = "pointer";
     const coordinates = e.features[0].geometry.coordinates.slice();
     const data = e.features[0].properties; // Extract properties from the event object
     const content = `
   <div class="p-0 w-full">
     <div class="">
-      <h6 class="mt-0 text-sm leading-4 mb-2">${data["kegiatan"]}</h6>
+      <h6 class="mt-0 text-sm leading-4 mb-2">${data["jenis_usaha"]}</h6>
       <div class="border-b mb-2"></div>
       <div class="leading-5">
         <div class="grid grid-cols-2">
           <div><span>NO SK</span></div>
-          <div><span class="block truncate"> ${data["nama_obj"]}</span></div>
+          <div><span class="block truncate"> ${data["jenis_usaha"]}</span></div>
         </div>
         <div class="grid grid-cols-2">
           <div><span>Izin</span></div>
-          <div><span class="block truncate"> ${data["nama_petugas"]}</span></div>
+          <div><span class="block truncate"> ${data["jenis_usaha"]}</span></div>
         </div>
         <div class="grid grid-cols-2">
           <div><span>Badan Usaha</span></div>
-          <div><span class="block truncate"> ${data["pemilik"]}</span></div>
+          <div><span class="block truncate"> ${data["badan_usaha"]}</span></div>
         </div>
         <div class="grid grid-cols-2">
           <div><span>Jenis Usaha</span></div>
-          <div><span class="block truncate"> ${data["statusproyek"]}</span></div>
+          <div><span class="block truncate"> ${data["jenis_usaha"]}</span></div>
         </div>
         <div class="grid grid-cols-2">
           <div><span>Pelaksana</span></div>
-          <div><span class="block truncate"> ${data["komentar"]}</span></div>
+          <div><span class="block truncate"> ${data["jenis_usaha"]}</span></div>
         </div>
       </div>
     </div>
