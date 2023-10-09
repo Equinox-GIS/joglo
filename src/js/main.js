@@ -207,10 +207,60 @@ function removePopup() {
   }
 }
 
-// ---------------------------------------------------------------------------------------------
-// Slick Slider
+// Hide Show Konten
 
-$(document).ready(function () {
+function changeTab(event) {
+  event.preventDefault(); // Menghindari perilaku default link
+
+  const tab = event.target;
+  const tabName = tab.getAttribute("data-tab");
+
+  // Sembunyikan semua tab pane
+  const tabPanes = document.querySelectorAll(".tab-pane");
+  tabPanes.forEach((pane) => pane.classList.add("hidden"));
+
+  // Tampilkan tab pane yang sesuai
+  const activePane = document.getElementById(tabName);
+  activePane.classList.remove("hidden");
+
+  // Hapus border dari semua tab
+  const tabs = document.querySelectorAll(".tab");
+  tabs.forEach((tab) => tab.classList.remove("border-gray-400"));
+  tabs.forEach((tab) => tab.classList.add("border-transparent"));
+
+  // Tambahkan border ke tab yang aktif
+  tab.classList.remove("border-transparent");
+  tab.classList.add("border-gray-400");
+}
+
+// Hide show card active
+
+function showCardInfoDetail(element) {
+  const cardInfo = document.querySelector(".card-info");
+  const cardInfoDetail = document.querySelector(".card-info-detail");
+
+  if (element.getAttribute("data-active-tab") === "1") {
+    cardInfo.classList.add("hidden");
+    cardInfoDetail.classList.remove("hidden");
+
+    // Menghancurkan dan menginisialisasi ulang Slick slider
+    destroySlickSlider();
+    initSlickSlider();
+  } else {
+    cardInfo.classList.remove("hidden");
+    cardInfoDetail.classList.add("hidden");
+  }
+}
+
+function closeTab() {
+  const cardInfo = document.querySelector(".card-info");
+  const cardInfoDetail = document.querySelector(".card-info-detail");
+
+  cardInfo.classList.remove("hidden");
+  cardInfoDetail.classList.add("hidden");
+}
+
+function initSlickSlider() {
   $(".slider-thumbnails").slick({
     infinite: false,
     slidesToShow: 3,
@@ -223,4 +273,18 @@ $(document).ready(function () {
     infinite: false,
     asNavFor: ".slider-thumbnails",
   });
+}
+
+function destroySlickSlider() {
+  if ($(".slider-thumbnails").hasClass("slick-initialized")) {
+    $(".slider-thumbnails").slick("unslick");
+  }
+
+  if ($(".slider").hasClass("slick-initialized")) {
+    $(".slider").slick("unslick");
+  }
+}
+
+$(document).ready(function () {
+  initSlickSlider();
 });
