@@ -230,7 +230,7 @@
   </head>
   <body class="font-roboto">
     <div class="min-h-screen bg-gray-100 flex flex-col">
-      <!-- Section1 -->
+      <!-- Header -->
       <div
         class="w-full h-20 bg-slate-50 flex flex-row items-center justify-between px-4"
       >
@@ -238,10 +238,7 @@
           <div class="font-bold text-4xl font-lobster">Joglo</div>
         </div>
 
-        <div class="hidden">
-          <img src="./src/images/Logo.png" alt="" />
-        </div>
-
+        <!-- Dropdown Keluar -->
         <div class="flex">
           <div
             id="dropdownUserAvatarButton"
@@ -256,7 +253,6 @@
               alt=""
             />
           </div>
-          <!-- Dropdown menu -->
           <div
             id="dropdownAvatar"
             class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
@@ -271,12 +267,10 @@
           </div>
         </div>
       </div>
-      <!-- Section2 -->
-
+      <!-- Searching -->
       <div
         class="w-full h-14 flex flex-row items-center px-14 border border-gray-300"
       >
-        <!-- This is an example component -->
         <div class="relative pr-2">
           <input
             class="border-2 border-gray-300 bg-white h-10 px-5 pr-12 rounded-lg text-sm focus:outline-none focus:ring-0 focus:border-blue-500 outline-none"
@@ -304,244 +298,6 @@
               />
             </svg>
           </button>
-        </div>
-
-        <div class="hidden">
-          <!-- For Sale Button -->
-          <div class="relative inline-block text-left px-2.5">
-            <div>
-              <button
-                type="button"
-                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                id="menu-button-for-sale"
-                aria-expanded="false"
-                aria-haspopup="true"
-                onclick="toggleDropdown('for-sale')"
-              >
-                For Sale
-                <svg
-                  class="-mr-1 h-5 w-5 transform transition-transform"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <!-- Dropdown menu -->
-            <div
-              id="dropdown-menu-for-sale"
-              class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="menu-button-for-sale"
-            >
-              <!-- Menu Items -->
-              <div class="py-1" role="none">
-                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-0"
-                  >Account settings</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Price Button -->
-          <div class="relative inline-block text-left">
-            <div>
-              <button
-                type="button"
-                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                id="menu-button-price"
-                aria-expanded="false"
-                aria-haspopup="true"
-                onclick="toggleDropdown('price')"
-              >
-                Price
-                <svg
-                  class="-mr-1 h-5 w-5 transform transition-transform"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <!-- Dropdown menu -->
-            <div
-              id="dropdown-menu-price"
-              class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="menu-button-price"
-            >
-              <!-- Menu Items -->
-              <div class="py-1" role="none">
-                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-0"
-                  >Account settings</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Beds & Baths Button -->
-          <div class="relative inline-block text-left px-2.5">
-            <div>
-              <button
-                type="button"
-                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                id="menu-button-beds-baths"
-                aria-expanded="false"
-                aria-haspopup="true"
-                onclick="toggleDropdown('beds-baths')"
-              >
-                Beds & Baths
-                <svg
-                  class="-mr-1 h-5 w-5 transform transition-transform"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <!-- Dropdown menu -->
-            <div
-              id="dropdown-menu-beds-baths"
-              class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="menu-button-beds-baths"
-            >
-              <!-- Menu Items -->
-              <div class="py-1" role="none">
-                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-0"
-                  >Account settings</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Home Type -->
-          <div class="relative inline-block text-left">
-            <div>
-              <button
-                type="button"
-                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                id="menu-button-home-type"
-                aria-expanded="false"
-                aria-haspopup="true"
-                onclick="toggleDropdown('home-type')"
-              >
-                Home Type
-                <svg
-                  class="-mr-1 h-5 w-5 transform transition-transform"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <!-- Dropdown menu -->
-            <div
-              id="dropdown-menu-home-type"
-              class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="menu-button-home-type"
-            >
-              <!-- Menu Items -->
-              <div class="py-1" role="none">
-                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-0"
-                  >Account settings</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- More -->
-          <div class="relative inline-block text-left px-2.5">
-            <div>
-              <button
-                type="button"
-                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                id="menu-button-more"
-                aria-expanded="false"
-                aria-haspopup="true"
-                onclick="toggleDropdown('more')"
-              >
-                More
-                <svg
-                  class="-mr-1 h-5 w-5 transform transition-transform"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <!-- Dropdown menu -->
-            <div
-              id="dropdown-menu-more"
-              class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="menu-button-more"
-            >
-              <!-- Menu Items -->
-              <div class="py-1" role="none">
-                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                <a
-                  href="#"
-                  class="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-0"
-                  >Account settings</a
-                >
-              </div>
-            </div>
-          </div>
-          <!--  -->
         </div>
 
         <!-- Search Button -->
@@ -609,227 +365,92 @@
           <div id="map" class="w-full h-full shadow-lg"></div>
         </div>
 
-        <!-- Card Konten -->
+        <!-- Card -->
         <div class="px-4 pt-3 flex flex-col">
-          <!-- Bagan Card Info -->
-
-          <div class="card-info-judul">
-            <div class="font-semibold text-xl px-3">Rumah Dijual</div>
-            <div class="flex flex-row justify-between items-center mt-1 px-3">
-              <div class="font-normal">Ditemukan 500 data</div>
-              <div>
-                <div class="relative inline-block text-left px-2.5">
-                  <div class="cursor-pointer">
+          <!--  Bagan Card Info -->
+          <div>
+            <!-- Judul Card Info -->
+            <div class="card-info-judul">
+              <div class="font-semibold text-xl px-3">Rumah Dijual</div>
+              <div class="flex flex-row justify-between items-center mt-1 px-3">
+                <div class="font-normal">Ditemukan 500 data</div>
+                <div>
+                  <div class="relative inline-block text-left px-2.5">
+                    <div class="cursor-pointer">
+                      <div
+                        class="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-bold text-blue-600"
+                        id="menu-button-sort"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        onclick="toggleDropdown('sort')"
+                      >
+                        Sort : Homes For You
+                        <svg
+                          class="-mr-1 h-5 w-5 transform transition-transform"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <!-- Dropdown menu -->
                     <div
-                      class="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-bold text-blue-600"
-                      id="menu-button-sort"
-                      aria-expanded="false"
-                      aria-haspopup="true"
-                      onclick="toggleDropdown('sort')"
+                      id="dropdown-menu-sort"
+                      class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                      role="menu"
+                      aria-orientation="vertical"
+                      aria-labelledby="menu-button-sort"
                     >
-                      Sort : Homes For You
-                      <svg
-                        class="-mr-1 h-5 w-5 transform transition-transform"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <!-- Dropdown menu -->
-                  <div
-                    id="dropdown-menu-sort"
-                    class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="menu-button-sort"
-                  >
-                    <!-- Menu Items -->
-                    <div class="py-1" role="none">
-                      <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                      <a
-                        href="#"
-                        class="text-gray-700 block px-4 py-2 text-sm"
-                        role="menuitem"
-                        tabindex="-1"
-                        id="menu-item-0"
-                        >Home For You</a
-                      >
-                      <a
-                        href="#"
-                        class="text-gray-700 block px-4 py-2 text-sm"
-                        role="menuitem"
-                        tabindex="-1"
-                        id="menu-item-0"
-                        >Price (Hight To Low)</a
-                      >
-                      <a
-                        href="#"
-                        class="text-gray-700 block px-4 py-2 text-sm"
-                        role="menuitem"
-                        tabindex="-1"
-                        id="menu-item-0"
-                        >Price (Hight To High)</a
-                      >
+                      <!-- Menu Items -->
+                      <div class="py-1" role="none">
+                        <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                        <a
+                          href="#"
+                          class="text-gray-700 block px-4 py-2 text-sm"
+                          role="menuitem"
+                          tabindex="-1"
+                          id="menu-item-0"
+                          >Home For You</a
+                        >
+                        <a
+                          href="#"
+                          class="text-gray-700 block px-4 py-2 text-sm"
+                          role="menuitem"
+                          tabindex="-1"
+                          id="menu-item-0"
+                          >Price (Hight To Low)</a
+                        >
+                        <a
+                          href="#"
+                          class="text-gray-700 block px-4 py-2 text-sm"
+                          role="menuitem"
+                          tabindex="-1"
+                          id="menu-item-0"
+                          >Price (Hight To High)</a
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="h-[68vh] card-info overflow-y-auto hide-scrollbar px-3">
-            <div class="mt-2 grid grid-cols-2 gap-y-4">
-              <!-- Card 1 -->
-              <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
-                <div
-                  class="w-[22vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
-                  data-card-map="1534"
-                  onmouseenter="getDataCard(this)"
-                  onmouseleave="removePopup()"
-                  data-active-tab="1"
-                  onclick="showCardInfoDetail(this)"
-                >
-                  <img
-                    class="rounded-t-lg"
-                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                    alt=""
-                  />
-                  <div class="px-3 pt-1 pb-3">
-                    <a href="#">
-                      <h5
-                        class="text-md font-bold tracking-tight text-gray-900"
-                      >
-                        Rp 2.300.000.000
-                      </h5>
-                    </a>
-                    <div class="mb-3 font-normal">
-                      <p class="line-clamp-3 text-xs text-gray-700">
-                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
-                      </p>
-                      <p class="text-sm text-gray-700 py-2">
-                        Setiabudi, Karet Kuningan, Jakarta Selatan
-                      </p>
-                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
-                    </div>
-                  </div>
-                </div>
+            <!--  Konten Card Info -->
+            <div class="h-[68vh] card-info overflow-y-auto hide-scrollbar px-3">
+              <div class="mt-2 grid grid-cols-2 gap-y-4">
+                <p>test</p>
+                <!--  -->
               </div>
-              <!-- Card 2 -->
-              <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
-                <div
-                  class="w-[22vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
-                  data-card-map="1534"
-                  onmouseenter="getDataCard(this)"
-                  onmouseleave="removePopup()"
-                  data-active-tab="1"
-                  onclick="showCardInfoDetail(this)"
-                >
-                  <img
-                    class="rounded-t-lg"
-                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                    alt=""
-                  />
-                  <div class="px-3 pt-1 pb-3">
-                    <a href="#">
-                      <h5
-                        class="text-md font-bold tracking-tight text-gray-900"
-                      >
-                        Rp 2.300.000.000
-                      </h5>
-                    </a>
-                    <div class="mb-3 font-normal">
-                      <p class="line-clamp-3 text-xs text-gray-700">
-                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
-                      </p>
-                      <p class="text-sm text-gray-700 py-2">
-                        Setiabudi, Karet Kuningan, Jakarta Selatan
-                      </p>
-                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 3 -->
-              <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
-                <div
-                  class="w-[22vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
-                  data-card-map="1534"
-                  onmouseenter="getDataCard(this)"
-                  onmouseleave="removePopup()"
-                  data-active-tab="1"
-                  onclick="showCardInfoDetail(this)"
-                >
-                  <img
-                    class="rounded-t-lg"
-                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                    alt=""
-                  />
-                  <div class="px-3 pt-1 pb-3">
-                    <a href="#">
-                      <h5
-                        class="text-md font-bold tracking-tight text-gray-900"
-                      >
-                        Rp 2.300.000.000
-                      </h5>
-                    </a>
-                    <div class="mb-3 font-normal">
-                      <p class="line-clamp-3 text-xs text-gray-700">
-                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
-                      </p>
-                      <p class="text-sm text-gray-700 py-2">
-                        Setiabudi, Karet Kuningan, Jakarta Selatan
-                      </p>
-                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 4 -->
-              <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
-                <div
-                  class="w-[22vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
-                  data-card-map="1534"
-                  onmouseenter="getDataCard(this)"
-                  onmouseleave="removePopup()"
-                  data-active-tab="1"
-                  onclick="showCardInfoDetail(this)"
-                >
-                  <img
-                    class="rounded-t-lg"
-                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                    alt=""
-                  />
-                  <div class="px-3 pt-1 pb-3">
-                    <a href="#">
-                      <h5
-                        class="text-md font-bold tracking-tight text-gray-900"
-                      >
-                        Rp 2.300.000.000
-                      </h5>
-                    </a>
-                    <div class="mb-3 font-normal">
-                      <p class="line-clamp-3 text-xs text-gray-700">
-                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
-                      </p>
-                      <p class="text-sm text-gray-700 py-2">
-                        Setiabudi, Karet Kuningan, Jakarta Selatan
-                      </p>
-                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--  -->
             </div>
           </div>
-          <!-- Bagan Card Detail -->
 
+          <!-- Bagan Card Info Detail -->
           <div class="flex flex-col card-info-detail hidden">
+            <!-- Judul Card Info Detail -->
             <div>
               <div class="w-full flex justify-between px-3">
                 <div class="text-lg font-bold">
@@ -896,8 +517,8 @@
                 </ul>
               </div>
             </div>
-            <!--  -->
 
+            <!-- Konten Card Info Detail -->
             <div
               class="h-[68vh] card-info-detail overflow-y-auto hide-scrollbar"
             >
@@ -2414,8 +2035,10 @@
               </div>
             </div>
           </div>
+          <!--  -->
         </div>
       </div>
+      <!--  -->
     </div>
   </body>
 
