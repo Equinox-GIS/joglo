@@ -284,10 +284,12 @@ function changeTab(event) {
 function showCardInfoDetail(element) {
   const cardInfo = document.querySelector(".card-info");
   const cardInfoDetail = document.querySelector(".card-info-detail");
+  const cardInfoDetailDua = document.querySelector(".card-info-judul");
 
   if (element.getAttribute("data-active-tab") === "1") {
     cardInfo.classList.add("hidden");
     cardInfoDetail.classList.remove("hidden");
+    cardInfoDetailDua.classList.add("hidden");
 
     // Menghancurkan dan menginisialisasi ulang Slick slider
     destroySlickSlider();
@@ -295,15 +297,18 @@ function showCardInfoDetail(element) {
   } else {
     cardInfo.classList.remove("hidden");
     cardInfoDetail.classList.add("hidden");
+    cardInfoDetailDua.classList.remove("hidden");
   }
 }
 
 function closeTab() {
   const cardInfo = document.querySelector(".card-info");
   const cardInfoDetail = document.querySelector(".card-info-detail");
+  const cardInfoDetailDua = document.querySelector(".card-info-judul");
 
   cardInfo.classList.remove("hidden");
   cardInfoDetail.classList.add("hidden");
+  cardInfoDetailDua.classList.remove("hidden");
 }
 
 function initSlickSlider() {
@@ -334,3 +339,14 @@ function destroySlickSlider() {
 $(document).ready(function () {
   initSlickSlider();
 });
+
+// Script to update the progress bar based on the slider value
+const slider = document.getElementById("myRange");
+const progress = document.getElementById("progress");
+
+slider.oninput = function () {
+  const value = this.value;
+  progress.style.width = value + "%";
+};
+
+// Corousel Hide Gambar

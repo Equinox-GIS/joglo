@@ -8,11 +8,23 @@
     <!-- Build Css -->
     <link rel="stylesheet" href="./dist/output.css" />
 
+    <style>
+      .chart-container {
+        position: relative;
+        max-width: 100%;
+        width: 200px; /* Atur sesuai kebutuhan, atau bisa juga menggunakan persentase */
+        height: 205px;
+      }
+    </style>
+
     <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
 
@@ -22,6 +34,9 @@
       href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
       rel="stylesheet"
     />
+
+    <!-- Chart Js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Icon -->
     <link
@@ -44,6 +59,15 @@
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- Icon -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/5paNdF+Tm2JsNR6/ibe7ay9C3zXp1"
+      crossorigin="anonymous"
     />
 
     <style>
@@ -188,18 +212,30 @@
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none; /* IE and Edge */
       }
+
+      /* Peta Livability Index */
+      #myRadarChart {
+        width: 100% !important;
+        height: 12vw !important;
+      }
+
+      /* Peta Environment Carrying Capacity Index */
+      #mySecondRadarChart {
+        width: 100% !important;
+        height: 12vw !important;
+      }
     </style>
 
     <!--  -->
   </head>
-  <body class="">
+  <body class="font-roboto">
     <div class="min-h-screen bg-gray-100 flex flex-col">
       <!-- Section1 -->
       <div
-        class="w-full h-20 bg-slate-50 flex flex-row items-center justify-between px-2"
+        class="w-full h-20 bg-slate-50 flex flex-row items-center justify-between px-4"
       >
         <div class="flex">
-          <div class="font-bold text-3xl mx-1">JOGLO</div>
+          <div class="font-bold text-4xl font-lobster">Joglo</div>
         </div>
 
         <div class="hidden">
@@ -210,7 +246,7 @@
           <div
             id="dropdownUserAvatarButton"
             data-dropdown-toggle="dropdownAvatar"
-            class="flex mx-3 cursor-pointer"
+            class="flex cursor-pointer"
           >
             <span class="sr-only">Open user menu</span>
 
@@ -229,7 +265,7 @@
               <a
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >Sign out</a
+                >Keluar</a
               >
             </div>
           </div>
@@ -238,36 +274,8 @@
       <!-- Section2 -->
 
       <div
-        class="w-full h-14 flex flex-row items-center px-2 border border-gray-300"
+        class="w-full h-14 flex flex-row items-center px-14 border border-gray-300"
       >
-        <!-- <div class="relative px-2.5">
-          <input
-            oninput="showResult()"
-            type="search"
-            id="search-city"
-            class="block w-full pr-[2.3rem] pl-[2rem] text-sm text-black border border-gray-300 rounded-lg bg-gray-50 focus:ring-0 focus:border-blue-500 h-10 outline-none"
-            placeholder="Search ..."
-            required=""
-          />
-          <div class="absolute inset-y-0 flex items-center pointer-events-none">
-            <svg
-              class="w-4 h-4 text-gray-500"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 20"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-              ></path>
-            </svg>
-          </div>
-        </div> -->
-
         <!-- This is an example component -->
         <div class="relative pr-2">
           <input
@@ -604,12 +612,11 @@
         <!-- Card Konten -->
         <div class="px-4 pt-3 flex flex-col">
           <!-- Bagan Card Info -->
-          <div
-            class="h-[79vh] card-info overflow-y-auto hide-scrollbar border border-red-500"
-          >
-            <div class="font-semibold text-xl">Real Estate & Homes Forsale</div>
-            <div class="flex flex-row justify-between items-center mt-1">
-              <div class="font-semibold">500 Result</div>
+
+          <div class="card-info-judul">
+            <div class="font-semibold text-xl px-3">Rumah Dijual</div>
+            <div class="flex flex-row justify-between items-center mt-1 px-3">
+              <div class="font-normal">Ditemukan 500 data</div>
               <div>
                 <div class="relative inline-block text-left px-2.5">
                   <div class="cursor-pointer">
@@ -673,481 +680,1737 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="h-[68vh] card-info overflow-y-auto hide-scrollbar px-3">
             <div class="mt-2 grid grid-cols-2 gap-y-4">
               <!-- Card 1 -->
-              <div class="mt-2 grid grid-cols-2 gap-y-4">
+              <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
                 <div
-                  class="w-[21.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
+                  class="w-[22vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
                   data-card-map="1534"
                   onmouseenter="getDataCard(this)"
                   onmouseleave="removePopup()"
                   data-active-tab="1"
                   onclick="showCardInfoDetail(this)"
                 >
-                  <a href="#">
-                    <img
-                      class="rounded-t-lg"
-                      src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                      alt=""
-                    />
-                  </a>
-                  <div class="p-5">
+                  <img
+                    class="rounded-t-lg"
+                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
+                    alt=""
+                  />
+                  <div class="px-3 pt-1 pb-3">
                     <a href="#">
                       <h5
-                        class="mb-2 text-xl font-bold tracking-tight text-gray-900"
+                        class="text-md font-bold tracking-tight text-gray-900"
                       >
-                        Home Testing
+                        Rp 2.300.000.000
                       </h5>
                     </a>
-                    <div class="mb-3 font-normal text-gray-700">
-                      <p class="line-clamp-3">
-                        #1 Here are the biggest enterprise technology
-                        acquisitions of 2021 so far, in reverse chronological
-                        order. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Adipisci aspernatur placeat in aliquam
-                        nam, nulla expedita ex dignissimos deserunt qui harum
-                        sequi atque modi quaerat eaque iusto quibusdam laborum
-                        iste.
+                    <div class="mb-3 font-normal">
+                      <p class="line-clamp-3 text-xs text-gray-700">
+                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
                       </p>
+                      <p class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </p>
+                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- Card 2 -->
-              <div class="mt-2 grid grid-cols-2 gap-y-4">
+              <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
                 <div
-                  class="w-[21.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
-                  data-card-map="1399"
+                  class="w-[22vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
+                  data-card-map="1534"
                   onmouseenter="getDataCard(this)"
                   onmouseleave="removePopup()"
+                  data-active-tab="1"
+                  onclick="showCardInfoDetail(this)"
                 >
-                  <a href="#">
-                    <img
-                      class="rounded-t-lg"
-                      src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                      alt=""
-                    />
-                  </a>
-                  <div class="p-5">
+                  <img
+                    class="rounded-t-lg"
+                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
+                    alt=""
+                  />
+                  <div class="px-3 pt-1 pb-3">
                     <a href="#">
                       <h5
-                        class="mb-2 text-xl font-bold tracking-tight text-gray-900"
+                        class="text-md font-bold tracking-tight text-gray-900"
                       >
-                        Home 1
+                        Rp 2.300.000.000
                       </h5>
                     </a>
-                    <div class="mb-3 font-normal text-gray-700">
-                      <p class="line-clamp-3">
-                        #1 Here are the biggest enterprise technology
-                        acquisitions of 2021 so far, in reverse chronological
-                        order. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Adipisci aspernatur placeat in aliquam
-                        nam, nulla expedita ex dignissimos deserunt qui harum
-                        sequi atque modi quaerat eaque iusto quibusdam laborum
-                        iste.
+                    <div class="mb-3 font-normal">
+                      <p class="line-clamp-3 text-xs text-gray-700">
+                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
                       </p>
+                      <p class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </p>
+                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- Card 3 -->
-              <div class="mt-2 grid grid-cols-2 gap-y-4">
+              <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
                 <div
-                  class="w-[21.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
-                  data-card-map="1076"
+                  class="w-[22vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
+                  data-card-map="1534"
                   onmouseenter="getDataCard(this)"
                   onmouseleave="removePopup()"
+                  data-active-tab="1"
+                  onclick="showCardInfoDetail(this)"
                 >
-                  <a href="#">
-                    <img
-                      class="rounded-t-lg"
-                      src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                      alt=""
-                    />
-                  </a>
-                  <div class="p-5">
+                  <img
+                    class="rounded-t-lg"
+                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
+                    alt=""
+                  />
+                  <div class="px-3 pt-1 pb-3">
                     <a href="#">
                       <h5
-                        class="mb-2 text-xl font-bold tracking-tight text-gray-900"
+                        class="text-md font-bold tracking-tight text-gray-900"
                       >
-                        Home 1
+                        Rp 2.300.000.000
                       </h5>
                     </a>
-                    <div class="mb-3 font-normal text-gray-700">
-                      <p class="line-clamp-3">
-                        #1 Here are the biggest enterprise technology
-                        acquisitions of 2021 so far, in reverse chronological
-                        order. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Adipisci aspernatur placeat in aliquam
-                        nam, nulla expedita ex dignissimos deserunt qui harum
-                        sequi atque modi quaerat eaque iusto quibusdam laborum
-                        iste.
+                    <div class="mb-3 font-normal">
+                      <p class="line-clamp-3 text-xs text-gray-700">
+                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
                       </p>
+                      <p class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </p>
+                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- Card 4 -->
-              <div class="mt-2 grid grid-cols-2 gap-y-4">
+              <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
                 <div
-                  class="w-[21.5vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
-                  data-card-map="852"
+                  class="w-[22vw] h-96 bg-white border border-gray-200 rounded-lg shadow page-cards-map"
+                  data-card-map="1534"
                   onmouseenter="getDataCard(this)"
                   onmouseleave="removePopup()"
+                  data-active-tab="1"
+                  onclick="showCardInfoDetail(this)"
                 >
-                  <a href="#">
-                    <img
-                      class="rounded-t-lg"
-                      src="https://flowbite.com/docs/images/blog/image-1.jpg"
-                      alt=""
-                    />
-                  </a>
-                  <div class="p-5">
+                  <img
+                    class="rounded-t-lg"
+                    src="https://flowbite.com/docs/images/blog/image-1.jpg"
+                    alt=""
+                  />
+                  <div class="px-3 pt-1 pb-3">
                     <a href="#">
                       <h5
-                        class="mb-2 text-xl font-bold tracking-tight text-gray-900"
+                        class="text-md font-bold tracking-tight text-gray-900"
                       >
-                        Home 1
+                        Rp 2.300.000.000
                       </h5>
                     </a>
-                    <div class="mb-3 font-normal text-gray-700">
-                      <p class="line-clamp-3">
-                        #1 Here are the biggest enterprise technology
-                        acquisitions of 2021 so far, in reverse chronological
-                        order. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Adipisci aspernatur placeat in aliquam
-                        nam, nulla expedita ex dignissimos deserunt qui harum
-                        sequi atque modi quaerat eaque iusto quibusdam laborum
-                        iste.
+                    <div class="mb-3 font-normal">
+                      <p class="line-clamp-3 text-xs text-gray-700">
+                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
                       </p>
+                      <p class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </p>
+                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
                     </div>
                   </div>
                 </div>
               </div>
+              <!--  -->
             </div>
           </div>
           <!-- Bagan Card Detail -->
-          <div
-            class="h-[79vh] card-info-detail overflow-y-auto scrollbar scrollbar-firefox hidden"
-          >
-            <div class="flex flex-col">
-              <!-- Konten Card -->
-              <div class="mx-auto max-w-3xl">
-                <div class="product">
-                  <div class="product-images">
-                    <div class="slider">
-                      <div>
-                        <img
-                          data-lazy="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                          alt="Image 1"
-                        />
-                      </div>
-                      <div>
-                        <img
-                          data-lazy="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
-                          alt="Image 2"
-                        />
-                      </div>
-                      <div>
-                        <img
-                          data-lazy="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                          alt="Image 3"
-                        />
-                      </div>
-                      <div>
-                        <img
-                          data-lazy="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
-                          alt="Image 4"
-                        />
-                      </div>
-                      <div>
-                        <img
-                          data-lazy="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                          alt="Image 5"
-                        />
-                      </div>
-                      <div>
-                        <img
-                          data-lazy="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
-                          alt="Image 6"
-                        />
-                      </div>
-                    </div>
 
-                    <div class="slider-thumbnails">
-                      <div>
-                        <img
-                          src="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                          alt="Thumbnail 1"
+          <div class="flex flex-col card-info-detail hidden">
+            <div>
+              <div class="w-full flex justify-between px-3">
+                <div class="text-lg font-bold">
+                  Rumah Impian Strategis Dijual! Segera Miliki Hunian Eksklusif
+                  di Lokasi Prime!
+                </div>
+                <div class="flex items-center">
+                  <img
+                    class="w-6 h-6 object-cover close-tab-detail cursor-pointer"
+                    onclick="closeTab()"
+                    src="./src/images/close_tab.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <!-- Tab Menu -->
+                <ul
+                  class="flex flex-wrap -mb-px text-sm font-medium text-center px-4"
+                  id="myTab"
+                  data-tabs-toggle="#myTabContent"
+                  role="tablist"
+                >
+                  <li class="" role="presentation">
+                    <button
+                      class="inline-block py-4 pr-0.5 border-b-2 rounded-t-lg"
+                      id="profile-tab"
+                      data-tabs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                    >
+                      Deskripsi
+                    </button>
+                  </li>
+                  <li class="" role="presentation">
+                    <button
+                      class="inline-block py-4 pr-0.5 mx-6 border-b-2 rounded-t-lg"
+                      id="dashboard-tab"
+                      data-tabs-target="#dashboard"
+                      type="button"
+                      role="tab"
+                      aria-controls="dashboard"
+                      aria-selected="true"
+                    >
+                      Sarana Prasarana
+                    </button>
+                  </li>
+                  <li class="" role="presentation">
+                    <button
+                      class="inline-block py-4 pr-0.5 border-b-2 rounded-t-lg"
+                      id="settings-tab"
+                      data-tabs-target="#settings"
+                      type="button"
+                      role="tab"
+                      aria-controls="settings"
+                      aria-selected="false"
+                    >
+                      Indeks
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--  -->
+
+            <div
+              class="h-[68vh] card-info-detail overflow-y-auto hide-scrollbar"
+            >
+              <div class="flex flex-col h-full">
+                <!-- Tabs -->
+
+                <!-- Corousel -->
+                <div
+                  id="animation-carousel"
+                  class="relative w-full animation-carousel px-4"
+                  data-carousel="static"
+                >
+                  <!-- Carousel wrapper -->
+                  <div class="relative h-56 overflow-hidden md:h-96">
+                    <!-- Item 1 -->
+                    <div
+                      class="hidden duration-700 ease-in-out"
+                      data-carousel-item
+                    >
+                      <img
+                        src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="..."
+                      />
+                    </div>
+                    <!-- Item 2 -->
+                    <div
+                      class="hidden duration-700 ease-in-out"
+                      data-carousel-item="active"
+                    >
+                      <img
+                        src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="..."
+                      />
+                    </div>
+                    <!-- Item 3 -->
+                    <div
+                      class="hidden duration-700 ease-in-out"
+                      data-carousel-item
+                    >
+                      <img
+                        src="./src/images/Hunian/Rmh1/rumaha3.jpg"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <!-- Slider controls -->
+                  <button
+                    type="button"
+                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev
+                  >
+                    <span
+                      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white dark:text-gray-800"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 6 10"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 1 1 5l4 4"
                         />
-                      </div>
-                      <div>
-                        <img
-                          src="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
-                          alt="Thumbnail 2"
+                      </svg>
+                      <span class="sr-only">Previous</span>
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next
+                  >
+                    <span
+                      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30"
+                    >
+                      <svg
+                        class="w-4 h-4 text-white dark:text-gray-800"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 6 10"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 9 4-4-4-4"
                         />
-                      </div>
-                      <div>
-                        <img
-                          src="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                          alt="Thumbnail 3"
-                        />
-                      </div>
-                      <div>
-                        <img
-                          src="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
-                          alt="Thumbnail 4"
-                        />
-                      </div>
-                      <div>
-                        <img
-                          src="https://images.unsplash.com/photo-1691253874964-7dbf9a76c652?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
-                          alt="Thumbnail 5"
-                        />
-                      </div>
-                      <div>
-                        <img
-                          src="https://images.unsplash.com/photo-1681863177225-5fa13305ea95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=415&q=80"
-                          alt="Thumbnail 6"
-                        />
+                      </svg>
+                      <span class="sr-only">Next</span>
+                    </span>
+                  </button>
+                </div>
+
+                <div id="myTabContent">
+                  <div
+                    class="hidden py-2 px-4"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                  >
+                    <!-- Info -->
+                    <div class="mt-2 h-full grid grid-cols-1">
+                      <!-- Information Kiri -->
+                      <div class="flex flex-col">
+                        <!-- Deskripsi -->
+                        <div class="grid grid-cols-1 gap-y-1">
+                          <div class="grid grid-cols-1 text-sm">
+                            <div class="grid grid-cols-1 gap-4">
+                              <div class="text-gray-800">
+                                <p>
+                                  Kami mempersembahkan sebuah hunian eksklusif
+                                  yang siap untuk Anda tempati. Kenyamanan dan
+                                  kemudahan akses menjadi keunggulan utama rumah
+                                  istimewa ini. Berlokasi hanya 10 menit dari
+                                  pintu tol dalam kota, Anda bisa menjangkau
+                                  berbagai destinasi favorit tanpa harus
+                                  menghabiskan banyak waktu.
+                                </p>
+
+                                <div class="flex flex-col mt-2">
+                                  <p>
+                                    Akses mudah ke berbagai pusat perbelanjaan,
+                                    fasilitas pendidikan, kesehatan, dan
+                                    rekreasi.Bangunan dengan desain modern dan
+                                    penataan interior yang elegan.Material
+                                    bangunan berkualitas tinggi yang menjamin
+                                    kekuatan dan daya tahan rumah.Berada di
+                                    lingkungan yang tenang dan hijau, cocok
+                                    untuk Anda yang mencari kedamaian.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Lokasi -->
+                        <div class="grid grid-cols-1 gap-y-1 mt-8">
+                          <div class="w-full text-md font-bold">Lokasi</div>
+
+                          <div class="grid grid-cols-1 text-sm">
+                            <div class="grid grid-cols-3 gap-4 text-gray-800">
+                              <div>Koordinat</div>
+                              <div class="col-span-2">
+                                <a
+                                  href="https://www.google.com/maps/search/-6.155918568861097,106.82568590722656"
+                                  target="blank_"
+                                  class="text-[#007bff] font-semibold"
+                                  >-6.155918568861097, 106.82568590722656</a
+                                >
+                              </div>
+                            </div>
+                            <!--  -->
+
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>RT/RW</div>
+                              <div class="col-span-2">007/006</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Kelurahan</div>
+                              <div class="col-span-2">Taman Sari</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Kecamatan</div>
+                              <div class="col-span-2">Taman Sari</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Wilayah</div>
+                              <div class="col-span-2">Jakarta Barat</div>
+                            </div>
+                            <!--  -->
+                          </div>
+                        </div>
+
+                        <!-- Detail -->
+                        <div class="grid grid-cols-1 gap-y-1 mt-8">
+                          <div class="w-full text-md font-bold">Detail</div>
+
+                          <div class="grid grid-cols-1 text-sm">
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Luas Tanah</div>
+                              <div class="col-span-2">140 m²</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Luas Bangunan</div>
+                              <div class="col-span-2">392 m²</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Kamar Tidur</div>
+                              <div class="col-span-2">3</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Kamar Mandi</div>
+                              <div class="col-span-2">2</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Carpots</div>
+                              <div class="col-span-2">2</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Jenis Kepemilikan</div>
+                              <div class="col-span-2">
+                                SHM - Sertifikat Hak Milik
+                              </div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Daya Listrik</div>
+                              <div class="col-span-2">2200 Watt</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Interior</div>
+                              <div class="col-span-2">Non Furnished</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Tipe Properti</div>
+                              <div class="col-span-2">Rumah</div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-cols-3 gap-4">
+                              <div>Orientasi Bangunan</div>
+                              <div class="col-span-2">Barat Laut</div>
+                            </div>
+                            <!--  -->
+                          </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="product-description">
-                    <div class="flex flex-col">
-                      <div class="grid grid-cols-[1fr_50px]">
-                        <div class="font-bold text-[25px] line-clamp-2">
-                          Himawari di Springhill Yume Lagoon
-                        </div>
-                        <div class="flex justify-center pt-2 cursor-pointer b">
-                          <img
-                            class="w-6 h-6 object-cover close-tab-detail"
-                            onclick="closeTab()"
-                            src="./src/images/close_tab.png"
-                            alt=""
+                  <!--  -->
+                  <div
+                    class="hidden px-4 py-2"
+                    id="dashboard"
+                    role="tabpanel"
+                    aria-labelledby="dashboard-tab"
+                  >
+                    <!-- Sarpras -->
+                    <div class="grid grid-cols-1 gap-y-1">
+                      <div class="w-full grid grid-cols-2">
+                        <div>
+                          <h5 class="font-bold text-sm">Radius 1 Km</h5>
+                          <input
+                            type="range"
+                            class="w-full"
+                            id="ControlRange"
+                            min="0.5"
+                            max="3"
+                            step="0.5"
+                            style="height: 6px"
                           />
                         </div>
+                        <div></div>
                       </div>
 
-                      <div class="grid grid-cols-1 text-gray-500 py-2 text-md">
-                        Babakan Madang, Bogor
-                      </div>
-                      <div class="grid grid-cols-1 font-bold text-md">
-                        Rp21.000.000
-                      </div>
+                      <!-- Konten Sarpras -->
 
-                      <div
-                        class="tabs text-sm font-medium text-center text-gray-500 border-b border-gray-200"
-                      >
-                        <ul class="flex flex-wrap -mb-px border-red-500">
-                          <li class="mr-2">
-                            <a
-                              href="#"
-                              data-tab="detail"
-                              class="tab inline-block pr-4 py-4 border-b-2 border-gray-400 rounded-t-lg hover:text-gray-600"
-                              onclick="changeTab(event)"
-                              >Detail Properti</a
+                      <!-- Konten Sarpras -->
+                      <div class="grid grid-cols-4">
+                        <div
+                          class="col-span-3 grid grid-cols-5"
+                          id="sarprasTab"
+                          data-tabs-toggle="#sarprasTabContent"
+                          role="tablist"
+                        >
+                          <div>
+                            <button
+                              class="flex items-center p-2 rounded-full"
+                              id="sarprasProfileTab"
+                              data-tabs-target="#sarprasProfile"
+                              type="button"
+                              role="tab"
+                              aria-controls="sarprasProfile"
+                              aria-selected="false"
                             >
-                          </li>
-                          <li class="mr-2">
-                            <a
-                              href="#"
-                              data-tab="fasilitas"
-                              class="tab inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
-                              onclick="changeTab(event)"
-                              >Fasilitas</a
-                            >
-                          </li>
-                          <li class="mr-2">
-                            <a
-                              href="#"
-                              data-tab="deskripsi"
-                              class="tab inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300"
-                              onclick="changeTab(event)"
-                              >Deskripsi</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="tab-content border-blue-500">
-                        <div id="detail" class="tab-pane block">
-                          <div class="flex flex-col">
-                            <div class="font-bold text-xl py-3">
-                              Detail Properti
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2 gap-4">
-                              <div class="font-semibold">Sertifikat</div>
-                              <div>SHM</div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2 gap-4">
-                              <div class="font-semibold">Carpots</div>
-                              <div>2</div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2 gap-4">
-                              <div class="font-semibold">Interior</div>
-                              <div>Non Furnished</div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2 gap-4">
-                              <div class="font-semibold">Tipe Properti</div>
-                              <div>Rumah</div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2 gap-4">
-                              <div class="font-semibold">
-                                Orientasi Bangunan
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/mosque.png"
+                                  alt="user photo"
+                                />
                               </div>
-                              <div>Barat Laut</div>
-                            </div>
-                            <!--  -->
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="flex items-center p-2 rounded-full"
+                              id="sarprasDashboardTab"
+                              data-tabs-target="#sarprasDashboard"
+                              type="button"
+                              role="tab"
+                              aria-controls="sarprasDashboard"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/marketplace.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="flex items-center p-2 rounded-full"
+                              id="sarprasDashboardTab"
+                              data-tabs-target="#sarprasDashboard"
+                              type="button"
+                              role="tab"
+                              aria-controls="sarprasDashboard"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/marketplace.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="flex items-center p-2 rounded-full"
+                              id="sarprasDashboardTab"
+                              data-tabs-target="#sarprasDashboard"
+                              type="button"
+                              role="tab"
+                              aria-controls="sarprasDashboard"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/marketplace.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="flex items-center p-2 rounded-full"
+                              id="sarprasDashboardTab"
+                              data-tabs-target="#sarprasDashboard"
+                              type="button"
+                              role="tab"
+                              aria-controls="sarprasDashboard"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/marketplace.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="flex items-center p-2 rounded-full"
+                              id="sarprasDashboardTab"
+                              data-tabs-target="#sarprasDashboard"
+                              type="button"
+                              role="tab"
+                              aria-controls="sarprasDashboard"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/marketplace.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="flex items-center p-2 rounded-full"
+                              id="sarprasDashboardTab"
+                              data-tabs-target="#sarprasDashboard"
+                              type="button"
+                              role="tab"
+                              aria-controls="sarprasDashboard"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/marketplace.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
                           </div>
                         </div>
-                        <div id="fasilitas" class="tab-pane hidden">
-                          <div class="flex flex-col">
-                            <div class="font-bold text-xl py-3">Fasilitas</div>
-                            <div class="font-semibold pb-5">
-                              Fasilitas Rumah
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2">
-                              <div>
-                                <div class="flex flex-row">
-                                  <div class="mr-2">
-                                    <span class="material-symbols-outlined">
-                                      ac_unit
-                                    </span>
-                                  </div>
-                                  <div>Ac</div>
-                                </div>
-                              </div>
-                              <div>
-                                <div class="flex flex-row">
-                                  <div class="mr-2">
-                                    <span class="material-symbols-outlined">
-                                      ac_unit
-                                    </span>
-                                  </div>
-                                  <div>Ac</div>
-                                </div>
-                              </div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2">
-                              <div>
-                                <div class="flex flex-row">
-                                  <div class="mr-2">
-                                    <span class="material-symbols-outlined">
-                                      ac_unit
-                                    </span>
-                                  </div>
-                                  <div>Ac</div>
-                                </div>
-                              </div>
-                              <div>
-                                <div class="flex flex-row">
-                                  <div class="mr-2">
-                                    <span class="material-symbols-outlined">
-                                      ac_unit
-                                    </span>
-                                  </div>
-                                  <div>Ac</div>
-                                </div>
-                              </div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2">
-                              <div>
-                                <div class="flex flex-row">
-                                  <div class="mr-2">
-                                    <span class="material-symbols-outlined">
-                                      ac_unit
-                                    </span>
-                                  </div>
-                                  <div>Ac</div>
-                                </div>
-                              </div>
-                              <div>
-                                <div class="flex flex-row">
-                                  <div class="mr-2">
-                                    <span class="material-symbols-outlined">
-                                      ac_unit
-                                    </span>
-                                  </div>
-                                  <div>Ac</div>
-                                </div>
-                              </div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2">
-                              <div>
-                                <div class="flex flex-row">
-                                  <div class="mr-2">
-                                    <span class="material-symbols-outlined">
-                                      ac_unit
-                                    </span>
-                                  </div>
-                                  <div>Ac</div>
-                                </div>
-                              </div>
-                              <div>
-                                <div class="flex flex-row">
-                                  <div class="mr-2">
-                                    <span class="material-symbols-outlined">
-                                      ac_unit
-                                    </span>
-                                  </div>
-                                  <div>Ac</div>
-                                </div>
-                              </div>
-                            </div>
 
-                            <!--  -->
+                        <div></div>
+                      </div>
+
+                      <div id="sarprasTabContent">
+                        <div
+                          class="hidden px-2"
+                          id="sarprasProfile"
+                          role="tabpanel"
+                          aria-labelledby="sarprasProfileTab"
+                        >
+                          <!-- Label baru -->
+                          <!-- sarpras1 -->
+                          <div>
+                            <ul class="list-group list-group-flush">
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid Jami Batu Ceper
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.160 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid Al-Fatt</div>
+                                  <div class="text-right">
+                                    <span>0.211 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Gereja Pantekosta Di Indonesia Kebon Pala
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.398 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid Jami' Al Barokah
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.431 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Shanti Mandir</div>
+                                  <div class="text-right">
+                                    <span>0.443 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid An-Nur</div>
+                                  <div class="text-right">
+                                    <span>0.472 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Gajah Mada City Church GBI
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.482 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid Baiturrahman
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.485 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Gereja Kristus Ketapang
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.606 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid Al Muttaqin</div>
+                                  <div class="text-right">
+                                    <span>0.652 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Gereja Berea</div>
+                                  <div class="text-right">
+                                    <span>0.666 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid Al Istiqomah
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.675 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Sacred Heart'S Lady Catholic Church,
+                                    Kemakmuran
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.698 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid An Nashir</div>
+                                  <div class="text-right">
+                                    <span>0.750 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid Jami Al Wustho
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.809 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid Al Zikra</div>
+                                  <div class="text-right">
+                                    <span>0.811 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid Al Karomah</div>
+                                  <div class="text-right">
+                                    <span>0.823 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid As Syifa</div>
+                                  <div class="text-right">
+                                    <span>0.882 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid Kebon Jeruk</div>
+                                  <div class="text-right">
+                                    <span>0.894 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid Al Huda</div>
+                                  <div class="text-right">
+                                    <span>0.920 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid Jami' Al Mu'awanah
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.934 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid RA Al Hidayah
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.938 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid Al Hidayah</div>
+                                  <div class="text-right">
+                                    <span>0.947 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid Lautze Jakarta
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.954 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid Jami' Assalam
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.963 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid Al-Qokib</div>
+                                  <div class="text-right">
+                                    <span>0.967 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Gereja Injil Seutuh
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.972 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid Assyafi'iyyah
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.972 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Masjid Jami Al Yusufiyah
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.983 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Masjid Nurul Iman</div>
+                                  <div class="text-right">
+                                    <span>0.996 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Yayasan Gereja Kristen Baptist Jakarta
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.997 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
                         </div>
-                        <div id="deskripsi" class="tab-pane hidden">
-                          <div class="flex flex-col">
-                            <div class="font-bold text-xl py-3">Deskripsi</div>
-                            <!--  -->
-                            <div class="grid grid-cols-2 gap-4">
-                              <div class="font-semibold">Sertifikat</div>
-                              <div>SHM</div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2 gap-4">
-                              <div class="font-semibold">Carpots</div>
-                              <div>2</div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2 gap-4">
-                              <div class="font-semibold">Interior</div>
-                              <div>Non Furnished</div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2 gap-4">
-                              <div class="font-semibold">Tipe Properti</div>
-                              <div>Rumah</div>
-                            </div>
-                            <!--  -->
-                            <div class="grid grid-cols-2 gap-4">
-                              <div class="font-semibold">
-                                Orientasi Bangunan
+                        <div
+                          class="hidden px-2"
+                          id="sarprasDashboard"
+                          role="tabpanel"
+                          aria-labelledby="sarprasDashboardTab"
+                        >
+                          <!-- Label baru -->
+                          <!-- sarpras2 -->
+                          <div>
+                            <ul class="list-group list-group-flush">
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Alfamart Juanda 3</div>
+                                  <div class="text-right">
+                                    <span>0.167 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret Batu Tulis
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.251 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomart Batu Ceper
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.278 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Hayam Wuruk 1
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.310 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomart Hayam Wuruk 32
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.331 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Indomaret Sukarjo</div>
+                                  <div class="text-right">
+                                    <span>0.375 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamidi Sawah Besar
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.383 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret Duta Merlin
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.444 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Pembangunan 2
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.452 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret Juanda Raya 31
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.483 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Sukaryo Wiro Pranoto
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.488 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Pecenongan
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.498 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret Plus Pecenongan
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.568 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Alfamart Harmony</div>
+                                  <div class="text-right">
+                                    <span>0.599 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret Harmoni Plaza
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.663 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Pembangunan 1
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.685 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret Pembangunan
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.688 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Ruko Harmoni
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.692 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret Hayam Wuruk 3
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.696 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Kebon Jeruk IX
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.731 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret SPBU Zaenal Arifin
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.767 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Gajah Mada 2
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.768 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    FamilyMart Hayam Wuruk
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.790 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret Majapahit
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.841 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Ketapang Raya
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.878 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Gajah Mada 1
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.897 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret Ketapang Utara
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.898 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Alfamart Kaji</div>
+                                  <div class="text-right">
+                                    <span>0.931 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Indomaret Kaji</div>
+                                  <div class="text-right">
+                                    <span>0.931 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">Alfamart Juanda 2</div>
+                                  <div class="text-right">
+                                    <span>0.958 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Indomaret Samanhudi
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.981 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                              <li
+                                class="listgroup-cust align-items-center text_all text-sm"
+                                style="list-style: none"
+                              >
+                                <div class="grid grid-cols-3">
+                                  <div class="w-[18vw]">
+                                    Alfamart Kebon Jeruk IX-2
+                                  </div>
+                                  <div class="text-right">
+                                    <span>0.996 km</span>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!--  -->
+                        <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
+                      </div>
+                    </div>
+                    <!--  -->
+                  </div>
+                  <!--  -->
+                  <div
+                    class="hidden p-2 dark:bg-gray-800"
+                    id="settings"
+                    role="tabpanel"
+                    aria-labelledby="settings-tab"
+                  >
+                    <!-- Information Kanan -->
+                    <div class="pl-2">
+                      <div class="">
+                        <div
+                          class="grid grid-cols-10"
+                          id="infoTab"
+                          data-tabs-toggle="#infoTabContent"
+                          role="tablist"
+                        >
+                          <div>
+                            <button
+                              class="flex items-center p-2 rounded-full"
+                              id="mosque-tab"
+                              data-tabs-target="#mosqueInfo"
+                              type="button"
+                              role="tab"
+                              aria-controls="mosqueInfo"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/mosque.png"
+                                  alt="mosque"
+                                />
                               </div>
-                              <div>Barat Laut</div>
-                            </div>
-                            <!--  -->
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="flex items-center p-2 rounded-full"
+                              id="marketplace1-tab"
+                              data-tabs-target="#marketplace1Info"
+                              type="button"
+                              role="tab"
+                              aria-controls="marketplace1Info"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/marketplace.png"
+                                  alt="marketplace1"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="flex items-center p-2 rounded-full"
+                              id="marketplace2-tab"
+                              data-tabs-target="#marketplace2Info"
+                              type="button"
+                              role="tab"
+                              aria-controls="marketplace2Info"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/marketplace.png"
+                                  alt="marketplace2"
+                                />
+                              </div>
+                            </button>
                           </div>
                         </div>
                       </div>
 
-                      <!--  -->
+                      <div id="infoTabContent">
+                        <div
+                          class="hidden px-2"
+                          id="mosqueInfo"
+                          role="tabpanel"
+                          aria-labelledby="mosque-tab"
+                        >
+                          <!-- ECCI -->
+                          <div class="grid grid-cols-1 gap-y-1 mt-8">
+                            <div class="w-full text-md font-bold">
+                              Environment Carrying Capacity Index
+                            </div>
+
+                            <div class="grid grid-cols-1 text-md">
+                              <div
+                                class="grid grid-cols-1 gap-4 text-md text-gray-800"
+                              >
+                                <div
+                                  class="flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
+                                >
+                                  <canvas
+                                    id="myRadarChart"
+                                    class="w-full h-full"
+                                  ></canvas>
+                                </div>
+                              </div>
+                              <!--  -->
+
+                              <div class="flex flex-col text-sm">
+                                <div class="flex flex-col">
+                                  <div class="">Topografi</div>
+                                  <div>1. Kelerengan Datar</div>
+                                </div>
+                                <div class="flex flex-col">
+                                  <div class="">Kebencanaan</div>
+                                  <div>1. Risiko Banjir Rendah</div>
+                                  <div>
+                                    2. Risiko Penurunan Muka Tanah Rendah
+                                  </div>
+                                </div>
+                                <div class="flex flex-col">
+                                  <div class="">Ketersediaan Air</div>
+                                  <div>1. Air Tanah Zona Rusak</div>
+                                  <div>
+                                    2. Penyediaan Air Perpipaan Terjangkau
+                                  </div>
+                                </div>
+                                <div class="flex flex-col">
+                                  <div class="">Kualitas Vegetasi</div>
+                                  <div>
+                                    1. Kualitas Vegetasi Sangat Kurang Baik
+                                  </div>
+                                </div>
+                                <div class="flex flex-col">
+                                  <div class="">Pengolahan Limbah</div>
+                                  <div>
+                                    1. Pengelolaan IPAL Belum Tersedia /
+                                    Terencana
+                                  </div>
+                                  <div>2. Jarak Tidak Ideal Terhadap TPS</div>
+                                </div>
+                              </div>
+                              <!--  -->
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden px-2"
+                          id="marketplace1Info"
+                          role="tabpanel"
+                          aria-labelledby="marketplace1-tab"
+                        >
+                          <!-- Livability Index -->
+                          <div class="grid grid-cols-1 gap-y-1 mt-8">
+                            <div class="w-full text-md font-bold">
+                              Livability Index
+                            </div>
+
+                            <div class="grid grid-cols-1 text-md">
+                              <div
+                                class="grid grid-cols-1 gap-4 text-md text-gray-800"
+                              >
+                                <div
+                                  class="flex items-center mb-4 justify-center min-w-[200px] min-h-[180px]"
+                                >
+                                  <canvas
+                                    id="mySecondRadarChart"
+                                    class="w-full h-full"
+                                  ></canvas>
+                                </div>
+                              </div>
+
+                              <!--  -->
+                              <div class="grid grid-cols-1 gap-4 text-sm">
+                                <div class="flex flex-col">
+                                  <div>
+                                    1. Tingkat Konektivitas Pejalan Kaki Rendah
+                                  </div>
+                                  <div>
+                                    2. Ruang Terbuka dan Publik Terjangkau
+                                    Sangat Baik
+                                  </div>
+                                  <div>
+                                    3. Fasilitas Komunitas Terjangkau Sangat
+                                    Baik
+                                  </div>
+                                  <div>
+                                    4. Aktivitas Budaya Perkotaan Sedang
+                                  </div>
+                                  <div>
+                                    5. Tempat untuk Bekerja Kurang Tersedia
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                        </div>
+                        <div
+                          class="hidden px-2"
+                          id="marketplace2Info"
+                          role="tabpanel"
+                          aria-labelledby="marketplace2-tab"
+                        >
+                          <!-- Investment Index -->
+                          <div class="grid grid-cols-1 gap-y-1 mt-1">
+                            <div class="w-full text-md font-bold">
+                              Investment Index
+                            </div>
+
+                            <div class="grid grid-cols-1 text-md">
+                              <div
+                                class="grid grid-cols-1 gap-4 text-md text-gray-800"
+                              >
+                                <div
+                                  class="flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
+                                >
+                                  <canvas
+                                    id="myInvestmentIndexChart"
+                                    class="w-full h-full"
+                                  ></canvas>
+                                </div>
+                              </div>
+                              <!--  -->
+
+                              <div class="flex flex-col text-sm">
+                                <div class="flex flex-col">
+                                  <div class="">Topografi</div>
+                                  <div>1. Kelerengan Datar</div>
+                                </div>
+                                <div class="flex flex-col">
+                                  <div class="">Kebencanaan</div>
+                                  <div>1. Risiko Banjir Rendah</div>
+                                  <div>
+                                    2. Risiko Penurunan Muka Tanah Rendah
+                                  </div>
+                                </div>
+
+                                <div class="flex flex-col">
+                                  <div class="">Pengolahan Limbah</div>
+                                  <div>
+                                    1. Pengelolaan IPAL Belum Tersedia /
+                                    Terencana
+                                  </div>
+                                  <div>2. Jarak Tidak Ideal Terhadap TPS</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--  -->
+                        <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                <!--  -->
               </div>
             </div>
           </div>
@@ -1176,4 +2439,162 @@
 
   <!-- Script main -->
   <script src="./src/js/main.js"></script>
+
+  <script>
+    // Menyimpan elemen yang akan diubah ke dalam variabel
+    var carousel = document.getElementById("animation-carousel");
+
+    // Tombol untuk deskripsi, sarana, dan indeks
+    var btnDeskripsi = document.getElementById("profile-tab");
+    var btnSarana = document.getElementById("dashboard-tab");
+    var btnIndeks = document.getElementById("settings-tab");
+
+    console.log(btnDeskripsi, btnSarana, btnIndeks);
+
+    // Fungsi untuk menampilkan carousel
+    btnDeskripsi.addEventListener("click", function () {
+      carousel.style.display = "block";
+    });
+
+    // Fungsi untuk menyembunyikan carousel
+    btnSarana.addEventListener("click", function () {
+      carousel.style.display = "none";
+    });
+
+    btnIndeks.addEventListener("click", function () {
+      carousel.style.display = "none";
+    });
+  </script>
+
+  <script>
+    var ctx1 = document.getElementById("myRadarChart").getContext("2d");
+    var myRadarChart = new Chart(ctx1, {
+      type: "radar",
+      data: {
+        labels: [
+          "Pengelolaan Limbah",
+          "Topografi",
+          "Kebencanaan",
+          "Keseterdian Air",
+          "Kualitas Vegetasi",
+        ],
+        datasets: [
+          {
+            data: [3, 5, 2, 4, 3],
+            backgroundColor: "rgba(255, 99, 132, 0.2)",
+            borderColor: "rgba(255, 99, 132, 1)",
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            beginAtZero: true,
+            max: 5,
+            stepSize: 1, // Menambahkan ini agar tidak ada angka desimal
+            ticks: {
+              precision: 0, // Menambahkan ini agar tidak ada angka desimal
+            },
+          },
+        },
+        plugins: {
+          legend: {
+            display: false, // Menyembunyikan legenda
+          },
+          tooltip: {
+            enabled: true, // Menyembunyikan tooltip
+          },
+        },
+      },
+    });
+
+    var ctx2 = document.getElementById("mySecondRadarChart").getContext("2d");
+    var mySecondRadarChart = new Chart(ctx2, {
+      type: "radar",
+      data: {
+        labels: [
+          "Tingkat Konektivitas Pejalan Kaki",
+          "Ruang Terbuka dan Publik",
+          "Fasilitas Komunitas",
+          "Aktivitas Budaya",
+          "Tempat untuk Bekerja",
+        ],
+        datasets: [
+          {
+            data: [4, 2, 5, 3, 4],
+            backgroundColor: "rgba(75, 192, 192, 0.2)",
+            borderColor: "rgba(75, 192, 192, 1)",
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            beginAtZero: true,
+            max: 5,
+            stepSize: 1, // Menambahkan ini agar tidak ada angka desimal
+            ticks: {
+              precision: 0, // Menambahkan ini agar tidak ada angka desimal
+            },
+          },
+        },
+        plugins: {
+          legend: {
+            display: false, // Menyembunyikan legenda
+          },
+          tooltip: {
+            enabled: true, // Menyembunyikan tooltip
+          },
+        },
+      },
+    });
+    //
+
+    // Menambahkan chart radar ketiga untuk Investment Index
+    var ctx3 = document
+      .getElementById("myInvestmentIndexChart")
+      .getContext("2d");
+    var myInvestmentIndexChart = new Chart(ctx3, {
+      type: "radar",
+      data: {
+        labels: ["Properti", "Saham", "Obligasi", "Emas", "Reksadana"],
+        datasets: [
+          {
+            data: [4, 3, 2, 5, 3],
+            backgroundColor: "rgba(153, 102, 255, 0.2)",
+            borderColor: "rgba(153, 102, 255, 1)",
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            beginAtZero: true,
+            max: 5,
+            stepSize: 1,
+            ticks: {
+              precision: 0,
+            },
+          },
+        },
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+  </script>
 </html>

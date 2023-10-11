@@ -4,6 +4,11 @@
 
 /* body,
 html {
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+} */
+
+/* body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -27,7 +32,7 @@ html {
 /* Navigator MapboxGL */
 .mapboxgl-ctrl-top-right {
   right: 1vh !important;
-  top: 32vh !important;
+  top: 66vh !important;
 }
 
 .my-location-button .mapboxgl-ctrl-icon {
@@ -56,4 +61,35 @@ html {
 
 .mapboxgl-ctrl-group:not(:empty) {
   box-shadow: none !important;
+}
+
+/* Progres Bar */
+
+/* Style for custom slider handle */
+.slider {
+  -webkit-appearance: none;
+  width: calc(100% - 3rem); /* Adjust width as per the label */
+  height: 15px;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3b82f6; /* Change color as needed */
+  cursor: pointer;
+  border: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3b82f6; /* Change color as needed */
+  cursor: pointer;
+  border: none;
 }
