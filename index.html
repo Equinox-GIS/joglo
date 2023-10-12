@@ -8,15 +8,6 @@
     <!-- Build Css -->
     <link rel="stylesheet" href="./dist/output.css" />
 
-    <style>
-      .chart-container {
-        position: relative;
-        max-width: 100%;
-        width: 200px; /* Atur sesuai kebutuhan, atau bisa juga menggunakan persentase */
-        height: 205px;
-      }
-    </style>
-
     <!-- Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
@@ -50,22 +41,6 @@
     />
 
     <!-- Slick CSS -->
-    <!-- <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    /> -->
-
-    <!-- JQuery -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
 
     <link
       rel="stylesheet"
@@ -77,43 +52,27 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
-
-    <!-- Slick JS -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
 
     <!-- Icon -->
 
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/5paNdF+Tm2JsNR6/ibe7ay9C3zXp1"
       crossorigin="anonymous"
-    /> -->
+    />
 
     <style>
-      .product {
-        display: flex;
-        flex-direction: column;
-      }
+      /* MapBox gl */
 
-      @media only screen and (min-width: 768px) {
-        .product {
-          flex-direction: row;
-        }
+      /* .chart-container {
+        position: relative;
+        max-width: 100%;
+        width: 200px;
+        height: 205px;
+      } */
 
-        .product-images {
-          width: 50%;
-        }
-
-        .product-description {
-          margin-left: 36px;
-        }
-      }
-
-      /* Thumbnails Slider */
+      /* Mengatur Button Slider Card Info */
       .slider-thumbnails {
         margin-left: -15px;
         margin-right: -15px;
@@ -137,23 +96,6 @@
         border-radius: 3px;
       }
 
-      /* Main Slider */
-      .slider {
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        border: solid 9px #fff;
-        box-sizing: border-box;
-        margin-bottom: 15px;
-        border-radius: 5px;
-      }
-
-      .slider .slick-slide {
-      }
-
-      .slider .slick-slide img {
-        width: 100%;
-      }
-
-      /* make button larger and change their positions */
       .slick-prev,
       .slick-next {
         width: 50px;
@@ -171,24 +113,20 @@
 
       .slick-prev:before,
       .slick-next:before {
-        font-size: 40px;
+        font-size: 30px;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       }
 
-      /* General slick slider styling */
       .slick-slide:focus,
       .slick-slide:focus {
         outline: none;
-        /* remove default outline when on :focus */
       }
 
-      /* hide dots and arrow buttons when slider is not hovered */
       .slick-slider:not(:hover) .slick-arrow,
       .slick-slider:not(:hover) .slick-dots {
         opacity: 0;
       }
 
-      /* transition effects for opacity */
       .slick-arrow {
         transition: opacity 0.5s ease-out;
       }
@@ -222,13 +160,11 @@
         background: rgb(161 161 170);
         border-radius: 100vh;
         border: 2px solid rgb(161 161 170);
-        /* margin-top: 10% !important;
-        top: 20% !important; */
         position: relative !important;
       }
 
       .hide-scrollbar::-webkit-scrollbar {
-        display: none; /* Chrome and Safari */
+        display: none;
       }
 
       .hide-scrollbar {
@@ -250,12 +186,12 @@
 
       /* responsvei slick */
 
-      .slider img {
+      .slider-card-info img {
         width: 100%;
         height: 100%;
       }
 
-      .slider {
+      .slider-card-info {
         height: auto;
         width: auto;
         box-shadow: none;
@@ -401,16 +337,18 @@
         </div>
 
         <!-- Map -->
-        <div class="w-full h-full border border-red-500">
-          <div id="map" class="w-full h-full shadow-lg"></div>
+        <div class="w-full h-full border border-blue-500">
+          <div id="map" class="w-full h-full"></div>
         </div>
 
         <!-- Card -->
         <div class="px-4 pt-3 flex flex-col">
           <!--  Bagan Card Info -->
-          <div>
+          <div
+            class="flex flex-col card-info-judul border border-green-500 hidden"
+          >
             <!-- Judul Card Info -->
-            <div class="card-info-judul">
+            <div class="">
               <div class="font-semibold text-xl px-3">Rumah Dijual</div>
               <div class="flex flex-row justify-between items-center mt-1 px-3">
                 <div class="font-normal">Ditemukan 500 data</div>
@@ -485,12 +423,17 @@
             >
               <div class="mt-2 grid grid-cols-2 gap-y-4 gap-x-6">
                 <!-- Card 1 -->
-
+                <!--  onmouseenter="getDataCard(this)"
+                  onmouseleave="removePopup()" -->
                 <div
                   class="mt-2 flex flex-col cursor-pointer bg-white rounded-lg"
+                  data-card-map="1534"
+                  data-active-tab="1"
+                  onclick="showCardInfoDetail(this)"
+                  id="card-info-detail"
                 >
                   <div class="w-[21.3vw] relative">
-                    <div class="slider w-full h-full">
+                    <div class="slider-card-info w-full h-full">
                       <img
                         class="w-full h-full object-cover rounded-t-lg"
                         src="./src/images/Hunian/Rmh1/rumaha1.jpg"
@@ -503,7 +446,10 @@
                       />
                     </div>
                   </div>
-                  <div class="px-3 pt-1 pb-3">
+                  <div
+                    class="px-3 pt-1 pb-3 ingfokan"
+                    style="user-select: none"
+                  >
                     <a href="#">
                       <h5
                         class="text-md font-bold tracking-tight text-gray-900"
@@ -550,192 +496,222 @@
                     </div>
                   </div>
                 </div>
+
                 <!-- Card 2 -->
-                <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
+                <div
+                  class="mt-2 flex flex-col cursor-pointer bg-white rounded-lg"
+                  data-card-map="1534"
+                  data-active-tab="1"
+                  onclick="showCardInfoDetail(this)"
+                  id="card-info-detail"
+                >
+                  <div class="w-[21.3vw] relative">
+                    <div class="slider-card-info w-full h-full">
+                      <img
+                        class="w-full h-full object-cover rounded-t-lg"
+                        src="./src/images/Hunian/Rmh2/rumahb1.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-full h-full object-cover rounded-t-lg"
+                        src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
                   <div
-                    class="w-[21.5vw] h-80 bg-white border border-gray-200 rounded-lg"
-                    data-card-map="1534"
-                    onmouseenter="getDataCard(this)"
-                    onmouseleave="removePopup()"
-                    data-active-tab="1"
-                    onclick="showCardInfoDetail(this)"
+                    class="px-3 pt-1 pb-3 ingfokan"
+                    style="user-select: none"
                   >
-                    <img
-                      class="rounded-t-lg"
-                      src="./src/images/Hunian/Rmh2/rumahb1.jpg"
-                      alt=""
-                    />
-                    <div class="px-3 pt-1 pb-3">
-                      <a href="#">
-                        <h5
-                          class="text-md font-bold tracking-tight text-gray-900"
-                        >
-                          Rp 2.300.000.000
-                        </h5>
-                      </a>
+                    <a href="#">
+                      <h5
+                        class="text-md font-bold tracking-tight text-gray-900"
+                      >
+                        Rp 2.300.000.000
+                      </h5>
+                    </a>
 
-                      <div class="flex flex-col mb-3 font-normal">
-                        <div class="flex items-center text-xs text-gray-700">
-                          <span class="mr-2">LT 140 m² |</span>
-                          <span class="mr-2">LB 392 m² |</span>
-                          <div class="inline-flex items-center mr-1.5">
-                            <img
-                              class="w-7 h-4 object-fill pl-1 pr-1.5"
-                              src="./src/images/bath.png"
-                              alt=""
-                            />
-                            <span> 3 KT |</span>
-                          </div>
-                          <div class="inline-flex items-center mr-1.5">
-                            <img
-                              class="w-7 h-5 object-fill pl-1 pr-1.5"
-                              src="./src/images/bed.png"
-                              alt=""
-                            />
-                            <span>2 KM</span>
-                          </div>
+                    <div class="flex flex-col mb-3 font-normal">
+                      <div class="flex items-center text-xs text-gray-700">
+                        <span class="mr-2">LT 140 m² |</span>
+                        <span class="mr-2">LB 392 m² |</span>
+                        <div class="inline-flex items-center mr-1.5">
+                          <img
+                            class="w-7 h-4 object-fill pl-1 pr-1.5"
+                            src="./src/images/bath.png"
+                            alt=""
+                          />
+                          <span> 3 KT |</span>
                         </div>
-                        <div class="text-sm text-gray-700 py-2">
-                          Setiabudi, Karet Kuningan, Jakarta Selatan
+                        <div class="inline-flex items-center mr-1.5">
+                          <img
+                            class="w-7 h-5 object-fill pl-1 pr-1.5"
+                            src="./src/images/bed.png"
+                            alt=""
+                          />
+                          <span>2 KM</span>
                         </div>
-                        <div class="text-xs text-gray-400">ERA JAKARTA</div>
                       </div>
+                      <div class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </div>
+                      <div class="text-xs text-gray-400">ERA JAKARTA</div>
+                    </div>
 
-                      <div class="mb-3 font-normal hidden">
-                        <p class="text-xs text-gray-700">
-                          LT 140 m² | LB 392 m² | 3 KT | 2 KM
-                        </p>
-                        <p class="text-sm text-gray-700 py-2">
-                          Setiabudi, Karet Kuningan, Jakarta Selatan
-                        </p>
-                        <p class="text-xs text-gray-400">ERA JAKARTA</p>
-                      </div>
+                    <div class="mb-3 font-normal hidden">
+                      <p class="text-xs text-gray-700">
+                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                      </p>
+                      <p class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </p>
+                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
                     </div>
                   </div>
                 </div>
+
                 <!-- Card 3 -->
-                <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
+                <div
+                  class="mt-2 flex flex-col cursor-pointer bg-white rounded-lg"
+                  data-card-map="1534"
+                  data-active-tab="1"
+                  onclick="showCardInfoDetail(this)"
+                  id="card-info-detail"
+                >
+                  <div class="w-[21.3vw] relative">
+                    <div class="slider-card-info w-full h-full">
+                      <img
+                        class="w-full h-full object-cover rounded-t-lg"
+                        src="./src/images/Hunian/Rmh3/rumahc1.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-full h-full object-cover rounded-t-lg"
+                        src="./src/images/Hunian/Rmh3/rumahc2.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
                   <div
-                    class="w-[21.5vw] h-80 bg-white border border-gray-200 rounded-lg"
-                    data-card-map="1534"
-                    onmouseenter="getDataCard(this)"
-                    onmouseleave="removePopup()"
-                    data-active-tab="1"
-                    onclick="showCardInfoDetail(this)"
+                    class="px-3 pt-1 pb-3 ingfokan"
+                    style="user-select: none"
                   >
-                    <img
-                      class="rounded-t-lg"
-                      src="./src/images/Hunian/Rmh3/rumahc1.jpg"
-                      alt=""
-                    />
-                    <div class="px-3 pt-1 pb-3">
-                      <a href="#">
-                        <h5
-                          class="text-md font-bold tracking-tight text-gray-900"
-                        >
-                          Rp 2.300.000.000
-                        </h5>
-                      </a>
+                    <a href="#">
+                      <h5
+                        class="text-md font-bold tracking-tight text-gray-900"
+                      >
+                        Rp 2.300.000.000
+                      </h5>
+                    </a>
 
-                      <div class="flex flex-col mb-3 font-normal">
-                        <div class="flex items-center text-xs text-gray-700">
-                          <span class="mr-2">LT 140 m² |</span>
-                          <span class="mr-2">LB 392 m² |</span>
-                          <div class="inline-flex items-center mr-1.5">
-                            <img
-                              class="w-7 h-4 object-fill pl-1 pr-1.5"
-                              src="./src/images/bath.png"
-                              alt=""
-                            />
-                            <span> 3 KT |</span>
-                          </div>
-                          <div class="inline-flex items-center mr-1.5">
-                            <img
-                              class="w-7 h-5 object-fill pl-1 pr-1.5"
-                              src="./src/images/bed.png"
-                              alt=""
-                            />
-                            <span>2 KM</span>
-                          </div>
+                    <div class="flex flex-col mb-3 font-normal">
+                      <div class="flex items-center text-xs text-gray-700">
+                        <span class="mr-2">LT 140 m² |</span>
+                        <span class="mr-2">LB 392 m² |</span>
+                        <div class="inline-flex items-center mr-1.5">
+                          <img
+                            class="w-7 h-4 object-fill pl-1 pr-1.5"
+                            src="./src/images/bath.png"
+                            alt=""
+                          />
+                          <span> 3 KT |</span>
                         </div>
-                        <div class="text-sm text-gray-700 py-2">
-                          Setiabudi, Karet Kuningan, Jakarta Selatan
+                        <div class="inline-flex items-center mr-1.5">
+                          <img
+                            class="w-7 h-5 object-fill pl-1 pr-1.5"
+                            src="./src/images/bed.png"
+                            alt=""
+                          />
+                          <span>2 KM</span>
                         </div>
-                        <div class="text-xs text-gray-400">ERA JAKARTA</div>
                       </div>
+                      <div class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </div>
+                      <div class="text-xs text-gray-400">ERA JAKARTA</div>
+                    </div>
 
-                      <div class="mb-3 font-normal hidden">
-                        <p class="text-xs text-gray-700">
-                          LT 140 m² | LB 392 m² | 3 KT | 2 KM
-                        </p>
-                        <p class="text-sm text-gray-700 py-2">
-                          Setiabudi, Karet Kuningan, Jakarta Selatan
-                        </p>
-                        <p class="text-xs text-gray-400">ERA JAKARTA</p>
-                      </div>
+                    <div class="mb-3 font-normal hidden">
+                      <p class="text-xs text-gray-700">
+                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                      </p>
+                      <p class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </p>
+                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
                     </div>
                   </div>
                 </div>
+
                 <!-- Card 4 -->
-                <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
+                <div
+                  class="mt-2 flex flex-col cursor-pointer bg-white rounded-lg"
+                  data-card-map="1534"
+                  data-active-tab="1"
+                  onclick="showCardInfoDetail(this)"
+                  id="card-info-detail"
+                >
+                  <div class="w-[21.3vw] relative">
+                    <div class="slider-card-info w-full h-full">
+                      <img
+                        class="w-full h-full object-cover rounded-t-lg"
+                        src="./src/images/Hunian/Rmh4/rumahd1.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-full h-full object-cover rounded-t-lg"
+                        src="./src/images/Hunian/Rmh4/rumahd3.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
                   <div
-                    class="w-[21.5vw] h-80 bg-white border border-gray-200 rounded-lg"
-                    data-card-map="1534"
-                    onmouseenter="getDataCard(this)"
-                    onmouseleave="removePopup()"
-                    data-active-tab="1"
-                    onclick="showCardInfoDetail(this)"
+                    class="px-3 pt-1 pb-3 ingfokan"
+                    style="user-select: none"
                   >
-                    <img
-                      class="rounded-t-lg"
-                      src="./src/images/Hunian/Rmh4/rumahd2.jpg"
-                      alt=""
-                    />
-                    <div class="px-3 pt-1 pb-3">
-                      <a href="#">
-                        <h5
-                          class="text-md font-bold tracking-tight text-gray-900"
-                        >
-                          Rp 2.300.000.000
-                        </h5>
-                      </a>
+                    <a href="#">
+                      <h5
+                        class="text-md font-bold tracking-tight text-gray-900"
+                      >
+                        Rp 2.300.000.000
+                      </h5>
+                    </a>
 
-                      <div class="flex flex-col mb-3 font-normal">
-                        <div class="flex items-center text-xs text-gray-700">
-                          <span class="mr-2">LT 140 m² |</span>
-                          <span class="mr-2">LB 392 m² |</span>
-                          <div class="inline-flex items-center mr-1.5">
-                            <img
-                              class="w-7 h-4 object-fill pl-1 pr-1.5"
-                              src="./src/images/bath.png"
-                              alt=""
-                            />
-                            <span> 3 KT |</span>
-                          </div>
-                          <div class="inline-flex items-center mr-1.5">
-                            <img
-                              class="w-7 h-5 object-fill pl-1 pr-1.5"
-                              src="./src/images/bed.png"
-                              alt=""
-                            />
-                            <span>2 KM</span>
-                          </div>
+                    <div class="flex flex-col mb-3 font-normal">
+                      <div class="flex items-center text-xs text-gray-700">
+                        <span class="mr-2">LT 140 m² |</span>
+                        <span class="mr-2">LB 392 m² |</span>
+                        <div class="inline-flex items-center mr-1.5">
+                          <img
+                            class="w-7 h-4 object-fill pl-1 pr-1.5"
+                            src="./src/images/bath.png"
+                            alt=""
+                          />
+                          <span> 3 KT |</span>
                         </div>
-                        <div class="text-sm text-gray-700 py-2">
-                          Setiabudi, Karet Kuningan, Jakarta Selatan
+                        <div class="inline-flex items-center mr-1.5">
+                          <img
+                            class="w-7 h-5 object-fill pl-1 pr-1.5"
+                            src="./src/images/bed.png"
+                            alt=""
+                          />
+                          <span>2 KM</span>
                         </div>
-                        <div class="text-xs text-gray-400">ERA JAKARTA</div>
                       </div>
+                      <div class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </div>
+                      <div class="text-xs text-gray-400">ERA JAKARTA</div>
+                    </div>
 
-                      <div class="mb-3 font-normal hidden">
-                        <p class="text-xs text-gray-700">
-                          LT 140 m² | LB 392 m² | 3 KT | 2 KM
-                        </p>
-                        <p class="text-sm text-gray-700 py-2">
-                          Setiabudi, Karet Kuningan, Jakarta Selatan
-                        </p>
-                        <p class="text-xs text-gray-400">ERA JAKARTA</p>
-                      </div>
+                    <div class="mb-3 font-normal hidden">
+                      <p class="text-xs text-gray-700">
+                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                      </p>
+                      <p class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </p>
+                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
                     </div>
                   </div>
                 </div>
@@ -746,11 +722,13 @@
           </div>
 
           <!-- Bagan Card Info Detail -->
-          <div class="flex flex-col card-info-detail hidden">
+          <div
+            class="flex flex-col w-full card-info-detail border border-red-500"
+          >
             <!-- Judul Card Info Detail -->
             <div>
               <div class="w-full flex justify-between px-3">
-                <div class="text-lg font-bold">
+                <div class="text-xl font-bold">
                   Rumah Impian Strategis Dijual! Segera Miliki Hunian Eksklusif
                   di Lokasi Prime!
                 </div>
@@ -764,12 +742,63 @@
                 </div>
               </div>
 
-              <div>Test Card Info Detail</div>
+              <!-- Menu Tab -->
+
+              <div class="mb-4">
+                <!-- Tab Menu -->
+                <ul
+                  class="flex flex-wrap -mb-px text-sm font-medium text-center px-4"
+                  id="myTab"
+                  data-tabs-toggle="#myTabContent"
+                  role="tablist"
+                >
+                  <li class="" role="presentation">
+                    <button
+                      class="inline-block py-4 pr-0.5 border-b-2 rounded-t-lg"
+                      id="profile-tab"
+                      data-tabs-target="#profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                    >
+                      Deskripsi
+                    </button>
+                  </li>
+                  <li class="" role="presentation">
+                    <button
+                      class="inline-block py-4 pr-0.5 mx-6 border-b-2 rounded-t-lg"
+                      id="dashboard-tab"
+                      data-tabs-target="#dashboard"
+                      type="button"
+                      role="tab"
+                      aria-controls="dashboard"
+                      aria-selected="true"
+                    >
+                      Sarana Prasarana
+                    </button>
+                  </li>
+                  <li class="" role="presentation">
+                    <button
+                      class="inline-block py-4 pr-0.5 border-b-2 rounded-t-lg"
+                      id="settings-tab"
+                      data-tabs-target="#settings"
+                      type="button"
+                      role="tab"
+                      aria-controls="settings"
+                      aria-selected="false"
+                    >
+                      Indeks
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
 
             <!-- Konten Card Info Detail -->
+
             <div
-              class="h-[68vh] card-info-detail overflow-y-auto hide-scrollbar"
+              class="w-full h-[60vh] card-info-detail overflow-y-auto hide-scrollbar border border-yellow-400"
             >
               <div class="flex flex-col h-full">
                 <!-- Tabs -->
@@ -871,7 +900,7 @@
                   </button>
                 </div>
 
-                <div id="myTabContent">
+                <div id="myTabContent" class="">
                   <div
                     class="hidden py-2 px-4"
                     id="profile"
@@ -1056,7 +1085,7 @@
                         >
                           <div>
                             <button
-                              class="flex items-center p-2 rounded-full"
+                              class="flex items-center pr-2 py-2 rounded-full"
                               id="sarprasProfileTab"
                               data-tabs-target="#sarprasProfile"
                               type="button"
@@ -1077,7 +1106,7 @@
                           </div>
                           <div>
                             <button
-                              class="flex items-center p-2 rounded-full"
+                              class="flex items-center pr-2 py-2 rounded-full"
                               id="sarprasDashboardTab"
                               data-tabs-target="#sarprasDashboard"
                               type="button"
@@ -1098,7 +1127,7 @@
                           </div>
                           <div>
                             <button
-                              class="flex items-center p-2 rounded-full"
+                              class="flex items-center pr-2 py-2 rounded-full"
                               id="sarprasDashboardTab"
                               data-tabs-target="#sarprasDashboard"
                               type="button"
@@ -1119,7 +1148,7 @@
                           </div>
                           <div>
                             <button
-                              class="flex items-center p-2 rounded-full"
+                              class="flex items-center pr-2 py-2 rounded-full"
                               id="sarprasDashboardTab"
                               data-tabs-target="#sarprasDashboard"
                               type="button"
@@ -1140,7 +1169,7 @@
                           </div>
                           <div>
                             <button
-                              class="flex items-center p-2 rounded-full"
+                              class="flex items-center pr-2 py-2 rounded-full"
                               id="sarprasDashboardTab"
                               data-tabs-target="#sarprasDashboard"
                               type="button"
@@ -1161,7 +1190,7 @@
                           </div>
                           <div>
                             <button
-                              class="flex items-center p-2 rounded-full"
+                              class="flex items-center pr-2 py-2 rounded-full"
                               id="sarprasDashboardTab"
                               data-tabs-target="#sarprasDashboard"
                               type="button"
@@ -1182,7 +1211,7 @@
                           </div>
                           <div>
                             <button
-                              class="flex items-center p-2 rounded-full"
+                              class="flex items-center pr-2 py-2 rounded-full"
                               id="sarprasDashboardTab"
                               data-tabs-target="#sarprasDashboard"
                               type="button"
@@ -1202,13 +1231,11 @@
                             </button>
                           </div>
                         </div>
-
-                        <div></div>
                       </div>
 
                       <div id="sarprasTabContent">
                         <div
-                          class="hidden px-2"
+                          class="hidden pr-2"
                           id="sarprasProfile"
                           role="tabpanel"
                           aria-labelledby="sarprasProfileTab"
@@ -1597,7 +1624,7 @@
                           </div>
                         </div>
                         <div
-                          class="hidden px-2"
+                          class="hidden pr-2"
                           id="sarprasDashboard"
                           role="tabpanel"
                           aria-labelledby="sarprasDashboardTab"
@@ -2029,7 +2056,7 @@
                   >
                     <!-- Information Kanan -->
                     <div class="pl-2">
-                      <div class="">
+                      <div class="border border-red-500">
                         <div
                           class="grid grid-cols-10"
                           id="infoTab"
@@ -2300,19 +2327,19 @@
   <!-- Script main -->
   <script src="./src/js/main.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $(".slider").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        infinite: true,
-        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-        nextArrow: '<button type="button" class="slick-next">Next</button>',
-      });
-    });
-  </script>
+  <!--  -->
 
+  <!-- JQuery -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  ></script>
+
+  <!-- Slick JS -->
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
   <!-- <script>
     // Menyimpan elemen yang akan diubah ke dalam variabel
     var carousel = document.getElementById("animation-carousel");
@@ -2470,4 +2497,20 @@
   </script>
 
   <!-- slick -->
+
+  <script>
+    $(document).ready(function () {
+      $(".slider-card-info").slick({
+        infinite: false,
+        prevArrow:
+          '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+        nextArrow:
+          '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+      });
+
+      //
+
+      //
+    });
+  </script>
 </html>

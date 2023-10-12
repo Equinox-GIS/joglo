@@ -2,33 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body,
-html {
-  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
-} */
-
-/* body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.map-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-} */
-
 /* Navigator MapboxGL */
 .mapboxgl-ctrl-top-right {
   right: 1vh !important;
@@ -63,12 +36,11 @@ html {
   box-shadow: none !important;
 }
 
-/* Progres Bar */
+/* Progres Bar Card Info Detail */
 
-/* Style for custom slider handle */
 .slider {
   -webkit-appearance: none;
-  width: calc(100% - 3rem); /* Adjust width as per the label */
+  width: calc(100% - 3rem);
   height: 15px;
   border-radius: 5px;
   background: transparent;
@@ -80,7 +52,7 @@ html {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #3b82f6; /* Change color as needed */
+  background: #3b82f6;
   cursor: pointer;
   border: none;
 }
@@ -89,7 +61,7 @@ html {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #3b82f6; /* Change color as needed */
+  background: #3b82f6;
   cursor: pointer;
   border: none;
 }
