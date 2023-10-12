@@ -5,7 +5,12 @@
 /* Navigator MapboxGL */
 .mapboxgl-ctrl-top-right {
   right: 1vh !important;
-  top: 66vh !important;
+  top: 64.5vh !important;
+}
+
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib {
+  display: none !important;
 }
 
 .my-location-button .mapboxgl-ctrl-icon {

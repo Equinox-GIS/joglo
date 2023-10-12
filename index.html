@@ -337,16 +337,14 @@
         </div>
 
         <!-- Map -->
-        <div class="w-full h-full border border-blue-500">
+        <div class="w-full h-full">
           <div id="map" class="w-full h-full"></div>
         </div>
 
         <!-- Card -->
         <div class="px-4 pt-3 flex flex-col">
           <!--  Bagan Card Info -->
-          <div
-            class="flex flex-col card-info-judul border border-green-500 hidden"
-          >
+          <div class="flex flex-col card-info-judul">
             <!-- Judul Card Info -->
             <div class="">
               <div class="font-semibold text-xl px-3">Rumah Dijual</div>
@@ -722,9 +720,7 @@
           </div>
 
           <!-- Bagan Card Info Detail -->
-          <div
-            class="flex flex-col w-full card-info-detail border border-red-500"
-          >
+          <div class="flex flex-col w-full card-info-detail hidden">
             <!-- Judul Card Info Detail -->
             <div>
               <div class="w-full flex justify-between px-3">
@@ -773,7 +769,7 @@
                       type="button"
                       role="tab"
                       aria-controls="dashboard"
-                      aria-selected="true"
+                      aria-selected="false"
                     >
                       Sarana Prasarana
                     </button>
@@ -798,7 +794,7 @@
             <!-- Konten Card Info Detail -->
 
             <div
-              class="w-full h-[60vh] card-info-detail overflow-y-auto hide-scrollbar border border-yellow-400"
+              class="w-full h-[61vh] card-info-detail overflow-y-auto hide-scrollbar"
             >
               <div class="flex flex-col h-full">
                 <!-- Tabs -->
@@ -2056,7 +2052,7 @@
                   >
                     <!-- Information Kanan -->
                     <div class="pl-2">
-                      <div class="border border-red-500">
+                      <div class="">
                         <div
                           class="grid grid-cols-10"
                           id="infoTab"
@@ -2340,7 +2336,7 @@
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
   ></script>
-  <!-- <script>
+  <script>
     // Menyimpan elemen yang akan diubah ke dalam variabel
     var carousel = document.getElementById("animation-carousel");
 
@@ -2362,7 +2358,7 @@
     btnIndeks.addEventListener("click", function () {
       carousel.style.display = "none";
     });
-  </script> -->
+  </script>
 
   <script>
     var ctx1 = document.getElementById("myRadarChart").getContext("2d");
