@@ -50,6 +50,23 @@
     />
 
     <!-- Slick CSS -->
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    /> -->
+
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+
     <link
       rel="stylesheet"
       type="text/css"
@@ -61,14 +78,20 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
 
+    <!-- Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
     <!-- Icon -->
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/5paNdF+Tm2JsNR6/ibe7ay9C3zXp1"
       crossorigin="anonymous"
-    />
+    /> -->
 
     <style>
       .product {
@@ -224,6 +247,23 @@
         width: 100% !important;
         height: 12vw !important;
       }
+
+      /* responsvei slick */
+
+      .slider img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .slider {
+        height: auto;
+        width: auto;
+        box-shadow: none;
+        border: none;
+        box-sizing: none;
+        margin-bottom: 0px;
+        border-radius: 0px;
+      }
     </style>
 
     <!--  -->
@@ -361,7 +401,7 @@
         </div>
 
         <!-- Map -->
-        <div class="w-full h-full">
+        <div class="w-full h-full border border-red-500">
           <div id="map" class="w-full h-full shadow-lg"></div>
         </div>
 
@@ -440,9 +480,266 @@
             </div>
 
             <!--  Konten Card Info -->
-            <div class="h-[68vh] card-info overflow-y-auto hide-scrollbar px-3">
-              <div class="mt-2 grid grid-cols-2 gap-y-4">
-                <p>test</p>
+            <div
+              class="h-[68vh] card-info overflow-y-auto hide-scrollbar px-3.5"
+            >
+              <div class="mt-2 grid grid-cols-2 gap-y-4 gap-x-6">
+                <!-- Card 1 -->
+
+                <div
+                  class="mt-2 flex flex-col cursor-pointer bg-white rounded-lg"
+                >
+                  <div class="w-[21.3vw] relative">
+                    <div class="slider w-full h-full">
+                      <img
+                        class="w-full h-full object-cover rounded-t-lg"
+                        src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="w-full h-full object-cover rounded-t-lg"
+                        src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="px-3 pt-1 pb-3">
+                    <a href="#">
+                      <h5
+                        class="text-md font-bold tracking-tight text-gray-900"
+                      >
+                        Rp 2.300.000.000
+                      </h5>
+                    </a>
+
+                    <div class="flex flex-col mb-3 font-normal">
+                      <div class="flex items-center text-xs text-gray-700">
+                        <span class="mr-2">LT 140 m² |</span>
+                        <span class="mr-2">LB 392 m² |</span>
+                        <div class="inline-flex items-center mr-1.5">
+                          <img
+                            class="w-7 h-4 object-fill pl-1 pr-1.5"
+                            src="./src/images/bath.png"
+                            alt=""
+                          />
+                          <span> 3 KT |</span>
+                        </div>
+                        <div class="inline-flex items-center mr-1.5">
+                          <img
+                            class="w-7 h-5 object-fill pl-1 pr-1.5"
+                            src="./src/images/bed.png"
+                            alt=""
+                          />
+                          <span>2 KM</span>
+                        </div>
+                      </div>
+                      <div class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </div>
+                      <div class="text-xs text-gray-400">ERA JAKARTA</div>
+                    </div>
+
+                    <div class="mb-3 font-normal hidden">
+                      <p class="text-xs text-gray-700">
+                        LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                      </p>
+                      <p class="text-sm text-gray-700 py-2">
+                        Setiabudi, Karet Kuningan, Jakarta Selatan
+                      </p>
+                      <p class="text-xs text-gray-400">ERA JAKARTA</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
+                  <div
+                    class="w-[21.5vw] h-80 bg-white border border-gray-200 rounded-lg"
+                    data-card-map="1534"
+                    onmouseenter="getDataCard(this)"
+                    onmouseleave="removePopup()"
+                    data-active-tab="1"
+                    onclick="showCardInfoDetail(this)"
+                  >
+                    <img
+                      class="rounded-t-lg"
+                      src="./src/images/Hunian/Rmh2/rumahb1.jpg"
+                      alt=""
+                    />
+                    <div class="px-3 pt-1 pb-3">
+                      <a href="#">
+                        <h5
+                          class="text-md font-bold tracking-tight text-gray-900"
+                        >
+                          Rp 2.300.000.000
+                        </h5>
+                      </a>
+
+                      <div class="flex flex-col mb-3 font-normal">
+                        <div class="flex items-center text-xs text-gray-700">
+                          <span class="mr-2">LT 140 m² |</span>
+                          <span class="mr-2">LB 392 m² |</span>
+                          <div class="inline-flex items-center mr-1.5">
+                            <img
+                              class="w-7 h-4 object-fill pl-1 pr-1.5"
+                              src="./src/images/bath.png"
+                              alt=""
+                            />
+                            <span> 3 KT |</span>
+                          </div>
+                          <div class="inline-flex items-center mr-1.5">
+                            <img
+                              class="w-7 h-5 object-fill pl-1 pr-1.5"
+                              src="./src/images/bed.png"
+                              alt=""
+                            />
+                            <span>2 KM</span>
+                          </div>
+                        </div>
+                        <div class="text-sm text-gray-700 py-2">
+                          Setiabudi, Karet Kuningan, Jakarta Selatan
+                        </div>
+                        <div class="text-xs text-gray-400">ERA JAKARTA</div>
+                      </div>
+
+                      <div class="mb-3 font-normal hidden">
+                        <p class="text-xs text-gray-700">
+                          LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                        </p>
+                        <p class="text-sm text-gray-700 py-2">
+                          Setiabudi, Karet Kuningan, Jakarta Selatan
+                        </p>
+                        <p class="text-xs text-gray-400">ERA JAKARTA</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
+                  <div
+                    class="w-[21.5vw] h-80 bg-white border border-gray-200 rounded-lg"
+                    data-card-map="1534"
+                    onmouseenter="getDataCard(this)"
+                    onmouseleave="removePopup()"
+                    data-active-tab="1"
+                    onclick="showCardInfoDetail(this)"
+                  >
+                    <img
+                      class="rounded-t-lg"
+                      src="./src/images/Hunian/Rmh3/rumahc1.jpg"
+                      alt=""
+                    />
+                    <div class="px-3 pt-1 pb-3">
+                      <a href="#">
+                        <h5
+                          class="text-md font-bold tracking-tight text-gray-900"
+                        >
+                          Rp 2.300.000.000
+                        </h5>
+                      </a>
+
+                      <div class="flex flex-col mb-3 font-normal">
+                        <div class="flex items-center text-xs text-gray-700">
+                          <span class="mr-2">LT 140 m² |</span>
+                          <span class="mr-2">LB 392 m² |</span>
+                          <div class="inline-flex items-center mr-1.5">
+                            <img
+                              class="w-7 h-4 object-fill pl-1 pr-1.5"
+                              src="./src/images/bath.png"
+                              alt=""
+                            />
+                            <span> 3 KT |</span>
+                          </div>
+                          <div class="inline-flex items-center mr-1.5">
+                            <img
+                              class="w-7 h-5 object-fill pl-1 pr-1.5"
+                              src="./src/images/bed.png"
+                              alt=""
+                            />
+                            <span>2 KM</span>
+                          </div>
+                        </div>
+                        <div class="text-sm text-gray-700 py-2">
+                          Setiabudi, Karet Kuningan, Jakarta Selatan
+                        </div>
+                        <div class="text-xs text-gray-400">ERA JAKARTA</div>
+                      </div>
+
+                      <div class="mb-3 font-normal hidden">
+                        <p class="text-xs text-gray-700">
+                          LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                        </p>
+                        <p class="text-sm text-gray-700 py-2">
+                          Setiabudi, Karet Kuningan, Jakarta Selatan
+                        </p>
+                        <p class="text-xs text-gray-400">ERA JAKARTA</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="mt-2 grid grid-cols-2 gap-y-4 cursor-pointer">
+                  <div
+                    class="w-[21.5vw] h-80 bg-white border border-gray-200 rounded-lg"
+                    data-card-map="1534"
+                    onmouseenter="getDataCard(this)"
+                    onmouseleave="removePopup()"
+                    data-active-tab="1"
+                    onclick="showCardInfoDetail(this)"
+                  >
+                    <img
+                      class="rounded-t-lg"
+                      src="./src/images/Hunian/Rmh4/rumahd2.jpg"
+                      alt=""
+                    />
+                    <div class="px-3 pt-1 pb-3">
+                      <a href="#">
+                        <h5
+                          class="text-md font-bold tracking-tight text-gray-900"
+                        >
+                          Rp 2.300.000.000
+                        </h5>
+                      </a>
+
+                      <div class="flex flex-col mb-3 font-normal">
+                        <div class="flex items-center text-xs text-gray-700">
+                          <span class="mr-2">LT 140 m² |</span>
+                          <span class="mr-2">LB 392 m² |</span>
+                          <div class="inline-flex items-center mr-1.5">
+                            <img
+                              class="w-7 h-4 object-fill pl-1 pr-1.5"
+                              src="./src/images/bath.png"
+                              alt=""
+                            />
+                            <span> 3 KT |</span>
+                          </div>
+                          <div class="inline-flex items-center mr-1.5">
+                            <img
+                              class="w-7 h-5 object-fill pl-1 pr-1.5"
+                              src="./src/images/bed.png"
+                              alt=""
+                            />
+                            <span>2 KM</span>
+                          </div>
+                        </div>
+                        <div class="text-sm text-gray-700 py-2">
+                          Setiabudi, Karet Kuningan, Jakarta Selatan
+                        </div>
+                        <div class="text-xs text-gray-400">ERA JAKARTA</div>
+                      </div>
+
+                      <div class="mb-3 font-normal hidden">
+                        <p class="text-xs text-gray-700">
+                          LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                        </p>
+                        <p class="text-sm text-gray-700 py-2">
+                          Setiabudi, Karet Kuningan, Jakarta Selatan
+                        </p>
+                        <p class="text-xs text-gray-400">ERA JAKARTA</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <!--  -->
               </div>
             </div>
@@ -467,55 +764,7 @@
                 </div>
               </div>
 
-              <div class="mb-4">
-                <!-- Tab Menu -->
-                <ul
-                  class="flex flex-wrap -mb-px text-sm font-medium text-center px-4"
-                  id="myTab"
-                  data-tabs-toggle="#myTabContent"
-                  role="tablist"
-                >
-                  <li class="" role="presentation">
-                    <button
-                      class="inline-block py-4 pr-0.5 border-b-2 rounded-t-lg"
-                      id="profile-tab"
-                      data-tabs-target="#profile"
-                      type="button"
-                      role="tab"
-                      aria-controls="profile"
-                      aria-selected="false"
-                    >
-                      Deskripsi
-                    </button>
-                  </li>
-                  <li class="" role="presentation">
-                    <button
-                      class="inline-block py-4 pr-0.5 mx-6 border-b-2 rounded-t-lg"
-                      id="dashboard-tab"
-                      data-tabs-target="#dashboard"
-                      type="button"
-                      role="tab"
-                      aria-controls="dashboard"
-                      aria-selected="true"
-                    >
-                      Sarana Prasarana
-                    </button>
-                  </li>
-                  <li class="" role="presentation">
-                    <button
-                      class="inline-block py-4 pr-0.5 border-b-2 rounded-t-lg"
-                      id="settings-tab"
-                      data-tabs-target="#settings"
-                      type="button"
-                      role="tab"
-                      aria-controls="settings"
-                      aria-selected="false"
-                    >
-                      Indeks
-                    </button>
-                  </li>
-                </ul>
-              </div>
+              <div>Test Card Info Detail</div>
             </div>
 
             <!-- Konten Card Info Detail -->
@@ -2048,22 +2297,23 @@
     defer
   ></script>
 
-  <!-- JQuery -->
-  <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-  ></script>
-
-  <!-- Slick JS -->
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-  ></script>
-
   <!-- Script main -->
   <script src="./src/js/main.js"></script>
 
-  <script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+        nextArrow: '<button type="button" class="slick-next">Next</button>',
+      });
+    });
+  </script>
+
+  <!-- <script>
     // Menyimpan elemen yang akan diubah ke dalam variabel
     var carousel = document.getElementById("animation-carousel");
 
@@ -2071,8 +2321,6 @@
     var btnDeskripsi = document.getElementById("profile-tab");
     var btnSarana = document.getElementById("dashboard-tab");
     var btnIndeks = document.getElementById("settings-tab");
-
-    console.log(btnDeskripsi, btnSarana, btnIndeks);
 
     // Fungsi untuk menampilkan carousel
     btnDeskripsi.addEventListener("click", function () {
@@ -2087,7 +2335,7 @@
     btnIndeks.addEventListener("click", function () {
       carousel.style.display = "none";
     });
-  </script>
+  </script> -->
 
   <script>
     var ctx1 = document.getElementById("myRadarChart").getContext("2d");
@@ -2220,4 +2468,6 @@
       },
     });
   </script>
+
+  <!-- slick -->
 </html>

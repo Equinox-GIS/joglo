@@ -341,12 +341,12 @@ $(document).ready(function () {
 });
 
 // Script to update the progress bar based on the slider value
-const slider = document.getElementById("myRange");
-const progress = document.getElementById("progress");
+// const slider = document.getElementById("myRange");
+// const progress = document.getElementById("progress");
 
-slider.oninput = function () {
-  const value = this.value;
-  progress.style.width = value + "%";
-};
+// slider.oninput = function () {
+//   const value = this.value;
+//   progress.style.width = value + "%";
+// };
 
 // Corousel Hide Gambar
