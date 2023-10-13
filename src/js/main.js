@@ -1,5 +1,3 @@
-// memuat kode di bawah ini setelah DOM selesai dimuat
-
 // function toggle
 function toggleDropdown(id) {
   const menuButtons = document.querySelectorAll("[id^='menu-button-']");
@@ -318,10 +316,6 @@ function closeTab() {
   cardInfoDetailDua.classList.remove("hidden");
 }
 
-$(document).ready(function () {
-  initSlickCardInfoDetail();
-});
-
 function initSlickCardInfoDetail() {
   $(".slider-card-info").slick({
     infinite: false,
@@ -337,6 +331,11 @@ function destroyCardInfoDetail() {
     $(".slider-card-info").slick("unslick");
   }
 }
+
+// memuat kode di bawah ini setelah DOM selesai dimuat
+$(document).ready(function () {
+  initSlickCardInfoDetail();
+});
 
 // Script to update the progress bar based on the slider value
 // const slider = document.getElementById("myRange");
