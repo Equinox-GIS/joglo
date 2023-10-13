@@ -5,43 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joglo</title>
 
-    <!-- Build Css -->
-    <link rel="stylesheet" href="./dist/output.css" />
-
     <!-- Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
 
     <!-- MapBox GL -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
       rel="stylesheet"
     />
-
-    <!-- Chart Js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"
+      defer
+    ></script>
 
     <!-- Icon -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      defer
     />
-
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      defer
     />
 
     <!-- Slick CSS -->
-
     <link
       rel="stylesheet"
       type="text/css"
@@ -54,14 +50,16 @@
     />
 
     <!-- Icon -->
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/5paNdF+Tm2JsNR6/ibe7ay9C3zXp1"
       crossorigin="anonymous"
     />
 
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="./dist/output.css" />
+
+    <!-- Inline CSS -->
     <style>
       /* MapBox gl */
 
@@ -201,9 +199,8 @@
         border-radius: 0px;
       }
     </style>
-
-    <!--  -->
   </head>
+
   <body class="font-roboto">
     <div class="min-h-screen bg-gray-100 flex flex-col">
       <!-- Header -->
@@ -344,7 +341,7 @@
         <!-- Card -->
         <div class="px-4 pt-3 flex flex-col">
           <!--  Bagan Card Info -->
-          <div class="flex flex-col card-info-judul">
+          <div class="flex flex-col card-info-judul hidden">
             <!-- Judul Card Info -->
             <div class="">
               <div class="font-semibold text-xl px-3">Rumah Dijual</div>
@@ -720,7 +717,7 @@
           </div>
 
           <!-- Bagan Card Info Detail -->
-          <div class="flex flex-col w-full card-info-detail hidden">
+          <div class="flex flex-col w-full card-info-detail">
             <!-- Judul Card Info Detail -->
             <div>
               <div class="w-full flex justify-between px-3">
@@ -728,7 +725,7 @@
                   Rumah Impian Strategis Dijual! Segera Miliki Hunian Eksklusif
                   di Lokasi Prime!
                 </div>
-                <div class="flex items-center">
+                <div class="flex items-start">
                   <img
                     class="w-6 h-6 object-cover close-tab-detail cursor-pointer"
                     onclick="closeTab()"
@@ -740,7 +737,7 @@
 
               <!-- Menu Tab -->
 
-              <div class="mb-4">
+              <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
                 <!-- Tab Menu -->
                 <ul
                   class="flex flex-wrap -mb-px text-sm font-medium text-center px-4"
@@ -748,9 +745,12 @@
                   data-tabs-toggle="#myTabContent"
                   role="tablist"
                 >
-                  <li class="" role="presentation">
+                  <li
+                    class="border-b border-gray-200 dark:border-gray-700"
+                    role="presentation"
+                  >
                     <button
-                      class="inline-block py-4 pr-0.5 border-b-2 rounded-t-lg"
+                      class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                       id="profile-tab"
                       data-tabs-target="#profile"
                       type="button"
@@ -763,7 +763,7 @@
                   </li>
                   <li class="" role="presentation">
                     <button
-                      class="inline-block py-4 pr-0.5 mx-6 border-b-2 rounded-t-lg"
+                      class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                       id="dashboard-tab"
                       data-tabs-target="#dashboard"
                       type="button"
@@ -776,7 +776,7 @@
                   </li>
                   <li class="" role="presentation">
                     <button
-                      class="inline-block py-4 pr-0.5 border-b-2 rounded-t-lg"
+                      class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                       id="settings-tab"
                       data-tabs-target="#settings"
                       type="button"
@@ -785,6 +785,34 @@
                       aria-selected="false"
                     >
                       Indeks
+                    </button>
+                  </li>
+                  <!-- shp -->
+                  <li class="" role="presentation">
+                    <button
+                      class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                      id="shp-tab"
+                      data-tabs-target="#shp"
+                      type="button"
+                      role="tab"
+                      aria-controls="shp"
+                      aria-selected="true"
+                    >
+                      Kalkulator
+                    </button>
+                  </li>
+                  <!-- kontak -->
+                  <li class="" role="presentation">
+                    <button
+                      class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                      id="kontak-tab"
+                      data-tabs-target="#kontak"
+                      type="button"
+                      role="tab"
+                      aria-controls="kontak"
+                      aria-selected="false"
+                    >
+                      Kontak
                     </button>
                   </li>
                 </ul>
@@ -802,7 +830,7 @@
                 <!-- Corousel -->
                 <div
                   id="animation-carousel"
-                  class="relative w-full animation-carousel px-4"
+                  class="relative w-full animation-carousel px-4 hidden"
                   data-carousel="static"
                 >
                   <!-- Carousel wrapper -->
@@ -911,6 +939,15 @@
                         <div class="grid grid-cols-1 gap-y-1">
                           <div class="grid grid-cols-1 text-sm">
                             <div class="grid grid-cols-1 gap-4">
+                              <div class="flex flex-col">
+                                <div class="font-semibold text-2xl">
+                                  Rp 11.000.000.000
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                  Perkiraan NJOP: Rp 3.000.000 / m²
+                                </div>
+                              </div>
+
                               <div class="text-gray-800">
                                 <p>
                                   Kami mempersembahkan sebuah hunian eksklusif
@@ -1051,11 +1088,11 @@
                     role="tabpanel"
                     aria-labelledby="dashboard-tab"
                   >
-                    <!-- Sarpras -->
-                    <div class="grid grid-cols-1 gap-y-1">
-                      <div class="w-full grid grid-cols-2">
-                        <div>
-                          <h5 class="font-bold text-sm">Radius 1 Km</h5>
+                    <!-- konten Sarpras -->
+                    <div class="grid grid-cols-1 gap-y-1 border border-red-500">
+                      <div class="w-full grid grid-cols-3">
+                        <div class="col-span-2">
+                          <h5 class="font-bold text-sm mb-2">Radius 1 Km</h5>
                           <input
                             type="range"
                             class="w-full"
@@ -1066,13 +1103,12 @@
                             style="height: 6px"
                           />
                         </div>
-                        <div></div>
                       </div>
 
                       <!-- Konten Sarpras -->
-
-                      <!-- Konten Sarpras -->
-                      <div class="grid grid-cols-4">
+                      <div
+                        class="grid grid-cols-4 pt-4 pb-7 border border-blue-500"
+                      >
                         <div
                           class="col-span-3 grid grid-cols-5"
                           id="sarprasTab"
@@ -1095,48 +1131,6 @@
                                 <img
                                   class="w-7 h-7 p-1 object-cover"
                                   src="./src/images/mosque.png"
-                                  alt="user photo"
-                                />
-                              </div>
-                            </button>
-                          </div>
-                          <div>
-                            <button
-                              class="flex items-center pr-2 py-2 rounded-full"
-                              id="sarprasDashboardTab"
-                              data-tabs-target="#sarprasDashboard"
-                              type="button"
-                              role="tab"
-                              aria-controls="sarprasDashboard"
-                              aria-selected="false"
-                            >
-                              <div
-                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                              >
-                                <img
-                                  class="w-7 h-7 p-1 object-cover"
-                                  src="./src/images/marketplace.png"
-                                  alt="user photo"
-                                />
-                              </div>
-                            </button>
-                          </div>
-                          <div>
-                            <button
-                              class="flex items-center pr-2 py-2 rounded-full"
-                              id="sarprasDashboardTab"
-                              data-tabs-target="#sarprasDashboard"
-                              type="button"
-                              role="tab"
-                              aria-controls="sarprasDashboard"
-                              aria-selected="false"
-                            >
-                              <div
-                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                              >
-                                <img
-                                  class="w-7 h-7 p-1 object-cover"
-                                  src="./src/images/marketplace.png"
                                   alt="user photo"
                                 />
                               </div>
@@ -2045,29 +2039,32 @@
                   </div>
                   <!--  -->
                   <div
-                    class="hidden p-2 dark:bg-gray-800"
+                    class="hidden px-4 py-2 dark:bg-gray-800"
                     id="settings"
                     role="tabpanel"
                     aria-labelledby="settings-tab"
                   >
-                    <!-- Information Kanan -->
-                    <div class="pl-2">
-                      <div class="">
+                    <!-- konten Indeks -->
+                    <div class="grid grid-cols-1 gap-y-1 border border-red-500">
+                      <!-- Judul Konten Indeks -->
+                      <div
+                        class="grid grid-cols-4 pt-0 pb-2 border border-yellow-500"
+                      >
                         <div
-                          class="grid grid-cols-10"
-                          id="infoTab"
-                          data-tabs-toggle="#infoTabContent"
+                          class="col-span-3 grid grid-cols-5"
+                          id="kontenIndeksTab"
+                          data-tabs-toggle="#kontenIndeksTabContent"
                           role="tablist"
                         >
                           <div>
                             <button
-                              class="flex items-center p-2 rounded-full"
-                              id="mosque-tab"
-                              data-tabs-target="#mosqueInfo"
+                              class="flex items-center pr-2 py-2 rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                              id="profilTab"
+                              data-tabs-target="#profil"
                               type="button"
                               role="tab"
-                              aria-controls="mosqueInfo"
-                              aria-selected="false"
+                              aria-controls="profil"
+                              aria-selected="true"
                             >
                               <div
                                 class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
@@ -2075,19 +2072,19 @@
                                 <img
                                   class="w-7 h-7 p-1 object-cover"
                                   src="./src/images/mosque.png"
-                                  alt="mosque"
+                                  alt="user photo"
                                 />
                               </div>
                             </button>
                           </div>
                           <div>
                             <button
-                              class="flex items-center p-2 rounded-full"
-                              id="marketplace1-tab"
-                              data-tabs-target="#marketplace1Info"
+                              class="flex items-center pr-2 py-2 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              id="dashboardTab1"
+                              data-tabs-target="#dashboard1"
                               type="button"
                               role="tab"
-                              aria-controls="marketplace1Info"
+                              aria-controls="dashboard1"
                               aria-selected="false"
                             >
                               <div
@@ -2096,19 +2093,19 @@
                                 <img
                                   class="w-7 h-7 p-1 object-cover"
                                   src="./src/images/marketplace.png"
-                                  alt="marketplace1"
+                                  alt="user photo"
                                 />
                               </div>
                             </button>
                           </div>
                           <div>
                             <button
-                              class="flex items-center p-2 rounded-full"
-                              id="marketplace2-tab"
-                              data-tabs-target="#marketplace2Info"
+                              class="flex items-center pr-2 py-2 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              id="dashboardTab2"
+                              data-tabs-target="#dashboard2"
                               type="button"
                               role="tab"
-                              aria-controls="marketplace2Info"
+                              aria-controls="dashboard2"
                               aria-selected="false"
                             >
                               <div
@@ -2117,7 +2114,7 @@
                                 <img
                                   class="w-7 h-7 p-1 object-cover"
                                   src="./src/images/marketplace.png"
-                                  alt="marketplace2"
+                                  alt="user photo"
                                 />
                               </div>
                             </button>
@@ -2125,12 +2122,13 @@
                         </div>
                       </div>
 
-                      <div id="infoTabContent">
+                      <!-- Konten Menu Indeks -->
+                      <div id="kontenIndeksTabContent">
                         <div
-                          class="hidden px-2"
-                          id="mosqueInfo"
+                          class="pr-2"
+                          id="profil"
                           role="tabpanel"
-                          aria-labelledby="mosque-tab"
+                          aria-labelledby="profilTab"
                         >
                           <!-- ECCI -->
                           <div class="grid grid-cols-1 gap-y-1 mt-8">
@@ -2139,17 +2137,17 @@
                             </div>
 
                             <div class="grid grid-cols-1 text-md">
-                              <div
-                                class="grid grid-cols-1 gap-4 text-md text-gray-800"
-                              >
+                              <div class="grid grid-cols-3 gap-4 text-md">
                                 <div
-                                  class="flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
+                                  class="col-span-2 flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
                                 >
                                   <canvas
                                     id="myRadarChart"
                                     class="w-full h-full"
                                   ></canvas>
                                 </div>
+
+                                <div></div>
                               </div>
                               <!--  -->
 
@@ -2192,10 +2190,10 @@
                           </div>
                         </div>
                         <div
-                          class="hidden px-2"
-                          id="marketplace1Info"
+                          class="hidden pr-2"
+                          id="dashboard1"
                           role="tabpanel"
-                          aria-labelledby="marketplace1-tab"
+                          aria-labelledby="dashboardTab1"
                         >
                           <!-- Livability Index -->
                           <div class="grid grid-cols-1 gap-y-1 mt-8">
@@ -2205,16 +2203,18 @@
 
                             <div class="grid grid-cols-1 text-md">
                               <div
-                                class="grid grid-cols-1 gap-4 text-md text-gray-800"
+                                class="grid grid-cols-3 gap-4 text-md text-gray-800"
                               >
                                 <div
-                                  class="flex items-center mb-4 justify-center min-w-[200px] min-h-[180px]"
+                                  class="col-span-2 flex items-center mb-4 justify-center min-w-[200px] min-h-[180px]"
                                 >
                                   <canvas
                                     id="mySecondRadarChart"
                                     class="w-full h-full"
                                   ></canvas>
                                 </div>
+
+                                <div></div>
                               </div>
 
                               <!--  -->
@@ -2244,29 +2244,30 @@
                           <!--  -->
                         </div>
                         <div
-                          class="hidden px-2"
-                          id="marketplace2Info"
+                          class="hidden pr-2"
+                          id="dashboard2"
                           role="tabpanel"
-                          aria-labelledby="marketplace2-tab"
+                          aria-labelledby="dashboardTab2"
                         >
                           <!-- Investment Index -->
-                          <div class="grid grid-cols-1 gap-y-1 mt-1">
+                          <div class="grid grid-cols-1 gap-y-1 mt-8">
                             <div class="w-full text-md font-bold">
                               Investment Index
                             </div>
 
                             <div class="grid grid-cols-1 text-md">
                               <div
-                                class="grid grid-cols-1 gap-4 text-md text-gray-800"
+                                class="grid grid-cols-3 gap-4 text-md text-gray-800"
                               >
                                 <div
-                                  class="flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
+                                  class="col-span-2 flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
                                 >
                                   <canvas
                                     id="myInvestmentIndexChart"
                                     class="w-full h-full"
                                   ></canvas>
                                 </div>
+                                <div></div>
                               </div>
                               <!--  -->
 
@@ -2295,9 +2296,184 @@
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- shp -->
+                  <div
+                    class="hidden p-2 dark:bg-gray-800"
+                    id="shp"
+                    role="tabpanel"
+                    aria-labelledby="shp-tab"
+                  >
+                    <!-- Kalkulator -->
 
-                        <!--  -->
-                        <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
+                    <div
+                      class="grid grid-cols-1 gap-y-1 border border-green-500"
+                    >
+                      <div class="grid grid-cols-4 pt-0 pb-7">
+                        <div
+                          class="col-span-3 grid grid-cols-5"
+                          id="kontenKalkulatorTab"
+                          data-tabs-toggle="#kontenKalkulatorTabContent"
+                          role="tablist"
+                        >
+                          <div>
+                            <button
+                              class="flex items-center pr-2 py-2 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              id="kalkulatorhargawajarTab"
+                              data-tabs-target="#kalkulatorhargawajar"
+                              type="button"
+                              role="tab"
+                              aria-controls="kalkulatorhargawajar"
+                              aria-selected="true"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/marketplace.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="flex items-center pr-2 py-2 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              id="kalkulatorkprTab"
+                              data-tabs-target="#kalkulatorkpr"
+                              type="button"
+                              role="tab"
+                              aria-controls="kalkulatorkpr"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/marketplace.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div id="kontenKalkulatorTabContent">
+                        <div
+                          class="pr-2"
+                          id="kalkulatorhargawajar"
+                          role="tabpanel"
+                          aria-labelledby="kalkulatorhargawajarTab"
+                        >
+                          <div>
+                            <p>KPR</p>
+                          </div>
+                        </div>
+                        <div
+                          class="hidden pr-2"
+                          id="kalkulatorkpr"
+                          role="tabpanel"
+                          aria-labelledby="kalkulatorkprTab"
+                        >
+                          <div>
+                            <p>Harga Wajar</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- kontak -->
+                  <div
+                    class="hidden px-4 py-2"
+                    id="kontak"
+                    role="tabpanel"
+                    aria-labelledby="kontak-tab"
+                  >
+                    <div class="w-full flex justify-center">
+                      <div class="px-4 pt-28">
+                        <div class="flex items-center space-x-4">
+                          <img
+                            class="w-20 h-20 rounded-full"
+                            src="https://images.pexels.com/photos/61100/pexels-photo-61100.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb"
+                            alt=""
+                          />
+                          <div class="">
+                            <div class="text-lg">Putri Amalia</div>
+                            <div class="text-2xl font-bold">085801920390</div>
+                            <div class="text-md text-gray-500">
+                              putri@gmail.com
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="w-full grid grid-cols-4 px-40 hidden">
+                        <div class="border border-red-500">
+                          <img
+                            class="w-32 h-32 rounded-full"
+                            src="https://images.pexels.com/photos/61100/pexels-photo-61100.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb"
+                            alt="Putri Amalia"
+                          />
+                        </div>
+                        <div class="col-span-3 flex flex-col">
+                          <div class="">Putri Amalia</div>
+                          <div class="">+62 8989432432432</div>
+                          <div class="">Putri@Gmail.com</div>
+                        </div>
+                      </div>
+
+                      <!-- <div>test</div> -->
+                    </div>
+
+                    <div class="w-full flex justify-center mt-2 hidden">
+                      <div class="max-w-xl border border-gray-300">
+                        <div class="grid grid-rows-3 w-full">
+                          <div>asd</div>
+                          <div>asd</div>
+                        </div>
+
+                        <div class="rounded-lg py-3 hidden">
+                          <div class="photo-wrapper p-2">
+                            <img
+                              class="w-32 h-32 rounded-full mx-auto"
+                              src="https://images.pexels.com/photos/61100/pexels-photo-61100.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb"
+                              alt="Putri Amalia"
+                            />
+                          </div>
+                          <div class="p-2">
+                            <h3
+                              class="text-center text-xl text-gray-900 font-medium leading-8"
+                            >
+                              Putri Amalia
+                            </h3>
+
+                            <table class="text-xs my-3">
+                              <tbody>
+                                <tr>
+                                  <td
+                                    class="px-2 py-2 text-gray-500 font-semibold"
+                                  >
+                                    No. Handpone
+                                  </td>
+                                  <td class="px-2 py-2">+62 8989432432432</td>
+                                </tr>
+                                <tr>
+                                  <td
+                                    class="px-2 py-2 text-gray-500 font-semibold"
+                                  >
+                                    Email
+                                  </td>
+                                  <td class="px-2 py-2">putri@gmail.com</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2314,6 +2490,15 @@
     </div>
   </body>
 
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Slick JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    defer
+  ></script>
+
   <!-- JS Flowbite -->
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"
@@ -2321,21 +2506,12 @@
   ></script>
 
   <!-- Script main -->
-  <script src="./src/js/main.js"></script>
+  <script src="./src/js/main.js" defer></script>
 
-  <!--  -->
+  <!-- Chart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!-- JQuery -->
-  <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-  ></script>
-
-  <!-- Slick JS -->
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-  ></script>
+  <!-- Your Custom JS -->
   <script>
     // Menyimpan elemen yang akan diubah ke dalam variabel
     var carousel = document.getElementById("animation-carousel");
@@ -2344,6 +2520,10 @@
     var btnDeskripsi = document.getElementById("profile-tab");
     var btnSarana = document.getElementById("dashboard-tab");
     var btnIndeks = document.getElementById("settings-tab");
+    // shp
+    var btnShp = document.getElementById("shp-tab");
+    // kontak
+    var btnKontak = document.getElementById("kontak-tab");
 
     // Fungsi untuk menampilkan carousel
     btnDeskripsi.addEventListener("click", function () {
@@ -2356,6 +2536,14 @@
     });
 
     btnIndeks.addEventListener("click", function () {
+      carousel.style.display = "none";
+    });
+
+    btnShp.addEventListener("click", function () {
+      carousel.style.display = "none";
+    });
+
+    btnKontak.addEventListener("click", function () {
       carousel.style.display = "none";
     });
   </script>
@@ -2489,24 +2677,6 @@
           },
         },
       },
-    });
-  </script>
-
-  <!-- slick -->
-
-  <script>
-    $(document).ready(function () {
-      $(".slider-card-info").slick({
-        infinite: false,
-        prevArrow:
-          '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
-        nextArrow:
-          '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
-      });
-
-      //
-
-      //
     });
   </script>
 </html>

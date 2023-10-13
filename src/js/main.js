@@ -1,3 +1,5 @@
+// memuat kode di bawah ini setelah DOM selesai dimuat
+
 // function toggle
 function toggleDropdown(id) {
   const menuButtons = document.querySelectorAll("[id^='menu-button-']");
@@ -291,13 +293,15 @@ function showCardInfoDetail(element) {
     cardInfoDetail.classList.remove("hidden");
     cardInfoDetailDua.classList.add("hidden");
 
-    // Menghancurkan dan menginisialisasi ulang Slick slider
-    destroySlickSlider();
-    initSlickSlider();
+    // Menghancurkan Slick slider
+    destroyCardInfoDetail();
   } else {
     cardInfo.classList.remove("hidden");
     cardInfoDetail.classList.add("hidden");
     cardInfoDetailDua.classList.remove("hidden");
+
+    // Menginisialisasi ulang Slick slider
+    initSlickCardInfoDetail();
   }
 }
 
@@ -306,39 +310,33 @@ function closeTab() {
   const cardInfoDetail = document.querySelector(".card-info-detail");
   const cardInfoDetailDua = document.querySelector(".card-info-judul");
 
+  // Menginisialisasi ulang Slick slider
+  initSlickCardInfoDetail();
+
   cardInfo.classList.remove("hidden");
   cardInfoDetail.classList.add("hidden");
   cardInfoDetailDua.classList.remove("hidden");
 }
 
-function initSlickSlider() {
-  $(".slider-thumbnails").slick({
-    infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    asNavFor: ".slider",
-    focusOnSelect: true,
-  });
-
-  $(".slider").slick({
-    infinite: false,
-    asNavFor: ".slider-thumbnails",
-  });
-}
-
-function destroySlickSlider() {
-  if ($(".slider-thumbnails").hasClass("slick-initialized")) {
-    $(".slider-thumbnails").slick("unslick");
-  }
-
-  if ($(".slider").hasClass("slick-initialized")) {
-    $(".slider").slick("unslick");
-  }
-}
-
 $(document).ready(function () {
-  initSlickSlider();
+  initSlickCardInfoDetail();
 });
+
+function initSlickCardInfoDetail() {
+  $(".slider-card-info").slick({
+    infinite: false,
+    prevArrow:
+      '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+    nextArrow:
+      '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+  });
+}
+
+function destroyCardInfoDetail() {
+  if ($(".slider-card-info").hasClass("slick-initialized")) {
+    $(".slider-card-info").slick("unslick");
+  }
+}
 
 // Script to update the progress bar based on the slider value
 // const slider = document.getElementById("myRange");
