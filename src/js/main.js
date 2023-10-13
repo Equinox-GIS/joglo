@@ -291,15 +291,25 @@ function showCardInfoDetail(element) {
     cardInfoDetail.classList.remove("hidden");
     cardInfoDetailDua.classList.add("hidden");
 
+    $(".slider-card-info-detail").slick({
+      infinite: false,
+      prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+      nextArrow: '<button type="button" class="slick-next">Next</button>',
+    });
+
     // Menghancurkan Slick slider
-    destroyCardInfoDetail();
+    destroyCardInfo();
   } else {
     cardInfo.classList.remove("hidden");
     cardInfoDetail.classList.add("hidden");
     cardInfoDetailDua.classList.remove("hidden");
 
     // Menginisialisasi ulang Slick slider
-    initSlickCardInfoDetail();
+    initSlickCardInfo();
+
+    if ($(".slider-card-info-detail").hasClass("slick-initialized")) {
+      $(".slider-card-info-detail").slick("unslick");
+    }
   }
 }
 
@@ -309,14 +319,18 @@ function closeTab() {
   const cardInfoDetailDua = document.querySelector(".card-info-judul");
 
   // Menginisialisasi ulang Slick slider
-  initSlickCardInfoDetail();
+  initSlickCardInfo();
+
+  if ($(".slider-card-info-detail").hasClass("slick-initialized")) {
+    $(".slider-card-info-detail").slick("unslick");
+  }
 
   cardInfo.classList.remove("hidden");
   cardInfoDetail.classList.add("hidden");
   cardInfoDetailDua.classList.remove("hidden");
 }
 
-function initSlickCardInfoDetail() {
+function initSlickCardInfo() {
   $(".slider-card-info").slick({
     infinite: false,
     prevArrow:
@@ -326,7 +340,7 @@ function initSlickCardInfoDetail() {
   });
 }
 
-function destroyCardInfoDetail() {
+function destroyCardInfo() {
   if ($(".slider-card-info").hasClass("slick-initialized")) {
     $(".slider-card-info").slick("unslick");
   }
@@ -334,7 +348,7 @@ function destroyCardInfoDetail() {
 
 // memuat kode di bawah ini setelah DOM selesai dimuat
 $(document).ready(function () {
-  initSlickCardInfoDetail();
+  initSlickCardInfo();
 });
 
 // Script to update the progress bar based on the slider value

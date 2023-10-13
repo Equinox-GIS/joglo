@@ -61,15 +61,6 @@
 
     <!-- Inline CSS -->
     <style>
-      /* MapBox gl */
-
-      /* .chart-container {
-        position: relative;
-        max-width: 100%;
-        width: 200px;
-        height: 205px;
-      } */
-
       /* Mengatur Button Slider Card Info */
       .slider-thumbnails {
         margin-left: -15px;
@@ -183,13 +174,30 @@
       }
 
       /* responsvei slick */
-
+      /* Card Info */
       .slider-card-info img {
         width: 100%;
         height: 100%;
       }
 
       .slider-card-info {
+        height: auto;
+        width: auto;
+        box-shadow: none;
+        border: none;
+        box-sizing: none;
+        margin-bottom: 0px;
+        border-radius: 0px;
+      }
+      /* Card Info Detail */
+      .slider-card-info-detail img {
+        max-width: 100%; /* Gambar tidak akan melebihi lebar area pembungkus */
+        max-height: 100%; /* Gambar tidak akan melebihi tinggi area pembungkus */
+        width: auto;
+        height: auto;
+      }
+
+      .slider-card-info-detail {
         height: auto;
         width: auto;
         box-shadow: none;
@@ -205,10 +213,17 @@
     <div class="min-h-screen bg-gray-100 flex flex-col">
       <!-- Header -->
       <div
-        class="w-full h-20 bg-slate-50 flex flex-row items-center justify-between px-4"
+        class="w-full h-20 bg-slate-50 flex flex-row items-center justify-between pl-3 pr-4"
       >
-        <div class="flex">
-          <div class="font-bold text-4xl font-lobster">Joglo</div>
+        <div class="flex items-center space-x-4">
+          <img
+            class="w-8 h-8 object-cover mt-1"
+            src="./src/images/icon_joglo.png"
+            alt="Joglo Icon"
+          />
+          <div class="text-3xl font-bold font-lobster text-[#3b2bff]">
+            Joglo
+          </div>
         </div>
 
         <!-- Dropdown Keluar -->
@@ -295,7 +310,7 @@
                 <img
                   class="menu-icon"
                   data-menu="1"
-                  src="./src/images/search.png"
+                  src="./src/images/filter.png"
                   alt=""
                 />
               </div>
@@ -414,14 +429,14 @@
 
             <!--  Konten Card Info -->
             <div
-              class="h-[68vh] card-info overflow-y-auto hide-scrollbar px-3.5"
+              class="h-[70vh] card-info overflow-y-auto hide-scrollbar px-3.5"
             >
               <div class="mt-2 grid grid-cols-2 gap-y-4 gap-x-6">
                 <!-- Card 1 -->
                 <!--  onmouseenter="getDataCard(this)"
                   onmouseleave="removePopup()" -->
                 <div
-                  class="mt-2 flex flex-col cursor-pointer bg-white rounded-lg"
+                  class="mt-2 flex flex-col cursor-pointer"
                   data-card-map="1534"
                   data-active-tab="1"
                   onclick="showCardInfoDetail(this)"
@@ -442,7 +457,7 @@
                     </div>
                   </div>
                   <div
-                    class="px-3 pt-1 pb-3 ingfokan"
+                    class="px-3 pt-1 pb-0 bg-white rounded-b-lg ingfokan"
                     style="user-select: none"
                   >
                     <a href="#">
@@ -494,7 +509,7 @@
 
                 <!-- Card 2 -->
                 <div
-                  class="mt-2 flex flex-col cursor-pointer bg-white rounded-lg"
+                  class="mt-2 flex flex-col cursor-pointer"
                   data-card-map="1534"
                   data-active-tab="1"
                   onclick="showCardInfoDetail(this)"
@@ -504,18 +519,18 @@
                     <div class="slider-card-info w-full h-full">
                       <img
                         class="w-full h-full object-cover rounded-t-lg"
-                        src="./src/images/Hunian/Rmh2/rumahb1.jpg"
+                        src="./src/images/Hunian/Rmh1/rumaha1.jpg"
                         alt=""
                       />
                       <img
                         class="w-full h-full object-cover rounded-t-lg"
-                        src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                        src="./src/images/Hunian/Rmh1/rumaha2.jpg"
                         alt=""
                       />
                     </div>
                   </div>
                   <div
-                    class="px-3 pt-1 pb-3 ingfokan"
+                    class="px-3 pt-1 pb-0 bg-white rounded-b-lg ingfokan"
                     style="user-select: none"
                   >
                     <a href="#">
@@ -567,7 +582,7 @@
 
                 <!-- Card 3 -->
                 <div
-                  class="mt-2 flex flex-col cursor-pointer bg-white rounded-lg"
+                  class="mt-2 flex flex-col cursor-pointer"
                   data-card-map="1534"
                   data-active-tab="1"
                   onclick="showCardInfoDetail(this)"
@@ -577,18 +592,18 @@
                     <div class="slider-card-info w-full h-full">
                       <img
                         class="w-full h-full object-cover rounded-t-lg"
-                        src="./src/images/Hunian/Rmh3/rumahc1.jpg"
+                        src="./src/images/Hunian/Rmh1/rumaha1.jpg"
                         alt=""
                       />
                       <img
                         class="w-full h-full object-cover rounded-t-lg"
-                        src="./src/images/Hunian/Rmh3/rumahc2.jpg"
+                        src="./src/images/Hunian/Rmh1/rumaha2.jpg"
                         alt=""
                       />
                     </div>
                   </div>
                   <div
-                    class="px-3 pt-1 pb-3 ingfokan"
+                    class="px-3 pt-1 pb-0 bg-white rounded-b-lg ingfokan"
                     style="user-select: none"
                   >
                     <a href="#">
@@ -640,7 +655,7 @@
 
                 <!-- Card 4 -->
                 <div
-                  class="mt-2 flex flex-col cursor-pointer bg-white rounded-lg"
+                  class="mt-2 flex flex-col cursor-pointer"
                   data-card-map="1534"
                   data-active-tab="1"
                   onclick="showCardInfoDetail(this)"
@@ -650,18 +665,18 @@
                     <div class="slider-card-info w-full h-full">
                       <img
                         class="w-full h-full object-cover rounded-t-lg"
-                        src="./src/images/Hunian/Rmh4/rumahd1.jpg"
+                        src="./src/images/Hunian/Rmh1/rumaha1.jpg"
                         alt=""
                       />
                       <img
                         class="w-full h-full object-cover rounded-t-lg"
-                        src="./src/images/Hunian/Rmh4/rumahd3.jpg"
+                        src="./src/images/Hunian/Rmh1/rumaha2.jpg"
                         alt=""
                       />
                     </div>
                   </div>
                   <div
-                    class="px-3 pt-1 pb-3 ingfokan"
+                    class="px-3 pt-1 pb-0 bg-white rounded-b-lg ingfokan"
                     style="user-select: none"
                   >
                     <a href="#">
@@ -740,7 +755,7 @@
               <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
                 <!-- Tab Menu -->
                 <ul
-                  class="flex flex-wrap -mb-px text-sm font-medium text-center px-4"
+                  class="flex flex-wrap -mb-px text-sm font-medium text-center pr-4"
                   id="myTab"
                   data-tabs-toggle="#myTabContent"
                   role="tablist"
@@ -750,20 +765,20 @@
                     role="presentation"
                   >
                     <button
-                      class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                      class="inline-block pl-3 pr-4 pb-4 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                       id="profile-tab"
                       data-tabs-target="#profile"
                       type="button"
                       role="tab"
                       aria-controls="profile"
-                      aria-selected="false"
+                      aria-selected="true"
                     >
                       Deskripsi
                     </button>
                   </li>
                   <li class="" role="presentation">
                     <button
-                      class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                      class="inline-block px-4 pb-4 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                       id="dashboard-tab"
                       data-tabs-target="#dashboard"
                       type="button"
@@ -776,7 +791,7 @@
                   </li>
                   <li class="" role="presentation">
                     <button
-                      class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                      class="inline-block px-4 pb-4 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                       id="settings-tab"
                       data-tabs-target="#settings"
                       type="button"
@@ -790,13 +805,13 @@
                   <!-- shp -->
                   <li class="" role="presentation">
                     <button
-                      class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                      class="inline-block px-4 pb-4 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                       id="shp-tab"
                       data-tabs-target="#shp"
                       type="button"
                       role="tab"
                       aria-controls="shp"
-                      aria-selected="true"
+                      aria-selected="false"
                     >
                       Kalkulator
                     </button>
@@ -804,7 +819,7 @@
                   <!-- kontak -->
                   <li class="" role="presentation">
                     <button
-                      class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                      class="inline-block px-4 pb-4 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
                       id="kontak-tab"
                       data-tabs-target="#kontak"
                       type="button"
@@ -822,106 +837,25 @@
             <!-- Konten Card Info Detail -->
 
             <div
-              class="w-full h-[61vh] card-info-detail overflow-y-auto hide-scrollbar"
+              class="w-full h-[63.5vh] card-info-detail overflow-y-auto hide-scrollbar"
             >
               <div class="flex flex-col h-full">
                 <!-- Tabs -->
 
                 <!-- Corousel -->
-                <div
-                  id="animation-carousel"
-                  class="relative w-full animation-carousel px-4 hidden"
-                  data-carousel="static"
-                >
-                  <!-- Carousel wrapper -->
-                  <div class="relative h-56 overflow-hidden md:h-96">
-                    <!-- Item 1 -->
-                    <div
-                      class="hidden duration-700 ease-in-out"
-                      data-carousel-item
-                    >
-                      <img
-                        src="./src/images/Hunian/Rmh1/rumaha1.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="..."
-                      />
-                    </div>
-                    <!-- Item 2 -->
-                    <div
-                      class="hidden duration-700 ease-in-out"
-                      data-carousel-item="active"
-                    >
-                      <img
-                        src="./src/images/Hunian/Rmh1/rumaha2.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="..."
-                      />
-                    </div>
-                    <!-- Item 3 -->
-                    <div
-                      class="hidden duration-700 ease-in-out"
-                      data-carousel-item
-                    >
-                      <img
-                        src="./src/images/Hunian/Rmh1/rumaha3.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        alt="..."
-                      />
-                    </div>
+                <div class="w-full relative hidden">
+                  <div class="slider-card-info-detail w-full h-full">
+                    <img
+                      class="w-full h-full object-cover rounded-t-lg"
+                      src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                      alt=""
+                    />
+                    <img
+                      class="w-full h-full object-cover rounded-t-lg"
+                      src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                      alt=""
+                    />
                   </div>
-                  <!-- Slider controls -->
-                  <button
-                    type="button"
-                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-prev
-                  >
-                    <span
-                      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30"
-                    >
-                      <svg
-                        class="w-4 h-4 text-white dark:text-gray-800"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 6 10"
-                      >
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M5 1 1 5l4 4"
-                        />
-                      </svg>
-                      <span class="sr-only">Previous</span>
-                    </span>
-                  </button>
-                  <button
-                    type="button"
-                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-next
-                  >
-                    <span
-                      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30"
-                    >
-                      <svg
-                        class="w-4 h-4 text-white dark:text-gray-800"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 6 10"
-                      >
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="m1 9 4-4-4-4"
-                        />
-                      </svg>
-                      <span class="sr-only">Next</span>
-                    </span>
-                  </button>
                 </div>
 
                 <div id="myTabContent" class="">
@@ -932,7 +866,22 @@
                     aria-labelledby="profile-tab"
                   >
                     <!-- Info -->
-                    <div class="mt-2 h-full grid grid-cols-1">
+                    <div class="h-full grid grid-cols-1">
+                      <div class="w-full place-self-center mb-2 items-center">
+                        <div class="slider-card-info-detail w-full h-full">
+                          <img
+                            class="w-full h-56 object-cover"
+                            src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                            alt=""
+                          />
+                          <img
+                            class="w-full h-full object-cover"
+                            src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+
                       <!-- Information Kiri -->
                       <div class="flex flex-col">
                         <!-- Deskripsi -->
@@ -1089,7 +1038,7 @@
                     aria-labelledby="dashboard-tab"
                   >
                     <!-- konten Sarpras -->
-                    <div class="grid grid-cols-1 gap-y-1 border border-red-500">
+                    <div class="grid grid-cols-1 gap-y-1">
                       <div class="w-full grid grid-cols-3">
                         <div class="col-span-2">
                           <h5 class="font-bold text-sm mb-2">Radius 1 Km</h5>
@@ -1106,9 +1055,7 @@
                       </div>
 
                       <!-- Konten Sarpras -->
-                      <div
-                        class="grid grid-cols-4 pt-4 pb-7 border border-blue-500"
-                      >
+                      <div class="grid grid-cols-4 pt-4 pb-7">
                         <div
                           class="col-span-3 grid grid-cols-5"
                           id="sarprasTab"
@@ -2045,11 +1992,9 @@
                     aria-labelledby="settings-tab"
                   >
                     <!-- konten Indeks -->
-                    <div class="grid grid-cols-1 gap-y-1 border border-red-500">
+                    <div class="grid grid-cols-1 gap-y-1">
                       <!-- Judul Konten Indeks -->
-                      <div
-                        class="grid grid-cols-4 pt-0 pb-2 border border-yellow-500"
-                      >
+                      <div class="grid grid-cols-4 pt-0 pb-2">
                         <div
                           class="col-span-3 grid grid-cols-5"
                           id="kontenIndeksTab"
@@ -2301,16 +2246,14 @@
                   </div>
                   <!-- shp -->
                   <div
-                    class="hidden p-2 dark:bg-gray-800"
+                    class="hidden px-4 py-2 dark:bg-gray-800"
                     id="shp"
                     role="tabpanel"
                     aria-labelledby="shp-tab"
                   >
                     <!-- Kalkulator -->
 
-                    <div
-                      class="grid grid-cols-1 gap-y-1 border border-green-500"
-                    >
+                    <div class="grid grid-cols-1 gap-y-1">
                       <div class="grid grid-cols-4 pt-0 pb-7">
                         <div
                           class="col-span-3 grid grid-cols-5"
@@ -2413,7 +2356,7 @@
                       </div>
 
                       <div class="w-full grid grid-cols-4 px-40 hidden">
-                        <div class="border border-red-500">
+                        <div class="">
                           <img
                             class="w-32 h-32 rounded-full"
                             src="https://images.pexels.com/photos/61100/pexels-photo-61100.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb"
@@ -2428,53 +2371,6 @@
                       </div>
 
                       <!-- <div>test</div> -->
-                    </div>
-
-                    <div class="w-full flex justify-center mt-2 hidden">
-                      <div class="max-w-xl border border-gray-300">
-                        <div class="grid grid-rows-3 w-full">
-                          <div>asd</div>
-                          <div>asd</div>
-                        </div>
-
-                        <div class="rounded-lg py-3 hidden">
-                          <div class="photo-wrapper p-2">
-                            <img
-                              class="w-32 h-32 rounded-full mx-auto"
-                              src="https://images.pexels.com/photos/61100/pexels-photo-61100.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb"
-                              alt="Putri Amalia"
-                            />
-                          </div>
-                          <div class="p-2">
-                            <h3
-                              class="text-center text-xl text-gray-900 font-medium leading-8"
-                            >
-                              Putri Amalia
-                            </h3>
-
-                            <table class="text-xs my-3">
-                              <tbody>
-                                <tr>
-                                  <td
-                                    class="px-2 py-2 text-gray-500 font-semibold"
-                                  >
-                                    No. Handpone
-                                  </td>
-                                  <td class="px-2 py-2">+62 8989432432432</td>
-                                </tr>
-                                <tr>
-                                  <td
-                                    class="px-2 py-2 text-gray-500 font-semibold"
-                                  >
-                                    Email
-                                  </td>
-                                  <td class="px-2 py-2">putri@gmail.com</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
