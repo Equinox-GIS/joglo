@@ -342,6 +342,7 @@ function initSlickCardInfo() {
       dots: true,
       infinite: false,
       arrows: false,
+      pauseOnHover: false,
     });
 }
 

@@ -78,3 +78,15 @@
 .slick-dots {
   bottom: -27px !important;
 }
+
+.slick-dots li {
+  margin: 0 -3px !important;
+}
+
+.slick-slider:not(:hover) .slick-dots {
+  opacity: inherit !important;
+}
+
+.bg-aktif-menu {
+  @apply bg-slate-200 rounded-lg;
+}
