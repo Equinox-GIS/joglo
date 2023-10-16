@@ -70,3 +70,11 @@
   cursor: pointer;
   border: none;
 }
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px !important;
+}
+
+.slick-dots {
+  bottom: -27px !important;
+}

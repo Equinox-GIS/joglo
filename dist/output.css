@@ -1216,6 +1216,10 @@ input:checked + .toggle-bg {
   margin-top: 2rem;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -1374,6 +1378,10 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[21vw\] {
+  width: 21vw;
 }
 
 .min-w-\[200px\] {
@@ -2176,6 +2184,14 @@ input:checked + .toggle-bg {
   background: #3b82f6;
   cursor: pointer;
   border: none;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px !important;
+}
+
+.slick-dots {
+  bottom: -27px !important;
 }
 
 .hover\:border-gray-300:hover {

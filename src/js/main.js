@@ -331,14 +331,40 @@ function closeTab() {
 }
 
 function initSlickCardInfo() {
-  $(".slider-card-info").slick({
-    infinite: false,
-    prevArrow:
-      '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
-    nextArrow:
-      '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+  $(".slider-card-info")
+    .on("init", function (event, slick) {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+      }, 0);
+    })
+    .slick({
+      dots: true,
+      infinite: false,
+      arrows: false,
+    });
+}
+
+function moveDotsToCustomContainer() {
+  const dots = $(".slider-card-info .slick-dots");
+  $(".custom-dot-slick").append(dots);
+}
+
+function addClickHandlerToDots() {
+  $(".slider-card-info .slick-dots li").on("click", function (event) {
+    event.stopPropagation();
   });
 }
+
+// function initSlickCardInfo() {
+//   $(".slider-card-info").slick({
+//     infinite: false,
+//     prevArrow:
+//       '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+//     nextArrow:
+//       '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+//   });
+// }
 
 function destroyCardInfo() {
   if ($(".slider-card-info").hasClass("slick-initialized")) {
