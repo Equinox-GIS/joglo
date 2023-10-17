@@ -391,6 +391,14 @@ $(document).ready(function () {
 // Function untuk menu navigation
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll('#kontenMenuTab [role="tab"]');
+  const specificInput = document.querySelector("#specificInput"); // Menggunakan ID
+  const searchButton = document.querySelector("#btnSearch");
+
+  // Non-aktifkan input dan button saat halaman pertama kali dimuat
+  specificInput.disabled = true;
+  searchButton.disabled = true;
+  specificInput.classList.add("cursor-not-allowed");
+  searchButton.classList.add("cursor-not-allowed");
 
   // Fungsi untuk mengaktifkan tab
   function activateTab(tab) {
@@ -408,6 +416,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (t === tab) {
         parentDiv.classList.add("bg-aktif-menu");
         contentDiv.classList.remove("hidden");
+
+        // Aktifkan input dan button saat tab diaktifkan
+        specificInput.disabled = false;
+        searchButton.disabled = false;
+        specificInput.classList.remove("cursor-not-allowed");
+        searchButton.classList.remove("cursor-not-allowed");
       } else {
         parentDiv.classList.remove("bg-aktif-menu");
         contentDiv.classList.add("hidden");
