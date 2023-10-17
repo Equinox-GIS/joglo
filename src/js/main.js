@@ -394,11 +394,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const InputanSearch = document.querySelector("#InputanSearch");
   const IconInputanSearch = document.querySelector("#IconInputanSearch");
   const searchButton = document.querySelector("#btnSearch");
+  const garisBatas = document.querySelector("#garisBatas");
 
   // Non-aktifkan input dan button saat halaman pertama kali dimuat
   InputanSearch.disabled = true;
   searchButton.disabled = true;
   IconInputanSearch.disabled = true;
+  garisBatas.classList.add("cursor-not-allowed");
   InputanSearch.classList.add("cursor-not-allowed");
   searchButton.classList.add("cursor-not-allowed");
   IconInputanSearch.classList.add("cursor-not-allowed");
@@ -432,28 +434,37 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function enableInputAndButton() {
-    InputanSearch.disabled = false;
-    IconInputanSearch.disabled = false;
-    searchButton.disabled = false;
-
-    InputanSearch.classList.remove("cursor-not-allowed", "bg-gray-100");
-    IconInputanSearch.classList.remove("cursor-not-allowed");
-    searchButton.classList.remove(
-      "cursor-not-allowed",
-      "bg-gray-500",
-      "text-gray-500"
-    );
-    searchButton.classList.add("bg-blue-500", "text-white");
-  }
-
-  function disableInputAndButton() {
     InputanSearch.disabled = true;
     IconInputanSearch.disabled = true;
     searchButton.disabled = true;
 
-    InputanSearch.classList.add("cursor-not-allowed", "bg-gray-100");
-    IconInputanSearch.classList.add("cursor-not-allowed", "text-gray-500");
-    searchButton.classList.add("bg-gray-500", "text-gray-500");
+    IconInputanSearch.classList.remove("cursor-not-allowed", "bg-gray-300");
+    InputanSearch.classList.remove("cursor-not-allowed", "bg-gray-300");
+
+    searchButton.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-300",
+      "text-gray-500"
+    );
+    searchButton.classList.add("bg-blue-500", "text-white");
+
+    garisBatas.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-300",
+      "text-gray-500"
+    );
+
+    garisBatas.classList.add("bg-white", "text-black");
+  }
+
+  function disableInputAndButton() {
+    InputanSearch.disabled = false;
+    IconInputanSearch.disabled = false;
+    searchButton.disabled = false;
+
+    // InputanSearch.classList.add("cursor-not-allowed", "bg-gray-100");
+    // IconInputanSearch.classList.add("cursor-not-allowed", "text-gray-500");
+    // searchButton.classList.add("bg-red-500");
   }
 
   // Menambahkan event listener untuk setiap tab
