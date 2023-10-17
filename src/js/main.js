@@ -391,14 +391,17 @@ $(document).ready(function () {
 // Function untuk menu navigation
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll('#kontenMenuTab [role="tab"]');
-  const specificInput = document.querySelector("#specificInput"); // Menggunakan ID
+  const InputanSearch = document.querySelector("#InputanSearch");
+  const IconInputanSearch = document.querySelector("#IconInputanSearch");
   const searchButton = document.querySelector("#btnSearch");
 
   // Non-aktifkan input dan button saat halaman pertama kali dimuat
-  specificInput.disabled = true;
+  InputanSearch.disabled = true;
   searchButton.disabled = true;
-  specificInput.classList.add("cursor-not-allowed");
+  IconInputanSearch.disabled = true;
+  InputanSearch.classList.add("cursor-not-allowed");
   searchButton.classList.add("cursor-not-allowed");
+  IconInputanSearch.classList.add("cursor-not-allowed");
 
   // Fungsi untuk mengaktifkan tab
   function activateTab(tab) {
@@ -417,16 +420,40 @@ document.addEventListener("DOMContentLoaded", function () {
         parentDiv.classList.add("bg-aktif-menu");
         contentDiv.classList.remove("hidden");
 
-        // Aktifkan input dan button saat tab diaktifkan
-        specificInput.disabled = false;
-        searchButton.disabled = false;
-        specificInput.classList.remove("cursor-not-allowed");
-        searchButton.classList.remove("cursor-not-allowed");
+        // Mengaktifkan input dan button saat tab diaktifkan
+        enableInputAndButton();
       } else {
         parentDiv.classList.remove("bg-aktif-menu");
         contentDiv.classList.add("hidden");
+        // Menonaktifkan input dan button saat tab tidak aktif
+        disableInputAndButton();
       }
     });
+  }
+
+  function enableInputAndButton() {
+    InputanSearch.disabled = false;
+    IconInputanSearch.disabled = false;
+    searchButton.disabled = false;
+
+    InputanSearch.classList.remove("cursor-not-allowed", "bg-gray-100");
+    IconInputanSearch.classList.remove("cursor-not-allowed");
+    searchButton.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-500",
+      "text-gray-500"
+    );
+    searchButton.classList.add("bg-blue-500", "text-white");
+  }
+
+  function disableInputAndButton() {
+    InputanSearch.disabled = true;
+    IconInputanSearch.disabled = true;
+    searchButton.disabled = true;
+
+    InputanSearch.classList.add("cursor-not-allowed", "bg-gray-100");
+    IconInputanSearch.classList.add("cursor-not-allowed", "text-gray-500");
+    searchButton.classList.add("bg-gray-500", "text-gray-500");
   }
 
   // Menambahkan event listener untuk setiap tab
