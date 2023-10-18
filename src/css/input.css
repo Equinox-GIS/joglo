@@ -96,8 +96,26 @@
   color: white;
 }
 
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+#InputanSearch::placeholder {
+  color: rgb(156 163 175);
+}
+
+/* uji */
+/* .slick-dots li button:before {
+  color: red;
+} */
+
 .bg-aktif-menu {
   @apply bg-slate-200 rounded-lg;
+}
+
+.btn_search_color {
+  @apply text-slate-200;
 }
 
 .hover_btn_search {

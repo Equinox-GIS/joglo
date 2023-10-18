@@ -400,6 +400,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const IconInputanSearch = document.querySelector("#IconInputanSearch");
   const searchButton = document.querySelector("#btnSearch");
   const garisBatas = document.querySelector("#garisBatas");
+  const svgIcon = document.querySelector("#IconInputanSearch svg");
+
+  console.log(IconInputanSearch);
 
   // Non-aktifkan input dan button saat halaman pertama kali dimuat
   InputanSearch.disabled = true;
@@ -409,6 +412,7 @@ document.addEventListener("DOMContentLoaded", function () {
   InputanSearch.classList.add("cursor-not-allowed");
   searchButton.classList.add("cursor-not-allowed");
   IconInputanSearch.classList.add("cursor-not-allowed");
+  // InputanSearch.style.filter = "blur(1px)";
 
   // Fungsi untuk mengaktifkan tab
   function activateTab(tab) {
@@ -469,6 +473,10 @@ document.addEventListener("DOMContentLoaded", function () {
       "hover:bg-gray-100",
       "hover:text-blue-700"
     );
+
+    svgIcon.classList.remove("text-gray-400");
+
+    // InputanSearch.style.filter = "unset";
   }
 
   function disableInputAndButton() {
@@ -773,11 +781,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // kalkulasi
     else if (selectedTab === "kpr") {
-      kprImg.src = "./src/images/kalkulator/keys-on.png";
-      hargaWajarImg.src = "./src/images/kalkulator/tag-off.png";
+      kprImg.src = "./src/images/kalkulator/tag-on.png";
+      hargaWajarImg.src = "./src/images/kalkulator/keys-off.png";
     } else if (selectedTab === "hargaWajar") {
-      kprImg.src = "./src/images/kalkulator/keys-off.png";
-      hargaWajarImg.src = "./src/images/kalkulator/tag-on.png";
+      kprImg.src = "./src/images/kalkulator/tag-off.png";
+      hargaWajarImg.src = "./src/images/kalkulator/keys-on.png";
     }
   }
 
