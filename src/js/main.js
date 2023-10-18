@@ -293,6 +293,7 @@ function showCardInfoDetail(element) {
 
     $(".slider-card-info-detail").slick({
       infinite: false,
+
       prevArrow: '<button type="button" class="slick-prev">Previous</button>',
       nextArrow: '<button type="button" class="slick-next">Next</button>',
     });
@@ -341,8 +342,12 @@ function initSlickCardInfo() {
     .slick({
       dots: true,
       infinite: false,
-      arrows: false,
+      arrows: true,
       pauseOnHover: false,
+      prevArrow:
+        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+      nextArrow:
+        '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
     });
 }
 
@@ -438,23 +443,32 @@ document.addEventListener("DOMContentLoaded", function () {
     IconInputanSearch.disabled = true;
     searchButton.disabled = true;
 
-    IconInputanSearch.classList.remove("cursor-not-allowed", "bg-gray-300");
-    InputanSearch.classList.remove("cursor-not-allowed", "bg-gray-300");
+    IconInputanSearch.classList.remove("cursor-not-allowed", "bg-gray-200");
+    InputanSearch.classList.remove("cursor-not-allowed", "bg-gray-200");
 
     searchButton.classList.remove(
       "cursor-not-allowed",
-      "bg-gray-300",
+      "bg-gray-200",
       "text-gray-500"
     );
-    searchButton.classList.add("bg-blue-500", "text-white");
+    searchButton.classList.add(
+      "active_btn_search",
+      "text-white",
+      "hover_btn_search"
+    );
 
     garisBatas.classList.remove(
       "cursor-not-allowed",
-      "bg-gray-300",
+      "bg-gray-200",
       "text-gray-500"
     );
 
-    garisBatas.classList.add("bg-white", "text-black");
+    garisBatas.classList.add(
+      "bg-white",
+      "text-black",
+      "hover:bg-gray-100",
+      "hover:text-blue-700"
+    );
   }
 
   function disableInputAndButton() {
@@ -673,4 +687,140 @@ var myInvestmentIndexChart = new Chart(ctx3, {
       },
     },
   },
+});
+
+// kondisi menu tab
+document.addEventListener("DOMContentLoaded", function () {
+  // Deklarasi variabel - sarpas
+  var ibadahTab = document.getElementById("sarprasIbadahTab");
+  var miniMarketTab = document.getElementById("sarprasMiniMarketTab");
+  var graduationTab = document.getElementById("sarprasSekolahTab");
+  var sporkTab = document.getElementById("sarprasRestoranTab");
+  var cyclingTab = document.getElementById("sarprasTransportasiTab");
+
+  // indeks tab
+  var ecciTab = document.getElementById("indeksECCITab");
+  var livabilityTab = document.getElementById("indeksLivabilityTab");
+  var investmentTab = document.getElementById("indeksInvesmentTab");
+
+  // kalkulasi tab
+  var kprTab = document.getElementById("kalkulatorkprTab");
+  var hargaWajarTab = document.getElementById("kalkulatorhargawajarTab");
+
+  // Elemen gambar - sarpras
+  var ibadahImg = ibadahTab.querySelector("img");
+  var miniMarketImg = miniMarketTab.querySelector("img");
+  var graduationImg = graduationTab.querySelector("img");
+  var sporkImg = sporkTab.querySelector("img");
+  var cyclingImg = cyclingTab.querySelector("img");
+
+  // Elemen gambar - indeks
+  var ecciImg = ecciTab.querySelector("img");
+  var livabilityImg = livabilityTab.querySelector("img");
+  var investmentImg = investmentTab.querySelector("img");
+
+  // Elemen gambar - kalkulasi
+  var kprImg = kprTab.querySelector("img");
+  var hargaWajarImg = hargaWajarTab.querySelector("img");
+
+  // Fungsi untuk mengganti gambar
+  function updateImages(selectedTab) {
+    // sarpras
+    if (selectedTab === "ibadah") {
+      ibadahImg.src = "./src/images/sarpras/mosque-on.png";
+      miniMarketImg.src = "./src/images/sarpras/market-off.png";
+      graduationImg.src = "./src/images/sarpras/graduation-off.png";
+      sporkImg.src = "./src/images/sarpras/spoon-and-fork-off.png";
+      cyclingImg.src = "./src/images/sarpras/cycling-off.png";
+    } else if (selectedTab === "minimarket") {
+      ibadahImg.src = "./src/images/sarpras/mosque-off.png";
+      miniMarketImg.src = "./src/images/sarpras/market-on.png";
+      graduationImg.src = "./src/images/sarpras/graduation-off.png";
+      sporkImg.src = "./src/images/sarpras/spoon-and-fork-off.png";
+      cyclingImg.src = "./src/images/sarpras/cycling-off.png";
+    } else if (selectedTab === "graduation") {
+      ibadahImg.src = "./src/images/sarpras/mosque-off.png";
+      miniMarketImg.src = "./src/images/sarpras/market-off.png";
+      graduationImg.src = "./src/images/sarpras/graduation-on.png";
+      sporkImg.src = "./src/images/sarpras/spoon-and-fork-off.png";
+      cyclingImg.src = "./src/images/sarpras/cycling-off.png";
+    } else if (selectedTab === "spork") {
+      ibadahImg.src = "./src/images/sarpras/mosque-off.png";
+      miniMarketImg.src = "./src/images/sarpras/market-off.png";
+      graduationImg.src = "./src/images/sarpras/graduation-off.png";
+      sporkImg.src = "./src/images/sarpras/spoon-and-fork-on.png";
+      cyclingImg.src = "./src/images/sarpras/cycling-off.png";
+    } else if (selectedTab === "cycling") {
+      ibadahImg.src = "./src/images/sarpras/mosque-off.png";
+      miniMarketImg.src = "./src/images/sarpras/market-off.png";
+      graduationImg.src = "./src/images/sarpras/graduation-off.png";
+      sporkImg.src = "./src/images/sarpras/spoon-and-fork-off.png";
+      cyclingImg.src = "./src/images/sarpras/cycling-on.png";
+    }
+    // indeks
+    else if (selectedTab === "ecci") {
+      ecciImg.src = "./src/images/indeks/plant-on.png";
+      livabilityImg.src = "./src/images/indeks/tent-off.png";
+      investmentImg.src = "./src/images/indeks/invest-off.png";
+    } else if (selectedTab === "livability") {
+      ecciImg.src = "./src/images/indeks/plant-off.png";
+      livabilityImg.src = "./src/images/indeks/tent-on.png";
+      investmentImg.src = "./src/images/indeks/invest-off.png";
+    } else if (selectedTab === "investment") {
+      ecciImg.src = "./src/images/indeks/plant-off.png";
+      livabilityImg.src = "./src/images/indeks/tent-off.png";
+      investmentImg.src = "./src/images/indeks/invest-on.png";
+    }
+    // kalkulasi
+    else if (selectedTab === "kpr") {
+      kprImg.src = "./src/images/kalkulator/keys-on.png";
+      hargaWajarImg.src = "./src/images/kalkulator/tag-off.png";
+    } else if (selectedTab === "hargaWajar") {
+      kprImg.src = "./src/images/kalkulator/keys-off.png";
+      hargaWajarImg.src = "./src/images/kalkulator/tag-on.png";
+    }
+  }
+
+  // Event listener untuk tombol tab
+  // sarpras
+  ibadahTab.addEventListener("click", function () {
+    updateImages("ibadah");
+  });
+
+  miniMarketTab.addEventListener("click", function () {
+    updateImages("minimarket");
+  });
+
+  graduationTab.addEventListener("click", function () {
+    updateImages("graduation");
+  });
+
+  sporkTab.addEventListener("click", function () {
+    updateImages("spork");
+  });
+
+  cyclingTab.addEventListener("click", function () {
+    updateImages("cycling");
+  });
+
+  //  indeks
+  ecciTab.addEventListener("click", function () {
+    updateImages("ecci");
+  });
+
+  livabilityTab.addEventListener("click", function () {
+    updateImages("livability");
+  });
+
+  investmentTab.addEventListener("click", function () {
+    updateImages("investment");
+  });
+  // kalkulasi
+  kprTab.addEventListener("click", function () {
+    updateImages("kpr");
+  });
+
+  hargaWajarTab.addEventListener("click", function () {
+    updateImages("hargaWajar");
+  });
 });

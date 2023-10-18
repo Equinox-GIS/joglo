@@ -76,17 +76,34 @@
 }
 
 .slick-dots {
-  bottom: -27px !important;
+  bottom: 0px !important;
 }
 
 .slick-dots li {
-  margin: 0 -3px !important;
+  margin: 0 -5px !important;
 }
 
 .slick-slider:not(:hover) .slick-dots {
   opacity: inherit !important;
 }
 
+.slick-dots li.slick-active button:before {
+  opacity: unset !important;
+  color: white;
+}
+
+.slick-dots li button:before {
+  color: white;
+}
+
 .bg-aktif-menu {
   @apply bg-slate-200 rounded-lg;
+}
+
+.hover_btn_search {
+  @apply hover:bg-blue-600;
+}
+
+.active_btn_search {
+  @apply bg-blue-500;
 }
