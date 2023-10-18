@@ -402,7 +402,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const garisBatas = document.querySelector("#garisBatas");
   const svgIcon = document.querySelector("#IconInputanSearch svg");
 
-  console.log(IconInputanSearch);
+  const btnHarga = document.querySelector("#btnHarga");
+  const btnKamar = document.querySelector("#btnKamar");
 
   // Non-aktifkan input dan button saat halaman pertama kali dimuat
   InputanSearch.disabled = true;
@@ -412,6 +413,9 @@ document.addEventListener("DOMContentLoaded", function () {
   InputanSearch.classList.add("cursor-not-allowed");
   searchButton.classList.add("cursor-not-allowed");
   IconInputanSearch.classList.add("cursor-not-allowed");
+  garisBatas.classList.add("cursor-not-allowed");
+  btnHarga.classList.add("cursor-not-allowed");
+  btnKamar.classList.add("cursor-not-allowed");
   // InputanSearch.style.filter = "blur(1px)";
 
   // Fungsi untuk mengaktifkan tab
@@ -475,6 +479,31 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     svgIcon.classList.remove("text-gray-400");
+
+    // searchButton.classList.remove(
+    //   "cursor-not-allowed",
+    //   "bg-gray-200",
+    //   "text-gray-500"
+    // );
+    // searchButton.classList.add(
+    //   "active_btn_search",
+    //   "text-white",
+    //   "hover_btn_search"
+    // );
+
+    btnHarga.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-400"
+    );
+    btnHarga.classList.add("bg-white", "text-black");
+
+    btnKamar.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-400"
+    );
+    btnKamar.classList.add("bg-white", "text-black");
 
     // InputanSearch.style.filter = "unset";
   }

@@ -94,6 +94,7 @@
 
 .slick-dots li button:before {
   color: white;
+  opacity: unset !important;
 }
 
 .slick-dots li button:hover,
