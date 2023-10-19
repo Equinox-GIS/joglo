@@ -61,8 +61,6 @@ if (controlGroup) {
   var myLocationButton = document.createElement("button");
   myLocationButton.className =
     "mapboxgl-ctrl-icon custom-control-button my-location-button";
-  var myLocationButton = document.createElement("button");
-  myLocationButton.className = "custom-control-button my-location-button";
   myLocationButton.setAttribute("type", "button");
   myLocationButton.setAttribute("aria-label", "My Location");
   myLocationButton.innerHTML =
@@ -80,8 +78,23 @@ if (controlGroup) {
   controlGroup.removeChild(zoomInButton);
   controlGroup.removeChild(zoomOutButton);
 
+  // Membuat dan menambahkan tombol layer setelah tombol my location
+  var layerButton = document.createElement("button");
+  layerButton.className =
+    "mapboxgl-ctrl-icon custom-control-button layer-button";
+  layerButton.setAttribute("type", "button");
+  layerButton.setAttribute("aria-label", "Layer");
+  layerButton.innerHTML =
+    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Layer"></span>';
+
+  layerButton.addEventListener("click", function () {
+    alert("Layer button clicked!");
+  });
+
+  controlGroup.appendChild(myLocationButton); // Pindahkan penempatan tombol my location
+
+  controlGroup.appendChild(layerButton); // Menambahkan tombol layer ke grup kontrol
   // Menambahkan tombol ke grup kontrol dalam urutan yang diinginkan
-  controlGroup.appendChild(myLocationButton);
   controlGroup.appendChild(zoomInButton);
   controlGroup.appendChild(zoomOutButton);
 }
@@ -278,286 +291,6 @@ function changeTab(event) {
   tab.classList.remove("border-transparent");
   tab.classList.add("border-gray-400");
 }
-
-// Hide show card active
-
-function showCardInfoDetail(element) {
-  const cardInfo = document.querySelector(".card-info");
-  const cardInfoDetail = document.querySelector(".card-info-detail");
-  const cardInfoDetailDua = document.querySelector(".card-info-judul");
-
-  if (element.getAttribute("data-active-tab") === "1") {
-    cardInfo.classList.add("hidden");
-    cardInfoDetail.classList.remove("hidden");
-    cardInfoDetailDua.classList.add("hidden");
-
-    $(".slider-card-info-detail").slick({
-      infinite: false,
-
-      prevArrow:
-        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</button>",
-      nextArrow:
-        '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</button>",
-    });
-
-    // Menghancurkan Slick slider
-    destroyCardInfo();
-  } else {
-    cardInfo.classList.remove("hidden");
-    cardInfoDetail.classList.add("hidden");
-    cardInfoDetailDua.classList.remove("hidden");
-
-    // Menginisialisasi ulang Slick slider
-    initSlickCardInfo();
-
-    if ($(".slider-card-info-detail").hasClass("slick-initialized")) {
-      $(".slider-card-info-detail").slick("unslick");
-    }
-  }
-}
-
-function closeTab() {
-  const cardInfo = document.querySelector(".card-info");
-  const cardInfoDetail = document.querySelector(".card-info-detail");
-  const cardInfoDetailDua = document.querySelector(".card-info-judul");
-
-  // Menginisialisasi ulang Slick slider
-  initSlickCardInfo();
-
-  if ($(".slider-card-info-detail").hasClass("slick-initialized")) {
-    $(".slider-card-info-detail").slick("unslick");
-  }
-
-  cardInfo.classList.remove("hidden");
-  cardInfoDetail.classList.add("hidden");
-  cardInfoDetailDua.classList.remove("hidden");
-}
-
-function initSlickCardInfo() {
-  $(".slider-card-info")
-    .on("init", function (event, slick) {
-      setTimeout(function () {
-        moveDotsToCustomContainer();
-        addClickHandlerToDots();
-        disableClickHandlerToDots();
-      }, 0);
-    })
-    .slick({
-      dots: true,
-      infinite: false,
-      arrows: true,
-      pauseOnHover: false,
-      swipe: false,
-      // prevArrow:
-      //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
-      // nextArrow:
-      //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
-
-      prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-right: 1px;
-        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</div>" +
-        "</button>`,
-      nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-left: 1px;
-      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</div>" +
-        "</button>`,
-    });
-}
-
-function disableClickHandlerToDots() {
-  $(".slick-dots li button")
-    .off("click")
-    .click(function (e) {
-      e.preventDefault();
-      return false;
-    });
-}
-
-function moveDotsToCustomContainer() {
-  const dots = $(".slider-card-info .slick-dots");
-  $(".custom-dot-slick").append(dots);
-}
-
-function addClickHandlerToDots() {
-  $(".slider-card-info .slick-dots li").on("click", function (event) {
-    event.stopPropagation();
-  });
-}
-
-// function initSlickCardInfo() {
-//   $(".slider-card-info").slick({
-//     infinite: false,
-//     prevArrow:
-//       '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
-//     nextArrow:
-//       '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
-//   });
-// }
-
-function destroyCardInfo() {
-  if ($(".slider-card-info").hasClass("slick-initialized")) {
-    $(".slider-card-info").slick("unslick");
-  }
-}
-
-// memuat kode di bawah ini setelah DOM selesai dimuat
-$(document).ready(function () {
-  initSlickCardInfo();
-  initSlickDisukai();
-});
-
-// Progress Bar
-// Script to update the progress bar based on the slider value
-// const slider = document.getElementById("myRange");
-// const progress = document.getElementById("progress");
-
-// slider.oninput = function () {
-//   const value = this.value;
-//   progress.style.width = value + "%";
-// };
-
-// Function untuk menu navigation
-document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll('#kontenMenuTab [role="tab"]');
-  const InputanSearch = document.querySelector("#InputanSearch");
-  const IconInputanSearch = document.querySelector("#IconInputanSearch");
-  const searchButton = document.querySelector("#btnSearch");
-  const garisBatas = document.querySelector("#garisBatas");
-  const svgIcon = document.querySelector("#IconInputanSearch svg");
-
-  const btnHarga = document.querySelector("#btnHarga");
-  const btnKamar = document.querySelector("#btnKamar");
-  const btnPenjual = document.querySelector("#btnPenjual");
-
-  // Non-aktifkan input dan button saat halaman pertama kali dimuat
-  InputanSearch.disabled = true;
-  searchButton.disabled = true;
-  IconInputanSearch.disabled = true;
-  garisBatas.classList.add("cursor-not-allowed");
-  InputanSearch.classList.add("cursor-not-allowed");
-  searchButton.classList.add("cursor-not-allowed");
-  IconInputanSearch.classList.add("cursor-not-allowed");
-  garisBatas.classList.add("cursor-not-allowed");
-  btnHarga.classList.add("cursor-not-allowed");
-  btnKamar.classList.add("cursor-not-allowed");
-  btnPenjual.classList.add("cursor-not-allowed");
-  // InputanSearch.style.filter = "blur(1px)";
-
-  // Fungsi untuk mengaktifkan tab
-  function activateTab(tab) {
-    tabs.forEach((t) => {
-      const parentDiv = t.closest(".menus");
-      const contentDiv = document.getElementById(
-        t.getAttribute("aria-controls")
-      );
-
-      if (!parentDiv || !contentDiv) {
-        console.warn("Element tidak ditemukan");
-        return;
-      }
-
-      if (t === tab) {
-        parentDiv.classList.add("bg-aktif-menu");
-        contentDiv.classList.remove("hidden");
-
-        // Mengaktifkan input dan button saat tab diaktifkan
-        enableInputAndButton();
-      } else {
-        parentDiv.classList.remove("bg-aktif-menu");
-        contentDiv.classList.add("hidden");
-        // Menonaktifkan input dan button saat tab tidak aktif
-        disableInputAndButton();
-      }
-    });
-  }
-
-  function enableInputAndButton() {
-    InputanSearch.disabled = true;
-    IconInputanSearch.disabled = true;
-    searchButton.disabled = true;
-
-    IconInputanSearch.classList.remove("cursor-not-allowed", "bg-gray-200");
-    InputanSearch.classList.remove("cursor-not-allowed", "bg-gray-200");
-
-    searchButton.classList.remove(
-      "cursor-not-allowed",
-      "bg-gray-200",
-      "text-gray-500"
-    );
-    searchButton.classList.add(
-      "active_btn_search",
-      "text-white",
-      "hover_btn_search"
-    );
-
-    garisBatas.classList.remove(
-      "cursor-not-allowed",
-      "bg-gray-200",
-      "text-gray-500"
-    );
-
-    garisBatas.classList.add(
-      "bg-white",
-      "text-black",
-      "hover:bg-gray-100",
-      "hover:text-blue-700"
-    );
-
-    svgIcon.classList.remove("text-gray-400");
-
-    // searchButton.classList.remove(
-    //   "cursor-not-allowed",
-    //   "bg-gray-200",
-    //   "text-gray-500"
-    // );
-    // searchButton.classList.add(
-    //   "active_btn_search",
-    //   "text-white",
-    //   "hover_btn_search"
-    // );
-
-    btnHarga.classList.remove(
-      "cursor-not-allowed",
-      "bg-gray-200",
-      "text-gray-400"
-    );
-    btnHarga.classList.add("bg-white", "text-black");
-
-    btnKamar.classList.remove(
-      "cursor-not-allowed",
-      "bg-gray-200",
-      "text-gray-400"
-    );
-    btnKamar.classList.add("bg-white", "text-black");
-
-    // InputanSearch.style.filter = "unset";
-  }
-
-  function disableInputAndButton() {
-    InputanSearch.disabled = false;
-    IconInputanSearch.disabled = false;
-    searchButton.disabled = false;
-
-    // InputanSearch.classList.add("cursor-not-allowed", "bg-gray-100");
-    // IconInputanSearch.classList.add("cursor-not-allowed", "text-gray-500");
-    // searchButton.classList.add("bg-red-500");
-  }
-
-  // Menambahkan event listener untuk setiap tab
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => activateTab(tab));
-  });
-});
 
 // Function Dropdown Filter
 const dropdownButton = document.getElementById("dropdown-button");
@@ -761,7 +494,406 @@ var myInvestmentIndexChart = new Chart(ctx3, {
   },
 });
 
-// kondisi menu tab
+// slick semua
+
+// Hide show card active
+
+function showCardInfoDetail(element) {
+  const cardInfo = document.querySelector(".card-info");
+  const cardInfoDetail = document.querySelector(".card-info-detail");
+  const cardInfoDetailDua = document.querySelector(".card-info-judul");
+
+  if (element.getAttribute("data-active-tab") === "1") {
+    cardInfo.classList.add("hidden");
+    cardInfoDetail.classList.remove("hidden");
+    cardInfoDetailDua.classList.add("hidden");
+
+    $(".slider-card-info-detail").slick({
+      infinite: false,
+
+      prevArrow:
+        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</button>",
+      nextArrow:
+        '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</button>",
+    });
+
+    // Menghancurkan Slick slider
+    destroyCardInfo();
+  } else {
+    cardInfo.classList.remove("hidden");
+    cardInfoDetail.classList.add("hidden");
+    cardInfoDetailDua.classList.remove("hidden");
+
+    // Menginisialisasi ulang Slick slider
+    initSlickCardInfo();
+
+    if ($(".slider-card-info-detail").hasClass("slick-initialized")) {
+      $(".slider-card-info-detail").slick("unslick");
+    }
+    if ($(".slider-disukai").hasClass("slick-initialized")) {
+      $(".slider-disukai").slick("unslick");
+    }
+  }
+}
+
+function closeTab() {
+  const cardInfo = document.querySelector(".card-info");
+  const cardInfoDetail = document.querySelector(".card-info-detail");
+  const cardInfoDetailDua = document.querySelector(".card-info-judul");
+
+  // Menginisialisasi ulang Slick slider
+  initSlickCardInfo();
+
+  if ($(".slider-card-info-detail").hasClass("slick-initialized")) {
+    $(".slider-card-info-detail").slick("unslick");
+  }
+
+  cardInfo.classList.remove("hidden");
+  cardInfoDetail.classList.add("hidden");
+  cardInfoDetailDua.classList.remove("hidden");
+}
+
+function initSlickCardInfo() {
+  $(".slider-card-info")
+    .on("init", function (event, slick) {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick({
+      dots: true,
+      infinite: false,
+      arrows: true,
+      pauseOnHover: false,
+      swipe: false,
+      // prevArrow:
+      //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+      // nextArrow:
+      //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+
+      prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-right: 1px;
+        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</div>" +
+        "</button>`,
+      nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-left: 1px;
+      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</div>" +
+        "</button>`,
+    });
+}
+
+function disableClickHandlerToDots() {
+  $(".slick-dots li button")
+    .off("click")
+    .click(function (e) {
+      e.preventDefault();
+      return false;
+    });
+}
+
+function moveDotsToCustomContainer() {
+  const dots = $(".slider-card-info .slick-dots");
+  $(".custom-dot-slick").append(dots);
+}
+
+function addClickHandlerToDots() {
+  $(".slider-card-info .slick-dots li").on("click", function (event) {
+    event.stopPropagation();
+  });
+}
+
+// function initSlickCardInfo() {
+//   $(".slider-card-info").slick({
+//     infinite: false,
+//     prevArrow:
+//       '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+//     nextArrow:
+//       '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+//   });
+// }
+
+function destroyCardInfo() {
+  if ($(".slider-card-info").hasClass("slick-initialized")) {
+    $(".slider-card-info").slick("unslick");
+  }
+}
+
+// memuat kode di bawah ini setelah DOM selesai dimuat
+$(document).ready(function () {
+  initSlickCardInfo();
+  initSlickDisukai();
+});
+
+// Function untuk pindah Menu Navigation
+document.addEventListener("DOMContentLoaded", function () {
+  if ($(".slider-disukai").hasClass("slick-initialized")) {
+    $(".slider-disukai").slick("unslick");
+  }
+
+  $(".slider-disukai").slick({
+    dots: true,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    // prevArrow:
+    //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+    // nextArrow:
+    //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-right: 1px;
+        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</div>" +
+        "</button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-left: 1px;
+      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</div>" +
+        "</button>`,
+  });
+
+  const tabs = document.querySelectorAll('#kontenMenuTab [role="tab"]');
+  const InputanSearch = document.querySelector("#InputanSearch");
+  const IconInputanSearch = document.querySelector("#IconInputanSearch");
+  const searchButton = document.querySelector("#btnSearch");
+  const btnTerapkan = document.querySelector("#btnTerapkan");
+  const garisBatas = document.querySelector("#garisBatas");
+  const svgIcon = document.querySelector("#IconInputanSearch svg");
+
+  const btnHarga = document.querySelector("#btnHarga");
+  const btnKamar = document.querySelector("#btnKamar");
+  const btnPenjual = document.querySelector("#btnPenjual");
+
+  // Non-aktifkan input dan button saat halaman pertama kali dimuat
+  InputanSearch.disabled = true;
+  searchButton.disabled = true;
+  btnTerapkan.disabled = true;
+  IconInputanSearch.disabled = true;
+  garisBatas.classList.add("cursor-not-allowed");
+  InputanSearch.classList.add("cursor-not-allowed");
+  searchButton.classList.add("cursor-not-allowed");
+  btnTerapkan.classList.add("cursor-not-allowed");
+  IconInputanSearch.classList.add("cursor-not-allowed");
+  garisBatas.classList.add("cursor-not-allowed");
+  btnHarga.classList.add("cursor-not-allowed");
+  btnKamar.classList.add("cursor-not-allowed");
+  btnPenjual.classList.add("cursor-not-allowed");
+  // InputanSearch.style.filter = "blur(1px)";
+
+  // Fungsi untuk mengaktifkan tab
+  function activateTab(tab) {
+    tabs.forEach((t) => {
+      // initSlickDisukai();
+
+      // if ($(".slider-disukai").hasClass("slick-initialized")) {
+      //   $(".slider-disukai").slick("unslick");
+      // }
+
+      if ($(".slider-disukai").hasClass("slick-initialized")) {
+        $(".slider-disukai").slick("unslick");
+      }
+
+      $(".slider-disukai").slick({
+        dots: true,
+        infinite: false,
+        arrows: true,
+        pauseOnHover: false,
+        swipe: false,
+        // prevArrow:
+        //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+        // nextArrow:
+        //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+
+        prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-right: 1px;
+        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</div>" +
+        "</button>`,
+        nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-left: 1px;
+      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</div>" +
+        "</button>`,
+      });
+
+      const parentDiv = t.closest(".menus");
+      const contentDiv = document.getElementById(
+        t.getAttribute("aria-controls")
+      );
+
+      console.log(t);
+
+      if (!parentDiv || !contentDiv) {
+        console.warn("Element tidak ditemukan");
+        return;
+      }
+
+      if (t === tab) {
+        parentDiv.classList.add("bg-aktif-menu");
+        contentDiv.classList.remove("hidden");
+
+        // Mengaktifkan input dan button saat tab diaktifkan
+        enableInputAndButton();
+      } else {
+        parentDiv.classList.remove("bg-aktif-menu");
+        contentDiv.classList.add("hidden");
+        // Menonaktifkan input dan button saat tab tidak aktif
+        disableInputAndButton();
+      }
+    });
+  }
+
+  function enableInputAndButton() {
+    if ($(".slider-disukai").hasClass("slick-initialized")) {
+      $(".slider-disukai").slick("unslick");
+    }
+
+    $(".slider-disukai").slick({
+      dots: true,
+      infinite: false,
+      arrows: true,
+      pauseOnHover: false,
+      swipe: false,
+      // prevArrow:
+      //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+      // nextArrow:
+      //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+
+      prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-right: 1px;
+        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</div>" +
+        "</button>`,
+      nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-left: 1px;
+      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</div>" +
+        "</button>`,
+    });
+
+    InputanSearch.disabled = true;
+    IconInputanSearch.disabled = true;
+    searchButton.disabled = true;
+
+    IconInputanSearch.classList.remove("cursor-not-allowed", "bg-gray-200");
+    InputanSearch.classList.remove("cursor-not-allowed", "bg-gray-200");
+
+    searchButton.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-500"
+    );
+    searchButton.classList.add(
+      "active_btn_search",
+      "text-white",
+      "hover_btn_search"
+    );
+
+    btnTerapkan.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-500"
+    );
+
+    btnTerapkan.classList.add(
+      "active_btn_search",
+      "text-white",
+      "hover_btn_search"
+    );
+
+    garisBatas.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-500"
+    );
+
+    garisBatas.classList.add(
+      "bg-white",
+      "text-black",
+      "hover:bg-gray-100",
+      "hover:text-blue-700"
+    );
+
+    svgIcon.classList.remove("text-gray-400");
+
+    // searchButton.classList.remove(
+    //   "cursor-not-allowed",
+    //   "bg-gray-200",
+    //   "text-gray-500"
+    // );
+    // searchButton.classList.add(
+    //   "active_btn_search",
+    //   "text-white",
+    //   "hover_btn_search"
+    // );
+
+    btnHarga.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-400"
+    );
+    btnHarga.classList.add("bg-white", "text-black");
+
+    btnKamar.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-400"
+    );
+    btnKamar.classList.add("bg-white", "text-black");
+
+    btnPenjual.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-400"
+    );
+
+    btnPenjual.classList.add("bg-white", "text-black");
+
+    // InputanSearch.style.filter = "unset";
+  }
+
+  function disableInputAndButton() {
+    InputanSearch.disabled = false;
+    IconInputanSearch.disabled = false;
+    searchButton.disabled = false;
+
+    // InputanSearch.classList.add("cursor-not-allowed", "bg-gray-100");
+    // IconInputanSearch.classList.add("cursor-not-allowed", "text-gray-500");
+    // searchButton.classList.add("bg-red-500");
+  }
+
+  // Menambahkan event listener untuk setiap tab
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => activateTab(tab));
+  });
+});
+
+// kondisi menu tab card-detail
 document.addEventListener("DOMContentLoaded", function () {
   // Deklarasi variabel - sarpas
   var ibadahTab = document.getElementById("sarprasIbadahTab");

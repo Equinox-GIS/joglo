@@ -1572,12 +1572,12 @@ input:checked + .toggle-bg {
   justify-content: space-between;
 }
 
-.gap-4 {
-  gap: 1rem;
+.gap-2 {
+  gap: 0.5rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-y-1 {
@@ -2238,15 +2238,32 @@ input:checked + .toggle-bg {
   display: none !important;
 }
 
+/* CSS untuk tombol My Location */
+
 .my-location-button .mapboxgl-ctrl-icon {
   background-image: url("../src/images/my-location.png") !important;
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
   background-size: cover !important;
-  width: 65% !important;
-  height: 65% !important;
+  width: 60% !important;
+  height: 60% !important;
 }
+
+/* CSS untuk tombol Layer */
+
+.layer-button .mapboxgl-ctrl-icon {
+  background-image: url("../src/images/layers.png") !important;
+  /* Ganti dengan path icon layer Anda */
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  background-size: cover !important;
+  width: 60% !important;
+  height: 60% !important;
+}
+
+/* CSS umum untuk tombol-tombol di grup kontrol */
 
 .mapboxgl-ctrl-group button {
   background-color: white !important;
@@ -2257,10 +2274,20 @@ input:checked + .toggle-bg {
   align-items: center !important;
 }
 
+/* CSS khusus untuk bentuk tombol My Location */
+
 .my-location-button {
   border-top-left-radius: 5px !important;
   border-top-right-radius: 5px !important;
 }
+
+/* CSS khusus untuk bentuk tombol Layer */
+
+.layer-button {
+  /* Anda bisa menambahkan style khusus untuk tombol Layer di sini jika diperlukan */
+}
+
+/* Menghapus shadow dari grup kontrol jika tidak kosong */
 
 .mapboxgl-ctrl-group:not(:empty) {
   box-shadow: none !important;

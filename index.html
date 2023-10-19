@@ -576,7 +576,7 @@
         <!-- Search Button -->
         <div class="px-1">
           <button
-            id="btnSearch"
+            id="btnTerapkan"
             type="button"
             class="bg-gray-200 h-8 text-gray-400 font-medium rounded-[5px] text-xs px-3"
           >
@@ -613,7 +613,7 @@
                 type="button"
                 role="tab"
                 aria-controls="MenuSatuContent"
-                aria-selected="false"
+                aria-selected="true"
               >
                 <img
                   class="menu-icon"
@@ -655,7 +655,7 @@
                 type="button"
                 role="tab"
                 aria-controls="MenuTigaContent"
-                aria-selected="true"
+                aria-selected="false"
               >
                 <img
                   class="menu-icon"
@@ -783,7 +783,7 @@
 
                 <!--  Konten Card Info -->
                 <div class="h-full card-info px-3">
-                  <div class="grid grid-cols-2 gap-6">
+                  <div class="grid grid-cols-2 gap-2">
                     <!-- Card 1 -->
                     <div class="w-full h-full">
                       <div
@@ -3566,8 +3566,10 @@
               <div class="flex flex-col w-full card-info-detail hidden">
                 <!-- Judul Card Info Detail -->
                 <div class="px-3 pt-2">
-                  <div class="w-full flex justify-between">
-                    <div class="text-lg font-bold">
+                  <div
+                    class="w-full flex justify-between border border-red-500"
+                  >
+                    <div class="text-md font-bold">
                       Rumah Impian Strategis Dijual! Segera Miliki Hunian
                       Eksklusif di Lokasi Prime!
                     </div>
@@ -5518,7 +5520,7 @@
           </div>
 
           <div
-            class="hidden pr-2"
+            class="hidden"
             id="MenuTigaContent"
             role="tabpanel"
             aria-labelledby="MenuTigaTab"
@@ -5606,7 +5608,7 @@
 
                 <!--  Konten Disukai -->
                 <div class="h-full card-info px-3 border border-orange-500">
-                  <div class="grid grid-cols-2 gap-6">
+                  <div class="grid grid-cols-2 gap-2">
                     <!-- Card 1 -->
                     <div class="w-full h-full">
                       <div
@@ -5716,7 +5718,2185 @@
                         id="card-info-detail"
                       >
                         <div class="w-full relative">
-                          <div class="slider-card-info w-full h-full">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/heart.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 1 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                            <div class="relative">
+                              <img
+                                class="w-full h-full object-cover rounded-t-lg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                alt=""
+                              />
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
+                          style="user-select: none"
+                        >
+                          <a href="#">
+                            <div class="inline-flex items-center">
+                              <h5
+                                class="text-xl font-bold tracking-tight text-black"
+                              >
+                                Rp 1.300.000.000
+                              </h5>
+                              <img
+                                class="ml-3 -mt-1 w-4 h-4 object-cover"
+                                src="./src/images/star.png"
+                                alt=""
+                              />
+                            </div>
+                          </a>
+
+                          <div class="flex flex-col mb-2 font-normal">
+                            <div
+                              class="flex items-center text-[11px] text-gray-700"
+                            >
+                              <span class="mr-2">LT 80 m² |</span>
+                              <span class="mr-2">LB 276 m² |</span>
+                              <span class="mr-2">2 KT |</span>
+                              <span class="mr-2">5 KM</span>
+                              <!-- <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-4 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bath.png"
+                                  alt=""
+                                />
+                                <span> 2 KT |</span>
+                              </div>
+                              <div class="inline-flex items-center mr-1.5">
+                                <img
+                                  class="w-7 h-5 object-fill pl-1 pr-1.5"
+                                  src="./src/images/bed.png"
+                                  alt=""
+                                />
+                                <span>5 KM</span>
+                              </div> -->
+                            </div>
+                            <div class="text-xs pt-1 text-gray-700">
+                              Sunter, Tanjung Priok, Jakarta Utara
+                            </div>
+                            <div class="text-[9px] pt-1 text-gray-400">
+                              ERA JAKARTA
+                            </div>
+                          </div>
+
+                          <div class="mb-3 font-normal hidden">
+                            <p class="text-xs text-gray-700">
+                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
+                            </p>
+                            <p class="text-xs text-gray-700 py-2">
+                              Setiabudi, Karet Kuningan, Jakarta Selatan
+                            </p>
+                            <p class="text-[10px] text-gray-400">
+                              ERA JAKARTA ss
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="w-full h-full">
+                      <div
+                        class="flex flex-col cursor-pointer"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)"
+                        id="card-info-detail"
+                      >
+                        <div class="w-full relative">
+                          <div class="slider-disukai w-full h-full">
                             <div class="relative">
                               <img
                                 class="w-full h-full object-cover rounded-t-lg"
