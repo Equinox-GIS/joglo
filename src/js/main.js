@@ -351,19 +351,26 @@ function initSlickCardInfo() {
       infinite: false,
       arrows: true,
       pauseOnHover: false,
+      swipe: false,
       // prevArrow:
       //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
       // nextArrow:
       //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
 
-      prevArrow:
-        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</button>",
-      nextArrow:
-        '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</button>",
+      prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-right: 1px;
+        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</div>" +
+        "</button>`,
+      nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-left: 1px;
+      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</div>" +
+        "</button>`,
     });
 }
 
@@ -406,6 +413,7 @@ function destroyCardInfo() {
 // memuat kode di bawah ini setelah DOM selesai dimuat
 $(document).ready(function () {
   initSlickCardInfo();
+  initSlickDisukai();
 });
 
 // Progress Bar
@@ -429,6 +437,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const btnHarga = document.querySelector("#btnHarga");
   const btnKamar = document.querySelector("#btnKamar");
+  const btnPenjual = document.querySelector("#btnPenjual");
 
   // Non-aktifkan input dan button saat halaman pertama kali dimuat
   InputanSearch.disabled = true;
@@ -441,6 +450,7 @@ document.addEventListener("DOMContentLoaded", function () {
   garisBatas.classList.add("cursor-not-allowed");
   btnHarga.classList.add("cursor-not-allowed");
   btnKamar.classList.add("cursor-not-allowed");
+  btnPenjual.classList.add("cursor-not-allowed");
   // InputanSearch.style.filter = "blur(1px)";
 
   // Fungsi untuk mengaktifkan tab
@@ -886,3 +896,24 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImages("hargaWajar");
   });
 });
+
+function initSlickDisukai() {
+  $(".slider-disukai").slick({
+    infinite: false,
+
+    prevArrow:
+      '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+      '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+      "</button>",
+    nextArrow:
+      '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+      '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+      "</button>",
+  });
+}
+
+function destroyDisukai() {
+  if ($(".slider-disukai").hasClass("slick-initialized")) {
+    $(".slider-disukai").slick("unslick");
+  }
+}

@@ -112,12 +112,38 @@
 }
 
 .custom-img-slick {
-  width: 4vh !important;
-  height: 4vh !important;
+  width: 1.1vh !important;
+  height: 1.4vh !important;
 }
 
 .slick-prev {
-  left: 25px !important;
+  left: -6px !important;
+}
+
+.slick-next {
+  right: -5px !important;
+}
+
+.img-wrapper {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: rgb(241 245 249);
+  opacity: 0.9;
+}
+
+.custom-img-slick {
+  display: block;
+  border-radius: 50%;
+}
+
+/* .slick-slider:not(:hover) .slick-arrow,
+.slick-slider:not(:hover) .slick-dots {
+  opacity: unset !important;
+} */
+
+.slick-dots li button:before {
+  font-size: 5px !important;
 }
 
 #InputanSearch::placeholder {
