@@ -1516,8 +1516,8 @@ input:checked + .toggle-bg {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
-.grid-cols-\[55px\2c 1fr\2c 1fr\] {
-  grid-template-columns: 55px 1fr 1fr;
+.grid-cols-\[55px\2c 1fr\] {
+  grid-template-columns: 55px 1fr;
 }
 
 .grid-cols-\[90px\2c 1fr\] {
@@ -2267,8 +2267,8 @@ input:checked + .toggle-bg {
 
 .mapboxgl-ctrl-group button {
   background-color: white !important;
-  width: 27px !important;
-  height: 27px !important;
+  width: 25px !important;
+  height: 26px !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -2277,14 +2277,13 @@ input:checked + .toggle-bg {
 /* CSS khusus untuk bentuk tombol My Location */
 
 .my-location-button {
-  border-top-left-radius: 5px !important;
-  border-top-right-radius: 5px !important;
 }
 
 /* CSS khusus untuk bentuk tombol Layer */
 
 .layer-button {
-  /* Anda bisa menambahkan style khusus untuk tombol Layer di sini jika diperlukan */
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
 }
 
 /* Menghapus shadow dari grup kontrol jika tidak kosong */

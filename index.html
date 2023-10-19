@@ -595,95 +595,98 @@
       </div>
 
       <!-- Konten -->
-      <div class="w-full h-[82vh] grid grid-cols-[55px,1fr,1fr]">
+      <div class="w-full h-[82vh] grid grid-cols-2">
         <!-- Menu Navigation -->
-        <div
-          class="bg-slate-50 px-0 py-5"
-          id="kontenMenuTab"
-          data-tabs-toggle="#kontenMenuContent"
-          role="tablist"
-        >
-          <!-- Menu1 -->
-          <div class="flex col justify-center mb-5 mt-4">
-            <div class="flex flex-col menus p-3">
-              <div
-                class="w-5 h-5 flex justify-center items-center cursor-pointer relative"
-                id="MenuSatuTab"
-                data-tabs-target="#MenuSatuContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuSatuContent"
-                aria-selected="true"
-              >
-                <img
-                  class="menu-icon"
-                  data-menu="1"
-                  src="./src/images/search.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <!-- Menu2 -->
-          <div class="flex col justify-center mb-5 mt-4">
-            <div class="flex flex-col menus p-3">
-              <div
-                class="w-5 h-5 flex justify-center items-center cursor-pointer relative"
-                id="MenuDuaTab"
-                data-tabs-target="#MenuDuaContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuDuaContent"
-                aria-selected="false"
-              >
-                <img
-                  class="menu-icon"
-                  data-menu="2"
-                  src="./src/images/add.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <!-- Menu3 -->
-          <div class="flex col justify-center mb-5 mt-4">
-            <div class="flex flex-col menus p-3">
-              <div
-                class="w-5 h-5 flex justify-center items-center cursor-pointer relative"
-                id="MenuTigaTab"
-                data-tabs-target="#MenuTigaContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuTigaContent"
-                aria-selected="false"
-              >
-                <img
-                  class="menu-icon"
-                  data-menu="3"
-                  src="./src/images/favorite.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Map -->
-        <div class="w-full h-full">
-          <div id="mapJoglo" class="w-full h-full">
-            <div class="grid grid-rows-3 grid-flow-col gap-4 z-10 relative">
-              <div class="col-span-2">&nbsp;</div>
-              <div class="row-span-2 col-span-2">&nbsp;</div>
-              <div
-                class="row-span-3 z-10 relative flex items-start justify-end"
-              >
-                <button
-                  id="garisBatas"
+        <div class="grid grid-cols-[55px,1fr]">
+          <!-- Menu Navigation -->
+          <div
+            class="bg-slate-50 px-0 py-5"
+            id="kontenMenuTab"
+            data-tabs-toggle="#kontenMenuContent"
+            role="tablist"
+          >
+            <!-- Menu1 -->
+            <div class="flex col justify-center mb-5 mt-4">
+              <div class="flex flex-col menus p-3">
+                <div
+                  class="w-5 h-5 flex justify-center items-center cursor-pointer relative"
+                  id="MenuSatuTab"
+                  data-tabs-target="#MenuSatuContent"
                   type="button"
-                  class="py-1 px-3 mr-4 mt-3 text-xs shadow-lg text-gray-500 focus:outline-none bg-gray-200 rounded-md border border-gray-200 focus:z-10 focus:ring-4 focus:ring-gray-200"
+                  role="tab"
+                  aria-controls="MenuSatuContent"
+                  aria-selected="true"
                 >
-                  Garis Batas
-                </button>
+                  <img
+                    class="menu-icon"
+                    data-menu="1"
+                    src="./src/images/search.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Menu2 -->
+            <div class="flex col justify-center mb-5 mt-4">
+              <div class="flex flex-col menus p-3">
+                <div
+                  class="w-5 h-5 flex justify-center items-center cursor-pointer relative"
+                  id="MenuDuaTab"
+                  data-tabs-target="#MenuDuaContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuDuaContent"
+                  aria-selected="false"
+                >
+                  <img
+                    class="menu-icon"
+                    data-menu="2"
+                    src="./src/images/add.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Menu3 -->
+            <div class="flex col justify-center mb-5 mt-4">
+              <div class="flex flex-col menus p-3">
+                <div
+                  class="w-5 h-5 flex justify-center items-center cursor-pointer relative"
+                  id="MenuTigaTab"
+                  data-tabs-target="#MenuTigaContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuTigaContent"
+                  aria-selected="false"
+                >
+                  <img
+                    class="menu-icon"
+                    data-menu="3"
+                    src="./src/images/favorite.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Map -->
+          <div class="w-full h-full">
+            <div id="mapJoglo" class="w-full h-full">
+              <div class="grid grid-rows-3 grid-flow-col gap-4 z-10 relative">
+                <div class="col-span-2">&nbsp;</div>
+                <div class="row-span-2 col-span-2">&nbsp;</div>
+                <div
+                  class="row-span-3 z-10 relative flex items-start justify-end"
+                >
+                  <button
+                    id="garisBatas"
+                    type="button"
+                    class="py-1 px-3 mr-4 mt-3 text-xs shadow-lg text-gray-500 focus:outline-none bg-gray-200 rounded-md border border-gray-200 focus:z-10 focus:ring-4 focus:ring-gray-200"
+                  >
+                    Garis Batas
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -3566,7 +3569,9 @@
               <div class="flex flex-col w-full card-info-detail hidden">
                 <!-- Judul Card Info Detail -->
                 <div class="px-3 pt-2">
-                  <div class="w-full flex justify-between">
+                  <div
+                    class="w-full flex justify-between border border-blue-500"
+                  >
                     <div class="text-md font-bold">
                       Rumah Impian Strategis Dijual! Segera Miliki Hunian
                       Eksklusif di Lokasi Prime!

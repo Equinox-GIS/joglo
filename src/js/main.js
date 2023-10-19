@@ -91,10 +91,8 @@ if (controlGroup) {
     alert("Layer button clicked!");
   });
 
-  controlGroup.appendChild(myLocationButton); // Pindahkan penempatan tombol my location
-
-  controlGroup.appendChild(layerButton); // Menambahkan tombol layer ke grup kontrol
-  // Menambahkan tombol ke grup kontrol dalam urutan yang diinginkan
+  controlGroup.appendChild(layerButton);
+  controlGroup.appendChild(myLocationButton);
   controlGroup.appendChild(zoomInButton);
   controlGroup.appendChild(zoomOutButton);
 }

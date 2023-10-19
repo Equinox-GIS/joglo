@@ -38,8 +38,8 @@
 /* CSS umum untuk tombol-tombol di grup kontrol */
 .mapboxgl-ctrl-group button {
   background-color: white !important;
-  width: 27px !important;
-  height: 27px !important;
+  width: 25px !important;
+  height: 26px !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -47,13 +47,12 @@
 
 /* CSS khusus untuk bentuk tombol My Location */
 .my-location-button {
-  border-top-left-radius: 5px !important;
-  border-top-right-radius: 5px !important;
 }
 
 /* CSS khusus untuk bentuk tombol Layer */
 .layer-button {
-  /* Anda bisa menambahkan style khusus untuk tombol Layer di sini jika diperlukan */
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
 }
 
 /* Menghapus shadow dari grup kontrol jika tidak kosong */
