@@ -94,12 +94,30 @@
 
 .slick-dots li button:before {
   color: white;
-  opacity: unset !important;
+  /* opacity: unset !important; */
+  opacity: 0.6;
 }
 
 .slick-dots li button:hover,
 .slick-dots li button:focus {
   outline: none;
+}
+
+.slick-prev:before {
+  content: "" !important;
+}
+
+.slick-next:before {
+  content: "" !important;
+}
+
+.custom-img-slick {
+  width: 4vh !important;
+  height: 4vh !important;
+}
+
+.slick-prev {
+  left: 25px !important;
 }
 
 #InputanSearch::placeholder {

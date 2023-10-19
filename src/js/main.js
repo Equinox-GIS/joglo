@@ -294,8 +294,14 @@ function showCardInfoDetail(element) {
     $(".slider-card-info-detail").slick({
       infinite: false,
 
-      prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-      nextArrow: '<button type="button" class="slick-next">Next</button>',
+      prevArrow:
+        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</button>",
+      nextArrow:
+        '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</button>",
     });
 
     // Menghancurkan Slick slider
@@ -337,6 +343,7 @@ function initSlickCardInfo() {
       setTimeout(function () {
         moveDotsToCustomContainer();
         addClickHandlerToDots();
+        disableClickHandlerToDots();
       }, 0);
     })
     .slick({
@@ -344,10 +351,28 @@ function initSlickCardInfo() {
       infinite: false,
       arrows: true,
       pauseOnHover: false,
+      // prevArrow:
+      //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+      // nextArrow:
+      //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+
       prevArrow:
-        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
+        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</button>",
       nextArrow:
-        '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
+        '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</button>",
+    });
+}
+
+function disableClickHandlerToDots() {
+  $(".slick-dots li button")
+    .off("click")
+    .click(function (e) {
+      e.preventDefault();
+      return false;
     });
 }
 
