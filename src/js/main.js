@@ -611,17 +611,6 @@ function addClickHandlerToDots() {
     event.stopPropagation();
   });
 }
-
-// function initSlickCardInfo() {
-//   $(".slider-card-info").slick({
-//     infinite: false,
-//     prevArrow:
-//       '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
-//     nextArrow:
-//       '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
-//   });
-// }
-
 function destroyCardInfo() {
   if ($(".slider-card-info").hasClass("slick-initialized")) {
     $(".slider-card-info").slick("unslick");
@@ -636,6 +625,8 @@ $(document).ready(function () {
 
 // Function untuk pindah Menu Navigation
 document.addEventListener("DOMContentLoaded", function () {
+  // Function Slick
+
   if ($(".slider-disukai").hasClass("slick-initialized")) {
     $(".slider-disukai").slick("unslick");
   }
@@ -667,7 +658,31 @@ document.addEventListener("DOMContentLoaded", function () {
         "</button>`,
   });
 
+  function initSlickDisukai() {
+    $(".slider-disukai").slick({
+      infinite: false,
+
+      prevArrow:
+        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</button>",
+      nextArrow:
+        '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</button>",
+    });
+  }
+
+  function destroyDisukai() {
+    if ($(".slider-disukai").hasClass("slick-initialized")) {
+      $(".slider-disukai").slick("unslick");
+    }
+  }
+
+  // End Function Slick
+
   const tabs = document.querySelectorAll('#kontenMenuTab [role="tab"]');
+
   const InputanSearch = document.querySelector("#InputanSearch");
   const IconInputanSearch = document.querySelector("#IconInputanSearch");
   const searchButton = document.querySelector("#btnSearch");
@@ -693,7 +708,6 @@ document.addEventListener("DOMContentLoaded", function () {
   btnHarga.classList.add("cursor-not-allowed");
   btnKamar.classList.add("cursor-not-allowed");
   btnPenjual.classList.add("cursor-not-allowed");
-  // InputanSearch.style.filter = "blur(1px)";
 
   // Fungsi untuk mengaktifkan tab
   function activateTab(tab) {
@@ -872,10 +886,8 @@ document.addEventListener("DOMContentLoaded", function () {
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => activateTab(tab));
   });
-});
 
-// kondisi menu tab card-detail
-document.addEventListener("DOMContentLoaded", function () {
+  // kondisi menu tab card-detail
   // Deklarasi variabel - sarpas
   var ibadahTab = document.getElementById("sarprasIbadahTab");
   var miniMarketTab = document.getElementById("sarprasMiniMarketTab");
@@ -1008,25 +1020,9 @@ document.addEventListener("DOMContentLoaded", function () {
   hargaWajarTab.addEventListener("click", function () {
     updateImages("hargaWajar");
   });
+  // Function Untuk Search, Harga, Kamar, Terapkan dan Garis Batas
+
+  //
+  //
+  //
 });
-
-function initSlickDisukai() {
-  $(".slider-disukai").slick({
-    infinite: false,
-
-    prevArrow:
-      '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-      '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-      "</button>",
-    nextArrow:
-      '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-      '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-      "</button>",
-  });
-}
-
-function destroyDisukai() {
-  if ($(".slider-disukai").hasClass("slick-initialized")) {
-    $(".slider-disukai").slick("unslick");
-  }
-}
