@@ -682,7 +682,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // End Function Slick
 
   const tabs = document.querySelectorAll('#kontenMenuTab [role="tab"]');
-
   const InputanSearch = document.querySelector("#InputanSearch");
   const IconInputanSearch = document.querySelector("#IconInputanSearch");
   const searchButton = document.querySelector("#btnSearch");
@@ -693,6 +692,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnHarga = document.querySelector("#btnHarga");
   const btnKamar = document.querySelector("#btnKamar");
   const btnPenjual = document.querySelector("#btnPenjual");
+  const btnJenisProperti = document.querySelector("#btnJenisProperti");
+  const btnJenisRumah = document.querySelector("#btnJenisSurat");
+  const btnJScore = document.querySelector("#btnJScore");
 
   // Non-aktifkan input dan button saat halaman pertama kali dimuat
   InputanSearch.disabled = true;
@@ -708,6 +710,10 @@ document.addEventListener("DOMContentLoaded", function () {
   btnHarga.classList.add("cursor-not-allowed");
   btnKamar.classList.add("cursor-not-allowed");
   btnPenjual.classList.add("cursor-not-allowed");
+  btnJenisProperti.classList.add("cursor-not-allowed");
+  btnJenisRumah.classList.add("cursor-not-allowed");
+  btnJScore.classList.add("cursor-not-allowed");
+  // InputanSearch.style.filter = "blur(1px)";
 
   // Fungsi untuk mengaktifkan tab
   function activateTab(tab) {
@@ -870,8 +876,34 @@ document.addEventListener("DOMContentLoaded", function () {
       "bg-gray-200",
       "text-gray-400"
     );
-
     btnPenjual.classList.add("bg-white", "text-black");
+
+    // Jenis Properti
+    btnJenisProperti.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-400"
+    );
+
+    btnJenisProperti.classList.add("bg-white", "text-black");
+
+    // Jenis Rumah
+    btnJenisRumah.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-400"
+    );
+
+    btnJenisRumah.classList.add("bg-white", "text-black");
+
+    // JScore
+    btnJScore.classList.remove(
+      "cursor-not-allowed",
+      "bg-gray-200",
+      "text-gray-400"
+    );
+
+    btnJScore.classList.add("bg-white", "text-black");
 
     // InputanSearch.style.filter = "unset";
   }
@@ -1022,7 +1054,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // Function Untuk Search, Harga, Kamar, Terapkan dan Garis Batas
 
-  //
-  //
   //
 });
