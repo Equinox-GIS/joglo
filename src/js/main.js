@@ -631,7 +631,7 @@ function destroyCardInfo() {
 // memuat kode di bawah ini setelah DOM selesai dimuat
 $(document).ready(function () {
   initSlickCardInfo();
-  initSlickDisukai();
+  // initSlickDisukai();
 });
 
 // Function untuk pindah Menu Navigation
@@ -740,8 +740,6 @@ document.addEventListener("DOMContentLoaded", function () {
         t.getAttribute("aria-controls")
       );
 
-      console.log(t);
-
       if (!parentDiv || !contentDiv) {
         console.warn("Element tidak ditemukan");
         return;
@@ -839,17 +837,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     svgIcon.classList.remove("text-gray-400");
 
-    // searchButton.classList.remove(
-    //   "cursor-not-allowed",
-    //   "bg-gray-200",
-    //   "text-gray-500"
-    // );
-    // searchButton.classList.add(
-    //   "active_btn_search",
-    //   "text-white",
-    //   "hover_btn_search"
-    // );
-
     btnHarga.classList.remove(
       "cursor-not-allowed",
       "bg-gray-200",
@@ -879,10 +866,6 @@ document.addEventListener("DOMContentLoaded", function () {
     InputanSearch.disabled = false;
     IconInputanSearch.disabled = false;
     searchButton.disabled = false;
-
-    // InputanSearch.classList.add("cursor-not-allowed", "bg-gray-100");
-    // IconInputanSearch.classList.add("cursor-not-allowed", "text-gray-500");
-    // searchButton.classList.add("bg-red-500");
   }
 
   // Menambahkan event listener untuk setiap tab
