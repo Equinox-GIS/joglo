@@ -303,7 +303,7 @@
             <div class="text-left">
               <button
                 id="btnHarga"
-                class="inline-flex justify-between items-center pl-1 w-20 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
+                class="inline-flex justify-center items-center pl-1 w-20 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
               >
                 <span class="pl-2">Harga</span>
 
@@ -410,7 +410,7 @@
             <div class="text-left">
               <button
                 id="btnKamar"
-                class="inline-flex justify-between items-center pl-1 w-20 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
+                class="inline-flex justify-center items-center pl-1 w-20 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
               >
                 <span class="pl-2">Spek</span>
 
@@ -535,7 +535,7 @@
             <div class="text-left">
               <button
                 id="btnPenjual"
-                class="inline-flex justify-between items-center pl-1 w-20 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
+                class="inline-flex justify-center items-center pl-1 w-20 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
               >
                 <span class="pl-2">Penjual</span>
 
@@ -613,7 +613,7 @@
             <div class="text-left">
               <button
                 id="btnJenisProperti"
-                class="inline-flex justify-between items-center pl-1 w-32 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
+                class="inline-flex justify-center items-center pl-1 w-32 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
               >
                 <span class="pl-2">Jenis Properti</span>
 
@@ -747,7 +747,7 @@
             <div class="text-left">
               <button
                 id="btnJenisSurat"
-                class="inline-flex justify-between items-center pl-1 w-28 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
+                class="inline-flex justify-center items-center pl-1 w-28 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
               >
                 <span class="pl-2">Jenis Surat</span>
 
@@ -826,7 +826,7 @@
             <div class="text-left">
               <button
                 id="btnJscore"
-                class="inline-flex justify-between items-center pl-1 w-28 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
+                class="inline-flex justify-center items-center pl-1 w-28 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200"
               >
                 <span class="pl-2">JScore</span>
 
@@ -1151,17 +1151,15 @@
               data-tooltip-placement="right"
             >
               <div
-                class="flex flex-col menus p-3 hover:bg-slate-200 hover:rounded-lg"
+                id="MenuSatuTab"
+                data-tabs-target="#MenuSatuContent"
+                type="button"
+                role="tab"
+                aria-controls="MenuSatuContent"
+                aria-selected="true"
+                class="flex flex-col menus p-3 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
               >
-                <div
-                  class="w-5 h-5 flex justify-center items-center cursor-pointer relative"
-                  id="MenuSatuTab"
-                  data-tabs-target="#MenuSatuContent"
-                  type="button"
-                  role="tab"
-                  aria-controls="MenuSatuContent"
-                  aria-selected="true"
-                >
+                <div class="w-5 h-5 flex justify-center items-center relative">
                   <img
                     class="menu-icon"
                     data-menu="1"
@@ -1188,17 +1186,15 @@
               data-tooltip-placement="right"
             >
               <div
-                class="flex flex-col menus p-3 hover:bg-slate-200 hover:rounded-lg"
+                id="MenuDuaTab"
+                data-tabs-target="#MenuDuaContent"
+                type="button"
+                role="tab"
+                aria-controls="MenuDuaContent"
+                aria-selected="false"
+                class="flex flex-col menus p-3 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
               >
-                <div
-                  class="w-5 h-5 flex justify-center items-center cursor-pointer relative"
-                  id="MenuDuaTab"
-                  data-tabs-target="#MenuDuaContent"
-                  type="button"
-                  role="tab"
-                  aria-controls="MenuDuaContent"
-                  aria-selected="false"
-                >
+                <div class="w-5 h-5 flex justify-center items-center relative">
                   <img
                     class="menu-icon"
                     data-menu="2"
@@ -1223,17 +1219,15 @@
               data-tooltip-placement="right"
             >
               <div
-                class="flex flex-col menus p-3 hover:bg-slate-200 hover:rounded-lg"
+                id="MenuTigaTab"
+                data-tabs-target="#MenuTigaContent"
+                type="button"
+                role="tab"
+                aria-controls="MenuTigaContent"
+                aria-selected="false"
+                class="flex flex-col menus p-3 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
               >
-                <div
-                  class="w-5 h-5 flex justify-center items-center cursor-pointer relative"
-                  id="MenuTigaTab"
-                  data-tabs-target="#MenuTigaContent"
-                  type="button"
-                  role="tab"
-                  aria-controls="MenuTigaContent"
-                  aria-selected="false"
-                >
+                <div class="w-5 h-5 flex justify-center items-center relative">
                   <img
                     class="menu-icon"
                     data-menu="3"
@@ -1259,17 +1253,15 @@
               data-tooltip-placement="right"
             >
               <div
-                class="flex flex-col menus p-3 hover:bg-slate-200 hover:rounded-lg"
+                id="MenuEmpatTab"
+                data-tabs-target="#MenuEmpatContent"
+                type="button"
+                role="tab"
+                aria-controls="MenuEmpatContent"
+                aria-selected="false"
+                class="flex flex-col menus p-3 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
               >
-                <div
-                  class="w-5 h-5 flex justify-center items-center cursor-pointer relative"
-                  id="MenuEmpatTab"
-                  data-tabs-target="#MenuEmpatContent"
-                  type="button"
-                  role="tab"
-                  aria-controls="MenuEmpatContent"
-                  aria-selected="false"
-                >
+                <div class="w-5 h-5 flex justify-center items-center relative">
                   <img
                     class="menu-icon"
                     data-menu="4"
@@ -1295,17 +1287,15 @@
               data-tooltip-placement="right"
             >
               <div
-                class="flex flex-col menus p-3 hover:bg-slate-200 hover:rounded-lg"
+                id="MenuLimaTab"
+                data-tabs-target="#MenuLimaContent"
+                type="button"
+                role="tab"
+                aria-controls="MenuLimaContent"
+                aria-selected="false"
+                class="flex flex-col menus p-3 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
               >
-                <div
-                  class="w-7 h-7 flex justify-center items-center cursor-pointer relative"
-                  id="MenuLimaTab"
-                  data-tabs-target="#MenuLimaContent"
-                  type="button"
-                  role="tab"
-                  aria-controls="MenuLimaContent"
-                  aria-selected="false"
-                >
+                <div class="w-7 h-7 flex justify-center items-center relative">
                   <img
                     class="menu-icon"
                     data-menu="5"
@@ -1376,7 +1366,7 @@
                       <div class="relative flex flex-row">
                         <div class="flex items-center mr-2">
                           <img
-                            class="w-7 h-7 object-contain"
+                            class="w-7 h-7 object-contain cursor-pointer"
                             src="./src/images/list.png"
                             alt=""
                           />
@@ -1449,7 +1439,7 @@
                 </div>
 
                 <!--  Konten Card Info -->
-                <div class="h-full card-info px-3">
+                <div class="h-full card-info px-3 border border-purple-500">
                   <div class="grid grid-cols-2 gap-2">
                     <!-- Card 1 -->
                     <div class="w-full h-full">
@@ -5780,14 +5770,19 @@
             role="tabpanel"
             aria-labelledby="MenuEmpatTab"
           >
-            <div class="flex h-[78vh] items-center">
-              <h3 class="mx-auto">
-                <img
-                  class="w-32 h-32 object-cover"
-                  src="./src/images/road-work.png"
-                  alt=""
-                />
-              </h3>
+            <!-- Agen -->
+            <div class="px-3 pt-2 h-full">
+              <div class="font-semibold text-xl">Agen</div>
+
+              <div class="flex h-[78vh] items-center">
+                <h3 class="mx-auto">
+                  <img
+                    class="w-32 h-32 object-cover"
+                    src="./src/images/road-work.png"
+                    alt=""
+                  />
+                </h3>
+              </div>
             </div>
           </div>
 
@@ -5798,14 +5793,19 @@
             role="tabpanel"
             aria-labelledby="MenuLimaTab"
           >
-            <div class="flex h-[78vh] items-center">
-              <h3 class="mx-auto">
-                <img
-                  class="w-32 h-32 object-cover"
-                  src="./src/images/road-work.png"
-                  alt=""
-                />
-              </h3>
+            <!-- Estimasi Harga -->
+            <div class="px-3 pt-2 h-full">
+              <div class="font-semibold text-xl">Estimasi Harga</div>
+
+              <div class="flex h-[78vh] items-center">
+                <h3 class="mx-auto">
+                  <img
+                    class="w-32 h-32 object-cover"
+                    src="./src/images/road-work.png"
+                    alt=""
+                  />
+                </h3>
+              </div>
             </div>
           </div>
 
@@ -5840,6 +5840,43 @@
   <!-- Your Custom JS -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      // Fungsi untuk menyembunyikan semua konten dropdown
+      function hideAllContent() {
+        kontenBtnHarga.classList.add("hidden");
+        kontenBtnKamar.classList.add("hidden");
+        kontenBtnPenjual.classList.add("hidden");
+        kontenBtnJenisProperti.classList.add("hidden");
+        kontenBtnJenisSurat.classList.add("hidden");
+        kontenBtnJscore.classList.add("hidden");
+
+        arrowIconHarga.classList.remove("rotate-180");
+        arrowIconKamar.classList.remove("rotate-180");
+        arrowIconPenjual.classList.remove("rotate-180");
+        arrowIconJenisProperti.classList.remove("rotate-180");
+        arrowIconJenisSurat.classList.remove("rotate-180");
+        arrowIconJscore.classList.remove("rotate-180");
+      }
+
+      // Event listener untuk menghandle klik di luar konten
+      document.addEventListener("click", function (e) {
+        if (
+          !btnHarga.contains(e.target) &&
+          !kontenBtnHarga.contains(e.target) &&
+          !btnKamar.contains(e.target) &&
+          !kontenBtnKamar.contains(e.target) &&
+          !btnPenjual.contains(e.target) &&
+          !kontenBtnPenjual.contains(e.target) &&
+          !btnJenisProperti.contains(e.target) &&
+          !kontenBtnJenisProperti.contains(e.target) &&
+          !btnJenisSurat.contains(e.target) &&
+          !kontenBtnJenisSurat.contains(e.target) &&
+          !btnJscore.contains(e.target) &&
+          !kontenBtnJscore.contains(e.target)
+        ) {
+          hideAllContent();
+        }
+      });
+
       // Untuk Harga
       const btnHarga = document.getElementById("btnHarga");
       const kontenBtnHarga = document.getElementById("kontenBtnHarga");
@@ -5918,6 +5955,7 @@
           kontenBtnKamar.classList.add("hidden");
           kontenBtnJenisProperti.classList.add("hidden");
           kontenBtnJenisSurat.classList.add("hidden");
+          kontenBtnJscore.classList.add("hidden");
           arrowIconHarga.classList.remove("rotate-180");
         }
       });
@@ -5931,7 +5969,7 @@
           kontenBtnKamar.classList.add("hidden");
           kontenBtnPenjual.classList.add("hidden");
           kontenBtnJenisSurat.classList.add("hidden");
-
+          kontenBtnJscore.classList.add("hidden");
           arrowIconHarga.classList.remove("rotate-180");
         }
       });
@@ -5945,6 +5983,7 @@
           kontenBtnKamar.classList.add("hidden");
           kontenBtnPenjual.classList.add("hidden");
           kontenBtnJenisProperti.classList.add("hidden");
+          kontenBtnJscore.classList.add("hidden");
           arrowIconHarga.classList.remove("rotate-180");
         }
       });

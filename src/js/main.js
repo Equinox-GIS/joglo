@@ -822,12 +822,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function disable() {
     Object.values(elements).forEach((el) => {
       el.disabled = true;
-      el.classList.add("cursor-not-allowed", "bg-gray-200", "text-gray-500");
+      el.classList.add("bg-gray-200", "text-gray-500");
       el.classList.remove("bg-white");
     });
     Object.values(element_button).forEach((el) => {
       el.disabled = true;
-      el.classList.add("cursor-not-allowed", "bg-gray-200", "text-gray-500");
+      el.classList.add("bg-gray-200", "text-gray-500");
       el.classList.remove("bg-blue-500", "text-white", "active_btn_search");
     });
   }
@@ -836,11 +836,11 @@ document.addEventListener("DOMContentLoaded", function () {
     Object.values(elements).forEach((el) => {
       el.disabled = false;
       el.classList.add("bg-white");
-      el.classList.remove("cursor-not-allowed", "bg-gray-200", "text-gray-500");
+      el.classList.remove("bg-gray-200", "text-gray-500");
     });
     Object.values(element_button).forEach((el) => {
       el.disabled = false;
-      el.classList.remove("cursor-not-allowed", "bg-gray-200", "text-gray-500");
+      el.classList.remove("bg-gray-200", "text-gray-500");
       el.classList.add("active_btn_search");
     });
   }
@@ -907,8 +907,8 @@ document.addEventListener("DOMContentLoaded", () => {
     maxInput.disabled = true;
     minInput.classList.remove("bg-transparent");
     maxInput.classList.remove("bg-transparent");
-    minInput.classList.add("bg-gray-200", "cursor-not-allowed");
-    maxInput.classList.add("bg-gray-200", "cursor-not-allowed");
+    minInput.classList.add("bg-gray-200");
+    maxInput.classList.add("bg-gray-200");
   };
 
   buttons.forEach((btn) => {
