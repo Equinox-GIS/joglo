@@ -339,28 +339,32 @@
                 <div class="text-xs pt-3 pb-2 grid grid-cols-4 items-center">
                   <div>
                     <span
-                      class="border-[1px] border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                      id="btn1M"
+                      class="btn-price border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
                     >
                       < Rp 1M</span
                     >
                   </div>
                   <div>
                     <span
-                      class="border-[1px] border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                      id="btn2M"
+                      class="border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
                     >
                       Rp 1-2M</span
                     >
                   </div>
                   <div>
                     <span
-                      class="border-[1px] border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                      id="btn3M"
+                      class="border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
                     >
                       Rp 2-3M</span
                     >
                   </div>
                   <div>
                     <span
-                      class="border-[1px] border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                      id="btnMore3M"
+                      class="border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
                     >
                       > Rp 3M</span
                     >
@@ -373,11 +377,9 @@
                   </div>
                   <div>
                     <input
+                      id="minInput"
                       type="number"
-                      name="minimum"
-                      id="minimum"
-                      class="block p-0 w-full text-xs text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300"
-                      placeholder=""
+                      class="min-input block p-0 w-full text-xs text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300"
                       required
                     />
                   </div>
@@ -390,11 +392,9 @@
                   </div>
                   <div>
                     <input
+                      id="maxInput"
                       type="number"
-                      name="maksimum"
-                      id="maksimum"
-                      class="block p-0 w-full text-xs text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300 peer"
-                      placeholder=" "
+                      class="max-input block p-0 w-full text-xs text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300 peer"
                       required
                     />
                   </div>
@@ -1158,7 +1158,7 @@
                   type="button"
                   role="tab"
                   aria-controls="MenuSatuContent"
-                  aria-selected="true"
+                  aria-selected="false"
                 >
                   <img
                     class="menu-icon"
@@ -1226,7 +1226,7 @@
                   type="button"
                   role="tab"
                   aria-controls="MenuTigaContent"
-                  aria-selected="false"
+                  aria-selected="true"
                 >
                   <img
                     class="menu-icon"
@@ -3649,7 +3649,7 @@
                 class="flex flex-col card-disukai h-[83vh] overflow-y-auto hide-scrollbar"
               >
                 <!-- Judul Card Info -->
-                <div class="px-3 pt-2">
+                <div class="px-3 pt-2 border">
                   <div class="font-semibold text-xl">Rumah Disuka</div>
                   <div class="flex flex-row items-stretch justify-between mt-1">
                     <div class="font-normal text-sm self-end">
@@ -3661,15 +3661,18 @@
                         <div class="flex items-center">
                           <div class="relative inline-block text-left">
                             <button
-                              id="dropdown-button"
+                              id="dropdown-disukai-button"
                               class="inline-flex justify-between items-center pl-1 w-40 h-8 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-0"
                             >
-                              <span id="selected-item" class="pl-2"
-                                >Terbaru</span
+                              <span
+                                id="dropdown-disukai-selected-item"
+                                class="pl-2"
                               >
+                                Terbaru
+                              </span>
 
                               <svg
-                                id="arrow-icon"
+                                id="dropdown-disukai-arrow-icon"
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="w-5 h-5 mr-2 transition-transform duration-200 transform"
                                 viewBox="0 0 20 20"
@@ -3684,31 +3687,28 @@
                             </button>
 
                             <div
-                              id="dropdown-menu"
+                              id="dropdown-disukai-menu"
                               class="hidden origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
                             >
                               <div
                                 class="py-2 p-2"
                                 role="menu"
                                 aria-orientation="vertical"
-                                aria-labelledby="dropdown-button"
+                                aria-labelledby="dropdown-disukai-button"
                               >
                                 <a
-                                  id="item-harga-tertinggi"
                                   class="flex block rounded-md px-1 py-1 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
                                   role="menuitem"
                                 >
                                   Harga Tertinggi
                                 </a>
                                 <a
-                                  id="item-harga-terendah"
                                   class="flex block rounded-md px-1 py-1 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
                                   role="menuitem"
                                 >
                                   Harga Terendah
                                 </a>
                                 <a
-                                  id="item-populer"
                                   class="flex block rounded-md px-1 py-1 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
                                   role="menuitem"
                                 >
@@ -3725,16 +3725,14 @@
                 </div>
 
                 <!--  Konten Disukai -->
-                <div class="h-full card-info px-3">
+                <div class="h-full card-info px-3 border border-green-500">
                   <div class="grid grid-cols-2 gap-2">
                     <!-- Card 1 -->
                     <div class="w-full h-full border border-red-500">
                       <div
                         class="flex flex-col cursor-pointer"
-                        data-card-map="1534"
-                        data-active-tab="1"
+                        data-active-tab="2"
                         onclick="showCardInfoDetail(this)"
-                        id="card-info-detail"
                       >
                         <div class="w-full relative">
                           <div class="slider-disukai w-full h-full">
@@ -3810,111 +3808,25 @@
                         </div>
                       </div>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="w-full h-full">
-                      <div
-                        class="flex flex-col cursor-pointer"
-                        data-card-map="1534"
-                        data-active-tab="1"
-                        onclick="showCardInfoDetail(this)"
-                        id="card-info-detail"
-                      >
-                        <div class="w-full relative">
-                          <div class="slider-disukai w-full h-full">
-                            <div class="relative">
-                              <img
-                                class="w-full h-full object-cover rounded-t-lg"
-                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
-                                alt=""
-                              />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
-                              </div>
-                            </div>
-                            <div class="relative">
-                              <img
-                                class="w-full h-full object-cover rounded-t-lg"
-                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
-                                alt=""
-                              />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg ingfokan"
-                          style="user-select: none"
-                        >
-                          <a href="#">
-                            <div class="inline-flex items-center">
-                              <h5
-                                class="text-xl font-bold tracking-tight text-black"
-                              >
-                                Rp 1.300.000.000
-                              </h5>
-                              <img
-                                class="ml-3 -mt-1 w-5 h-5 object-cover"
-                                src="./src/images/heart-on.png"
-                                alt=""
-                              />
-                            </div>
-                          </a>
-
-                          <div class="flex flex-col mb-2 font-normal">
-                            <div
-                              class="flex items-center text-[11px] text-gray-700"
-                            >
-                              <span class="mr-2">LT 80 m² |</span>
-                              <span class="mr-2">LB 276 m² |</span>
-                              <span class="mr-2">2 KT |</span>
-                              <span class="mr-2">5 KM</span>
-                            </div>
-                            <div class="text-xs pt-1 text-gray-700">
-                              Sunter, Tanjung Priok, Jakarta Utara
-                            </div>
-                            <div class="text-[9px] pt-1 text-gray-400">
-                              ERA JAKARTA
-                            </div>
-                          </div>
-
-                          <div class="mb-3 font-normal hidden">
-                            <p class="text-xs text-gray-700">
-                              LT 140 m² | LB 392 m² | 3 KT | 2 KM
-                            </p>
-                            <p class="text-xs text-gray-700 py-2">
-                              Setiabudi, Karet Kuningan, Jakarta Selatan
-                            </p>
-                            <p class="text-[10px] text-gray-400">
-                              ERA JAKARTA ss
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!--  -->
                   </div>
                 </div>
-
-                <!--  -->
               </div>
               <!-- Disukai Detail Card -->
 
-              <!-- Bagan Card Info Detail -->
-              <div class="flex flex-col w-full card-info-detail hidden">
+              <!-- Bagan Card Info Disukai -->
+              <div
+                class="flex flex-col w-full card-disukai-detail hidden border border-yellow-500"
+              >
                 <!-- Judul Card Info Detail -->
                 <div class="px-3 pt-2">
                   <div class="w-full flex justify-between items-center">
                     <div class="text-md font-bold flex-shrink-0">
-                      Rumah Impian Strategis Dijual! Segera Miliki Hunian
-                      Eksklusif di Lokasi Prime!
+                      Rumah Disukai
                     </div>
                     <div class="flex items-start">
                       <img
                         class="w-10 h-10 object-cover close-tab-detail cursor-pointer"
-                        onclick="closeTab()"
+                        onclick="closeTabDisukai()"
                         src="./src/images/close_tab.png"
                         alt=""
                       />

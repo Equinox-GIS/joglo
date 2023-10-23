@@ -328,6 +328,50 @@ window.addEventListener("click", (event) => {
   }
 });
 
+// Dropdown disukai
+
+// Function Dropdown Filter
+const dropdownButtonDisukai = document.getElementById(
+  "dropdown-disukai-button"
+);
+const dropdownMenuDisukai = document.getElementById("dropdown-disukai-menu");
+const arrowIconDisukai = document.getElementById("dropdown-disukai-arrow-icon");
+const selectedItemDisukai = document.getElementById(
+  "dropdown-disukai-selected-item"
+);
+const itemsDisukai = dropdownMenuDisukai.querySelectorAll('[role="menuitem"]');
+let isDropdownDisukaiOpen = false;
+
+function toggleDropdown() {
+  isDropdownDisukaiOpen = !isDropdownDisukaiOpen;
+  dropdownMenuDisukai.classList.toggle("hidden", !isDropdownDisukaiOpen);
+  arrowIconDisukai.style.transform = isDropdownDisukaiOpen
+    ? "rotate(180deg)"
+    : "rotate(0deg)";
+}
+
+itemsDisukai.forEach((item) => {
+  item.addEventListener("click", () => {
+    selectedItemDisukai.textContent = item.textContent.trim();
+    isDropdownDisukaiOpen = false;
+    dropdownMenuDisukai.classList.add("hidden");
+    arrowIconDisukai.style.transform = "rotate(0deg)";
+  });
+});
+
+dropdownButtonDisukai.addEventListener("click", toggleDropdown);
+
+window.addEventListener("click", (event) => {
+  if (
+    !dropdownButtonDisukai.contains(event.target) &&
+    !dropdownMenuDisukai.contains(event.target)
+  ) {
+    isDropdownDisukaiOpen = false;
+    dropdownMenuDisukai.classList.add("hidden");
+    arrowIconDisukai.style.transform = "rotate(0deg)";
+  }
+});
+
 // Menu Tab Saran Prasarana
 
 // Menyimpan elemen yang akan diubah ke dalam variabel
@@ -495,10 +539,13 @@ var myInvestmentIndexChart = new Chart(ctx3, {
 // slick semua
 
 // Hide show card active
-
 function showCardInfoDetail(element) {
   const cardInfo = document.querySelector(".card-info");
+  const cardDisukai = document.querySelector(".card-disukai");
+
   const cardInfoDetail = document.querySelector(".card-info-detail");
+  const cardDetailDisukai = document.querySelector(".card-disukai-detail");
+
   const cardInfoDetailDua = document.querySelector(".card-info-judul");
 
   if (element.getAttribute("data-active-tab") === "1") {
@@ -521,7 +568,30 @@ function showCardInfoDetail(element) {
 
     // Menghancurkan Slick slider
     destroyCardInfo();
-  } else {
+  }
+  // Disukai
+  else if (element.getAttribute("data-active-tab") === "2") {
+    cardDisukai.classList.add("hidden");
+    cardDetailDisukai.classList.remove("hidden");
+
+    $(".slider-disukai").slick({
+      infinite: false,
+
+      prevArrow:
+        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</button>",
+      nextArrow:
+        '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</button>",
+    });
+
+    // Menghancurkan Slick slider
+    destroyCardInfo();
+  }
+  // Lainnya
+  else {
     cardInfo.classList.remove("hidden");
     cardInfoDetail.classList.add("hidden");
     cardInfoDetailDua.classList.remove("hidden");
@@ -555,6 +625,21 @@ function closeTab() {
   cardInfoDetailDua.classList.remove("hidden");
 }
 
+function closeTabDisukai() {
+  const cardDisukai = document.querySelector(".card-disukai");
+  const cardDetailDisukai = document.querySelector(".card-disukai-detail");
+
+  // Menginisialisasi ulang Slick slider
+  initSlickCardInfo();
+
+  if ($(".slider-disukai").hasClass("slick-initialized")) {
+    $(".slider-disukai").slick("unslick");
+  }
+
+  cardDisukai.classList.remove("hidden");
+  cardDetailDisukai.classList.add("hidden");
+}
+
 function initSlickCardInfo() {
   $(".slider-card-info")
     .on("init", function (event, slick) {
@@ -570,11 +655,6 @@ function initSlickCardInfo() {
       arrows: true,
       pauseOnHover: false,
       swipe: false,
-      // prevArrow:
-      //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
-      // nextArrow:
-      //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
-
       prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
         '<div class="img-wrapper">' +
         '<img style="
@@ -623,64 +703,59 @@ $(document).ready(function () {
   // initSlickDisukai();
 });
 
-// Function untuk pindah Menu Navigation
-document.addEventListener("DOMContentLoaded", function () {
-  // Function Slick
+// Function Slick
 
-  if ($(".slider-disukai").hasClass("slick-initialized")) {
-    $(".slider-disukai").slick("unslick");
-  }
+if ($(".slider-disukai").hasClass("slick-initialized")) {
+  $(".slider-disukai").slick("unslick");
+}
 
-  $(".slider-disukai").slick({
-    dots: true,
-    infinite: false,
-    arrows: true,
-    pauseOnHover: false,
-    swipe: false,
-    // prevArrow:
-    //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
-    // nextArrow:
-    //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
-
-    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+$(".slider-disukai").slick({
+  dots: true,
+  infinite: false,
+  arrows: true,
+  pauseOnHover: false,
+  swipe: false,
+  prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
         '<div class="img-wrapper">' +
         '<img style="
         margin-right: 1px;
         " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
         "</div>" +
         "</button>`,
-    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+  nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
         '<div class="img-wrapper">' +
         '<img style="
         margin-left: 1px;
       " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
         "</div>" +
         "</button>`,
+});
+
+function initSlickDisukai() {
+  $(".slider-disukai").slick({
+    infinite: false,
+
+    prevArrow:
+      '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+      '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+      "</button>",
+    nextArrow:
+      '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+      '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+      "</button>",
   });
+}
 
-  function initSlickDisukai() {
-    $(".slider-disukai").slick({
-      infinite: false,
-
-      prevArrow:
-        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</button>",
-      nextArrow:
-        '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</button>",
-    });
+function destroyDisukai() {
+  if ($(".slider-disukai").hasClass("slick-initialized")) {
+    $(".slider-disukai").slick("unslick");
   }
+}
 
-  function destroyDisukai() {
-    if ($(".slider-disukai").hasClass("slick-initialized")) {
-      $(".slider-disukai").slick("unslick");
-    }
-  }
+// End Function Slick
 
-  // End Function Slick
-
+// Function untuk pindah Menu Navigation
+document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll('#kontenMenuTab [role="tab"]');
   const InputanSearch = document.querySelector("#InputanSearch");
   const IconInputanSearch = document.querySelector("#IconInputanSearch");
@@ -696,7 +771,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnJenisRumah = document.querySelector("#btnJenisSurat");
   const btnJscore = document.querySelector("#btnJscore");
 
-  // Non-aktifkan input dan button saat halaman pertama kali dimuat
   InputanSearch.disabled = true;
   searchButton.disabled = true;
   btnTerapkan.disabled = true;
@@ -713,71 +787,34 @@ document.addEventListener("DOMContentLoaded", function () {
   btnJenisProperti.classList.add("cursor-not-allowed");
   btnJenisRumah.classList.add("cursor-not-allowed");
   btnJscore.classList.add("cursor-not-allowed");
-  // InputanSearch.style.filter = "blur(1px)";
 
-  // Fungsi untuk mengaktifkan tab
-  function activateTab(tab) {
-    tabs.forEach((t) => {
-      // initSlickDisukai();
+  function toggleTab(tab) {
+    const parentDiv = tab.closest(".menus");
+    const contentDiv = document.getElementById(
+      tab.getAttribute("aria-controls")
+    );
 
-      // if ($(".slider-disukai").hasClass("slick-initialized")) {
-      //   $(".slider-disukai").slick("unslick");
-      // }
+    if (!parentDiv || !contentDiv) {
+      console.warn("Element tidak ditemukan");
+      return;
+    }
 
-      if ($(".slider-disukai").hasClass("slick-initialized")) {
-        $(".slider-disukai").slick("unslick");
-      }
-
-      $(".slider-disukai").slick({
-        dots: true,
-        infinite: false,
-        arrows: true,
-        pauseOnHover: false,
-        swipe: false,
-        // prevArrow:
-        //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
-        // nextArrow:
-        //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
-
-        prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-right: 1px;
-        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</div>" +
-        "</button>`,
-        nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-left: 1px;
-      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</div>" +
-        "</button>`,
+    if (parentDiv.classList.contains("bg-aktif-menu")) {
+      parentDiv.classList.remove("bg-aktif-menu");
+      contentDiv.classList.add("hidden");
+      disableInputAndButton();
+    } else {
+      tabs.forEach((t) => {
+        t.closest(".menus").classList.remove("bg-aktif-menu");
+        document
+          .getElementById(t.getAttribute("aria-controls"))
+          .classList.add("hidden");
       });
 
-      const parentDiv = t.closest(".menus");
-      const contentDiv = document.getElementById(
-        t.getAttribute("aria-controls")
-      );
-
-      if (!parentDiv || !contentDiv) {
-        console.warn("Element tidak ditemukan");
-        return;
-      }
-
-      if (t === tab) {
-        parentDiv.classList.add("bg-aktif-menu");
-        contentDiv.classList.remove("hidden");
-
-        // Mengaktifkan input dan button saat tab diaktifkan
-        enableInputAndButton();
-      } else {
-        parentDiv.classList.remove("bg-aktif-menu");
-        contentDiv.classList.add("hidden");
-        // Menonaktifkan input dan button saat tab tidak aktif
-        disableInputAndButton();
-      }
-    });
+      parentDiv.classList.add("bg-aktif-menu");
+      contentDiv.classList.remove("hidden");
+      enableInputAndButton();
+    }
   }
 
   function enableInputAndButton() {
@@ -791,11 +828,6 @@ document.addEventListener("DOMContentLoaded", function () {
       arrows: true,
       pauseOnHover: false,
       swipe: false,
-      // prevArrow:
-      //   '<button type="button" class="slick-prev" onclick="event.stopPropagation();">Previous</button>',
-      // nextArrow:
-      //   '<button type="button" class="slick-next" onclick="event.stopPropagation();">Next</button>',
-
       prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
         '<div class="img-wrapper">' +
         '<img style="
@@ -914,13 +946,10 @@ document.addEventListener("DOMContentLoaded", function () {
     searchButton.disabled = false;
   }
 
-  // Menambahkan event listener untuk setiap tab
   tabs.forEach((tab) => {
-    tab.addEventListener("click", () => activateTab(tab));
+    tab.addEventListener("click", () => toggleTab(tab));
   });
 
-  // kondisi menu tab card-detail
-  // Deklarasi variabel - sarpas
   var ibadahTab = document.getElementById("sarprasIbadahTab");
   var miniMarketTab = document.getElementById("sarprasMiniMarketTab");
   var graduationTab = document.getElementById("sarprasSekolahTab");
@@ -1053,6 +1082,64 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImages("hargaWajar");
   });
   // Function Untuk Search, Harga, Kamar, Terapkan dan Garis Batas
+});
 
-  //
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = [
+    document.getElementById("btn1M"),
+    document.getElementById("btn2M"),
+    document.getElementById("btn3M"),
+    document.getElementById("btnMore3M"),
+  ];
+
+  const minInput = document.getElementById("minInput");
+  const maxInput = document.getElementById("maxInput");
+  const priceButtons = document.querySelectorAll(".btn-price");
+
+  const deactivateButtons = () => {
+    buttons.forEach((button) =>
+      button.classList.remove("bg-blue-500", "text-white", "border-white")
+    );
+  };
+
+  const toggleButton = (btn) => {
+    deactivateButtons(); // Deactivate all buttons first
+
+    // Now, activate the clicked button
+    btn.classList.add("bg-blue-500", "text-white", "border-white");
+
+    // Disable the input boxes
+    minInput.disabled = true;
+    maxInput.disabled = true;
+    minInput.classList.remove("bg-transparent");
+    maxInput.classList.remove("bg-transparent");
+    minInput.classList.add("bg-gray-200", "cursor-not-allowed");
+    maxInput.classList.add("bg-gray-200", "cursor-not-allowed");
+  };
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!btn.classList.contains("bg-blue-500")) {
+        toggleButton(btn);
+      }
+    });
+  });
+
+  minInput.addEventListener("input", () => {
+    priceButtons.forEach(
+      (button) => (button.disabled = !!minInput.value || !!maxInput.value)
+    );
+    if (minInput.value || maxInput.value) {
+      deactivateButtons();
+    }
+  });
+
+  maxInput.addEventListener("input", () => {
+    priceButtons.forEach(
+      (button) => (button.disabled = !!minInput.value || !!maxInput.value)
+    );
+    if (minInput.value || maxInput.value) {
+      deactivateButtons();
+    }
+  });
 });
