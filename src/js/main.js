@@ -87,11 +87,41 @@ if (controlGroup) {
   layerButton.innerHTML =
     '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Layer"></span>';
 
+  // Create dropdown
+  var dropdown = document.createElement("div");
+  dropdown.id = "dropdownDelay";
+  dropdown.className =
+    "z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 absolute";
+  dropdown.style.right = "100%"; // mengatur posisi ke kanan
+  dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
+  dropdown.style.marginTop = "-5rem";
+  dropdown.innerHTML = `
+    <div class="">
+    <div class="flex items-center mb-4 px-2 pt-3">
+        <input id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 ">
+        <label for="radio-default" class="ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">Default</label>
+    </div>
+    <div class="flex items-center mb-4 px-2">
+        <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 ">
+        <label for="radio-satellite" class="ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">Satellite</label>
+    </div>
+    <div class="flex items-center px-2 pb-3">
+        <input id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 ">
+        <label for="radio-street" class="ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">Street</label>
+    </div>
+    <div>`;
+
   layerButton.addEventListener("click", function () {
-    alert("Layer button clicked!");
+    // Show or hide dropdown
+    if (dropdown.classList.contains("hidden")) {
+      dropdown.classList.remove("hidden");
+    } else {
+      dropdown.classList.add("hidden");
+    }
   });
 
   controlGroup.appendChild(layerButton);
+  controlGroup.appendChild(dropdown); // Add dropdown to control group
   controlGroup.appendChild(myLocationButton);
   controlGroup.appendChild(zoomInButton);
   controlGroup.appendChild(zoomOutButton);
