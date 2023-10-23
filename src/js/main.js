@@ -760,10 +760,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const elements = {
     InputanSearch: document.querySelector("#InputanSearch"),
     IconInputanSearch: document.querySelector("#IconInputanSearch"),
-    searchButton: document.querySelector("#btnSearch"),
-    btnTerapkan: document.querySelector("#btnTerapkan"),
     garisBatas: document.querySelector("#garisBatas"),
-    // svgIcon: document.querySelector("#IconInputanSearch svg"),
     btnHarga: document.querySelector("#btnHarga"),
     btnKamar: document.querySelector("#btnKamar"),
     btnPenjual: document.querySelector("#btnPenjual"),
@@ -782,10 +779,18 @@ document.addEventListener("DOMContentLoaded", function () {
     ArrowIconJscore: document.querySelector("#arrow-icon-jscore"),
   };
 
+  const element_button = {
+    searchButton: document.querySelector("#btnSearch"),
+    btnTerapkan: document.querySelector("#btnTerapkan"),
+  };
+
   function disable() {
     Object.values(elements).forEach((el) => {
       el.disabled = true;
-      el.classList.remove("text-white");
+      el.classList.add("cursor-not-allowed", "bg-gray-200", "text-gray-500");
+    });
+    Object.values(element_button).forEach((el) => {
+      el.disabled = true;
       el.classList.add("cursor-not-allowed", "bg-gray-200", "text-gray-500");
     });
   }
@@ -793,7 +798,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function enable() {
     Object.values(elements).forEach((el) => {
       el.disabled = false;
-      el.classList.add("text-white");
+      el.classList.add("bg-white");
+      el.classList.remove("cursor-not-allowed", "bg-gray-200", "text-gray-500");
+    });
+    Object.values(element_button).forEach((el) => {
+      el.disabled = false;
+      el.classList.add("bg-blue-500", "text-white");
       el.classList.remove("cursor-not-allowed", "bg-gray-200", "text-gray-500");
     });
   }
