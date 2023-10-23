@@ -788,10 +788,12 @@ document.addEventListener("DOMContentLoaded", function () {
     Object.values(elements).forEach((el) => {
       el.disabled = true;
       el.classList.add("cursor-not-allowed", "bg-gray-200", "text-gray-500");
+      el.classList.remove("bg-white");
     });
     Object.values(element_button).forEach((el) => {
       el.disabled = true;
       el.classList.add("cursor-not-allowed", "bg-gray-200", "text-gray-500");
+      el.classList.remove("bg-blue-500", "text-white");
     });
   }
 
