@@ -291,46 +291,51 @@ function changeTab(event) {
 }
 
 // Function Dropdown Filter
-const dropdownButton = document.getElementById("dropdown-button");
-const dropdownMenu = document.getElementById("dropdown-menu");
-const arrowIcon = document.getElementById("arrow-icon");
-const selectedItem = document.getElementById("selected-item");
-const items = dropdownMenu.querySelectorAll('[role="menuitem"]');
+
+// Function Dropdown Filter untuk Pencarian
+const dropdownButtonPencarian = document.getElementById(
+  "dropdown-button-pencarian"
+);
+const dropdownMenuPencarian = document.getElementById(
+  "dropdown-menu-pencarian"
+);
+const arrowIconPencarian = document.getElementById("arrow-icon-pencarian");
+const selectedItemPencarian = document.getElementById("selected-item");
+const itemsPencarian =
+  dropdownMenuPencarian.querySelectorAll('[role="menuitem"]');
 let isDropdownOpen = false;
 
-function toggleDropdown() {
+function toggleDropdownPencarian() {
   isDropdownOpen = !isDropdownOpen;
-  dropdownMenu.classList.toggle("hidden", !isDropdownOpen);
-  arrowIcon.style.transform = isDropdownOpen
+  dropdownMenuPencarian.classList.toggle("hidden", !isDropdownOpen);
+  arrowIconPencarian.style.transform = isDropdownOpen
     ? "rotate(180deg)"
     : "rotate(0deg)";
 }
 
-items.forEach((item) => {
+itemsPencarian.forEach((item) => {
   item.addEventListener("click", () => {
-    selectedItem.textContent = item.textContent.trim();
+    selectedItemPencarian.textContent = item.textContent.trim();
     isDropdownOpen = false;
-    dropdownMenu.classList.add("hidden");
-    arrowIcon.style.transform = "rotate(0deg)";
+    dropdownMenuPencarian.classList.add("hidden");
+    arrowIconPencarian.style.transform = "rotate(0deg)";
   });
 });
 
-dropdownButton.addEventListener("click", toggleDropdown);
+dropdownButtonPencarian.addEventListener("click", toggleDropdownPencarian);
 
 window.addEventListener("click", (event) => {
   if (
-    !dropdownButton.contains(event.target) &&
-    !dropdownMenu.contains(event.target)
+    !dropdownButtonPencarian.contains(event.target) &&
+    !dropdownMenuPencarian.contains(event.target)
   ) {
     isDropdownOpen = false;
-    dropdownMenu.classList.add("hidden");
-    arrowIcon.style.transform = "rotate(0deg)";
+    dropdownMenuPencarian.classList.add("hidden");
+    arrowIconPencarian.style.transform = "rotate(0deg)";
   }
 });
 
-// Dropdown disukai
-
-// Function Dropdown Filter
+// Function Dropdown Filter untuk Disukai
 const dropdownButtonDisukai = document.getElementById(
   "dropdown-disukai-button"
 );
@@ -342,7 +347,7 @@ const selectedItemDisukai = document.getElementById(
 const itemsDisukai = dropdownMenuDisukai.querySelectorAll('[role="menuitem"]');
 let isDropdownDisukaiOpen = false;
 
-function toggleDropdown() {
+function toggleDropdownDisukai() {
   isDropdownDisukaiOpen = !isDropdownDisukaiOpen;
   dropdownMenuDisukai.classList.toggle("hidden", !isDropdownDisukaiOpen);
   arrowIconDisukai.style.transform = isDropdownDisukaiOpen
@@ -359,7 +364,7 @@ itemsDisukai.forEach((item) => {
   });
 });
 
-dropdownButtonDisukai.addEventListener("click", toggleDropdown);
+dropdownButtonDisukai.addEventListener("click", toggleDropdownDisukai);
 
 window.addEventListener("click", (event) => {
   if (
@@ -793,7 +798,7 @@ document.addEventListener("DOMContentLoaded", function () {
     Object.values(element_button).forEach((el) => {
       el.disabled = true;
       el.classList.add("cursor-not-allowed", "bg-gray-200", "text-gray-500");
-      el.classList.remove("bg-blue-500", "text-white");
+      el.classList.remove("bg-blue-500", "text-white", "active_btn_search");
     });
   }
 
@@ -805,8 +810,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     Object.values(element_button).forEach((el) => {
       el.disabled = false;
-      el.classList.add("bg-blue-500", "text-white");
       el.classList.remove("cursor-not-allowed", "bg-gray-200", "text-gray-500");
+      el.classList.add("active_btn_search");
     });
   }
 
@@ -828,7 +833,11 @@ document.addEventListener("DOMContentLoaded", function () {
     contentDiv.classList.toggle("hidden", isActive);
     parentDiv.classList.toggle("bg-aktif-menu", !isActive);
 
-    isActive ? disable() : enable();
+    if (tab.id === "MenuSatuTab") {
+      enable();
+    } else {
+      disable();
+    }
   }
 
   tabs.forEach((tab) => {

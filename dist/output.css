@@ -2506,6 +2506,8 @@ input:checked + .toggle-bg {
 .active_btn_search {
   --tw-bg-opacity: 1;
   background-color: rgb(63 131 248 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:rounded-lg:hover {
