@@ -1313,6 +1313,10 @@ input:checked + .toggle-bg {
   height: 64.5vh;
 }
 
+.h-\[78vh\] {
+  height: 78vh;
+}
+
 .h-\[7vh\] {
   height: 7vh;
 }
@@ -1327,18 +1331,6 @@ input:checked + .toggle-bg {
 
 .h-full {
   height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.h-96 {
-  height: 24rem;
-}
-
-.h-\[78vh\] {
-  height: 78vh;
 }
 
 .min-h-\[180px\] {
