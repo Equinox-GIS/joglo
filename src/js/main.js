@@ -106,7 +106,7 @@ if (controlGroup) {
         <label for="radio-satellite" class="ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">Satellite</label>
     </div>
     <div class="flex items-center px-2 pb-3">
-        <input id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 ">
+        <input checked id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 ">
         <label for="radio-street" class="ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">Street</label>
     </div>
     <div>`;
