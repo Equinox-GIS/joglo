@@ -694,7 +694,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnPenjual = document.querySelector("#btnPenjual");
   const btnJenisProperti = document.querySelector("#btnJenisProperti");
   const btnJenisRumah = document.querySelector("#btnJenisSurat");
-  const btnJScore = document.querySelector("#btnJScore");
+  const btnJscore = document.querySelector("#btnJscore");
 
   // Non-aktifkan input dan button saat halaman pertama kali dimuat
   InputanSearch.disabled = true;
@@ -712,7 +712,7 @@ document.addEventListener("DOMContentLoaded", function () {
   btnPenjual.classList.add("cursor-not-allowed");
   btnJenisProperti.classList.add("cursor-not-allowed");
   btnJenisRumah.classList.add("cursor-not-allowed");
-  btnJScore.classList.add("cursor-not-allowed");
+  btnJscore.classList.add("cursor-not-allowed");
   // InputanSearch.style.filter = "blur(1px)";
 
   // Fungsi untuk mengaktifkan tab
@@ -897,13 +897,13 @@ document.addEventListener("DOMContentLoaded", function () {
     btnJenisRumah.classList.add("bg-white", "text-black");
 
     // JScore
-    btnJScore.classList.remove(
+    btnJscore.classList.remove(
       "cursor-not-allowed",
       "bg-gray-200",
       "text-gray-400"
     );
 
-    btnJScore.classList.add("bg-white", "text-black");
+    btnJscore.classList.add("bg-white", "text-black");
 
     // InputanSearch.style.filter = "unset";
   }
