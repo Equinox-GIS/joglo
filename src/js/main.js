@@ -598,162 +598,89 @@ var myInvestmentIndexChart = new Chart(ctx3, {
 });
 
 // slick semua
+function querySelector(selector) {
+  return document.querySelector(selector);
+}
 
-// Hide show card active
-function showCardInfoDetail(element) {
-  console.log(element);
-
-  const cardInfo = document.querySelector(".card-info");
-  const cardDisukai = document.querySelector(".card-disukai");
-
-  const cardInfoDetail = document.querySelector(".card-info-detail");
-  const cardDetailDisukai = document.querySelector(".card-disukai-detail");
-
-  const cardInfoDetailDua = document.querySelector(".card-info-judul");
-
-  if (element.getAttribute("data-active-tab") === "1") {
-    cardInfo.classList.add("hidden");
-    cardInfoDetail.classList.remove("hidden");
-    cardInfoDetailDua.classList.add("hidden");
-
-    $(".slider-card-info-detail").slick({
-      infinite: false,
-      prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-right: 1px;
-        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</div>" +
-        "</button>`,
-      nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-left: 1px;
-      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</div>" +
-        "</button>`,
-    });
-
-    // Menghancurkan Slick slider
-    destroyCardInfo();
+function initSlick(element, options) {
+  if (!$(element).hasClass("slick-initialized")) {
+    $(element).slick(options);
   }
-  // Disukai
-  else if (element.getAttribute("data-active-tab") === "2") {
-    cardDisukai.classList.add("hidden");
-    cardDetailDisukai.classList.remove("hidden");
+}
 
-    // Slick favorit
-    // initSlickFavorit();
-  }
-  // Lainnya
-  else {
-    cardInfo.classList.remove("hidden");
-    cardInfoDetail.classList.add("hidden");
-    cardInfoDetailDua.classList.remove("hidden");
-
-    // Menginisialisasi ulang Slick slider
-    initSlickCardInfo();
-
-    if ($(".slider-card-info-detail").hasClass("slick-initialized")) {
-      $(".slider-card-info-detail").slick("unslick");
-    }
+function destroySlick(element) {
+  if ($(element).hasClass("slick-initialized")) {
+    $(element).slick("unslick");
   }
 }
 
 function closeTab() {
-  const cardInfo = document.querySelector(".card-info");
-  const cardInfoDetail = document.querySelector(".card-info-detail");
-  const cardInfoDetailDua = document.querySelector(".card-info-judul");
-
-  // Menginisialisasi ulang Slick slider
-  initSlickCardInfo();
-
-  if ($(".slider-card-info-detail").hasClass("slick-initialized")) {
-    $(".slider-card-info-detail").slick("unslick");
-  }
+  const cardInfo = querySelector(".card-info");
+  const cardInfoDetail = querySelector(".card-info-detail");
+  const cardInfoDetailDua = querySelector(".card-info-judul");
 
   cardInfo.classList.remove("hidden");
   cardInfoDetail.classList.add("hidden");
   cardInfoDetailDua.classList.remove("hidden");
+
+  destroySlick(".slider-card-info-detail");
+  initSlickCardInfo();
 }
 
 function closeTabDisukai() {
-  const cardDisukai = document.querySelector(".card-disukai");
-  const cardDetailDisukai = document.querySelector(".card-disukai-detail");
-
-  // Menginisialisasi ulang Slick slider
-  initSlickCardInfo();
+  const cardDisukai = querySelector(".card-disukai");
+  const cardDetailDisukai = querySelector(".card-disukai-detail");
 
   cardDisukai.classList.remove("hidden");
   cardDetailDisukai.classList.add("hidden");
+
+  initSlickCardInfo();
+}
+
+function getSliderDefaultOptions() {
+  return {
+    dots: true,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="./src/images/prev.png" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="./src/images/next.png" alt="Next">
+                  </div>
+                </button>`,
+  };
 }
 
 function initSlickCardInfo() {
   $(".slider-card-info")
-    .on("init", function (event, slick) {
+    .on("init", function () {
       setTimeout(function () {
         moveDotsToCustomContainer();
         addClickHandlerToDots();
         disableClickHandlerToDots();
       }, 0);
     })
-    .slick({
-      dots: true,
-      infinite: false,
-      arrows: true,
-      pauseOnHover: false,
-      swipe: false,
-      prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-right: 1px;
-        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</div>" +
-        "</button>`,
-      nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-left: 1px;
-      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</div>" +
-        "</button>`,
-    });
+    .slick(getSliderDefaultOptions());
 }
 
 function initSlickFavorit() {
-  $(".slider-favorit").slick({
-    infinite: false,
-
-    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-right: 1px;
-        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</div>" +
-        "</button>`,
-    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-left: 1px;
-      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</div>" +
-        "</button>`,
-  });
+  $(".slider-favorit")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderDefaultOptions());
 }
 
-function destroyCardInfo() {
-  if ($(".slider-card-info").hasClass("slick-initialized")) {
-    $(".slider-card-info").slick("unslick");
-  }
-}
-
-function destroyDisukai() {
-  if ($(".slider-favorit").hasClass("slick-initialized")) {
-    $(".slider-favorit").slick("unslick");
-  }
-}
-
-// memuat kode di bawah ini setelah DOM selesai dimuat
 $(document).ready(function () {
   initSlickCardInfo();
   initSlickFavorit();
@@ -779,33 +706,48 @@ function addClickHandlerToDots() {
   });
 }
 
+function showCardInfoDetail(element) {
+  const cardInfo = querySelector(".card-info");
+  const cardDisukai = querySelector(".card-disukai");
+  const cardInfoDetail = querySelector(".card-info-detail");
+  const cardDetailDisukai = querySelector(".card-disukai-detail");
+  const cardInfoDetailDua = querySelector(".card-info-judul");
+
+  if (element.getAttribute("data-active-tab") === "1") {
+    cardInfo.classList.add("hidden");
+    cardInfoDetail.classList.remove("hidden");
+    cardInfoDetailDua.classList.add("hidden");
+
+    const sliderOptions = getSliderDefaultOptions();
+
+    destroySlick(".slider-card-info");
+    initSlick(".slider-card-info-detail", sliderOptions);
+    setTimeout(function () {
+      $(".slider-card-info-detail").slick("refresh");
+    }, 0);
+  } else if (element.getAttribute("data-active-tab") === "2") {
+    cardDisukai.classList.add("hidden");
+    cardDetailDisukai.classList.remove("hidden");
+
+    initSlickFavorit();
+    setTimeout(function () {
+      $(".slider-favorit").slick("refresh");
+    }, 0);
+  } else {
+    cardInfo.classList.remove("hidden");
+    cardInfoDetail.classList.add("hidden");
+    cardInfoDetailDua.classList.remove("hidden");
+
+    destroySlick(".slider-card-info-detail");
+    initSlickCardInfo();
+    initSlickFavorit();
+    setTimeout(function () {
+      $(".slider-card-info").slick("refresh");
+    }, 0);
+  }
+}
+
 // Function Slick
-
-// if ($(".slider-favorit").hasClass("slick-initialized")) {
-//   $(".slider-favorit").slick("unslick");
-// }
-
-// $(".slider-favorit").slick({
-//   dots: true,
-//   infinite: false,
-//   arrows: true,
-//   pauseOnHover: false,
-//   swipe: false,
-//   prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-//         '<div class="img-wrapper">' +
-//         '<img style="
-//         margin-right: 1px;
-//         " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-//         "</div>" +
-//         "</button>`,
-//   nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-//         '<div class="img-wrapper">' +
-//         '<img style="
-//         margin-left: 1px;
-//       " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-//         "</div>" +
-//         "</button>`,
-// });
 
 // End Function Slick
 
@@ -814,7 +756,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll('#kontenMenuTab [role="tab"]');
   const elements = {
     InputanSearch: document.querySelector("#InputanSearch"),
-    IconInputanSearch: document.querySelector("#IconInputanSearch"),
+    // IconInputanSearch: document.querySelector("#IconInputanSearch"),
     garisBatas: document.querySelector("#garisBatas"),
     btnHarga: document.querySelector("#btnHarga"),
     btnKamar: document.querySelector("#btnKamar"),
