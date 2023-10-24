@@ -1309,8 +1309,8 @@ input:checked + .toggle-bg {
   height: 10vh;
 }
 
-.h-\[64\.5vh\] {
-  height: 64.5vh;
+.h-\[68vh\] {
+  height: 68vh;
 }
 
 .h-\[78vh\] {
@@ -1769,16 +1769,6 @@ input:checked + .toggle-bg {
 .border-green-500 {
   --tw-border-opacity: 1;
   border-color: rgb(14 159 110 / var(--tw-border-opacity));
-}
-
-.border-purple-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(144 97 249 / var(--tw-border-opacity));
-}
-
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(240 82 82 / var(--tw-border-opacity));
 }
 
 .border-yellow-500 {
