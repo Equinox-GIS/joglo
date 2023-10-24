@@ -601,6 +601,8 @@ var myInvestmentIndexChart = new Chart(ctx3, {
 
 // Hide show card active
 function showCardInfoDetail(element) {
+  console.log(element);
+
   const cardInfo = document.querySelector(".card-info");
   const cardDisukai = document.querySelector(".card-disukai");
 
@@ -640,27 +642,8 @@ function showCardInfoDetail(element) {
     cardDisukai.classList.add("hidden");
     cardDetailDisukai.classList.remove("hidden");
 
-    $(".slider-disukai").slick({
-      infinite: false,
-
-      prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-right: 1px;
-        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</div>" +
-        "</button>`,
-      nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-left: 1px;
-      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</div>" +
-        "</button>`,
-    });
-
-    // Menghancurkan Slick slider
-    destroyCardInfo();
+    // Slick favorit
+    // initSlickFavorit();
   }
   // Lainnya
   else {
@@ -673,9 +656,6 @@ function showCardInfoDetail(element) {
 
     if ($(".slider-card-info-detail").hasClass("slick-initialized")) {
       $(".slider-card-info-detail").slick("unslick");
-    }
-    if ($(".slider-disukai").hasClass("slick-initialized")) {
-      $(".slider-disukai").slick("unslick");
     }
   }
 }
@@ -703,10 +683,6 @@ function closeTabDisukai() {
 
   // Menginisialisasi ulang Slick slider
   initSlickCardInfo();
-
-  if ($(".slider-disukai").hasClass("slick-initialized")) {
-    $(".slider-disukai").slick("unslick");
-  }
 
   cardDisukai.classList.remove("hidden");
   cardDetailDisukai.classList.add("hidden");
@@ -744,67 +720,8 @@ function initSlickCardInfo() {
     });
 }
 
-function disableClickHandlerToDots() {
-  $(".slick-dots li button")
-    .off("click")
-    .click(function (e) {
-      e.preventDefault();
-      return false;
-    });
-}
-
-function moveDotsToCustomContainer() {
-  const dots = $(".slider-card-info .slick-dots");
-  $(".custom-dot-slick").append(dots);
-}
-
-function addClickHandlerToDots() {
-  $(".slider-card-info .slick-dots li").on("click", function (event) {
-    event.stopPropagation();
-  });
-}
-function destroyCardInfo() {
-  if ($(".slider-card-info").hasClass("slick-initialized")) {
-    $(".slider-card-info").slick("unslick");
-  }
-}
-
-// memuat kode di bawah ini setelah DOM selesai dimuat
-$(document).ready(function () {
-  initSlickCardInfo();
-  // initSlickDisukai();
-});
-
-// Function Slick
-
-if ($(".slider-disukai").hasClass("slick-initialized")) {
-  $(".slider-disukai").slick("unslick");
-}
-
-$(".slider-disukai").slick({
-  dots: true,
-  infinite: false,
-  arrows: true,
-  pauseOnHover: false,
-  swipe: false,
-  prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-right: 1px;
-        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</div>" +
-        "</button>`,
-  nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<div class="img-wrapper">' +
-        '<img style="
-        margin-left: 1px;
-      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</div>" +
-        "</button>`,
-});
-
-function initSlickDisukai() {
-  $(".slider-disukai").slick({
+function initSlickFavorit() {
+  $(".slider-favorit").slick({
     infinite: false,
 
     prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
@@ -824,11 +741,71 @@ function initSlickDisukai() {
   });
 }
 
-function destroyDisukai() {
-  if ($(".slider-disukai").hasClass("slick-initialized")) {
-    $(".slider-disukai").slick("unslick");
+function destroyCardInfo() {
+  if ($(".slider-card-info").hasClass("slick-initialized")) {
+    $(".slider-card-info").slick("unslick");
   }
 }
+
+function destroyDisukai() {
+  if ($(".slider-favorit").hasClass("slick-initialized")) {
+    $(".slider-favorit").slick("unslick");
+  }
+}
+
+// memuat kode di bawah ini setelah DOM selesai dimuat
+$(document).ready(function () {
+  initSlickCardInfo();
+  initSlickFavorit();
+});
+
+function disableClickHandlerToDots() {
+  $(".slick-dots li button")
+    .off("click")
+    .click(function (e) {
+      e.preventDefault();
+      return false;
+    });
+}
+
+function moveDotsToCustomContainer() {
+  const dots = $(".slider-card-info .slick-dots");
+  $(".custom-dot-slick").append(dots);
+}
+
+function addClickHandlerToDots() {
+  $(".slider-card-info .slick-dots li").on("click", function (event) {
+    event.stopPropagation();
+  });
+}
+
+// Function Slick
+
+// if ($(".slider-favorit").hasClass("slick-initialized")) {
+//   $(".slider-favorit").slick("unslick");
+// }
+
+// $(".slider-favorit").slick({
+//   dots: true,
+//   infinite: false,
+//   arrows: true,
+//   pauseOnHover: false,
+//   swipe: false,
+//   prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+//         '<div class="img-wrapper">' +
+//         '<img style="
+//         margin-right: 1px;
+//         " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+//         "</div>" +
+//         "</button>`,
+//   nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+//         '<div class="img-wrapper">' +
+//         '<img style="
+//         margin-left: 1px;
+//       " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+//         "</div>" +
+//         "</button>`,
+// });
 
 // End Function Slick
 
@@ -916,9 +893,6 @@ document.addEventListener("DOMContentLoaded", function () {
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => toggleTab(tab));
   });
-
-  // Sisanya dari kode Anda (mulai dari `if ($(".slider-disukai").hasClass("slick-initialized")) {`
-  // dan seterusnya) tetap tidak berubah, jadi Anda dapat menyisipkannya kembali di sini.
 });
 
 document.addEventListener("DOMContentLoaded", () => {
