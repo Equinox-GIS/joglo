@@ -1393,10 +1393,6 @@ input:checked + .toggle-bg {
   width: 13rem;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
 .w-64 {
   width: 16rem;
 }
@@ -1407,6 +1403,10 @@ input:checked + .toggle-bg {
 
 .w-8 {
   width: 2rem;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .w-\[17rem\] {
@@ -1669,19 +1669,24 @@ input:checked + .toggle-bg {
   border-bottom-left-radius: 0.5rem;
 }
 
+.rounded-l-\[0\.5rem\] {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
 .rounded-l-lg {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
 
-.rounded-r-lg {
+.rounded-r-\[0\.5rem\] {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
 
-.rounded-r-md {
-  border-top-right-radius: 0.375rem;
-  border-bottom-right-radius: 0.375rem;
+.rounded-r-lg {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .rounded-t-lg {
@@ -1766,6 +1771,11 @@ input:checked + .toggle-bg {
   border-color: rgb(14 159 110 / var(--tw-border-opacity));
 }
 
+.border-purple-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(144 97 249 / var(--tw-border-opacity));
+}
+
 .border-red-500 {
   --tw-border-opacity: 1;
   border-color: rgb(240 82 82 / var(--tw-border-opacity));
@@ -1774,11 +1784,6 @@ input:checked + .toggle-bg {
 .border-yellow-500 {
   --tw-border-opacity: 1;
   border-color: rgb(194 120 3 / var(--tw-border-opacity));
-}
-
-.border-purple-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(144 97 249 / var(--tw-border-opacity));
 }
 
 .bg-blue-700 {
@@ -1966,6 +1971,10 @@ input:checked + .toggle-bg {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pb-2\.5 {
+  padding-bottom: 0.625rem;
 }
 
 .pb-3 {
@@ -2466,29 +2475,29 @@ input:checked + .toggle-bg {
 
 /* Menghilangkan tanda panah pada browser yang menggunakan Webkit (seperti Chrome dan Safari) */
 
-#minimum::-webkit-inner-spin-button,
-#minimum::-webkit-outer-spin-button {
+#minInput::-webkit-inner-spin-button,
+#minInput::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Menghilangkan tanda panah pada Firefox */
 
-#minimum {
+#minInput {
   -moz-appearance: textfield;
 }
 
 /* Menghilangkan tanda panah pada browser yang menggunakan Webkit (seperti Chrome dan Safari) */
 
-#maksimum::-webkit-inner-spin-button,
-#maksimum::-webkit-outer-spin-button {
+#maxInput::-webkit-inner-spin-button,
+#maxInput::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Menghilangkan tanda panah pada Firefox */
 
-#maksimum {
+#maxInput {
   -moz-appearance: textfield;
 }
 

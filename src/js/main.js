@@ -34,9 +34,35 @@ function toggleDropdown(id) {
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWVudGhvZWxzciIsImEiOiJja3M0MDZiMHMwZW83MnVwaDZ6Z2NhY2JxIn0.vQFxEZsM7Vvr-PX3FMOGiQ";
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Attach a change event to the radio buttons with name 'map-layer'
+  document
+    .querySelectorAll('input[name="map-layer"]')
+    .forEach(function (radio) {
+      radio.addEventListener("change", function () {
+        switch (this.value) {
+          case "Default":
+            map.setStyle(
+              "mapbox://styles/menthoelsr/ckp4wrapq11m117pf2lr49l5t"
+            );
+            break;
+          case "Satellite":
+            map.setStyle(
+              "mapbox://styles/menthoelsr/ckp6i54ay22u818lrq15ffcnr"
+            );
+            break;
+          case "Street":
+            map.setStyle("mapbox://styles/mapbox/streets-v11");
+            break;
+        }
+      });
+    });
+});
+
+// Initialize the map
 var map = new mapboxgl.Map({
   container: "mapJoglo",
-  style: "mapbox://styles/mapbox/streets-v11",
+  style: "mapbox://styles/mapbox/streets-v11", // This can be your default style too, but for now, it's set to streets as given.
   zoom: 14.5,
   center: [106.8295257, -6.210588],
   preserveDrawingBuffer: true,
@@ -94,20 +120,20 @@ if (controlGroup) {
     "z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 absolute";
   dropdown.style.right = "100%"; // mengatur posisi ke kanan
   dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
-  dropdown.style.marginTop = "-5rem";
+  dropdown.style.marginTop = "-1.5rem";
   dropdown.innerHTML = `
     <div class="">
     <div class="flex items-center mb-4 px-2 pt-3">
-        <input id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 ">
-        <label for="radio-default" class="ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">Default</label>
+        <input id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <label for="radio-default" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
     </div>
     <div class="flex items-center mb-4 px-2">
-        <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 ">
-        <label for="radio-satellite" class="ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">Satellite</label>
+        <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <label for="radio-satellite" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
     </div>
     <div class="flex items-center px-2 pb-3">
-        <input checked id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 ">
-        <label for="radio-street" class="ml-2 text-xs font-medium text-gray-900 dark:text-gray-300">Street</label>
+        <input checked id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <label for="radio-street" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
     </div>
     <div>`;
 
@@ -590,15 +616,20 @@ function showCardInfoDetail(element) {
 
     $(".slider-card-info-detail").slick({
       infinite: false,
-
-      prevArrow:
-        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</button>",
-      nextArrow:
-        '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</button>",
+      prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-right: 1px;
+        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</div>" +
+        "</button>`,
+      nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-left: 1px;
+      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</div>" +
+        "</button>`,
     });
 
     // Menghancurkan Slick slider
@@ -612,14 +643,20 @@ function showCardInfoDetail(element) {
     $(".slider-disukai").slick({
       infinite: false,
 
-      prevArrow:
-        '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-        '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-        "</button>",
-      nextArrow:
-        '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-        '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-        "</button>",
+      prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-right: 1px;
+        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</div>" +
+        "</button>`,
+      nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-left: 1px;
+      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</div>" +
+        "</button>`,
     });
 
     // Menghancurkan Slick slider
@@ -770,14 +807,20 @@ function initSlickDisukai() {
   $(".slider-disukai").slick({
     infinite: false,
 
-    prevArrow:
-      '<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
-      '<img class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
-      "</button>",
-    nextArrow:
-      '<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
-      '<img class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
-      "</button>",
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-right: 1px;
+        " class="custom-img-slick" src="./src/images/prev.png" alt="Previous">' +
+        "</div>" +
+        "</button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">' +
+        '<div class="img-wrapper">' +
+        '<img style="
+        margin-left: 1px;
+      " class="custom-img-slick" src="./src/images/next.png"" alt="Next">' +
+        "</div>" +
+        "</button>`,
   });
 }
 
@@ -937,3 +980,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Change Mode
+function ChangeModeCard(element) {
+  let defaultContent = document.getElementById("konten_mode_card_default");
+  let fullContent = document.getElementById("konten_mode_card_full");
+
+  // Jika konten default saat ini ditampilkan, sembunyikan dan tampilkan konten penuh
+  if (!defaultContent.classList.contains("hidden")) {
+    defaultContent.classList.add("hidden");
+    fullContent.classList.remove("hidden");
+  }
+  // Sebaliknya, tampilkan konten default dan sembunyikan konten penuh
+  else {
+    defaultContent.classList.remove("hidden");
+    fullContent.classList.add("hidden");
+  }
+}

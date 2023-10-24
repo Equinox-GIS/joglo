@@ -177,26 +177,26 @@
 /* custom arrow up dan down minimum maksimum */
 
 /* Menghilangkan tanda panah pada browser yang menggunakan Webkit (seperti Chrome dan Safari) */
-#minimum::-webkit-inner-spin-button,
-#minimum::-webkit-outer-spin-button {
+#minInput::-webkit-inner-spin-button,
+#minInput::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Menghilangkan tanda panah pada Firefox */
-#minimum {
+#minInput {
   -moz-appearance: textfield;
 }
 
 /* Menghilangkan tanda panah pada browser yang menggunakan Webkit (seperti Chrome dan Safari) */
-#maksimum::-webkit-inner-spin-button,
-#maksimum::-webkit-outer-spin-button {
+#maxInput::-webkit-inner-spin-button,
+#maxInput::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Menghilangkan tanda panah pada Firefox */
-#maksimum {
+#maxInput {
   -moz-appearance: textfield;
 }
 

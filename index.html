@@ -432,9 +432,101 @@
 
             <div
               id="kontenBtnKamar"
-              class="hidden absolute top-8 z-20 w-40 rounded-[5px] shadow-lg bg-white border-[1px] border-gray-300"
+              class="hidden absolute top-8 z-20 w-64 rounded-[5px] shadow-lg bg-white border-[1px] border-gray-300"
             >
               <div class="flex flex-col">
+                <!-- Luas Tanah -->
+                <div>
+                  <div
+                    class="w-full bg-slate-200 py-1 px-2 text-xs font-semibold text-gray-500"
+                  >
+                    Luas Tanah (m²)
+                  </div>
+
+                  <!--  -->
+                  <div class="py-2 flex justify-center">
+                    <div class="grid grid-cols-4 text-xs items-center gap-2">
+                      <div class="text-center flex justify-end">
+                        <span
+                          id="btn1"
+                          class="btn-price border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                        >
+                          < 100
+                        </span>
+                      </div>
+                      <div class="text-center">
+                        <span
+                          id="btn2"
+                          class="btn-price border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                        >
+                          100-200
+                        </span>
+                      </div>
+                      <div class="text-center">
+                        <span
+                          id="btn1"
+                          class="btn-price border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                        >
+                          200-300
+                        </span>
+                      </div>
+                      <div class="text-center flex justify-start">
+                        <span
+                          id="btn2"
+                          class="btn-price border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                        >
+                          > 300
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Luas Bangunan -->
+                <div>
+                  <div
+                    class="w-full bg-slate-200 py-1 px-2 text-xs font-semibold text-gray-500"
+                  >
+                    Luas Bangunan (m²)
+                  </div>
+
+                  <!--  -->
+                  <div class="py-2 flex justify-center">
+                    <div class="grid grid-cols-4 text-xs items-center gap-2">
+                      <div class="text-center flex justify-end">
+                        <span
+                          id="btn1"
+                          class="btn-price border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                        >
+                          < 100
+                        </span>
+                      </div>
+                      <div class="text-center">
+                        <span
+                          id="btn2"
+                          class="btn-price border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                        >
+                          100-200
+                        </span>
+                      </div>
+                      <div class="text-center">
+                        <span
+                          id="btn1"
+                          class="btn-price border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                        >
+                          200-300
+                        </span>
+                      </div>
+                      <div class="text-center flex justify-start">
+                        <span
+                          id="btn2"
+                          class="btn-price border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
+                        >
+                          > 300
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <!-- kamar tidur -->
                 <div>
                   <div
@@ -448,31 +540,31 @@
                     <div class="inline-flex rounded-md shadow-sm" role="group">
                       <button
                         type="button"
-                        class="w-6 h-6 text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-l-lg hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
+                        class="w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-l-[0.5rem] hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
                       >
                         1
                       </button>
                       <button
                         type="button"
-                        class="w-6 h-6 text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
+                        class="w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
                       >
                         2
                       </button>
                       <button
                         type="button"
-                        class="w-6 h-6 text-xs font-medium text-blue-900 bg-transparent border border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
+                        class="w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
                       >
                         3
                       </button>
                       <button
                         type="button"
-                        class="w-6 h-6 text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
+                        class="w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
                       >
                         4
                       </button>
                       <button
                         type="button"
-                        class="w-6 h-6 text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-r-md hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
+                        class="w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-r-[0.5rem] hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
                       >
                         5+
                       </button>
@@ -492,31 +584,31 @@
                     <div class="inline-flex rounded-md shadow-sm" role="group">
                       <button
                         type="button"
-                        class="w-6 h-6 text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-l-lg hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
+                        class="w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-l-[0.5rem] hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
                       >
                         1
                       </button>
                       <button
                         type="button"
-                        class="w-6 h-6 text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
+                        class="w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
                       >
                         2
                       </button>
                       <button
                         type="button"
-                        class="w-6 h-6 text-xs font-medium text-blue-900 bg-transparent border border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
+                        class="w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
                       >
                         3
                       </button>
                       <button
                         type="button"
-                        class="w-6 h-6 text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
+                        class="w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900 hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
                       >
                         4
                       </button>
                       <button
                         type="button"
-                        class="w-6 h-6 text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-r-md hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
+                        class="w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-r-[0.5rem] hover:bg-blue-900 hover:text-white focus:z-10 focus:ring-2 focus:bg-blue-900 focus:text-white"
                       >
                         5+
                       </button>
@@ -848,7 +940,7 @@
 
             <div
               id="kontenBtnJscore"
-              class="hidden absolute top-8 z-20 w-40 rounded-[5px] shadow-lg bg-white border-[1px] border-gray-300"
+              class="hidden absolute top-8 z-20 w-32 rounded-[5px] shadow-lg bg-white border-[1px] border-gray-300"
             >
               <div class="flex flex-col">
                 <!-- Jscore -->
@@ -1366,6 +1458,7 @@
                       <div class="relative flex flex-row">
                         <div class="flex items-center mr-2">
                           <img
+                            onclick="ChangeModeCard(this)"
                             class="w-7 h-7 object-contain cursor-pointer"
                             src="./src/images/list.png"
                             alt=""
@@ -1439,7 +1532,10 @@
                 </div>
 
                 <!--  Konten Card Info -->
-                <div class="h-full card-info px-3 border border-purple-500">
+                <div
+                  id="konten_mode_card_default"
+                  class="h-full card-info px-3 border border-purple-500"
+                >
                   <div class="grid grid-cols-2 gap-2">
                     <!-- Card 1 -->
                     <div class="w-full h-full">
@@ -1684,6 +1780,14 @@
                   </div>
                 </div>
 
+                <div id="konten_mode_card_full" class="hidden">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem perspiciatis dignissimos aliquam aperiam
+                  tempora delectus voluptate ipsam voluptates quae facere,
+                  repellendus doloribus laboriosam excepturi earum porro a animi
+                  accusantium asperiores?
+                </div>
+
                 <!--  -->
               </div>
 
@@ -1792,7 +1896,7 @@
                   </div>
                 </div>
 
-                <!-- Konten Card Info Details -->
+                <!-- Konten Card Info Details Disukai -->
                 <div
                   class="w-full h-[64.5vh] card-info-detail overflow-y-auto hide-scrollbar"
                 >
@@ -1807,7 +1911,9 @@
                         aria-labelledby="profile-tab"
                       >
                         <!-- Info -->
-                        <div class="h-full grid grid-cols-1">
+                        <div
+                          class="h-full grid grid-cols-1 border border-red-500"
+                        >
                           <div
                             class="w-full place-self-center mb-2 items-center"
                           >
@@ -3287,7 +3393,7 @@
                           </div>
 
                           <!-- Konten Menu Indeks -->
-                          <div id="kontenIndeksTabContent">
+                          <div class="" id="kontenIndeksTabContent">
                             <div
                               class="pr-2"
                               id="profil"
@@ -3295,7 +3401,7 @@
                               aria-labelledby="indeksECCITab"
                             >
                               <!-- ECCI -->
-                              <div class="grid grid-cols-1 gap-y-1 mt-8">
+                              <div class="grid grid-cols-1 gap-y-1">
                                 <div class="w-full text-md font-bold">
                                   Environment Carrying Capacity Index
                                 </div>
@@ -3494,7 +3600,7 @@
                         <!-- Kalkulator -->
 
                         <div class="grid grid-cols-1 gap-y-1">
-                          <div class="grid grid-cols-4 pt-0 pb-7">
+                          <div class="grid grid-cols-4 pt-0 pb-2.5">
                             <div
                               class="col-span-3 grid grid-cols-5"
                               id="kontenKalkulatorTab"
@@ -3739,7 +3845,7 @@
                 <div class="h-full card-info px-3 border border-green-500">
                   <div class="grid grid-cols-2 gap-2">
                     <!-- Card 1 -->
-                    <div class="w-full h-full border border-red-500">
+                    <div class="w-full h-full">
                       <div
                         class="flex flex-col cursor-pointer"
                         data-active-tab="2"
