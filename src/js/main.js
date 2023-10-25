@@ -1056,63 +1056,62 @@ function ChangeModeCard(element) {
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = {
     sarpras: {
-      ibadah: document.querySelectorAll(".sarprasIbadahTab"),
-      miniMarket: document.querySelectorAll(".sarprasMiniMarketTab"),
-      graduation: document.querySelectorAll(".sarprasSekolahTab"),
-      spork: document.querySelectorAll(".sarprasRestoranTab"),
-      cycling: document.querySelectorAll(".sarprasTransportasiTab"),
+      ibadah: [
+        ...document.querySelectorAll(".favoritSarprasIbadahTab"),
+        ...document.querySelectorAll(".sarprasIbadahTab"),
+      ],
+      miniMarket: [
+        ...document.querySelectorAll(".favoritSarprasMiniMarketTab"),
+        ...document.querySelectorAll(".sarprasMiniMarketTab"),
+      ],
+      graduation: [
+        ...document.querySelectorAll(".favoritSarprasSekolahTab"),
+        ...document.querySelectorAll(".sarprasSekolahTab"),
+      ],
+      spork: [
+        ...document.querySelectorAll(".favoritSarprasRestoranTab"),
+        ...document.querySelectorAll(".sarprasRestoranTab"),
+      ],
+      cycling: [
+        ...document.querySelectorAll(".favoritSarprasTransportasiTab"),
+        ...document.querySelectorAll(".sarprasTransportasiTab"),
+      ],
     },
-
     indeks: {
-      ecci: document.querySelectorAll(".indeksECCITab"),
-      livability: document.querySelectorAll(".indeksLivabilityTab"),
-      investment: document.querySelectorAll(".indeksInvesmentTab"),
+      ecci: [
+        ...document.querySelectorAll(".favoritIndeksECCITab"),
+        ...document.querySelectorAll(".indeksECCITab"),
+      ],
+      livability: [
+        ...document.querySelectorAll(".favoritIndeksLivabilityTab"),
+        ...document.querySelectorAll(".indeksLivabilityTab"),
+      ],
+      investment: [
+        ...document.querySelectorAll(".favoritIndeksInvesmentTab"),
+        ...document.querySelectorAll(".indeksInvesmentTab"),
+      ],
     },
-
     kalkulasi: {
-      kpr: document.querySelectorAll(".kalkulatorkprTab"),
-      hargaWajar: document.querySelectorAll(".kalkulatorhargawajarTab"),
+      kpr: [
+        ...document.querySelectorAll(".favoritKalkulatorkprTab"),
+        ...document.querySelectorAll(".kalkulatorkprTab"),
+      ],
+      hargaWajar: [
+        ...document.querySelectorAll(".favoritKalkulatorhargawajarTab"),
+        ...document.querySelectorAll(".kalkulatorhargawajarTab"),
+      ],
     },
   };
 
-  const images = {
-    sarpras: {
-      ibadah: Array.from(tabs.sarpras.ibadah).map((tab) =>
-        tab.querySelector("img")
-      ),
-      miniMarket: Array.from(tabs.sarpras.miniMarket).map((tab) =>
-        tab.querySelector("img")
-      ),
-      graduation: Array.from(tabs.sarpras.graduation).map((tab) =>
-        tab.querySelector("img")
-      ),
-      spork: Array.from(tabs.sarpras.spork).map((tab) =>
-        tab.querySelector("img")
-      ),
-      cycling: Array.from(tabs.sarpras.cycling).map((tab) =>
-        tab.querySelector("img")
-      ),
-    },
-
-    indeks: {
-      ecci: Array.from(tabs.indeks.ecci).map((tab) => tab.querySelector("img")),
-      livability: Array.from(tabs.indeks.livability).map((tab) =>
-        tab.querySelector("img")
-      ),
-      investment: Array.from(tabs.indeks.investment).map((tab) =>
-        tab.querySelector("img")
-      ),
-    },
-
-    kalkulasi: {
-      kpr: Array.from(tabs.kalkulasi.kpr).map((tab) =>
-        tab.querySelector("img")
-      ),
-      hargaWajar: Array.from(tabs.kalkulasi.hargaWajar).map((tab) =>
-        tab.querySelector("img")
-      ),
-    },
-  };
+  const images = {};
+  for (let category in tabs) {
+    images[category] = {};
+    for (let tab in tabs[category]) {
+      images[category][tab] = tabs[category][tab].map((tabElement) =>
+        tabElement.querySelector("img")
+      );
+    }
+  }
 
   const paths = {
     sarpras: "./src/images/sarpras",
