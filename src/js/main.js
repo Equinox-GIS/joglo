@@ -1070,6 +1070,7 @@ const tabs = {
     hargaWajar: document.querySelector(".kalkulatorhargawajarTab"),
   },
 };
+console.log(tabs);
 
 const images = {
   sarpras: {
