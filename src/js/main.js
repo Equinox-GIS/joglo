@@ -513,8 +513,98 @@ var myRadarChart = new Chart(ctx1, {
   },
 });
 
+var ctx1 = document.getElementById("myRadarChartFavorit").getContext("2d");
+var myRadarChartFavorit = new Chart(ctx1, {
+  type: "radar",
+  data: {
+    labels: [
+      "Pengelolaan Limbah",
+      "Topografi",
+      "Kebencanaan",
+      "Keseterdian Air",
+      "Kualitas Vegetasi",
+    ],
+    datasets: [
+      {
+        data: [3, 5, 2, 4, 3],
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      r: {
+        beginAtZero: true,
+        max: 5,
+        stepSize: 1, // Menambahkan ini agar tidak ada angka desimal
+        ticks: {
+          precision: 0, // Menambahkan ini agar tidak ada angka desimal
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false, // Menyembunyikan legenda
+      },
+      tooltip: {
+        enabled: true, // Menyembunyikan tooltip
+      },
+    },
+  },
+});
+
 var ctx2 = document.getElementById("mySecondRadarChart").getContext("2d");
 var mySecondRadarChart = new Chart(ctx2, {
+  type: "radar",
+  data: {
+    labels: [
+      "Tingkat Konektivitas Pejalan Kaki",
+      "Ruang Terbuka dan Publik",
+      "Fasilitas Komunitas",
+      "Aktivitas Budaya",
+      "Tempat untuk Bekerja",
+    ],
+    datasets: [
+      {
+        data: [4, 2, 5, 3, 4],
+        backgroundColor: "rgba(75, 192, 192, 0.2)",
+        borderColor: "rgba(75, 192, 192, 1)",
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      r: {
+        beginAtZero: true,
+        max: 5,
+        stepSize: 1, // Menambahkan ini agar tidak ada angka desimal
+        ticks: {
+          precision: 0, // Menambahkan ini agar tidak ada angka desimal
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false, // Menyembunyikan legenda
+      },
+      tooltip: {
+        enabled: true, // Menyembunyikan tooltip
+      },
+    },
+  },
+});
+
+var ctx2 = document
+  .getElementById("mySecondRadarChartFavorit")
+  .getContext("2d");
+var mySecondRadarChartFavorit = new Chart(ctx2, {
   type: "radar",
   data: {
     labels: [
