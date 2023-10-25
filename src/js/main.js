@@ -122,7 +122,7 @@ if (controlGroup) {
   dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
   dropdown.style.marginTop = "-1.5rem";
   dropdown.innerHTML = `
-    <div class="">
+    <div class="mt-3">
     <div class="flex items-center mb-4 px-2 pt-3">
         <input id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
         <label for="radio-default" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
@@ -623,8 +623,8 @@ function closeTab() {
   cardInfoDetail.classList.add("hidden");
   cardInfoDetailDua.classList.remove("hidden");
 
-  destroySlick(".slider-card-info-detail");
-  initSlickCardInfo();
+  // destroySlick(".slider-card-info-detail");
+  // initSlickCardInfo();
 }
 
 function closeTabDisukai() {
@@ -822,7 +822,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const isActive = parentDiv.classList.contains("bg-aktif-menu");
     tabs.forEach((t) => t.closest(".menus").classList.remove("bg-aktif-menu"));
-    contentDiv.classList.toggle("hidden", isActive);
+    // contentDiv.classList.toggle("hidden", isActive);
     parentDiv.classList.toggle("bg-aktif-menu", !isActive);
 
     if (tab.id === "MenuSatuTab") {
@@ -913,3 +913,14 @@ function ChangeModeCard(element) {
     fullContent.classList.add("hidden");
   }
 }
+
+// Marquee
+
+const inputElement = document.getElementById("InputanSearch");
+const placeholderTexts = ["Jalan / Kelurahan", "Gedung / Mall"];
+let currentIndex = 0;
+
+setInterval(() => {
+  inputElement.setAttribute("placeholder", placeholderTexts[currentIndex]);
+  currentIndex = (currentIndex + 1) % placeholderTexts.length;
+}, 1000);
