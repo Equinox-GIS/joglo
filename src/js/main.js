@@ -1052,23 +1052,22 @@ function ChangeModeCard(element) {
     fullContent.classList.add("hidden");
   }
 }
-
 const tabs = {
   sarpras: {
-    ibadah: document.getElementById("sarprasIbadahTab"),
-    miniMarket: document.getElementById("sarprasMiniMarketTab"),
-    graduation: document.getElementById("sarprasSekolahTab"),
-    spork: document.getElementById("sarprasRestoranTab"),
-    cycling: document.getElementById("sarprasTransportasiTab"),
+    ibadah: document.querySelector(".sarprasIbadahTab"),
+    miniMarket: document.querySelector(".sarprasMiniMarketTab"),
+    graduation: document.querySelector(".sarprasSekolahTab"),
+    spork: document.querySelector(".sarprasRestoranTab"),
+    cycling: document.querySelector(".sarprasTransportasiTab"),
   },
   indeks: {
-    ecci: document.getElementById("indeksECCITab"),
-    livability: document.getElementById("indeksLivabilityTab"),
-    investment: document.getElementById("indeksInvesmentTab"),
+    ecci: document.querySelector(".indeksECCITab"),
+    livability: document.querySelector(".indeksLivabilityTab"),
+    investment: document.querySelector(".indeksInvesmentTab"),
   },
   kalkulasi: {
-    kpr: document.getElementById("kalkulatorkprTab"),
-    hargaWajar: document.getElementById("kalkulatorhargawajarTab"),
+    kpr: document.querySelector(".kalkulatorkprTab"),
+    hargaWajar: document.querySelector(".kalkulatorhargawajarTab"),
   },
 };
 
