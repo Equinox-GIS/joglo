@@ -829,8 +829,8 @@ function showCardInfoDetail(element) {
         initSlick(".slider-favorit", getSliderDefaultOptions());
       }
 
-      if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
-        initSlick(".slider-card-info-detail", getSliderDefaultOptions());
+      if (!$(".slider-card-info-disukai").hasClass("slick-initialized")) {
+        initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
       }
       break;
 
@@ -904,7 +904,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  disable();
+  // disable();
 
   function toggleTab(tab) {
     const parentDiv = tab.closest(".menus");
@@ -919,6 +919,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const isActive = parentDiv.classList.contains("bg-aktif-menu");
     tabs.forEach((t) => t.closest(".menus").classList.remove("bg-aktif-menu"));
+    // contentDiv.classList.toggle("hidden", isActive);
     parentDiv.classList.toggle("bg-aktif-menu", !isActive);
 
     switch (tab.id) {
@@ -929,40 +930,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         break;
       case "MenuDuaTab":
+        disable();
+
         // Anda bisa menambahkan inisialisasi untuk tab kedua di sini, jika diperlukan
         break;
       case "MenuTigaTab":
-        initSlickFavorit();
+        disable();
 
-        console.log("MenuTigaTab dipilih");
+        initSlickFavorit();
 
         if ($(".slider-favorit").length > 0) {
           console.log("Elemen .slider-favorit ditemukan di DOM");
         } else {
           console.log("Elemen .slider-favorit TIDAK ditemukan di DOM");
         }
-
-        // if (!$(".slider-favorit").hasClass("slick-initialized")) {
-        //   console.log("Inisialisasi slider-favorit");
-        //   initSlickFavorit();
-        // }
-
-        // if (!$(".slider-favorit").hasClass("slick-initialized")) {
-        //   initSlick(".slider-favorit", getSliderDefaultOptions());
-        // }
-        // initSlickFavorit;
-
-        // $(".slider-favorit").slick();
-
-        // $(".slider-favorit")
-        //   .on("init", function () {
-        //     setTimeout(function () {
-        //       moveDotsToCustomContainer();
-        //       addClickHandlerToDots();
-        //       disableClickHandlerToDots();
-        //     }, 0);
-        //   })
-        //   .slick(getSliderDefaultOptions());
 
         break;
       default:
