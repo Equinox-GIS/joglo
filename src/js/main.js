@@ -797,35 +797,50 @@ function addClickHandlerToDots() {
 }
 
 function showCardInfoDetail(element) {
-  const cardInfo = querySelector(".card-info");
-  const cardDisukai = querySelector(".card-disukai");
-  const cardInfoDetail = querySelector(".card-info-detail");
-  const cardDetailDisukai = querySelector(".card-disukai-detail");
-  const cardInfoDetailDua = querySelector(".card-info-judul");
+  const cardInfo = document.querySelector(".card-info");
+  const cardInfoDetail = document.querySelector(".card-info-detail");
+  const cardInfoDetailDua = document.querySelector(".card-info-judul");
 
-  if (element.getAttribute("data-active-tab") === "1") {
-    cardInfo.classList.add("hidden");
-    cardInfoDetail.classList.remove("hidden");
-    cardInfoDetailDua.classList.add("hidden");
+  const cardDisukai = document.querySelector(".card-disukai");
+  const cardDetailDisukai = document.querySelector(".card-disukai-detail");
 
-    if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
-      initSlick(".slider-card-info-detail", getSliderDefaultOptions());
-    }
-  } else if (element.getAttribute("data-active-tab") === "2") {
-    cardDisukai.classList.add("hidden");
-    cardDetailDisukai.classList.remove("hidden");
+  const activeTab = element.getAttribute("data-active-tab");
 
-    if (!$(".slider-favorit").hasClass("slick-initialized")) {
-      initSlick(".slider-favorit", getSliderDefaultOptions());
-    }
+  switch (activeTab) {
+    case "1":
+      cardInfo.classList.add("hidden");
+      cardInfoDetailDua.classList.add("hidden");
+      cardInfoDetail.classList.remove("hidden");
 
-    if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
-      initSlick(".slider-card-info-detail", getSliderDefaultOptions());
-    }
-  } else {
-    cardInfo.classList.remove("hidden");
-    cardInfoDetail.classList.add("hidden");
-    cardInfoDetailDua.classList.remove("hidden");
+      cardDisukai.classList.add("hidden");
+      cardDetailDisukai.classList.add("hidden");
+
+      if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
+        initSlick(".slider-card-info-detail", getSliderDefaultOptions());
+      }
+      break;
+
+    case "2":
+      cardInfoDetail.classList.add("hidden"); // Menyembunyikan cardInfoDetail
+      cardDisukai.classList.add("hidden");
+      cardDetailDisukai.classList.remove("hidden");
+
+      if (!$(".slider-favorit").hasClass("slick-initialized")) {
+        initSlick(".slider-favorit", getSliderDefaultOptions());
+      }
+
+      if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
+        initSlick(".slider-card-info-detail", getSliderDefaultOptions());
+      }
+      break;
+
+    default:
+      cardInfo.classList.remove("hidden");
+      cardInfoDetail.classList.add("hidden");
+      cardInfoDetailDua.classList.remove("hidden");
+      cardDisukai.classList.remove("hidden"); // Menampilkan kembali cardDisukai
+      cardDetailDisukai.classList.add("hidden");
+      break;
   }
 }
 
