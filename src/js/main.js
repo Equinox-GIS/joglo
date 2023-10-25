@@ -718,32 +718,20 @@ function showCardInfoDetail(element) {
     cardInfoDetail.classList.remove("hidden");
     cardInfoDetailDua.classList.add("hidden");
 
-    const sliderOptions = getSliderDefaultOptions();
-
-    destroySlick(".slider-card-info");
-    initSlick(".slider-card-info-detail", sliderOptions);
-    setTimeout(function () {
-      $(".slider-card-info-detail").slick("refresh");
-    }, 0);
+    if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
+      initSlick(".slider-card-info-detail", getSliderDefaultOptions());
+    }
   } else if (element.getAttribute("data-active-tab") === "2") {
     cardDisukai.classList.add("hidden");
     cardDetailDisukai.classList.remove("hidden");
 
-    initSlickFavorit();
-    setTimeout(function () {
-      $(".slider-favorit").slick("refresh");
-    }, 0);
+    if (!$(".slider-favorit").hasClass("slick-initialized")) {
+      initSlick(".slider-favorit", getSliderDefaultOptions());
+    }
   } else {
     cardInfo.classList.remove("hidden");
     cardInfoDetail.classList.add("hidden");
     cardInfoDetailDua.classList.remove("hidden");
-
-    destroySlick(".slider-card-info-detail");
-    initSlickCardInfo();
-    initSlickFavorit();
-    setTimeout(function () {
-      $(".slider-card-info").slick("refresh");
-    }, 0);
   }
 }
 
@@ -822,13 +810,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const isActive = parentDiv.classList.contains("bg-aktif-menu");
     tabs.forEach((t) => t.closest(".menus").classList.remove("bg-aktif-menu"));
-    // contentDiv.classList.toggle("hidden", isActive);
     parentDiv.classList.toggle("bg-aktif-menu", !isActive);
 
-    if (tab.id === "MenuSatuTab") {
-      enable();
-    } else {
-      disable();
+    switch (tab.id) {
+      case "MenuSatuTab":
+        enable();
+        if (!$(".slider-card-info").hasClass("slick-initialized")) {
+          initSlickCardInfo();
+        }
+        break;
+      case "MenuDuaTab":
+        // Anda bisa menambahkan inisialisasi untuk tab kedua di sini, jika diperlukan
+        break;
+      case "MenuTigaTab":
+        if (!$(".slider-favorit").hasClass("slick-initialized")) {
+          initSlickFavorit();
+        }
+        break;
+      default:
+        disable();
+        break;
     }
   }
 
@@ -913,14 +914,3 @@ function ChangeModeCard(element) {
     fullContent.classList.add("hidden");
   }
 }
-
-// Marquee
-
-const inputElement = document.getElementById("InputanSearch");
-const placeholderTexts = ["Jalan / Kelurahan", "Gedung / Mall"];
-let currentIndex = 0;
-
-setInterval(() => {
-  inputElement.setAttribute("placeholder", placeholderTexts[currentIndex]);
-  currentIndex = (currentIndex + 1) % placeholderTexts.length;
-}, 1000);
