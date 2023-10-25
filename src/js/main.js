@@ -683,7 +683,7 @@ function initSlickFavorit() {
 
 $(document).ready(function () {
   initSlickCardInfo();
-  initSlickFavorit();
+  // initSlickFavorit();
 });
 
 function disableClickHandlerToDots() {
@@ -823,9 +823,38 @@ document.addEventListener("DOMContentLoaded", function () {
         // Anda bisa menambahkan inisialisasi untuk tab kedua di sini, jika diperlukan
         break;
       case "MenuTigaTab":
-        if (!$(".slider-favorit").hasClass("slick-initialized")) {
-          initSlickFavorit();
+        initSlickFavorit();
+
+        console.log("MenuTigaTab dipilih");
+
+        if ($(".slider-favorit").length > 0) {
+          console.log("Elemen .slider-favorit ditemukan di DOM");
+        } else {
+          console.log("Elemen .slider-favorit TIDAK ditemukan di DOM");
         }
+
+        // if (!$(".slider-favorit").hasClass("slick-initialized")) {
+        //   console.log("Inisialisasi slider-favorit");
+        //   initSlickFavorit();
+        // }
+
+        // if (!$(".slider-favorit").hasClass("slick-initialized")) {
+        //   initSlick(".slider-favorit", getSliderDefaultOptions());
+        // }
+        // initSlickFavorit;
+
+        // $(".slider-favorit").slick();
+
+        // $(".slider-favorit")
+        //   .on("init", function () {
+        //     setTimeout(function () {
+        //       moveDotsToCustomContainer();
+        //       addClickHandlerToDots();
+        //       disableClickHandlerToDots();
+        //     }, 0);
+        //   })
+        //   .slick(getSliderDefaultOptions());
+
         break;
       default:
         disable();
