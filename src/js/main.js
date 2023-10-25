@@ -1052,65 +1052,95 @@ function ChangeModeCard(element) {
     fullContent.classList.add("hidden");
   }
 }
-const tabs = {
-  sarpras: {
-    ibadah: document.querySelector(".sarprasIbadahTab"),
-    miniMarket: document.querySelector(".sarprasMiniMarketTab"),
-    graduation: document.querySelector(".sarprasSekolahTab"),
-    spork: document.querySelector(".sarprasRestoranTab"),
-    cycling: document.querySelector(".sarprasTransportasiTab"),
-  },
-  indeks: {
-    ecci: document.querySelector(".indeksECCITab"),
-    livability: document.querySelector(".indeksLivabilityTab"),
-    investment: document.querySelector(".indeksInvesmentTab"),
-  },
-  kalkulasi: {
-    kpr: document.querySelector(".kalkulatorkprTab"),
-    hargaWajar: document.querySelector(".kalkulatorhargawajarTab"),
-  },
-};
-console.log(tabs);
 
-const images = {
-  sarpras: {
-    ibadah: tabs.sarpras.ibadah.querySelector("img"),
-    miniMarket: tabs.sarpras.miniMarket.querySelector("img"),
-    graduation: tabs.sarpras.graduation.querySelector("img"),
-    spork: tabs.sarpras.spork.querySelector("img"),
-    cycling: tabs.sarpras.cycling.querySelector("img"),
-  },
-  indeks: {
-    ecci: tabs.indeks.ecci.querySelector("img"),
-    livability: tabs.indeks.livability.querySelector("img"),
-    investment: tabs.indeks.investment.querySelector("img"),
-  },
-  kalkulasi: {
-    kpr: tabs.kalkulasi.kpr.querySelector("img"),
-    hargaWajar: tabs.kalkulasi.hargaWajar.querySelector("img"),
-  },
-};
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = {
+    sarpras: {
+      ibadah: document.querySelectorAll(".sarprasIbadahTab"),
+      miniMarket: document.querySelectorAll(".sarprasMiniMarketTab"),
+      graduation: document.querySelectorAll(".sarprasSekolahTab"),
+      spork: document.querySelectorAll(".sarprasRestoranTab"),
+      cycling: document.querySelectorAll(".sarprasTransportasiTab"),
+    },
 
-const paths = {
-  sarpras: "./src/images/sarpras",
-  indeks: "./src/images/indeks",
-  kalkulasi: "./src/images/kalkulator",
-};
+    indeks: {
+      ecci: document.querySelectorAll(".indeksECCITab"),
+      livability: document.querySelectorAll(".indeksLivabilityTab"),
+      investment: document.querySelectorAll(".indeksInvesmentTab"),
+    },
 
-function updateImages(category, selectedTab) {
-  for (let tab in tabs[category]) {
-    if (tab === selectedTab) {
-      images[category][tab].src = `${paths[category]}/${tab}-on.png`;
-    } else {
-      images[category][tab].src = `${paths[category]}/${tab}-off.png`;
+    kalkulasi: {
+      kpr: document.querySelectorAll(".kalkulatorkprTab"),
+      hargaWajar: document.querySelectorAll(".kalkulatorhargawajarTab"),
+    },
+  };
+
+  const images = {
+    sarpras: {
+      ibadah: Array.from(tabs.sarpras.ibadah).map((tab) =>
+        tab.querySelector("img")
+      ),
+      miniMarket: Array.from(tabs.sarpras.miniMarket).map((tab) =>
+        tab.querySelector("img")
+      ),
+      graduation: Array.from(tabs.sarpras.graduation).map((tab) =>
+        tab.querySelector("img")
+      ),
+      spork: Array.from(tabs.sarpras.spork).map((tab) =>
+        tab.querySelector("img")
+      ),
+      cycling: Array.from(tabs.sarpras.cycling).map((tab) =>
+        tab.querySelector("img")
+      ),
+    },
+
+    indeks: {
+      ecci: Array.from(tabs.indeks.ecci).map((tab) => tab.querySelector("img")),
+      livability: Array.from(tabs.indeks.livability).map((tab) =>
+        tab.querySelector("img")
+      ),
+      investment: Array.from(tabs.indeks.investment).map((tab) =>
+        tab.querySelector("img")
+      ),
+    },
+
+    kalkulasi: {
+      kpr: Array.from(tabs.kalkulasi.kpr).map((tab) =>
+        tab.querySelector("img")
+      ),
+      hargaWajar: Array.from(tabs.kalkulasi.hargaWajar).map((tab) =>
+        tab.querySelector("img")
+      ),
+    },
+  };
+
+  const paths = {
+    sarpras: "./src/images/sarpras",
+    indeks: "./src/images/indeks",
+    kalkulasi: "./src/images/kalkulator",
+  };
+
+  function updateImages(category, selectedTab) {
+    for (let tab in tabs[category]) {
+      tabs[category][tab].forEach((tabElement, index) => {
+        if (tab === selectedTab) {
+          images[category][tab][index].src = `${paths[category]}/${tab}-on.png`;
+        } else {
+          images[category][tab][
+            index
+          ].src = `${paths[category]}/${tab}-off.png`;
+        }
+      });
     }
   }
-}
 
-for (let category in tabs) {
-  for (let tab in tabs[category]) {
-    tabs[category][tab].addEventListener("click", function () {
-      updateImages(category, tab);
-    });
+  for (let category in tabs) {
+    for (let tab in tabs[category]) {
+      tabs[category][tab].forEach((tabElement) => {
+        tabElement.addEventListener("click", function () {
+          updateImages(category, tab);
+        });
+      });
+    }
   }
-}
+});
