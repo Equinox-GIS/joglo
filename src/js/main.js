@@ -1028,6 +1028,8 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuTigaTab":
         disable();
 
+        initSlickFavorit();
+
         break;
       case "MenuEmpatTab":
         disable();
