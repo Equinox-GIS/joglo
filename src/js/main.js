@@ -808,12 +808,12 @@ function showCardInfoDetail(element) {
 
   switch (activeTab) {
     case "1":
-      cardInfo.classList.add("hidden");
-      cardInfoDetailDua.classList.add("hidden");
-      cardInfoDetail.classList.remove("hidden");
+      // cardInfo.classList.add("hidden");
+      // cardInfoDetailDua.classList.add("hidden");
+      // cardInfoDetail.classList.remove("hidden");
 
-      cardDisukai.classList.add("hidden");
-      cardDetailDisukai.classList.add("hidden");
+      // cardDisukai.classList.add("hidden");
+      // cardDetailDisukai.classList.add("hidden");
 
       if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
         initSlick(".slider-card-info-detail", getSliderDefaultOptions());
@@ -821,9 +821,9 @@ function showCardInfoDetail(element) {
       break;
 
     case "2":
-      cardInfoDetail.classList.add("hidden"); // Menyembunyikan cardInfoDetail
-      cardDisukai.classList.add("hidden");
-      cardDetailDisukai.classList.remove("hidden");
+      // cardInfoDetail.classList.add("hidden");
+      // cardDisukai.classList.add("hidden");
+      // cardDetailDisukai.classList.remove("hidden");
 
       if (!$(".slider-favorit").hasClass("slick-initialized")) {
         initSlick(".slider-favorit", getSliderDefaultOptions());
@@ -907,6 +907,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // disable();
 
   function toggleTab(tab) {
+    // console.log(tab);
     const parentDiv = tab.closest(".menus");
     const contentDiv = document.getElementById(
       tab.getAttribute("aria-controls")
