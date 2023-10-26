@@ -380,6 +380,7 @@
                       id="minInput"
                       type="number"
                       class="block w-full p-0 text-xs text-gray-900 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-300"
+                      style="border: none; border-bottom: 1px solid"
                       required
                     />
                   </div>
@@ -396,6 +397,7 @@
                       type="number"
                       class="max-input block p-0 w-full text-xs text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300 peer"
                       required
+                      style="border: none; border-bottom: 1px solid"
                     />
                   </div>
                 </div>
@@ -1441,9 +1443,9 @@
           >
             <!-- Menu Pencarian -->
             <div class="h-full flex flex-col">
-              <!--  Bagan Card Info -->
+              <!--  Card Pencarian -->
               <div
-                class="flex flex-col card-info-judul h-[83vh] overflow-y-auto hide-scrollbar"
+                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar"
               >
                 <!-- Judul Card Info -->
                 <div class="px-3 pt-2">
@@ -1532,10 +1534,7 @@
                 </div>
 
                 <!--  Konten Card Info -->
-                <div
-                  id="konten_mode_card_default"
-                  class="h-full card-info px-3"
-                >
+                <div id="konten_mode_card_default" class="h-full px-3">
                   <div class="grid grid-cols-2 gap-2">
                     <!-- Card 1 -->
                     <div class="w-full h-full">
@@ -1681,8 +1680,10 @@
                 <!--  -->
               </div>
 
-              <!-- Bagan Card Info Detail Pencarian -->
-              <div class="flex flex-col w-full card-info-detail hidden">
+              <!-- Card Detail Pencarian -->
+              <div
+                class="flex flex-col w-full card-info-detail-pencarian hidden"
+              >
                 <!-- Judul Card Info Detail -->
                 <div class="px-3 pt-2">
                   <div class="w-full flex justify-between items-center">
@@ -3629,6 +3630,7 @@
                 </div>
                 <!--  -->
               </div>
+              <!--  -->
             </div>
           </div>
 
@@ -3660,11 +3662,11 @@
             role="tabpanel"
             aria-labelledby="MenuTigaTab"
           >
-            <!-- favoritt -->
+            <!-- Navigation favoritt -->
             <div class="h-full flex flex-col">
-              <!--  Bagan Favorit -->
+              <!--  Card Favorit -->
               <div
-                class="flex flex-col card-disukai h-[83vh] overflow-y-auto hide-scrollbar"
+                class="flex flex-col card-info-favorit h-[83vh] overflow-y-auto hide-scrollbar"
               >
                 <!-- Judul Favorit -->
                 <div class="px-3 pt-2">
@@ -3867,7 +3869,7 @@
               </div>
 
               <!-- Bagan Card Info Disukai -->
-              <div class="flex flex-col w-full card-disukai-detail hidden">
+              <div class="flex flex-col w-full card-info-detail-favorit hidden">
                 <!-- Judul Card Info Detail -->
                 <div class="px-3 pt-2">
                   <div class="w-full flex justify-between items-center">

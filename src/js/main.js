@@ -704,29 +704,6 @@ function destroySlick(element) {
   }
 }
 
-function closeTab() {
-  const cardInfo = querySelector(".card-info");
-  const cardInfoDetail = querySelector(".card-info-detail");
-  const cardInfoDetailDua = querySelector(".card-info-judul");
-
-  cardInfo.classList.remove("hidden");
-  cardInfoDetail.classList.add("hidden");
-  cardInfoDetailDua.classList.remove("hidden");
-
-  // destroySlick(".slider-card-info-detail");
-  // initSlickCardInfo();
-}
-
-function closeTabDisukai() {
-  const cardDisukai = querySelector(".card-disukai");
-  const cardDetailDisukai = querySelector(".card-disukai-detail");
-
-  cardDisukai.classList.remove("hidden");
-  cardDetailDisukai.classList.add("hidden");
-
-  initSlickCardInfo();
-}
-
 function getSliderDefaultOptions() {
   return {
     dots: true,
@@ -796,24 +773,36 @@ function addClickHandlerToDots() {
   });
 }
 
+function closeTab() {
+  // Pencarian
+  showElement(".card-info-pencarian");
+  hideElement(".card-info-detail-pencarian");
+}
+
+function closeTabDisukai() {
+  showElement(".card-info-favorit");
+  hideElement(".card-info-detail-favorit");
+
+  // console.log("closeTabDisukai is called");
+
+  // initSlickCardInfo();
+  initSlickFavorit();
+}
+
 function showCardInfoDetail(element) {
-  const cardInfo = document.querySelector(".card-info");
-  const cardInfoDetail = document.querySelector(".card-info-detail");
-  const cardInfoDetailDua = document.querySelector(".card-info-judul");
-
-  const cardDisukai = document.querySelector(".card-disukai");
-  const cardDetailDisukai = document.querySelector(".card-disukai-detail");
-
   const activeTab = element.getAttribute("data-active-tab");
+
+  resetAllCards();
 
   switch (activeTab) {
     case "1":
-      // cardInfo.classList.add("hidden");
-      // cardInfoDetailDua.classList.add("hidden");
-      // cardInfoDetail.classList.remove("hidden");
+      // Pencarian
+      showElement(".card-info-detail-pencarian");
+      hideElement(".card-info-pencarian");
 
-      // cardDisukai.classList.add("hidden");
-      // cardDetailDisukai.classList.add("hidden");
+      // Favorit
+      showElement(".card-info-favorit");
+      hideElement(".card-info-detail-favorit");
 
       if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
         initSlick(".slider-card-info-detail", getSliderDefaultOptions());
@@ -821,9 +810,13 @@ function showCardInfoDetail(element) {
       break;
 
     case "2":
-      // cardInfoDetail.classList.add("hidden");
-      // cardDisukai.classList.add("hidden");
-      // cardDetailDisukai.classList.remove("hidden");
+      // Favorit
+      showElement(".card-info-detail-favorit");
+      hideElement(".card-info-favorit");
+
+      // Pencarian
+      showElement(".card-info-pencarian ");
+      hideElement(".card-info-detail-pencarian");
 
       if (!$(".slider-favorit").hasClass("slick-initialized")) {
         initSlick(".slider-favorit", getSliderDefaultOptions());
@@ -833,20 +826,25 @@ function showCardInfoDetail(element) {
         initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
       }
       break;
-
-    default:
-      cardInfo.classList.remove("hidden");
-      cardInfoDetail.classList.add("hidden");
-      cardInfoDetailDua.classList.remove("hidden");
-      cardDisukai.classList.remove("hidden"); // Menampilkan kembali cardDisukai
-      cardDetailDisukai.classList.add("hidden");
-      break;
   }
 }
 
-// Function Slick
+function resetAllCards() {
+  hideElement(".card-info-pencarian");
+  hideElement(".card-info-detail-pencarian");
+  hideElement(".card-info-favorit");
+  hideElement(".card-info-detail-favorit");
+}
 
-// End Function Slick
+function hideElement(selector) {
+  const elements = document.querySelectorAll(selector);
+  elements.forEach((el) => el.classList.add("hidden"));
+}
+
+function showElement(selector) {
+  const elements = document.querySelectorAll(selector);
+  elements.forEach((el) => el.classList.remove("hidden"));
+}
 
 // Function untuk pindah Menu Navigation
 document.addEventListener("DOMContentLoaded", function () {
@@ -918,33 +916,33 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    resetAllCards();
+
     const isActive = parentDiv.classList.contains("bg-aktif-menu");
     tabs.forEach((t) => t.closest(".menus").classList.remove("bg-aktif-menu"));
-    // contentDiv.classList.toggle("hidden", isActive);
     parentDiv.classList.toggle("bg-aktif-menu", !isActive);
 
     switch (tab.id) {
       case "MenuSatuTab":
         enable();
+
         if (!$(".slider-card-info").hasClass("slick-initialized")) {
           initSlickCardInfo();
         }
+
+        closeTab();
+
         break;
       case "MenuDuaTab":
         disable();
 
-        // Anda bisa menambahkan inisialisasi untuk tab kedua di sini, jika diperlukan
         break;
       case "MenuTigaTab":
         disable();
 
-        initSlickFavorit();
+        // initSlickFavorit();
 
-        if ($(".slider-favorit").length > 0) {
-          console.log("Elemen .slider-favorit ditemukan di DOM");
-        } else {
-          console.log("Elemen .slider-favorit TIDAK ditemukan di DOM");
-        }
+        closeTabDisukai();
 
         break;
       default:
