@@ -950,12 +950,77 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     parentDiv.classList.toggle("bg-aktif-menu", !isActive);
 
+    //
+
+    function toggleContent(element, konten, svgArrow) {
+      if (konten.classList.contains("hidden")) {
+        // jika konten sedang tertutup
+        hideAllContent();
+        konten.classList.remove("hidden");
+        svgArrow.classList.add("rotate-180");
+      } else {
+        // jika konten sedang terbuka
+        konten.classList.add("hidden");
+        svgArrow.classList.remove("rotate-180");
+      }
+    }
+
+    elements.btnHarga.addEventListener("click", function () {
+      toggleContent(
+        elements.btnHarga,
+        konten_element.kontenBtnHarga,
+        svg_element.ArrowIconHarga
+      );
+    });
+
+    elements.btnKamar.addEventListener("click", function () {
+      toggleContent(
+        elements.btnKamar,
+        konten_element.kontenBtnKamar,
+        svg_element.ArrowIconKamar
+      );
+    });
+
+    elements.btnPenjual.addEventListener("click", function () {
+      toggleContent(
+        elements.btnPenjual,
+        konten_element.kontenBtnPenjual,
+        svg_element.ArrowIconPenjual
+      );
+    });
+
+    elements.btnJenisProperti.addEventListener("click", function () {
+      toggleContent(
+        elements.btnJenisProperti,
+        konten_element.kontenBtnJenisProperti,
+        svg_element.ArrowIconJenisProperti
+      );
+    });
+
+    elements.btnJenisRumah.addEventListener("click", function () {
+      toggleContent(
+        elements.btnJenisRumah,
+        konten_element.kontenBtnJenisRumah,
+        svg_element.ArrowIconJenisRumah
+      );
+    });
+
+    elements.btnJscore.addEventListener("click", function () {
+      toggleContent(
+        elements.btnJscore,
+        konten_element.kontenBtnJscore,
+        svg_element.ArrowIconJscore
+      );
+    });
+
     switch (tab.id) {
       case "MenuSatuTab":
         disable();
         if (!$(".slider-card-info").hasClass("slick-initialized")) {
           initSlickCardInfo();
         }
+
+        hideAllContent();
         break;
       case "MenuDuaTab":
         disable();
@@ -973,59 +1038,59 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuEnamTab":
         enable();
 
-        elements.btnHarga.addEventListener("click", function () {
-          konten_element.kontenBtnHarga.classList.toggle("hidden");
-          svg_element.ArrowIconHarga.classList.toggle("rotate-180");
+        // elements.btnHarga.addEventListener("click", function () {
+        //   konten_element.kontenBtnHarga.classList.toggle("hidden");
+        //   svg_element.ArrowIconHarga.classList.toggle("rotate-180");
 
-          // Menyembunyikan konten kamar jika konten harga ditampilkan
-          if (!konten_element.kontenBtnHarga.classList.contains("hidden")) {
-            konten_element.kontenBtnKamar.classList.add("hidden");
-            konten_element.kontenBtnPenjual.classList.add("hidden");
-            konten_element.kontenBtnJenisProperti.classList.add("hidden");
-            konten_element.kontenBtnJenisSurat.classList.add("hidden");
-            konten_element.kontenBtnJscore.classList.add("hidden");
-            svg_element.arrowIconKamar.classList.remove("rotate-180");
-          }
-        });
+        //   // Menyembunyikan konten kamar jika konten harga ditampilkan
+        //   if (!konten_element.kontenBtnHarga.classList.contains("hidden")) {
+        //     konten_element.kontenBtnKamar.classList.add("hidden");
+        //     konten_element.kontenBtnPenjual.classList.add("hidden");
+        //     konten_element.kontenBtnJenisProperti.classList.add("hidden");
+        //     konten_element.kontenBtnJenisSurat.classList.add("hidden");
+        //     konten_element.kontenBtnJscore.classList.add("hidden");
+        //     svg_element.arrowIconKamar.classList.remove("rotate-180");
+        //   }
+        // });
 
-        elements.btnKamar.addEventListener("click", function () {
-          konten_element.kontenBtnKamar.classList.toggle("hidden");
-          arrowIconKamar.classList.toggle("rotate-180");
+        // elements.btnKamar.addEventListener("click", function () {
+        //   konten_element.kontenBtnKamar.classList.toggle("hidden");
+        //   arrowIconKamar.classList.toggle("rotate-180");
 
-          // Menyembunyikan konten harga jika konten kamar ditampilkan
-          if (!konten_element.kontenBtnKamar.classList.contains("hidden")) {
-            konten_element.kontenBtnHarga.classList.add("hidden");
-            konten_element.kontenBtnPenjual.classList.add("hidden");
-            konten_element.kontenBtnJenisProperti.classList.add("hidden");
-            konten_element.kontenBtnJenisSurat.classList.add("hidden");
-            konten_element.kontenBtnJscore.classList.add("hidden");
-            svg_element.ArrowIconKamar.classList.toggle("rotate-180");
-          }
-        });
+        //   // Menyembunyikan konten harga jika konten kamar ditampilkan
+        //   if (!konten_element.kontenBtnKamar.classList.contains("hidden")) {
+        //     konten_element.kontenBtnHarga.classList.add("hidden");
+        //     konten_element.kontenBtnPenjual.classList.add("hidden");
+        //     konten_element.kontenBtnJenisProperti.classList.add("hidden");
+        //     konten_element.kontenBtnJenisSurat.classList.add("hidden");
+        //     konten_element.kontenBtnJscore.classList.add("hidden");
+        //     svg_element.ArrowIconKamar.classList.toggle("rotate-180");
+        //   }
+        // });
 
-        elements.btnPenjual.addEventListener("click", function () {
-          hideAllContent(); // Panggil ini lebih dahulu
-          konten_element.kontenBtnPenjual.classList.toggle("hidden");
-          svg_element.ArrowIconPenjual.classList.toggle("rotate-180");
-        });
+        // elements.btnPenjual.addEventListener("click", function () {
+        //   hideAllContent(); // Panggil ini lebih dahulu
+        //   konten_element.kontenBtnPenjual.classList.toggle("hidden");
+        //   svg_element.ArrowIconPenjual.classList.toggle("rotate-180");
+        // });
 
-        elements.btnJenisProperti.addEventListener("click", function () {
-          hideAllContent(); // Panggil ini lebih dahulu
-          konten_element.kontenBtnJenisProperti.classList.toggle("hidden");
-          svg_element.ArrowIconJenisProperti.classList.toggle("rotate-180");
-        });
+        // elements.btnJenisProperti.addEventListener("click", function () {
+        //   hideAllContent(); // Panggil ini lebih dahulu
+        //   konten_element.kontenBtnJenisProperti.classList.toggle("hidden");
+        //   svg_element.ArrowIconJenisProperti.classList.toggle("rotate-180");
+        // });
 
-        elements.btnJenisRumah.addEventListener("click", function () {
-          hideAllContent(); // Panggil ini lebih dahulu
-          konten_element.kontenBtnJenisRumah.classList.toggle("hidden");
-          svg_element.ArrowIconJenisRumah.classList.toggle("rotate-180");
-        });
+        // elements.btnJenisRumah.addEventListener("click", function () {
+        //   hideAllContent(); // Panggil ini lebih dahulu
+        //   konten_element.kontenBtnJenisRumah.classList.toggle("hidden");
+        //   svg_element.ArrowIconJenisRumah.classList.toggle("rotate-180");
+        // });
 
-        elements.btnJscore.addEventListener("click", function () {
-          hideAllContent(); // Panggil ini lebih dahulu
-          konten_element.kontenBtnJscore.classList.toggle("hidden");
-          svg_element.ArrowIconJscore.classList.toggle("rotate-180");
-        });
+        // elements.btnJscore.addEventListener("click", function () {
+        //   hideAllContent(); // Panggil ini lebih dahulu
+        //   konten_element.kontenBtnJscore.classList.toggle("hidden");
+        //   svg_element.ArrowIconJscore.classList.toggle("rotate-180");
+        // });
 
         break;
       default:
