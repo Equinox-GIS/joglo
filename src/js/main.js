@@ -848,35 +848,30 @@ function showElement(selector) {
 
 // Function untuk pindah Menu Navigation
 document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll('#kontenMenuTab [role="tab"]');
   const elements = {
+    tabs: document.querySelectorAll('#kontenMenuTab [role="tab"]'),
     InputanSearch: document.querySelector("#InputanSearch"),
-    // IconInputanSearch: document.querySelector("#IconInputanSearch"),
     garisBatas: document.querySelector("#garisBatas"),
-    btnHarga: document.querySelector("#btnHarga"),
-    btnKamar: document.querySelector("#btnKamar"),
-    btnPenjual: document.querySelector("#btnPenjual"),
-    btnJenisProperti: document.querySelector("#btnJenisProperti"),
-    btnJenisRumah: document.querySelector("#btnJenisSurat"),
-    btnJscore: document.querySelector("#btnJscore"),
-
-    // konten
+    btnHarga: document.getElementById("btnHarga"),
+    btnKamar: document.getElementById("btnKamar"),
+    btnPenjual: document.getElementById("btnPenjual"),
+    btnJenisProperti: document.getElementById("btnJenisProperti"),
+    btnJenisRumah: document.getElementById("btnJenisSurat"),
+    btnJscore: document.getElementById("btnJscore"),
     kontenBtnHarga: document.getElementById("kontenBtnHarga"),
     kontenBtnKamar: document.getElementById("kontenBtnKamar"),
     kontenBtnPenjual: document.getElementById("kontenBtnPenjual"),
     kontenBtnJenisProperti: document.getElementById("kontenBtnJenisProperti"),
     kontenBtnJenisRumah: document.getElementById("kontenBtnJenisSurat"),
     kontenBtnJscore: document.getElementById("kontenBtnJscore"),
-
-    // SVG
-    ArrowIconHarga: document.querySelector("#arrow-icon-harga"),
-    ArrowIconKamar: document.querySelector("#arrow-icon-kamar"),
-    ArrowIconPenjual: document.querySelector("#arrow-icon-penjual"),
-    ArrowIconJenisProperti: document.querySelector(
-      "#arrow-icon-jenis-properti"
+    ArrowIconHarga: document.getElementById("arrow-icon-harga"),
+    ArrowIconKamar: document.getElementById("arrow-icon-kamar"),
+    ArrowIconPenjual: document.getElementById("arrow-icon-penjual"),
+    ArrowIconJenisProperti: document.getElementById(
+      "arrow-icon-jenis-properti"
     ),
-    ArrowIconJenisRumah: document.querySelector("#arrow-icon-jenis-surat"),
-    ArrowIconJscore: document.querySelector("#arrow-icon-jscore"),
+    ArrowIconJenisRumah: document.getElementById("arrow-icon-jenis-surat"),
+    ArrowIconJscore: document.getElementById("arrow-icon-jscore"),
   };
 
   const element_button = {
@@ -886,10 +881,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function disable() {
     Object.values(elements).forEach((el) => {
-      el.disabled = true;
-      el.classList.add("bg-gray-200", "text-gray-500");
-      el.classList.remove("bg-white");
+      if (el.classList) {
+        el.disabled = true;
+        el.classList.add("bg-gray-200", "text-gray-500");
+        el.classList.remove("bg-white");
+      }
     });
+
     Object.values(element_button).forEach((el) => {
       el.disabled = true;
       el.classList.add("bg-gray-200", "text-gray-500");
@@ -899,10 +897,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function enable() {
     Object.values(elements).forEach((el) => {
-      el.disabled = false;
-      el.classList.add("bg-white");
-      el.classList.remove("bg-gray-200", "text-gray-500");
+      if (el.classList) {
+        el.disabled = false;
+        el.classList.add("bg-white");
+        el.classList.remove("bg-gray-200", "text-gray-500");
+      }
     });
+
     Object.values(element_button).forEach((el) => {
       el.disabled = false;
       el.classList.remove("bg-gray-200", "text-gray-500");
@@ -910,10 +911,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // disable();
+  function hideAllContent() {
+    Object.values(elements).forEach((el) => {
+      if (el.classList) {
+        el.classList.add("hidden");
+      }
+    });
+
+    Object.values(elements).forEach((el) => {
+      if (el.id && el.id.startsWith("arrow-icon")) {
+        el.classList.remove("rotate-180");
+      }
+    });
+  }
 
   function toggleTab(tab) {
-    // console.log(tab);
     const parentDiv = tab.closest(".menus");
     const contentDiv = document.getElementById(
       tab.getAttribute("aria-controls")
@@ -924,31 +936,24 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    resetAllCards();
-
     const isActive = parentDiv.classList.contains("bg-aktif-menu");
-    tabs.forEach((t) => t.closest(".menus").classList.remove("bg-aktif-menu"));
+    elements.tabs.forEach((t) =>
+      t.closest(".menus").classList.remove("bg-aktif-menu")
+    );
     parentDiv.classList.toggle("bg-aktif-menu", !isActive);
 
     switch (tab.id) {
       case "MenuSatuTab":
         disable();
-
         if (!$(".slider-card-info").hasClass("slick-initialized")) {
           initSlickCardInfo();
         }
-
-        closeTab();
-
         break;
       case "MenuDuaTab":
         disable();
-
         break;
       case "MenuTigaTab":
         disable();
-
-        closeTabDisukai();
 
         break;
       case "MenuEmpatTab":
@@ -959,6 +964,94 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuEnamTab":
         enable();
+
+        btnHarga.addEventListener("click", function () {
+          kontenBtnHarga.classList.toggle("hidden");
+          arrowIconHarga.classList.toggle("rotate-180");
+
+          // Menyembunyikan konten kamar jika konten harga ditampilkan
+          if (!kontenBtnHarga.classList.contains("hidden")) {
+            kontenBtnKamar.classList.add("hidden");
+            kontenBtnPenjual.classList.add("hidden");
+            kontenBtnJenisProperti.classList.add("hidden");
+            kontenBtnJenisSurat.classList.add("hidden");
+            kontenBtnJscore.classList.add("hidden");
+            arrowIconKamar.classList.remove("rotate-180");
+          }
+        });
+
+        btnKamar.addEventListener("click", function () {
+          kontenBtnKamar.classList.toggle("hidden");
+          arrowIconKamar.classList.toggle("rotate-180");
+
+          // Menyembunyikan konten harga jika konten kamar ditampilkan
+          if (!kontenBtnKamar.classList.contains("hidden")) {
+            kontenBtnHarga.classList.add("hidden");
+            kontenBtnPenjual.classList.add("hidden");
+            kontenBtnJenisProperti.classList.add("hidden");
+            kontenBtnJenisSurat.classList.add("hidden");
+            kontenBtnJscore.classList.add("hidden");
+            arrowIconHarga.classList.remove("rotate-180");
+          }
+        });
+
+        btnPenjual.addEventListener("click", function () {
+          kontenBtnPenjual.classList.toggle("hidden");
+          arrowIconPenjual.classList.toggle("rotate-180");
+
+          // Menyembunyikan konten harga jika konten kamar ditampilkan
+          if (!kontenBtnPenjual.classList.contains("hidden")) {
+            kontenBtnHarga.classList.add("hidden");
+            kontenBtnKamar.classList.add("hidden");
+            kontenBtnJenisProperti.classList.add("hidden");
+            kontenBtnJenisSurat.classList.add("hidden");
+            kontenBtnJscore.classList.add("hidden");
+            arrowIconHarga.classList.remove("rotate-180");
+          }
+        });
+
+        btnJenisProperti.addEventListener("click", function () {
+          kontenBtnJenisProperti.classList.toggle("hidden");
+          arrowIconJenisProperti.classList.toggle("rotate-180");
+
+          if (!kontenBtnJenisProperti.classList.contains("hidden")) {
+            kontenBtnHarga.classList.add("hidden");
+            kontenBtnKamar.classList.add("hidden");
+            kontenBtnPenjual.classList.add("hidden");
+            kontenBtnJenisSurat.classList.add("hidden");
+            kontenBtnJscore.classList.add("hidden");
+            arrowIconHarga.classList.remove("rotate-180");
+          }
+        });
+
+        btnJenisSurat.addEventListener("click", function () {
+          kontenBtnJenisSurat.classList.toggle("hidden");
+          arrowIconJenisSurat.classList.toggle("rotate-180");
+
+          if (!kontenBtnJenisSurat.classList.contains("hidden")) {
+            kontenBtnHarga.classList.add("hidden");
+            kontenBtnKamar.classList.add("hidden");
+            kontenBtnPenjual.classList.add("hidden");
+            kontenBtnJenisProperti.classList.add("hidden");
+            kontenBtnJscore.classList.add("hidden");
+            arrowIconHarga.classList.remove("rotate-180");
+          }
+        });
+
+        btnJscore.addEventListener("click", function () {
+          kontenBtnJscore.classList.toggle("hidden");
+          arrowIconJscore.classList.toggle("rotate-180");
+
+          if (!kontenBtnJscore.classList.contains("hidden")) {
+            kontenBtnHarga.classList.add("hidden");
+            kontenBtnKamar.classList.add("hidden");
+            kontenBtnPenjual.classList.add("hidden");
+            kontenBtnJenisProperti.classList.add("hidden");
+            kontenBtnJenisSurat.classList.add("hidden");
+            arrowIconHarga.classList.remove("rotate-180");
+          }
+        });
+
         break;
       default:
         disable();
@@ -966,7 +1059,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  tabs.forEach((tab) => {
+  elements.tabs.forEach((tab) => {
     tab.addEventListener("click", () => toggleTab(tab));
   });
 });
