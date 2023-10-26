@@ -860,6 +860,14 @@ document.addEventListener("DOMContentLoaded", function () {
     btnJenisRumah: document.querySelector("#btnJenisSurat"),
     btnJscore: document.querySelector("#btnJscore"),
 
+    // konten
+    kontenBtnHarga: document.getElementById("kontenBtnHarga"),
+    kontenBtnKamar: document.getElementById("kontenBtnKamar"),
+    kontenBtnPenjual: document.getElementById("kontenBtnPenjual"),
+    kontenBtnJenisProperti: document.getElementById("kontenBtnJenisProperti"),
+    kontenBtnJenisRumah: document.getElementById("kontenBtnJenisSurat"),
+    kontenBtnJscore: document.getElementById("kontenBtnJscore"),
+
     // SVG
     ArrowIconHarga: document.querySelector("#arrow-icon-harga"),
     ArrowIconKamar: document.querySelector("#arrow-icon-kamar"),
@@ -917,6 +925,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     resetAllCards();
+    disable();
 
     const isActive = parentDiv.classList.contains("bg-aktif-menu");
     tabs.forEach((t) => t.closest(".menus").classList.remove("bg-aktif-menu"));
@@ -925,6 +934,7 @@ document.addEventListener("DOMContentLoaded", function () {
     switch (tab.id) {
       case "MenuSatuTab":
         enable();
+        // disable();
 
         if (!$(".slider-card-info").hasClass("slick-initialized")) {
           initSlickCardInfo();
