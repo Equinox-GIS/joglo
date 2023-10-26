@@ -925,7 +925,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     resetAllCards();
-    disable();
 
     const isActive = parentDiv.classList.contains("bg-aktif-menu");
     tabs.forEach((t) => t.closest(".menus").classList.remove("bg-aktif-menu"));
@@ -933,8 +932,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     switch (tab.id) {
       case "MenuSatuTab":
-        enable();
-        // disable();
+        disable();
 
         if (!$(".slider-card-info").hasClass("slick-initialized")) {
           initSlickCardInfo();
@@ -950,10 +948,17 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuTigaTab":
         disable();
 
-        // initSlickFavorit();
-
         closeTabDisukai();
 
+        break;
+      case "MenuEmpatTab":
+        disable();
+        break;
+      case "MenuLimaTab":
+        disable();
+        break;
+      case "MenuEnamTab":
+        enable();
         break;
       default:
         disable();
