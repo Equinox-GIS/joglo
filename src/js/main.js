@@ -1106,8 +1106,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Tag
 document.addEventListener("DOMContentLoaded", () => {
-  const buttons = [
+  // Tag Harga
+  const buttonsHarga = [
     document.getElementById("btn1M"),
     document.getElementById("btn2M"),
     document.getElementById("btn3M"),
@@ -1116,54 +1118,98 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const minInput = document.getElementById("minInput");
   const maxInput = document.getElementById("maxInput");
-  const priceButtons = document.querySelectorAll(".btn-price");
 
-  const deactivateButtons = () => {
-    buttons.forEach((button) =>
-      button.classList.remove("bg-blue-500", "text-white", "border-white")
-    );
+  const deactivateButtonsHarga = () => {
+    buttonsHarga.forEach((button) => button.classList.remove("active_btn_tag"));
   };
 
-  const toggleButton = (btn) => {
-    deactivateButtons(); // Deactivate all buttons first
-
-    // Now, activate the clicked button
-    btn.classList.add("bg-blue-500", "text-white", "border-white");
-
-    // Disable the input boxes
-    minInput.disabled = true;
-    maxInput.disabled = true;
-    minInput.classList.remove("bg-transparent");
-    maxInput.classList.remove("bg-transparent");
-    minInput.classList.add("bg-gray-200");
-    maxInput.classList.add("bg-gray-200");
+  const adjustInputs = (disabled, withBorder) => {
+    [minInput, maxInput].forEach((input) => {
+      input.disabled = disabled;
+      input.classList.toggle("bg-transparent", !disabled);
+      input.classList.toggle("bg-gray-200", disabled);
+      if (withBorder) {
+        input.style.borderBottom = "1px solid";
+      } else {
+        input.style.border = "none";
+      }
+    });
   };
 
-  buttons.forEach((btn) => {
+  buttonsHarga.forEach((btn) => {
     btn.addEventListener("click", () => {
-      if (!btn.classList.contains("bg-blue-500")) {
-        toggleButton(btn);
+      if (btn.classList.contains("active_btn_tag")) {
+        btn.classList.remove("active_btn_tag");
+        adjustInputs(false, true); // enable the inputs with border
+      } else {
+        deactivateButtonsHarga();
+        btn.classList.add("active_btn_tag");
+        adjustInputs(true, false); // disable the inputs without border
       }
     });
   });
 
-  minInput.addEventListener("input", () => {
-    priceButtons.forEach(
-      (button) => (button.disabled = !!minInput.value || !!maxInput.value)
-    );
-    if (minInput.value || maxInput.value) {
-      deactivateButtons();
+  const handleInputChange = () => {
+    const isValuePresent = !!minInput.value || !!maxInput.value;
+    if (isValuePresent) {
+      deactivateButtonsHarga();
+      adjustInputs(false, true); // enable the inputs with border
     }
+  };
+
+  minInput.addEventListener("input", handleInputChange);
+  maxInput.addEventListener("input", handleInputChange);
+
+  // Tag Luas
+  const allButtonsLuas = document.querySelectorAll(".btn-price");
+
+  const deactivateButtonsLuas = (buttons) => {
+    buttons.forEach((button) => {
+      button.classList.remove("active_btn_tag");
+    });
+  };
+
+  allButtonsLuas.forEach((button) => {
+    button.addEventListener("click", () => {
+      const siblingButtons =
+        button.parentElement.parentElement.querySelectorAll(".btn-price");
+
+      if (button.classList.contains("active_btn_tag")) {
+        button.classList.remove("active_btn_tag");
+      } else {
+        deactivateButtonsLuas(siblingButtons);
+
+        button.classList.add("active_btn_tag");
+      }
+    });
   });
 
-  maxInput.addEventListener("input", () => {
-    priceButtons.forEach(
-      (button) => (button.disabled = !!minInput.value || !!maxInput.value)
-    );
-    if (minInput.value || maxInput.value) {
-      deactivateButtons();
-    }
+  // Tag Kamar
+
+  const kamarButtons = document.querySelectorAll(".room-button");
+
+  const deactivateButtonsKamar = (buttons) => {
+    buttons.forEach((button) => {
+      button.classList.remove("active_btn_kamar");
+    });
+  };
+
+  kamarButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const siblingButtons =
+        button.parentElement.parentElement.querySelectorAll(".room-button");
+
+      if (button.classList.contains("active_btn_kamar")) {
+        button.classList.remove("active_btn_kamar");
+      } else {
+        deactivateButtonsKamar(siblingButtons);
+
+        button.classList.add("active_btn_kamar");
+      }
+    });
   });
+
+  //
 });
 
 // Change Mode

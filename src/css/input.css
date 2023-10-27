@@ -215,3 +215,11 @@
 .active_btn_search {
   @apply bg-blue-500 text-white;
 }
+
+.active_btn_tag {
+  @apply bg-blue-500 text-white border-white;
+}
+
+.active_btn_kamar {
+  @apply bg-blue-900 text-white border border-blue-900;
+}
