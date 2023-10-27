@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Initialize the map
 var map = new mapboxgl.Map({
   container: "mapJoglo",
-  style: "mapbox://styles/mapbox/streets-v11", // This can be your default style too, but for now, it's set to streets as given.
+  style: "mapbox://styles/mapbox/streets-v11",
   zoom: 14.5,
   center: [106.8295257, -6.210588],
   preserveDrawingBuffer: true,
@@ -147,7 +147,7 @@ if (controlGroup) {
   });
 
   controlGroup.appendChild(layerButton);
-  controlGroup.appendChild(dropdown); // Add dropdown to control group
+  controlGroup.appendChild(dropdown);
   controlGroup.appendChild(myLocationButton);
   controlGroup.appendChild(zoomInButton);
   controlGroup.appendChild(zoomOutButton);
@@ -698,6 +698,27 @@ function initSlick(element, options) {
   }
 }
 
+function addVideoEventHandlers(selector) {
+  $(selector).on(
+    "beforeChange",
+    function (event, slick, currentSlide, nextSlide) {
+      // If the current slide has a video, pause it
+      let currentVideo = $(slick.$slides[currentSlide]).find("video");
+      if (currentVideo.length) {
+        currentVideo[0].pause();
+      }
+    }
+  );
+
+  $(selector).on("afterChange", function (event, slick, currentSlide) {
+    // If the new slide has a video, play it
+    let currentVideo = $(slick.$slides[currentSlide]).find("video");
+    if (currentVideo.length) {
+      currentVideo[0].play();
+    }
+  });
+}
+
 function destroySlick(element) {
   if ($(element).hasClass("slick-initialized")) {
     $(element).slick("unslick");
@@ -806,6 +827,7 @@ function showCardInfoDetail(element) {
 
       if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
         initSlick(".slider-card-info-detail", getSliderDefaultOptions());
+        addVideoEventHandlers(".slider-card-info-detail");
       }
       break;
 

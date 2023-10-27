@@ -446,7 +446,7 @@
                   </div>
 
                   <!--  -->
-                  <div class="py-2 flex justify-center">
+                  <div class="py-3 flex justify-center">
                     <div class="grid grid-cols-4 text-xs items-center gap-2">
                       <div class="text-center flex justify-end">
                         <span
@@ -492,7 +492,7 @@
                   </div>
 
                   <!--  -->
-                  <div class="py-2 flex justify-center">
+                  <div class="py-3 flex justify-center">
                     <div class="grid grid-cols-4 text-xs items-center gap-2">
                       <div class="text-center flex justify-end">
                         <span
@@ -538,7 +538,7 @@
                   </div>
 
                   <!--  -->
-                  <div class="p-2 flex justify-center">
+                  <div class="px-2 py-3 flex justify-center">
                     <div class="inline-flex rounded-md shadow-sm" role="group">
                       <button
                         type="button"
@@ -582,7 +582,7 @@
                   </div>
 
                   <!--  -->
-                  <div class="p-2 flex justify-center">
+                  <div class="px-2 py-3 flex justify-center">
                     <div class="inline-flex rounded-md shadow-sm" role="group">
                       <button
                         type="button"
@@ -915,7 +915,7 @@
         </div>
 
         <!-- Button JScore -->
-        <div class="flex items-center px-1">
+        <div class="flex items-center px-1 hidden">
           <div class="grid grid-cols-1 relative">
             <div class="text-left">
               <button
@@ -1326,7 +1326,7 @@
                   <img
                     class="menu-icon"
                     data-menu="2"
-                    src="./src/images/add.png"
+                    src="./src/images/more.png"
                     alt=""
                   />
                 </div>
@@ -1443,6 +1443,41 @@
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
+            <!-- Menu6 -->
+            <div
+              class="flex col justify-center py-2"
+              data-tooltip-target="tooltip-right6"
+              data-tooltip-placement="right"
+            >
+              <div
+                id="MenuEnamTab"
+                data-tabs-target="#MenuLimaContent"
+                type="button"
+                role="tab"
+                aria-controls="MenuLimaContent"
+                aria-selected="false"
+                class="flex flex-col menus p-3 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+              >
+                <div class="w-6 h-6 flex justify-center items-center relative">
+                  <img
+                    class="menu-icon"
+                    data-menu="5"
+                    src="./src/images/messenger.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              id="tooltip-right6"
+              role="tooltip"
+              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+            >
+              Pesan
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
             <!--  -->
           </div>
           <!-- Map -->
@@ -1487,7 +1522,7 @@
 
                   <div class="flex flex-row items-stretch justify-between mt-1">
                     <div class="font-normal text-sm self-end">
-                      Ditemukan 500 data
+                      Menampilkan 500 data
                     </div>
 
                     <div class="">
@@ -2272,7 +2307,7 @@
                 <div class="px-3 pt-2">
                   <div class="w-full flex justify-between items-center">
                     <div class="text-md font-bold flex-shrink-0">
-                      Rumah Impian Strategis Dijual! Segera Miliki Hunian
+                      Rumahs Impian Strategis Dijual! Segera Miliki Hunian
                       Eksklusif di Lokasi Prime!
                     </div>
                     <div class="flex items-start">
@@ -2313,20 +2348,36 @@
                           Deskripsi
                         </button>
                       </li>
-                      <!-- threed -->
-                      <!-- <li class="" role="presentation">
+
+                      <li class="" role="presentation">
                         <button
                           class="inline-block px-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
-                          id="contact-tab"
-                          data-tabs-target="#contact"
+                          id="threetour-tab"
+                          data-tabs-target="#threetour"
                           type="button"
                           role="tab"
-                          aria-controls="contact"
+                          aria-controls="threetour"
                           aria-selected="false"
                         >
                           3D Tour
                         </button>
-                      </li> -->
+                      </li>
+
+                      <li class="" role="presentation">
+                        <button
+                          class="inline-block px-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                          id="spek-tab"
+                          data-tabs-target="#spek"
+                          type="button"
+                          role="tab"
+                          aria-controls="spek"
+                          aria-selected="false"
+                        >
+                          Spek
+                        </button>
+                      </li>
+
+                      <!-- threed -->
                       <li class="" role="presentation">
                         <button
                           class="inline-block px-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
@@ -2407,6 +2458,12 @@
                             <!-- Corousel -->
 
                             <div class="slider-card-info-detail w-full h-full">
+                              <div>
+                                <div class="video-wrapper">
+                                  <video src="./src/video/Serpong.mp4"></video>
+                                </div>
+                              </div>
+
                               <div class="relative">
                                 <img
                                   class="w-full h-full object-cover rounded-t-lg"
@@ -2433,7 +2490,7 @@
                                 <div class="grid grid-cols-1 gap-4">
                                   <div class="flex flex-row">
                                     <div class="flex flex-col">
-                                      <div class="flex flex-row">
+                                      <div class="flex flex-row items-center">
                                         <div>
                                           <div class="font-semibold text-2xl">
                                             Rp 11.000.000.000
@@ -2441,15 +2498,15 @@
                                         </div>
                                         <div>
                                           <div
-                                            class="text-md inline-flex font-bold flex-shrink-0 ml-1 mt-0.5"
+                                            class="text-md inline-flex font-bold flex-shrink-0 ml-1 mt-1"
                                           >
                                             <img
-                                              class="w-6 h-6 object-cover ml-2"
+                                              class="w-5 h-5 object-cover ml-2"
                                               src="./src/images/heart-off.png"
                                               alt=""
                                             />
                                             <img
-                                              class="w-5 h-5 object-cover mt-0.5 ml-3"
+                                              class="w-4 h-4 object-cover mt-0.5 ml-3"
                                               src="./src/images/share.png"
                                               alt=""
                                             />
@@ -2608,6 +2665,163 @@
                         aria-labelledby="contact-tab"
                       >
                     </div> -->
+
+                      <!-- threetour -->
+                      <div
+                        class="hidden px-4 py-2"
+                        id="threetour"
+                        role="tabpanel"
+                        aria-labelledby="threetour-tab"
+                      >
+                        3D TOUR
+                      </div>
+
+                      <!-- spek -->
+                      <div
+                        class="hidden px-4 py-2"
+                        id="spek"
+                        role="tabpanel"
+                        aria-labelledby="spek-tab"
+                      >
+                        <div class="flex flex-col">
+                          <!-- Deskripsi -->
+                          <div class="grid grid-cols-1 gap-y-1">
+                            <div class="grid grid-cols-1 text-sm">
+                              <div class="grid grid-cols-1 gap-4">
+                                <div></div>
+                                <div class="text-gray-800">
+                                  <p>
+                                    Kami mempersembahkan sebuah hunian eksklusif
+                                    yang siap untuk Anda tempati. Kenyamanan dan
+                                    kemudahan akses menjadi keunggulan utama
+                                    rumah istimewa ini. Berlokasi hanya 10 menit
+                                    dari pintu tol dalam kota, Anda bisa
+                                    menjangkau berbagai destinasi favorit tanpa
+                                    harus menghabiskan banyak waktu.
+                                  </p>
+
+                                  <div class="flex flex-col mt-2">
+                                    <p>
+                                      Akses mudah ke berbagai pusat
+                                      perbelanjaan, fasilitas pendidikan,
+                                      kesehatan, dan rekreasi.Bangunan dengan
+                                      desain modern dan penataan interior yang
+                                      elegan.Material bangunan berkualitas
+                                      tinggi yang menjamin kekuatan dan daya
+                                      tahan rumah.Berada di lingkungan yang
+                                      tenang dan hijau, cocok untuk Anda yang
+                                      mencari kedamaian.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Lokasi -->
+                          <div class="grid grid-cols-1 gap-y-1 mt-8">
+                            <div class="w-full text-md font-bold">Lokasi</div>
+
+                            <div class="grid grid-cols-1 text-sm">
+                              <div class="grid grid-cols-3 gap-4 text-gray-800">
+                                <div>Koordinat</div>
+                                <div class="col-span-2">
+                                  <a
+                                    href="https://www.google.com/maps/search/-6.155918568861097,106.82568590722656"
+                                    target="blank_"
+                                    class="text-[#007bff] font-semibold"
+                                    >-6.155918568861097, 106.82568590722656</a
+                                  >
+                                </div>
+                              </div>
+                              <!--  -->
+
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>RT/RW</div>
+                                <div class="col-span-2">007/006</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Kelurahan</div>
+                                <div class="col-span-2">Taman Sari</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Kecamatan</div>
+                                <div class="col-span-2">Taman Sari</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Wilayah</div>
+                                <div class="col-span-2">Jakarta Barat</div>
+                              </div>
+                              <!--  -->
+                            </div>
+                          </div>
+
+                          <!-- Detail -->
+                          <div class="grid grid-cols-1 gap-y-1 mt-8">
+                            <div class="w-full text-md font-bold">Detail</div>
+
+                            <div class="grid grid-cols-1 text-sm">
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Luas Tanah</div>
+                                <div class="col-span-2">140 m²</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Luas Bangunan</div>
+                                <div class="col-span-2">392 m²</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Kamar Tidur</div>
+                                <div class="col-span-2">3</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Kamar Mandi</div>
+                                <div class="col-span-2">2</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Carpots</div>
+                                <div class="col-span-2">2</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Jenis Kepemilikan</div>
+                                <div class="col-span-2">
+                                  SHM - Sertifikat Hak Milik
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Daya Listrik</div>
+                                <div class="col-span-2">2200 Watt</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Interior</div>
+                                <div class="col-span-2">Non Furnished</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Tipe Properti</div>
+                                <div class="col-span-2">Rumah</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Orientasi Bangunan</div>
+                                <div class="col-span-2">Barat Laut</div>
+                              </div>
+                              <!--  -->
+                            </div>
+                          </div>
+
+                          <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
+                        </div>
+                      </div>
 
                       <div
                         class="hidden px-4 py-2"

@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.2075683, 106.8260212]
+      },
+      "properties": {
+        "no_sk": "SK-12345",
+        "izin": "Izin A",
+        "badan_usaha": "PT. Ajib Galian",
+        "jenis_usaha": "Galian C",
+        "pelaksana": "John Doe"
+      }
+    }
+  ]
+}
