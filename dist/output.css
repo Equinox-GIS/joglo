@@ -2493,12 +2493,15 @@ input:checked + .toggle-bg {
 } */
 
 /* .video-wrapper video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  max-width: 105% !important;
   height: 100%;
 } */
+
+.slider-card-info-detail video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .bg-aktif-menu {
   border-radius: 0.5rem;

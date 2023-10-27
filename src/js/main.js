@@ -769,8 +769,8 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
-function initSlickPencarianDua() {
-  $(".slider-card-pencarian-dua")
+function initSlickFavoritDua() {
+  $(".slider-favorit-dua")
     .on("init", function () {
       setTimeout(function () {
         moveDotsToCustomContainer();
@@ -783,7 +783,7 @@ function initSlickPencarianDua() {
 
 $(document).ready(function () {
   initSlickCardInfo();
-  // initSlickPencarianDua();
+  // initSlickFavoritDua();
   // initSlickFavorit();
 });
 
@@ -820,10 +820,10 @@ function closeTabDisukai() {
 }
 
 function closeTabPencarianDua() {
-  showElement(".card-info-pencarian-dua");
-  hideElement(".card-info-detail-pencarian-dua");
+  showElement(".slider-favorit-dua");
+  hideElement(".card-info-detail-favorit-dua");
 
-  initSlickPencarianDua();
+  initSlickFavoritDua();
 }
 
 function showCardInfoDetail(element) {
@@ -842,12 +842,24 @@ function showCardInfoDetail(element) {
       hideElement(".card-info-detail-favorit");
 
       // Pencarian Dua
-      showElement(".card-info-pencarian-dua");
-      hideElement(".card-info-detail-pencarian-dua");
+      showElement(".slider-favorit-dua");
+      hideElement(".card-info-detail-favorit-dua");
 
       if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
-        initSlick(".slider-card-info-detail", getSliderDefaultOptions());
-        addVideoEventHandlers(".slider-card-info-detail");
+        setTimeout(function () {
+          initSlick(".slider-card-info-detail", getSliderDefaultOptions());
+          addVideoEventHandlers(".slider-card-info-detail");
+
+          $(".slider-card-info-detail").slick("resize");
+        }, 100);
+
+        // Play the first video (if it exists)
+        let firstVideo = $(".slider-card-info-detail").find(
+          "div.slick-current video"
+        );
+        if (firstVideo.length) {
+          firstVideo[0].play();
+        }
       }
       break;
 
@@ -861,8 +873,8 @@ function showCardInfoDetail(element) {
       hideElement(".card-info-detail-pencarian");
 
       // Pencarian Dua
-      showElement(".card-info-pencarian-dua");
-      hideElement(".card-info-detail-pencarian-dua");
+      showElement(".slider-favorit-dua");
+      hideElement(".card-info-detail-favorit-dua");
 
       if (!$(".slider-favorit").hasClass("slick-initialized")) {
         initSlick(".slider-favorit", getSliderDefaultOptions());
@@ -882,8 +894,8 @@ function showCardInfoDetail(element) {
       hideElement(".card-info-detail-pencarian");
 
       // Pencarian Dua
-      showElement(".card-info-pencarian-dua");
-      hideElement(".card-info-detail-pencarian-dua");
+      showElement(".slider-favorit-dua");
+      hideElement(".card-info-detail-favorit-dua");
 
       if (!$(".slider-card-pencarian-dua").hasClass("slick-initialized")) {
         initSlick(".slider-card-pencarian-dua", getSliderDefaultOptions());
@@ -902,8 +914,8 @@ function resetAllCards() {
   hideElement(".card-info-detail-pencarian");
   hideElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
-  hideElement(".card-info-pencarian-dua");
-  hideElement(".card-info-detail-pencarian-dua");
+  hideElement(".slider-favorit-dua");
+  hideElement(".card-info-detail-favorit-dua");
 }
 
 function hideElement(selector) {
@@ -1110,7 +1122,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuEnamTab":
         enable();
 
-        initSlickPencarianDua();
+        initSlickFavoritDua();
 
         break;
       case "MenuTujuhTab":
