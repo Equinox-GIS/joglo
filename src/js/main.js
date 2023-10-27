@@ -769,8 +769,21 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
+function initSlickPencarianDua() {
+  $(".slider-card-pencarian-dua")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderDefaultOptions());
+}
+
 $(document).ready(function () {
   initSlickCardInfo();
+  // initSlickPencarianDua();
   // initSlickFavorit();
 });
 
@@ -803,11 +816,14 @@ function closeTab() {
 function closeTabDisukai() {
   showElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
-
-  // console.log("closeTabDisukai is called");
-
-  // initSlickCardInfo();
   initSlickFavorit();
+}
+
+function closeTabPencarianDua() {
+  showElement(".card-info-pencarian-dua");
+  hideElement(".card-info-detail-pencarian-dua");
+
+  initSlickPencarianDua();
 }
 
 function showCardInfoDetail(element) {
@@ -825,6 +841,10 @@ function showCardInfoDetail(element) {
       showElement(".card-info-favorit");
       hideElement(".card-info-detail-favorit");
 
+      // Pencarian Dua
+      showElement(".card-info-pencarian-dua");
+      hideElement(".card-info-detail-pencarian-dua");
+
       if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
         initSlick(".slider-card-info-detail", getSliderDefaultOptions());
         addVideoEventHandlers(".slider-card-info-detail");
@@ -840,6 +860,10 @@ function showCardInfoDetail(element) {
       showElement(".card-info-pencarian ");
       hideElement(".card-info-detail-pencarian");
 
+      // Pencarian Dua
+      showElement(".card-info-pencarian-dua");
+      hideElement(".card-info-detail-pencarian-dua");
+
       if (!$(".slider-favorit").hasClass("slick-initialized")) {
         initSlick(".slider-favorit", getSliderDefaultOptions());
       }
@@ -847,6 +871,28 @@ function showCardInfoDetail(element) {
       if (!$(".slider-card-info-disukai").hasClass("slick-initialized")) {
         initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
       }
+      break;
+    case "3":
+      // Favorit
+      showElement(".card-info-detail-favorit");
+      hideElement(".card-info-favorit");
+
+      // Pencarian
+      showElement(".card-info-pencarian ");
+      hideElement(".card-info-detail-pencarian");
+
+      // Pencarian Dua
+      showElement(".card-info-pencarian-dua");
+      hideElement(".card-info-detail-pencarian-dua");
+
+      if (!$(".slider-card-pencarian-dua").hasClass("slick-initialized")) {
+        initSlick(".slider-card-pencarian-dua", getSliderDefaultOptions());
+      }
+
+      // if (!$(".slider-card-info-disukai").hasClass("slick-initialized")) {
+      //   initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
+      // }
+
       break;
   }
 }
@@ -856,6 +902,8 @@ function resetAllCards() {
   hideElement(".card-info-detail-pencarian");
   hideElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
+  hideElement(".card-info-pencarian-dua");
+  hideElement(".card-info-detail-pencarian-dua");
 }
 
 function hideElement(selector) {
@@ -1062,60 +1110,11 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuEnamTab":
         enable();
 
-        // elements.btnHarga.addEventListener("click", function () {
-        //   konten_element.kontenBtnHarga.classList.toggle("hidden");
-        //   svg_element.ArrowIconHarga.classList.toggle("rotate-180");
+        initSlickPencarianDua();
 
-        //   // Menyembunyikan konten kamar jika konten harga ditampilkan
-        //   if (!konten_element.kontenBtnHarga.classList.contains("hidden")) {
-        //     konten_element.kontenBtnKamar.classList.add("hidden");
-        //     konten_element.kontenBtnPenjual.classList.add("hidden");
-        //     konten_element.kontenBtnJenisProperti.classList.add("hidden");
-        //     konten_element.kontenBtnJenisSurat.classList.add("hidden");
-        //     konten_element.kontenBtnJscore.classList.add("hidden");
-        //     svg_element.arrowIconKamar.classList.remove("rotate-180");
-        //   }
-        // });
-
-        // elements.btnKamar.addEventListener("click", function () {
-        //   konten_element.kontenBtnKamar.classList.toggle("hidden");
-        //   arrowIconKamar.classList.toggle("rotate-180");
-
-        //   // Menyembunyikan konten harga jika konten kamar ditampilkan
-        //   if (!konten_element.kontenBtnKamar.classList.contains("hidden")) {
-        //     konten_element.kontenBtnHarga.classList.add("hidden");
-        //     konten_element.kontenBtnPenjual.classList.add("hidden");
-        //     konten_element.kontenBtnJenisProperti.classList.add("hidden");
-        //     konten_element.kontenBtnJenisSurat.classList.add("hidden");
-        //     konten_element.kontenBtnJscore.classList.add("hidden");
-        //     svg_element.ArrowIconKamar.classList.toggle("rotate-180");
-        //   }
-        // });
-
-        // elements.btnPenjual.addEventListener("click", function () {
-        //   hideAllContent(); // Panggil ini lebih dahulu
-        //   konten_element.kontenBtnPenjual.classList.toggle("hidden");
-        //   svg_element.ArrowIconPenjual.classList.toggle("rotate-180");
-        // });
-
-        // elements.btnJenisProperti.addEventListener("click", function () {
-        //   hideAllContent(); // Panggil ini lebih dahulu
-        //   konten_element.kontenBtnJenisProperti.classList.toggle("hidden");
-        //   svg_element.ArrowIconJenisProperti.classList.toggle("rotate-180");
-        // });
-
-        // elements.btnJenisRumah.addEventListener("click", function () {
-        //   hideAllContent(); // Panggil ini lebih dahulu
-        //   konten_element.kontenBtnJenisRumah.classList.toggle("hidden");
-        //   svg_element.ArrowIconJenisRumah.classList.toggle("rotate-180");
-        // });
-
-        // elements.btnJscore.addEventListener("click", function () {
-        //   hideAllContent(); // Panggil ini lebih dahulu
-        //   konten_element.kontenBtnJscore.classList.toggle("hidden");
-        //   svg_element.ArrowIconJscore.classList.toggle("rotate-180");
-        // });
-
+        break;
+      case "MenuTujuhTab":
+        disable();
         break;
       default:
         disable();
