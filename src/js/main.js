@@ -1319,3 +1319,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Beranda
+  const hasilElem = document.getElementById("HasilRangBeranda");
+  const controlRangeElem = document.getElementById("ControlRangeBeranda");
+
+  // Fungsi untuk mengupdate tampilan radius
+  function updateRadiusDisplay() {
+    const radius = controlRangeElem.value;
+    hasilElem.textContent = `Radius ${radius} Km`;
+  }
+
+  // Event listener untuk perubahan pada input range
+  controlRangeElem.addEventListener("input", updateRadiusDisplay);
+
+  // Panggil fungsi untuk set tampilan awal
+  updateRadiusDisplay();
+
+  // Favorit
+  const hasilElemFavorit = document.getElementById("HasilRangFavorit");
+  const controlRangeElemFavorit = document.getElementById(
+    "ControlRangeFavorit"
+  );
+
+  // Fungsi untuk mengupdate tampilan radius pada favorit
+  function updateRadiusDisplayFavorit() {
+    const radiusFavorit = controlRangeElemFavorit.value;
+    hasilElemFavorit.textContent = `Radius ${radiusFavorit} Km`;
+  }
+
+  // Event listener untuk perubahan pada input range favorit
+  controlRangeElemFavorit.addEventListener("input", updateRadiusDisplayFavorit);
+
+  // Panggil fungsi untuk set tampilan awal
+  updateRadiusDisplayFavorit();
+});
