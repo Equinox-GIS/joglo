@@ -1605,16 +1605,16 @@ input:checked + .toggle-bg {
   justify-content: space-between;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .gap-y-1 {
@@ -2564,6 +2564,39 @@ input:checked + .toggle-bg {
   background-color: rgb(35 56 118 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* 3d */
+
+.image-container {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+
+canvas {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#progress {
+  width: 0;
+  height: 5px;
+  position: fixed;
+  top: 0;
+  background: #fff;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+
+#progress.finish {
+  opacity: 0;
 }
 
 .hover\:rounded-lg:hover {

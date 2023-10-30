@@ -1485,3 +1485,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Panggil fungsi untuk set tampilan awal
   updateRadiusDisplayFavorit();
 });
+
+//
+
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("threetourberanda-tab")
+    .addEventListener("click", function () {
+      initThreeTour();
+    });
+});
