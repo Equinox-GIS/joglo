@@ -810,11 +810,30 @@ function addClickHandlerToDots() {
 $(document).ready(function () {
   // Rest of your code ...
 
+  // Beranda
   $(".slider-card-info video").on("mouseover", function () {
     $(this).get(0).play();
   });
 
   $(".slider-card-info video").on("mouseout", function () {
+    $(this).get(0).pause();
+  });
+
+  // Pencarian
+  $(".slider-favorit-dua video").on("mouseover", function () {
+    $(this).get(0).play();
+  });
+
+  $(".slider-favorit-dua video").on("mouseout", function () {
+    $(this).get(0).pause();
+  });
+
+  // Favort
+  $(".slider-favorit video").on("mouseover", function () {
+    $(this).get(0).play();
+  });
+
+  $(".slider-favorit video").on("mouseout", function () {
     $(this).get(0).pause();
   });
 });
@@ -895,7 +914,20 @@ function showCardInfoDetail(element) {
       }
 
       if (!$(".slider-card-info-disukai").hasClass("slick-initialized")) {
-        initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
+        setTimeout(function () {
+          initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
+          addVideoEventHandlers(".slider-card-info-disukai");
+
+          $(".slider-card-info-disukai").slick("resize");
+        }, 100);
+
+        // Play the first video (if it exists)
+        let firstVideo = $(".slider-card-info-disukai").find(
+          "div.slick-current video"
+        );
+        if (firstVideo.length) {
+          firstVideo[0].play();
+        }
       }
       break;
     case "3":

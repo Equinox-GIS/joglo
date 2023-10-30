@@ -1313,10 +1313,6 @@ input:checked + .toggle-bg {
   height: 10vh;
 }
 
-.h-\[68vh\] {
-  height: 68vh;
-}
-
 .h-\[78vh\] {
   height: 78vh;
 }
@@ -1774,13 +1770,13 @@ input:checked + .toggle-bg {
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
-.border-transparent {
-  border-color: transparent;
-}
-
 .border-green-500 {
   --tw-border-opacity: 1;
   border-color: rgb(14 159 110 / var(--tw-border-opacity));
+}
+
+.border-transparent {
+  border-color: transparent;
 }
 
 .bg-blue-700 {
