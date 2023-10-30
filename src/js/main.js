@@ -883,7 +883,7 @@ function showCardInfoDetail(element) {
       hideElement(".card-info-favorit");
 
       // Pencarian
-      showElement(".card-info-pencarian ");
+      showElement(".card-info-pencarian");
       hideElement(".card-info-detail-pencarian");
 
       // Pencarian Dua
@@ -904,12 +904,16 @@ function showCardInfoDetail(element) {
       hideElement(".card-info-favorit");
 
       // Pencarian
-      showElement(".card-info-pencarian ");
+      showElement(".card-info-pencarian");
       hideElement(".card-info-detail-pencarian");
 
       //
       showElement(".card-info-detail-favorit-dua");
       hideElement(".card-info-favorit-dua");
+
+      if (!$(".slider-favorit-dua").hasClass("slick-initialized")) {
+        initSlick(".slider-favorit-dua", getSliderDefaultOptions());
+      }
 
       if (!$(".slider-card-info-disukai-dua").hasClass("slick-initialized")) {
         initSlick(".slider-card-info-disukai-dua", getSliderDefaultOptions());
