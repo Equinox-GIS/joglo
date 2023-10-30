@@ -770,7 +770,7 @@ function initSlickFavorit() {
 }
 
 function initSlickFavoritDua() {
-  $(".slider-favorit-dua")
+  $(".slider-card-pencarian-dua")
     .on("init", function () {
       setTimeout(function () {
         moveDotsToCustomContainer();
@@ -807,6 +807,18 @@ function addClickHandlerToDots() {
   });
 }
 
+$(document).ready(function () {
+  // Rest of your code ...
+
+  $(".slider-card-info video").on("mouseover", function () {
+    $(this).get(0).play();
+  });
+
+  $(".slider-card-info video").on("mouseout", function () {
+    $(this).get(0).pause();
+  });
+});
+
 function closeTab() {
   // Pencarian
   showElement(".card-info-pencarian");
@@ -820,13 +832,15 @@ function closeTabDisukai() {
 }
 
 function closeTabPencarianDua() {
-  showElement(".slider-favorit-dua");
+  showElement(".card-info-favorit-dua");
   hideElement(".card-info-detail-favorit-dua");
 
   initSlickFavoritDua();
 }
 
 function showCardInfoDetail(element) {
+  // console.log(element);
+
   const activeTab = element.getAttribute("data-active-tab");
 
   resetAllCards();
@@ -842,7 +856,7 @@ function showCardInfoDetail(element) {
       hideElement(".card-info-detail-favorit");
 
       // Pencarian Dua
-      showElement(".slider-favorit-dua");
+      showElement(".card-info-favorit-dua");
       hideElement(".card-info-detail-favorit-dua");
 
       if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
@@ -873,7 +887,7 @@ function showCardInfoDetail(element) {
       hideElement(".card-info-detail-pencarian");
 
       // Pencarian Dua
-      showElement(".slider-favorit-dua");
+      showElement(".card-info-favorit-dua");
       hideElement(".card-info-detail-favorit-dua");
 
       if (!$(".slider-favorit").hasClass("slick-initialized")) {
@@ -894,7 +908,7 @@ function showCardInfoDetail(element) {
       hideElement(".card-info-detail-pencarian");
 
       // Pencarian Dua
-      showElement(".slider-favorit-dua");
+      showElement(".card-info-favorit-dua");
       hideElement(".card-info-detail-favorit-dua");
 
       if (!$(".slider-card-pencarian-dua").hasClass("slick-initialized")) {
@@ -914,7 +928,7 @@ function resetAllCards() {
   hideElement(".card-info-detail-pencarian");
   hideElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
-  hideElement(".slider-favorit-dua");
+  hideElement(".card-info-favorit-dua");
   hideElement(".card-info-detail-favorit-dua");
 }
 
