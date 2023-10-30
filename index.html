@@ -1661,6 +1661,16 @@
                               <div class="absolute h-12 w-12 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
                               </div>
+                              <button
+                                class="absolute bottom-4 end-4 w-6 h-6"
+                                onclick="event.stopPropagation(); playInFullscreen(this.parentElement.querySelector('video'))"
+                              >
+                                <img
+                                  class="w-2 h-2 object-cover"
+                                  src="./src/images/maximize.png"
+                                  alt=""
+                                />
+                              </button>
                             </div>
                             <!--  -->
                             <div class="relative">
@@ -1755,14 +1765,14 @@
                         class="flex flex-col cursor-pointer"
                         data-card-map="1534"
                         data-active-tab="1"
-                        onclick="showCardInfoDetail(this)"
+                        onclick="event.stopPropagation(); playInFullscreen(this.parentElement.querySelector('video'))"
                       >
                         <div class="w-full relative">
                           <div class="slider-card-info w-full h-full">
                             <!--  -->
                             <div class="relative">
                               <video
-                                class="w-full h-full object-cover rounded-t-lg"
+                                class="w-full h-full object-cover"
                                 loop
                                 muted
                                 preload="metadata"
@@ -1771,6 +1781,16 @@
                               <div class="absolute h-12 w-12 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
                               </div>
+                              <button
+                                class="absolute bottom-4 end-4 w-6 h-6"
+                                onclick="playInFullscreen(this.previousElementSibling)"
+                              >
+                                <img
+                                  class="w-2 h-2 object-cover"
+                                  src="./src/images/maximize.png"
+                                  alt=""
+                                />
+                              </button>
                             </div>
                             <!--  -->
                             <div class="relative">
@@ -2387,7 +2407,7 @@
                           aria-controls="profile"
                           aria-selected="true"
                         >
-                          Deskripsi
+                          Video & Foto
                         </button>
                       </li>
 
@@ -2415,7 +2435,7 @@
                           aria-controls="spekberanda"
                           aria-selected="false"
                         >
-                          Spek
+                          Info
                         </button>
                       </li>
 
@@ -2494,9 +2514,7 @@
                       >
                         <!-- Info -->
                         <div class="h-full grid grid-cols-1">
-                          <div
-                            class="w-full place-self-center mb-2 items-center"
-                          >
+                          <div class="w-full place-self-center items-center">
                             <!-- Corousel -->
 
                             <div class="slider-card-info-detail w-full h-full">
@@ -2533,7 +2551,7 @@
                             <!-- Deskripsi -->
                             <div class="grid grid-cols-1 gap-y-1">
                               <div class="grid grid-cols-1 text-sm">
-                                <div class="grid grid-cols-1 gap-4">
+                                <div class="grid grid-cols-1 gap-1">
                                   <div class="flex flex-row">
                                     <div class="flex flex-col">
                                       <div class="flex flex-row items-center">
@@ -2560,13 +2578,17 @@
                                         </div>
                                       </div>
 
-                                      <div class="text-sm text-gray-500">
+                                      <div class="text-sm text-gray-500 hidden">
                                         Perkiraan NJOP: Rp 3.000.000 / m²
                                       </div>
                                     </div>
                                   </div>
 
-                                  <div class="text-gray-800"></div>
+                                  <div class="text-sm text-gray-500">
+                                    Jl. Pondok Hijau Blok AB No. 7, RT/RW 08/07,
+                                    Pondok Indah, Kebayoran Baru, Jakarta
+                                    Selatan
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -2679,7 +2701,7 @@
 
                           <!-- Detail -->
                           <div class="grid grid-cols-1 gap-y-1 mt-8">
-                            <div class="w-full text-md font-bold">Detail</div>
+                            <div class="w-full text-md font-bold">Spek</div>
 
                             <div class="grid grid-cols-1 text-sm">
                               <div class="grid grid-cols-3 gap-4">
@@ -4292,7 +4314,10 @@
                               role="tabpanel"
                             >
                               <div>
-                                <p>Harga Wajar</p>
+                                <p>Harga Wajars</p>
+                              </div>
+                              <div class="text-sm text-gray-500">
+                                Perkiraan NJOP: Rp 3.000.000 / m²
                               </div>
                             </div>
                           </div>

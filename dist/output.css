@@ -1068,12 +1068,20 @@ input:checked + .toggle-bg {
   bottom: 0px;
 }
 
+.bottom-4 {
+  bottom: 1rem;
+}
+
 .bottom-\[60px\] {
   bottom: 60px;
 }
 
 .end-0 {
   inset-inline-end: 0px;
+}
+
+.end-4 {
+  inset-inline-end: 1rem;
 }
 
 .left-0 {
@@ -1269,6 +1277,10 @@ input:checked + .toggle-bg {
   height: 3rem;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
 .h-20 {
   height: 5rem;
 }
@@ -1351,6 +1363,10 @@ input:checked + .toggle-bg {
 
 .w-12 {
   width: 3rem;
+}
+
+.w-2 {
+  width: 0.5rem;
 }
 
 .w-20 {
@@ -1595,6 +1611,10 @@ input:checked + .toggle-bg {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-y-1 {

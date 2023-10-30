@@ -752,9 +752,42 @@ function initSlickCardInfo() {
         moveDotsToCustomContainer();
         addClickHandlerToDots();
         disableClickHandlerToDots();
+        resizePlayer($(".slider-card-info video"));
       }, 0);
     })
     .slick(getSliderDefaultOptions());
+}
+
+function resizePlayer(videos) {
+  if (!videos[0]) return;
+
+  var container = $(".slider-card-info"),
+    containerWidth = container.width(),
+    containerHeight = container.height();
+
+  videos.each(function () {
+    var video = $(this)[0];
+    var videoRatio = video.videoWidth / video.videoHeight;
+
+    var newWidth, newHeight;
+
+    // Jika rasio kontainer lebih besar dari rasio video
+    if (containerWidth / containerHeight > videoRatio) {
+      newWidth = containerWidth;
+      newHeight = containerWidth / videoRatio;
+    } else {
+      newWidth = containerHeight * videoRatio;
+      newHeight = containerHeight;
+    }
+
+    $(this)
+      .width(newWidth)
+      .height(newHeight)
+      .css({
+        left: (containerWidth - newWidth) / 2,
+        top: (containerHeight - newHeight) / 2,
+      });
+  });
 }
 
 function initSlickFavorit() {
@@ -807,6 +840,19 @@ function addClickHandlerToDots() {
   });
 }
 
+function playInFullscreen(videoElement) {
+  // console.log(videoElement);
+  if (videoElement.requestFullscreen) {
+    videoElement.requestFullscreen();
+  } else if (videoElement.webkitRequestFullscreen) {
+    videoElement.webkitRequestFullscreen();
+  } else if (videoElement.mozRequestFullScreen) {
+    videoElement.mozRequestFullScreen();
+  } else if (videoElement.msRequestFullscreen) {
+    videoElement.msRequestFullscreen();
+  }
+}
+
 $(document).ready(function () {
   // Rest of your code ...
 
@@ -818,6 +864,9 @@ $(document).ready(function () {
   $(".slider-card-info video").on("mouseout", function () {
     $(this).get(0).pause();
   });
+
+  // Resize the player
+  resizePlayer($(".slider-card-info video"));
 
   // Pencarian
   $(".slider-favorit-dua video").on("mouseover", function () {
@@ -914,6 +963,8 @@ function showCardInfoDetail(element) {
       }
 
       if (!$(".slider-card-info-disukai").hasClass("slick-initialized")) {
+        initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
+
         setTimeout(function () {
           initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
           addVideoEventHandlers(".slider-card-info-disukai");
