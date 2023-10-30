@@ -1427,7 +1427,7 @@
                   <img
                     class="menu-icon"
                     data-menu="5"
-                    src="./src/images/pressure-gauge.png"
+                    src="./src/images/thermometer.png"
                     alt=""
                   />
                 </div>
@@ -1558,8 +1558,8 @@
                     <div class="font-normal text-sm self-end">
                       Menampilkan 500 data
                     </div>
-                    <!--
-                    <div class="image-container"></div>
+
+                    <!-- <div class="image-container"></div>
                     <div id="progress"></div> -->
 
                     <div class="">
@@ -1653,21 +1653,13 @@
                         <div class="w-full relative">
                           <div class="slider-card-info w-full h-full">
                             <!--  -->
-
-                              <div class="item youtube">
-     <iframe class="embed-player slide-media" width="980" height="520" src="https://www.youtube.com/embed/rAC599zqLaI?enablejsapi=1&controls=0&fs=0&iv_load_policy=3&rel=0&showinfo=0&loop=1&playlist=rAC599zqLaI&start=1" frameborder="0" allowfullscreen></iframe>
-    <p class="caption">YouTube</p>
-  </div>
-
-
-  <!--  -->
-                            <!-- <div class="relative">
+                            <div class="relative">
                               <video
                                 class="w-full h-full object-cover rounded-t-lg"
                                 loop
                                 muted
                                 preload="metadata"
-                                src="./src/video/Serpong.mp4"
+                                src="./src/video/Kemang.mp4"
                               ></video>
                               <div class="absolute h-12 w-12 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
@@ -1682,7 +1674,7 @@
                                   alt=""
                                 />
                               </button>
-                            </div> -->
+                            </div>
                             <!--  -->
                             <div class="relative">
                               <img
@@ -1776,25 +1768,25 @@
                         class="flex flex-col cursor-pointer"
                         data-card-map="1534"
                         data-active-tab="1"
-                        onclick="event.stopPropagation(); playInFullscreen(this.parentElement.querySelector('video'))"
+                        onclick="showCardInfoDetail(this)"
                       >
                         <div class="w-full relative">
                           <div class="slider-card-info w-full h-full">
                             <!--  -->
                             <div class="relative">
                               <video
-                                class="w-full h-full object-cover"
+                                class="w-full h-full object-cover rounded-t-lg"
                                 loop
                                 muted
                                 preload="metadata"
-                                src="./src/video/Serpong.mp4"
+                                src="./src/video/Kemang.mp4"
                               ></video>
                               <div class="absolute h-12 w-12 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
                               </div>
                               <button
                                 class="absolute bottom-4 end-4 w-6 h-6"
-                                onclick="playInFullscreen(this.previousElementSibling)"
+                                onclick="event.stopPropagation(); playInFullscreen(this.parentElement.querySelector('video'))"
                               >
                                 <img
                                   class="w-2 h-2 object-cover"
@@ -1807,7 +1799,7 @@
                             <div class="relative">
                               <img
                                 class="w-full h-full object-cover rounded-t-lg"
-                                src="./src/images/Hunian/Rmh2/rumahb1.jpg"
+                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
                                 alt=""
                               />
                               <div class="absolute h-12 w-12 top-0 end-0 ...">
@@ -1831,14 +1823,20 @@
                                   </h5>
 
                                   <img
-                                    class="ml-3 -mt-0.5 w-4 h-4 object-cover"
-                                    src="./src/images/heart-off.png"
+                                    class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                    src="./src/images/heart-on.png"
                                     alt=""
                                   />
 
                                   <img
                                     class="ml-3 -mt-0.5 w-4 h-4 object-cover"
                                     src="./src/images/share.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                    src="./src/images/badge3d.svg"
                                     alt=""
                                   />
                                 </div>
@@ -2625,9 +2623,6 @@
                         aria-labelledby="threetourberanda-tab"
                       >
                         3D TOURss
-
-                        <!-- <div class="image-container"></div>
-                        <div id="progress"></div> -->
                       </div>
 
                       <!-- spekberanda -->
@@ -2672,9 +2667,9 @@
                             </div>
                           </div>
 
-                          <!-- Detail -->
+                          <!-- Lokasi -->
                           <div class="grid grid-cols-1 gap-y-1 mt-0">
-                            <div class="w-full text-md font-bold">Spek</div>
+                            <div class="w-full text-md font-bold">Lokasi</div>
 
                             <div class="grid grid-cols-1 text-sm">
                               <div class="grid grid-cols-3 gap-4 text-gray-800">
@@ -2689,6 +2684,35 @@
                                 </div>
                               </div>
                               <!--  -->
+
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>RT/RW</div>
+                                <div class="col-span-2">007/006</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Kelurahan</div>
+                                <div class="col-span-2">Taman Sari</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Kecamatan</div>
+                                <div class="col-span-2">Taman Sari</div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-3 gap-4">
+                                <div>Wilayah</div>
+                                <div class="col-span-2">Jakarta Barat</div>
+                              </div>
+                              <!--  -->
+                            </div>
+                          </div>
+
+                          <!-- Detail -->
+                          <div class="grid grid-cols-1 gap-y-1 mt-8">
+                            <div class="w-full text-md font-bold">Spek</div>
+
+                            <div class="grid grid-cols-1 text-sm">
                               <div class="grid grid-cols-3 gap-4">
                                 <div>Luas Tanah</div>
                                 <div class="col-span-2">140 m²</div>

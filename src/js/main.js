@@ -841,7 +841,7 @@ function addClickHandlerToDots() {
 }
 
 function playInFullscreen(videoElement) {
-  // console.log(videoElement);
+  console.log(videoElement);
   if (videoElement.requestFullscreen) {
     videoElement.requestFullscreen();
   } else if (videoElement.webkitRequestFullscreen) {
@@ -1486,12 +1486,10 @@ document.addEventListener("DOMContentLoaded", function () {
   updateRadiusDisplayFavorit();
 });
 
-//
-
-document.addEventListener("DOMContentLoaded", function () {
-  document
-    .getElementById("threetourberanda-tab")
-    .addEventListener("click", function () {
-      initThreeTour();
-    });
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   document
+//     .getElementById("threetourberanda-tab")
+//     .addEventListener("click", function () {
+//       initThreeTour();
+//     });
+// });
