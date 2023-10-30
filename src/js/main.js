@@ -770,7 +770,7 @@ function initSlickFavorit() {
 }
 
 function initSlickFavoritDua() {
-  $(".slider-card-pencarian-dua")
+  $(".slider-favorit-dua")
     .on("init", function () {
       setTimeout(function () {
         moveDotsToCustomContainer();
@@ -907,17 +907,13 @@ function showCardInfoDetail(element) {
       showElement(".card-info-pencarian ");
       hideElement(".card-info-detail-pencarian");
 
-      // Pencarian Dua
-      showElement(".card-info-favorit-dua");
-      hideElement(".card-info-detail-favorit-dua");
+      //
+      showElement(".card-info-detail-favorit-dua");
+      hideElement(".card-info-favorit-dua");
 
-      if (!$(".slider-card-pencarian-dua").hasClass("slick-initialized")) {
-        initSlick(".slider-card-pencarian-dua", getSliderDefaultOptions());
+      if (!$(".slider-card-info-disukai-dua").hasClass("slick-initialized")) {
+        initSlick(".slider-card-info-disukai-dua", getSliderDefaultOptions());
       }
-
-      // if (!$(".slider-card-info-disukai").hasClass("slick-initialized")) {
-      //   initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
-      // }
 
       break;
   }
