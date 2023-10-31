@@ -1189,14 +1189,6 @@ input:checked + .toggle-bg {
   margin-left: 0.75rem;
 }
 
-.mr-1 {
-  margin-right: 0.25rem;
-}
-
-.mr-1\.5 {
-  margin-right: 0.375rem;
-}
-
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -1865,11 +1857,6 @@ input:checked + .toggle-bg {
      object-fit: cover;
 }
 
-.object-fill {
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
 .p-0 {
   padding: 0px;
 }
@@ -2012,10 +1999,6 @@ input:checked + .toggle-bg {
 
 .pr-1 {
   padding-right: 0.25rem;
-}
-
-.pr-1\.5 {
-  padding-right: 0.375rem;
 }
 
 .pr-2 {
