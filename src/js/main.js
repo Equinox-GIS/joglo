@@ -864,8 +864,6 @@ $(document).ready(function () {
   $(".slider-card-info video").on("mouseout", function () {
     $(this).get(0).pause();
   });
-
-  // Resize the player
   resizePlayer($(".slider-card-info video"));
 
   // Favorit
@@ -876,27 +874,17 @@ $(document).ready(function () {
   $(".slider-favorit video").on("mouseout", function () {
     $(this).get(0).pause();
   });
-
-  // Resize the player
   resizePlayer($(".slider-favorit video"));
 
-  // // Pencarian
-  // $(".slider-favorit-dua video").on("mouseover", function () {
-  //   $(this).get(0).play();
-  // });
+  // Pencarian
+  $(".slider-favorit-dua video").on("mouseover", function () {
+    $(this).get(0).play();
+  });
 
-  // $(".slider-favorit-dua video").on("mouseout", function () {
-  //   $(this).get(0).pause();
-  // });
-
-  // // Favort
-  // $(".slider-favorit video").on("mouseover", function () {
-  //   $(this).get(0).play();
-  // });
-
-  // $(".slider-favorit video").on("mouseout", function () {
-  //   $(this).get(0).pause();
-  // });
+  $(".slider-favorit-dua video").on("mouseout", function () {
+    $(this).get(0).pause();
+  });
+  resizePlayer($(".slider-favorit-dua video"));
 });
 
 function closeTab() {
@@ -1012,6 +1000,21 @@ function showCardInfoDetail(element) {
 
       if (!$(".slider-card-info-disukai-dua").hasClass("slick-initialized")) {
         initSlick(".slider-card-info-disukai-dua", getSliderDefaultOptions());
+
+        setTimeout(function () {
+          initSlick(".slider-card-info-disukai-dua", getSliderDefaultOptions());
+          addVideoEventHandlers(".slider-card-info-disukai-dua");
+
+          $(".slider-card-info-disukai-dua").slick("resize");
+        }, 100);
+
+        // Play the first video (if it exists)
+        let firstVideo = $(".slider-card-info-disukai-dua").find(
+          "div.slick-current video"
+        );
+        if (firstVideo.length) {
+          firstVideo[0].play();
+        }
       }
 
       break;

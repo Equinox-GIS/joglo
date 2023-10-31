@@ -1269,10 +1269,6 @@ input:checked + .toggle-bg {
   height: 3rem;
 }
 
-.h-2 {
-  height: 0.5rem;
-}
-
 .h-20 {
   height: 5rem;
 }
@@ -1337,6 +1333,10 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
 .min-h-\[180px\] {
   min-height: 180px;
 }
@@ -1355,10 +1355,6 @@ input:checked + .toggle-bg {
 
 .w-12 {
   width: 3rem;
-}
-
-.w-2 {
-  width: 0.5rem;
 }
 
 .w-20 {
@@ -1431,6 +1427,10 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
+}
+
+.w-2 {
+  width: 0.5rem;
 }
 
 .min-w-\[200px\] {
