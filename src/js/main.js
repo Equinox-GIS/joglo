@@ -983,16 +983,16 @@ function showCardInfoDetail(element) {
       break;
     case "3":
       // Favorit
-      showElement(".card-info-detail-favorit");
-      hideElement(".card-info-favorit");
+      showElement(".card-info-favorit");
+      hideElement(".card-info-detail-favorit");
 
       // Pencarian
-      showElement(".card-info-pencarian");
+      ".card-info-pencarian";
       hideElement(".card-info-detail-pencarian");
 
-      //
-      showElement(".card-info-detail-favorit-dua");
+      // Pencarian Dua
       hideElement(".card-info-favorit-dua");
+      showElement(".card-info-detail-favorit-dua");
 
       if (!$(".slider-favorit-dua").hasClass("slick-initialized")) {
         initSlick(".slider-favorit-dua", getSliderDefaultOptions());
