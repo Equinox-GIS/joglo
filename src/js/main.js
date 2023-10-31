@@ -868,16 +868,7 @@ $(document).ready(function () {
   // Resize the player
   resizePlayer($(".slider-card-info video"));
 
-  // Pencarian
-  $(".slider-favorit-dua video").on("mouseover", function () {
-    $(this).get(0).play();
-  });
-
-  $(".slider-favorit-dua video").on("mouseout", function () {
-    $(this).get(0).pause();
-  });
-
-  // Favort
+  // Favorit
   $(".slider-favorit video").on("mouseover", function () {
     $(this).get(0).play();
   });
@@ -885,6 +876,27 @@ $(document).ready(function () {
   $(".slider-favorit video").on("mouseout", function () {
     $(this).get(0).pause();
   });
+
+  // Resize the player
+  resizePlayer($(".slider-favorit video"));
+
+  // // Pencarian
+  // $(".slider-favorit-dua video").on("mouseover", function () {
+  //   $(this).get(0).play();
+  // });
+
+  // $(".slider-favorit-dua video").on("mouseout", function () {
+  //   $(this).get(0).pause();
+  // });
+
+  // // Favort
+  // $(".slider-favorit video").on("mouseover", function () {
+  //   $(this).get(0).play();
+  // });
+
+  // $(".slider-favorit video").on("mouseout", function () {
+  //   $(this).get(0).pause();
+  // });
 });
 
 function closeTab() {
