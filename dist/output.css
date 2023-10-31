@@ -1068,8 +1068,8 @@ input:checked + .toggle-bg {
   bottom: 0px;
 }
 
-.bottom-4 {
-  bottom: 1rem;
+.bottom-2 {
+  bottom: 0.5rem;
 }
 
 .bottom-\[60px\] {
@@ -1080,8 +1080,8 @@ input:checked + .toggle-bg {
   inset-inline-end: 0px;
 }
 
-.end-4 {
-  inset-inline-end: 1rem;
+.end-2 {
+  inset-inline-end: 0.5rem;
 }
 
 .left-0 {
@@ -1098,14 +1098,6 @@ input:checked + .toggle-bg {
 
 .top-8 {
   top: 2rem;
-}
-
-.end-2 {
-  inset-inline-end: 0.5rem;
-}
-
-.bottom-2 {
-  bottom: 0.5rem;
 }
 
 .z-10 {
