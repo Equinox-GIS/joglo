@@ -1333,10 +1333,6 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
-.h-2 {
-  height: 0.5rem;
-}
-
 .min-h-\[180px\] {
   min-height: 180px;
 }
@@ -1427,10 +1423,6 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
-}
-
-.w-2 {
-  width: 0.5rem;
 }
 
 .min-w-\[200px\] {
@@ -1780,11 +1772,6 @@ input:checked + .toggle-bg {
 .border-gray-700 {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
-}
-
-.border-green-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(14 159 110 / var(--tw-border-opacity));
 }
 
 .border-transparent {
