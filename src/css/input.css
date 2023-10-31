@@ -242,6 +242,12 @@
   @apply bg-blue-900 text-white border border-blue-900;
 }
 
+.video-wrapper video {
+  height: 58vh;
+  width: 100vh;
+  object-fit: cover;
+}
+
 /* 3d */
 
 .image-container {

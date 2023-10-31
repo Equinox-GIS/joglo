@@ -440,7 +440,7 @@ var carousel = document.getElementById("animation-carousel");
 
 // Tombol untuk deskripsi, sarana, dan indeks
 var btnDeskripsi = document.getElementById("profile-tab");
-var btnSarana = document.getElementById("dashboard-tab");
+var btnSarana = document.getElementById("dashboardberanda-tab");
 var btnIndeks = document.getElementById("settings-tab");
 // shp
 var btnShp = document.getElementById("shp-tab");
