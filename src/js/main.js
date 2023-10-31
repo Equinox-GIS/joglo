@@ -557,6 +557,50 @@ var myRadarChartFavorit = new Chart(ctx1, {
   },
 });
 
+var ctx1 = document.getElementById("myRadarChartPencarian").getContext("2d");
+var myRadarChartFavorit = new Chart(ctx1, {
+  type: "radar",
+  data: {
+    labels: [
+      "Pengelolaan Limbah",
+      "Topografi",
+      "Kebencanaan",
+      "Keseterdian Air",
+      "Kualitas Vegetasi",
+    ],
+    datasets: [
+      {
+        data: [3, 5, 2, 4, 3],
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      r: {
+        beginAtZero: true,
+        max: 5,
+        stepSize: 1, // Menambahkan ini agar tidak ada angka desimal
+        ticks: {
+          precision: 0, // Menambahkan ini agar tidak ada angka desimal
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false, // Menyembunyikan legenda
+      },
+      tooltip: {
+        enabled: true, // Menyembunyikan tooltip
+      },
+    },
+  },
+});
+
 var ctx2 = document.getElementById("mySecondRadarChart").getContext("2d");
 var mySecondRadarChart = new Chart(ctx2, {
   type: "radar",
@@ -650,6 +694,45 @@ var mySecondRadarChartFavorit = new Chart(ctx2, {
 
 // Menambahkan chart radar ketiga untuk Investment Index
 var ctx3 = document.getElementById("myInvestmentIndexChart").getContext("2d");
+var myInvestmentIndexChart = new Chart(ctx3, {
+  type: "radar",
+  data: {
+    labels: ["Properti", "Saham", "Obligasi", "Emas", "Reksadana"],
+    datasets: [
+      {
+        data: [4, 3, 2, 5, 3],
+        backgroundColor: "rgba(153, 102, 255, 0.2)",
+        borderColor: "rgba(153, 102, 255, 1)",
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      r: {
+        beginAtZero: true,
+        max: 5,
+        stepSize: 1,
+        ticks: {
+          precision: 0,
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: true,
+      },
+    },
+  },
+});
+var ctx3 = document
+  .getElementById("myInvestmentIndexChartPencarian")
+  .getContext("2d");
 var myInvestmentIndexChart = new Chart(ctx3, {
   type: "radar",
   data: {
@@ -1508,3 +1591,5 @@ document.addEventListener("DOMContentLoaded", function () {
 //       initThreeTour();
 //     });
 // });
+
+$("body>.tooltip").remove();
