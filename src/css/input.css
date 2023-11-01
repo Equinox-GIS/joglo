@@ -17,8 +17,8 @@
 
 /* Navigator MapboxGL */
 .mapboxgl-ctrl-top-right {
-  right: 0.5vh !important;
-  top: 59vh !important;
+  right: 1vh !important;
+  top: 55vh !important;
 }
 
 .mapboxgl-ctrl-group {
@@ -29,40 +29,47 @@
   box-shadow: none !important;
 }
 
-/* Layer, Location, and Stick Icons */
-.btn-layer,
-.btn-location,
-.btn-stick {
+/* Layer and Location Icons */
+.btn-layer {
+  background-image: url("../src/images/layer-map.png");
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
-  background-size: cover !important;
+  background-size: inherit !important;
+  width: 65% !important;
+  height: 65% !important;
+}
+
+.btn-location {
+  background-image: url("../src/images/my-location.png");
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  background-size: inherit !important;
+  width: 65% !important;
+  height: 65% !important;
+}
+
+.btn-stick {
+  background-image: url("../src/images/stick-map.png") !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  background-size: inherit !important;
   width: 60% !important;
   height: 60% !important;
 }
 
-.btn-layer {
-  background-image: url("../src/images/layers.png") !important;
-  padding: 10px !important;
-}
-
-.btn-location {
-  background-image: url("../src/images/my-location.png") !important;
-}
-
-.btn-stick {
-  background-image: url("../src/images/stick.png") !important;
-}
-
 .mapboxgl-ctrl-group button {
   background-color: white !important;
-  width: 25px !important;
-  height: 25px !important;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  width: 32px !important;
+  height: 32px !important;
+  /* box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); */
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
 }
+
 /*  */
 
 .custom-button-wrapper {
