@@ -2346,7 +2346,7 @@ input:checked + .toggle-bg {
   height: 60% !important;
 }
 
-.my-location-button-dua .mapboxgl-ctrl-icon {
+.custom-button-mapbox-dua .mapboxgl-ctrl-icon {
   background-image: url("../src/images/stick.png") !important;
   background-position: 50% !important;
   background-repeat: no-repeat !important;

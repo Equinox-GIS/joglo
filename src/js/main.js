@@ -113,16 +113,16 @@ if (controlGroup) {
   layerButton.innerHTML =
     '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Layer"></span>';
 
-  var myLocationButtonDua = document.createElement("button");
-  myLocationButtonDua.className =
-    "mapboxgl-ctrl-icon custom-control-button my-location-button-dua";
-  myLocationButtonDua.setAttribute("type", "button");
-  myLocationButtonDua.setAttribute("aria-label", "My Location");
-  myLocationButtonDua.innerHTML =
-    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="My Location"></span>';
+  var customButtonMapboxDua = document.createElement("button");
+  customButtonMapboxDua.className =
+    "mapboxgl-ctrl-icon custom-control-button custom-button-mapbox-dua";
+  customButtonMapboxDua.setAttribute("type", "button");
+  customButtonMapboxDua.setAttribute("aria-label", "Custom Button Mapbox Dua");
+  customButtonMapboxDua.innerHTML =
+    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Custom Button Mapbox Dua"></span>';
 
-  myLocationButtonDua.addEventListener("click", function () {
-    alert("My Location button clicked!");
+  customButtonMapboxDua.addEventListener("click", function () {
+    alert("Custom Button Mapbox Dua clicked!");
   });
 
   // Create dropdown
@@ -160,7 +160,7 @@ if (controlGroup) {
 
   controlGroup.appendChild(layerButton);
   controlGroup.appendChild(dropdown);
-  controlGroup.appendChild(myLocationButtonDua);
+  controlGroup.appendChild(customButtonMapboxDua);
   controlGroup.appendChild(myLocationButton);
   controlGroup.appendChild(zoomInButton);
   controlGroup.appendChild(zoomOutButton);
