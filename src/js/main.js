@@ -983,10 +983,21 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
+function stopVideoInWrapper(wrapperSelector) {
+  let videoElement = $(wrapperSelector).find("video");
+  if (videoElement.length) {
+    videoElement[0].pause();
+    videoElement[0].currentTime = 0; // Untuk mereset video ke awal
+  }
+}
+
 function closeTab() {
   // Pencarian
   showElement(".card-info-pencarian");
   hideElement(".card-info-detail-pencarian");
+
+  // Stop the video within video-wrapper-autoplay (if it exists)
+  stopVideoInWrapper(".video-wrapper-autoplay");
 }
 
 function closeTabDisukai() {
@@ -1000,6 +1011,13 @@ function closeTabPencarianDua() {
   hideElement(".card-info-detail-favorit-dua");
 
   initSlickFavoritDua();
+}
+
+function playVideoInWrapper(wrapperSelector) {
+  let videoElement = $(wrapperSelector).find("video");
+  if (videoElement.length) {
+    videoElement[0].play();
+  }
 }
 
 function showCardInfoDetail(element) {
@@ -1039,6 +1057,11 @@ function showCardInfoDetail(element) {
           firstVideo[0].play();
         }
       }
+
+      //
+      playVideoInWrapper(".video-wrapper-autoplay");
+
+      //
       break;
 
     case "2":
@@ -1076,6 +1099,12 @@ function showCardInfoDetail(element) {
           firstVideo[0].play();
         }
       }
+
+      //
+      playVideoInWrapper(".video-wrapper-autoplay");
+
+      //
+
       break;
     case "3":
       // Favorit
@@ -1112,6 +1141,11 @@ function showCardInfoDetail(element) {
           firstVideo[0].play();
         }
       }
+
+      //
+      playVideoInWrapper(".video-wrapper-autoplay");
+
+      //
 
       break;
   }
@@ -1251,11 +1285,13 @@ document.addEventListener("DOMContentLoaded", function () {
       el.classList.add("bg-gray-200", "text-gray-500");
       el.classList.remove("bg-blue-500", "text-white", "active_btn_search");
     });
+
+    document.getElementById("btnSaveInstagram").src =
+      "./src/images/save-instagram-off.png";
   }
 
   function enable() {
     Object.values(elements).forEach((el) => {
-      // console.log(el);
       if (el.classList) {
         el.disabled = false;
         el.classList.add("bg-white");
@@ -1268,6 +1304,9 @@ document.addEventListener("DOMContentLoaded", function () {
       el.classList.remove("bg-gray-200", "text-gray-500");
       el.classList.add("active_btn_search");
     });
+
+    document.getElementById("btnSaveInstagram").src =
+      "./src/images/save-instagram-on.png";
   }
 
   function hideAllContent() {

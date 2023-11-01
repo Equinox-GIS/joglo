@@ -1225,12 +1225,12 @@
           </button>
         </div>
         <div
-          class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer border-gray-100"
+          class="flex justify-center items-center flex-col w-11 h-11 cursor-pointer border-gray-100"
         >
           <div class="w-7 h-7 flex justify-center items-center relative">
             <img
-              class="menu-icon"
-              data-menu="0"
+            id="btnSaveInstagram"
+              class=""
               src="./src/images/save-instagram-off.png"
               alt=""
             />
@@ -1810,6 +1810,7 @@
                               <video
                                 class="w-full h-full object-cover rounded-t-lg"
                                 loop
+                                muted
                                 preload="metadata"
                                 src="./src/video/Video1.mp4"
                               ></video>
@@ -2439,9 +2440,10 @@
 
                             <div class="slider-card-info-detail w-full h-full">
                               <div>
-                                <div class="video-wrapper">
+                                <div
+                                  class="video-wrapper video-wrapper-autoplay"
+                                >
                                   <video
-                                    autoplay
                                     controls
                                     src="./src/video/Video1.mp4"
                                   ></video>
@@ -2605,11 +2607,11 @@
 
                               <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Kamar Tidur</div>
-                                <div class="col-span-4">2</div>
+                                <div class="col-span-4">2 + 1</div>
                               </div>
                               <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Kamar Mandi</div>
-                                <div class="col-span-4">1</div>
+                                <div class="col-span-4">1 + 1</div>
                               </div>
 
                               <div>&nbsp;</div>
@@ -2622,6 +2624,19 @@
                               <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Arah</div>
                                 <div class="col-span-4">Barat Lauts</div>
+                              </div>
+
+                              <div>&nbsp;</div>
+
+                              <div class="grid grid-cols-5 gap-4 text-gray-800">
+                                <div>Lain-lain</div>
+                                <div class="col-span-4 flex-row">
+                                  <div>Carport 2 mobil</div>
+                                  <div>Swimming pool</div>
+                                  <div>IMB</div>
+                                  <div>Gated cluster</div>
+                                  <div>Bangunan 2 lantai</div>
+                                </div>
                               </div>
 
                               <div>&nbsp;</div>
