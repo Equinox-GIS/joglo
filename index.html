@@ -1239,9 +1239,10 @@
             role="tablist"
           >
             <!-- Menu1 -->
+
             <div
-              class="flex col justify-center py-2"
-              data-tooltip-target="menu-beli"
+              class="flex col justify-center py-1"
+              data-tooltip-target="menu-beranda"
               data-tooltip-placement="right"
             >
               <div
@@ -1250,22 +1251,21 @@
                 type="button"
                 role="tab"
                 aria-controls="MenuSatuContent"
-                aria-selected="true"
-                class="flex flex-col menus p-3 cursor-pointer bg-aktif-menu hover:bg-slate-200 hover:rounded-lg"
+                aria-selected="false"
+                class="bg-aktif-menu flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
               >
                 <div class="w-6 h-6 flex justify-center items-center relative">
                   <img
                     class="menu-icon"
-                    data-menu="1"
+                    data-menu="0"
                     src="./src/images/home_menu.png"
                     alt=""
                   />
                 </div>
               </div>
             </div>
-
             <div
-              id="menu-beli"
+              id="menu-beranda"
               role="tooltip"
               class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
             >
@@ -1274,7 +1274,7 @@
             </div>
 
             <!-- Menu6 -->
-            <div
+            <!-- <div
               class="flex col justify-center py-2"
               data-tooltip-target="menu-pencarian"
               data-tooltip-placement="right"
@@ -1305,12 +1305,13 @@
             >
               Pencarian
               <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
+            </div> -->
 
             <!-- Menu2 -->
-            <!-- <div
-              class="flex col justify-center py-2"
-              data-tooltip-target="tooltip-right"
+            <!-- Pasang Iklan -->
+            <div
+              class="flex col justify-center py-1"
+              data-tooltip-target="menu-pasang-iklan"
               data-tooltip-placement="right"
             >
               <div
@@ -1320,12 +1321,12 @@
                 role="tab"
                 aria-controls="MenuDuaContent"
                 aria-selected="false"
-                class="flex flex-col menus p-3 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
               >
-                <div class="w-5 h-5 flex justify-center items-center relative">
+                <div class="w-6 h-6 flex justify-center items-center relative">
                   <img
                     class="menu-icon"
-                    data-menu="2"
+                    data-menu="0"
                     src="./src/images/more.png"
                     alt=""
                   />
@@ -1333,17 +1334,20 @@
               </div>
             </div>
             <div
-              id="tooltip-right"
+              id="menu-pasang-iklan"
               role="tooltip"
               class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
             >
               Pasang Iklan
               <div class="tooltip-arrow" data-popper-arrow></div>
-            </div> -->
+            </div>
+
             <!-- Menu3 -->
+            <!-- MenuFavorit -->
+
             <div
-              class="flex col justify-center py-2"
-              data-tooltip-target="tooltip-right2"
+              class="flex col justify-center py-1"
+              data-tooltip-target="menu-favorit"
               data-tooltip-placement="right"
             >
               <div
@@ -1353,12 +1357,12 @@
                 role="tab"
                 aria-controls="MenuTigaContent"
                 aria-selected="false"
-                class="flex flex-col menus p-3 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
               >
-                <div class="w-5 h-5 flex justify-center items-center relative">
+                <div class="w-6 h-6 flex justify-center items-center relative">
                   <img
                     class="menu-icon"
-                    data-menu="3"
+                    data-menu="2"
                     src="./src/images/favorite.png"
                     alt=""
                   />
@@ -1366,7 +1370,7 @@
               </div>
             </div>
             <div
-              id="tooltip-right2"
+              id="menu-favorit"
               role="tooltip"
               class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
             >
@@ -1407,6 +1411,41 @@
               Agen
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div> -->
+
+            <!-- Menu 4 -->
+            <!-- Agent -->
+            <div
+              class="flex col justify-center py-1"
+              data-tooltip-target="tooltip-right4"
+              data-tooltip-placement="right"
+            >
+              <div
+                id="MenuTigaTab"
+                data-tabs-target="#MenuEmpatContent"
+                type="button"
+                role="tab"
+                aria-controls="MenuEmpatContent"
+                aria-selected="false"
+                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+              >
+                <div class="w-6 h-6 flex justify-center items-center relative">
+                  <img
+                    class="menu-icon"
+                    data-menu="3"
+                    src="./src/images/real-estate-agent.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              id="tooltip-right4"
+              role="tooltip"
+              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+            >
+              Agen
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
 
             <!-- Menu5 -->
             <!-- <div
@@ -1654,23 +1693,12 @@
                               <video
                                 class="w-full h-full object-cover rounded-t-lg"
                                 loop
-                                muted
                                 preload="metadata"
                                 src="./src/video/Video1.mp4"
                               ></video>
                               <div class="absolute h-12 w-12 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
                               </div>
-                              <button
-                                class="absolute bottom-2 end-2 w-6 h-6 border border-red-500"
-                                onclick="event.stopPropagation(); playInFullscreen(this.parentElement.querySelector('video'))"
-                              >
-                                <img
-                                  class="w-full h-full object-cover"
-                                  src="./src/images/maximize.png"
-                                  alt=""
-                                />
-                              </button>
                             </div>
                             <!--  -->
                             <div class="relative">
@@ -2276,9 +2304,7 @@
                 </div>
 
                 <!-- Konten Card Info Details Disukai -->
-                <div
-                  class="w-full h-full card-disukai-detail overflow-y-auto hide-scrollbar"
-                >
+                <div class="w-full h-full card-disukai-detail">
                   <div class="flex flex-col h-full">
                     <!-- Tabs -->
 
@@ -2299,7 +2325,7 @@
                                 <div class="video-wrapper">
                                   <video
                                     autoplay
-                                    muted
+                                    controls
                                     src="./src/video/Video1.mp4"
                                   ></video>
                                 </div>
@@ -2308,7 +2334,7 @@
                               <div class="relative">
                                 <div class="video-wrapper">
                                   <img
-                                    class="w-full h-full object-cover rounded-t-lg"
+                                    class="w-full h-full object-cover"
                                     src="./src/images/Hunian/Rmh2/rumahb1.jpg"
                                     alt=""
                                   />
@@ -2317,7 +2343,7 @@
 
                               <div class="relative">
                                 <img
-                                  class="w-full h-full object-cover rounded-t-lg"
+                                  class="w-full h-full object-cover"
                                   src="./src/images/Hunian/Rmh2/rumahb2.jpg"
                                   alt=""
                                 />
@@ -2429,56 +2455,56 @@
                           <!-- Lokasi -->
 
                           <!-- Detail -->
-                          <div class="grid grid-cols-1 gap-y-1 mt-0">
+                          <div class="grid grid-cols-1 gap-y-1 mt-6">
                             <div class="w-full text-md font-bold mb-2">
                               Spesifikasi Aset
                             </div>
 
                             <div class="grid grid-cols-1 text-sm">
-                              <div class="grid grid-cols-3 gap-4 text-gray-800">
+                              <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Tipe Aset</div>
-                                <div class="col-span-2">Rumah Seken</div>
+                                <div class="col-span-4">Rumah Seken</div>
                               </div>
-                              <div class="grid grid-cols-3 gap-4 text-gray-800">
+                              <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Kepemilikan</div>
-                                <div class="col-span-2">SHM</div>
+                                <div class="col-span-4">SHM</div>
                               </div>
 
                               <div>&nbsp;</div>
 
                               <!--  -->
 
-                              <div class="grid grid-cols-3 gap-4 text-gray-800">
+                              <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Luas Tanah</div>
-                                <div class="col-span-2">100 m²</div>
+                                <div class="col-span-4">100 m²</div>
                               </div>
-                              <div class="grid grid-cols-3 gap-4 text-gray-800">
+                              <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Luas Bangunan</div>
-                                <div class="col-span-2">130 m²</div>
+                                <div class="col-span-4">130 m²</div>
                               </div>
 
                               <div>&nbsp;</div>
                               <!--  -->
 
-                              <div class="grid grid-cols-3 gap-4 text-gray-800">
+                              <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Kamar Tidur</div>
-                                <div class="col-span-2">2</div>
+                                <div class="col-span-4">2</div>
                               </div>
-                              <div class="grid grid-cols-3 gap-4 text-gray-800">
+                              <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Kamar Mandi</div>
-                                <div class="col-span-2">1</div>
+                                <div class="col-span-4">1</div>
                               </div>
 
                               <div>&nbsp;</div>
                               <!--  -->
 
-                              <div class="grid grid-cols-3 gap-4 text-gray-800">
+                              <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Listrik</div>
-                                <div class="col-span-2">2200 Watt</div>
+                                <div class="col-span-4">2200 Watt</div>
                               </div>
-                              <div class="grid grid-cols-3 gap-4 text-gray-800">
+                              <div class="grid grid-cols-5 gap-4 text-gray-800">
                                 <div>Arah</div>
-                                <div class="col-span-2">Barat Lauts</div>
+                                <div class="col-span-4">Barat Lauts</div>
                               </div>
 
                               <div>&nbsp;</div>
@@ -2494,14 +2520,14 @@
 
                       <!--  -->
                       <div
-                        class="hidden px-4 py-2 dark:bg-gray-800"
+                        class="hidden px-4 py-2 mt-1"
                         id="settings"
                         role="tabpanel"
                         aria-labelledby="settings-tab"
                       >
                         <!-- konten Indeks -->
                         <div class="h-[71vh]">
-                          <div class="grid grid-cols-1 gap-y-1">
+                          <div class="grid grid-cols-1 gap-y-1 mt-6">
                             <!-- Judul Konten Indeks -->
                             <div class="grid grid-cols-4 pt-0 pb-2">
                               <div
@@ -2575,369 +2601,383 @@
                             </div>
 
                             <!-- Konten Menu Indeks -->
-                            <div class="" id="kontenIndeksTabContent">
-                              <div class="pr-2" id="profil" role="tabpanel">
-                                <!-- ECCI -->
-                                <div class="grid grid-cols-1 gap-y-1">
-                                  <div class="w-full text-md font-bold">
-                                    Environment Carrying Capacity Indexy
-                                  </div>
+                            <div
+                              class="h-[57.5vh] overflow-y-auto hide-scrollbar"
+                            >
+                              <div class="" id="kontenIndeksTabContent">
+                                <div class="pr-2" id="profil" role="tabpanel">
+                                  <!-- ECCI -->
+                                  <div class="grid grid-cols-1 gap-y-1">
+                                    <div class="w-full text-md font-bold">
+                                      Environment Carrying Capacity Indexy
+                                    </div>
 
-                                  <div class="grid grid-cols-1 text-md">
-                                    <div class="grid grid-cols-3 gap-4 text-md">
+                                    <div class="grid grid-cols-1 text-md">
                                       <div
-                                        class="col-span-2 flex items-center mt-5 mb-8 -ml-28 justify-center min-w-[200px] min-h-[180px]"
+                                        class="grid grid-cols-3 gap-4 text-md"
                                       >
-                                        <canvas
-                                          id="myRadarChart"
-                                          class="w-full h-full"
-                                        ></canvas>
-                                      </div>
+                                        <div
+                                          class="col-span-2 flex items-center mt-5 mb-8 -ml-44 justify-center min-w-[200px] min-h-[180px]"
+                                        >
+                                          <canvas
+                                            id="myRadarChart"
+                                            class="w-full h-full"
+                                          ></canvas>
+                                        </div>
 
-                                      <div></div>
+                                        <div></div>
+                                      </div>
+                                      <!--  -->
+
+                                      <div class="flex flex-col text-sm">
+                                        <div class="flex flex-col mb-4">
+                                          <div class="font-semibold">
+                                            Topografi
+                                          </div>
+                                          <div>1. Kelerengan Datar s</div>
+                                        </div>
+                                        <div class="flex flex-col mb-4">
+                                          <div class="font-semibold">
+                                            Kebencanaan
+                                          </div>
+                                          <div>1. Risiko Banjir Rendah</div>
+                                          <div>
+                                            2. Risiko Penurunan Muka Tanah
+                                            Rendah
+                                          </div>
+                                        </div>
+                                        <div class="flex flex-col mb-4">
+                                          <div class="font-semibold">
+                                            Ketersediaan Air
+                                          </div>
+                                          <div>1. Air Tanah Zona Rusak</div>
+                                          <div>
+                                            2. Penyediaan Air Perpipaan
+                                            Terjangkau
+                                          </div>
+                                        </div>
+                                        <div class="flex flex-col mb-4">
+                                          <div class="font-semibold">
+                                            Kualitas Vegetasi
+                                          </div>
+                                          <div>
+                                            1. Kualitas Vegetasi Sangat Kurang
+                                            Baik
+                                          </div>
+                                        </div>
+                                        <div class="flex flex-col mb-4">
+                                          <div class="font-semibold">
+                                            Pengolahan Limbah
+                                          </div>
+                                          <div>
+                                            1. Pengelolaan IPAL Belum Tersedia /
+                                            Terencana
+                                          </div>
+                                          <div>
+                                            2. Jarak Tidak Ideal Terhadap TPS
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!--  -->
+
+                                      <div
+                                        class="grid grid-cols-1 gap-y-1 mt-8"
+                                      ></div>
+
+                                      <!--  -->
                                     </div>
-                                    <!--  -->
-
-                                    <div class="flex flex-col text-sm">
-                                      <div class="flex flex-col mb-4">
-                                        <div class="font-semibold">
-                                          Topografi
-                                        </div>
-                                        <div>1. Kelerengan Datar s</div>
-                                      </div>
-                                      <div class="flex flex-col mb-4">
-                                        <div class="">Kebencanaan</div>
-                                        <div>1. Risiko Banjir Rendah</div>
-                                        <div>
-                                          2. Risiko Penurunan Muka Tanah Rendah
-                                        </div>
-                                      </div>
-                                      <div class="flex flex-col mb-4">
-                                        <div class="font-semibold">
-                                          Ketersediaan Air
-                                        </div>
-                                        <div>1. Air Tanah Zona Rusak</div>
-                                        <div>
-                                          2. Penyediaan Air Perpipaan Terjangkau
-                                        </div>
-                                      </div>
-                                      <div class="flex flex-col mb-4">
-                                        <div class="font-semibold">
-                                          Kualitas Vegetasi
-                                        </div>
-                                        <div>
-                                          1. Kualitas Vegetasi Sangat Kurang
-                                          Baik
-                                        </div>
-                                      </div>
-                                      <div class="flex flex-col mb-4">
-                                        <div class="font-semibold">
-                                          Pengolahan Limbah
-                                        </div>
-                                        <div>
-                                          1. Pengelolaan IPAL Belum Tersedia /
-                                          Terencana
-                                        </div>
-                                        <div>
-                                          2. Jarak Tidak Ideal Terhadap TPS
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!--  -->
-
-                                    <div
-                                      class="grid grid-cols-1 gap-y-1 mt-8"
-                                    ></div>
-
-                                    <!--  -->
                                   </div>
                                 </div>
-                              </div>
-                              <div
-                                class="hidden pr-2"
-                                id="dashboard1"
-                                role="tabpanel"
-                                aria-labelledby="indeksLivability"
-                              >
-                                <!-- Livability Index -->
-                                <div class="grid grid-cols-1 gap-y-1">
-                                  <div class="w-full text-md font-bold">
-                                    Livability Index
-                                  </div>
+                                <div
+                                  class="hidden pr-2"
+                                  id="dashboard1"
+                                  role="tabpanel"
+                                  aria-labelledby="indeksLivability"
+                                >
+                                  <!-- Livability Index -->
+                                  <div class="grid grid-cols-1 gap-y-1">
+                                    <div class="w-full text-md font-bold">
+                                      Livability Index
+                                    </div>
 
-                                  <div class="grid grid-cols-1 text-md">
-                                    <div
-                                      class="grid grid-cols-3 gap-4 text-md text-gray-800"
-                                    >
+                                    <div class="grid grid-cols-1 text-md">
                                       <div
-                                        class="col-span-2 flex items-center mt-5 mb-8 -ml-20 justify-center min-w-[200px] min-h-[180px]"
+                                        class="grid grid-cols-3 gap-4 text-md text-gray-800"
                                       >
-                                        <canvas
-                                          id="mySecondRadarChart"
-                                          class="w-full h-full"
-                                        ></canvas>
+                                        <div
+                                          class="col-span-2 flex items-center mt-5 mb-8 -ml-36 justify-center min-w-[200px] min-h-[180px]"
+                                        >
+                                          <canvas
+                                            id="mySecondRadarChart"
+                                            class="w-full h-full"
+                                          ></canvas>
+                                        </div>
+
+                                        <div></div>
                                       </div>
 
-                                      <div></div>
-                                    </div>
-
-                                    <!--  -->
-                                    <div class="grid grid-cols-1 gap-4 text-sm">
-                                      <div class="flex flex-col">
-                                        <div>
-                                          1. Tingkat Konektivitas Pejalan Kaki
-                                          Rendah
-                                        </div>
-                                        <div>
-                                          2. Ruang Terbuka dan Publik Terjangkau
-                                          Sangat Baik
-                                        </div>
-                                        <div>
-                                          3. Fasilitas Komunitas Terjangkau
-                                          Sangat Baik
-                                        </div>
-                                        <div>
-                                          4. Aktivitas Budaya Perkotaan Sedang
-                                        </div>
-                                        <div>
-                                          5. Tempat untuk Bekerja Kurang
-                                          Tersedia
+                                      <!--  -->
+                                      <div
+                                        class="grid grid-cols-1 gap-4 text-sm"
+                                      >
+                                        <div class="flex flex-col">
+                                          <div>
+                                            1. Tingkat Konektivitas Pejalan Kaki
+                                            Rendah
+                                          </div>
+                                          <div>
+                                            2. Ruang Terbuka dan Publik
+                                            Terjangkau Sangat Baik
+                                          </div>
+                                          <div>
+                                            3. Fasilitas Komunitas Terjangkau
+                                            Sangat Baik
+                                          </div>
+                                          <div>
+                                            4. Aktivitas Budaya Perkotaan Sedang
+                                          </div>
+                                          <div>
+                                            5. Tempat untuk Bekerja Kurang
+                                            Tersedia
+                                          </div>
                                         </div>
                                       </div>
+                                      <!--  -->
+                                      <div
+                                        class="grid grid-cols-1 gap-y-1 mt-8"
+                                      ></div>
+                                      <!--  -->
                                     </div>
-                                    <!--  -->
-                                    <div
-                                      class="grid grid-cols-1 gap-y-1 mt-8"
-                                    ></div>
-                                    <!--  -->
+                                  </div>
+                                  <!--  -->
+                                </div>
+                                <!-- Invesment -->
+                                <div
+                                  class="hidden pr-2"
+                                  id="dashboard2"
+                                  role="tabpanel"
+                                >
+                                  <!-- Investment Index -->
+                                  <div class="grid grid-cols-1 gap-y-1 mt-0">
+                                    <div class="w-full text-md font-bold">
+                                      Investment Index
+                                    </div>
+
+                                    <div class="grid grid-cols-1 text-md">
+                                      <div
+                                        class="grid grid-cols-3 gap-4 text-md text-gray-800"
+                                      >
+                                        <div
+                                          class="col-span-2 flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
+                                        >
+                                          <canvas
+                                            id="myInvestmentIndexChart"
+                                            class="w-full h-full"
+                                          ></canvas>
+                                        </div>
+                                        <div></div>
+                                      </div>
+                                      <!--  -->
+
+                                      <div class="flex flex-col text-sm">
+                                        <div class="flex flex-col">
+                                          <div class="">Topografi</div>
+                                          <div>1. Kelerengan Datar</div>
+                                        </div>
+                                        <div class="flex flex-col">
+                                          <div class="">Kebencanaan</div>
+                                          <div>1. Risiko Banjir Rendah</div>
+                                          <div>
+                                            2. Risiko Penurunan Muka Tanah
+                                            Rendah
+                                          </div>
+                                        </div>
+
+                                        <div class="flex flex-col">
+                                          <div class="">Pengolahan Limbah</div>
+                                          <div>
+                                            1. Pengelolaan IPAL Belum Tersedia /
+                                            Terencana
+                                          </div>
+                                          <div>
+                                            2. Jarak Tidak Ideal Terhadap TPS
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!--  -->
+                                      <div
+                                        class="grid grid-cols-1 gap-y-1 mt-8"
+                                      ></div>
+                                      <!--  -->
+                                    </div>
                                   </div>
                                 </div>
                                 <!--  -->
                               </div>
-                              <!-- Invesment -->
-                              <div
-                                class="hidden pr-2"
-                                id="dashboard2"
-                                role="tabpanel"
-                              >
-                                <!-- Investment Index -->
-                                <div class="grid grid-cols-1 gap-y-1 mt-0">
-                                  <div class="w-full text-md font-bold">
-                                    Investment Index
-                                  </div>
-
-                                  <div class="grid grid-cols-1 text-md">
-                                    <div
-                                      class="grid grid-cols-3 gap-4 text-md text-gray-800"
-                                    >
-                                      <div
-                                        class="col-span-2 flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
-                                      >
-                                        <canvas
-                                          id="myInvestmentIndexChart"
-                                          class="w-full h-full"
-                                        ></canvas>
-                                      </div>
-                                      <div></div>
-                                    </div>
-                                    <!--  -->
-
-                                    <div class="flex flex-col text-sm">
-                                      <div class="flex flex-col">
-                                        <div class="">Topografi</div>
-                                        <div>1. Kelerengan Datar</div>
-                                      </div>
-                                      <div class="flex flex-col">
-                                        <div class="">Kebencanaan</div>
-                                        <div>1. Risiko Banjir Rendah</div>
-                                        <div>
-                                          2. Risiko Penurunan Muka Tanah Rendah
-                                        </div>
-                                      </div>
-
-                                      <div class="flex flex-col">
-                                        <div class="">Pengolahan Limbah</div>
-                                        <div>
-                                          1. Pengelolaan IPAL Belum Tersedia /
-                                          Terencana
-                                        </div>
-                                        <div>
-                                          2. Jarak Tidak Ideal Terhadap TPS
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!--  -->
-                                    <div
-                                      class="grid grid-cols-1 gap-y-1 mt-8"
-                                    ></div>
-                                    <!--  -->
-                                  </div>
-                                </div>
-                              </div>
-                              <!--  -->
                             </div>
                           </div>
                         </div>
                       </div>
                       <!-- shp -->
                       <div
-                        class="hidden px-4 py-2 dark:bg-gray-800"
+                        class="hidden px-4 py-2 mt-1 dark:bg-gray-800"
                         id="dashboardberanda"
                         role="tabpanel"
                         aria-labelledby="dashboardberanda-tab"
                       >
                         <!-- konten Sarpras -->
-                        <div class="h-[71vh]">
-                          <div class="grid grid-cols-1 gap-y-1 mt-1">
-                            <div class="w-full grid grid-cols-3">
-                              <div class="col-span-2">
-                                <h5
-                                  class="font-bold text-sm mb-2"
-                                  id="HasilRangBeranda"
-                                >
-                                  Radius 1 Km
-                                </h5>
-                                <input
-                                  type="range"
-                                  class="w-full"
-                                  id="ControlRangeBeranda"
-                                  min="0.5"
-                                  max="3"
-                                  step="0.5"
-                                  style="height: 6px"
-                                  value="1"
-                                />
-                              </div>
-                            </div>
-
-                            <!-- Konten Sarpras -->
-                            <div class="grid grid-cols-4 pt-4 pb-4">
-                              <div
-                                class="col-span-3 grid grid-cols-5"
-                                id="sarprasTabFavorit"
-                                data-tabs-toggle="#sarprasTabContent"
-                                role="tablist"
+                        <div class="grid grid-cols-1 gap-y-1 mt-6">
+                          <div class="w-full grid grid-cols-3">
+                            <div class="col-span-2">
+                              <h5
+                                class="font-bold text-md mb-2"
+                                id="HasilRangBeranda"
                               >
-                                <!-- List Button Sarana Prasana -->
-                                <!-- IBADAH TAB -->
-                                <div>
-                                  <button
-                                    class="favoritSarprasIbadahTab flex items-center pr-2 py-2 rounded-full"
-                                    data-tabs-target="#FavoritsarprasIbadah"
-                                    type="button"
-                                    role="tab"
-                                    aria-selected="false"
-                                  >
-                                    <div
-                                      class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                                    >
-                                      <img
-                                        class="w-7 h-7 p-1 object-cover"
-                                        src="./src/images/sarpras/ibadah-on.png"
-                                        alt="user photo"
-                                      />
-                                    </div>
-                                  </button>
-                                </div>
-                                <!-- MINIMARKET TAB -->
-                                <div>
-                                  <button
-                                    class="favoritSarprasMiniMarketTab flex items-center pr-2 py-2 rounded-full"
-                                    data-tabs-target="#FavoritsarprasMinimarket"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="FavoritsarprasMinimarket"
-                                    aria-selected="false"
-                                  >
-                                    <div
-                                      class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                                    >
-                                      <img
-                                        class="w-7 h-7 p-1 object-cover"
-                                        src="./src/images/sarpras/miniMarket-off.png"
-                                        alt="user photo"
-                                      />
-                                    </div>
-                                  </button>
-                                </div>
-                                <!-- SEKOLAH TAB -->
-                                <div>
-                                  <button
-                                    class="favoritSarprasSekolahTab flex items-center pr-2 py-2 rounded-full"
-                                    data-tabs-target="#FavoritsarprasSekolah"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="FavoritsarprasSekolah"
-                                    aria-selected="false"
-                                  >
-                                    <div
-                                      class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                                    >
-                                      <img
-                                        class="w-7 h-7 p-1 object-cover"
-                                        src="./src/images/sarpras/graduation-off.png"
-                                        alt="user photo"
-                                      />
-                                    </div>
-                                  </button>
-                                </div>
-                                <!-- RESTORAN TAB  -->
-                                <div>
-                                  <button
-                                    class="favoritSarprasRestoranTab flex items-center pr-2 py-2 rounded-full"
-                                    data-tabs-target="#FavoritsarprasRestoran"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="FavoritsarprasRestoran"
-                                    aria-selected="false"
-                                  >
-                                    <div
-                                      class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                                    >
-                                      <img
-                                        class="w-7 h-7 p-1 object-cover"
-                                        src="./src/images/sarpras/spork-off.png"
-                                        alt="user photo"
-                                      />
-                                    </div>
-                                  </button>
-                                </div>
-                                <!-- TRANSPORTASI TAB -->
-                                <div>
-                                  <button
-                                    class="favoritSarprasTransportasiTab flex items-center pr-2 py-2 rounded-full"
-                                    data-tabs-target="#sarprasTransportasi"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="sarprasTransportasi"
-                                    aria-selected="false"
-                                  >
-                                    <div
-                                      class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                                    >
-                                      <img
-                                        class="w-7 h-7 p-1 object-cover"
-                                        src="./src/images/sarpras/cycling-off.png"
-                                        alt="user photo"
-                                      />
-                                    </div>
-                                  </button>
-                                </div>
-
-                                <!--  -->
-                              </div>
+                                Radius 1 Km
+                              </h5>
+                              <input
+                                type="range"
+                                class="w-full"
+                                id="ControlRangeBeranda"
+                                min="0.5"
+                                max="3"
+                                step="0.5"
+                                style="height: 6px"
+                                value="1"
+                              />
                             </div>
+                          </div>
 
+                          <!-- Konten Sarpras -->
+                          <div class="grid grid-cols-4 pt-4 pb-4">
+                            <div
+                              class="col-span-3 grid grid-cols-5"
+                              id="sarprasTabFavorit"
+                              data-tabs-toggle="#sarprasTabContent"
+                              role="tablist"
+                            >
+                              <!-- List Button Sarana Prasana -->
+                              <!-- IBADAH TAB -->
+                              <div>
+                                <button
+                                  class="favoritSarprasIbadahTab flex items-center pr-2 py-2 rounded-full"
+                                  data-tabs-target="#FavoritsarprasIbadah"
+                                  type="button"
+                                  role="tab"
+                                  aria-selected="false"
+                                >
+                                  <div
+                                    class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                                  >
+                                    <img
+                                      class="w-7 h-7 p-1 object-cover"
+                                      src="./src/images/sarpras/ibadah-on.png"
+                                      alt="user photo"
+                                    />
+                                  </div>
+                                </button>
+                              </div>
+                              <!-- MINIMARKET TAB -->
+                              <div>
+                                <button
+                                  class="favoritSarprasMiniMarketTab flex items-center pr-2 py-2 rounded-full"
+                                  data-tabs-target="#FavoritsarprasMinimarket"
+                                  type="button"
+                                  role="tab"
+                                  aria-controls="FavoritsarprasMinimarket"
+                                  aria-selected="false"
+                                >
+                                  <div
+                                    class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                                  >
+                                    <img
+                                      class="w-7 h-7 p-1 object-cover"
+                                      src="./src/images/sarpras/miniMarket-off.png"
+                                      alt="user photo"
+                                    />
+                                  </div>
+                                </button>
+                              </div>
+                              <!-- SEKOLAH TAB -->
+                              <div>
+                                <button
+                                  class="favoritSarprasSekolahTab flex items-center pr-2 py-2 rounded-full"
+                                  data-tabs-target="#FavoritsarprasSekolah"
+                                  type="button"
+                                  role="tab"
+                                  aria-controls="FavoritsarprasSekolah"
+                                  aria-selected="false"
+                                >
+                                  <div
+                                    class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                                  >
+                                    <img
+                                      class="w-7 h-7 p-1 object-cover"
+                                      src="./src/images/sarpras/graduation-off.png"
+                                      alt="user photo"
+                                    />
+                                  </div>
+                                </button>
+                              </div>
+                              <!-- RESTORAN TAB  -->
+                              <div>
+                                <button
+                                  class="favoritSarprasRestoranTab flex items-center pr-2 py-2 rounded-full"
+                                  data-tabs-target="#FavoritsarprasRestoran"
+                                  type="button"
+                                  role="tab"
+                                  aria-controls="FavoritsarprasRestoran"
+                                  aria-selected="false"
+                                >
+                                  <div
+                                    class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                                  >
+                                    <img
+                                      class="w-7 h-7 p-1 object-cover"
+                                      src="./src/images/sarpras/spork-off.png"
+                                      alt="user photo"
+                                    />
+                                  </div>
+                                </button>
+                              </div>
+                              <!-- TRANSPORTASI TAB -->
+                              <div>
+                                <button
+                                  class="favoritSarprasTransportasiTab flex items-center pr-2 py-2 rounded-full"
+                                  data-tabs-target="#sarprasTransportasi"
+                                  type="button"
+                                  role="tab"
+                                  aria-controls="sarprasTransportasi"
+                                  aria-selected="false"
+                                >
+                                  <div
+                                    class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                                  >
+                                    <img
+                                      class="w-7 h-7 p-1 object-cover"
+                                      src="./src/images/sarpras/cycling-off.png"
+                                      alt="user photo"
+                                    />
+                                  </div>
+                                </button>
+                              </div>
+
+                              <!--  -->
+                            </div>
+                          </div>
+                          <div
+                            class="h-[46.5vh] overflow-y-auto hide-scrollbar"
+                          >
                             <div id="sarprasTabContent">
                               <!-- IBADAH KONTEN -->
                               <div
-                                class="hidden pr-2"
+                                class="hidden h-full pr-2"
                                 id="FavoritsarprasIbadah"
                                 role="tabpanel"
                               >
                                 <div>
-                                  <div class="font-bold text-sm mb-0">
-                                    Tempat Ibadah Favorit
+                                  <div class="font-bold text-sm mb-2">
+                                    Tempat Ibadah Favoritss
                                   </div>
 
                                   <ul class="list-group list-group-flush">
@@ -3354,7 +3394,7 @@
                                 role="tabpanel"
                               >
                                 <div>
-                                  <div class="font-bold text-sm mb-0">
+                                  <div class="font-bold text-sm mb-2">
                                     Belanja
                                   </div>
 
@@ -3785,7 +3825,7 @@
                                 role="tabpanel"
                               >
                                 <div>
-                                  <div class="font-bold text-sm mb-0">
+                                  <div class="font-bold text-sm mb-2">
                                     Sekolah
                                   </div>
 
@@ -3876,7 +3916,7 @@
                                 role="tabpanel"
                               >
                                 <div>
-                                  <div class="font-bold text-sm mb-0">
+                                  <div class="font-bold text-sm mb-2">
                                     Restoran
                                   </div>
 
@@ -3931,7 +3971,7 @@
                                 role="tabpanel"
                               >
                                 <div>
-                                  <div class="font-bold text-sm mb-0">
+                                  <div class="font-bold text-sm mb-2">
                                     Transportasi
                                   </div>
 
@@ -4099,7 +4139,7 @@
                                   >
                                     <div class="col-span-3 flex items-stretch">
                                       <div class="self-end">
-                                        Perkiraan NJOP per m² (Rp)
+                                        Perkiraan NJOP (Rp/m²)
                                       </div>
                                     </div>
                                     <div class="col-span-2 -ml-2">
@@ -4137,7 +4177,7 @@
                                     class="grid grid-cols-8 gap-4 text-gray-800 mb-2"
                                   >
                                     <div class="col-span-3 flex items-stretch">
-                                      <div class="self-end">
+                                      <div class="self-end font-semibold">
                                         Nilai Tanah (Rp)
                                       </div>
                                     </div>
@@ -4181,7 +4221,7 @@
                                   >
                                     <div class="col-span-3 flex items-stretch">
                                       <div class="self-end">
-                                        Perkiraan Harga Bangunan per m² (Rp)
+                                        Perkiraan Harga Bangunan (Rp/m²)
                                       </div>
                                     </div>
                                     <div class="col-span-2 -ml-2">
@@ -4198,7 +4238,7 @@
                                     class="grid grid-cols-8 gap-4 text-gray-800 mb-2"
                                   >
                                     <div class="col-span-3 flex items-stretch">
-                                      <div class="self-end">
+                                      <div class="self-end font-semibold">
                                         Nilai Bangunan (Rp)
                                       </div>
                                     </div>
@@ -4225,7 +4265,7 @@
                                     class="grid grid-cols-8 gap-4 text-gray-800 mb-2"
                                   >
                                     <div class="col-span-3 flex items-stretch">
-                                      <div class="self-end">
+                                      <div class="self-end font-semibold">
                                         Total Perkiraan Nilai Aset (Rp)
                                       </div>
                                     </div>
@@ -5419,7 +5459,7 @@
                               role="tabpanel"
                             >
                               <div>
-                                <div class="font-bold text-sm mb-0">
+                                <div class="font-bold text-sm mb-2">
                                   Tempat Ibadah Favorit
                                 </div>
 
@@ -7353,13 +7393,14 @@
                                 class="w-full h-full object-cover rounded-t-lg"
                                 loop
                                 muted
+                                controls
                                 preload="metadata"
                                 src="./src/video/Video4.mp4"
                               ></video>
                               <div class="absolute h-12 w-12 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
                               </div>
-                              <button
+                              <!-- <button
                                 class="absolute bottom-2 end-2 w-6 h-6"
                                 onclick="event.stopPropagation(); playInFullscreen(this.parentElement.querySelector('video'))"
                               >
@@ -7368,7 +7409,7 @@
                                   src="./src/images/maximize.png"
                                   alt=""
                                 />
-                              </button>
+                              </button> -->
                             </div>
                             <!--  -->
                             <div class="relative">
@@ -9430,7 +9471,7 @@
 
           <!-- KontenEmpat -->
           <div
-            class="hidden"
+            class=""
             id="MenuEmpatContent"
             role="tabpanel"
             aria-labelledby="MenuEmpatTab"
