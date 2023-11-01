@@ -13,47 +13,57 @@
   display: none !important;
 }
 
-/* CSS untuk tombol My Location */
-.my-location-button .mapboxgl-ctrl-icon {
+/*  */
+
+/* Navigator MapboxGL */
+.mapboxgl-ctrl-top-right {
+  right: 0.5vh !important;
+  top: 59vh !important;
+}
+
+.mapboxgl-ctrl-group {
+  background-color: transparent !important;
+}
+
+.mapboxgl-ctrl-group:not(:empty) {
+  box-shadow: none !important;
+}
+
+/* Layer, Location, and Stick Icons */
+.btn-layer,
+.btn-location,
+.btn-stick {
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  background-size: cover !important;
+  width: 60% !important;
+  height: 60% !important;
+}
+
+.btn-layer {
+  background-image: url("../src/images/layers.png") !important;
+  padding: 10px !important;
+}
+
+.btn-location {
   background-image: url("../src/images/my-location.png") !important;
-  background-position: 50% !important;
-  background-repeat: no-repeat !important;
-  display: block !important;
-  background-size: cover !important;
-  width: 60% !important;
-  height: 60% !important;
 }
 
-.custom-button-mapbox-dua .mapboxgl-ctrl-icon {
+.btn-stick {
   background-image: url("../src/images/stick.png") !important;
-  background-position: 50% !important;
-  background-repeat: no-repeat !important;
-  display: block !important;
-  background-size: cover !important;
-  width: 60% !important;
-  height: 60% !important;
 }
 
-/* CSS untuk tombol Layer */
-.layer-button .mapboxgl-ctrl-icon {
-  background-image: url("../src/images/layers.png") !important; /* Ganti dengan path icon layer Anda */
-  background-position: 50% !important;
-  background-repeat: no-repeat !important;
-  display: block !important;
-  background-size: cover !important;
-  width: 60% !important;
-  height: 60% !important;
-}
-
-/* CSS umum untuk tombol-tombol di grup kontrol */
 .mapboxgl-ctrl-group button {
   background-color: white !important;
   width: 25px !important;
-  height: 26px !important;
+  height: 25px !important;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
 }
+/*  */
 
 .custom-button-wrapper {
   margin: 10px 0; /* Anda dapat menyesuaikan jarak ini sesuai kebutuhan */

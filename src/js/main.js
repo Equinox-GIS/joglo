@@ -82,86 +82,56 @@ if (compass) {
 
 // Jika grup kontrol ditemukan
 if (controlGroup) {
-  // Kode untuk tombol kustom Anda di sini
+  // Custom Button
+  var customButton = document.createElement("button");
+  customButton.className = "mapboxgl-ctrl-icon custom-control-button btn-layer";
+  customButton.setAttribute("type", "button");
+  customButton.setAttribute("aria-label", "Custom Layer Action");
+  customButton.innerHTML =
+    '<span class="mapboxgl-ctrl-icon custom-layer" aria-hidden="true" title="Custom Layer Action"></span>';
+  customButton.addEventListener("click", function () {
+    alert("Layer button clicked!");
+  });
 
+  // My Location Button
   var myLocationButton = document.createElement("button");
   myLocationButton.className =
-    "mapboxgl-ctrl-icon custom-control-button my-location-button";
+    "mapboxgl-ctrl-icon custom-control-button btn-location";
   myLocationButton.setAttribute("type", "button");
   myLocationButton.setAttribute("aria-label", "My Location");
   myLocationButton.innerHTML =
     '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="My Location"></span>';
-
   myLocationButton.addEventListener("click", function () {
     alert("My Location button clicked!");
   });
 
-  // Dapatkan tombol zoom-in dan zoom-out
+  // Stick Button 1
+  var stickButton1 = document.createElement("button");
+  stickButton1.className = "mapboxgl-ctrl-icon custom-control-button btn-stick";
+  stickButton1.setAttribute("type", "button");
+  stickButton1.setAttribute("aria-label", "Stick Action 1");
+  stickButton1.addEventListener("click", function () {
+    alert("Stick button 1 clicked!");
+  });
+
+  // Get Zoom In and Zoom Out buttons
   var zoomInButton = controlGroup.querySelector(".mapboxgl-ctrl-zoom-in");
   var zoomOutButton = controlGroup.querySelector(".mapboxgl-ctrl-zoom-out");
 
-  // Hapus tombol zoom-in dan zoom-out dari DOM
+  // Remove zoom buttons from the DOM
   controlGroup.removeChild(zoomInButton);
   controlGroup.removeChild(zoomOutButton);
 
-  // Membuat dan menambahkan tombol layer setelah tombol my location
-  var layerButton = document.createElement("button");
-  layerButton.className =
-    "mapboxgl-ctrl-icon custom-control-button layer-button";
-  layerButton.setAttribute("type", "button");
-  layerButton.setAttribute("aria-label", "Layer");
-  layerButton.innerHTML =
-    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Layer"></span>';
+  // Separator
+  var separator = document.createElement("div");
+  separator.style.marginTop = "4vh";
+  separator.style.boxShadow = "none";
 
-  var customButtonMapboxDua = document.createElement("button");
-  customButtonMapboxDua.className =
-    "mapboxgl-ctrl-icon custom-control-button custom-button-mapbox-dua";
-  customButtonMapboxDua.setAttribute("type", "button");
-  customButtonMapboxDua.setAttribute("aria-label", "Custom Button Mapbox Dua");
-  customButtonMapboxDua.innerHTML =
-    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Custom Button Mapbox Dua"></span>';
-
-  customButtonMapboxDua.addEventListener("click", function () {
-    alert("Custom Button Mapbox Dua clicked!");
-  });
-
-  // Create dropdown
-  var dropdown = document.createElement("div");
-  dropdown.id = "dropdownDelay";
-  dropdown.className =
-    "z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 absolute";
-  dropdown.style.right = "100%"; // mengatur posisi ke kanan
-  dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
-  dropdown.style.marginTop = "-1.5rem";
-  dropdown.innerHTML = `
-    <div class="mt-3">
-    <div class="flex items-center mb-4 px-2 pt-3">
-        <input id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
-        <label for="radio-default" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
-    </div>
-    <div class="flex items-center mb-4 px-2">
-        <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
-        <label for="radio-satellite" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
-    </div>
-    <div class="flex items-center px-2 pb-3">
-        <input checked id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
-        <label for="radio-street" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
-    </div>
-    <div>`;
-
-  layerButton.addEventListener("click", function () {
-    // Show or hide dropdown
-    if (dropdown.classList.contains("hidden")) {
-      dropdown.classList.remove("hidden");
-    } else {
-      dropdown.classList.add("hidden");
-    }
-  });
-
-  controlGroup.appendChild(layerButton);
-  controlGroup.appendChild(dropdown);
-  controlGroup.appendChild(customButtonMapboxDua);
+  // Add buttons to control group in the desired order
+  controlGroup.appendChild(stickButton1);
+  controlGroup.appendChild(separator);
   controlGroup.appendChild(myLocationButton);
+  controlGroup.appendChild(customButton);
   controlGroup.appendChild(zoomInButton);
   controlGroup.appendChild(zoomOutButton);
 }

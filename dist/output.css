@@ -1088,6 +1088,10 @@ input:checked + .toggle-bg {
   left: 0px;
 }
 
+.left-1\/2 {
+  left: 50%;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -1096,16 +1100,12 @@ input:checked + .toggle-bg {
   top: 0px;
 }
 
-.top-8 {
-  top: 2rem;
-}
-
-.left-1\/2 {
-  left: 50%;
-}
-
 .top-1\/2 {
   top: 50%;
+}
+
+.top-8 {
+  top: 2rem;
 }
 
 .z-10 {
@@ -1381,14 +1381,6 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
-.h-1 {
-  height: 0.25rem;
-}
-
-.h-16 {
-  height: 4rem;
-}
-
 .min-h-\[180px\] {
   min-height: 180px;
 }
@@ -1485,8 +1477,12 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
-.w-16 {
-  width: 4rem;
+.w-72 {
+  width: 18rem;
+}
+
+.w-80 {
+  width: 20rem;
 }
 
 .min-w-\[200px\] {
@@ -1509,8 +1505,18 @@ input:checked + .toggle-bg {
   transform-origin: top right;
 }
 
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .-translate-x-full {
   --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1531,16 +1537,6 @@ input:checked + .toggle-bg {
 
 .translate-y-full {
   --tw-translate-y: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-1\/2 {
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-1\/2 {
-  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2273,6 +2269,10 @@ input:checked + .toggle-bg {
   opacity: 1;
 }
 
+.opacity-75 {
+  opacity: 0.75;
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -2364,10 +2364,28 @@ input:checked + .toggle-bg {
   display: none !important;
 }
 
-/* CSS untuk tombol My Location */
+/*  */
 
-.my-location-button .mapboxgl-ctrl-icon {
-  background-image: url("../src/images/my-location.png") !important;
+/* Navigator MapboxGL */
+
+.mapboxgl-ctrl-top-right {
+  right: 0.5vh !important;
+  top: 59vh !important;
+}
+
+.mapboxgl-ctrl-group {
+  background-color: transparent !important;
+}
+
+.mapboxgl-ctrl-group:not(:empty) {
+  box-shadow: none !important;
+}
+
+/* Layer, Location, and Stick Icons */
+
+.btn-layer,
+.btn-location,
+.btn-stick {
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
@@ -2376,39 +2394,30 @@ input:checked + .toggle-bg {
   height: 60% !important;
 }
 
-.custom-button-mapbox-dua .mapboxgl-ctrl-icon {
-  background-image: url("../src/images/stick.png") !important;
-  background-position: 50% !important;
-  background-repeat: no-repeat !important;
-  display: block !important;
-  background-size: cover !important;
-  width: 60% !important;
-  height: 60% !important;
-}
-
-/* CSS untuk tombol Layer */
-
-.layer-button .mapboxgl-ctrl-icon {
+.btn-layer {
   background-image: url("../src/images/layers.png") !important;
-  /* Ganti dengan path icon layer Anda */
-  background-position: 50% !important;
-  background-repeat: no-repeat !important;
-  display: block !important;
-  background-size: cover !important;
-  width: 60% !important;
-  height: 60% !important;
+  padding: 10px !important;
 }
 
-/* CSS umum untuk tombol-tombol di grup kontrol */
+.btn-location {
+  background-image: url("../src/images/my-location.png") !important;
+}
+
+.btn-stick {
+  background-image: url("../src/images/stick.png") !important;
+}
 
 .mapboxgl-ctrl-group button {
   background-color: white !important;
   width: 25px !important;
-  height: 26px !important;
+  height: 25px !important;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
 }
+
+/*  */
 
 .custom-button-wrapper {
   margin: 10px 0;
