@@ -2346,6 +2346,16 @@ input:checked + .toggle-bg {
   height: 60% !important;
 }
 
+.my-location-button-dua .mapboxgl-ctrl-icon {
+  background-image: url("../src/images/stick.png") !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  background-size: cover !important;
+  width: 60% !important;
+  height: 60% !important;
+}
+
 /* CSS untuk tombol Layer */
 
 .layer-button .mapboxgl-ctrl-icon {
