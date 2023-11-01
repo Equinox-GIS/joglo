@@ -1020,6 +1020,30 @@ function playVideoInWrapper(wrapperSelector) {
   }
 }
 
+function toggleAgenView() {
+  const tagSearchAgen = document.getElementById("tagSearchAgen");
+  const tagSearchAll = document.getElementById("tagSearchAll");
+
+  if (tagSearchAgen.classList.contains("hidden")) {
+    tagSearchAgen.classList.remove("hidden");
+    tagSearchAll.classList.add("hidden");
+  } else {
+    tagSearchAgen.classList.add("hidden");
+    tagSearchAll.classList.remove("hidden");
+  }
+}
+
+function resetToHomeView() {
+  const tagSearchAgen = document.getElementById("tagSearchAgen");
+  const tagSearchAll = document.getElementById("tagSearchAll");
+
+  // Tampilkan tagSearchAll
+  tagSearchAll.classList.remove("hidden");
+
+  // Sembunyikan tagSearchAgen
+  tagSearchAgen.classList.add("hidden");
+}
+
 function showCardInfoDetail(element) {
   // console.log(element);
 
@@ -1148,6 +1172,9 @@ function showCardInfoDetail(element) {
       //
 
       break;
+    // agen
+    case "4":
+      break;
   }
 }
 
@@ -1175,6 +1202,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const elements = {
     tabs: document.querySelectorAll('#kontenMenuTab [role="tab"]'),
     InputanSearch: document.querySelector("#InputanSearch"),
+    InputanSearchAgen: document.querySelector("#InputanSearchAgen"),
     garisBatas: document.querySelector("#garisBatas"),
     btnHarga: document.getElementById("btnHarga"),
     btnKamar: document.getElementById("btnKamar"),
@@ -1358,7 +1386,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initSlickFavorit();
         break;
       case "MenuEmpatTab":
-        disable();
+        enable();
         break;
       case "MenuLimaTab":
         disable();
@@ -1383,6 +1411,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (tab.id === "MenuSatuTab") {
       enable();
       // hideAllContent();
+    } else if (tab.id === "MenuEmpatTab") {
+      enable();
     }
   });
 });

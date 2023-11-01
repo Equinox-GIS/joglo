@@ -1417,6 +1417,10 @@ input:checked + .toggle-bg {
   width: 8rem;
 }
 
+.w-36 {
+  width: 9rem;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -1431,10 +1435,6 @@ input:checked + .toggle-bg {
 
 .w-5 {
   width: 1.25rem;
-}
-
-.w-52 {
-  width: 13rem;
 }
 
 .w-6 {
@@ -2378,6 +2378,11 @@ input:checked + .toggle-bg {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+}
+
+.custom-button-wrapper {
+  margin: 10px 0;
+  /* Anda dapat menyesuaikan jarak ini sesuai kebutuhan */
 }
 
 /* CSS khusus untuk bentuk tombol My Location */

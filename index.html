@@ -256,7 +256,341 @@
         </div>
       </div>
       <!-- Searching -->
+
       <div
+        id="tagSearchAgen"
+        class="w-full h-[7vh] flex items-center flex-row px-14 border border-gray-300 hidden"
+      >
+        <!-- Search Agen -->
+        <div class="pr-1">
+          <div class="relative">
+            <input
+              id="InputanSearchAgen"
+              class="border-none bg-gray-200 text-black w-36 pr-6 h-8 px-2 rounded-[5px] text-xs focus:outline-none focus:ring-0 focus:border-blue-500 outline-none"
+              type="search"
+              name="search"
+              placeholder="Nama / Kelurahan"
+            />
+            <button
+              id="IconInputanSearchAgen"
+              type="submit"
+              class="absolute right-0 top-0 mt-2.5 mr-2"
+            >
+              <svg
+                class="text-gray-400 h-3.5 w-3.5 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Capa_1"
+                x="0px"
+                y="0px"
+                viewBox="0 0 56.966 56.966"
+                style="enable-background: new 0 0 56.966 56.966"
+                xml:space="preserve"
+                width="512px"
+                height="512px"
+              >
+                <path
+                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Rating -->
+        <!-- Button JScore -->
+        <div class="flex items-center px-1">
+          <div class="grid grid-cols-1 relative">
+            <div class="text-left">
+              <button
+                id="btnJscore"
+                class="inline-flex justify-center items-center pl-1 w-28 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-gray-200 text-gray-500"
+              >
+                <span class="pl-2">JScore</span>
+
+                <svg
+                  id="arrow-icon-jscore"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 mr-2 transition-transform duration-200 transform text-gray-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            <div
+              id="kontenBtnJscore"
+              class="hidden absolute top-8 z-20 w-32 rounded-[5px] shadow-lg bg-white border-[1px] border-gray-300"
+            >
+              <div class="flex flex-col">
+                <!-- Jscore -->
+                <div>
+                  <div
+                    class="w-full bg-slate-200 py-1 px-2 text-xs font-semibold text-gray-500 hidden"
+                  >
+                    Jenis Surat
+                  </div>
+
+                  <!--  -->
+                  <div class="p-2">
+                    <div class="flex items-center mb-2">
+                      <input
+                        id="star-satu"
+                        checked
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0"
+                      />
+                      <label
+                        for="star-satu"
+                        class="flex flex-row ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300"
+                      >
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </label>
+                    </div>
+
+                    <div class="flex items-center mb-2">
+                      <input
+                        id="star-dua"
+                        checked
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0"
+                      />
+                      <label
+                        for="star-dua"
+                        class="flex flex-row ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300"
+                      >
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </label>
+                    </div>
+
+                    <div class="flex items-center mb-2">
+                      <input
+                        id="star-tiga"
+                        checked
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0"
+                      />
+                      <label
+                        for="star-tiga"
+                        class="flex flex-row ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300"
+                      >
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </label>
+                    </div>
+
+                    <div class="flex items-center mb-2">
+                      <input
+                        id="star-empat"
+                        checked
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0"
+                      />
+                      <label
+                        for="star-empat"
+                        class="flex flex-row ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300"
+                      >
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </label>
+                    </div>
+
+                    <div class="flex items-center mb-2">
+                      <input
+                        id="star-lima"
+                        checked
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0"
+                      />
+                      <label
+                        for="star-lima"
+                        class="flex flex-rowflex flex-row ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300"
+                      >
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                        <svg
+                          class="w-4 h-4 text-yellow-300"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 22 20"
+                        >
+                          <path
+                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                          />
+                        </svg>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+      </div>
+
+      <div
+        id="tagSearchAll"
         class="w-full h-[7vh] flex items-center flex-row px-14 border border-gray-300"
       >
         <!-- <input type="text" /> -->
@@ -264,7 +598,7 @@
           <div class="relative">
             <input
               id="InputanSearch"
-              class="border-none bg-gray-200 text-black w-52 pr-6 h-8 px-2 rounded-[5px] text-xs focus:outline-none focus:ring-0 focus:border-blue-500 outline-none"
+              class="border-none bg-gray-200 text-black w-64 pr-6 h-8 px-2 rounded-[5px] text-xs focus:outline-none focus:ring-0 focus:border-blue-500 outline-none"
               type="search"
               name="search"
               placeholder="Jalan / Kelurahan / Gedung / Mall"
@@ -1229,7 +1563,7 @@
         >
           <div class="w-7 h-7 flex justify-center items-center relative">
             <img
-            id="btnSaveInstagram"
+              id="btnSaveInstagram"
               class=""
               src="./src/images/save-instagram-off.png"
               alt=""
@@ -1264,6 +1598,7 @@
                 role="tab"
                 aria-controls="MenuSatuContent"
                 aria-selected="false"
+                onclick="resetToHomeView()"
                 class="bg-aktif-menu flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
               >
                 <div class="w-6 h-6 flex justify-center items-center relative">
@@ -1405,12 +1740,13 @@
                 role="tab"
                 aria-controls="MenuEmpatContent"
                 aria-selected="false"
+                onclick="toggleAgenView()"
                 class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
               >
                 <div class="w-6 h-6 flex justify-center items-center relative">
                   <img
                     class="menu-icon"
-                    data-menu="3"
+                    data-menu="4"
                     src="./src/images/real-estate-agent.png"
                     alt=""
                   />
