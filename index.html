@@ -591,7 +591,7 @@
 
       <div
         id="tagSearchAll"
-        class="w-full h-[7vh] flex items-center flex-row px-14 border border-gray-300"
+        class="w-full h-[7vh] flex items-center flex-row px-1.5 border border-gray-300"
       >
         <!-- <input type="text" /> -->
         <div class="pr-1">
@@ -2004,6 +2004,40 @@
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
+            <!-- Menu 13 -->
+            <div
+              class="flex col justify-center py-1"
+              data-tooltip-target="menu-ai-asisten"
+              data-tooltip-placement="right"
+            >
+              <div
+                id="MenuTigaBelasTab"
+                data-tabs-target="#MenuTigaBelasContent"
+                type="button"
+                role="tab"
+                aria-controls="MenuTigaBelasContent"
+                aria-selected="false"
+                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+              >
+                <div class="w-6 h-6 flex justify-center items-center relative">
+                  <img
+                    class="menu-icon"
+                    data-menu="0"
+                    src="./src/images/gm1/robot.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              id="menu-ai-asisten"
+              role="tooltip"
+              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+            >
+              AI Assistant
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
             <!--  -->
           </div>
           <!-- Map -->
@@ -2265,11 +2299,11 @@
                               </div>
 
                               <div
-                                class="absolute top-1/2 left-1/2 h-20 w-20 transform -translate-x-1/2 -translate-y-1/2"
+                                class="absolute top-1/2 left-1/2 h-28 w-40 transform -translate-x-1/2 -translate-y-1/2"
                               >
                                 <img
                                   class="opacity-75"
-                                  src="./src/images/sold.png"
+                                  src="./src/images/gm1/sold.png"
                                   alt="Sold"
                                   class="z-10"
                                 />
@@ -10034,6 +10068,28 @@
           >
             <div class="px-3 pt-2 h-full">
               <div class="font-semibold text-xl">Rekomendasi</div>
+
+              <div class="flex h-[78vh] items-center">
+                <h3 class="mx-auto">
+                  <img
+                    class="w-32 h-32 object-cover"
+                    src="./src/images/road-work.png"
+                    alt=""
+                  />
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Konten TigaBelas -->
+          <div
+            class="hidden pr-2"
+            id="MenuTigaBelasContent"
+            role="tabpanel"
+            aria-labelledby="MenuTigaBelasTab"
+          >
+            <div class="px-3 pt-2 h-full">
+              <div class="font-semibold text-xl">Ai Assistant</div>
 
               <div class="flex h-[78vh] items-center">
                 <h3 class="mx-auto">

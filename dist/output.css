@@ -1309,6 +1309,10 @@ input:checked + .toggle-bg {
   height: 5rem;
 }
 
+.h-28 {
+  height: 7rem;
+}
+
 .h-3 {
   height: 0.75rem;
 }
@@ -2362,7 +2366,7 @@ input:checked + .toggle-bg {
 
 .mapboxgl-ctrl-top-right {
   right: 1vh !important;
-  top: 55vh !important;
+  top: 45vh !important;
 }
 
 .mapboxgl-ctrl-group {
@@ -2397,6 +2401,26 @@ input:checked + .toggle-bg {
 
 .btn-stick {
   background-image: url("../src/images/stick-map.png") !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  background-size: inherit !important;
+  width: 60% !important;
+  height: 60% !important;
+}
+
+.btn-stick2 {
+  background-image: url("../src/images/gm1/radius-off.png") !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  background-size: inherit !important;
+  width: 60% !important;
+  height: 60% !important;
+}
+
+.btn-stick3 {
+  background-image: url("../src/images/gm1/pentagon-off.png") !important;
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;

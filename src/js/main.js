@@ -114,6 +114,26 @@ if (controlGroup) {
     alert("Stick button 1 clicked!");
   });
 
+  // Stick Button 2
+  var stickButton2 = document.createElement("button");
+  stickButton2.className =
+    "mapboxgl-ctrl-icon custom-control-button btn-stick2";
+  stickButton2.setAttribute("type", "button");
+  stickButton2.setAttribute("aria-label", "Stick Action 1");
+  stickButton2.addEventListener("click", function () {
+    alert("Stick button 1 clicked!");
+  });
+
+  // Stick Button 3
+  var stickButton3 = document.createElement("button");
+  stickButton3.className =
+    "mapboxgl-ctrl-icon custom-control-button btn-stick3";
+  stickButton3.setAttribute("type", "button");
+  stickButton3.setAttribute("aria-label", "Stick Action 3");
+  stickButton3.addEventListener("click", function () {
+    alert("Stick button 3 clicked!");
+  });
+
   // Get Zoom In and Zoom Out buttons
   var zoomInButton = controlGroup.querySelector(".mapboxgl-ctrl-zoom-in");
   var zoomOutButton = controlGroup.querySelector(".mapboxgl-ctrl-zoom-out");
@@ -129,6 +149,8 @@ if (controlGroup) {
 
   // Add buttons to control group in the desired order
   controlGroup.appendChild(stickButton1);
+  controlGroup.appendChild(stickButton2);
+  controlGroup.appendChild(stickButton3);
   controlGroup.appendChild(separator);
   controlGroup.appendChild(myLocationButton);
   controlGroup.appendChild(customButton);
