@@ -2074,7 +2074,7 @@
             <div class="h-full flex flex-col">
               <!--  Card Beranda -->
               <div
-                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar hidden"
+                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar"
               >
                 <!-- Judul Beranda -->
                 <div class="px-3 pt-2">
@@ -2638,7 +2638,9 @@
               </div>
 
               <!-- Card Detail Pencarian -->
-              <div class="flex flex-col w-full card-info-detail-pencarian">
+              <div
+                class="flex flex-col w-full card-info-detail-pencarian hidden"
+              >
                 <!-- Judul Card Info Detail -->
                 <div class="px-3 pt-2">
                   <div class="w-full flex justify-between items-center">
@@ -2677,7 +2679,7 @@
                           type="button"
                           role="tab"
                           aria-controls="profile"
-                          aria-selected="false"
+                          aria-selected="true"
                         >
                           Tampak Ruang
                         </button>
@@ -2733,7 +2735,7 @@
                           type="button"
                           role="tab"
                           aria-controls="settings"
-                          aria-selected="true"
+                          aria-selected="false"
                         >
                           Indeks
                         </button>
