@@ -1469,6 +1469,10 @@ input:checked + .toggle-bg {
   width: 2.25rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .w-\[17rem\] {
   width: 17rem;
 }
@@ -2420,7 +2424,7 @@ input:checked + .toggle-bg {
 }
 
 .btn-stick3 {
-  background-image: url("../src/images/gm1/pentagon-off.png") !important;
+  background-image: url("../src/images/gm1/pentagon-on.png") !important;
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
