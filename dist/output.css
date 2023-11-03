@@ -1848,11 +1848,6 @@ input:checked + .toggle-bg {
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(240 82 82 / var(--tw-border-opacity));
-}
-
 .border-transparent {
   border-color: transparent;
 }
@@ -2362,7 +2357,7 @@ input:checked + .toggle-bg {
 
 .mapboxgl-ctrl-top-right {
   right: 1vh !important;
-  top: 45vh !important;
+  top: 50vh !important;
 }
 
 .mapboxgl-ctrl-group {
@@ -2416,7 +2411,7 @@ input:checked + .toggle-bg {
 }
 
 .btn-stick3 {
-  background-image: url("../src/images/gm1/pentagon-on.png") !important;
+  background-image: url("../src/images/gm1/pentagon-off.png") !important;
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
@@ -2427,8 +2422,8 @@ input:checked + .toggle-bg {
 
 .mapboxgl-ctrl-group button {
   background-color: white !important;
-  width: 32px !important;
-  height: 32px !important;
+  width: 27px !important;
+  height: 27px !important;
   /* box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); */
   display: flex !important;
   justify-content: center !important;

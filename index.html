@@ -263,11 +263,11 @@
       >
         <!-- Running Text -->
         <div class="h-8 flex items-center w-full bg-white">
-          <div class="marquee w-full text-sm text-gray-700">
+          <!-- <div class="marquee w-full text-sm text-gray-700">
             Rumah murah dijual masa promo di wilayah Kebayoran Lama. Hanya
             sampai dengan 1 November 2023. Iklan rumah #1. Terbaru dari Agung
             Sedayu - rumah 2 lantai DP hanya Rp 100 juta. Iklan rumah #2.
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -2088,7 +2088,7 @@
             <div class="h-full flex flex-col">
               <!--  Card Beranda -->
               <div
-                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar hidden"
+                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar"
               >
                 <!-- Judul Beranda -->
                 <div class="px-3 pt-2">
@@ -2652,7 +2652,9 @@
               </div>
 
               <!-- Card Detail Pencarian -->
-              <div class="flex flex-col w-full card-info-detail-pencarian">
+              <div
+                class="flex flex-col w-full card-info-detail-pencarian hidden"
+              >
                 <!-- Judul Card Info Detail -->
                 <div class="px-3 pt-2">
                   <div class="w-full flex justify-between items-center">
@@ -2691,7 +2693,7 @@
                           type="button"
                           role="tab"
                           aria-controls="profile"
-                          aria-selected="false"
+                          aria-selected="true"
                         >
                           Tampak Ruang
                         </button>
@@ -2747,7 +2749,7 @@
                           type="button"
                           role="tab"
                           aria-controls="settings"
-                          aria-selected="true"
+                          aria-selected="false"
                         >
                           Indeks
                         </button>
