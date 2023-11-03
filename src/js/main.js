@@ -1012,29 +1012,36 @@ function playVideoInWrapper(wrapperSelector) {
   }
 }
 
-function toggleAgenView() {
-  const tagSearchAgen = document.getElementById("tagSearchAgen");
-  const tagSearchAll = document.getElementById("tagSearchAll");
+// function toggleAgenView() {
+//   const tagSearchAgen = document.getElementById("tagSearchAgen");
+//   const tagSearchAll = document.getElementById("tagSearchAll");
+//   const tagTeksBerjalan = document.getElementById("tagTeksBerjalan");
 
-  if (tagSearchAgen.classList.contains("hidden")) {
-    tagSearchAgen.classList.remove("hidden");
-    tagSearchAll.classList.add("hidden");
-  } else {
-    tagSearchAgen.classList.add("hidden");
-    tagSearchAll.classList.remove("hidden");
-  }
-}
+//   if (tagSearchAgen.classList.contains("hidden")) {
+//     tagSearchAgen.classList.remove("hidden");
+//     tagSearchAll.classList.add("hidden");
+//     tagTeksBerjalan.classList.add("hidden");
+//   } else if (tagSearchAll.classList.contains("hidden")) {
+//     tagSearchAgen.classList.add("hidden");
+//     tagSearchAll.classList.remove("hidden");
+//     tagTeksBerjalan.classList.remove("hidden");
+//   } else if (tagTeksBerjalan.classList.contains("hidden")) {
+//     tagSearchAgen.classList.add("hidden");
+//     tagSearchAll.classList.remove("hidden");
+//     tagTeksBerjalan.classList.remove("hidden");
+//   }
+// }
 
-function resetToHomeView() {
-  const tagSearchAgen = document.getElementById("tagSearchAgen");
-  const tagSearchAll = document.getElementById("tagSearchAll");
+// function resetToHomeView() {
+//   const tagSearchAgen = document.getElementById("tagSearchAgen");
+//   const tagSearchAll = document.getElementById("tagSearchAll");
 
-  // Tampilkan tagSearchAll
-  tagSearchAll.classList.remove("hidden");
+//   // Tampilkan tagSearchAll
+//   tagSearchAll.classList.remove("hidden");
 
-  // Sembunyikan tagSearchAgen
-  tagSearchAgen.classList.add("hidden");
-}
+//   // Sembunyikan tagSearchAgen
+//   tagSearchAgen.classList.add("hidden");
+// }
 
 function showCardInfoDetail(element) {
   // console.log(element);
@@ -1076,6 +1083,15 @@ function showCardInfoDetail(element) {
 
       //
       playVideoInWrapper(".video-wrapper-autoplay");
+
+      //
+      // Mengambil elemen dengan kelas "hiddenSearchRunning"
+      const hiddenSearchRunningElement = document.querySelector(
+        ".hiddenSearchRunning"
+      );
+
+      // Menghapus kelas "hidden" dari elemen
+      hiddenSearchRunningElement.classList.remove("hidden");
 
       //
       break;
@@ -1204,6 +1220,21 @@ document.addEventListener("DOMContentLoaded", function () {
     btnJscore: document.getElementById("btnJscore"),
   };
 
+  const element_btn_search = {
+    MenuSatuTab: document.getElementById("MenuSatuTab"),
+    //
+    MenuDuaTab: document.getElementById("MenuDuaTab"),
+    MenuTigaTab: document.getElementById("MenuTigaTab"),
+    //
+    MenuEmpatTab: document.getElementById("MenuEmpatTab"),
+  };
+
+  const elemnt_konten_search = {
+    tagSearchAgen: document.getElementById("tagSearchAgen"),
+    tagSearchAll: document.getElementById("tagSearchAll"),
+    tagTeksBerjalan: document.getElementById("tagTeksBerjalan"),
+  };
+
   const konten_element = {
     kontenBtnHarga: document.getElementById("kontenBtnHarga"),
     kontenBtnKamar: document.getElementById("kontenBtnKamar"),
@@ -1243,6 +1274,45 @@ document.addEventListener("DOMContentLoaded", function () {
       svgArrow.classList.remove("rotate-180");
     }
   }
+
+  //
+
+  function toggleMenuSearch(elemnt_konten_search, konten_element) {
+    // Menyembunyikan semua elemen pencarian
+    Object.values(elemnt_konten_search).forEach((element) => {
+      element.classList.add("hidden");
+    });
+
+    // Menampilkan elemen yang sesuai dengan konten_element yang diberikan
+    if (konten_element && elemnt_konten_search[konten_element]) {
+      elemnt_konten_search[konten_element].classList.remove("hidden");
+    }
+
+    if (konten_element === "tagTeksBerjalan") {
+      // Aktifkan fungsi teksBerjalan di sini
+      teksBerjalan();
+    }
+  }
+
+  //
+
+  element_btn_search.MenuSatuTab.addEventListener("click", function () {
+    toggleMenuSearch(elemnt_konten_search, "tagSearchAll");
+  });
+
+  element_btn_search.MenuDuaTab.addEventListener("click", function () {
+    toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+  });
+
+  element_btn_search.MenuTigaTab.addEventListener("click", function () {
+    toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+  });
+
+  element_btn_search.MenuEmpatTab.addEventListener("click", function () {
+    toggleMenuSearch(elemnt_konten_search, "tagSearchAgen");
+  });
+
+  //
 
   elements.btnHarga.addEventListener("click", function () {
     toggleContent(
@@ -1669,13 +1739,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $("body>.tooltip").remove();
 
-$(function () {
+function teksBerjalan() {
   $(".teks-berjalan-pencarian").marquee({
     duration: 15500,
-    // gap: 50,
     delayBeforeStart: 0,
     direction: "left",
-    // duplicated: true,
     pauseOnHover: true,
   });
-});
+}
