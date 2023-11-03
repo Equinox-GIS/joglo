@@ -163,8 +163,8 @@
 
       /* Peta Livability Index */
       #myRadarChart {
-        width: 100% !important;
-        height: 12vw !important;
+        width: 90% !important;
+        height: 23vw !important;
       }
 
       /* Peta Environment Carrying Capacity Index */
@@ -3093,210 +3093,114 @@
                         </div>
 
                         <!-- Konten Menu Indeks -->
-
                         <div
-                          class="h-[57.5vh] overflow-y-auto hide-scrollbar mt-6"
+                          class="grid grid-cols-2 mt-6"
+                          id="kontenIndeksTabContent"
                         >
-                          <div class="" id="kontenIndeksTabContent">
-                            <div class="pr-2" id="profil" role="tabpanel">
-                              <!-- ECCI -->
-                              <div class="grid grid-cols-1 gap-y-1">
-                                <div class="w-full text-md font-bold">
-                                  Environment Carrying Capacity Indexy
+                          <!-- Ecci -->
+                          <!-- Chart -->
+                          <div>
+                            <canvas
+                              id="myRadarChart"
+                              class="w-full h-full"
+                            ></canvas>
+                          </div>
+                          <!-- Teks -->
+                          <div
+                            class="h-[57.8vh] overflow-y-auto hide-scrollbar"
+                          >
+                            <div class="flex flex-col text-sm">
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">Topografi</div>
+                                <div>1. Kelerengan Datar s</div>
+                              </div>
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">Kebencanaan</div>
+                                <div>1. Risiko Banjir Rendah</div>
+                                <div>2. Risiko Penurunan Muka Tanah Rendah</div>
+                              </div>
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">
+                                  Ketersediaan Air
                                 </div>
-
-                                <div class="grid grid-cols-1 text-md">
-                                  <div class="grid grid-cols-3 gap-4 text-md">
-                                    <div
-                                      class="col-span-2 flex items-center mt-5 mb-8 -ml-44 justify-center min-w-[200px] min-h-[180px]"
-                                    >
-                                      <canvas
-                                        id="myRadarChart"
-                                        class="w-full h-full"
-                                      ></canvas>
-                                    </div>
-
-                                    <div></div>
-                                  </div>
-                                  <!--  -->
-
-                                  <div class="flex flex-col text-sm">
-                                    <div class="flex flex-col mb-4">
-                                      <div class="font-semibold">Topografi</div>
-                                      <div>1. Kelerengan Datar s</div>
-                                    </div>
-                                    <div class="flex flex-col mb-4">
-                                      <div class="font-semibold">
-                                        Kebencanaan
-                                      </div>
-                                      <div>1. Risiko Banjir Rendah</div>
-                                      <div>
-                                        2. Risiko Penurunan Muka Tanah Rendah
-                                      </div>
-                                    </div>
-                                    <div class="flex flex-col mb-4">
-                                      <div class="font-semibold">
-                                        Ketersediaan Air
-                                      </div>
-                                      <div>1. Air Tanah Zona Rusak</div>
-                                      <div>
-                                        2. Penyediaan Air Perpipaan Terjangkau
-                                      </div>
-                                    </div>
-                                    <div class="flex flex-col mb-4">
-                                      <div class="font-semibold">
-                                        Kualitas Vegetasi
-                                      </div>
-                                      <div>
-                                        1. Kualitas Vegetasi Sangat Kurang Baik
-                                      </div>
-                                    </div>
-                                    <div class="flex flex-col mb-4">
-                                      <div class="font-semibold">
-                                        Pengolahan Limbah
-                                      </div>
-                                      <div>
-                                        1. Pengelolaan IPAL Belum Tersedia /
-                                        Terencana
-                                      </div>
-                                      <div>
-                                        2. Jarak Tidak Ideal Terhadap TPS
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <!--  -->
-
-                                  <div
-                                    class="grid grid-cols-1 gap-y-1 mt-8"
-                                  ></div>
-
-                                  <!--  -->
+                                <div>1. Air Tanah Zona Rusak</div>
+                                <div>
+                                  2. Penyediaan Air Perpipaan Terjangkau
                                 </div>
                               </div>
-                            </div>
-                            <div
-                              class="hidden pr-2"
-                              id="dashboard1"
-                              role="tabpanel"
-                              aria-labelledby="indeksLivability"
-                            >
-                              <!-- Livability Index -->
-                              <div class="grid grid-cols-1 gap-y-1">
-                                <div class="w-full text-md font-bold">
-                                  Livability Index
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">
+                                  Kualitas Vegetasi
                                 </div>
-
-                                <div class="grid grid-cols-1 text-md">
-                                  <div
-                                    class="grid grid-cols-3 gap-4 text-md text-gray-800"
-                                  >
-                                    <div
-                                      class="col-span-2 flex items-center mt-5 mb-8 -ml-36 justify-center min-w-[200px] min-h-[180px]"
-                                    >
-                                      <canvas
-                                        id="mySecondRadarChart"
-                                        class="w-full h-full"
-                                      ></canvas>
-                                    </div>
-
-                                    <div></div>
-                                  </div>
-
-                                  <!--  -->
-                                  <div class="grid grid-cols-1 gap-4 text-sm">
-                                    <div class="flex flex-col">
-                                      <div>
-                                        1. Tingkat Konektivitas Pejalan Kaki
-                                        Rendah
-                                      </div>
-                                      <div>
-                                        2. Ruang Terbuka dan Publik Terjangkau
-                                        Sangat Baik
-                                      </div>
-                                      <div>
-                                        3. Fasilitas Komunitas Terjangkau Sangat
-                                        Baik
-                                      </div>
-                                      <div>
-                                        4. Aktivitas Budaya Perkotaan Sedang
-                                      </div>
-                                      <div>
-                                        5. Tempat untuk Bekerja Kurang Tersedia
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <!--  -->
-                                  <div
-                                    class="grid grid-cols-1 gap-y-1 mt-8"
-                                  ></div>
-                                  <!--  -->
+                                <div>
+                                  1. Kualitas Vegetasi Sangat Kurang Baik
                                 </div>
                               </div>
-                              <!--  -->
-                            </div>
-                            <!-- Invesment -->
-                            <div
-                              class="hidden pr-2"
-                              id="dashboard2"
-                              role="tabpanel"
-                            >
-                              <!-- Investment Index -->
-                              <div class="grid grid-cols-1 gap-y-1 mt-0">
-                                <div class="w-full text-md font-bold">
-                                  Investment Index
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">
+                                  Pengolahan Limbah
                                 </div>
-
-                                <div class="grid grid-cols-1 text-md">
-                                  <div
-                                    class="grid grid-cols-3 gap-4 text-md text-gray-800"
-                                  >
-                                    <div
-                                      class="col-span-2 flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
-                                    >
-                                      <canvas
-                                        id="myInvestmentIndexChart"
-                                        class="w-full h-full"
-                                      ></canvas>
-                                    </div>
-                                    <div></div>
-                                  </div>
-                                  <!--  -->
-
-                                  <div class="flex flex-col text-sm">
-                                    <div class="flex flex-col">
-                                      <div class="">Topografi</div>
-                                      <div>1. Kelerengan Datar</div>
-                                    </div>
-                                    <div class="flex flex-col">
-                                      <div class="">Kebencanaan</div>
-                                      <div>1. Risiko Banjir Rendah</div>
-                                      <div>
-                                        2. Risiko Penurunan Muka Tanah Rendah
-                                      </div>
-                                    </div>
-
-                                    <div class="flex flex-col">
-                                      <div class="">Pengolahan Limbah</div>
-                                      <div>
-                                        1. Pengelolaan IPAL Belum Tersedia /
-                                        Terencana
-                                      </div>
-                                      <div>
-                                        2. Jarak Tidak Ideal Terhadap TPS
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <!--  -->
-                                  <div
-                                    class="grid grid-cols-1 gap-y-1 mt-8"
-                                  ></div>
-                                  <!--  -->
+                                <div>
+                                  1. Pengelolaan IPAL Belum Tersedia / Terencana
+                                </div>
+                                <div>2. Jarak Tidak Ideal Terhadap TPS</div>
+                              </div>
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">
+                                  Ketersediaan Air
+                                </div>
+                                <div>1. Air Tanah Zona Rusak</div>
+                                <div>
+                                  2. Penyediaan Air Perpipaan Terjangkau
                                 </div>
                               </div>
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">
+                                  Kualitas Vegetasi
+                                </div>
+                                <div>
+                                  1. Kualitas Vegetasi Sangat Kurang Baik
+                                </div>
+                              </div>
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">
+                                  Pengolahan Limbah
+                                </div>
+                                <div>
+                                  1. Pengelolaan IPAL Belum Tersedia / Terencana
+                                </div>
+                                <div>2. Jarak Tidak Ideal Terhadap TPS</div>
+                              </div>
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">
+                                  Ketersediaan Air
+                                </div>
+                                <div>1. Air Tanah Zona Rusak</div>
+                                <div>
+                                  2. Penyediaan Air Perpipaan Terjangkau
+                                </div>
+                              </div>
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">
+                                  Kualitas Vegetasi
+                                </div>
+                                <div>
+                                  1. Kualitas Vegetasi Sangat Kurang Baik
+                                </div>
+                              </div>
+                              <div class="flex flex-col mb-4">
+                                <div class="font-semibold">
+                                  Pengolahan Limbah
+                                </div>
+                                <div>
+                                  1. Pengelolaan IPAL Belum Tersedia / Terencana
+                                </div>
+                                <div>2. Jarak Tidak Ideal Terhadap TPS</div>
+                              </div>
                             </div>
-                            <!--  -->
                           </div>
                         </div>
+
                         <!--  -->
                       </div>
                       <!-- shp -->
