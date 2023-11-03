@@ -163,7 +163,7 @@
 
       /* Peta Livability Index */
       #myRadarChart {
-        margin-top: -60vh;
+        /* margin-top: -60vh; */
         /* width: 89% !important;
         height: 48vw !important; */
       }
@@ -3170,26 +3170,31 @@
                         <div class="mt-6" id="kontenIndeksTabContent">
                           <!-- Ecci -->
                           <div
-                            class="grid rows-2 h-[60vh] overflow-y-auto hide-scrollbar"
+                            class="flex flex-col h-[60vh] overflow-y-auto hide-scrollbar"
                             id="profil"
                             role="tabpanel"
                           >
-                            <div class="w-full text-md font-bold">
+                            <div class="w-full text-md font-bold mb-1">
                               Environment Carrying Capacity Indexy
                             </div>
                             <!--  -->
                             <div class="grid grid-cols-2">
                               <!-- Chart -->
 
-                              <div>
+                              <div class="h-[30vh]">
                                 <canvas
+                                  style="
+                                    display: block;
+                                    height: 474px;
+                                    width: 356px;
+                                  "
                                   id="myRadarChart"
                                   class="w-full h-full"
                                 ></canvas>
                               </div>
                               <!-- Teks -->
                               <div class="">
-                                <div class="flex flex-col text-sm mt-8">
+                                <div class="flex flex-col text-sm mt-1">
                                   <div class="flex flex-col mb-4">
                                     <div class="font-semibold">Topografi</div>
                                     <div>1. Kelerengan Datar s</div>
