@@ -1670,7 +1670,12 @@ document.addEventListener("DOMContentLoaded", function () {
 $("body>.tooltip").remove();
 
 $(function () {
-  $(".marquee").marquee({
-    duration: 15000,
+  $(".teks-berjalan-pencarian").marquee({
+    duration: 15500,
+    // gap: 50,
+    delayBeforeStart: 0,
+    direction: "left",
+    // duplicated: true,
+    pauseOnHover: true,
   });
 });
