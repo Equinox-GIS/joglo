@@ -163,8 +163,8 @@
 
       /* Peta Livability Index */
       #myRadarChart {
-        width: 90% !important;
-        height: 23vw !important;
+        width: 68% !important;
+        height: 28vw !important;
       }
 
       /* Peta Environment Carrying Capacity Index */
@@ -1559,6 +1559,15 @@
         </div>
 
         <!--  -->
+        <!-- Kalkulator -->
+        <div
+          class="flex justify-center items-center flex-col w-11 h-11 cursor-pointer border-gray-100"
+        >
+          <div class="w-8 h-8 flex justify-center items-center relative">
+            <!-- btnSaveInstagram -->
+            <img id="" class="" src="./src/images/calculator.png" alt="" />
+          </div>
+        </div>
 
         <!-- Search Button -->
         <div class="px-1">
@@ -1579,18 +1588,21 @@
             Simpan Pencarian
           </button>
         </div>
+        <!--  -->
         <div
           class="flex justify-center items-center flex-col w-11 h-11 cursor-pointer border-gray-100"
         >
           <div class="w-6 h-6 flex justify-center items-center relative">
+            <!-- btnSaveInstagram -->
             <img
-              id="btnSaveInstagram"
+              id=""
               class=""
-              src="./src/images/save-instagram-off.png"
+              src="./src/images/save-instagram-on.png"
               alt=""
             />
           </div>
         </div>
+        <!--  -->
       </div>
 
       <!-- Konten -->
@@ -1694,7 +1706,7 @@
                   <img
                     class="menu-icon"
                     data-menu="0"
-                    src="./src/images/more.png"
+                    src="./src/images/more4.png"
                     alt=""
                   />
                 </div>
@@ -3036,9 +3048,9 @@
                           data-tabs-toggle="#kontenIndeksTabContent"
                           role="tablist"
                         >
-                          <div>
+                          <div class="">
                             <button
-                              class="flex items-center pr-2 py-1 rounded-full text-blue-600 hover:text-blue-600 indeksECCITab"
+                              class="flex items-center -ml-16 pr-2 py-1 rounded-full text-blue-600 hover:text-blue-600 indeksECCITab"
                               data-tabs-target="#profil"
                               type="button"
                               role="tab"
@@ -3058,7 +3070,7 @@
                           </div>
                           <div>
                             <button
-                              class="indeksLivabilityTab flex items-center pr-2 py-1 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              class="indeksLivabilityTab flex items-center -ml-32 pr-2 py-1 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
                               data-tabs-target="#dashboard1"
                               type="button"
                               role="tab"
@@ -3102,7 +3114,11 @@
                         <!-- Konten Menu Indeks -->
                         <div class="mt-6" id="kontenIndeksTabContent">
                           <!-- Ecci -->
-                          <div class="grid rows-2" id="profil" role="tabpanel">
+                          <div
+                            class="grid rows-2 h-[57.8vh] overflow-y-auto hide-scrollbar"
+                            id="profil"
+                            role="tabpanel"
+                          >
                             <div class="w-full text-md font-bold">
                               Environment Carrying Capacity Indexy
                             </div>
@@ -3117,9 +3133,7 @@
                                 ></canvas>
                               </div>
                               <!-- Teks -->
-                              <div
-                                class="h-[57.8vh] overflow-y-auto hide-scrollbar"
-                              >
+                              <div class="">
                                 <div class="flex flex-col text-sm">
                                   <div class="flex flex-col mb-4">
                                     <div class="font-semibold">Topografi</div>
@@ -3221,7 +3235,7 @@
                           <!-- livabilityyy -->
 
                           <div
-                            class="grid rows-2 hidden"
+                            class="grid rows-2 h-[57.8vh] overflow-y-auto hide-scrollbar hidden"
                             id="dashboard1"
                             role="tabpanel"
                           >
@@ -3239,26 +3253,27 @@
                                 ></canvas>
                               </div>
                               <!-- Teks -->
-                              <div
-                                class="h-[57.8vh] overflow-y-auto hide-scrollbar"
-                              >
-                                <div class="flex flex-col">
-                                  <div>
-                                    1. Tingkat Konektivitas Pejalan Kaki Rendah
-                                  </div>
-                                  <div>
-                                    2. Ruang Terbuka dan Publik Terjangkau
-                                    Sangat Baik
-                                  </div>
-                                  <div>
-                                    3. Fasilitas Komunitas Terjangkau Sangat
-                                    Baik
-                                  </div>
-                                  <div>
-                                    4. Aktivitas Budaya Perkotaan Sedang
-                                  </div>
-                                  <div>
-                                    5. Tempat untuk Bekerja Kurang Tersedia
+                              <div class="">
+                                <div class="flex flex-col text-sm">
+                                  <div class="flex flex-col mb-4">
+                                    <div>
+                                      1. Tingkat Konektivitas Pejalan Kaki
+                                      Rendah
+                                    </div>
+                                    <div>
+                                      2. Ruang Terbuka dan Publik Terjangkau
+                                      Sangat Baik
+                                    </div>
+                                    <div>
+                                      3. Fasilitas Komunitas Terjangkau Sangat
+                                      Baik
+                                    </div>
+                                    <div>
+                                      4. Aktivitas Budaya Perkotaan Sedang
+                                    </div>
+                                    <div>
+                                      5. Tempat untuk Bekerja Kurang Tersedia
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -4502,7 +4517,7 @@
                         >
                           <div>
                             <button
-                              class="flex kalkulatorhargawajarTab items-center pr-2 py-1 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              class="flex kalkulatorhargawajarTab items-center -ml-16 pr-2 py-1 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
                               data-tabs-target="#kalkulatorhargawajar"
                               type="button"
                               role="tab"
@@ -4522,7 +4537,7 @@
                           </div>
                           <div>
                             <button
-                              class="flex kalkulatorkprTab items-center pr-2 py-1 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              class="flex kalkulatorkprTab items-center -ml-32 pr-2 py-1 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
                               data-tabs-target="#kalkulatorkpr"
                               type="button"
                               role="tab"
@@ -4552,7 +4567,7 @@
                               role="tabpanel"
                             >
                               <div>
-                                <p>KPR</p>
+                                <p>Simulasi KPR</p>
                               </div>
                             </div>
                             <div

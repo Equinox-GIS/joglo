@@ -1286,11 +1286,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Menampilkan elemen yang sesuai dengan konten_element yang diberikan
     if (konten_element && elemnt_konten_search[konten_element]) {
       elemnt_konten_search[konten_element].classList.remove("hidden");
-    }
 
-    if (konten_element === "tagTeksBerjalan") {
-      // Aktifkan fungsi teksBerjalan di sini
-      teksBerjalan();
+      // Mengaktifkan fungsi teksBerjalan jika konten_element adalah "tagTeksBerjalan"
+      if (konten_element === "tagTeksBerjalan") {
+        isTeksBerjalanActive = true;
+        teksBerjalan();
+      } else {
+        isTeksBerjalanActive = false;
+        // Logika untuk menghentikan teksBerjalan jika diperlukan
+        // ...
+      }
+      //
     }
   }
 
@@ -1739,11 +1745,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $("body>.tooltip").remove();
 
+let isTeksBerjalanActive = false;
+
 function teksBerjalan() {
-  $(".teks-berjalan-pencarian").marquee({
-    duration: 15500,
-    delayBeforeStart: 0,
-    direction: "left",
-    pauseOnHover: true,
-  });
+  if (isTeksBerjalanActive) {
+    $(".teks-berjalan-pencarian").marquee({
+      duration: 15500,
+      delayBeforeStart: 0,
+      direction: "left",
+      pauseOnHover: true,
+    });
+  }
 }
