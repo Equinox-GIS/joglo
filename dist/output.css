@@ -1603,6 +1603,10 @@ input:checked + .toggle-bg {
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
+.grid-cols-\[30px\2c 1fr\] {
+  grid-template-columns: 30px 1fr;
+}
+
 .grid-cols-\[55px\2c 1fr\] {
   grid-template-columns: 55px 1fr;
 }

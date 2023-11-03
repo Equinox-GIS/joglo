@@ -916,6 +916,7 @@ document.addEventListener("DOMContentLoaded", function () {
     InputanSearchAgen: document.querySelector("#InputanSearchAgen"),
     garisBatas: document.querySelector("#garisBatas"),
     btnHarga: document.getElementById("btnHarga"),
+    btnCicilan: document.getElementById("btnCicilan"),
     btnKamar: document.getElementById("btnKamar"),
     btnPenjual: document.getElementById("btnPenjual"),
     btnJenisProperti: document.getElementById("btnJenisProperti"),
@@ -940,6 +941,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const konten_element = {
     kontenBtnHarga: document.getElementById("kontenBtnHarga"),
+    kontenBtnCicilan: document.getElementById("kontenBtnCicilan"),
     kontenBtnKamar: document.getElementById("kontenBtnKamar"),
     kontenBtnPenjual: document.getElementById("kontenBtnPenjual"),
     kontenBtnJenisProperti: document.getElementById("kontenBtnJenisProperti"),
@@ -1028,6 +1030,14 @@ document.addEventListener("DOMContentLoaded", function () {
       elements.btnHarga,
       konten_element.kontenBtnHarga,
       svg_element.ArrowIconHarga
+    );
+  });
+
+  elements.btnCicilan.addEventListener("click", function () {
+    toggleContent(
+      elements.btnCicilan,
+      konten_element.kontenBtnCicilan,
+      svg_element.ArrowIconCicilan
     );
   });
 
