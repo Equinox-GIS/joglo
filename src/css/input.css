@@ -216,6 +216,40 @@
   font-size: 5px !important;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.running-text-search {
+  /* white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 50s infinite; */
+
+  /* position: absolute;
+  bottom: 0;
+  z-index: 8;
+  background: white;
+  color: blue;
+  font-weight: normal;
+  font-size: 14px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap; */
+}
+
+/* .marquee {
+  width: 100%;
+  overflow: hidden; */
+/* border: 1px solid #ccc;
+  background: black;
+  color: rgb(202, 255, 195); */
+/* } */
+
 #InputanSearch::placeholder {
   color: rgb(156 163 175);
 }

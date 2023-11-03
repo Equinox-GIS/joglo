@@ -258,6 +258,20 @@
       <!-- Searching -->
 
       <div
+        id="tagSearchNonaktif"
+        class="w-full h-[7vh] flex items-center flex-row border border-gray-300"
+      >
+        <!-- Running Text -->
+        <div class="h-8 flex items-center w-full bg-white">
+          <div class="marquee w-full text-sm text-gray-700">
+            Rumah murah dijual masa promo di wilayah Kebayoran Lama. Hanya
+            sampai dengan 1 November 2023. Iklan rumah #1. Terbaru dari Agung
+            Sedayu - rumah 2 lantai DP hanya Rp 100 juta. Iklan rumah #2.
+          </div>
+        </div>
+      </div>
+
+      <div
         id="tagSearchAgen"
         class="w-full h-[7vh] flex items-center flex-row px-1.5 border border-gray-300 hidden"
       >
@@ -591,7 +605,7 @@
 
       <div
         id="tagSearchAll"
-        class="w-full h-[7vh] flex items-center flex-row px-1.5 border border-gray-300"
+        class="w-full h-[7vh] flex items-center flex-row px-1.5 border border-gray-300 hidden"
       >
         <!-- <input type="text" /> -->
         <div class="pr-1">
@@ -2074,7 +2088,7 @@
             <div class="h-full flex flex-col">
               <!--  Card Beranda -->
               <div
-                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar"
+                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar hidden"
               >
                 <!-- Judul Beranda -->
                 <div class="px-3 pt-2">
@@ -2638,9 +2652,7 @@
               </div>
 
               <!-- Card Detail Pencarian -->
-              <div
-                class="flex flex-col w-full card-info-detail-pencarian hidden"
-              >
+              <div class="flex flex-col w-full card-info-detail-pencarian">
                 <!-- Judul Card Info Detail -->
                 <div class="px-3 pt-2">
                   <div class="w-full flex justify-between items-center">
@@ -2679,7 +2691,7 @@
                           type="button"
                           role="tab"
                           aria-controls="profile"
-                          aria-selected="true"
+                          aria-selected="false"
                         >
                           Tampak Ruang
                         </button>
@@ -2735,7 +2747,7 @@
                           type="button"
                           role="tab"
                           aria-controls="settings"
-                          aria-selected="false"
+                          aria-selected="true"
                         >
                           Indeks
                         </button>
@@ -3003,303 +3015,289 @@
 
                       <!--  -->
                       <div
-                        class="hidden px-4 py-2 mt-1"
+                        class="hidden px-4 py-2"
                         id="settings"
                         role="tabpanel"
                         aria-labelledby="settings-tab"
                       >
-                        <!-- konten Indeks -->
-                        <div class="h-[71vh]">
-                          <div class="grid grid-cols-1 gap-y-1 mt-6">
-                            <!-- Judul Konten Indeks -->
-                            <div class="grid grid-cols-4 pt-0 pb-2">
-                              <div
-                                class="col-span-3 grid grid-cols-5"
-                                id="kontenIndeksTab"
-                                data-tabs-toggle="#kontenIndeksTabContent"
-                                role="tablist"
-                              >
-                                <div class="flex justify-end">
-                                  <button
-                                    class="flex items-center pr-2 py-2 rounded-full text-blue-600 hover:text-blue-600 indeksECCITab"
-                                    data-tabs-target="#profil"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="profil"
-                                    aria-selected="true"
-                                  >
-                                    <div
-                                      class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                                    >
-                                      <img
-                                        class="w-7 h-7 p-1 object-cover"
-                                        src="./src/images/indeks/ecci-on.png"
-                                        alt="user photo"
-                                      />
-                                    </div>
-                                  </button>
-                                </div>
-                                <div class="flex justify-end">
-                                  <button
-                                    class="indeksLivabilityTab flex items-center pr-2 py-2 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
-                                    data-tabs-target="#dashboard1"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="dashboard1"
-                                    aria-selected="false"
-                                  >
-                                    <div
-                                      class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                                    >
-                                      <img
-                                        class="w-7 h-7 p-1 object-cover"
-                                        src="./src/images/indeks/livability-off.png"
-                                        alt="user photo"
-                                      />
-                                    </div>
-                                  </button>
-                                </div>
-                                <!-- Investment off -->
-                                <div>
-                                  <button
-                                    class="hidden indeksInvesmentTab flex items-center pr-2 py-2 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
-                                    data-tabs-target="#dashboard2"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="dashboard2"
-                                    aria-selected="false"
-                                  >
-                                    <div
-                                      class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                                    >
-                                      <img
-                                        class="w-7 h-7 p-1 object-cover"
-                                        src="./src/images/indeks/invest-off.png"
-                                        alt="user photo"
-                                      />
-                                    </div>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
+                        <!-- iini -->
 
-                            <!-- Konten Menu Indeks -->
-                            <div
-                              class="h-[57.5vh] overflow-y-auto hide-scrollbar"
+                        <!-- Tab Menu -->
+                        <div
+                          class="w-[26vw] flex justify-around mt-6"
+                          id="kontenIndeksTab"
+                          data-tabs-toggle="#kontenIndeksTabContent"
+                          role="tablist"
+                        >
+                          <div>
+                            <button
+                              class="flex items-center pr-2 py-1 rounded-full text-blue-600 hover:text-blue-600 indeksECCITab"
+                              data-tabs-target="#profil"
+                              type="button"
+                              role="tab"
+                              aria-controls="profil"
+                              aria-selected="true"
                             >
-                              <div class="" id="kontenIndeksTabContent">
-                                <div class="pr-2" id="profil" role="tabpanel">
-                                  <!-- ECCI -->
-                                  <div class="grid grid-cols-1 gap-y-1">
-                                    <div class="w-full text-md font-bold">
-                                      Environment Carrying Capacity Indexy
-                                    </div>
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/indeks/ecci-on.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="indeksLivabilityTab flex items-center pr-2 py-1 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              data-tabs-target="#dashboard1"
+                              type="button"
+                              role="tab"
+                              aria-controls="dashboard1"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/indeks/livability-off.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <!-- HIDDEN -->
+                          <!-- <div>
+                            <button
+                              class="indeksInvesmentTab hidden flex items-center pr-2 py-1 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              data-tabs-target="#dashboard2"
+                              type="button"
+                              role="tab"
+                              aria-controls="dashboard2"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/indeks/invest-off.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div> -->
+                        </div>
 
-                                    <div class="grid grid-cols-1 text-md">
-                                      <div
-                                        class="grid grid-cols-3 gap-4 text-md"
-                                      >
-                                        <div
-                                          class="col-span-2 flex items-center mt-5 mb-8 -ml-44 justify-center min-w-[200px] min-h-[180px]"
-                                        >
-                                          <canvas
-                                            id="myRadarChart"
-                                            class="w-full h-full"
-                                          ></canvas>
-                                        </div>
+                        <!-- Konten Menu Indeks -->
 
-                                        <div></div>
-                                      </div>
-                                      <!--  -->
-
-                                      <div class="flex flex-col text-sm">
-                                        <div class="flex flex-col mb-4">
-                                          <div class="font-semibold">
-                                            Topografi
-                                          </div>
-                                          <div>1. Kelerengan Datar s</div>
-                                        </div>
-                                        <div class="flex flex-col mb-4">
-                                          <div class="font-semibold">
-                                            Kebencanaan
-                                          </div>
-                                          <div>1. Risiko Banjir Rendah</div>
-                                          <div>
-                                            2. Risiko Penurunan Muka Tanah
-                                            Rendah
-                                          </div>
-                                        </div>
-                                        <div class="flex flex-col mb-4">
-                                          <div class="font-semibold">
-                                            Ketersediaan Air
-                                          </div>
-                                          <div>1. Air Tanah Zona Rusak</div>
-                                          <div>
-                                            2. Penyediaan Air Perpipaan
-                                            Terjangkau
-                                          </div>
-                                        </div>
-                                        <div class="flex flex-col mb-4">
-                                          <div class="font-semibold">
-                                            Kualitas Vegetasi
-                                          </div>
-                                          <div>
-                                            1. Kualitas Vegetasi Sangat Kurang
-                                            Baik
-                                          </div>
-                                        </div>
-                                        <div class="flex flex-col mb-4">
-                                          <div class="font-semibold">
-                                            Pengolahan Limbah
-                                          </div>
-                                          <div>
-                                            1. Pengelolaan IPAL Belum Tersedia /
-                                            Terencana
-                                          </div>
-                                          <div>
-                                            2. Jarak Tidak Ideal Terhadap TPS
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <!--  -->
-
-                                      <div
-                                        class="grid grid-cols-1 gap-y-1 mt-8"
-                                      ></div>
-
-                                      <!--  -->
-                                    </div>
-                                  </div>
+                        <div
+                          class="h-[57.5vh] overflow-y-auto hide-scrollbar mt-6"
+                        >
+                          <div class="" id="kontenIndeksTabContent">
+                            <div class="pr-2" id="profil" role="tabpanel">
+                              <!-- ECCI -->
+                              <div class="grid grid-cols-1 gap-y-1">
+                                <div class="w-full text-md font-bold">
+                                  Environment Carrying Capacity Indexy
                                 </div>
-                                <div
-                                  class="hidden pr-2"
-                                  id="dashboard1"
-                                  role="tabpanel"
-                                  aria-labelledby="indeksLivability"
-                                >
-                                  <!-- Livability Index -->
-                                  <div class="grid grid-cols-1 gap-y-1">
-                                    <div class="w-full text-md font-bold">
-                                      Livability Index
+
+                                <div class="grid grid-cols-1 text-md">
+                                  <div class="grid grid-cols-3 gap-4 text-md">
+                                    <div
+                                      class="col-span-2 flex items-center mt-5 mb-8 -ml-44 justify-center min-w-[200px] min-h-[180px]"
+                                    >
+                                      <canvas
+                                        id="myRadarChart"
+                                        class="w-full h-full"
+                                      ></canvas>
                                     </div>
 
-                                    <div class="grid grid-cols-1 text-md">
-                                      <div
-                                        class="grid grid-cols-3 gap-4 text-md text-gray-800"
-                                      >
-                                        <div
-                                          class="col-span-2 flex items-center mt-5 mb-8 -ml-36 justify-center min-w-[200px] min-h-[180px]"
-                                        >
-                                          <canvas
-                                            id="mySecondRadarChart"
-                                            class="w-full h-full"
-                                          ></canvas>
-                                        </div>
+                                    <div></div>
+                                  </div>
+                                  <!--  -->
 
-                                        <div></div>
+                                  <div class="flex flex-col text-sm">
+                                    <div class="flex flex-col mb-4">
+                                      <div class="font-semibold">Topografi</div>
+                                      <div>1. Kelerengan Datar s</div>
+                                    </div>
+                                    <div class="flex flex-col mb-4">
+                                      <div class="font-semibold">
+                                        Kebencanaan
                                       </div>
-
-                                      <!--  -->
-                                      <div
-                                        class="grid grid-cols-1 gap-4 text-sm"
-                                      >
-                                        <div class="flex flex-col">
-                                          <div>
-                                            1. Tingkat Konektivitas Pejalan Kaki
-                                            Rendah
-                                          </div>
-                                          <div>
-                                            2. Ruang Terbuka dan Publik
-                                            Terjangkau Sangat Baik
-                                          </div>
-                                          <div>
-                                            3. Fasilitas Komunitas Terjangkau
-                                            Sangat Baik
-                                          </div>
-                                          <div>
-                                            4. Aktivitas Budaya Perkotaan Sedang
-                                          </div>
-                                          <div>
-                                            5. Tempat untuk Bekerja Kurang
-                                            Tersedia
-                                          </div>
-                                        </div>
+                                      <div>1. Risiko Banjir Rendah</div>
+                                      <div>
+                                        2. Risiko Penurunan Muka Tanah Rendah
                                       </div>
-                                      <!--  -->
-                                      <div
-                                        class="grid grid-cols-1 gap-y-1 mt-8"
-                                      ></div>
-                                      <!--  -->
+                                    </div>
+                                    <div class="flex flex-col mb-4">
+                                      <div class="font-semibold">
+                                        Ketersediaan Air
+                                      </div>
+                                      <div>1. Air Tanah Zona Rusak</div>
+                                      <div>
+                                        2. Penyediaan Air Perpipaan Terjangkau
+                                      </div>
+                                    </div>
+                                    <div class="flex flex-col mb-4">
+                                      <div class="font-semibold">
+                                        Kualitas Vegetasi
+                                      </div>
+                                      <div>
+                                        1. Kualitas Vegetasi Sangat Kurang Baik
+                                      </div>
+                                    </div>
+                                    <div class="flex flex-col mb-4">
+                                      <div class="font-semibold">
+                                        Pengolahan Limbah
+                                      </div>
+                                      <div>
+                                        1. Pengelolaan IPAL Belum Tersedia /
+                                        Terencana
+                                      </div>
+                                      <div>
+                                        2. Jarak Tidak Ideal Terhadap TPS
+                                      </div>
                                     </div>
                                   </div>
                                   <!--  -->
+
+                                  <div
+                                    class="grid grid-cols-1 gap-y-1 mt-8"
+                                  ></div>
+
+                                  <!--  -->
                                 </div>
-                                <!-- Invesment -->
-                                <div
-                                  class="hidden pr-2"
-                                  id="dashboard2"
-                                  role="tabpanel"
-                                >
-                                  <!-- Investment Index -->
-                                  <div class="grid grid-cols-1 gap-y-1 mt-0">
-                                    <div class="w-full text-md font-bold">
-                                      Investment Index
-                                    </div>
-
-                                    <div class="grid grid-cols-1 text-md">
-                                      <div
-                                        class="grid grid-cols-3 gap-4 text-md text-gray-800"
-                                      >
-                                        <div
-                                          class="col-span-2 flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
-                                        >
-                                          <canvas
-                                            id="myInvestmentIndexChart"
-                                            class="w-full h-full"
-                                          ></canvas>
-                                        </div>
-                                        <div></div>
-                                      </div>
-                                      <!--  -->
-
-                                      <div class="flex flex-col text-sm">
-                                        <div class="flex flex-col">
-                                          <div class="">Topografi</div>
-                                          <div>1. Kelerengan Datar</div>
-                                        </div>
-                                        <div class="flex flex-col">
-                                          <div class="">Kebencanaan</div>
-                                          <div>1. Risiko Banjir Rendah</div>
-                                          <div>
-                                            2. Risiko Penurunan Muka Tanah
-                                            Rendah
-                                          </div>
-                                        </div>
-
-                                        <div class="flex flex-col">
-                                          <div class="">Pengolahan Limbah</div>
-                                          <div>
-                                            1. Pengelolaan IPAL Belum Tersedia /
-                                            Terencana
-                                          </div>
-                                          <div>
-                                            2. Jarak Tidak Ideal Terhadap TPS
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <!--  -->
-                                      <div
-                                        class="grid grid-cols-1 gap-y-1 mt-8"
-                                      ></div>
-                                      <!--  -->
-                                    </div>
-                                  </div>
-                                </div>
-                                <!--  -->
                               </div>
                             </div>
+                            <div
+                              class="hidden pr-2"
+                              id="dashboard1"
+                              role="tabpanel"
+                              aria-labelledby="indeksLivability"
+                            >
+                              <!-- Livability Index -->
+                              <div class="grid grid-cols-1 gap-y-1">
+                                <div class="w-full text-md font-bold">
+                                  Livability Index
+                                </div>
+
+                                <div class="grid grid-cols-1 text-md">
+                                  <div
+                                    class="grid grid-cols-3 gap-4 text-md text-gray-800"
+                                  >
+                                    <div
+                                      class="col-span-2 flex items-center mt-5 mb-8 -ml-36 justify-center min-w-[200px] min-h-[180px]"
+                                    >
+                                      <canvas
+                                        id="mySecondRadarChart"
+                                        class="w-full h-full"
+                                      ></canvas>
+                                    </div>
+
+                                    <div></div>
+                                  </div>
+
+                                  <!--  -->
+                                  <div class="grid grid-cols-1 gap-4 text-sm">
+                                    <div class="flex flex-col">
+                                      <div>
+                                        1. Tingkat Konektivitas Pejalan Kaki
+                                        Rendah
+                                      </div>
+                                      <div>
+                                        2. Ruang Terbuka dan Publik Terjangkau
+                                        Sangat Baik
+                                      </div>
+                                      <div>
+                                        3. Fasilitas Komunitas Terjangkau Sangat
+                                        Baik
+                                      </div>
+                                      <div>
+                                        4. Aktivitas Budaya Perkotaan Sedang
+                                      </div>
+                                      <div>
+                                        5. Tempat untuk Bekerja Kurang Tersedia
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--  -->
+                                  <div
+                                    class="grid grid-cols-1 gap-y-1 mt-8"
+                                  ></div>
+                                  <!--  -->
+                                </div>
+                              </div>
+                              <!--  -->
+                            </div>
+                            <!-- Invesment -->
+                            <div
+                              class="hidden pr-2"
+                              id="dashboard2"
+                              role="tabpanel"
+                            >
+                              <!-- Investment Index -->
+                              <div class="grid grid-cols-1 gap-y-1 mt-0">
+                                <div class="w-full text-md font-bold">
+                                  Investment Index
+                                </div>
+
+                                <div class="grid grid-cols-1 text-md">
+                                  <div
+                                    class="grid grid-cols-3 gap-4 text-md text-gray-800"
+                                  >
+                                    <div
+                                      class="col-span-2 flex items-center mt-5 mb-8 justify-center min-w-[200px] min-h-[180px]"
+                                    >
+                                      <canvas
+                                        id="myInvestmentIndexChart"
+                                        class="w-full h-full"
+                                      ></canvas>
+                                    </div>
+                                    <div></div>
+                                  </div>
+                                  <!--  -->
+
+                                  <div class="flex flex-col text-sm">
+                                    <div class="flex flex-col">
+                                      <div class="">Topografi</div>
+                                      <div>1. Kelerengan Datar</div>
+                                    </div>
+                                    <div class="flex flex-col">
+                                      <div class="">Kebencanaan</div>
+                                      <div>1. Risiko Banjir Rendah</div>
+                                      <div>
+                                        2. Risiko Penurunan Muka Tanah Rendah
+                                      </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                      <div class="">Pengolahan Limbah</div>
+                                      <div>
+                                        1. Pengelolaan IPAL Belum Tersedia /
+                                        Terencana
+                                      </div>
+                                      <div>
+                                        2. Jarak Tidak Ideal Terhadap TPS
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--  -->
+                                  <div
+                                    class="grid grid-cols-1 gap-y-1 mt-8"
+                                  ></div>
+                                  <!--  -->
+                                </div>
+                              </div>
+                            </div>
+                            <!--  -->
                           </div>
                         </div>
+                        <!--  -->
                       </div>
                       <!-- shp -->
                       <div
@@ -4525,62 +4523,62 @@
                         role="tabpanel"
                         aria-labelledby="shp-tab"
                       >
-                        <!-- Kalkulator -->
+                        <!-- Tab Menu -->
+
+                        <div
+                          class="w-[26vw] flex justify-around mt-6 border border-red-500"
+                          id="kontenKalkulatorTab"
+                          data-tabs-toggle="#kontenKalkulatorTabContent"
+                          role="tablist"
+                        >
+                          <div>
+                            <button
+                              class="flex kalkulatorhargawajarTab items-center pr-2 py-1 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              data-tabs-target="#kalkulatorhargawajar"
+                              type="button"
+                              role="tab"
+                              aria-controls="kalkulatorhargawajar"
+                              aria-selected="true"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/kalkulator/hargaWajar-on.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div>
+                            <button
+                              class="flex kalkulatorkprTab items-center pr-2 py-1 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
+                              data-tabs-target="#kalkulatorkpr"
+                              type="button"
+                              role="tab"
+                              aria-controls="kalkulatorkpr"
+                              aria-selected="false"
+                            >
+                              <div
+                                class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
+                              >
+                                <img
+                                  class="w-7 h-7 p-1 object-cover"
+                                  src="./src/images/kalkulator/kpr-off.png"
+                                  alt="user photo"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+
+                        <!-- Konten Menu  -->
 
                         <div class="grid grid-cols-1 gap-y-1 mt-6">
-                          <div class="grid grid-cols-4 pt-0 pb-2.5">
-                            <div
-                              class="col-span-3 grid grid-cols-5"
-                              id="kontenKalkulatorTab"
-                              data-tabs-toggle="#kontenKalkulatorTabContent"
-                              role="tablist"
-                            >
-                              <div>
-                                <button
-                                  class="flex kalkulatorhargawajarTab items-center pr-2 py-2 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
-                                  data-tabs-target="#kalkulatorhargawajar"
-                                  type="button"
-                                  role="tab"
-                                  aria-controls="kalkulatorhargawajar"
-                                  aria-selected="true"
-                                >
-                                  <div
-                                    class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                                  >
-                                    <img
-                                      class="w-7 h-7 p-1 object-cover"
-                                      src="./src/images/kalkulator/hargaWajar-on.png"
-                                      alt="user photo"
-                                    />
-                                  </div>
-                                </button>
-                              </div>
-                              <div>
-                                <button
-                                  class="flex kalkulatorkprTab items-center pr-2 py-2 rounded-full dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300"
-                                  data-tabs-target="#kalkulatorkpr"
-                                  type="button"
-                                  role="tab"
-                                  aria-controls="kalkulatorkpr"
-                                  aria-selected="false"
-                                >
-                                  <div
-                                    class="flex items-center justify-center p-1 border-2 border-gray-700 rounded-full"
-                                  >
-                                    <img
-                                      class="w-7 h-7 p-1 object-cover"
-                                      src="./src/images/kalkulator/kpr-off.png"
-                                      alt="user photo"
-                                    />
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-
                           <div id="kontenKalkulatorTabContent">
                             <div
-                              class="pr-2"
+                              class="pr-2 hidden"
                               id="kalkulatorhargawajar"
                               role="tabpanel"
                             >
@@ -4589,7 +4587,7 @@
                               </div>
                             </div>
                             <div
-                              class="hidden pr-2"
+                              class="pr-2"
                               id="kalkulatorkpr"
                               role="tabpanel"
                             >
@@ -4815,6 +4813,8 @@
                             </div>
                           </div>
                         </div>
+
+                        <!--  -->
                       </div>
                       <!-- kontak -->
                       <div
@@ -10174,4 +10174,11 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
   <script src="./js/panolens.js"></script>
   <script src="./js/script.js"></script> -->
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.6.0/jquery.marquee.min.js"
+    integrity="sha512-JHJv/L48s1Hod24iSI0u9bcF/JlUi+YaxliKdbasnw/U1Lp9xxWkaZ3O5OuQPMkVwOVXeFkF4n4176ouA6Py3A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
 </html>

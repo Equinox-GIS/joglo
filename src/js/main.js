@@ -1668,3 +1668,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 $("body>.tooltip").remove();
+
+$(function () {
+  $(".marquee").marquee({
+    duration: 15000,
+  });
+});
