@@ -131,7 +131,7 @@ const IzinAjib = () => {
   fetch(`galian_utilitas_izin.geojson`)
     .then((response) => response.json())
     .then((data) => {
-      // console.log(data); // Mencetak data ke konsol
+      //   console.log(data); // Mencetak data ke konsol
       map.addSource("layer-ajib-galian", {
         type: "geojson",
         data: data,
@@ -158,14 +158,8 @@ const IzinAjib = () => {
       console.error("Terjadi kesalahan:", error); // Menangani potensi kesalahan
     });
 
-  // Defining the popup
-  const popup = new mapboxgl.Popup({
-    closeButton: false,
-    closeOnClick: false,
-  });
-
   // Pop up
-  map.on("mouseenter", "layer-ajib-galian", (e) => {
+  map.on("click", "layer-ajib-galian", (e) => {
     console.log(e.features[0].properties);
 
     map.getCanvas().style.cursor = "pointer";
@@ -208,87 +202,7 @@ const IzinAjib = () => {
       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
     }
   });
-
-  // map.on("mouseleave", "layer-ajib-galian", () => {
-  //   map.getCanvas().style.cursor = "";
-  //   popup.remove();
-  // });
 };
 
 // Panggil fungsi setelah peta selesai dimuat
 map.on("load", IzinAjib);
-
-// ---------------------------------------------------------------------------------------------
-
-let currentPopup; // Menyimpan referensi ke popup saat ini
-
-function getDataCard(element) {
-  // Tutup popup saat ini jika ada
-  if (currentPopup) {
-    currentPopup.remove();
-  }
-
-  const activePanduan = parseInt(element.getAttribute("data-card-map"));
-
-  // Mendefinisikan popup
-  const popup = new mapboxgl.Popup({
-    closeButton: false,
-    closeOnClick: false,
-  });
-
-  // Loop melalui sumber data geojson untuk mencari OBJECTID yang cocok
-  map.getSource("layer-ajib-galian")._data.features.forEach((feature) => {
-    if (feature.properties.OBJECTID === activePanduan) {
-      const coordinates = feature.geometry.coordinates.slice();
-      const data = feature.properties;
-      const content = `
-      <div class="p-0 w-full">
-        <div class="">
-          <h6 class="mt-0 text-sm leading-4 mb-2">${data["OBJECTID"]}</h6>
-          <h6 class="mt-0 text-sm leading-4 mb-2">${data["kegiatan"]}</h6>
-          <div class="border-b mb-2"></div>
-          <div class="leading-5">
-            <div class="grid grid-cols-2">
-              <div><span>NO SK</span></div>
-              <div><span class="block truncate"> ${data["nama_obj"]}</span></div>
-            </div>
-            <div class="grid grid-cols-2">
-              <div><span>Izin</span></div>
-              <div><span class="block truncate"> ${data["nama_petugas"]}</span></div>
-            </div>
-            <div class="grid grid-cols-2">
-              <div><span>Badan Usaha</span></div>
-              <div><span class="block truncate"> ${data["pemilik"]}</span></div>
-            </div>
-            <div class="grid grid-cols-2">
-              <div><span>Jenis Usaha</span></div>
-              <div><span class="block truncate"> ${data["statusproyek"]}</span></div>
-            </div>
-            <div class="grid grid-cols-2">
-              <div><span>Pelaksana</span></div>
-              <div><span class="block truncate"> ${data["komentar"]}</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `;
-
-      popup.setLngLat(coordinates).setHTML(content).addTo(map);
-      currentPopup = popup; // Simpan referensi ke popup saat ini
-
-      while (Math.abs(map.getCenter().lng - coordinates[0]) > 180) {
-        coordinates[0] += map.getCenter().lng > coordinates[0] ? 360 : -360;
-      }
-    }
-  });
-}
-
-function removePopup() {
-  // Tutup popup saat ini jika ada
-  if (currentPopup) {
-    currentPopup.remove();
-    currentPopup = null;
-  }
-}
-
-// Hide Show Konten

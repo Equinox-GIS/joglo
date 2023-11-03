@@ -314,17 +314,17 @@ var mySecondRadarChart = new Chart(ctx2, {
   type: "radar",
   data: {
     labels: [
-      "Tingkat Konektivitas Pejalan Kaki",
-      "Ruang Terbuka dan Publik",
-      "Fasilitas Komunitas",
-      "Aktivitas Budaya",
-      "Tempat untuk Bekerja",
+      "Pengelolaan Limbah",
+      "Topografi",
+      "Kebencanaan",
+      "Keseterdian Air",
+      "Kualitas Vegetasi",
     ],
     datasets: [
       {
-        data: [4, 2, 5, 3, 4],
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        borderColor: "rgba(75, 192, 192, 1)",
+        data: [3, 5, 2, 4, 3],
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
         borderWidth: 1,
       },
     ],

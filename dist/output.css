@@ -1353,6 +1353,10 @@ input:checked + .toggle-bg {
   height: 10vh;
 }
 
+.h-\[30vh\] {
+  height: 30vh;
+}
+
 .h-\[50vh\] {
   height: 50vh;
 }
@@ -2733,9 +2737,9 @@ input:checked + .toggle-bg {
   margin: 0;
 }
 
-canvas {
+/* canvas {
   width: 100%;
-}
+} */
 
 body {
   margin: 0;
