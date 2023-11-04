@@ -2,6 +2,155 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mengatur Button Slider Card Info */
+.slider-thumbnails {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.slider-thumbnails .slick-slide {
+  padding: 15px;
+  transition: transform 0.3s ease-out;
+}
+
+.slider-thumbnails .slick-slide:focus img {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.slider-thumbnails .slick-slide img {
+  max-width: 100%;
+  border: solid 5px #fff;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-out;
+  border-radius: 3px;
+}
+
+.slick-prev,
+.slick-next {
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 5px;
+}
+
+.slick-next {
+  right: 5px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.slick-slide:focus,
+.slick-slide:focus {
+  outline: none;
+}
+
+.slick-slider:not(:hover) .slick-arrow,
+.slick-slider:not(:hover) .slick-dots {
+  opacity: 0;
+}
+
+.slick-arrow {
+  transition: opacity 0.5s ease-out;
+}
+
+/* Style Scrollbar */
+
+.scrollbar-firefox {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+.scrollbar::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: auto;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  display: none;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(161 161 170);
+  border-radius: 100vh;
+  border: 2px solid rgb(161 161 170);
+  position: relative !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Peta Livability Index */
+#myRadarChart {
+  /* margin-top: -60vh; */
+  /* width: 89% !important;
+        height: 48vw !important; */
+}
+
+/* Peta Environment Carrying Capacity Index */
+#mySecondRadarChart {
+  /* margin-top: -60vh; */
+
+  /* width: 91% !important;
+        height: 35vw !important; */
+}
+
+/* responsvei slick */
+/* Card Info */
+.slider-card-info img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-card-info {
+  height: auto;
+  width: auto;
+  box-shadow: none;
+  border: none;
+  box-sizing: none;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+/* Card Info Detail */
+.slider-card-info-detail img {
+  max-width: 100%; /* Gambar tidak akan melebihi lebar area pembungkus */
+  max-height: 100%; /* Gambar tidak akan melebihi tinggi area pembungkus */
+  /* width: auto; */
+  height: auto;
+}
+
+.slider-card-info-detail {
+  height: auto;
+  width: auto;
+  box-shadow: none;
+  border: none;
+  box-sizing: none;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
 /* Navigator MapboxGL */
 .mapboxgl-ctrl-top-right {
   right: 1vh !important;
