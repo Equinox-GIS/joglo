@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const map = new mapboxgl.Map({
   container: "mapJoglo",
-  style: "mapbox://styles/menthoelsr/ckp6i54ay22u818lrq15ffcnr",
+  style: "mapbox://styles/menthoelsr/ckp4wrapq11m117pf2lr49l5t",
   zoom: 14.5,
   center: [106.8295257, -6.210588],
   preserveDrawingBuffer: true,
@@ -234,7 +234,7 @@ if (controlGroup) {
   dropdown.innerHTML = `
     <div class="mt-3">
     <div class="flex items-center mb-4 px-2 pt-3">
-        <input id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <input checked id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
         <label for="radio-default" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
     </div>
     <div class="flex items-center mb-4 px-2">
@@ -242,7 +242,7 @@ if (controlGroup) {
         <label for="radio-satellite" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
     </div>
     <div class="flex items-center px-2 pb-3">
-        <input checked id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <input  id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
         <label for="radio-street" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
     </div>
     <div>`;
