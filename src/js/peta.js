@@ -146,56 +146,12 @@ if (compass) {
 
 if (controlGroup) {
   // Custom Button
-  // var customButton = document.createElement("button");
-  // customButton.className = "mapboxgl-ctrl-icon custom-control-button btn-layer";
-  // customButton.setAttribute("type", "button");
-  // customButton.setAttribute("aria-label", "Custom Layer Action");
-  // customButton.innerHTML =
-  //   '<span class="mapboxgl-ctrl-icon custom-layer" aria-hidden="true" title="Custom Layer Action"></span>';
-  // customButton.addEventListener("click", function () {
-  //   alert("Layer button clicked!");
-  // });
-
-  // Membuat dan menambahkan tombol layer setelah tombol my location
   var customButton = document.createElement("button");
   customButton.className = "mapboxgl-ctrl-icon custom-control-button btn-layer";
   customButton.setAttribute("type", "button");
-  customButton.setAttribute("aria-label", "Layer");
+  customButton.setAttribute("aria-label", "Custom Layer Action");
   customButton.innerHTML =
     '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Layer"></span>';
-
-  // Create dropdown
-  var dropdown = document.createElement("div");
-  dropdown.id = "dropdownDelay";
-  dropdown.className =
-    "z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 absolute";
-  dropdown.style.right = "100%"; // mengatur posisi ke kanan
-  dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
-  dropdown.style.marginTop = "-1.5rem";
-  dropdown.innerHTML = `
-    <div class="mt-3">
-    <div class="flex items-center mb-4 px-2 pt-3">
-        <input id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
-        <label for="radio-default" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
-    </div>
-    <div class="flex items-center mb-4 px-2">
-        <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
-        <label for="radio-satellite" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
-    </div>
-    <div class="flex items-center px-2 pb-3">
-        <input checked id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
-        <label for="radio-street" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
-    </div>
-    <div>`;
-
-  customButton.addEventListener("click", function () {
-    // Show or hide dropdown
-    if (dropdown.classList.contains("hidden")) {
-      dropdown.classList.remove("hidden");
-    } else {
-      dropdown.classList.add("hidden");
-    }
-  });
 
   // My Location Button
   var myLocationButton = document.createElement("button");
@@ -274,7 +230,7 @@ if (controlGroup) {
     "z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 absolute";
   dropdown.style.right = "100%"; // mengatur posisi ke kanan
   dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
-  dropdown.style.marginTop = "-1.5rem";
+  dropdown.style.marginTop = "-3.5rem";
   dropdown.innerHTML = `
     <div class="mt-3">
     <div class="flex items-center mb-4 px-2 pt-3">
@@ -291,7 +247,7 @@ if (controlGroup) {
     </div>
     <div>`;
 
-  layerButton.addEventListener("click", function () {
+  customButton.addEventListener("click", function () {
     // Show or hide dropdown
     if (dropdown.classList.contains("hidden")) {
       dropdown.classList.remove("hidden");
@@ -312,6 +268,7 @@ if (controlGroup) {
   controlGroup.appendChild(separator);
   controlGroup.appendChild(myLocationButton);
   controlGroup.appendChild(customButton);
+  controlGroup.appendChild(dropdown);
   controlGroup.appendChild(zoomInButton);
   controlGroup.appendChild(zoomOutButton);
 }
