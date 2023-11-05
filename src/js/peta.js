@@ -98,6 +98,32 @@ function initSlickCardPeta(name) {
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWVudGhvZWxzciIsImEiOiJja3M0MDZiMHMwZW83MnVwaDZ6Z2NhY2JxIn0.vQFxEZsM7Vvr-PX3FMOGiQ";
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Attach a change event to the radio buttons with name 'map-layer'
+  document
+    .querySelectorAll('input[name="map-layer"]')
+    .forEach(function (radio) {
+      radio.addEventListener("change", function () {
+        switch (this.value) {
+          case "Default":
+            map.setStyle(
+              "mapbox://styles/menthoelsr/ckp4wrapq11m117pf2lr49l5t"
+            );
+            break;
+          case "Satellite":
+            map.setStyle(
+              "mapbox://styles/menthoelsr/ckp6i54ay22u818lrq15ffcnr"
+            );
+            break;
+          case "Street":
+            map.setStyle("mapbox://styles/mapbox/streets-v11");
+            break;
+        }
+      });
+    });
+});
+
 const map = new mapboxgl.Map({
   container: "mapJoglo",
   style: "mapbox://styles/menthoelsr/ckp6i54ay22u818lrq15ffcnr",
@@ -108,6 +134,92 @@ const map = new mapboxgl.Map({
 
 // Navigator
 map.addControl(new mapboxgl.NavigationControl());
+
+var controlGroup = document.querySelector(
+  ".mapboxgl-ctrl-top-right .mapboxgl-ctrl-group"
+);
+
+var compass = controlGroup.querySelector(".mapboxgl-ctrl-compass");
+if (compass) {
+  compass.style.setProperty("display", "none", "important");
+}
+
+if (controlGroup) {
+  // Custom Button
+  var customButton = document.createElement("button");
+  customButton.className = "mapboxgl-ctrl-icon custom-control-button btn-layer";
+  customButton.setAttribute("type", "button");
+  customButton.setAttribute("aria-label", "Custom Layer Action");
+  customButton.innerHTML =
+    '<span class="mapboxgl-ctrl-icon custom-layer" aria-hidden="true" title="Custom Layer Action"></span>';
+  customButton.addEventListener("click", function () {
+    alert("Layer button clicked!");
+  });
+
+  // My Location Button
+  var myLocationButton = document.createElement("button");
+  myLocationButton.className =
+    "mapboxgl-ctrl-icon custom-control-button btn-location";
+  myLocationButton.setAttribute("type", "button");
+  myLocationButton.setAttribute("aria-label", "My Location");
+  myLocationButton.innerHTML =
+    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="My Location"></span>';
+  myLocationButton.addEventListener("click", function () {
+    alert("My Location button clicked!");
+  });
+
+  // Stick Button 1
+  var stickButton1 = document.createElement("button");
+  stickButton1.className = "mapboxgl-ctrl-icon custom-control-button btn-stick";
+  stickButton1.setAttribute("type", "button");
+  stickButton1.setAttribute("aria-label", "Stick Action 1");
+  stickButton1.addEventListener("click", function () {
+    alert("Stick button 1 clicked!");
+  });
+
+  // Stick Button 2
+  var stickButton2 = document.createElement("button");
+  stickButton2.className =
+    "mapboxgl-ctrl-icon custom-control-button btn-stick2";
+  stickButton2.setAttribute("type", "button");
+  stickButton2.setAttribute("aria-label", "Stick Action 1");
+  stickButton2.addEventListener("click", function () {
+    alert("Stick button 1 clicked!");
+  });
+
+  // Stick Button 3
+  var stickButton3 = document.createElement("button");
+  stickButton3.className =
+    "mapboxgl-ctrl-icon custom-control-button btn-stick3";
+  stickButton3.setAttribute("type", "button");
+  stickButton3.setAttribute("aria-label", "Stick Action 3");
+  stickButton3.addEventListener("click", function () {
+    alert("Stick button 3 clicked!");
+  });
+
+  // Get Zoom In and Zoom Out buttons
+  var zoomInButton = controlGroup.querySelector(".mapboxgl-ctrl-zoom-in");
+  var zoomOutButton = controlGroup.querySelector(".mapboxgl-ctrl-zoom-out");
+
+  // Remove zoom buttons from the DOM
+  controlGroup.removeChild(zoomInButton);
+  controlGroup.removeChild(zoomOutButton);
+
+  // Separator
+  var separator = document.createElement("div");
+  separator.style.marginTop = "4vh";
+  separator.style.boxShadow = "none";
+
+  // Add buttons to control group in the desired order
+  controlGroup.appendChild(stickButton1);
+  controlGroup.appendChild(stickButton2);
+  controlGroup.appendChild(stickButton3);
+  controlGroup.appendChild(separator);
+  controlGroup.appendChild(myLocationButton);
+  controlGroup.appendChild(customButton);
+  controlGroup.appendChild(zoomInButton);
+  controlGroup.appendChild(zoomOutButton);
+}
 
 // disable map zoom when using scroll
 map.scrollZoom.disable();
