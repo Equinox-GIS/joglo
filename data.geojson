@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1600,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.8208923395527, -6.204296879329803]
+      },
+      "properties": {
+        "OBJECTID": 1600,
+        "no_permohonan": "C3/22050937A806017",
+        "sumber_data": "Jakevo",
+        "service_point": "DPMPTSP DKI JAKARTA",
+        "pemohon": "Christian Daivanandha",
+        "no_sk": "139/C.3/1/-1.798/e/2022",
+        "tgl_terbit": 1666224000000,
+        "kode": "C.3",
+        "izin": "IZIN PELAKSANAAN PENEMPATAN JARINGAN UTILITAS",
+        "tipe": "perusahaan",
+        "badan_usaha": "PT. DCI Indonesia Tbk",
+        "bidang_usaha": "perdaganganDanJasa",
+        "jenis_usaha": "Aktifitas Teknologi Informasi dan Jasa Komputer",
+        "pelaksana": "PT. YOFC International Indonesia",
+        "jenis_kegiatan": "Pelaksanaan Penempatan  Jaringan Utilitas Fiber Optik",
+        "lokasi_kegiatan": " Jl.Kuningan Barat Raya",
+        "wilayah": "Setiabudi & Mampang Prapatan",
+        "alamat_lengkap": " Jl.Kuningan Barat Raya, Setiabudi & Mampang Prapatan",
+        "tgl_expired": 1666310400000,
+        "retribusi": 50354000,
+        "status": "selesai",
+        "long": 106.8237261,
+        "lat": -6.2370844999999999,
+        "status_expired": "Expired"
+      }
+    }
+  ]
+}

@@ -117,6 +117,23 @@
         height: 35vw !important; */
 }
 
+/* Peta Joglo */
+
+.slider-card-peta img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-card-info {
+  height: auto;
+  width: auto;
+  box-shadow: none;
+  border: none;
+  box-sizing: none;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
 /* responsvei slick */
 /* Card Info */
 .slider-card-info img {
@@ -480,6 +497,44 @@
   height: 58vh;
   width: 100vh;
   object-fit: cover;
+}
+
+.video-wrapper-peta video {
+  height: 17vh;
+}
+
+.slider-card-info-detail-peta img {
+  max-width: 100%;
+  /* Gambar tidak akan melebihi lebar area pembungkus */
+  max-height: 100%;
+  /* Gambar tidak akan melebihi tinggi area pembungkus */
+  /* width: auto; */
+  height: auto;
+}
+
+.slider-card-info-detail-peta {
+  height: auto;
+  width: auto;
+  box-shadow: none;
+  border: none;
+  box-sizing: none;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+.slider-card-info-detail-peta video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.left-prev-custom {
+  left: -15px !important;
+  /* top: 45px !important; */
+}
+.right-next-custom {
+  right: -15px !important;
+  /* top: 45px !important; */
 }
 
 /* 3d */
