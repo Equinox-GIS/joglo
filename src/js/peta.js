@@ -120,7 +120,7 @@ const popup = new mapboxgl.Popup({
 const IzinGalian = () => {
   map.addSource("layer-peta-joglo", {
     type: "geojson",
-    data: `https://4aksi.com/joglo/data.geojson`,
+    data: `https://4aksi.com/joglo/dataa.geojson`,
   });
 
   map.addLayer({
