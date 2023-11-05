@@ -146,14 +146,55 @@ if (compass) {
 
 if (controlGroup) {
   // Custom Button
+  // var customButton = document.createElement("button");
+  // customButton.className = "mapboxgl-ctrl-icon custom-control-button btn-layer";
+  // customButton.setAttribute("type", "button");
+  // customButton.setAttribute("aria-label", "Custom Layer Action");
+  // customButton.innerHTML =
+  //   '<span class="mapboxgl-ctrl-icon custom-layer" aria-hidden="true" title="Custom Layer Action"></span>';
+  // customButton.addEventListener("click", function () {
+  //   alert("Layer button clicked!");
+  // });
+
+  // Membuat dan menambahkan tombol layer setelah tombol my location
   var customButton = document.createElement("button");
   customButton.className = "mapboxgl-ctrl-icon custom-control-button btn-layer";
   customButton.setAttribute("type", "button");
-  customButton.setAttribute("aria-label", "Custom Layer Action");
+  customButton.setAttribute("aria-label", "Layer");
   customButton.innerHTML =
-    '<span class="mapboxgl-ctrl-icon custom-layer" aria-hidden="true" title="Custom Layer Action"></span>';
+    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Layer"></span>';
+
+  // Create dropdown
+  var dropdown = document.createElement("div");
+  dropdown.id = "dropdownDelay";
+  dropdown.className =
+    "z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 absolute";
+  dropdown.style.right = "100%"; // mengatur posisi ke kanan
+  dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
+  dropdown.style.marginTop = "-1.5rem";
+  dropdown.innerHTML = `
+    <div class="mt-3">
+    <div class="flex items-center mb-4 px-2 pt-3">
+        <input id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <label for="radio-default" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
+    </div>
+    <div class="flex items-center mb-4 px-2">
+        <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <label for="radio-satellite" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
+    </div>
+    <div class="flex items-center px-2 pb-3">
+        <input checked id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <label for="radio-street" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
+    </div>
+    <div>`;
+
   customButton.addEventListener("click", function () {
-    alert("Layer button clicked!");
+    // Show or hide dropdown
+    if (dropdown.classList.contains("hidden")) {
+      dropdown.classList.remove("hidden");
+    } else {
+      dropdown.classList.add("hidden");
+    }
   });
 
   // My Location Button
@@ -204,6 +245,60 @@ if (controlGroup) {
   // Remove zoom buttons from the DOM
   controlGroup.removeChild(zoomInButton);
   controlGroup.removeChild(zoomOutButton);
+
+  // Membuat dan menambahkan tombol layer setelah tombol my location
+  var layerButton = document.createElement("button");
+  layerButton.className =
+    "mapboxgl-ctrl-icon custom-control-button layer-button";
+  layerButton.setAttribute("type", "button");
+  layerButton.setAttribute("aria-label", "Layer");
+  layerButton.innerHTML =
+    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Layer"></span>';
+
+  var customButtonMapboxDua = document.createElement("button");
+  customButtonMapboxDua.className =
+    "mapboxgl-ctrl-icon custom-control-button custom-button-mapbox-dua";
+  customButtonMapboxDua.setAttribute("type", "button");
+  customButtonMapboxDua.setAttribute("aria-label", "Custom Button Mapbox Dua");
+  customButtonMapboxDua.innerHTML =
+    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Custom Button Mapbox Dua"></span>';
+
+  customButtonMapboxDua.addEventListener("click", function () {
+    alert("Custom Button Mapbox Dua clicked!");
+  });
+
+  // Create dropdown
+  var dropdown = document.createElement("div");
+  dropdown.id = "dropdownDelay";
+  dropdown.className =
+    "z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 absolute";
+  dropdown.style.right = "100%"; // mengatur posisi ke kanan
+  dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
+  dropdown.style.marginTop = "-1.5rem";
+  dropdown.innerHTML = `
+    <div class="mt-3">
+    <div class="flex items-center mb-4 px-2 pt-3">
+        <input id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <label for="radio-default" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
+    </div>
+    <div class="flex items-center mb-4 px-2">
+        <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <label for="radio-satellite" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
+    </div>
+    <div class="flex items-center px-2 pb-3">
+        <input checked id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
+        <label for="radio-street" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
+    </div>
+    <div>`;
+
+  layerButton.addEventListener("click", function () {
+    // Show or hide dropdown
+    if (dropdown.classList.contains("hidden")) {
+      dropdown.classList.remove("hidden");
+    } else {
+      dropdown.classList.add("hidden");
+    }
+  });
 
   // Separator
   var separator = document.createElement("div");
