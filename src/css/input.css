@@ -212,8 +212,8 @@
   background-repeat: no-repeat !important;
   display: block !important;
   background-size: inherit !important;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   width: 65% !important;
   height: 65% !important;
 }
@@ -224,8 +224,8 @@
   background-repeat: no-repeat !important;
   display: block !important;
   background-size: inherit !important;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   width: 60% !important;
   height: 60% !important;
 }
@@ -246,8 +246,8 @@
   background-repeat: no-repeat !important;
   display: block !important;
   background-size: inherit !important;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   width: 60% !important;
   height: 60% !important;
 }
@@ -512,6 +512,10 @@
 
 .video-wrapper-peta video {
   height: 17vh;
+}
+
+.video-wrapper-beranda video {
+  height: 28vh !important;
 }
 
 .slider-card-info-detail-peta img {
