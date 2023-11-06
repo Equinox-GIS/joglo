@@ -233,15 +233,15 @@ if (controlGroup) {
   dropdown.style.marginTop = "-3.5rem";
   dropdown.innerHTML = `
     <div class="mt-3">
-    <div class="flex items-center mb-4 px-2 pt-3">
+    <div class="flex items-center mb-4 px-2 pt-3 cursor-pointer">
         <input checked id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
         <label for="radio-default" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
     </div>
-    <div class="flex items-center mb-4 px-2">
+    <div class="flex items-center mb-4 px-2 cursor-pointer">
         <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
         <label for="radio-satellite" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
     </div>
-    <div class="flex items-center px-2 pb-3">
+    <div class="flex items-center px-2 pb-3 cursor-pointer">
         <input  id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
         <label for="radio-street" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
     </div>

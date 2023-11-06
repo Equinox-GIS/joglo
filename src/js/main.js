@@ -1245,8 +1245,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         break;
       case "MenuDuaTab":
-        disable();
         closeTab();
+        disable();
         stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
