@@ -1244,11 +1244,12 @@ document.addEventListener("DOMContentLoaded", function () {
         teksBerjalan();
         break;
       case "MenuTigaTab":
+        // console.log("MenuTigaTab");
+        initSlickFavorit();
         enable();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
-        initSlickFavorit();
         break;
       case "MenuEmpatTab":
         enable();
