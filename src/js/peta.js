@@ -361,7 +361,7 @@ map.on("click", "layer-peta-joglo", (e) => {
                           </div>
                         </div>
                         <div
-                          class="pt-2 bg-white rounded-b-lg"
+                          class="p-2 bg-white rounded-b-lg"
                           style="user-select: none"
                           >
                             <div class="flex flex-row justify-between">
@@ -404,21 +404,11 @@ map.on("click", "layer-peta-joglo", (e) => {
                                     />
                                   </div>
                                 </div>
-                                <div
-                                  class="grid grid-cols-1 items-center gap-2 ml-2 "
-                                >
-                                  <div class="">
-                                    <img
-                                      class="w-4 h-4 object-cover"
-                                      src="./src/images/ad-off.png"
-                                      alt=""
-                                    />
-                                  </div>
                                 </div>
                               </div>
                             </div>
 
-                          <div class="flex flex-col font-normal">
+                          <div class="flex flex-col font-normal px-2">
                             <div
                               class="flex items-center text-[11px] text-gray-700"
                             >
@@ -427,10 +417,10 @@ map.on("click", "layer-peta-joglo", (e) => {
                               <span class="mr-2">2 KT |</span>
                               <span class="mr-2">5 KM</span>
                             </div>
-                            <div class="text-xs pt-1 text-gray-700">
+                            <div class="text-xs text-gray-700">
                               Sunter, Tanjung Priok, Jakarta Utara
                             </div>
-                            <div class="text-[10px] pt-1 text-gray-400">
+                            <div class="text-[10px] text-gray-400">
                               ERA JAKARTA
                             </div>
                           </div>

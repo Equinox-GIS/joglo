@@ -1237,13 +1237,16 @@ document.addEventListener("DOMContentLoaded", function () {
     switch (tab.id) {
       case "MenuSatuTab":
         isTeksBerjalanActive = false;
+        closeTab();
         enable();
+        stopAndResetVideo();
         if (!$(".slider-card-info").hasClass("slick-initialized")) {
           initSlickCardInfo();
         }
         break;
       case "MenuDuaTab":
         disable();
+        closeTab();
         stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1252,19 +1255,22 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuTigaTab":
         // console.log("MenuTigaTab");
         initSlickFavorit();
-        enable();
+        closeTab();
         stopAndResetVideo();
+        enable();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         break;
       case "MenuEmpatTab":
         enable();
+        closeTab();
         stopAndResetVideo();
         isTeksBerjalanActive = false;
         break;
       case "MenuLimaTab":
         stopAndResetVideo();
+        closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1272,6 +1278,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuEnamTab":
         stopAndResetVideo();
+        closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1280,6 +1287,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuTujuhTab":
         stopAndResetVideo();
+        closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1287,6 +1295,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuDelapanTab":
         stopAndResetVideo();
+        closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1294,6 +1303,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuSembilanTab":
         stopAndResetVideo();
+        closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1301,6 +1311,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuSepuluhTab":
         stopAndResetVideo();
+        closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1308,6 +1319,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuSebelasTab":
         stopAndResetVideo();
+        closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1315,6 +1327,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuDuaBelasTab":
         stopAndResetVideo();
+        closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1634,8 +1647,8 @@ function teksBerjalan() {
       delayBeforeStart: 0,
       direction: "left",
       pauseOnHover: true,
-      duplicated: true, // ini akan menduplikasi teks jika teks lebih pendek dari lebar container
-      startVisible: true, // ini akan memastikan bahwa teks akan selalu terlihat ketika animasi dimulai
+      // duplicated: true, // ini akan menduplikasi teks jika teks lebih pendek dari lebar container
+      // startVisible: true, // ini akan memastikan bahwa teks akan selalu terlihat ketika animasi dimulai
     });
   }
 }
