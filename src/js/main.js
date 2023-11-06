@@ -985,26 +985,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //
 
-  function toggleMenuSearch(elemnt_konten_search, konten_element_key) {
-    // Hancurkan marquee yang sedang berjalan
-    if (isTeksBerjalanActive && $(".teks-berjalan-pencarian").data("marquee")) {
-      $(".teks-berjalan-pencarian").marquee("destroy");
-      isTeksBerjalanActive = false;
-    }
-
+  function toggleMenuSearch(elemnt_konten_search, konten_element) {
     // Menyembunyikan semua elemen pencarian
     Object.values(elemnt_konten_search).forEach((element) => {
       element.classList.add("hidden");
     });
 
-    // Menampilkan elemen yang sesuai dengan konten_element_key yang diberikan
-    let konten_element = elemnt_konten_search[konten_element_key];
-    if (konten_element) {
-      konten_element.classList.remove("hidden");
+    // Menampilkan elemen yang sesuai dengan konten_element yang diberikan
+    if (konten_element && elemnt_konten_search[konten_element]) {
+      elemnt_konten_search[konten_element].classList.remove("hidden");
 
-      // Mengaktifkan fungsi teksBerjalan jika konten_element_key adalah "tagTeksBerjalan"
-      if (konten_element_key === "tagTeksBerjalan") {
-        isTeksBerjalanActive = true;
+      // Mengaktifkan atau menonaktifkan teksBerjalan berdasarkan tab yang dipilih
+      isTeksBerjalanActive = konten_element === "tagTeksBerjalan";
+      if (isTeksBerjalanActive) {
         teksBerjalan();
       }
     }
@@ -1096,11 +1089,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function disable() {
     Object.values(elements).forEach((el) => {
-      // if (el.classList) {
-      //   el.disabled = true;
-      //   el.classList.add("bg-gray-200", "text-gray-500");
-      //   el.classList.remove("bg-white");
-      // }
+      if (el.classList) {
+        el.disabled = true;
+        el.classList.add("bg-gray-200", "text-gray-500");
+        el.classList.remove("bg-white");
+      }
     });
 
     Object.values(element_button).forEach((el) => {
@@ -1115,11 +1108,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function enable() {
     Object.values(elements).forEach((el) => {
-      // if (el.classList) {
-      //   el.disabled = false;
-      //   el.classList.add("bg-white");
-      //   el.classList.remove("bg-gray-200", "text-gray-500");
-      // }
+      if (el.classList) {
+        el.disabled = false;
+        el.classList.add("bg-white");
+        el.classList.remove("bg-gray-200", "text-gray-500");
+      }
     });
 
     Object.values(element_button).forEach((el) => {
@@ -1157,12 +1150,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const isActive = parentDiv.classList.contains("bg-aktif-menu");
-    elements.tabs.forEach((t) =>
-      t.closest(".menus").classList.remove("bg-aktif-menu")
-    );
-    parentDiv.classList.toggle("bg-aktif-menu", !isActive);
-
     hideAllContent();
 
     switch (tab.id) {
@@ -1174,16 +1161,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         break;
       case "MenuDuaTab":
-        enable();
-        toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+        disable();
+        isTeksBerjalanActive = true;
+        // Pastikan elemen tidak disembunyikan sebelum inisialisasi marquee
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
         break;
       case "MenuTigaTab":
         enable();
-        toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+        isTeksBerjalanActive = true;
+        // Pastikan elemen tidak disembunyikan sebelum inisialisasi marquee
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
+        initSlickFavorit();
         break;
       case "MenuEmpatTab":
         enable();
-        toggleMenuSearch(elemnt_konten_search, "tagSearchAgen");
+        isTeksBerjalanActive = false; // Pastikan teks berjalan tidak aktif untuk MenuEmpatTab
         break;
       case "MenuLimaTab":
         disable();
@@ -1203,17 +1197,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function activateTab(tab) {
+    // Remove active class from all tabs
+    elements.tabs.forEach((t) => {
+      t.classList.remove("bg-aktif-menu");
+      t.setAttribute("aria-selected", false);
+    });
+    // Add active class to the clicked tab
+    tab.classList.add("bg-aktif-menu");
+    tab.setAttribute("aria-selected", true);
+  }
+
   elements.tabs.forEach((tab) => {
-    tab.addEventListener("click", () => toggleTab(tab));
-    if (tab.id === "MenuSatuTab") {
-      enable();
-      // hideAllContent();
-    } else if (tab.id !== "MenuEmpatTab" && tab.id !== "MenuTigaTab") {
-      enable();
-      toggleMenuSearch(elemnt_konten_search, "tagSearchAll");
-    }
-    toggleTab(tab);
+    tab.addEventListener("click", () => {
+      activateTab(tab); // Make the clicked tab active
+      toggleTab(tab); // Handle any additional toggle functionality
+
+      // Below are the specific cases where other functions are needed based on the tab id
+      if (tab.id === "MenuSatuTab") {
+        enable();
+      } else if (tab.id === "MenuEmpatTab" || tab.id === "MenuTigaTab") {
+        enable();
+        toggleMenuSearch(elemnt_konten_search, "tagSearchAll");
+      } else {
+        disable();
+      }
+    });
   });
+  //
 });
 
 // Tag
@@ -1480,6 +1491,10 @@ let isTeksBerjalanActive = false;
 
 function teksBerjalan() {
   if (isTeksBerjalanActive) {
+    // Hentikan marquee sebelumnya jika sudah ada
+    $(".teks-berjalan-pencarian").marquee("destroy");
+
+    // Inisialisasi ulang marquee
     $(".teks-berjalan-pencarian").marquee({
       duration: 15500,
       delayBeforeStart: 0,
