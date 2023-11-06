@@ -144,37 +144,73 @@ window.addEventListener("click", (event) => {
 // Menu Tab Saran Prasarana
 
 // Menyimpan elemen yang akan diubah ke dalam variabel
-var carousel = document.getElementById("animation-carousel");
+// var carousel = document.getElementById("animation-carousel");
 
 // Tombol untuk deskripsi, sarana, dan indeks
+// var btnDeskripsi = document.getElementById("profile-tab");
+// var btnSarana = document.getElementById("dashboardberanda-tab");
+// var btnIndeks = document.getElementById("settings-tab");
+// // shp
+// var btnShp = document.getElementById("shp-tab");
+// // kontak
+// var btnKontak = document.getElementById("kontak-tab");
+
+// // Fungsi untuk menampilkan carousel
+// btnDeskripsi.addEventListener("click", function () {
+//   carousel.style.display = "block";
+// });
+
+// // Fungsi untuk menyembunyikan carousel
+// btnSarana.addEventListener("click", function () {
+//   carousel.style.display = "none";
+// });
+
+// btnIndeks.addEventListener("click", function () {
+//   carousel.style.display = "none";
+// });
+
+// btnShp.addEventListener("click", function () {
+//   carousel.style.display = "none";
+// });
+
+// btnKontak.addEventListener("click", function () {
+//   carousel.style.display = "none";
+// });
+
+// Ambil referensi ke semua elemen yang diperlukan
+var video = document.getElementById("video-detail-beranda");
 var btnDeskripsi = document.getElementById("profile-tab");
-var btnSarana = document.getElementById("dashboardberanda-tab");
-var btnIndeks = document.getElementById("settings-tab");
-// shp
-var btnShp = document.getElementById("shp-tab");
-// kontak
-var btnKontak = document.getElementById("kontak-tab");
 
-// Fungsi untuk menampilkan carousel
+// Tab lainnya
+var tabs = [
+  document.getElementById("threetourberanda-tab"),
+  document.getElementById("spekberanda-tab"),
+  document.getElementById("dashboardberanda-tab"),
+  document.getElementById("settings-tab"),
+  document.getElementById("shp-tab"),
+  document.getElementById("kontak-tab"),
+];
+
+// Fungsi untuk memulai dan menghentikan video
+function controlVideo(play) {
+  if (play) {
+    video.play();
+  } else {
+    video.pause();
+    video.currentTime = 0;
+  }
+}
+
+// Event listener untuk tab deskripsi yang akan memutar video
 btnDeskripsi.addEventListener("click", function () {
-  carousel.style.display = "block";
+  controlVideo(true); // Memutar video
 });
 
-// Fungsi untuk menyembunyikan carousel
-btnSarana.addEventListener("click", function () {
-  carousel.style.display = "none";
-});
-
-btnIndeks.addEventListener("click", function () {
-  carousel.style.display = "none";
-});
-
-btnShp.addEventListener("click", function () {
-  carousel.style.display = "none";
-});
-
-btnKontak.addEventListener("click", function () {
-  carousel.style.display = "none";
+// Event listener untuk tab-tab lain yang akan menghentikan video
+tabs.forEach(function (tab) {
+  tab.addEventListener("click", function () {
+    controlVideo(false); // Menghentikan video
+  });
 });
 
 var ctx1 = document.getElementById("myRadarChart").getContext("2d");
@@ -1580,6 +1616,8 @@ function teksBerjalan() {
       delayBeforeStart: 0,
       direction: "left",
       pauseOnHover: true,
+      duplicated: true, // ini akan menduplikasi teks jika teks lebih pendek dari lebar container
+      startVisible: true, // ini akan memastikan bahwa teks akan selalu terlihat ketika animasi dimulai
     });
   }
 }
