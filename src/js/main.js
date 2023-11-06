@@ -927,11 +927,20 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const element_btn_search = {
+    // Search Default
     MenuSatuTab: document.getElementById("MenuSatuTab"),
-    //
+    // Teks Berjalan
     MenuDuaTab: document.getElementById("MenuDuaTab"),
     MenuTigaTab: document.getElementById("MenuTigaTab"),
-    //
+    MenuLimaTab: document.getElementById("MenuLimaTab"),
+    MenuEnamTab: document.getElementById("MenuEnamTab"),
+    MenuTujuhTab: document.getElementById("MenuTujuhTab"),
+    MenuDelapanTab: document.getElementById("MenuDelapanTab"),
+    MenuSembilanTab: document.getElementById("MenuSembilanTab"),
+    MenuSepuluhTab: document.getElementById("MenuSepuluhTab"),
+    MenuSebelasTab: document.getElementById("MenuSebelasTab"),
+    MenuDuabelasTab: document.getElementById("MenuDuabelasTab"),
+    // Search Agen
     MenuEmpatTab: document.getElementById("MenuEmpatTab"),
   };
 
@@ -1016,6 +1025,38 @@ document.addEventListener("DOMContentLoaded", function () {
   element_btn_search.MenuTigaTab.addEventListener("click", function () {
     toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
   });
+
+  // element_btn_search.MenuLimaTab.addEventListener("click", function () {
+  //   toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+  // });
+
+  // element_btn_search.MenuEnamTab.addEventListener("click", function () {
+  //   toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+  // });
+
+  element_btn_search.MenuTujuhTab.addEventListener("click", function () {
+    toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+  });
+
+  element_btn_search.MenuDelapanTab.addEventListener("click", function () {
+    toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+  });
+
+  // element_btn_search.MenuSembilanTab.addEventListener("click", function () {
+  //   toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+  // });
+
+  // element_btn_search.MenuSepuluhTab.addEventListener("click", function () {
+  //   toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+  // });
+
+  // element_btn_search.MenuSebelasTab.addEventListener("click", function () {
+  //   toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+  // });
+
+  // element_btn_search.MenuDuabelasTab.addEventListener("click", function () {
+  //   toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
+  // });
 
   element_btn_search.MenuEmpatTab.addEventListener("click", function () {
     toggleMenuSearch(elemnt_konten_search, "tagSearchAgen");
@@ -1154,45 +1195,81 @@ document.addEventListener("DOMContentLoaded", function () {
 
     switch (tab.id) {
       case "MenuSatuTab":
+        isTeksBerjalanActive = false;
         enable();
         if (!$(".slider-card-info").hasClass("slick-initialized")) {
           initSlickCardInfo();
-          // initSlickCardPeta();
         }
         break;
       case "MenuDuaTab":
         disable();
         isTeksBerjalanActive = true;
-        // Pastikan elemen tidak disembunyikan sebelum inisialisasi marquee
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         break;
       case "MenuTigaTab":
         enable();
         isTeksBerjalanActive = true;
-        // Pastikan elemen tidak disembunyikan sebelum inisialisasi marquee
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         initSlickFavorit();
         break;
       case "MenuEmpatTab":
         enable();
-        isTeksBerjalanActive = false; // Pastikan teks berjalan tidak aktif untuk MenuEmpatTab
+        isTeksBerjalanActive = false;
         break;
       case "MenuLimaTab":
+        isTeksBerjalanActive = true;
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
         disable();
         break;
       case "MenuEnamTab":
-        // enable();
-
+        isTeksBerjalanActive = true;
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
         initSlickFavoritDua();
 
         break;
       case "MenuTujuhTab":
+        isTeksBerjalanActive = true;
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
+        disable();
+        break;
+      case "MenuDelapanTab":
+        isTeksBerjalanActive = true;
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
+        disable();
+        break;
+      case "MenuSembilanTab":
+        isTeksBerjalanActive = true;
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
+        disable();
+        break;
+      case "MenuSepuluhTab":
+        isTeksBerjalanActive = true;
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
+        disable();
+        break;
+      case "MenuSebelasTab":
+        isTeksBerjalanActive = true;
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
+        disable();
+        break;
+      case "MenuDuaBelasTab":
+        isTeksBerjalanActive = true;
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
         disable();
         break;
       default:
         disable();
+        isTeksBerjalanActive = false;
         break;
     }
   }
@@ -1210,13 +1287,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   elements.tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      activateTab(tab); // Make the clicked tab active
-      toggleTab(tab); // Handle any additional toggle functionality
+      activateTab(tab);
+      toggleTab(tab);
 
-      // Below are the specific cases where other functions are needed based on the tab id
       if (tab.id === "MenuSatuTab") {
         enable();
-      } else if (tab.id === "MenuEmpatTab" || tab.id === "MenuTigaTab") {
+      } else if (
+        (tab.id === "MenuEmpatTab" || tab.id === "MenuTigaTab",
+        tab.id === "MenuTujuhTab",
+        tab.id === "MenuDelapanTab")
+      ) {
         enable();
         toggleMenuSearch(elemnt_konten_search, "tagSearchAll");
       } else {
