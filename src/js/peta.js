@@ -361,10 +361,10 @@ map.on("click", "layer-peta-joglo", (e) => {
                           </div>
                         </div>
                         <div
-                          class="p-2 bg-white rounded-b-lg"
+                          class="px-2  pt-2 bg-white rounded-b-lg"
                           style="user-select: none"
                           >
-                            <div class="flex flex-row justify-between">
+                            <div class="flex flex-row justify-start">
                               <div>
                                 <a href="#">
                                   <div class="inline-flex items-center">
@@ -408,7 +408,7 @@ map.on("click", "layer-peta-joglo", (e) => {
                               </div>
                             </div>
 
-                          <div class="flex flex-col font-normal px-2">
+                          <div class="flex flex-col font-normal px-2 pb-1">
                             <div
                               class="flex items-center text-[11px] text-gray-700"
                             >

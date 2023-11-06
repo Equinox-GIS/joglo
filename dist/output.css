@@ -2924,9 +2924,9 @@ input:checked + .toggle-bg {
   height: 17vh;
 }
 
-.slider-card-info video {
+/* .slider-card-info video {
   height: 29vh !important;
-}
+} */
 
 .slider-card-info-detail-peta img {
   max-width: 100%;
