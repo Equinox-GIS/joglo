@@ -923,6 +923,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btnJenisProperti: document.getElementById("btnJenisProperti"),
     btnJenisRumah: document.getElementById("btnJenisSurat"),
     btnJscore: document.getElementById("btnJscore"),
+    btnJscoreAgent: document.getElementById("btnJscoreAgent"),
   };
 
   const element_btn_search = {
@@ -948,6 +949,7 @@ document.addEventListener("DOMContentLoaded", function () {
     kontenBtnJenisProperti: document.getElementById("kontenBtnJenisProperti"),
     kontenBtnJenisRumah: document.getElementById("kontenBtnJenisSurat"),
     kontenBtnJscore: document.getElementById("kontenBtnJscore"),
+    kontenBtnJscoreAgent: document.getElementById("kontenBtnJscoreAgent"),
   };
 
   const svg_element = {
@@ -983,26 +985,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //
 
-  function toggleMenuSearch(elemnt_konten_search, konten_element) {
+  function toggleMenuSearch(elemnt_konten_search, konten_element_key) {
+    // Hancurkan marquee yang sedang berjalan
+    if (isTeksBerjalanActive && $(".teks-berjalan-pencarian").data("marquee")) {
+      $(".teks-berjalan-pencarian").marquee("destroy");
+      isTeksBerjalanActive = false;
+    }
+
     // Menyembunyikan semua elemen pencarian
     Object.values(elemnt_konten_search).forEach((element) => {
       element.classList.add("hidden");
     });
 
-    // Menampilkan elemen yang sesuai dengan konten_element yang diberikan
-    if (konten_element && elemnt_konten_search[konten_element]) {
-      elemnt_konten_search[konten_element].classList.remove("hidden");
+    // Menampilkan elemen yang sesuai dengan konten_element_key yang diberikan
+    let konten_element = elemnt_konten_search[konten_element_key];
+    if (konten_element) {
+      konten_element.classList.remove("hidden");
 
-      // Mengaktifkan fungsi teksBerjalan jika konten_element adalah "tagTeksBerjalan"
-      if (konten_element === "tagTeksBerjalan") {
+      // Mengaktifkan fungsi teksBerjalan jika konten_element_key adalah "tagTeksBerjalan"
+      if (konten_element_key === "tagTeksBerjalan") {
         isTeksBerjalanActive = true;
         teksBerjalan();
-      } else {
-        isTeksBerjalanActive = false;
-        // Logika untuk menghentikan teksBerjalan jika diperlukan
-        // ...
       }
-      //
     }
   }
 
@@ -1081,13 +1085,22 @@ document.addEventListener("DOMContentLoaded", function () {
       svg_element.ArrowIconJscore
     );
   });
+
+  elements.btnJscoreAgent.addEventListener("click", function () {
+    toggleContent(
+      elements.btnJscoreAgent,
+      konten_element.kontenBtnJscoreAgent,
+      svg_element.ArrowIconJscoreAgent
+    );
+  });
+
   function disable() {
     Object.values(elements).forEach((el) => {
-      if (el.classList) {
-        el.disabled = true;
-        el.classList.add("bg-gray-200", "text-gray-500");
-        el.classList.remove("bg-white");
-      }
+      // if (el.classList) {
+      //   el.disabled = true;
+      //   el.classList.add("bg-gray-200", "text-gray-500");
+      //   el.classList.remove("bg-white");
+      // }
     });
 
     Object.values(element_button).forEach((el) => {
@@ -1102,11 +1115,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function enable() {
     Object.values(elements).forEach((el) => {
-      if (el.classList) {
-        el.disabled = false;
-        el.classList.add("bg-white");
-        el.classList.remove("bg-gray-200", "text-gray-500");
-      }
+      // if (el.classList) {
+      //   el.disabled = false;
+      //   el.classList.add("bg-white");
+      //   el.classList.remove("bg-gray-200", "text-gray-500");
+      // }
     });
 
     Object.values(element_button).forEach((el) => {
@@ -1161,15 +1174,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         break;
       case "MenuDuaTab":
-        disable();
+        enable();
+        toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
         break;
       case "MenuTigaTab":
-        disable();
-
-        initSlickFavorit();
+        enable();
+        toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
         break;
       case "MenuEmpatTab":
         enable();
+        toggleMenuSearch(elemnt_konten_search, "tagSearchAgen");
         break;
       case "MenuLimaTab":
         disable();
@@ -1194,9 +1208,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (tab.id === "MenuSatuTab") {
       enable();
       // hideAllContent();
-    } else if (tab.id === "MenuEmpatTab") {
+    } else if (tab.id !== "MenuEmpatTab" && tab.id !== "MenuTigaTab") {
       enable();
+      toggleMenuSearch(elemnt_konten_search, "tagSearchAll");
     }
+    toggleTab(tab);
   });
 });
 
