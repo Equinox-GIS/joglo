@@ -1613,7 +1613,7 @@ function teksBerjalan() {
 
     // Inisialisasi ulang marquee
     $(".teks-berjalan-pencarian").marquee({
-      duration: 15500,
+      duration: 17500,
       delayBeforeStart: 0,
       direction: "left",
       pauseOnHover: true,
