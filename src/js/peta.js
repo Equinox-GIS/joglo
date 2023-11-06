@@ -363,7 +363,7 @@ map.on("click", "layer-peta-joglo", (e) => {
                         <div
                           class="pt-2 bg-white rounded-b-lg"
                           style="user-select: none"
-                        >
+                          >
                             <div class="flex flex-row justify-between">
                               <div>
                                 <a href="#">

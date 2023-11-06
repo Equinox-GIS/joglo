@@ -2583,6 +2583,8 @@ input:checked + .toggle-bg {
   background-repeat: no-repeat !important;
   display: block !important;
   background-size: inherit !important;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   width: 65% !important;
   height: 65% !important;
 }
@@ -2593,6 +2595,8 @@ input:checked + .toggle-bg {
   background-repeat: no-repeat !important;
   display: block !important;
   background-size: inherit !important;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   width: 60% !important;
   height: 60% !important;
 }
@@ -2613,6 +2617,8 @@ input:checked + .toggle-bg {
   background-repeat: no-repeat !important;
   display: block !important;
   background-size: inherit !important;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
   width: 60% !important;
   height: 60% !important;
 }
@@ -2625,6 +2631,11 @@ input:checked + .toggle-bg {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+}
+
+#mapJoglo,
+.mapboxgl-popup-content {
+  padding: 0px !important;
 }
 
 /*  */

@@ -179,39 +179,41 @@ window.addEventListener("click", (event) => {
 
 // Ambil referensi ke semua elemen yang diperlukan
 var video = document.getElementById("video-detail-beranda");
-var btnDeskripsi = document.getElementById("profile-tab");
 
-// Tab lainnya
-var tabs = [
-  document.getElementById("threetourberanda-tab"),
-  document.getElementById("spekberanda-tab"),
-  document.getElementById("dashboardberanda-tab"),
-  document.getElementById("settings-tab"),
-  document.getElementById("shp-tab"),
-  document.getElementById("kontak-tab"),
-];
-
-// Fungsi untuk memulai dan menghentikan video
-function controlVideo(play) {
-  if (play) {
-    video.play();
-  } else {
-    video.pause();
-    video.currentTime = 0;
-  }
+// Fungsi untuk memulai video
+function playVideo() {
+  video.play();
 }
 
-// Event listener untuk tab deskripsi yang akan memutar video
-btnDeskripsi.addEventListener("click", function () {
-  controlVideo(true); // Memutar video
-});
+// Fungsi untuk menghentikan dan me-reset video
+function stopAndResetVideo() {
+  video.pause();
+  video.currentTime = 0;
+}
 
-// Event listener untuk tab-tab lain yang akan menghentikan video
-tabs.forEach(function (tab) {
-  tab.addEventListener("click", function () {
-    controlVideo(false); // Menghentikan video
+// Fungsi untuk mengatur event listener pada tab
+function setTabListeners() {
+  var btnDeskripsi = document.getElementById("profile-tab");
+  var tabs = [
+    document.getElementById("threetourberanda-tab"),
+    document.getElementById("spekberanda-tab"),
+    document.getElementById("dashboardberanda-tab"),
+    document.getElementById("settings-tab"),
+    document.getElementById("shp-tab"),
+    document.getElementById("kontak-tab"),
+  ];
+
+  // Event listener untuk tab 'profile-tab' yang akan memutar video
+  btnDeskripsi.addEventListener("click", playVideo);
+
+  // Event listener untuk tab-tab lain yang akan menghentikan video
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", stopAndResetVideo);
   });
-});
+}
+
+// Inisialisasi event listener pada tab saat dokumen siap
+document.addEventListener("DOMContentLoaded", setTabListeners);
 
 var ctx1 = document.getElementById("myRadarChart").getContext("2d");
 var myRadarChart = new Chart(ctx1, {
@@ -724,6 +726,9 @@ function stopVideoInWrapper(wrapperSelector) {
 }
 
 function closeTab() {
+  // Stop Video Dalam Detail Card Info
+  stopAndResetVideo();
+
   // Pencarian
   showElement(".card-info-pencarian");
   hideElement(".card-info-detail-pencarian");
@@ -1239,6 +1244,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuDuaTab":
         disable();
+        stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1247,21 +1253,25 @@ document.addEventListener("DOMContentLoaded", function () {
         // console.log("MenuTigaTab");
         initSlickFavorit();
         enable();
+        stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         break;
       case "MenuEmpatTab":
         enable();
+        stopAndResetVideo();
         isTeksBerjalanActive = false;
         break;
       case "MenuLimaTab":
+        stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         disable();
         break;
       case "MenuEnamTab":
+        stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1269,36 +1279,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
         break;
       case "MenuTujuhTab":
+        stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         disable();
         break;
       case "MenuDelapanTab":
+        stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         disable();
         break;
       case "MenuSembilanTab":
+        stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         disable();
         break;
       case "MenuSepuluhTab":
+        stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         disable();
         break;
       case "MenuSebelasTab":
+        stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         disable();
         break;
       case "MenuDuaBelasTab":
+        stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1306,6 +1322,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       default:
         disable();
+        stopAndResetVideo();
         isTeksBerjalanActive = false;
         break;
     }
