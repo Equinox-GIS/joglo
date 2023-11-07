@@ -343,7 +343,7 @@ map.on("click", "layer-peta-joglo", (e) => {
                                 preload="metadata"
                                 src="./src/video/Video1.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                              <div class="absolute h-10 w-10 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
                               </div>
                             </div>
@@ -354,7 +354,7 @@ map.on("click", "layer-peta-joglo", (e) => {
                                 src="./src/images/Hunian/Rmh1/rumaha2.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                              <div class="absolute h-10 w-10 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
                               </div>
                             </div>
