@@ -178,22 +178,86 @@ window.addEventListener("click", (event) => {
 // });
 
 // Ambil referensi ke semua elemen yang diperlukan
-var video = document.getElementById("video-detail-beranda");
+// var video_beranda = document.getElementById("video-detail-beranda");
+// var video_favorit = document.getElementById("video-detail-favorit");
 
-// Fungsi untuk memulai video
+// // Fungsi untuk memulai video
+// function playVideo() {
+//   video_beranda.play();
+//   video_favorit.play();
+// }
+
+// // Fungsi untuk menghentikan dan me-reset video
+// function stopAndResetVideo() {
+//   video_beranda.pause();
+//   video_beranda.currentTime = 0; // Untuk mereset video ke awal
+//   video_favorit.pause();
+//   video_favorit.currentTime = 0; // Untuk mereset video ke awal
+// }
+
+// Fungsi untuk memulai video berdasarkan ID
+function playVideoById(videoId) {
+  var videoElement = document.getElementById(videoId);
+  // console.log(videoElement);
+  if (videoElement) {
+    // Periksa jika video sudah siap untuk diputar
+    if (videoElement.readyState >= 3) {
+      videoElement.play();
+    } else {
+      // Tambahkan event listener jika video belum siap
+      videoElement.addEventListener("canplay", function () {
+        videoElement.play();
+      });
+    }
+  }
+}
+
+function stopAndResetVideoById(videoId) {
+  var videoElement = document.getElementById(videoId);
+  if (videoElement) {
+    videoElement.pause();
+    videoElement.currentTime = 0;
+    // console.log("Video stopped and reset:", videoId);
+  }
+}
+
 function playVideo() {
-  video.play();
+  playVideoById("video-detail-beranda");
+  playVideoById("video-detail-favorit");
 }
 
-// Fungsi untuk menghentikan dan me-reset video
 function stopAndResetVideo() {
-  video.pause();
-  video.currentTime = 0;
+  // Anda harus menentukan video mana yang harus dihentikan. Misalnya:
+  var allVideoIds = ["video-detail-beranda", "video-detail-favorit"]; // dan seterusnya...
+  allVideoIds.forEach(stopAndResetVideoById);
 }
+
+// Fungsi untuk menghentikan dan me-reset video berdasarkan ID
+// function stopAndResetVideoById(videoId) {
+//   var videoElement = document.getElementById(videoId);
+//   if (videoElement) {
+//     videoElement.pause();
+//     videoElement.currentTime = 0; // Untuk mereset video ke awal
+//   }
+// }
+
+// // Fungsi untuk memulai video dalam wrapper tertentu (menggunakan jQuery)
+// function playVideoInWrapper(wrapperSelector) {
+//   var videoElement = $(wrapperSelector).find("video")[0]; // Menemukan video pertama dalam wrapper
+//   if (videoElement) {
+//     videoElement.play();
+//   }
+// }
+
+// Jika ingin memulai video saat berada di dalam wrapper dengan kelas tertentu
+// playVideoInWrapper(".video-wrapper-autoplay"); // Ini akan memulai semua video yang ada dalam elemen dengan kelas 'video-wrapper-autoplay'
+
+//
 
 // Fungsi untuk mengatur event listener pada tab
 function setTabListeners() {
   var btnDeskripsi = document.getElementById("profile-tab");
+  var btnMenu1Favorit = document.getElementById("menufavorit1-tab");
   var tabs = [
     document.getElementById("threetourberanda-tab"),
     document.getElementById("spekberanda-tab"),
@@ -201,10 +265,19 @@ function setTabListeners() {
     document.getElementById("settings-tab"),
     document.getElementById("shp-tab"),
     document.getElementById("kontak-tab"),
+    //
+    //     threetourfavorit-tab
+    document.getElementById("threetourfavorit-tab"),
+    document.getElementById("spekfavorit-tab"),
+    document.getElementById("menufavorit2-tab"),
+    document.getElementById("menufavorit3-tab"),
+    document.getElementById("menufavorit4-tab"),
+    document.getElementById("menufavorit5-tab"),
   ];
 
   // Event listener untuk tab 'profile-tab' yang akan memutar video
   btnDeskripsi.addEventListener("click", playVideo);
+  btnMenu1Favorit.addEventListener("click", playVideo);
 
   // Event listener untuk tab-tab lain yang akan menghentikan video
   tabs.forEach(function (tab) {
@@ -304,6 +377,49 @@ var myRadarChartFavorit = new Chart(ctx1, {
 });
 
 var ctx1 = document.getElementById("myRadarChartPencarian").getContext("2d");
+var myRadarChartFavorit = new Chart(ctx1, {
+  type: "radar",
+  data: {
+    labels: [
+      "Pengelolaan Limbah",
+      "Topografi",
+      "Kebencanaan",
+      "Keseterdian Air",
+      "Kualitas Vegetasi",
+    ],
+    datasets: [
+      {
+        data: [3, 5, 2, 4, 3],
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      r: {
+        beginAtZero: true,
+        max: 5,
+        stepSize: 1, // Menambahkan ini agar tidak ada angka desimal
+        ticks: {
+          precision: 0, // Menambahkan ini agar tidak ada angka desimal
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false, // Menyembunyikan legenda
+      },
+      tooltip: {
+        enabled: true, // Menyembunyikan tooltip
+      },
+    },
+  },
+});
+var ctx1 = document.getElementById("myRadarChartPencarianDua").getContext("2d");
 var myRadarChartFavorit = new Chart(ctx1, {
   type: "radar",
   data: {
@@ -476,45 +592,45 @@ var myInvestmentIndexChart = new Chart(ctx3, {
     },
   },
 });
-var ctx3 = document
-  .getElementById("myInvestmentIndexChartPencarian")
-  .getContext("2d");
-var myInvestmentIndexChart = new Chart(ctx3, {
-  type: "radar",
-  data: {
-    labels: ["Properti", "Saham", "Obligasi", "Emas", "Reksadana"],
-    datasets: [
-      {
-        data: [4, 3, 2, 5, 3],
-        backgroundColor: "rgba(153, 102, 255, 0.2)",
-        borderColor: "rgba(153, 102, 255, 1)",
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      r: {
-        beginAtZero: true,
-        max: 5,
-        stepSize: 1,
-        ticks: {
-          precision: 0,
-        },
-      },
-    },
-    plugins: {
-      legend: {
-        display: false,
-      },
-      tooltip: {
-        enabled: true,
-      },
-    },
-  },
-});
+// var ctx3 = document
+//   .getElementById("myInvestmentIndexChartPencarian")
+//   .getContext("2d");
+// var myInvestmentIndexChart = new Chart(ctx3, {
+//   type: "radar",
+//   data: {
+//     labels: ["Properti", "Saham", "Obligasi", "Emas", "Reksadana"],
+//     datasets: [
+//       {
+//         data: [4, 3, 2, 5, 3],
+//         backgroundColor: "rgba(153, 102, 255, 0.2)",
+//         borderColor: "rgba(153, 102, 255, 1)",
+//         borderWidth: 1,
+//       },
+//     ],
+//   },
+//   options: {
+//     responsive: true,
+//     maintainAspectRatio: false,
+//     scales: {
+//       r: {
+//         beginAtZero: true,
+//         max: 5,
+//         stepSize: 1,
+//         ticks: {
+//           precision: 0,
+//         },
+//       },
+//     },
+//     plugins: {
+//       legend: {
+//         display: false,
+//       },
+//       tooltip: {
+//         enabled: true,
+//       },
+//     },
+//   },
+// });
 
 // slick semua
 function querySelector(selector) {
@@ -717,30 +833,38 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
-function stopVideoInWrapper(wrapperSelector) {
-  let videoElement = $(wrapperSelector).find("video");
-  if (videoElement.length) {
-    videoElement[0].pause();
-    videoElement[0].currentTime = 0; // Untuk mereset video ke awal
-  }
-}
+// function stopVideoInWrapper(wrapperSelector) {
+//   let videoElement = $(wrapperSelector).find("video");
+//   if (videoElement.length) {
+//     videoElement[0].pause();
+//     videoElement[0].currentTime = 0; // Untuk mereset video ke awal
+//   }
+// }
 
 function closeTab() {
   // Stop Video Dalam Detail Card Info
-  stopAndResetVideo();
+  // stopAndResetVideo();
 
   // Pencarian
   showElement(".card-info-pencarian");
   hideElement(".card-info-detail-pencarian");
 
-  // Stop the video within video-wrapper-autoplay (if it exists)
-  stopVideoInWrapper(".video-wrapper-autoplay");
+  stopAndResetVideoById("video-detail-beranda");
+  stopAndResetVideo();
 }
 
 function closeTabDisukai() {
+  // Stop Video Dalam Detail Card Info
+  // stopAndResetVideo();
+  stopAndResetVideoById("video-detail-favorit");
+  stopAndResetVideo();
+
   showElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
   initSlickFavorit();
+
+  // Stop the video within video-wrapper-autoplay (if it exists)
+  // stopVideoInWrapper(".video-wrapper-autoplay");
 }
 
 function closeTabPencarianDua() {
@@ -750,12 +874,12 @@ function closeTabPencarianDua() {
   initSlickFavoritDua();
 }
 
-function playVideoInWrapper(wrapperSelector) {
-  let videoElement = $(wrapperSelector).find("video");
-  if (videoElement.length) {
-    videoElement[0].play();
-  }
-}
+// function playVideoInWrapper(wrapperSelector) {
+//   let videoElement = $(wrapperSelector).find("video");
+//   if (videoElement.length) {
+//     videoElement[0].play();
+//   }
+// }
 
 // function toggleAgenView() {
 //   const tagSearchAgen = document.getElementById("tagSearchAgen");
@@ -827,7 +951,10 @@ function showCardInfoDetail(element) {
       }
 
       //
-      playVideoInWrapper(".video-wrapper-autoplay");
+      // playVideoInWrapper(".video-wrapper-autoplay");
+      if (!$(".card-info-detail-pencarian").hasClass("hidden")) {
+        playVideoById("video-detail-beranda"); // Memulai video beranda
+      }
 
       //
       // Mengambil elemen dengan kelas "hiddenSearchRunning"
@@ -877,8 +1004,13 @@ function showCardInfoDetail(element) {
         }
       }
 
+      if (!$(".card-info-detail-favorit").hasClass("hidden")) {
+        console.log("masuk");
+        playVideoById("video-detail-favorit"); // Memulai video favorit
+      }
+
       //
-      playVideoInWrapper(".video-wrapper-autoplay");
+      // playVideoInWrapper(".video-wrapper-autoplay");
 
       //
 
@@ -920,7 +1052,7 @@ function showCardInfoDetail(element) {
       }
 
       //
-      playVideoInWrapper(".video-wrapper-autoplay");
+      // playVideoInWrapper(".video-wrapper-autoplay");
 
       //
 
@@ -1239,7 +1371,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isTeksBerjalanActive = false;
         closeTab();
         enable();
-        stopAndResetVideo();
+        // stopAndResetVideo();
         if (!$(".slider-card-info").hasClass("slick-initialized")) {
           initSlickCardInfo();
         }
@@ -1247,7 +1379,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuDuaTab":
         closeTab();
         disable();
-        stopAndResetVideo();
+        // stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1255,8 +1387,8 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuTigaTab":
         // console.log("MenuTigaTab");
         initSlickFavorit();
-        closeTab();
-        stopAndResetVideo();
+        closeTabDisukai();
+        // stopAndResetVideo();
         enable();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1265,11 +1397,11 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuEmpatTab":
         enable();
         closeTab();
-        stopAndResetVideo();
+        // stopAndResetVideo();
         isTeksBerjalanActive = false;
         break;
       case "MenuLimaTab":
-        stopAndResetVideo();
+        // stopAndResetVideo();
         closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1277,16 +1409,16 @@ document.addEventListener("DOMContentLoaded", function () {
         disable();
         break;
       case "MenuEnamTab":
-        stopAndResetVideo();
+        // stopAndResetVideo();
         closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
-        initSlickFavoritDua();
+        // initSlickFavoritDua();
 
         break;
       case "MenuTujuhTab":
-        stopAndResetVideo();
+        // stopAndResetVideo();
         closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1294,7 +1426,7 @@ document.addEventListener("DOMContentLoaded", function () {
         disable();
         break;
       case "MenuDelapanTab":
-        stopAndResetVideo();
+        // stopAndResetVideo();
         closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1302,7 +1434,7 @@ document.addEventListener("DOMContentLoaded", function () {
         disable();
         break;
       case "MenuSembilanTab":
-        stopAndResetVideo();
+        // stopAndResetVideo();
         closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1310,7 +1442,7 @@ document.addEventListener("DOMContentLoaded", function () {
         disable();
         break;
       case "MenuSepuluhTab":
-        stopAndResetVideo();
+        // stopAndResetVideo();
         closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1318,7 +1450,7 @@ document.addEventListener("DOMContentLoaded", function () {
         disable();
         break;
       case "MenuSebelasTab":
-        stopAndResetVideo();
+        // stopAndResetVideo();
         closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1326,7 +1458,7 @@ document.addEventListener("DOMContentLoaded", function () {
         disable();
         break;
       case "MenuDuaBelasTab":
-        stopAndResetVideo();
+        // stopAndResetVideo();
         closeTab();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1335,7 +1467,7 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       default:
         disable();
-        stopAndResetVideo();
+        // stopAndResetVideo();
         isTeksBerjalanActive = false;
         break;
     }

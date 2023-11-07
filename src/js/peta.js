@@ -292,10 +292,10 @@ const IzinGalian = () => {
     type: "circle",
     source: "layer-peta-joglo",
     paint: {
-      "circle-color": "#2727d5",
-      "circle-stroke-color": "#2727d5",
-      "circle-stroke-width": 1,
-      "circle-radius": 4,
+      "circle-color": "#4264fb",
+      "circle-stroke-color": "#bdbdbd",
+      "circle-stroke-width": 2,
+      "circle-radius": 5,
       "circle-opacity": 0.8,
     },
     layout: {

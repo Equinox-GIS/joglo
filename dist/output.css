@@ -1068,20 +1068,12 @@ input:checked + .toggle-bg {
   bottom: 0px;
 }
 
-.bottom-2 {
-  bottom: 0.5rem;
-}
-
 .bottom-\[60px\] {
   bottom: 60px;
 }
 
 .end-0 {
   inset-inline-end: 0px;
-}
-
-.end-2 {
-  inset-inline-end: 0.5rem;
 }
 
 .left-0 {
