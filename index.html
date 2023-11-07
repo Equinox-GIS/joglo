@@ -7,11 +7,11 @@
 
     <!-- Font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
 
@@ -1535,7 +1535,7 @@
             data-tabs-toggle="#kontenMenuContent"
             role="tablist"
           >
-            <!-- Menu1 Beranda -->
+            <!-- Menu 1 Beranda -->
             <div
               class="flex col justify-center py-1"
               data-tooltip-target="menu-beranda"
@@ -1569,41 +1569,7 @@
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
-            <!-- Menu6 -->
-            <!-- <div
-              class="flex col justify-center py-2"
-              data-tooltip-target="menu-pencarian"
-              data-tooltip-placement="right"
-            >
-              <div
-                id="MenuEnamTab"
-                data-tabs-target="#MenuEnamContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuEnamContent"
-                aria-selected="false"
-                class="flex flex-col menus p-3 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
-              >
-                <div class="w-5 h-5 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="0"
-                    src="./src/images/search.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              id="menu-pencarian"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Pencarian
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div> -->
-
-            <!-- Menu2 Pasang Iklan -->
+            <!-- Menu 2 Pasang Iklan -->
             <div
               class="flex col justify-center py-1"
               data-tooltip-target="menu-pasang-iklan"
@@ -1637,7 +1603,7 @@
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
-            <!-- Menu3 MenuFavorit -->
+            <!-- Menu3 Favorit -->
             <div
               class="flex col justify-center py-1"
               data-tooltip-target="menu-favorit"
@@ -1671,7 +1637,7 @@
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
-            <!-- Menu4 Agent -->
+            <!-- Menu 4 Agent -->
             <div
               class="flex col justify-center py-1"
               data-tooltip-target="tooltip-right4"
@@ -1705,42 +1671,7 @@
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
-            <!-- Menu5 - Gadipake -->
-            <!-- <div
-              class="flex col justify-center py-2"
-              data-tooltip-target="tooltip-right5"
-              data-tooltip-placement="right"
-            >
-              <div
-                id="MenuLimaTab"
-                data-tabs-target="#MenuLimaContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuLimaContent"
-                aria-selected="false"
-                class="flex flex-col menus p-3 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
-              >
-                <div class="w-7 h-7 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="5"
-                    src="./src/images/pressure-gauge.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div
-              id="tooltip-right5"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Estimasi Harga
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div> -->
-
-            <!-- Menu7 Pesan -->
+            <!-- Menu 7 Pesan -->
             <div
               class="flex col justify-center py-1"
               data-tooltip-target="menu-pesan"
@@ -1842,8 +1773,7 @@
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
-            <!-- Menu10 Layanan Profesional -->
-
+            <!-- Menu 10 Layanan Profesional -->
             <div
               class="flex col justify-center py-1"
               data-tooltip-target="menu-layanan-profesional"
@@ -1980,13 +1910,15 @@
             </div>
             <!--  -->
           </div>
-          <!-- Map -->
+
+          <!-- Main Map -->
           <div class="w-full h-full">
             <nav id="menu"></nav>
             <div class="relative w-full h-screen">
-              <!-- Map container -->
+              <!-- Map Container -->
               <div id="mapSoaraja" class="w-full h-full"></div>
 
+              <!-- Map Menu Control -->
               <div
                 class="absolute flex justify-center place-items-center top-3 w-full"
               >
@@ -2040,13 +1972,12 @@
                 </div>
               </div>
 
-              <!-- Konten Map-->
+              <!--Start Button Map - disable sementara -->
               <div class="absolute top-0 right-0 z-10 p-4 text-white hidden">
                 <div class="grid grid-rows-1 grid-flow-col gap-4 z-10 relative">
                   <div
                     class="row-span-3 z-10 relative flex items-start justify-end"
                   >
-                    <!--  id : garisBatas -->
                     <button
                       id=""
                       type="button"
@@ -2057,14 +1988,18 @@
                   </div>
                 </div>
               </div>
-              <!--  -->
+              <!-- End Button Map - disable sementara -->
             </div>
           </div>
         </div>
         <!-- End Menu Navigation -->
+
         <!-- Start Konten Card Three -->
 
         <div id="kontenMenuContent" class="h-full w-full">
+          <!-- Start Main Konten Menu -->
+
+          <!-- Konten Menu Satu -->
           <div
             class="h-full w-full hiddenSearchRunning"
             id="MenuSatuContent"
@@ -4898,7 +4833,7 @@
             </div>
           </div>
 
-          <!-- Konten Keenam -->
+          <!-- Konten Menu Enam -->
           <div
             class="hidden"
             id="MenuEnamContent"
@@ -7404,6 +7339,7 @@
             </div>
           </div>
 
+          <!-- Konten Menu Dua -->
           <div
             class="hidden pr-2 hiddenSearchRunning"
             id="MenuDuaContent"
@@ -7426,6 +7362,7 @@
             </div>
           </div>
 
+          <!-- Konten Menu Tiga -->
           <div
             class="hidden"
             id="MenuTigaContent"
@@ -10233,7 +10170,7 @@
             </div>
           </div>
 
-          <!-- KontenEmpat -->
+          <!-- Konten Menu Empat -->
           <div
             class=""
             id="MenuEmpatContent"
@@ -10256,30 +10193,7 @@
             </div>
           </div>
 
-          <!-- KontenLima -->
-          <div
-            class="hidden"
-            id="MenuLimaContent"
-            role="tabpanel"
-            aria-labelledby="MenuLimaTab"
-          >
-            <!-- Estimasi Harga -->
-            <div class="px-3 pt-2 h-full">
-              <div class="font-semibold text-xl">Estimasi Harga</div>
-
-              <div class="flex h-[78vh] items-center">
-                <h3 class="mx-auto">
-                  <img
-                    class="w-32 h-32 object-cover"
-                    src="./src/images/road-work.png"
-                    alt=""
-                  />
-                </h3>
-              </div>
-            </div>
-          </div>
-
-          <!-- Konten Ketujuh -->
+          <!-- Konten Menu Tujuh -->
           <div
             class="hidden pr-2"
             id="MenuTujuhContent"
@@ -10301,7 +10215,7 @@
             </div>
           </div>
 
-          <!-- Konten Delapan -->
+          <!-- Konten Delapan Tujuh -->
           <div
             class="hidden pr-2"
             id="MenuDelapanContent"
@@ -10324,7 +10238,7 @@
             </div>
           </div>
 
-          <!-- Konten Sembilan -->
+          <!-- Konten Menu Sembilan -->
           <div
             class="hidden pr-2"
             id="MenuSembilanContent"
@@ -10346,7 +10260,7 @@
             </div>
           </div>
 
-          <!-- Konten Sepuluh -->
+          <!-- Konten Menu Sepuluh -->
           <div
             class="hidden pr-2"
             id="MenuSepuluhContent"
@@ -10368,7 +10282,7 @@
             </div>
           </div>
 
-          <!-- Konten Sebelas -->
+          <!-- Konten Menu Sebelas -->
           <div
             class="hidden pr-2"
             id="MenuSebelasContent"
@@ -10390,7 +10304,7 @@
             </div>
           </div>
 
-          <!-- Konten DuaBelas -->
+          <!-- Konten Menu DuaBelas -->
           <div
             class="hidden pr-2"
             id="MenuDuaBelasContent"
@@ -10412,7 +10326,7 @@
             </div>
           </div>
 
-          <!-- Konten TigaBelas -->
+          <!-- Konten Menu TigaBelas -->
           <div
             class="hidden pr-2"
             id="MenuTigaBelasContent"
@@ -10434,7 +10348,7 @@
             </div>
           </div>
 
-          <!--  -->
+          <!-- End Main Konten Menu -->
         </div>
 
         <!-- End Konten Card Three -->
@@ -10469,7 +10383,6 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-  <!--  -->
 
   <!-- Custom JS -->
   <script src="./src/js/main.js" defer></script>
