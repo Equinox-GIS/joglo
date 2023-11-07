@@ -833,6 +833,11 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
+// $(".slider-card-info video").on("mouseout", function () {
+//   $(this).get(0).pause();
+// });
+// resizePlayer($(".slider-card-info video"));
+
 // function stopVideoInWrapper(wrapperSelector) {
 //   let videoElement = $(wrapperSelector).find("video");
 //   if (videoElement.length) {

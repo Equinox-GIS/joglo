@@ -360,7 +360,6 @@ map.on("click", "layer-peta-soaraja", (e) => {
                               <video
                                 class="w-full h-full object-cover"
                                 loop
-                                muted
                                 preload="metadata"
                                 src="./src/video/Video1.mp4"
                               ></video>
@@ -454,6 +453,28 @@ map.on("click", "layer-peta-soaraja", (e) => {
 
   popup.setLngLat(coordinates).setHTML(content).addTo(map);
   initSlickCardPeta(".slider-card-info-detail-peta");
+
+  map.once("render", function () {
+    $(".slider-card-info-detail-peta")
+      .on("mouseover", function () {
+        // Pilih video di dalam .slider-card-info-detail-peta
+        var video = $(this).find("video").get(0);
+
+        // Periksa jika video ditemukan dan memiliki metode play
+        if (video && typeof video.play === "function") {
+          video.play();
+        }
+      })
+      .on("mouseleave", function () {
+        // Pilih video di dalam .slider-card-info-detail-peta
+        var video = $(this).find("video").get(0);
+
+        // Periksa jika video ditemukan dan memiliki metode pause
+        if (video && typeof video.pause === "function") {
+          video.pause();
+        }
+      });
+  });
 
   while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
