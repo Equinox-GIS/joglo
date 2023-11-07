@@ -147,17 +147,17 @@ if (compass) {
 function makeActive(event) {
   var currentButton = event.currentTarget;
 
-  // Check if the button already has the 'active-button' class
+  // Toggle the 'active-button' class based on its presence
   if (currentButton.classList.contains("active-button")) {
-    // If it does, remove it
+    // If it's already active, remove the class to deactivate it
     currentButton.classList.remove("active-button");
   } else {
-    // If it doesn't, first remove 'active-button' from all buttons
+    // If it's not active, first deactivate all buttons
     var buttons = document.querySelectorAll(".custom-control-button");
     buttons.forEach(function (button) {
       button.classList.remove("active-button");
     });
-    // Then add 'active-button' to the clicked button
+    // Then activate the clicked button
     currentButton.classList.add("active-button");
   }
 }

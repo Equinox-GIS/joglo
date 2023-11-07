@@ -266,8 +266,16 @@
   background-color: #e2e8f0 !important;
 }
 
-.mapboxgl-ctrl button:not(:disabled):hover {
+.custom-control-button {
+  background-color: white;
+}
+
+.custom-control-button.active-button {
   background-color: #e2e8f0;
+}
+
+.mapboxgl-ctrl button:not(:disabled):hover {
+  background-color: #fff;
 }
 
 /* Rounded */
