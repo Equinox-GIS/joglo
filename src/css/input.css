@@ -169,10 +169,10 @@
 }
 
 /* Navigator MapboxGL */
-.mapboxgl-ctrl-top-right {
+/* .mapboxgl-ctrl-top-right {
   right: 1vh !important;
   top: 64.5vh !important;
-}
+} */
 
 .mapboxgl-ctrl-logo,
 .mapboxgl-ctrl-attrib {
@@ -183,7 +183,7 @@
 
 /* Navigator MapboxGL */
 .mapboxgl-ctrl-top-right {
-  right: 1vh !important;
+  right: -1vh !important;
   top: 50vh !important;
 }
 

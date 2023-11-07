@@ -360,6 +360,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                               <video
                                 class="w-full h-full object-cover"
                                 loop
+                                muted
                                 preload="metadata"
                                 src="./src/video/Video1.mp4"
                               ></video>
