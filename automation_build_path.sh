@@ -9,6 +9,6 @@ if [ -d "../joglo_build_dev/$folder_name" ]; then
     cp -r "./* ../joglo_build_dev/$folder_name"
 else
     # If the folder doesn't exist, create it
-    mkdir "$folder_name"
+    mkdir "../joglo_build_dev/$folder_name"
     cp -r "./* ../joglo_build_dev/$folder_name"
 fi
