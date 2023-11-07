@@ -358,7 +358,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                             <!--  -->
                             <div class="relative">
                               <video
-                                class="w-full h-full object-cover rounded-t-lg"
+                                class="w-full h-full object-cover"
                                 loop
                                 muted
                                 preload="metadata"
@@ -371,7 +371,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                             <!--  -->
                             <div class="relative">
                               <img
-                                class="w-full h-full object-cover rounded-t-lg"
+                                class="w-full h-full object-cover"
                                 src="./src/images/Hunian/Rmh1/rumaha2.jpg"
                                 alt=""
                               />

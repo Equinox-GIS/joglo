@@ -270,6 +270,44 @@
   background-color: #e2e8f0;
 }
 
+/* Rounded */
+.slider-card-info {
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.slider-card-info video,
+.slider-card-info img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+/*  */
+.slider-favorit {
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.slider-favorit video,
+.slider-favorit img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+/*  */
+.slider-card-info-detail-peta {
+  overflow: hidden !important;
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+
+.slider-card-info-detail-peta video,
+.slider-card-info-detail-peta img {
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+/*  */
+
 #mapSoaraja,
 .mapboxgl-popup-content {
   padding: 0px !important;
