@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const map = new mapboxgl.Map({
-  container: "mapJoglo",
+  container: "mapSoaraja",
   style: "mapbox://styles/menthoelsr/ckp4wrapq11m117pf2lr49l5t",
   zoom: 14.5,
   center: [106.8295257, -6.210588],
@@ -144,6 +144,24 @@ if (compass) {
   compass.style.setProperty("display", "none", "important");
 }
 
+function makeActive(event) {
+  var currentButton = event.currentTarget;
+
+  // Check if the button already has the 'active-button' class
+  if (currentButton.classList.contains("active-button")) {
+    // If it does, remove it
+    currentButton.classList.remove("active-button");
+  } else {
+    // If it doesn't, first remove 'active-button' from all buttons
+    var buttons = document.querySelectorAll(".custom-control-button");
+    buttons.forEach(function (button) {
+      button.classList.remove("active-button");
+    });
+    // Then add 'active-button' to the clicked button
+    currentButton.classList.add("active-button");
+  }
+}
+
 if (controlGroup) {
   // Custom Button
   var customButton = document.createElement("button");
@@ -152,6 +170,9 @@ if (controlGroup) {
   customButton.setAttribute("aria-label", "Custom Layer Action");
   customButton.innerHTML =
     '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Layer"></span>';
+  customButton.addEventListener("click", function (event) {
+    makeActive(event);
+  });
 
   // My Location Button
   var myLocationButton = document.createElement("button");
@@ -161,8 +182,8 @@ if (controlGroup) {
   myLocationButton.setAttribute("aria-label", "My Location");
   myLocationButton.innerHTML =
     '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="My Location"></span>';
-  myLocationButton.addEventListener("click", function () {
-    alert("My Location button clicked!");
+  myLocationButton.addEventListener("click", function (event) {
+    makeActive(event);
   });
 
   // Stick Button 1
@@ -170,8 +191,8 @@ if (controlGroup) {
   stickButton1.className = "mapboxgl-ctrl-icon custom-control-button btn-stick";
   stickButton1.setAttribute("type", "button");
   stickButton1.setAttribute("aria-label", "Stick Action 1");
-  stickButton1.addEventListener("click", function () {
-    alert("Stick button 1 clicked!");
+  stickButton1.addEventListener("click", function (event) {
+    makeActive(event);
   });
 
   // Stick Button 2
@@ -180,8 +201,8 @@ if (controlGroup) {
     "mapboxgl-ctrl-icon custom-control-button btn-stick2";
   stickButton2.setAttribute("type", "button");
   stickButton2.setAttribute("aria-label", "Stick Action 1");
-  stickButton2.addEventListener("click", function () {
-    alert("Stick button 1 clicked!");
+  stickButton2.addEventListener("click", function (event) {
+    makeActive(event);
   });
 
   // Stick Button 3
@@ -190,8 +211,8 @@ if (controlGroup) {
     "mapboxgl-ctrl-icon custom-control-button btn-stick3";
   stickButton3.setAttribute("type", "button");
   stickButton3.setAttribute("aria-label", "Stick Action 3");
-  stickButton3.addEventListener("click", function () {
-    alert("Stick button 3 clicked!");
+  stickButton3.addEventListener("click", function (event) {
+    makeActive(event);
   });
 
   // Get Zoom In and Zoom Out buttons
@@ -282,15 +303,15 @@ const popup = new mapboxgl.Popup({
 });
 
 const IzinGalian = () => {
-  map.addSource("layer-peta-joglo", {
+  map.addSource("layer-peta-soaraja", {
     type: "geojson",
     data: `https://4aksi.com/joglo/dataa.geojson`,
   });
 
   map.addLayer({
-    id: "layer-peta-joglo",
+    id: "layer-peta-soaraja",
     type: "circle",
-    source: "layer-peta-joglo",
+    source: "layer-peta-soaraja",
     paint: {
       "circle-color": "#4264fb",
       "circle-stroke-color": "#bdbdbd",
@@ -321,7 +342,7 @@ $(
 ).css("visibility", "hidden");
 
 // LAYER GALIAN IZIN
-map.on("click", "layer-peta-joglo", (e) => {
+map.on("click", "layer-peta-soaraja", (e) => {
   // console.log(e);
   map.getCanvas().style.cursor = "pointer";
   const coordinates = e.features[0].geometry.coordinates.slice();

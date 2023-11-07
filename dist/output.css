@@ -2454,7 +2454,7 @@ input:checked + .toggle-bg {
         height: 35vw !important; */
 }
 
-/* Peta Joglo */
+/* Peta Soaraja */
 
 .slider-card-peta img {
   width: 100%;
@@ -2599,7 +2599,7 @@ input:checked + .toggle-bg {
 }
 
 .mapboxgl-ctrl-group button {
-  background-color: white !important;
+  background-color: white;
   width: 27px !important;
   height: 27px !important;
   /* box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); */
@@ -2608,7 +2608,15 @@ input:checked + .toggle-bg {
   align-items: center !important;
 }
 
-#mapJoglo,
+.active-button {
+  background-color: #e2e8f0 !important;
+}
+
+.mapboxgl-ctrl button:not(:disabled):hover {
+  background-color: #e2e8f0;
+}
+
+#mapSoaraja,
 .mapboxgl-popup-content {
   padding: 0px !important;
 }
