@@ -141,60 +141,6 @@ window.addEventListener("click", (event) => {
   }
 });
 
-// Menu Tab Saran Prasarana
-
-// Menyimpan elemen yang akan diubah ke dalam variabel
-// var carousel = document.getElementById("animation-carousel");
-
-// Tombol untuk deskripsi, sarana, dan indeks
-// var btnDeskripsi = document.getElementById("profile-tab");
-// var btnSarana = document.getElementById("dashboardberanda-tab");
-// var btnIndeks = document.getElementById("settings-tab");
-// // shp
-// var btnShp = document.getElementById("shp-tab");
-// // kontak
-// var btnKontak = document.getElementById("kontak-tab");
-
-// // Fungsi untuk menampilkan carousel
-// btnDeskripsi.addEventListener("click", function () {
-//   carousel.style.display = "block";
-// });
-
-// // Fungsi untuk menyembunyikan carousel
-// btnSarana.addEventListener("click", function () {
-//   carousel.style.display = "none";
-// });
-
-// btnIndeks.addEventListener("click", function () {
-//   carousel.style.display = "none";
-// });
-
-// btnShp.addEventListener("click", function () {
-//   carousel.style.display = "none";
-// });
-
-// btnKontak.addEventListener("click", function () {
-//   carousel.style.display = "none";
-// });
-
-// Ambil referensi ke semua elemen yang diperlukan
-// var video_beranda = document.getElementById("video-detail-beranda");
-// var video_favorit = document.getElementById("video-detail-favorit");
-
-// // Fungsi untuk memulai video
-// function playVideo() {
-//   video_beranda.play();
-//   video_favorit.play();
-// }
-
-// // Fungsi untuk menghentikan dan me-reset video
-// function stopAndResetVideo() {
-//   video_beranda.pause();
-//   video_beranda.currentTime = 0; // Untuk mereset video ke awal
-//   video_favorit.pause();
-//   video_favorit.currentTime = 0; // Untuk mereset video ke awal
-// }
-
 // Fungsi untuk memulai video berdasarkan ID
 function playVideoById(videoId) {
   var videoElement = document.getElementById(videoId);
@@ -256,15 +202,15 @@ function stopAndResetVideo() {
 
 // Fungsi untuk mengatur event listener pada tab
 function setTabListeners() {
-  var btnDeskripsi = document.getElementById("profile-tab");
+  var btnDetailBerandaSatu = document.getElementById("detail-beranda-satu-tab");
   var btnMenu1Favorit = document.getElementById("menufavorit1-tab");
   var tabs = [
-    document.getElementById("threetourberanda-tab"),
-    document.getElementById("spekberanda-tab"),
-    document.getElementById("dashboardberanda-tab"),
-    document.getElementById("settings-tab"),
-    document.getElementById("shp-tab"),
-    document.getElementById("kontak-tab"),
+    document.getElementById("detail-beranda-dua-tab"),
+    document.getElementById("detail-beranda-tiga-tab"),
+    document.getElementById("detail-beranda-empat-tab"),
+    document.getElementById("detail-beranda-lima-tab"),
+    document.getElementById("detail-beranda-enam-tab"),
+    document.getElementById("detail-beranda-tujuh-tab"),
     //
     //     threetourfavorit-tab
     document.getElementById("threetourfavorit-tab"),
@@ -275,8 +221,8 @@ function setTabListeners() {
     document.getElementById("menufavorit5-tab"),
   ];
 
-  // Event listener untuk tab 'profile-tab' yang akan memutar video
-  btnDeskripsi.addEventListener("click", playVideo);
+  // Event listener untuk tab 'detail-beranda-satu-tab' yang akan memutar video
+  btnDetailBerandaSatu.addEventListener("click", playVideo);
   btnMenu1Favorit.addEventListener("click", playVideo);
 
   // Event listener untuk tab-tab lain yang akan menghentikan video
@@ -1760,14 +1706,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Panggil fungsi untuk set tampilan awal
   updateRadiusDisplayFavorit();
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   document
-//     .getElementById("threetourberanda-tab")
-//     .addEventListener("click", function () {
-//       initThreeTour();
-//     });
-// });
 
 $("body>.tooltip").remove();
 
