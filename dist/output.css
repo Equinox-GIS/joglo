@@ -1850,6 +1850,11 @@ input:checked + .toggle-bg {
   border-color: transparent;
 }
 
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(240 82 82 / var(--tw-border-opacity));
+}
+
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 131 248 / var(--tw-bg-opacity));
