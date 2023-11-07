@@ -691,13 +691,13 @@ function getSliderDefaultOptions() {
 }
 
 function initSlickCardInfo() {
-  $(".slider-card-info")
+  $(".slider-card-beranda")
     .on("init", function () {
       setTimeout(function () {
         moveDotsToCustomContainer();
         addClickHandlerToDots();
         disableClickHandlerToDots();
-        resizePlayer($(".slider-card-info video"));
+        resizePlayer($(".slider-card-beranda video"));
       }, 0);
     })
     .slick(getSliderDefaultOptions());
@@ -706,7 +706,7 @@ function initSlickCardInfo() {
 function resizePlayer(videos) {
   if (!videos[0]) return;
 
-  var container = $(".slider-card-info"),
+  var container = $(".slider-card-beranda"),
     containerWidth = container.width(),
     containerHeight = container.height();
 
@@ -776,12 +776,12 @@ function disableClickHandlerToDots() {
 }
 
 function moveDotsToCustomContainer() {
-  const dots = $(".slider-card-info .slick-dots");
+  const dots = $(".slider-card-beranda .slick-dots");
   $(".custom-dot-slick").append(dots);
 }
 
 function addClickHandlerToDots() {
-  $(".slider-card-info .slick-dots li").on("click", function (event) {
+  $(".slider-card-beranda .slick-dots li").on("click", function (event) {
     event.stopPropagation();
   });
 }
@@ -803,14 +803,14 @@ $(document).ready(function () {
   // Rest of your code ...
 
   // Beranda
-  $(".slider-card-info video").on("mouseover", function () {
+  $(".slider-card-beranda video").on("mouseover", function () {
     $(this).get(0).play();
   });
 
-  $(".slider-card-info video").on("mouseout", function () {
+  $(".slider-card-beranda video").on("mouseout", function () {
     $(this).get(0).pause();
   });
-  resizePlayer($(".slider-card-info video"));
+  resizePlayer($(".slider-card-beranda video"));
 
   // Favorit
   $(".slider-favorit video").on("mouseover", function () {
@@ -833,10 +833,10 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
-// $(".slider-card-info video").on("mouseout", function () {
+// $(".slider-card-beranda video").on("mouseout", function () {
 //   $(this).get(0).pause();
 // });
-// resizePlayer($(".slider-card-info video"));
+// resizePlayer($(".slider-card-beranda video"));
 
 // function stopVideoInWrapper(wrapperSelector) {
 //   let videoElement = $(wrapperSelector).find("video");
@@ -852,7 +852,7 @@ function closeTab() {
 
   // Pencarian
   showElement(".card-info-pencarian");
-  hideElement(".card-info-detail-pencarian");
+  hideElement(".card-detail-beranda");
 
   stopAndResetVideoById("video-detail-beranda");
   stopAndResetVideo();
@@ -927,7 +927,7 @@ function showCardInfoDetail(element) {
   switch (activeTab) {
     case "1":
       // Pencarian
-      showElement(".card-info-detail-pencarian");
+      showElement(".card-detail-beranda");
       hideElement(".card-info-pencarian");
 
       // Favorit
@@ -957,7 +957,7 @@ function showCardInfoDetail(element) {
 
       //
       // playVideoInWrapper(".video-wrapper-autoplay");
-      if (!$(".card-info-detail-pencarian").hasClass("hidden")) {
+      if (!$(".card-detail-beranda").hasClass("hidden")) {
         playVideoById("video-detail-beranda"); // Memulai video beranda
       }
 
@@ -980,7 +980,7 @@ function showCardInfoDetail(element) {
 
       // Pencarian
       showElement(".card-info-pencarian");
-      hideElement(".card-info-detail-pencarian");
+      hideElement(".card-detail-beranda");
 
       // Pencarian Dua
       showElement(".card-info-favorit-dua");
@@ -1027,7 +1027,7 @@ function showCardInfoDetail(element) {
 
       // Pencarian
       ".card-info-pencarian";
-      hideElement(".card-info-detail-pencarian");
+      hideElement(".card-detail-beranda");
 
       // Pencarian Dua
       hideElement(".card-info-favorit-dua");
@@ -1070,7 +1070,7 @@ function showCardInfoDetail(element) {
 
 function resetAllCards() {
   hideElement(".card-info-pencarian");
-  hideElement(".card-info-detail-pencarian");
+  hideElement(".card-detail-beranda");
   hideElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
   hideElement(".card-info-favorit-dua");
@@ -1377,7 +1377,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTab();
         enable();
         // stopAndResetVideo();
-        if (!$(".slider-card-info").hasClass("slick-initialized")) {
+        if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
           initSlickCardInfo();
         }
         break;
