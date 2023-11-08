@@ -1861,6 +1861,11 @@ input:checked + .toggle-bg {
   background-color: rgb(105 179 231 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#7752FE\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(119 82 254 / var(--tw-bg-opacity));
+}
+
 .bg-blue-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
@@ -1912,11 +1917,6 @@ input:checked + .toggle-bg {
 
 .bg-white\/50 {
   background-color: rgb(255 255 255 / 0.5);
-}
-
-.bg-\[\#7752FE\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(119 82 254 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -2206,9 +2206,9 @@ input:checked + .toggle-bg {
   color: rgb(0 123 255 / var(--tw-text-opacity));
 }
 
-.text-\[\#9EA2A2\] {
+.text-\[\#7752FE\] {
   --tw-text-opacity: 1;
-  color: rgb(158 162 162 / var(--tw-text-opacity));
+  color: rgb(119 82 254 / var(--tw-text-opacity));
 }
 
 .text-black {
@@ -2264,26 +2264,6 @@ input:checked + .toggle-bg {
 .text-yellow-300 {
   --tw-text-opacity: 1;
   color: rgb(250 202 21 / var(--tw-text-opacity));
-}
-
-.text-\[\#687EFF\] {
-  --tw-text-opacity: 1;
-  color: rgb(104 126 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#3D30A2\] {
-  --tw-text-opacity: 1;
-  color: rgb(61 48 162 / var(--tw-text-opacity));
-}
-
-.text-\[\#B15EFF\] {
-  --tw-text-opacity: 1;
-  color: rgb(177 94 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#7752FE\] {
-  --tw-text-opacity: 1;
-  color: rgb(119 82 254 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
