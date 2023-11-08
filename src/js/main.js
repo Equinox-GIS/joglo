@@ -1585,23 +1585,23 @@ document.addEventListener("DOMContentLoaded", function () {
     sarpras: {
       ibadah: [
         ...document.querySelectorAll(".favoritSarprasIbadahTab"),
-        ...document.querySelectorAll(".sarprasIbadahTab"),
+        ...document.querySelectorAll(".berandaSarprasIbadahTab"),
       ],
       miniMarket: [
         ...document.querySelectorAll(".favoritSarprasMiniMarketTab"),
-        ...document.querySelectorAll(".sarprasMiniMarketTab"),
+        ...document.querySelectorAll(".berandaSarprasMiniMarketTab"),
       ],
       graduation: [
         ...document.querySelectorAll(".favoritSarprasSekolahTab"),
-        ...document.querySelectorAll(".sarprasSekolahTab"),
+        ...document.querySelectorAll(".berandaSarprasSekolahTab"),
       ],
       spork: [
         ...document.querySelectorAll(".favoritSarprasRestoranTab"),
-        ...document.querySelectorAll(".sarprasRestoranTab"),
+        ...document.querySelectorAll(".berandaSarprasRestoranTab"),
       ],
       cycling: [
         ...document.querySelectorAll(".favoritSarprasTransportasiTab"),
-        ...document.querySelectorAll(".sarprasTransportasiTab"),
+        ...document.querySelectorAll(".berandaSarprasTransportasiTab"),
       ],
     },
     indeks: {
@@ -1673,22 +1673,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Beranda
-  // const hasilElemBeranda = document.getElementById("HasilRangBeranda");
-  // const controlRangeElemBeranda = document.getElementById(
-  //   "ControlRangeBeranda"
-  // );
+  const hasilElemBeranda = document.getElementById("HasilRangBeranda");
+  const controlRangeElemBeranda = document.getElementById(
+    "ControlRangeBeranda"
+  );
 
   // Fungsi untuk mengupdate tampilan radius di Beranda
-  // function updateRadiusDisplayBeranda() {
-  //   const radius = controlRangeElemBeranda.value;
-  //   hasilElemBeranda.textContent = `Radius ${radius} Km`;
-  // }
+  function updateRadiusDisplayBeranda() {
+    const radius = controlRangeElemBeranda.value;
+    hasilElemBeranda.textContent = `Radius ${radius} Km`;
+  }
 
   // Event listener untuk perubahan pada input range di Beranda
-  // controlRangeElemBeranda.addEventListener("input", updateRadiusDisplayBeranda);
+  controlRangeElemBeranda.addEventListener("input", updateRadiusDisplayBeranda);
 
   // Panggil fungsi untuk set tampilan awal di Beranda
-  // updateRadiusDisplayBeranda();
+  updateRadiusDisplayBeranda();
 
   // Favorit
   const hasilElemFavorit = document.getElementById("HasilRangFavorit");
