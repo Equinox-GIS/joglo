@@ -208,10 +208,23 @@ function setActiveTab(tabButtonId, tabContentId) {
   var tabs = document.querySelectorAll('#DetailBeranda [role="tab"]');
   tabs.forEach(function (tab) {
     var contentId = tab.getAttribute("data-tabs-target");
+    console.log("Tab target:", contentId); // Mencetak target dari tab
+
     var content = document.querySelector(contentId);
     tab.setAttribute("aria-selected", "false");
     content.classList.add("hidden");
+
+    // Mengecek apakah atribut 'aria-selected' telah diatur ke 'false'
+    // console.log(
+    //   "Aria-selected set to false:",
+    //   tab.getAttribute("aria-selected") === "false"
+    // );
+
+    // Mengecek apakah konten telah disembunyikan
+    // console.log("Content is hidden:", content.classList.contains("hidden"));
   });
+
+  // console.log(tabButtonId);
 
   // Aktifkan tab yang dipilih dan tampilkan kontennya
   var activeTab = document.getElementById(tabButtonId);
@@ -838,6 +851,12 @@ function closeTab() {
 
   // stopAndResetVideoById("video-detail-beranda");
   // stopAndResetVideo();
+
+  // Pencarian
+  showElement(".card-info-pencarian");
+  hideElement(".card-detail-beranda");
+
+  stopAndResetVideoById("video-detail-beranda");
   setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
 
   // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
@@ -847,6 +866,16 @@ function closeTab() {
 
   // Hentikan dan reset video jika perlu
   // stopAndResetVideoById("video-detail-beranda");
+}
+
+// Fungsi untuk menampilkan elemen
+function showElement(selector) {
+  document.querySelector(selector).classList.remove("hidden");
+}
+
+// Fungsi untuk menyembunyikan elemen
+function hideElement(selector) {
+  document.querySelector(selector).classList.add("hidden");
 }
 
 function closeTabDisukai() {
@@ -1784,9 +1813,8 @@ const buttons = document.querySelectorAll(".btn-on-map");
 // Fungsi untuk mengatur ulang semua button ke warna default
 function resetButtons() {
   buttons.forEach((button) => {
-    button.classList.remove("bg-blue-500");
+    button.classList.remove("active_btn_peta");
     button.classList.add("bg-white");
-    button.classList.remove("text-white");
     button.classList.add("text-black");
   });
 }
@@ -1795,9 +1823,8 @@ function resetButtons() {
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
     // Jika button sudah aktif, kembalikan ke warna default
-    if (this.classList.contains("bg-blue-500")) {
-      this.classList.remove("bg-blue-500");
-      this.classList.remove("text-white");
+    if (this.classList.contains("active_btn_peta")) {
+      this.classList.remove("active_btn_peta");
       this.classList.add("bg-white");
       this.classList.add("text-black");
     } else {
@@ -1805,8 +1832,7 @@ buttons.forEach((button) => {
       resetButtons();
       this.classList.remove("bg-white");
       this.classList.remove("text-black");
-      this.classList.add("text-white");
-      this.classList.add("bg-blue-500");
+      this.classList.add("active_btn_peta");
     }
   });
 });

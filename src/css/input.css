@@ -550,6 +550,10 @@
   @apply bg-blue-500 text-white;
 }
 
+.active_btn_peta {
+  @apply bg-[#08569e] text-white;
+}
+
 .active_btn_tag {
   @apply bg-blue-500 text-white border-white;
 }
