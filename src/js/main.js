@@ -1673,20 +1673,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Beranda
-  const hasilElem = document.getElementById("HasilRangBeranda");
-  const controlRangeElem = document.getElementById("ControlRangeBeranda");
+  // const hasilElemBeranda = document.getElementById("HasilRangBeranda");
+  // const controlRangeElemBeranda = document.getElementById(
+  //   "ControlRangeBeranda"
+  // );
 
-  // Fungsi untuk mengupdate tampilan radius
-  function updateRadiusDisplay() {
-    const radius = controlRangeElem.value;
-    hasilElem.textContent = `Radius ${radius} Km`;
-  }
+  // Fungsi untuk mengupdate tampilan radius di Beranda
+  // function updateRadiusDisplayBeranda() {
+  //   const radius = controlRangeElemBeranda.value;
+  //   hasilElemBeranda.textContent = `Radius ${radius} Km`;
+  // }
 
-  // Event listener untuk perubahan pada input range
-  controlRangeElem.addEventListener("input", updateRadiusDisplay);
+  // Event listener untuk perubahan pada input range di Beranda
+  // controlRangeElemBeranda.addEventListener("input", updateRadiusDisplayBeranda);
 
-  // Panggil fungsi untuk set tampilan awal
-  updateRadiusDisplay();
+  // Panggil fungsi untuk set tampilan awal di Beranda
+  // updateRadiusDisplayBeranda();
 
   // Favorit
   const hasilElemFavorit = document.getElementById("HasilRangFavorit");
@@ -1703,7 +1705,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener untuk perubahan pada input range favorit
   controlRangeElemFavorit.addEventListener("input", updateRadiusDisplayFavorit);
 
-  // Panggil fungsi untuk set tampilan awal
+  // Panggil fungsi untuk set tampilan awal pada favorit
   updateRadiusDisplayFavorit();
 });
 
