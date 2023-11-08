@@ -141,6 +141,8 @@ window.addEventListener("click", (event) => {
   }
 });
 
+//
+
 // Fungsi untuk memulai video berdasarkan ID
 function playVideoById(videoId) {
   var videoElement = document.getElementById(videoId);
@@ -157,8 +159,6 @@ function playVideoById(videoId) {
     }
   }
 }
-
-//
 
 // Fungsi untuk menghentikan dan mereset video berdasarkan ID
 function stopAndResetVideoById(videoId) {
@@ -319,13 +319,16 @@ function setTabListeners() {
       // Reset semua tab ke nonaktif dan sembunyikan semua konten tab
       resetActiveTab();
 
-      // Jika tab 'detail-beranda-satu-tab' yang diklik, putar video dan set tab tersebut sebagai aktif
+      // Jika tab 'detail-beranda-satu-tab' yang diklik, set tab tersebut sebagai aktif
       if (tab.id === "detail-beranda-satu-tab") {
         setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
-        playVideoById("video-detail-beranda"); // Pastikan ID ini sesuai dengan ID video Anda
+        // Pastikan ID ini sesuai dengan ID video Anda
+        // Hanya panggil playVideoById jika pengguna mengklik tab ini
+        playVideoById("video-detail-beranda");
       } else {
         // Jika tab lain yang diklik, hentikan dan reset video 'detail-beranda-satu'
-        stopAndResetVideoById("video-detail-beranda"); // Pastikan ID ini sesuai dengan ID video Anda
+        // Pastikan ID ini sesuai dengan ID video Anda
+        stopAndResetVideoById("video-detail-beranda");
         // Set tab yang diklik sebagai tab aktif
         setActiveTab(tab.id, tab.getAttribute("aria-controls"));
       }
@@ -335,11 +338,12 @@ function setTabListeners() {
 
 // Event listener yang dijalankan saat halaman web selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
+  // Mengatur tab 'Tampak Ruang' sebagai tab aktif saat halaman dimuat
   resetActiveTab([
     "detail-beranda-empat",
     "detail-beranda-lima",
     "detail-beranda-enam",
-  ]); // Mengatur tab 'Tampak Ruang' sebagai tab aktif saat halaman dimuat
+  ]);
   setTabListeners(); // Memanggil fungsi untuk menambahkan event listener pada tab
 });
 
@@ -347,7 +351,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Set 'Tampak Ruang' sebagai tab aktif saat halaman dimuat
-  setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+  // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
   setTabListeners();
 });
 
