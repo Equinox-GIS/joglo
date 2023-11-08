@@ -305,7 +305,7 @@ const popup = new mapboxgl.Popup({
 const IzinGalian = () => {
   map.addSource("layer-peta-soaraja", {
     type: "geojson",
-    data: `https://4aksi.com/joglo/dataa.geojson`,
+    data: `dataa.geojson`,
   });
 
   map.addLayer({
