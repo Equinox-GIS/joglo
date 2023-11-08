@@ -1088,6 +1088,10 @@ input:checked + .toggle-bg {
   top: 0px;
 }
 
+.top-3 {
+  top: 0.75rem;
+}
+
 .top-8 {
   top: 2rem;
 }
@@ -1171,10 +1175,6 @@ input:checked + .toggle-bg {
 
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
 }
 
 .mb-4 {
@@ -1605,6 +1605,10 @@ input:checked + .toggle-bg {
   flex-wrap: wrap;
 }
 
+.place-items-center {
+  place-items: center;
+}
+
 .content-center {
   align-content: center;
 }
@@ -1838,6 +1842,16 @@ input:checked + .toggle-bg {
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
+.border-green-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 159 110 / var(--tw-border-opacity));
+}
+
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(240 82 82 / var(--tw-border-opacity));
+}
+
 .border-transparent {
   border-color: transparent;
 }
@@ -1934,10 +1948,6 @@ input:checked + .toggle-bg {
   padding: 0.625rem;
 }
 
-.p-3 {
-  padding: 0.75rem;
-}
-
 .p-4 {
   padding: 1rem;
 }
@@ -2012,11 +2022,6 @@ input:checked + .toggle-bg {
   padding-bottom: 0.75rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -2059,6 +2064,10 @@ input:checked + .toggle-bg {
 
 .pr-2 {
   padding-right: 0.5rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
 }
 
 .pr-4 {
@@ -2181,6 +2190,10 @@ input:checked + .toggle-bg {
 
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 
 .text-\[\#007bff\] {
@@ -2454,14 +2467,14 @@ input:checked + .toggle-bg {
         height: 35vw !important; */
 }
 
-/* Peta Joglo */
+/* Peta Soaraja */
 
 .slider-card-peta img {
   width: 100%;
   height: 100%;
 }
 
-.slider-card-info {
+.slider-card-beranda {
   height: auto;
   width: auto;
   box-shadow: none;
@@ -2475,12 +2488,12 @@ input:checked + .toggle-bg {
 
 /* Card Info */
 
-.slider-card-info img {
+.slider-card-beranda img {
   width: 100%;
   height: 100%;
 }
 
-.slider-card-info {
+.slider-card-beranda {
   height: auto;
   width: auto;
   box-shadow: none;
@@ -2513,10 +2526,10 @@ input:checked + .toggle-bg {
 
 /* Navigator MapboxGL */
 
-.mapboxgl-ctrl-top-right {
+/* .mapboxgl-ctrl-top-right {
   right: 1vh !important;
   top: 64.5vh !important;
-}
+} */
 
 .mapboxgl-ctrl-logo,
 .mapboxgl-ctrl-attrib {
@@ -2528,7 +2541,7 @@ input:checked + .toggle-bg {
 /* Navigator MapboxGL */
 
 .mapboxgl-ctrl-top-right {
-  right: 1vh !important;
+  right: -1vh !important;
   top: 50vh !important;
 }
 
@@ -2553,7 +2566,7 @@ input:checked + .toggle-bg {
 }
 
 .btn-location {
-  background-image: url("../src/images/my-location.png");
+  background-image: url("../src/images/gm1/my-location.png");
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
@@ -2599,7 +2612,7 @@ input:checked + .toggle-bg {
 }
 
 .mapboxgl-ctrl-group button {
-  background-color: white !important;
+  background-color: white;
   width: 27px !important;
   height: 27px !important;
   /* box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); */
@@ -2608,7 +2621,67 @@ input:checked + .toggle-bg {
   align-items: center !important;
 }
 
-#mapJoglo,
+.active-button {
+  background-color: #e2e8f0 !important;
+}
+
+.custom-control-button {
+  background-color: white;
+}
+
+.custom-control-button.active-button {
+  background-color: #e2e8f0;
+}
+
+.mapboxgl-ctrl button:not(:disabled):hover {
+  background-color: #fff;
+}
+
+/* Rounded */
+
+.slider-card-beranda {
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.slider-card-beranda video,
+.slider-card-beranda img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/*  */
+
+.slider-favorit {
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.slider-favorit video,
+.slider-favorit img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/*  */
+
+.slider-card-info-detail-peta {
+  overflow: hidden !important;
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+
+.slider-card-info-detail-peta video,
+.slider-card-info-detail-peta img {
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+
+/*  */
+
+#mapSoaraja,
 .mapboxgl-popup-content {
   padding: 0px !important;
 }
@@ -2740,7 +2813,7 @@ input:checked + .toggle-bg {
 } */
 
 .slick-dots li button:before {
-  font-size: 5px !important;
+  font-size: 6px !important;
 }
 
 @keyframes marquee {
@@ -2894,7 +2967,7 @@ input:checked + .toggle-bg {
   height: 17vh;
 }
 
-/* .slider-card-info video {
+/* .slider-card-beranda video {
   height: 29vh !important;
 } */
 

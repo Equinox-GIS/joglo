@@ -141,60 +141,6 @@ window.addEventListener("click", (event) => {
   }
 });
 
-// Menu Tab Saran Prasarana
-
-// Menyimpan elemen yang akan diubah ke dalam variabel
-// var carousel = document.getElementById("animation-carousel");
-
-// Tombol untuk deskripsi, sarana, dan indeks
-// var btnDeskripsi = document.getElementById("profile-tab");
-// var btnSarana = document.getElementById("dashboardberanda-tab");
-// var btnIndeks = document.getElementById("settings-tab");
-// // shp
-// var btnShp = document.getElementById("shp-tab");
-// // kontak
-// var btnKontak = document.getElementById("kontak-tab");
-
-// // Fungsi untuk menampilkan carousel
-// btnDeskripsi.addEventListener("click", function () {
-//   carousel.style.display = "block";
-// });
-
-// // Fungsi untuk menyembunyikan carousel
-// btnSarana.addEventListener("click", function () {
-//   carousel.style.display = "none";
-// });
-
-// btnIndeks.addEventListener("click", function () {
-//   carousel.style.display = "none";
-// });
-
-// btnShp.addEventListener("click", function () {
-//   carousel.style.display = "none";
-// });
-
-// btnKontak.addEventListener("click", function () {
-//   carousel.style.display = "none";
-// });
-
-// Ambil referensi ke semua elemen yang diperlukan
-// var video_beranda = document.getElementById("video-detail-beranda");
-// var video_favorit = document.getElementById("video-detail-favorit");
-
-// // Fungsi untuk memulai video
-// function playVideo() {
-//   video_beranda.play();
-//   video_favorit.play();
-// }
-
-// // Fungsi untuk menghentikan dan me-reset video
-// function stopAndResetVideo() {
-//   video_beranda.pause();
-//   video_beranda.currentTime = 0; // Untuk mereset video ke awal
-//   video_favorit.pause();
-//   video_favorit.currentTime = 0; // Untuk mereset video ke awal
-// }
-
 // Fungsi untuk memulai video berdasarkan ID
 function playVideoById(videoId) {
   var videoElement = document.getElementById(videoId);
@@ -256,15 +202,15 @@ function stopAndResetVideo() {
 
 // Fungsi untuk mengatur event listener pada tab
 function setTabListeners() {
-  var btnDeskripsi = document.getElementById("profile-tab");
+  var btnDetailBerandaSatu = document.getElementById("detail-beranda-satu-tab");
   var btnMenu1Favorit = document.getElementById("menufavorit1-tab");
   var tabs = [
-    document.getElementById("threetourberanda-tab"),
-    document.getElementById("spekberanda-tab"),
-    document.getElementById("dashboardberanda-tab"),
-    document.getElementById("settings-tab"),
-    document.getElementById("shp-tab"),
-    document.getElementById("kontak-tab"),
+    document.getElementById("detail-beranda-dua-tab"),
+    document.getElementById("detail-beranda-tiga-tab"),
+    document.getElementById("detail-beranda-empat-tab"),
+    document.getElementById("detail-beranda-lima-tab"),
+    document.getElementById("detail-beranda-enam-tab"),
+    document.getElementById("detail-beranda-tujuh-tab"),
     //
     //     threetourfavorit-tab
     document.getElementById("threetourfavorit-tab"),
@@ -275,8 +221,8 @@ function setTabListeners() {
     document.getElementById("menufavorit5-tab"),
   ];
 
-  // Event listener untuk tab 'profile-tab' yang akan memutar video
-  btnDeskripsi.addEventListener("click", playVideo);
+  // Event listener untuk tab 'detail-beranda-satu-tab' yang akan memutar video
+  btnDetailBerandaSatu.addEventListener("click", playVideo);
   btnMenu1Favorit.addEventListener("click", playVideo);
 
   // Event listener untuk tab-tab lain yang akan menghentikan video
@@ -691,13 +637,13 @@ function getSliderDefaultOptions() {
 }
 
 function initSlickCardInfo() {
-  $(".slider-card-info")
+  $(".slider-card-beranda")
     .on("init", function () {
       setTimeout(function () {
         moveDotsToCustomContainer();
         addClickHandlerToDots();
         disableClickHandlerToDots();
-        resizePlayer($(".slider-card-info video"));
+        resizePlayer($(".slider-card-beranda video"));
       }, 0);
     })
     .slick(getSliderDefaultOptions());
@@ -706,7 +652,7 @@ function initSlickCardInfo() {
 function resizePlayer(videos) {
   if (!videos[0]) return;
 
-  var container = $(".slider-card-info"),
+  var container = $(".slider-card-beranda"),
     containerWidth = container.width(),
     containerHeight = container.height();
 
@@ -776,12 +722,12 @@ function disableClickHandlerToDots() {
 }
 
 function moveDotsToCustomContainer() {
-  const dots = $(".slider-card-info .slick-dots");
+  const dots = $(".slider-card-beranda .slick-dots");
   $(".custom-dot-slick").append(dots);
 }
 
 function addClickHandlerToDots() {
-  $(".slider-card-info .slick-dots li").on("click", function (event) {
+  $(".slider-card-beranda .slick-dots li").on("click", function (event) {
     event.stopPropagation();
   });
 }
@@ -803,14 +749,14 @@ $(document).ready(function () {
   // Rest of your code ...
 
   // Beranda
-  $(".slider-card-info video").on("mouseover", function () {
+  $(".slider-card-beranda video").on("mouseover", function () {
     $(this).get(0).play();
   });
 
-  $(".slider-card-info video").on("mouseout", function () {
+  $(".slider-card-beranda video").on("mouseout", function () {
     $(this).get(0).pause();
   });
-  resizePlayer($(".slider-card-info video"));
+  resizePlayer($(".slider-card-beranda video"));
 
   // Favorit
   $(".slider-favorit video").on("mouseover", function () {
@@ -833,6 +779,11 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
+// $(".slider-card-beranda video").on("mouseout", function () {
+//   $(this).get(0).pause();
+// });
+// resizePlayer($(".slider-card-beranda video"));
+
 // function stopVideoInWrapper(wrapperSelector) {
 //   let videoElement = $(wrapperSelector).find("video");
 //   if (videoElement.length) {
@@ -847,7 +798,7 @@ function closeTab() {
 
   // Pencarian
   showElement(".card-info-pencarian");
-  hideElement(".card-info-detail-pencarian");
+  hideElement(".card-detail-beranda");
 
   stopAndResetVideoById("video-detail-beranda");
   stopAndResetVideo();
@@ -922,7 +873,7 @@ function showCardInfoDetail(element) {
   switch (activeTab) {
     case "1":
       // Pencarian
-      showElement(".card-info-detail-pencarian");
+      showElement(".card-detail-beranda");
       hideElement(".card-info-pencarian");
 
       // Favorit
@@ -952,7 +903,7 @@ function showCardInfoDetail(element) {
 
       //
       // playVideoInWrapper(".video-wrapper-autoplay");
-      if (!$(".card-info-detail-pencarian").hasClass("hidden")) {
+      if (!$(".card-detail-beranda").hasClass("hidden")) {
         playVideoById("video-detail-beranda"); // Memulai video beranda
       }
 
@@ -975,7 +926,7 @@ function showCardInfoDetail(element) {
 
       // Pencarian
       showElement(".card-info-pencarian");
-      hideElement(".card-info-detail-pencarian");
+      hideElement(".card-detail-beranda");
 
       // Pencarian Dua
       showElement(".card-info-favorit-dua");
@@ -1022,7 +973,7 @@ function showCardInfoDetail(element) {
 
       // Pencarian
       ".card-info-pencarian";
-      hideElement(".card-info-detail-pencarian");
+      hideElement(".card-detail-beranda");
 
       // Pencarian Dua
       hideElement(".card-info-favorit-dua");
@@ -1065,7 +1016,7 @@ function showCardInfoDetail(element) {
 
 function resetAllCards() {
   hideElement(".card-info-pencarian");
-  hideElement(".card-info-detail-pencarian");
+  hideElement(".card-detail-beranda");
   hideElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
   hideElement(".card-info-favorit-dua");
@@ -1372,7 +1323,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTab();
         enable();
         // stopAndResetVideo();
-        if (!$(".slider-card-info").hasClass("slick-initialized")) {
+        if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
           initSlickCardInfo();
         }
         break;
@@ -1634,23 +1585,23 @@ document.addEventListener("DOMContentLoaded", function () {
     sarpras: {
       ibadah: [
         ...document.querySelectorAll(".favoritSarprasIbadahTab"),
-        ...document.querySelectorAll(".sarprasIbadahTab"),
+        ...document.querySelectorAll(".berandaSarprasIbadahTab"),
       ],
       miniMarket: [
         ...document.querySelectorAll(".favoritSarprasMiniMarketTab"),
-        ...document.querySelectorAll(".sarprasMiniMarketTab"),
+        ...document.querySelectorAll(".berandaSarprasMiniMarketTab"),
       ],
       graduation: [
         ...document.querySelectorAll(".favoritSarprasSekolahTab"),
-        ...document.querySelectorAll(".sarprasSekolahTab"),
+        ...document.querySelectorAll(".berandaSarprasSekolahTab"),
       ],
       spork: [
         ...document.querySelectorAll(".favoritSarprasRestoranTab"),
-        ...document.querySelectorAll(".sarprasRestoranTab"),
+        ...document.querySelectorAll(".berandaSarprasRestoranTab"),
       ],
       cycling: [
         ...document.querySelectorAll(".favoritSarprasTransportasiTab"),
-        ...document.querySelectorAll(".sarprasTransportasiTab"),
+        ...document.querySelectorAll(".berandaSarprasTransportasiTab"),
       ],
     },
     indeks: {
@@ -1722,20 +1673,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Beranda
-  const hasilElem = document.getElementById("HasilRangBeranda");
-  const controlRangeElem = document.getElementById("ControlRangeBeranda");
+  const hasilElemBeranda = document.getElementById("HasilRangBeranda");
+  const controlRangeElemBeranda = document.getElementById(
+    "ControlRangeBeranda"
+  );
 
-  // Fungsi untuk mengupdate tampilan radius
-  function updateRadiusDisplay() {
-    const radius = controlRangeElem.value;
-    hasilElem.textContent = `Radius ${radius} Km`;
+  // Fungsi untuk mengupdate tampilan radius di Beranda
+  function updateRadiusDisplayBeranda() {
+    const radius = controlRangeElemBeranda.value;
+    hasilElemBeranda.textContent = `Radius ${radius} Km`;
   }
 
-  // Event listener untuk perubahan pada input range
-  controlRangeElem.addEventListener("input", updateRadiusDisplay);
+  // Event listener untuk perubahan pada input range di Beranda
+  controlRangeElemBeranda.addEventListener("input", updateRadiusDisplayBeranda);
 
-  // Panggil fungsi untuk set tampilan awal
-  updateRadiusDisplay();
+  // Panggil fungsi untuk set tampilan awal di Beranda
+  updateRadiusDisplayBeranda();
 
   // Favorit
   const hasilElemFavorit = document.getElementById("HasilRangFavorit");
@@ -1752,17 +1705,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener untuk perubahan pada input range favorit
   controlRangeElemFavorit.addEventListener("input", updateRadiusDisplayFavorit);
 
-  // Panggil fungsi untuk set tampilan awal
+  // Panggil fungsi untuk set tampilan awal pada favorit
   updateRadiusDisplayFavorit();
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   document
-//     .getElementById("threetourberanda-tab")
-//     .addEventListener("click", function () {
-//       initThreeTour();
-//     });
-// });
 
 $("body>.tooltip").remove();
 
@@ -1784,3 +1729,36 @@ function teksBerjalan() {
     });
   }
 }
+
+// Aktif Button Maps
+const buttons = document.querySelectorAll(".btn-on-map");
+
+// Fungsi untuk mengatur ulang semua button ke warna default
+function resetButtons() {
+  buttons.forEach((button) => {
+    button.classList.remove("bg-blue-500");
+    button.classList.add("bg-white");
+    button.classList.remove("text-white");
+    button.classList.add("text-black");
+  });
+}
+
+// Menambahkan event listener ke setiap button
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    // Jika button sudah aktif, kembalikan ke warna default
+    if (this.classList.contains("bg-blue-500")) {
+      this.classList.remove("bg-blue-500");
+      this.classList.remove("text-white");
+      this.classList.add("bg-white");
+      this.classList.add("text-black");
+    } else {
+      // Atur ulang semua button dan ubah warna button yang diklik
+      resetButtons();
+      this.classList.remove("bg-white");
+      this.classList.remove("text-black");
+      this.classList.add("text-white");
+      this.classList.add("bg-blue-500");
+    }
+  });
+});
