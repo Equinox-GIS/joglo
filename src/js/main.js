@@ -758,16 +758,46 @@ function getSliderDefaultOptions() {
 }
 
 function initSlickCardInfo() {
-  $(".slider-card-beranda")
-    .on("init", function () {
-      setTimeout(function () {
+  var $slider = $(".slider-card-beranda");
+  var $mediaElements = $slider.find("img, video");
+  var mediaLoadedCount = 0;
+
+  $mediaElements.each(function () {
+    var $media = $(this);
+    if ($media.is("img")) {
+      if ($media[0].complete) {
+        incrementMediaLoadedCount();
+      } else {
+        $media.on("load", incrementMediaLoadedCount);
+      }
+    } else if ($media.is("video")) {
+      if ($media[0].readyState >= 4) {
+        incrementMediaLoadedCount();
+      } else {
+        $media.on("canplaythrough", incrementMediaLoadedCount);
+      }
+    }
+  });
+
+  function incrementMediaLoadedCount() {
+    mediaLoadedCount++;
+    if (mediaLoadedCount === $mediaElements.length) {
+      initializeSlider();
+    }
+  }
+
+  function initializeSlider() {
+    $slider
+      .on("init", function () {
         moveDotsToCustomContainer();
         addClickHandlerToDots();
         disableClickHandlerToDots();
-        resizePlayer($(".slider-card-beranda video"));
-      }, 0);
-    })
-    .slick(getSliderDefaultOptions());
+        resizePlayer($slider.find("video"));
+      })
+      .slick(getSliderDefaultOptions())
+      .css("visibility", "visible")
+      .animate({ opacity: 1 }, 600); // Fade in the slider smoothly
+  }
 }
 
 function resizePlayer(videos) {

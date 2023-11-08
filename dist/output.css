@@ -2968,6 +2968,10 @@ input:checked + .toggle-bg {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.slider-card-beranda {
+  visibility: hidden;
+}
+
 .video-wrapper video {
   height: 58vh;
   width: 100vh;

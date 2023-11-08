@@ -562,6 +562,10 @@
   @apply bg-blue-900 text-white border border-blue-900;
 }
 
+.slider-card-beranda {
+  visibility: hidden;
+}
+
 .video-wrapper video {
   height: 58vh;
   width: 100vh;
