@@ -205,7 +205,7 @@ function stopAndResetVideo() {
 
 function setActiveTab(tabButtonId, tabContentId) {
   // Nonaktifkan semua tab dan sembunyikan semua konten
-  var tabs = document.querySelectorAll('[role="tab"]');
+  var tabs = document.querySelectorAll('#DetailBeranda [role="tab"]');
   tabs.forEach(function (tab) {
     var contentId = tab.getAttribute("data-tabs-target");
     var content = document.querySelector(contentId);
@@ -216,6 +216,7 @@ function setActiveTab(tabButtonId, tabContentId) {
   // Aktifkan tab yang dipilih dan tampilkan kontennya
   var activeTab = document.getElementById(tabButtonId);
   var activeContent = document.getElementById(tabContentId);
+
   activeTab.setAttribute("aria-selected", "true");
   activeContent.classList.remove("hidden");
 }
@@ -248,8 +249,14 @@ function setTabListeners() {
   ];
 
   // Event listener untuk tab 'detail-beranda-satu-tab' yang akan memutar video
-  btnDetailBerandaSatu.addEventListener("click", playVideo);
-  btnMenu1Favorit.addEventListener("click", playVideo);
+  // btnDetailBerandaSatu.addEventListener("click", playVideo);
+  // btnMenu1Favorit.addEventListener("click", playVideo);
+
+  var btnDetailBerandaDua = document.getElementById("detail-beranda-dua-tab");
+  btnDetailBerandaDua.addEventListener("click", function () {
+    stopAndResetVideo(); // diasumsikan fungsi ini ada dan berfungsi
+    setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+  });
 
   // Event listener untuk tab-tab lain yang akan menghentikan video
   tabs.forEach(function (tab) {
@@ -829,8 +836,11 @@ function closeTab() {
   showElement(".card-info-pencarian");
   hideElement(".card-detail-beranda");
 
-  stopAndResetVideoById("video-detail-beranda");
-  stopAndResetVideo();
+  // stopAndResetVideoById("video-detail-beranda");
+  // stopAndResetVideo();
+  setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+
+  // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
 
   // Kembali ke tab 'detail-beranda-satu-tab'
   // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
@@ -940,6 +950,7 @@ function showCardInfoDetail(element) {
       // playVideoInWrapper(".video-wrapper-autoplay");
       if (!$(".card-detail-beranda").hasClass("hidden")) {
         playVideoById("video-detail-beranda"); // Memulai video beranda
+        setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
       }
 
       //
