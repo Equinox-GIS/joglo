@@ -207,7 +207,7 @@
 }
 
 .btn-location {
-  background-image: url("../src/images/my-location.png");
+  background-image: url("../src/images/gm1/my-location.png");
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
@@ -444,7 +444,7 @@
 } */
 
 .slick-dots li button:before {
-  font-size: 5px !important;
+  font-size: 6px !important;
 }
 
 @keyframes marquee {
