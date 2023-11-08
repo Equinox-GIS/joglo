@@ -200,6 +200,32 @@ function stopAndResetVideo() {
 
 //
 
+// // Inisialisasi event listener pada tab saat dokumen siap
+// document.addEventListener("DOMContentLoaded", setTabListeners);
+
+function setActiveTab(tabButtonId, tabContentId) {
+  // Nonaktifkan semua tab dan sembunyikan semua konten
+  var tabs = document.querySelectorAll('[role="tab"]');
+  tabs.forEach(function (tab) {
+    var contentId = tab.getAttribute("data-tabs-target");
+    var content = document.querySelector(contentId);
+    tab.setAttribute("aria-selected", "false");
+    content.classList.add("hidden");
+  });
+
+  // Aktifkan tab yang dipilih dan tampilkan kontennya
+  var activeTab = document.getElementById(tabButtonId);
+  var activeContent = document.getElementById(tabContentId);
+  activeTab.setAttribute("aria-selected", "true");
+  activeContent.classList.remove("hidden");
+}
+
+// Fungsi untuk menginisialisasi tab saat halaman dimuat
+function initializeTabs() {
+  setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+}
+
+// Fungsi untuk menambahkan event listener ke tab
 // Fungsi untuk mengatur event listener pada tab
 function setTabListeners() {
   var btnDetailBerandaSatu = document.getElementById("detail-beranda-satu-tab");
@@ -231,8 +257,11 @@ function setTabListeners() {
   });
 }
 
-// Inisialisasi event listener pada tab saat dokumen siap
-document.addEventListener("DOMContentLoaded", setTabListeners);
+// Panggil fungsi setTabListeners untuk menambahkan event listener ke tab
+document.addEventListener("DOMContentLoaded", function () {
+  initializeTabs();
+  setTabListeners();
+});
 
 var ctx1 = document.getElementById("myRadarChart").getContext("2d");
 var myRadarChart = new Chart(ctx1, {
@@ -802,6 +831,12 @@ function closeTab() {
 
   stopAndResetVideoById("video-detail-beranda");
   stopAndResetVideo();
+
+  // Kembali ke tab 'detail-beranda-satu-tab'
+  // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+
+  // Hentikan dan reset video jika perlu
+  // stopAndResetVideoById("video-detail-beranda");
 }
 
 function closeTabDisukai() {
@@ -812,7 +847,7 @@ function closeTabDisukai() {
 
   showElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
-  initSlickFavorit();
+  // initSlickFavorit();
 
   // Stop the video within video-wrapper-autoplay (if it exists)
   // stopVideoInWrapper(".video-wrapper-autoplay");
@@ -915,6 +950,8 @@ function showCardInfoDetail(element) {
 
       // Menghapus kelas "hidden" dari elemen
       hiddenSearchRunningElement.classList.remove("hidden");
+
+      // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
 
       //
       break;
