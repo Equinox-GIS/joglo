@@ -191,19 +191,91 @@ if (controlGroup) {
   stickButton1.className = "mapboxgl-ctrl-icon custom-control-button btn-stick";
   stickButton1.setAttribute("type", "button");
   stickButton1.setAttribute("aria-label", "Stick Action 1");
+
+  // Menambahkan atribut untuk tooltips
+  stickButton1.setAttribute("data-tooltip-target", "control-map-detector");
+  stickButton1.setAttribute("data-tooltip-placement", "left");
+
   stickButton1.addEventListener("click", function (event) {
     makeActive(event);
   });
+
+  // Menambahkan event listener untuk menampilkan tooltip
+  stickButton1.addEventListener("mouseenter", function (event) {
+    var tooltip = document.getElementById("control-map-detector");
+    tooltip.classList.remove("invisible", "opacity-0");
+    tooltip.classList.add("visible", "opacity-100");
+  });
+
+  stickButton1.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("control-map-detector");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Menambahkan button ke DOM
+  document.body.appendChild(stickButton1);
+
+  // Tooltip HTML
+  var tooltipHTML = `
+  <div
+    id="control-map-detector"
+    role="tooltip"
+    class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+  >
+    Detector
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
+`;
+
+  // Menambahkan tooltip ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTML);
 
   // Stick Button 2
   var stickButton2 = document.createElement("button");
   stickButton2.className =
     "mapboxgl-ctrl-icon custom-control-button btn-stick2";
   stickButton2.setAttribute("type", "button");
-  stickButton2.setAttribute("aria-label", "Stick Action 1");
+  stickButton2.setAttribute("aria-label", "Stick Action 2");
+
+  // Menambahkan atribut untuk tooltips
+  stickButton2.setAttribute("data-tooltip-target", "control-map-radius");
+  stickButton2.setAttribute("data-tooltip-placement", "left");
+
   stickButton2.addEventListener("click", function (event) {
     makeActive(event);
   });
+
+  // Menambahkan event listener untuk menampilkan tooltip
+  stickButton2.addEventListener("mouseenter", function (event) {
+    var tooltip = document.getElementById("control-map-radius");
+    tooltip.classList.remove("invisible", "opacity-0");
+    tooltip.classList.add("visible", "opacity-100");
+  });
+
+  stickButton2.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("control-map-radius");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Menambahkan button ke DOM
+  document.body.appendChild(stickButton2);
+
+  // Tooltip HTML
+  var tooltipHTML = `
+  <div
+    id="control-map-radius"
+    role="tooltip"
+    class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+  >
+    Radius
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
+`;
+
+  // Menambahkan tooltip ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTML);
 
   // Stick Button 3
   var stickButton3 = document.createElement("button");
@@ -211,9 +283,45 @@ if (controlGroup) {
     "mapboxgl-ctrl-icon custom-control-button btn-stick3";
   stickButton3.setAttribute("type", "button");
   stickButton3.setAttribute("aria-label", "Stick Action 3");
+
+  // Menambahkan atribut untuk tooltips
+  stickButton3.setAttribute("data-tooltip-target", "control-map-poligon");
+  stickButton3.setAttribute("data-tooltip-placement", "left");
+
   stickButton3.addEventListener("click", function (event) {
     makeActive(event);
   });
+
+  // Menambahkan event listener untuk menampilkan tooltip
+  stickButton3.addEventListener("mouseenter", function (event) {
+    var tooltip = document.getElementById("control-map-poligon");
+    tooltip.classList.remove("invisible", "opacity-0");
+    tooltip.classList.add("visible", "opacity-100");
+  });
+
+  stickButton3.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("control-map-poligon");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Menambahkan button ke DOM
+  document.body.appendChild(stickButton3);
+
+  // Tooltip HTML
+  var tooltipHTML = `
+  <div
+    id="control-map-poligon"
+    role="tooltip"
+    class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+  >
+    Poligon
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
+`;
+
+  // Menambahkan tooltip ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTML);
 
   // Get Zoom In and Zoom Out buttons
   var zoomInButton = controlGroup.querySelector(".mapboxgl-ctrl-zoom-in");
