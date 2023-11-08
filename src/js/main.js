@@ -203,83 +203,209 @@ function stopAndResetVideo() {
 // // Inisialisasi event listener pada tab saat dokumen siap
 // document.addEventListener("DOMContentLoaded", setTabListeners);
 
-function setActiveTab(tabButtonId, tabContentId) {
-  // Nonaktifkan semua tab dan sembunyikan semua konten
+// function setActiveTab(tabButtonId, tabContentId) {
+//   // Nonaktifkan semua tab dan sembunyikan semua konten
+//   var tabs = document.querySelectorAll('#DetailBeranda [role="tab"]');
+//   tabs.forEach(function (tab) {
+//     var contentId = tab.getAttribute("data-tabs-target");
+//     console.log("Tab target:", contentId); // Mencetak target dari tab
+
+//     var content = document.querySelector(contentId);
+//     tab.setAttribute("aria-selected", "false");
+//     content.classList.add("hidden");
+
+//     // Mengecek apakah atribut 'aria-selected' telah diatur ke 'false'
+//     // console.log(
+//     //   "Aria-selected set to false:",
+//     //   tab.getAttribute("aria-selected") === "false"
+//     // );
+
+//     // Mengecek apakah konten telah disembunyikan
+//     // console.log("Content is hidden:", content.classList.contains("hidden"));
+//   });
+
+//   // console.log(tabButtonId);
+
+//   // Aktifkan tab yang dipilih dan tampilkan kontennya
+//   var activeTab = document.getElementById(tabButtonId);
+//   var activeContent = document.getElementById(tabContentId);
+
+//   activeTab.setAttribute("aria-selected", "true");
+//   activeContent.classList.remove("hidden");
+// }
+
+// // Fungsi untuk menginisialisasi tab saat halaman dimuat
+// function initializeTabs() {
+//   setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+// }
+
+// // Fungsi untuk menambahkan event listener ke tab
+// // Fungsi untuk mengatur event listener pada tab
+// function setTabListeners() {
+//   var btnDetailBerandaSatu = document.getElementById("detail-beranda-satu-tab");
+//   var btnMenu1Favorit = document.getElementById("menufavorit1-tab");
+//   var tabs = [
+//     document.getElementById("detail-beranda-dua-tab"),
+//     document.getElementById("detail-beranda-tiga-tab"),
+//     document.getElementById("detail-beranda-empat-tab"),
+//     document.getElementById("detail-beranda-lima-tab"),
+//     document.getElementById("detail-beranda-enam-tab"),
+//     document.getElementById("detail-beranda-tujuh-tab"),
+//     //
+//     //     threetourfavorit-tab
+//     document.getElementById("threetourfavorit-tab"),
+//     document.getElementById("spekfavorit-tab"),
+//     document.getElementById("menufavorit2-tab"),
+//     document.getElementById("menufavorit3-tab"),
+//     document.getElementById("menufavorit4-tab"),
+//     document.getElementById("menufavorit5-tab"),
+//   ];
+
+//   // Event listener untuk tab 'detail-beranda-satu-tab' yang akan memutar video
+//   // btnDetailBerandaSatu.addEventListener("click", playVideo);
+//   // btnMenu1Favorit.addEventListener("click", playVideo);
+
+//   var btnDetailBerandaDua = document.getElementById("detail-beranda-dua-tab");
+//   btnDetailBerandaDua.addEventListener("click", function () {
+//     stopAndResetVideo(); // diasumsikan fungsi ini ada dan berfungsi
+//     setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+//   });
+
+//   // Event listener untuk tab-tab lain yang akan menghentikan video
+//   tabs.forEach(function (tab) {
+//     tab.addEventListener("click", stopAndResetVideo);
+//   });
+// }
+
+// // Panggil fungsi setTabListeners untuk menambahkan event listener ke tab
+// document.addEventListener("DOMContentLoaded", function () {
+//   initializeTabs();
+//   setTabListeners();
+// });
+
+function resetTabStyles() {
+  // Nonaktifkan semua tab dan reset style mereka
   var tabs = document.querySelectorAll('#DetailBeranda [role="tab"]');
   tabs.forEach(function (tab) {
-    var contentId = tab.getAttribute("data-tabs-target");
-    console.log("Tab target:", contentId); // Mencetak target dari tab
-
-    var content = document.querySelector(contentId);
+    // Hapus kelas untuk tab aktif
+    tab.classList.remove(
+      "text-blue-600",
+      "border-blue-600",
+      "dark:text-blue-500",
+      "dark:border-blue-500"
+    );
+    // Tambahkan kelas untuk tab nonaktif
+    tab.classList.add(
+      "hover:text-gray-600",
+      "hover:border-gray-300",
+      "dark:border-transparent",
+      "text-gray-500",
+      "dark:text-gray-400",
+      "border-gray-100",
+      "dark:border-gray-700",
+      "dark:hover:text-gray-300"
+    );
+    // Set aria-selected to false for all tabs
     tab.setAttribute("aria-selected", "false");
-    content.classList.add("hidden");
-
-    // Mengecek apakah atribut 'aria-selected' telah diatur ke 'false'
-    // console.log(
-    //   "Aria-selected set to false:",
-    //   tab.getAttribute("aria-selected") === "false"
-    // );
-
-    // Mengecek apakah konten telah disembunyikan
-    // console.log("Content is hidden:", content.classList.contains("hidden"));
   });
 
-  // console.log(tabButtonId);
+  // Sekarang set style dan aria-selected untuk tab 'Tampak Ruang'
+  var defaultTab = document.getElementById("detail-beranda-satu-tab");
+  defaultTab.classList.remove(
+    "hover:text-gray-600",
+    "hover:border-gray-300",
+    "dark:border-transparent",
+    "text-gray-500",
+    "dark:text-gray-400",
+    "border-gray-100",
+    "dark:border-gray-700",
+    "dark:hover:text-gray-300"
+  );
+  defaultTab.classList.add(
+    "text-blue-600",
+    "border-blue-600",
+    "dark:text-blue-500",
+    "dark:border-blue-500"
+  );
+  defaultTab.setAttribute("aria-selected", "true");
+}
 
-  // Aktifkan tab yang dipilih dan tampilkan kontennya
+function resetActiveTab() {
+  // Reset style semua tab
+  resetTabStyles();
+
+  // Sembunyikan semua konten tab
+  var contents = document.querySelectorAll(
+    '#DetailBerandaContent [role="tabpanel"]'
+  );
+  contents.forEach(function (content) {
+    content.classList.add("hidden");
+  });
+
+  // Tampilkan konten untuk tab 'Tampak Ruang'
+  var defaultContent = document.getElementById("detail-beranda-satu");
+  defaultContent.classList.remove("hidden");
+}
+
+function setActiveTab(tabButtonId, tabContentId) {
+  // First, reset the styles and aria-selected attributes for all tabs
+  resetTabStyles();
+
+  // Then, find the tab button and content that need to be activated
   var activeTab = document.getElementById(tabButtonId);
   var activeContent = document.getElementById(tabContentId);
 
+  // Set the active tab's styles and aria-selected attribute
+  activeTab.classList.remove(
+    "hover:text-gray-600",
+    "hover:border-gray-300",
+    "dark:border-transparent",
+    "text-gray-500",
+    "dark:text-gray-400",
+    "border-gray-100",
+    "dark:border-gray-700",
+    "dark:hover:text-gray-300"
+  );
+  activeTab.classList.add(
+    "text-blue-600",
+    "border-blue-600",
+    "dark:text-blue-500",
+    "dark:border-blue-500"
+  );
   activeTab.setAttribute("aria-selected", "true");
+
+  // Hide all tab contents
+  var contents = document.querySelectorAll(
+    '#DetailBerandaContent [role="tabpanel"]'
+  );
+  contents.forEach(function (content) {
+    content.classList.add("hidden");
+  });
+
+  // Show the active tab content
   activeContent.classList.remove("hidden");
 }
 
-// Fungsi untuk menginisialisasi tab saat halaman dimuat
-function initializeTabs() {
-  setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
-}
-
-// Fungsi untuk menambahkan event listener ke tab
-// Fungsi untuk mengatur event listener pada tab
 function setTabListeners() {
-  var btnDetailBerandaSatu = document.getElementById("detail-beranda-satu-tab");
-  var btnMenu1Favorit = document.getElementById("menufavorit1-tab");
-  var tabs = [
-    document.getElementById("detail-beranda-dua-tab"),
-    document.getElementById("detail-beranda-tiga-tab"),
-    document.getElementById("detail-beranda-empat-tab"),
-    document.getElementById("detail-beranda-lima-tab"),
-    document.getElementById("detail-beranda-enam-tab"),
-    document.getElementById("detail-beranda-tujuh-tab"),
-    //
-    //     threetourfavorit-tab
-    document.getElementById("threetourfavorit-tab"),
-    document.getElementById("spekfavorit-tab"),
-    document.getElementById("menufavorit2-tab"),
-    document.getElementById("menufavorit3-tab"),
-    document.getElementById("menufavorit4-tab"),
-    document.getElementById("menufavorit5-tab"),
-  ];
+  var tabs = document.querySelectorAll('#DetailBeranda [role="tab"]');
 
-  // Event listener untuk tab 'detail-beranda-satu-tab' yang akan memutar video
-  // btnDetailBerandaSatu.addEventListener("click", playVideo);
-  // btnMenu1Favorit.addEventListener("click", playVideo);
-
-  var btnDetailBerandaDua = document.getElementById("detail-beranda-dua-tab");
-  btnDetailBerandaDua.addEventListener("click", function () {
-    stopAndResetVideo(); // diasumsikan fungsi ini ada dan berfungsi
-    setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
-  });
-
-  // Event listener untuk tab-tab lain yang akan menghentikan video
   tabs.forEach(function (tab) {
-    tab.addEventListener("click", stopAndResetVideo);
+    tab.addEventListener("click", function () {
+      // Hentikan dan reset video jika perlu
+      stopAndResetVideoById("myVideoPlayerId"); // Ganti 'myVideoPlayerId' dengan ID video player yang sesungguhnya
+
+      // Reset semua tab ke nonaktif dan set 'Tampak Ruang' sebagai tab aktif
+      resetActiveTab();
+
+      // Set 'Tampak Ruang' sebagai tab aktif
+      setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+    });
   });
 }
 
-// Panggil fungsi setTabListeners untuk menambahkan event listener ke tab
 document.addEventListener("DOMContentLoaded", function () {
-  initializeTabs();
+  // Set 'Tampak Ruang' sebagai tab aktif saat halaman dimuat
+  setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
   setTabListeners();
 });
 
@@ -857,7 +983,7 @@ function closeTab() {
   hideElement(".card-detail-beranda");
 
   stopAndResetVideoById("video-detail-beranda");
-  setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+  // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
 
   // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
 
