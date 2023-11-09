@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -1341,6 +1341,10 @@ input:checked + .toggle-bg {
   height: 60vh;
 }
 
+.h-\[62vh\] {
+  height: 62vh;
+}
+
 .h-\[78vh\] {
   height: 78vh;
 }
@@ -1363,6 +1367,14 @@ input:checked + .toggle-bg {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[59vh\] {
+  height: 59vh;
+}
+
+.\!h-\[62vh\] {
+  height: 62vh !important;
 }
 
 .min-h-\[180px\] {
@@ -1459,6 +1471,10 @@ input:checked + .toggle-bg {
 
 .w-\[26vw\] {
   width: 26vw;
+}
+
+.w-\[50vw\] {
+  width: 50vw;
 }
 
 .w-full {
@@ -1861,11 +1877,6 @@ input:checked + .toggle-bg {
   background-color: rgb(105 179 231 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#7752FE\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(119 82 254 / var(--tw-bg-opacity));
-}
-
 .bg-blue-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
@@ -2206,9 +2217,9 @@ input:checked + .toggle-bg {
   color: rgb(0 123 255 / var(--tw-text-opacity));
 }
 
-.text-\[\#7752FE\] {
+.text-\[\#69B3E7\] {
   --tw-text-opacity: 1;
-  color: rgb(119 82 254 / var(--tw-text-opacity));
+  color: rgb(105 179 231 / var(--tw-text-opacity));
 }
 
 .text-black {
@@ -2264,11 +2275,6 @@ input:checked + .toggle-bg {
 .text-yellow-300 {
   --tw-text-opacity: 1;
   color: rgb(250 202 21 / var(--tw-text-opacity));
-}
-
-.text-\[\#69B3E7\] {
-  --tw-text-opacity: 1;
-  color: rgb(105 179 231 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -2920,11 +2926,11 @@ input:checked + .toggle-bg {
   height: 100%;
 } */
 
-.slider-card-info-detail video {
+/* .slider-card-info-detail video {
   width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 .bg-aktif-menu {
   border-radius: 0.5rem;
@@ -2980,8 +2986,8 @@ input:checked + .toggle-bg {
 }
 
 .video-wrapper video {
-  height: 58vh;
-  width: 100vh;
+  /* height: 58vh; */
+  /* width: 100vh; */
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -3019,6 +3025,12 @@ input:checked + .toggle-bg {
   display: block;
 }
 
+/*  */
+
+/*  */
+
+/*  */
+
 .left-prev-custom {
   left: -5px !important;
   /* top: 45px !important; */
@@ -3028,6 +3040,11 @@ input:checked + .toggle-bg {
   right: -5px !important;
   /* top: 45px !important; */
 }
+
+/* .slider-card-info-detail,
+.slick-dots {
+  bottom: 20px !important;
+} */
 
 /* 3d */
 

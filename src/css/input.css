@@ -530,11 +530,11 @@
   height: 100%;
 } */
 
-.slider-card-info-detail video {
+/* .slider-card-info-detail video {
   width: 100%;
   height: auto;
   display: block;
-}
+} */
 
 .bg-aktif-menu {
   @apply bg-slate-200 rounded-lg;
@@ -569,8 +569,8 @@
 }
 
 .video-wrapper video {
-  height: 58vh;
-  width: 100vh;
+  /* height: 58vh; */
+  /* width: 100vh; */
   object-fit: cover;
 }
 
@@ -607,6 +607,11 @@
   display: block;
 }
 
+/*  */
+/*  */
+
+/*  */
+
 .left-prev-custom {
   left: -5px !important;
   /* top: 45px !important; */
@@ -615,6 +620,11 @@
   right: -5px !important;
   /* top: 45px !important; */
 }
+
+/* .slider-card-info-detail,
+.slick-dots {
+  bottom: 20px !important;
+} */
 
 /* 3d */
 
