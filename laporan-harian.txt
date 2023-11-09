@@ -2,7 +2,7 @@
 Rabu, 8-11-2023
 
 - Memperbaiki debugging sarana dan prasaran fungsi tidak berjalan karna terdapat id yg sama	
-- Membuat fungsi aktif dan nonaktif button pada peta
+- fixed kode yang hilang fungsi aktif dan nonaktif button pada peta
 
 - menambahkan tooltips pada semua button mapbox control peta 
 
