@@ -551,8 +551,8 @@ if (controlGroup) {
   controlGroup.appendChild(stickButton1);
   controlGroup.appendChild(stickButton2);
   controlGroup.appendChild(stickButton3);
-  controlGroup.appendChild(separator);
   controlGroup.appendChild(myLocationButton);
+  controlGroup.appendChild(separator);
   controlGroup.appendChild(customButton);
   controlGroup.appendChild(dropdown);
   controlGroup.appendChild(zoomInButton);
@@ -614,7 +614,10 @@ map.on("click", "layer-peta-soaraja", (e) => {
   // const data = e.features[0].properties;
 
   const content = `
-<div class="w-full h-full">
+<div class="w-full h-full"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)">
                       <div
                         class="flex flex-col cursor-pointer"
                       >

@@ -202,6 +202,8 @@
   background-repeat: no-repeat !important;
   display: block !important;
   background-size: inherit !important;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   width: 65% !important;
   height: 65% !important;
 }
@@ -212,8 +214,8 @@
   background-repeat: no-repeat !important;
   display: block !important;
   background-size: inherit !important;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   width: 65% !important;
   height: 65% !important;
 }
