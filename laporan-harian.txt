@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------
+Rabu, 9-11-2023
+
+- memperbaiki video dan gambar pada card slider saat pertama kali diload tidak responsive dan dibuat function waktu jgn ditampilkan apabila resource belum ready
+
+- menerapkan semua function play dan stop video, default menu, reset menu serta class pada detail card dari beranda diterapakn ke favorit dan menulis ulang id sesuaikan kebutuhan agar mudah dikembangkan
+
+- menerapkan card pada peta dapat membuka dari detail card
+
+---------------------------------------------------------------------------------------------
 Rabu, 8-11-2023
 
 - Memperbaiki debugging sarana dan prasaran fungsi tidak berjalan karna terdapat id yg sama	
