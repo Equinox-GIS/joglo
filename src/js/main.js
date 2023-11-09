@@ -270,14 +270,14 @@ function setActiveTab(tabButtonId, tabContentId) {
     activeContent.classList.remove("hidden");
 
     // Jika tab 'detail-beranda-satu' atau 'detail-favorit-satu' yang diaktifkan, putar videonya
-    if (
-      tabButtonId === "detail-beranda-satu-tab" ||
-      tabButtonId === "detail-favorit-satu-tab"
-    ) {
+    if (tabButtonId === "detail-beranda-satu-tab") {
       playVideoById("video-detail-beranda"); // Pastikan ID ini sesuai dengan ID video Anda
+    } else if (tabButtonId === "detail-favorit-satu-tab") {
+      playVideoById("video-detail-favorit"); // Pastikan ID ini sesuai dengan ID video Anda
     } else {
       // Jika tab lain yang diaktifkan, hentikan dan reset video 'detail-beranda-satu'
       stopAndResetVideoById("video-detail-beranda"); // Pastikan ID ini sesuai dengan ID video Anda
+      stopAndResetVideoById("video-detail-favorit"); // Pastikan ID ini sesuai dengan ID video Anda
     }
   }
 }
