@@ -16,6 +16,4 @@ Rabu, 8-11-2023
 
 - fixed debugging play video otomatis hanya pada menu tampak ruang, membuat stop otomatis pada menu lainnya, dan membuat default agar setiap membuka detail selalu mengarah ke menu tampak ruan
 
-
-
 -----------------------------------------------------------------------------------------
