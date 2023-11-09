@@ -1,0 +1,21 @@
+---------------------------------------------------------------------------------------------
+Rabu, 8-11-2023
+
+- Memperbaiki debugging sarana dan prasaran fungsi tidak berjalan karna terdapat id yg sama	
+- Membuat fungsi aktif dan nonaktif button pada peta
+
+- menambahkan tooltips pada semua button mapbox control peta 
+
+- Merevisi ukuran pada control stick dan location di control button peta
+
+- mengganti url resource data titik peta
+
+- mengganti icon soaraja dan menambahkan icon pada title
+
+- mengganti warna pad judul, button terapkan dan simpan pencarian
+
+- fixed debugging play video otomatis hanya pada menu tampak ruang, membuat stop otomatis pada menu lainnya, dan membuat default agar setiap membuka detail selalu mengarah ke menu tampak ruan
+
+
+
+-----------------------------------------------------------------------------------------
