@@ -1269,6 +1269,10 @@ input:checked + .toggle-bg {
   display: none;
 }
 
+.\!h-\[62vh\] {
+  height: 62vh !important;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -1367,14 +1371,6 @@ input:checked + .toggle-bg {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[59vh\] {
-  height: 59vh;
-}
-
-.\!h-\[62vh\] {
-  height: 62vh !important;
 }
 
 .min-h-\[180px\] {
