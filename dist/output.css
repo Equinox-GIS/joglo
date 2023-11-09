@@ -1369,6 +1369,14 @@ input:checked + .toggle-bg {
   height: 100vh;
 }
 
+.h-\[59vh\] {
+  height: 59vh;
+}
+
+.\!h-\[62vh\] {
+  height: 62vh !important;
+}
+
 .min-h-\[180px\] {
   min-height: 180px;
 }
