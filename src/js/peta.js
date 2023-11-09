@@ -570,7 +570,7 @@ const popup = new mapboxgl.Popup({
 const IzinGalian = () => {
   map.addSource("layer-peta-soaraja", {
     type: "geojson",
-    data: `dataa.geojson`,
+    data: `data-dumy.geojson`,
   });
 
   map.addLayer({
