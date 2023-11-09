@@ -614,7 +614,10 @@ map.on("click", "layer-peta-soaraja", (e) => {
   // const data = e.features[0].properties;
 
   const content = `
-<div class="w-full h-full">
+<div class="w-full h-full"
+                        data-card-map="1534"
+                        data-active-tab="1"
+                        onclick="showCardInfoDetail(this)">
                       <div
                         class="flex flex-col cursor-pointer"
                       >
