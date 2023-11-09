@@ -141,6 +141,8 @@ window.addEventListener("click", (event) => {
   }
 });
 
+//
+
 // Fungsi untuk memulai video berdasarkan ID
 function playVideoById(videoId) {
   var videoElement = document.getElementById(videoId);
@@ -158,81 +160,200 @@ function playVideoById(videoId) {
   }
 }
 
+// Fungsi untuk menghentikan dan mereset video berdasarkan ID
 function stopAndResetVideoById(videoId) {
   var videoElement = document.getElementById(videoId);
   if (videoElement) {
-    videoElement.pause();
-    videoElement.currentTime = 0;
-    // console.log("Video stopped and reset:", videoId);
+    videoElement.pause(); // Menghentikan video
+    videoElement.currentTime = 0; // Mereset waktu video ke awal
   }
 }
 
-function playVideo() {
-  playVideoById("video-detail-beranda");
-  playVideoById("video-detail-favorit");
+// Fungsi untuk mereset gaya pada semua tab dan menandai tab 'Tampak Ruang' sebagai aktif
+function resetTabStyles() {
+  var tabs = document.querySelectorAll('#DetailBeranda [role="tab"]');
+  tabs.forEach(function (tab) {
+    // Menghapus kelas gaya untuk tab aktif
+    tab.classList.remove(
+      "text-blue-600",
+      "border-blue-600",
+      "dark:text-blue-500",
+      "dark:border-blue-500"
+    );
+    // Menambahkan kelas gaya untuk tab tidak aktif
+    tab.classList.add(
+      "hover:text-gray-600",
+      "hover:border-gray-300",
+      "dark:border-transparent",
+      "text-gray-500",
+      "dark:text-gray-400",
+      "border-gray-100",
+      "dark:border-gray-700",
+      "dark:hover:text-gray-300"
+    );
+    // Menandai semua tab sebagai tidak terpilih
+    tab.setAttribute("aria-selected", "false");
+  });
+
+  // Menandai tab 'Tampak Ruang' sebagai terpilih
+  var defaultTab = document.getElementById("detail-beranda-satu-tab");
+  defaultTab.classList.remove(
+    // Menghapus kelas gaya untuk tab tidak aktif
+    "hover:text-gray-600",
+    "hover:border-gray-300",
+    "dark:border-transparent",
+    "text-gray-500",
+    "dark:text-gray-400",
+    "border-gray-100",
+    "dark:border-gray-700",
+    "dark:hover:text-gray-300"
+  );
+  // Menambahkan kelas gaya untuk tab aktif
+  defaultTab.classList.add(
+    "text-blue-600",
+    "border-blue-600",
+    "dark:text-blue-500",
+    "dark:border-blue-500"
+  );
+  // Menandai tab 'Tampak Ruang' sebagai terpilih
+  defaultTab.setAttribute("aria-selected", "true");
 }
 
-function stopAndResetVideo() {
-  // Anda harus menentukan video mana yang harus dihentikan. Misalnya:
-  var allVideoIds = ["video-detail-beranda", "video-detail-favorit"]; // dan seterusnya...
-  allVideoIds.forEach(stopAndResetVideoById);
-}
+// Fungsi untuk menyembunyikan semua konten tab dan menampilkan konten untuk tab 'Tampak Ruang'
+function resetActiveTab(excludeIds = []) {
+  resetTabStyles(); // Memanggil fungsi untuk mereset gaya tab
 
-// Fungsi untuk menghentikan dan me-reset video berdasarkan ID
-// function stopAndResetVideoById(videoId) {
-//   var videoElement = document.getElementById(videoId);
-//   if (videoElement) {
-//     videoElement.pause();
-//     videoElement.currentTime = 0; // Untuk mereset video ke awal
-//   }
-// }
-
-// // Fungsi untuk memulai video dalam wrapper tertentu (menggunakan jQuery)
-// function playVideoInWrapper(wrapperSelector) {
-//   var videoElement = $(wrapperSelector).find("video")[0]; // Menemukan video pertama dalam wrapper
-//   if (videoElement) {
-//     videoElement.play();
-//   }
-// }
-
-// Jika ingin memulai video saat berada di dalam wrapper dengan kelas tertentu
-// playVideoInWrapper(".video-wrapper-autoplay"); // Ini akan memulai semua video yang ada dalam elemen dengan kelas 'video-wrapper-autoplay'
-
-//
-
-// Fungsi untuk mengatur event listener pada tab
-function setTabListeners() {
-  var btnDetailBerandaSatu = document.getElementById("detail-beranda-satu-tab");
-  var btnMenu1Favorit = document.getElementById("menufavorit1-tab");
-  var tabs = [
-    document.getElementById("detail-beranda-dua-tab"),
-    document.getElementById("detail-beranda-tiga-tab"),
-    document.getElementById("detail-beranda-empat-tab"),
-    document.getElementById("detail-beranda-lima-tab"),
-    document.getElementById("detail-beranda-enam-tab"),
-    document.getElementById("detail-beranda-tujuh-tab"),
-    //
-    //     threetourfavorit-tab
-    document.getElementById("threetourfavorit-tab"),
-    document.getElementById("spekfavorit-tab"),
-    document.getElementById("menufavorit2-tab"),
-    document.getElementById("menufavorit3-tab"),
-    document.getElementById("menufavorit4-tab"),
-    document.getElementById("menufavorit5-tab"),
+  var contents = [
+    // Daftar semua konten tab yang ada
+    document.getElementById("detail-beranda-satu"),
+    document.getElementById("detail-beranda-dua"),
+    document.getElementById("detail-beranda-tiga"),
+    document.getElementById("detail-beranda-empat"),
+    document.getElementById("detail-beranda-lima"),
+    document.getElementById("detail-beranda-enam"),
+    document.getElementById("detail-beranda-tujuh"),
   ];
 
-  // Event listener untuk tab 'detail-beranda-satu-tab' yang akan memutar video
-  btnDetailBerandaSatu.addEventListener("click", playVideo);
-  btnMenu1Favorit.addEventListener("click", playVideo);
+  contents.forEach(function (content) {
+    // Jika konten ada dan ID-nya tidak ada dalam daftar pengecualian, sembunyikan konten tersebut
+    if (content && !excludeIds.includes(content.id)) {
+      content.classList.add("hidden");
+    }
+  });
 
-  // Event listener untuk tab-tab lain yang akan menghentikan video
+  // Jika tab 'Tampak Ruang' tidak ada dalam daftar pengecualian, tampilkan kontennya
+  if (!excludeIds.includes("detail-beranda-satu")) {
+    var defaultContent = document.getElementById("detail-beranda-satu");
+    if (defaultContent) {
+      defaultContent.classList.remove("hidden");
+    }
+  }
+}
+
+// Fungsi untuk mengaktifkan tab dan kontennya berdasarkan ID
+function setActiveTab(tabButtonId, tabContentId) {
+  resetTabStyles(); // Memanggil fungsi untuk mereset gaya tab
+
+  // Jika tab 'detail-beranda-satu' yang diaktifkan, putar videonya
+  if (tabButtonId === "detail-beranda-satu-tab") {
+    playVideoById("video-detail-beranda");
+  }
+
+  // Mendapatkan elemen tab dan konten yang akan diaktifkan
+  var activeTab = document.getElementById(tabButtonId);
+  var activeContent = document.getElementById(tabContentId);
+
+  // Mengatur gaya dan atribut 'aria-selected' untuk tab aktif
+  activeTab.classList.remove(
+    // Menghapus kelas gaya untuk tab tidak aktif
+    "hover:text-gray-600",
+    "hover:border-gray-300",
+    "dark:border-transparent",
+    "text-gray-500",
+    "dark:text-gray-400",
+    "border-gray-100",
+    "dark:border-gray-700",
+    "dark:hover:text-gray-300"
+  );
+  // Menambahkan kelas gaya untuk tab aktif
+  activeTab.classList.add(
+    "text-blue-600",
+    "border-blue-600",
+    "dark:text-blue-500",
+    "dark:border-blue-500"
+  );
+  // Menandai tab sebagai terpilih
+  activeTab.setAttribute("aria-selected", "true");
+
+  // Menyembunyikan semua konten tab lainnya
+  var contents = [
+    // Daftar semua konten tab yang ada
+    document.getElementById("detail-beranda-satu"),
+    document.getElementById("detail-beranda-dua"),
+    document.getElementById("detail-beranda-tiga"),
+    document.getElementById("detail-beranda-empat"),
+    document.getElementById("detail-beranda-lima"),
+    document.getElementById("detail-beranda-enam"),
+    document.getElementById("detail-beranda-tujuh"),
+  ];
+
+  contents.forEach(function (content) {
+    // Jika konten ada, sembunyikan
+    if (content) {
+      content.classList.add("hidden");
+    }
+  });
+
+  // Menampilkan konten tab yang aktif
+  if (activeContent) {
+    activeContent.classList.remove("hidden");
+  }
+}
+
+// Fungsi untuk menambahkan event listener pada setiap tab
+function setTabListeners() {
+  var tabs = document.querySelectorAll('#DetailBeranda [role="tab"]');
+
   tabs.forEach(function (tab) {
-    tab.addEventListener("click", stopAndResetVideo);
+    tab.addEventListener("click", function () {
+      // Reset semua tab ke nonaktif dan sembunyikan semua konten tab
+      resetActiveTab();
+
+      // Jika tab 'detail-beranda-satu-tab' yang diklik, set tab tersebut sebagai aktif
+      if (tab.id === "detail-beranda-satu-tab") {
+        setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+        // Pastikan ID ini sesuai dengan ID video Anda
+        // Hanya panggil playVideoById jika pengguna mengklik tab ini
+        playVideoById("video-detail-beranda");
+      } else {
+        // Jika tab lain yang diklik, hentikan dan reset video 'detail-beranda-satu'
+        // Pastikan ID ini sesuai dengan ID video Anda
+        stopAndResetVideoById("video-detail-beranda");
+        // Set tab yang diklik sebagai tab aktif
+        setActiveTab(tab.id, tab.getAttribute("aria-controls"));
+      }
+    });
   });
 }
 
-// Inisialisasi event listener pada tab saat dokumen siap
-document.addEventListener("DOMContentLoaded", setTabListeners);
+// Event listener yang dijalankan saat halaman web selesai dimuat
+document.addEventListener("DOMContentLoaded", function () {
+  // Mengatur tab 'Tampak Ruang' sebagai tab aktif saat halaman dimuat
+  resetActiveTab([
+    "detail-beranda-empat",
+    "detail-beranda-lima",
+    "detail-beranda-enam",
+  ]);
+  setTabListeners(); // Memanggil fungsi untuk menambahkan event listener pada tab
+});
+
+//
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Set 'Tampak Ruang' sebagai tab aktif saat halaman dimuat
+  // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+  setTabListeners();
+});
 
 var ctx1 = document.getElementById("myRadarChart").getContext("2d");
 var myRadarChart = new Chart(ctx1, {
@@ -637,16 +758,46 @@ function getSliderDefaultOptions() {
 }
 
 function initSlickCardInfo() {
-  $(".slider-card-beranda")
-    .on("init", function () {
-      setTimeout(function () {
+  var $slider = $(".slider-card-beranda");
+  var $mediaElements = $slider.find("img, video");
+  var mediaLoadedCount = 0;
+
+  $mediaElements.each(function () {
+    var $media = $(this);
+    if ($media.is("img")) {
+      if ($media[0].complete) {
+        incrementMediaLoadedCount();
+      } else {
+        $media.on("load", incrementMediaLoadedCount);
+      }
+    } else if ($media.is("video")) {
+      if ($media[0].readyState >= 4) {
+        incrementMediaLoadedCount();
+      } else {
+        $media.on("canplaythrough", incrementMediaLoadedCount);
+      }
+    }
+  });
+
+  function incrementMediaLoadedCount() {
+    mediaLoadedCount++;
+    if (mediaLoadedCount === $mediaElements.length) {
+      initializeSlider();
+    }
+  }
+
+  function initializeSlider() {
+    $slider
+      .on("init", function () {
         moveDotsToCustomContainer();
         addClickHandlerToDots();
         disableClickHandlerToDots();
-        resizePlayer($(".slider-card-beranda video"));
-      }, 0);
-    })
-    .slick(getSliderDefaultOptions());
+        resizePlayer($slider.find("video"));
+      })
+      .slick(getSliderDefaultOptions())
+      .css("visibility", "visible")
+      .animate({ opacity: 1 }, 600); // Fade in the slider smoothly
+  }
 }
 
 function resizePlayer(videos) {
@@ -800,8 +951,33 @@ function closeTab() {
   showElement(".card-info-pencarian");
   hideElement(".card-detail-beranda");
 
+  // stopAndResetVideoById("video-detail-beranda");
+  // stopAndResetVideo();
+
+  // Pencarian
+  showElement(".card-info-pencarian");
+  hideElement(".card-detail-beranda");
+
   stopAndResetVideoById("video-detail-beranda");
-  stopAndResetVideo();
+  // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+
+  // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+
+  // Kembali ke tab 'detail-beranda-satu-tab'
+  // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+
+  // Hentikan dan reset video jika perlu
+  // stopAndResetVideoById("video-detail-beranda");
+}
+
+// Fungsi untuk menampilkan elemen
+function showElement(selector) {
+  document.querySelector(selector).classList.remove("hidden");
+}
+
+// Fungsi untuk menyembunyikan elemen
+function hideElement(selector) {
+  document.querySelector(selector).classList.add("hidden");
 }
 
 function closeTabDisukai() {
@@ -812,7 +988,7 @@ function closeTabDisukai() {
 
   showElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
-  initSlickFavorit();
+  // initSlickFavorit();
 
   // Stop the video within video-wrapper-autoplay (if it exists)
   // stopVideoInWrapper(".video-wrapper-autoplay");
@@ -905,6 +1081,7 @@ function showCardInfoDetail(element) {
       // playVideoInWrapper(".video-wrapper-autoplay");
       if (!$(".card-detail-beranda").hasClass("hidden")) {
         playVideoById("video-detail-beranda"); // Memulai video beranda
+        setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
       }
 
       //
@@ -915,6 +1092,8 @@ function showCardInfoDetail(element) {
 
       // Menghapus kelas "hidden" dari elemen
       hiddenSearchRunningElement.classList.remove("hidden");
+
+      // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
 
       //
       break;
@@ -1736,9 +1915,8 @@ const buttons = document.querySelectorAll(".btn-on-map");
 // Fungsi untuk mengatur ulang semua button ke warna default
 function resetButtons() {
   buttons.forEach((button) => {
-    button.classList.remove("bg-blue-500");
+    button.classList.remove("active_btn_peta");
     button.classList.add("bg-white");
-    button.classList.remove("text-white");
     button.classList.add("text-black");
   });
 }
@@ -1747,9 +1925,8 @@ function resetButtons() {
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
     // Jika button sudah aktif, kembalikan ke warna default
-    if (this.classList.contains("bg-blue-500")) {
-      this.classList.remove("bg-blue-500");
-      this.classList.remove("text-white");
+    if (this.classList.contains("active_btn_peta")) {
+      this.classList.remove("active_btn_peta");
       this.classList.add("bg-white");
       this.classList.add("text-black");
     } else {
@@ -1757,8 +1934,7 @@ buttons.forEach((button) => {
       resetButtons();
       this.classList.remove("bg-white");
       this.classList.remove("text-black");
-      this.classList.add("text-white");
-      this.classList.add("bg-blue-500");
+      this.classList.add("active_btn_peta");
     }
   });
 });

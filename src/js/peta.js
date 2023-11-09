@@ -163,47 +163,143 @@ function makeActive(event) {
 }
 
 if (controlGroup) {
-  // Custom Button
-  var customButton = document.createElement("button");
-  customButton.className = "mapboxgl-ctrl-icon custom-control-button btn-layer";
-  customButton.setAttribute("type", "button");
-  customButton.setAttribute("aria-label", "Custom Layer Action");
-  customButton.innerHTML =
-    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Layer"></span>';
-  customButton.addEventListener("click", function (event) {
-    makeActive(event);
-  });
-
   // My Location Button
+
   var myLocationButton = document.createElement("button");
   myLocationButton.className =
     "mapboxgl-ctrl-icon custom-control-button btn-location";
   myLocationButton.setAttribute("type", "button");
   myLocationButton.setAttribute("aria-label", "My Location");
-  myLocationButton.innerHTML =
-    '<span class="mapboxgl-ctrl-icon" aria-hidden="true" title="My Location"></span>';
+
+  // Menambahkan atribut untuk tooltips
+  myLocationButton.setAttribute("data-tooltip-target", "control-map-location");
+  myLocationButton.setAttribute("data-tooltip-placement", "left");
+
   myLocationButton.addEventListener("click", function (event) {
     makeActive(event);
   });
+
+  // Menambahkan event listener untuk menampilkan tooltip
+  myLocationButton.addEventListener("mouseenter", function (event) {
+    var tooltip = document.getElementById("control-map-location");
+    tooltip.classList.remove("invisible", "opacity-0");
+    tooltip.classList.add("visible", "opacity-100");
+  });
+
+  myLocationButton.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("control-map-location");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Menambahkan button ke DOM
+  document.body.appendChild(myLocationButton);
+
+  // Tooltip HTML
+  var tooltipHTML = `
+  <div
+    id="control-map-location"
+    role="tooltip"
+    class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+  >
+    My Location
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
+`;
+
+  // Menambahkan tooltip ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTML);
 
   // Stick Button 1
   var stickButton1 = document.createElement("button");
   stickButton1.className = "mapboxgl-ctrl-icon custom-control-button btn-stick";
   stickButton1.setAttribute("type", "button");
   stickButton1.setAttribute("aria-label", "Stick Action 1");
+
+  // Menambahkan atribut untuk tooltips
+  stickButton1.setAttribute("data-tooltip-target", "control-map-detector");
+  stickButton1.setAttribute("data-tooltip-placement", "left");
+
   stickButton1.addEventListener("click", function (event) {
     makeActive(event);
   });
+
+  // Menambahkan event listener untuk menampilkan tooltip
+  stickButton1.addEventListener("mouseenter", function (event) {
+    var tooltip = document.getElementById("control-map-detector");
+    tooltip.classList.remove("invisible", "opacity-0");
+    tooltip.classList.add("visible", "opacity-100");
+  });
+
+  stickButton1.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("control-map-detector");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Menambahkan button ke DOM
+  document.body.appendChild(stickButton1);
+
+  // Tooltip HTML
+  var tooltipHTML = `
+  <div
+    id="control-map-detector"
+    role="tooltip"
+    class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+  >
+    Detector
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
+`;
+
+  // Menambahkan tooltip ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTML);
 
   // Stick Button 2
   var stickButton2 = document.createElement("button");
   stickButton2.className =
     "mapboxgl-ctrl-icon custom-control-button btn-stick2";
   stickButton2.setAttribute("type", "button");
-  stickButton2.setAttribute("aria-label", "Stick Action 1");
+  stickButton2.setAttribute("aria-label", "Stick Action 2");
+
+  // Menambahkan atribut untuk tooltips
+  stickButton2.setAttribute("data-tooltip-target", "control-map-radius");
+  stickButton2.setAttribute("data-tooltip-placement", "left");
+
   stickButton2.addEventListener("click", function (event) {
     makeActive(event);
   });
+
+  // Menambahkan event listener untuk menampilkan tooltip
+  stickButton2.addEventListener("mouseenter", function (event) {
+    var tooltip = document.getElementById("control-map-radius");
+    tooltip.classList.remove("invisible", "opacity-0");
+    tooltip.classList.add("visible", "opacity-100");
+  });
+
+  stickButton2.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("control-map-radius");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Menambahkan button ke DOM
+  document.body.appendChild(stickButton2);
+
+  // Tooltip HTML
+  var tooltipHTML = `
+  <div
+    id="control-map-radius"
+    role="tooltip"
+    class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+  >
+    Radius
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
+`;
+
+  // Menambahkan tooltip ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTML);
 
   // Stick Button 3
   var stickButton3 = document.createElement("button");
@@ -211,13 +307,124 @@ if (controlGroup) {
     "mapboxgl-ctrl-icon custom-control-button btn-stick3";
   stickButton3.setAttribute("type", "button");
   stickButton3.setAttribute("aria-label", "Stick Action 3");
+
+  // Menambahkan atribut untuk tooltips
+  stickButton3.setAttribute("data-tooltip-target", "control-map-poligon");
+  stickButton3.setAttribute("data-tooltip-placement", "left");
+
   stickButton3.addEventListener("click", function (event) {
     makeActive(event);
   });
 
+  // Menambahkan event listener untuk menampilkan tooltip
+  stickButton3.addEventListener("mouseenter", function (event) {
+    var tooltip = document.getElementById("control-map-poligon");
+    tooltip.classList.remove("invisible", "opacity-0");
+    tooltip.classList.add("visible", "opacity-100");
+  });
+
+  stickButton3.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("control-map-poligon");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Menambahkan button ke DOM
+  document.body.appendChild(stickButton3);
+
+  // Tooltip HTML
+  var tooltipHTML = `
+  <div
+    id="control-map-poligon"
+    role="tooltip"
+    class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+  >
+    Poligon
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
+`;
+
+  // Menambahkan tooltip ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTML);
+
   // Get Zoom In and Zoom Out buttons
+  // Mengasumsikan controlGroup adalah elemen yang sudah ada di DOM
   var zoomInButton = controlGroup.querySelector(".mapboxgl-ctrl-zoom-in");
+
+  // Menambahkan kelas untuk styling (jika diperlukan)
+  zoomInButton.classList.add("custom-control-button", "btn-zoom-in");
+
+  // Menambahkan atribut untuk tooltips
+  zoomInButton.setAttribute("data-tooltip-target", "tooltip-zoom-in");
+  zoomInButton.setAttribute("data-tooltip-placement", "left");
+
+  // Menambahkan event listener untuk menampilkan tooltip
+  zoomInButton.addEventListener("mouseenter", function (event) {
+    var tooltip = document.getElementById("tooltip-zoom-in");
+    tooltip.classList.remove("invisible", "opacity-0");
+    tooltip.classList.add("visible", "opacity-100");
+  });
+
+  // Menambahkan event listener untuk menyembunyikan tooltip
+  zoomInButton.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("tooltip-zoom-in");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Tooltip HTML untuk zoomInButton
+  var tooltipHTMLZoomIn = `
+<div
+  id="tooltip-zoom-in"
+  role="tooltip"
+  class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+>
+  Zoom In
+  <div class="tooltip-arrow" data-popper-arrow></div>
+</div>
+`;
+
+  // Menambahkan tooltip untuk zoomInButton ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTMLZoomIn);
+
+  // Mengasumsikan controlGroup adalah elemen yang sudah ada di DOM
   var zoomOutButton = controlGroup.querySelector(".mapboxgl-ctrl-zoom-out");
+
+  // Menambahkan kelas untuk styling (jika diperlukan)
+  zoomOutButton.classList.add("custom-control-button", "btn-zoom-out");
+
+  // Menambahkan atribut untuk tooltips
+  zoomOutButton.setAttribute("data-tooltip-target", "tooltip-zoom-out");
+  zoomOutButton.setAttribute("data-tooltip-placement", "left");
+
+  // Menambahkan event listener untuk menampilkan tooltip
+  zoomOutButton.addEventListener("mouseenter", function (event) {
+    var tooltip = document.getElementById("tooltip-zoom-out");
+    tooltip.classList.remove("invisible", "opacity-0");
+    tooltip.classList.add("visible", "opacity-100");
+  });
+
+  // Menambahkan event listener untuk menyembunyikan tooltip
+  zoomOutButton.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("tooltip-zoom-out");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Tooltip HTML untuk zoomOutButton
+  var tooltipHTMLZoomOut = `
+<div
+  id="tooltip-zoom-out"
+  role="tooltip"
+  class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+>
+  Zoom Out
+  <div class="tooltip-arrow" data-popper-arrow></div>
+</div>
+`;
+
+  // Menambahkan tooltip untuk zoomOutButton ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTMLZoomOut);
 
   // Remove zoom buttons from the DOM
   controlGroup.removeChild(zoomInButton);
@@ -244,35 +451,93 @@ if (controlGroup) {
     alert("Custom Button Mapbox Dua clicked!");
   });
 
+  //
+
+  // Custom Button
+
+  var customButton = document.createElement("button");
+  customButton.className = "mapboxgl-ctrl-icon custom-control-button btn-layer";
+  customButton.setAttribute("type", "button");
+  customButton.setAttribute("aria-label", "Layer");
+
+  // Menambahkan atribut untuk tooltips
+  customButton.setAttribute("data-tooltip-target", "control-layer");
+  customButton.setAttribute("data-tooltip-placement", "left");
+
+  // Menambahkan event listener untuk menampilkan tooltip
+  customButton.addEventListener("mouseenter", function (event) {
+    if (!dropdown.classList.contains("show")) {
+      var tooltip = document.getElementById("control-layer");
+      tooltip.classList.remove("invisible", "opacity-0");
+      tooltip.classList.add("visible", "opacity-100");
+    }
+  });
+
+  customButton.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("control-layer");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Menambahkan button ke DOM
+  document.body.appendChild(customButton);
+
+  // Tooltip HTML
+  var tooltipHTML = `
+<div
+  id="control-layer"
+  role="tooltip"
+  class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+>
+  Layer
+  <div class="tooltip-arrow" data-popper-arrow></div>
+</div>
+`;
+
+  // Menambahkan tooltip ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTML);
+
   // Create dropdown
   var dropdown = document.createElement("div");
   dropdown.id = "dropdownDelay";
   dropdown.className =
-    "z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-40 dark:bg-gray-700 absolute";
+    "z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-40 dark:bg-gray-700 absolute";
   dropdown.style.right = "100%"; // mengatur posisi ke kanan
   dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
   dropdown.style.marginTop = "-3.5rem";
   dropdown.innerHTML = `
-    <div class="mt-3">
-    <div class="flex items-center mb-4 px-2 pt-3 cursor-pointer">
-        <input checked id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
-        <label for="radio-default" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
-    </div>
-    <div class="flex items-center mb-4 px-2 cursor-pointer">
-        <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
-        <label for="radio-satellite" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
-    </div>
-    <div class="flex items-center px-2 pb-3 cursor-pointer">
-        <input  id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:outline-none focus:ring-0">
-        <label for="radio-street" class="ml-2 text-xs font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
-    </div>
-    <div>`;
+<div class="py-1">
+  <div class="flex items-center mb-4 px-2 pt-3 cursor-pointer">
+    <input checked id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
+    <label for="radio-default" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
+  </div>
+  <div class="flex items-center mb-4 px-2 cursor-pointer">
+    <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
+    <label for="radio-satellite" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
+  </div>
+  <div class="flex items-center px-2 pb-3 cursor-pointer">
+    <input id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
+    <label for="radio-street" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
+  </div>
+</div>
+`;
 
-  customButton.addEventListener("click", function () {
+  // Append dropdown to the body or to a specific container
+  document.body.appendChild(dropdown);
+
+  customButton.addEventListener("click", function (event) {
     // Show or hide dropdown
-    if (dropdown.classList.contains("hidden")) {
-      dropdown.classList.remove("hidden");
-    } else {
+    dropdown.classList.toggle("hidden");
+    // Prevent tooltip from showing when dropdown is visible
+    event.stopPropagation();
+  });
+
+  // Close dropdown when clicking outside of it
+  document.addEventListener("click", function (event) {
+    if (
+      !dropdown.contains(event.target) &&
+      !customButton.contains(event.target)
+    ) {
       dropdown.classList.add("hidden");
     }
   });
@@ -305,7 +570,7 @@ const popup = new mapboxgl.Popup({
 const IzinGalian = () => {
   map.addSource("layer-peta-soaraja", {
     type: "geojson",
-    data: `dataa.geojson`,
+    data: `data-dumy.geojson`,
   });
 
   map.addLayer({
