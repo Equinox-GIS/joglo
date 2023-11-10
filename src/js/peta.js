@@ -551,9 +551,9 @@ if (controlGroup) {
   controlGroup.appendChild(stickButton1);
   controlGroup.appendChild(stickButton2);
   controlGroup.appendChild(stickButton3);
-  controlGroup.appendChild(myLocationButton);
   controlGroup.appendChild(separator);
   controlGroup.appendChild(customButton);
+  controlGroup.appendChild(myLocationButton);
   controlGroup.appendChild(dropdown);
   controlGroup.appendChild(zoomInButton);
   controlGroup.appendChild(zoomOutButton);
