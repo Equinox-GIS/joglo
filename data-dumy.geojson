@@ -10,9 +10,7 @@
       },
       "properties": {
         "OBJECTID": 1600,
-        "no_permohonan": "C3/22050937A806017",
-        "sumber_data": "Citra Garden",
-        "service_point": "DPMPTSP DKI JAKARTA"
+        "sumber_data": "Citra Garden"
       }
     },
     {
@@ -24,9 +22,7 @@
       },
       "properties": {
         "OBJECTID": 1601,
-        "no_permohonan": "C3/22050937A806018",
-        "sumber_data": "BSD City",
-        "service_point": "DPMPTSP DKI JAKARTA"
+        "sumber_data": "BSD City"
       }
     },
     {
@@ -38,9 +34,7 @@
       },
       "properties": {
         "OBJECTID": 1602,
-        "no_permohonan": "C3/22050937A806019",
-        "sumber_data": "Green Lake City",
-        "service_point": "DPMPTSP DKI JAKARTA"
+        "sumber_data": "Green Lake City"
       }
     },
     {
@@ -52,9 +46,7 @@
       },
       "properties": {
         "OBJECTID": 1603,
-        "no_permohonan": "C3/22050937A806020",
-        "sumber_data": "Puri Indah",
-        "service_point": "DPMPTSP DKI JAKARTA"
+        "sumber_data": "Puri Indah"
       }
     },
     {
@@ -66,9 +58,7 @@
       },
       "properties": {
         "OBJECTID": 1604,
-        "no_permohonan": "C3/22050937A806021",
-        "sumber_data": "Sakura Garden City",
-        "service_point": "DPMPTSP DKI JAKARTA"
+        "sumber_data": "Sakura Garden City"
       }
     }
   ]
