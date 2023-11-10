@@ -12,7 +12,7 @@ Rabu, 9-11-2023
 
 - menerapkan card pada peta dapat membuka dari detail card
 
-- fixed debugging card utama tidak responsive antara video dan gambar tidak sama ukurannya
+- fixed debugging detail card tidak sama ukurannya atau tidak responsive antara video dan gambar pada browser firefox dan chrome
 
 ---------------------------------------------------------------------------------------------
 Rabu, 8-11-2023
