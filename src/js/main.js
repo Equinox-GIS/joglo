@@ -239,11 +239,11 @@ function setActiveTab(tabButtonId, tabContentId) {
   if (activeTab && activeContent) {
     // Reset semua tab dan konten
     resetTabStyles(
-      '#DetailBeranda [role="tab"], #menutabdisukai1 [role="tab"]',
+      '#DetailBeranda [role="tab"], #DetailFavorit [role="tab"]',
       tabButtonId
     );
     resetActiveTabContent(
-      '#DetailBeranda [role="tabpanel"], #menutabdisukai1 [role="tabpanel"]',
+      '#DetailBeranda [role="tabpanel"], #DetailFavorit [role="tabpanel"]',
       tabContentId
     );
 
@@ -285,7 +285,7 @@ function setActiveTab(tabButtonId, tabContentId) {
 // Fungsi untuk menambahkan event listener pada setiap tab
 function setTabListeners() {
   var tabs = document.querySelectorAll(
-    '#DetailBeranda [role="tab"], #menutabdisukai1 [role="tab"]'
+    '#DetailBeranda [role="tab"], #Detail Favorit [role="tab"]'
   );
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
@@ -296,7 +296,7 @@ function setTabListeners() {
 
 // Fungsi untuk menambahkan event listener pada setiap tab favorit
 function setFavoritTabListeners() {
-  var tabs = document.querySelectorAll('#menutabdisukai1 [role="tab"]');
+  var tabs = document.querySelectorAll('#DetailFavorit [role="tab"]');
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
       setActiveTab(tab.id, tab.getAttribute("aria-controls"));
@@ -315,9 +315,9 @@ document.addEventListener("DOMContentLoaded", function () {
   setTabListeners();
 
   // Set tab favorit default
-  resetTabStyles('#menutabdisukai1 [role="tab"]', "detail-favorit-satu-tab");
+  resetTabStyles('#DetailFavorit [role="tab"]', "detail-favorit-satu-tab");
   resetActiveTabContent(
-    '#menutabdisukai1 [role="tabpanel"]',
+    '#DetailFavorit [role="tabpanel"]',
     "detail-favorit-satu"
   );
   // Tidak perlu memanggil setFavoritTabListeners karena setTabListeners sudah menangani semua tab
@@ -412,7 +412,7 @@ var myRadarChartFavorit = new Chart(ctx1, {
   },
 });
 
-var ctx1 = document.getElementById("myRadarChartPencarian").getContext("2d");
+var ctx1 = document.getElementById("chartFavorit").getContext("2d");
 var myRadarChartFavorit = new Chart(ctx1, {
   type: "radar",
   data: {
