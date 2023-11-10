@@ -1927,7 +1927,7 @@
                 <!-- Start Menu Chip Peta -->
                 <div class="pr-3">
                   <button
-                    class="btn-on-map inline-flex justify-center items-center h-8 px-4 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
+                    class="btn-on-map inline-flex justify-center items-center h-8 px-4 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-gray-700"
                   >
                     <span class="font-semibold tracking-wider"
                       >Rumah Dijual</span
@@ -1936,7 +1936,7 @@
                 </div>
                 <div class="pr-3">
                   <button
-                    class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
+                    class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-gray-700"
                   >
                     <span class="font-semibold tracking-wider"
                       >Tempat Ibadah</span
@@ -1945,28 +1945,28 @@
                 </div>
                 <div class="pr-3">
                   <button
-                    class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
+                    class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-gray-700"
                   >
                     <span class="font-semibold tracking-wider">Belanja</span>
                   </button>
                 </div>
                 <div class="pr-3">
                   <button
-                    class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
+                    class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-gray-700"
                   >
                     <span class="font-semibold tracking-wider">Sekolah</span>
                   </button>
                 </div>
                 <div class="pr-3">
                   <button
-                    class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
+                    class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-gray-700"
                   >
                     <span class="font-semibold tracking-wider">Restoran</span>
                   </button>
                 </div>
                 <div class="pr-3">
                   <button
-                    class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
+                    class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-gray-700"
                   >
                     <span class="font-semibold tracking-wider"
                       >Transportasi</span
@@ -2127,8 +2127,15 @@
                                 preload="metadata"
                                 src="./src/video/Video1.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                              <!-- <div class="absolute h-12 w-12 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
+                              </div> -->
+                              <div class="absolute right-0 top-0 h-16 w-16">
+                                <div
+                                  class="absolute transform rotate-45 bg-[#ffb500] text-center text-white font-semibold py-1 right-[-38px] top-[18px] w-[140px]"
+                                >
+                                  POPULER
+                                </div>
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -2223,8 +2230,12 @@
                                 preload="metadata"
                                 src="./src/video/Video2.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute right-0 top-0 h-16 w-16">
+                                <div
+                                  class="absolute transform rotate-45 bg-[#ffb500] text-center text-white font-semibold py-1 right-[-34px] top-[9px] w-[115px]"
+                                >
+                                  NEW
+                                </div>
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -2319,8 +2330,15 @@
                                 preload="metadata"
                                 src="./src/video/Video3.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                              <!-- <div class="absolute h-12 w-12 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
+                              </div> -->
+                              <div class="absolute right-0 top-0 h-10 w-10">
+                                <div
+                                  class="absolute transform rotate-45 bg-[#2074d8] text-center text-white font-semibold py-1 right-[-35px] top-[32px] w-[170px]"
+                                >
+                                  Eksklusif
+                                </div>
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -4739,7 +4757,110 @@
                         role="tabpanel"
                         aria-labelledby="detail-beranda-tujuh-tab"
                       >
-                        <div class="w-full flex justify-center">
+                        <div class="border border-red-500 w-full h-[60vh] p-5">
+                          <div
+                            class="bg-gradient-to-r from-yellow-200 to-pink-300 p-6 rounded-t-lg h-32 w-full mx-auto relative"
+                          >
+                            <div class="flex flex-col absolute mt-[8vh]">
+                              <div class="flex items-center">
+                                <img
+                                  class="h-20 w-20 rounded-full border-4 border-white"
+                                  src="https://images.pexels.com/photos/61100/pexels-photo-61100.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb"
+                                  alt="Profile picture"
+                                />
+                              </div>
+                              <div class="flex flex-col">
+                                <div>
+                                  <p
+                                    class="text-lg font-semibold text-gray-700"
+                                  >
+                                    Amanda Smith
+                                  </p>
+                                </div>
+                                <div>
+                                  <p class="text-sm text-gray-500">
+                                    Agen profesional berpengalaman selama 20
+                                    tahun menjual properti berkualitas
+                                  </p>
+                                </div>
+                                <!--  -->
+                                <div class="w-full flex flex-col mt-1">
+                                  <div class="font-semibold">Statistik</div>
+                                  <div class="w-full flex flex-row">
+                                    <div class="mr-3">Listing: 2</div>
+                                    <div>Terjual: 1</div>
+                                  </div>
+                                </div>
+                                <!--  -->
+                                <div class="w-full flex flex-col mt-1">
+                                  <div class="font-semibold">Portofolio</div>
+                                  <div class="w-full flex flex-row mt-1">
+                                    <div class="mr-3">
+                                      <button
+                                        class="inline-flex justify-center border border-black items-center h-6 px-2 font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-gray-100 text-black"
+                                      >
+                                        <span
+                                          class="font-semibold tracking-wider text-xs"
+                                          >Rumah Dijual</span
+                                        >
+                                      </button>
+                                    </div>
+                                    <div class="mr-3">
+                                      <button
+                                        class="inline-flex justify-center border border-black items-center h-6 px-2 font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-gray-100 text-black"
+                                      >
+                                        <span
+                                          class="font-semibold tracking-wider text-xs"
+                                          >Rumah Dijual</span
+                                        >
+                                      </button>
+                                    </div>
+                                    <div class="mr-3">
+                                      <button
+                                        class="inline-flex justify-center border border-black items-center h-6 px-2 font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-gray-100 text-black"
+                                      >
+                                        <span
+                                          class="font-semibold tracking-wider text-xs"
+                                          >Rumah Dijual</span
+                                        >
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--  -->
+                                <div class="mt-4">
+                                  <button
+                                    type="button"
+                                    class="relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                  >
+                                    <svg
+                                      class="w-5 h-5"
+                                      aria-hidden="true"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="currentColor"
+                                      viewBox="0 0 20 16"
+                                    >
+                                      <path
+                                        d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                                      />
+                                      <path
+                                        d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                                      />
+                                    </svg>
+                                    <span class="sr-only">Notifications</span>
+                                    <div
+                                      class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900"
+                                    >
+                                      20
+                                    </div>
+                                  </button>
+                                </div>
+                                <!--  -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="w-full flex justify-center">
                           <div class="px-4 pt-28">
                             <div class="flex items-center space-x-4">
                               <img
@@ -4750,7 +4871,7 @@
                               <div class="">
                                 <div class="text-lg">Putri Amalia</div>
                                 <div class="text-2xl font-bold">
-                                  085801920390
+                                  085801920390 00
                                 </div>
                                 <div class="text-md text-gray-500">
                                   putri@gmail.com
@@ -4773,7 +4894,7 @@
                               <div class="">Putri@Gmail.com</div>
                             </div>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   </div>
