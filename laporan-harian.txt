@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------
+Rabu, 10-11-2023
+
+
+
+---------------------------------------------------------------------------------------------
 Rabu, 9-11-2023
 
 - memperbaiki video dan gambar pada card slider saat pertama kali diload tidak responsive dan dibuat function waktu jgn ditampilkan apabila resource belum ready
@@ -7,13 +12,15 @@ Rabu, 9-11-2023
 
 - menerapkan card pada peta dapat membuka dari detail card
 
+- fixed debugging card utama tidak responsive antara video dan gambar tidak sama ukurannya
+
 ---------------------------------------------------------------------------------------------
 Rabu, 8-11-2023
 
-- Memperbaiki debugging sarana dan prasaran fungsi tidak berjalan karna terdapat id yg sama	
+- Memperbaiki debugging sarana dan prasaran fungsi tidak berjalan karna terdapat id yg sama
 - fixed kode yang hilang fungsi aktif dan nonaktif button pada peta
 
-- menambahkan tooltips pada semua button mapbox control peta 
+- menambahkan tooltips pada semua button mapbox control peta
 
 - Merevisi ukuran pada control stick dan location di control button peta
 
