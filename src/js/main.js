@@ -54,9 +54,50 @@ function changeTab(event) {
   tab.classList.add("border-gray-400");
 }
 
-// Function Dropdown Filter
+// ------------Start Drodpdown------------------
 
-// Function Dropdown Filter untuk Pencarian
+// Fungsi umum untuk mengganti tampilan dropdown
+function toggleDropdown(dropdownMenu, arrowIcon, isOpen) {
+  // Mengganti status dropdown dan memperbarui tampilan
+  isOpen = !isOpen;
+  dropdownMenu.classList.toggle("hidden", !isOpen);
+  arrowIcon.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
+  return isOpen; // Mengembalikan status terbaru
+}
+
+// Fungsi untuk menangani pemilihan item dropdown
+function selectDropdownItem(
+  selectedItemElement,
+  dropdownMenu,
+  arrowIcon,
+  isOpen
+) {
+  return function (event) {
+    // Cek jika yang diklik adalah item menu
+    if (event.target.getAttribute("role") === "menuitem") {
+      selectedItemElement.textContent = event.target.textContent.trim();
+      // Menutup dropdown setelah pemilihan item
+      isOpen = false;
+      dropdownMenu.classList.add("hidden");
+      arrowIcon.style.transform = "rotate(0deg)";
+    }
+  };
+}
+
+// Fungsi untuk menutup dropdown jika klik di luar area dropdown
+function closeDropdownOnClickOutside(dropdownButton, dropdownMenu, arrowIcon) {
+  return function (event) {
+    if (
+      !dropdownButton.contains(event.target) &&
+      !dropdownMenu.contains(event.target)
+    ) {
+      dropdownMenu.classList.add("hidden");
+      arrowIcon.style.transform = "rotate(0deg)";
+    }
+  };
+}
+
+// Inisialisasi Dropdown Pencarian
 const dropdownButtonPencarian = document.getElementById(
   "dropdown-button-pencarian"
 );
@@ -64,42 +105,29 @@ const dropdownMenuPencarian = document.getElementById(
   "dropdown-menu-pencarian"
 );
 const arrowIconPencarian = document.getElementById("arrow-icon-pencarian");
-const selectedItemPencarian = document.getElementById("selected-item");
-const itemsPencarian =
-  dropdownMenuPencarian.querySelectorAll('[role="menuitem"]');
-let isDropdownOpen = false;
+const selectedItemPencarian = document.getElementById(
+  "selected-item-pencarian"
+);
+let isDropdownPencarianOpen = false;
 
-function toggleDropdownPencarian() {
-  isDropdownOpen = !isDropdownOpen;
-  dropdownMenuPencarian.classList.toggle("hidden", !isDropdownOpen);
-  arrowIconPencarian.style.transform = isDropdownOpen
-    ? "rotate(180deg)"
-    : "rotate(0deg)";
-}
-
-itemsPencarian.forEach((item) => {
-  item.addEventListener("click", () => {
-    selectedItemPencarian.textContent = item.textContent.trim();
-    isDropdownOpen = false;
-    dropdownMenuPencarian.classList.add("hidden");
-    arrowIconPencarian.style.transform = "rotate(0deg)";
-  });
+dropdownButtonPencarian.addEventListener("click", () => {
+  isDropdownPencarianOpen = toggleDropdown(
+    dropdownMenuPencarian,
+    arrowIconPencarian,
+    isDropdownPencarianOpen
+  );
 });
+dropdownMenuPencarian.addEventListener(
+  "click",
+  selectDropdownItem(
+    selectedItemPencarian,
+    dropdownMenuPencarian,
+    arrowIconPencarian,
+    isDropdownPencarianOpen
+  )
+);
 
-dropdownButtonPencarian.addEventListener("click", toggleDropdownPencarian);
-
-window.addEventListener("click", (event) => {
-  if (
-    !dropdownButtonPencarian.contains(event.target) &&
-    !dropdownMenuPencarian.contains(event.target)
-  ) {
-    isDropdownOpen = false;
-    dropdownMenuPencarian.classList.add("hidden");
-    arrowIconPencarian.style.transform = "rotate(0deg)";
-  }
-});
-
-// Function Dropdown Filter untuk Disukai
+// Inisialisasi Dropdown Disukai
 const dropdownButtonDisukai = document.getElementById(
   "dropdown-disukai-button"
 );
@@ -108,40 +136,44 @@ const arrowIconDisukai = document.getElementById("dropdown-disukai-arrow-icon");
 const selectedItemDisukai = document.getElementById(
   "dropdown-disukai-selected-item"
 );
-const itemsDisukai = dropdownMenuDisukai.querySelectorAll('[role="menuitem"]');
 let isDropdownDisukaiOpen = false;
 
-function toggleDropdownDisukai() {
-  isDropdownDisukaiOpen = !isDropdownDisukaiOpen;
-  dropdownMenuDisukai.classList.toggle("hidden", !isDropdownDisukaiOpen);
-  arrowIconDisukai.style.transform = isDropdownDisukaiOpen
-    ? "rotate(180deg)"
-    : "rotate(0deg)";
-}
-
-itemsDisukai.forEach((item) => {
-  item.addEventListener("click", () => {
-    selectedItemDisukai.textContent = item.textContent.trim();
-    isDropdownDisukaiOpen = false;
-    dropdownMenuDisukai.classList.add("hidden");
-    arrowIconDisukai.style.transform = "rotate(0deg)";
-  });
+dropdownButtonDisukai.addEventListener("click", () => {
+  isDropdownDisukaiOpen = toggleDropdown(
+    dropdownMenuDisukai,
+    arrowIconDisukai,
+    isDropdownDisukaiOpen
+  );
 });
+dropdownMenuDisukai.addEventListener(
+  "click",
+  selectDropdownItem(
+    selectedItemDisukai,
+    dropdownMenuDisukai,
+    arrowIconDisukai,
+    isDropdownDisukaiOpen
+  )
+);
 
-dropdownButtonDisukai.addEventListener("click", toggleDropdownDisukai);
+// Menambahkan event listener ke window untuk menutup dropdown jika klik di luar
+window.addEventListener(
+  "click",
+  closeDropdownOnClickOutside(
+    dropdownButtonPencarian,
+    dropdownMenuPencarian,
+    arrowIconPencarian
+  )
+);
+window.addEventListener(
+  "click",
+  closeDropdownOnClickOutside(
+    dropdownButtonDisukai,
+    dropdownMenuDisukai,
+    arrowIconDisukai
+  )
+);
 
-window.addEventListener("click", (event) => {
-  if (
-    !dropdownButtonDisukai.contains(event.target) &&
-    !dropdownMenuDisukai.contains(event.target)
-  ) {
-    isDropdownDisukaiOpen = false;
-    dropdownMenuDisukai.classList.add("hidden");
-    arrowIconDisukai.style.transform = "rotate(0deg)";
-  }
-});
-
-// Fungsi Play dan Pause Video Menu Beranda, Favorit
+// ------------End Drodpdown------------------
 
 // Fungsi untuk memulai video berdasarkan ID
 function playVideoById(videoId) {
@@ -323,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Tidak perlu memanggil setFavoritTabListeners karena setTabListeners sudah menangani semua tab
 });
 
-//
+// -------------------Start Chart-------------------
 var ctx1 = document.getElementById("myRadarChart").getContext("2d");
 var myRadarChart = new Chart(ctx1, {
   type: "radar",
@@ -588,9 +620,7 @@ var mySecondRadarChartFavorit = new Chart(ctx2, {
     },
   },
 });
-//
 
-// Menambahkan chart radar ketiga untuk Investment Index
 var ctx3 = document.getElementById("myInvestmentIndexChart").getContext("2d");
 var myInvestmentIndexChart = new Chart(ctx3, {
   type: "radar",
@@ -628,47 +658,10 @@ var myInvestmentIndexChart = new Chart(ctx3, {
     },
   },
 });
-// var ctx3 = document
-//   .getElementById("myInvestmentIndexChartPencarian")
-//   .getContext("2d");
-// var myInvestmentIndexChart = new Chart(ctx3, {
-//   type: "radar",
-//   data: {
-//     labels: ["Properti", "Saham", "Obligasi", "Emas", "Reksadana"],
-//     datasets: [
-//       {
-//         data: [4, 3, 2, 5, 3],
-//         backgroundColor: "rgba(153, 102, 255, 0.2)",
-//         borderColor: "rgba(153, 102, 255, 1)",
-//         borderWidth: 1,
-//       },
-//     ],
-//   },
-//   options: {
-//     responsive: true,
-//     maintainAspectRatio: false,
-//     scales: {
-//       r: {
-//         beginAtZero: true,
-//         max: 5,
-//         stepSize: 1,
-//         ticks: {
-//           precision: 0,
-//         },
-//       },
-//     },
-//     plugins: {
-//       legend: {
-//         display: false,
-//       },
-//       tooltip: {
-//         enabled: true,
-//       },
-//     },
-//   },
-// });
 
-// slick semua
+// -------------------End Chart-------------------
+
+// -------------------Start Slider-------------------
 function querySelector(selector) {
   return document.querySelector(selector);
 }
@@ -825,13 +818,6 @@ function initSlickFavoritDua() {
     .slick(getSliderDefaultOptions());
 }
 
-$(document).ready(function () {
-  initSlickCardInfo();
-  // initSlickCardPeta();
-  // initSlickFavoritDua();
-  // initSlickFavorit();
-});
-
 function disableClickHandlerToDots() {
   $(".slick-dots li button")
     .off("click")
@@ -852,6 +838,12 @@ function addClickHandlerToDots() {
   });
 }
 
+// -------------------Start Slider-------------------
+
+$(document).ready(function () {
+  initSlickCardInfo();
+});
+
 function playInFullscreen(videoElement) {
   console.log(videoElement);
   if (videoElement.requestFullscreen) {
@@ -866,8 +858,6 @@ function playInFullscreen(videoElement) {
 }
 
 $(document).ready(function () {
-  // Rest of your code ...
-
   // Beranda
   $(".slider-card-beranda video").on("mouseover", function () {
     $(this).get(0).play();
@@ -898,19 +888,6 @@ $(document).ready(function () {
   });
   resizePlayer($(".slider-favorit-dua video"));
 });
-
-// $(".slider-card-beranda video").on("mouseout", function () {
-//   $(this).get(0).pause();
-// });
-// resizePlayer($(".slider-card-beranda video"));
-
-// function stopVideoInWrapper(wrapperSelector) {
-//   let videoElement = $(wrapperSelector).find("video");
-//   if (videoElement.length) {
-//     videoElement[0].pause();
-//     videoElement[0].currentTime = 0; // Untuk mereset video ke awal
-//   }
-// }
 
 function closeTab() {
   // Pencarian
@@ -949,44 +926,6 @@ function closeTabPencarianDua() {
 
   initSlickFavoritDua();
 }
-
-// function playVideoInWrapper(wrapperSelector) {
-//   let videoElement = $(wrapperSelector).find("video");
-//   if (videoElement.length) {
-//     videoElement[0].play();
-//   }
-// }
-
-// function toggleAgenView() {
-//   const tagSearchAgen = document.getElementById("tagSearchAgen");
-//   const tagSearchAll = document.getElementById("tagSearchAll");
-//   const tagTeksBerjalan = document.getElementById("tagTeksBerjalan");
-
-//   if (tagSearchAgen.classList.contains("hidden")) {
-//     tagSearchAgen.classList.remove("hidden");
-//     tagSearchAll.classList.add("hidden");
-//     tagTeksBerjalan.classList.add("hidden");
-//   } else if (tagSearchAll.classList.contains("hidden")) {
-//     tagSearchAgen.classList.add("hidden");
-//     tagSearchAll.classList.remove("hidden");
-//     tagTeksBerjalan.classList.remove("hidden");
-//   } else if (tagTeksBerjalan.classList.contains("hidden")) {
-//     tagSearchAgen.classList.add("hidden");
-//     tagSearchAll.classList.remove("hidden");
-//     tagTeksBerjalan.classList.remove("hidden");
-//   }
-// }
-
-// function resetToHomeView() {
-//   const tagSearchAgen = document.getElementById("tagSearchAgen");
-//   const tagSearchAll = document.getElementById("tagSearchAll");
-
-//   // Tampilkan tagSearchAll
-//   tagSearchAll.classList.remove("hidden");
-
-//   // Sembunyikan tagSearchAgen
-//   tagSearchAgen.classList.add("hidden");
-// }
 
 function showCardInfoDetail(element) {
   // console.log(element);
