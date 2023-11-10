@@ -1,32 +1,32 @@
 // function toggle
-function toggleDropdown(id) {
-  const menuButtons = document.querySelectorAll("[id^='menu-button-']");
-  const dropdownMenus = document.querySelectorAll("[id^='dropdown-menu-']");
-  const selectedMenuButton = document.getElementById(`menu-button-${id}`);
-  const selectedDropdownMenu = document.getElementById(`dropdown-menu-${id}`);
-  const isExpanded =
-    selectedMenuButton.getAttribute("aria-expanded") === "true";
+// function toggleDropdown(id) {
+//   const menuButtons = document.querySelectorAll("[id^='menu-button-']");
+//   const dropdownMenus = document.querySelectorAll("[id^='dropdown-menu-']");
+//   const selectedMenuButton = document.getElementById(`menu-button-${id}`);
+//   const selectedDropdownMenu = document.getElementById(`dropdown-menu-${id}`);
+//   const isExpanded =
+//     selectedMenuButton.getAttribute("aria-expanded") === "true";
 
-  // Toggle the current dropdown menu
-  selectedMenuButton.setAttribute("aria-expanded", !isExpanded);
-  selectedDropdownMenu.classList.toggle("hidden", isExpanded);
+//   // Toggle the current dropdown menu
+//   selectedMenuButton.setAttribute("aria-expanded", !isExpanded);
+//   selectedDropdownMenu.classList.toggle("hidden", isExpanded);
 
-  // Rotate arrow
-  const arrow = selectedMenuButton.querySelector("svg");
-  arrow.style.transform = isExpanded ? "rotate(0deg)" : "rotate(180deg)";
+//   // Rotate arrow
+//   const arrow = selectedMenuButton.querySelector("svg");
+//   arrow.style.transform = isExpanded ? "rotate(0deg)" : "rotate(180deg)";
 
-  // Close all other dropdown menus
-  menuButtons.forEach((button, index) => {
-    if (button.id !== selectedMenuButton.id) {
-      button.setAttribute("aria-expanded", false);
-      dropdownMenus[index].classList.add("hidden");
+//   // Close all other dropdown menus
+//   menuButtons.forEach((button, index) => {
+//     if (button.id !== selectedMenuButton.id) {
+//       button.setAttribute("aria-expanded", false);
+//       dropdownMenus[index].classList.add("hidden");
 
-      // Rotate other arrows back
-      const otherArrow = button.querySelector("svg");
-      otherArrow.style.transform = "rotate(0deg)";
-    }
-  });
-}
+//       // Rotate other arrows back
+//       const otherArrow = button.querySelector("svg");
+//       otherArrow.style.transform = "rotate(0deg)";
+//     }
+//   });
+// }
 
 // ---------------------------------------------------------------------------------------------
 
@@ -1087,16 +1087,6 @@ function resetAllCards() {
   hideElement(".card-info-detail-favorit");
   hideElement(".card-info-favorit-dua");
   hideElement(".card-info-detail-favorit-dua");
-}
-
-function hideElement(selector) {
-  const elements = document.querySelectorAll(selector);
-  elements.forEach((el) => el.classList.add("hidden"));
-}
-
-function showElement(selector) {
-  const elements = document.querySelectorAll(selector);
-  elements.forEach((el) => el.classList.remove("hidden"));
 }
 
 // Function untuk pindah Menu Navigation

@@ -32,15 +32,6 @@ function addClickHandlerToDots() {
   );
 }
 
-function addClickHandlerToDots() {
-  $(".slider-card-info-detail-peta .slick-dots li").on(
-    "click",
-    function (event) {
-      event.stopPropagation();
-    }
-  );
-}
-
 function disableClickHandlerToDots() {
   $(".slick-dots li button")
     .off("click")
