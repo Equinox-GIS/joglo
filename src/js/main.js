@@ -336,13 +336,14 @@ function setFavoritTabListeners() {
   });
 }
 
+// diganti tujuh
 // Event listener yang dijalankan saat halaman web selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
   // Set tab beranda default
-  resetTabStyles('#DetailBeranda [role="tab"]', "detail-beranda-satu-tab");
+  resetTabStyles('#DetailBeranda [role="tab"]', "detail-beranda-tujuh-tab");
   resetActiveTabContent(
     '#DetailBeranda [role="tabpanel"]',
-    "detail-beranda-satu"
+    "detail-beranda-tujuh"
   );
   setTabListeners();
 

@@ -567,29 +567,76 @@ const popup = new mapboxgl.Popup({
   closeOnClick: true,
 });
 
+// Define the size and custom style for the pulsing dot
+const size = 200;
+const pulsingDot = {
+  width: size,
+  height: size,
+  data: new Uint8Array(size * size * 4),
+
+  onAdd: function () {
+    const canvas = document.createElement("canvas");
+    canvas.width = this.width;
+    canvas.height = this.height;
+    this.context = canvas.getContext("2d");
+  },
+
+  render: function () {
+    const duration = 1000;
+    const t = (performance.now() % duration) / duration;
+
+    const radius = (size / 2) * 0.3;
+    const outerRadius = (size / 2) * 0.7 * t + radius;
+    const context = this.context;
+
+    context.clearRect(0, 0, this.width, this.height);
+    context.beginPath();
+    context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
+    context.fillStyle = `rgba(105,179,231, ${1 - t})`;
+    context.fill();
+
+    context.beginPath();
+    context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+    context.fillStyle = "rgba(105,179,231, 1)";
+    context.strokeStyle = "white";
+    context.lineWidth = 2 + 4 * (1 - t);
+    context.fill();
+    context.stroke();
+
+    this.data = context.getImageData(0, 0, this.width, this.height).data;
+    map.triggerRepaint();
+    return true;
+  },
+};
+
+// Function to add the layer with the pulsing dot
 const IzinGalian = () => {
+  map.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
+
   map.addSource("layer-peta-soaraja", {
     type: "geojson",
-    data: `data-dumy.geojson`,
+    data: "data-dumy.geojson", // Ensure this path is correct
   });
 
   map.addLayer({
     id: "layer-peta-soaraja",
-    type: "circle",
+    type: "symbol", // Changed from 'circle' to 'symbol'
     source: "layer-peta-soaraja",
-    paint: {
-      "circle-color": "#4264fb",
-      "circle-stroke-color": "#bdbdbd",
-      "circle-stroke-width": 2,
-      "circle-radius": 5,
-      "circle-opacity": 0.8,
-    },
     layout: {
-      visibility: "visible",
+      "icon-image": "pulsing-dot",
+      "icon-size": 0.25,
+      "text-field": ["get", "sumber_data"], // Use the 'text' property from your GeoJSON
+      "text-offset": [1, 0], // Adjust text position relative to the icon
+      "text-anchor": "left",
+      "text-size": 12,
+    },
+    paint: {
+      "text-color": "#374151", // Set text color
     },
   });
 };
 
+// Ensure this is called after the map loads
 map.on("style.load", () => {
   IzinGalian();
 });
