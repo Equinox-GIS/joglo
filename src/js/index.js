@@ -28,6 +28,9 @@
 //   });
 // }
 
+document.getElementById("luas1").innerHTML = "<100";
+document.getElementById("btn1").innerHTML = "<100";
+
 // ---------------------------------------------------------------------------------------------
 
 function changeTab(event) {
@@ -175,6 +178,8 @@ window.addEventListener(
 
 // ------------End Drodpdown------------------
 
+// Fungsi Play dan Pause Video Menu Beranda, Favorit
+
 // Fungsi untuk memulai video berdasarkan ID
 function playVideoById(videoId) {
   var videoElement = document.getElementById(videoId);
@@ -317,7 +322,7 @@ function setActiveTab(tabButtonId, tabContentId) {
 // Fungsi untuk menambahkan event listener pada setiap tab
 function setTabListeners() {
   var tabs = document.querySelectorAll(
-    '#DetailBeranda [role="tab"], #Detail Favorit [role="tab"]'
+    '#DetailBeranda [role="tab"], #DetailFavorit [role="tab"]'
   );
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
@@ -336,7 +341,6 @@ function setFavoritTabListeners() {
   });
 }
 
-// diganti tujuh
 // Event listener yang dijalankan saat halaman web selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
   // Set tab beranda default
@@ -1150,6 +1154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ),
     ArrowIconJenisRumah: document.getElementById("arrow-icon-jenis-surat"),
     ArrowIconJscore: document.getElementById("arrow-icon-jscore"),
+    ArrowIconJscoreAgent: document.getElementById("arrow-icon-jscore-agent"),
   };
 
   const element_button = {
