@@ -1793,33 +1793,3 @@ function teksBerjalan() {
     });
   }
 }
-
-// Aktif Button Maps
-const buttons = document.querySelectorAll(".btn-on-map");
-
-// Fungsi untuk mengatur ulang semua button ke warna default
-function resetButtons() {
-  buttons.forEach((button) => {
-    button.classList.remove("active_btn_peta");
-    button.classList.add("bg-white");
-    button.classList.add("text-black");
-  });
-}
-
-// Menambahkan event listener ke setiap button
-buttons.forEach((button) => {
-  button.addEventListener("click", function () {
-    // Jika button sudah aktif, kembalikan ke warna default
-    if (this.classList.contains("active_btn_peta")) {
-      this.classList.remove("active_btn_peta");
-      this.classList.add("bg-white");
-      this.classList.add("text-black");
-    } else {
-      // Atur ulang semua button dan ubah warna button yang diklik
-      resetButtons();
-      this.classList.remove("bg-white");
-      this.classList.remove("text-black");
-      this.classList.add("active_btn_peta");
-    }
-  });
-});
