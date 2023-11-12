@@ -1,3 +1,17 @@
+
+---------------------------------------------------------------------------------------------
+Senin, 12-11-2023
+
+- Melanjutkan redesain tab menu kontak
+
+- Medesain asset new dan populer untuk diterapkan bagian card
+
+- membuat efek pulsing pada titik dan menambahkan tulisan pada titik pada peta
+
+- menambahkan titik peta lebih banyak untuk berdasarkan kategori pada chip tempat ibadah, belanja dll
+
+- membuat fungsi untuk agar titik peta yang tampil hanya berdasarkan chip yang diklik dan efek pulsing hanya pada titik yang tampil
+
 ---------------------------------------------------------------------------------------------
 Jumat, 10-11-2023
 
@@ -13,6 +27,7 @@ Jumat, 10-11-2023
 
 -mengganti build tools dari npm menjadi vite dan memperbaiki kode yang perlu penyesuaian kode pada function
 
+-menunda proses desain tab menu kontak karna desain belum fix
 
 ---------------------------------------------------------------------------------------------
 Kamis, 9-11-2023
