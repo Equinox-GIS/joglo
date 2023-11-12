@@ -1,6 +1,5 @@
 import prevArrowImg from "../images/prev.png";
 import nextArrowImg from "../images/next.png";
-// import prevArrowImg2 from "../images/prev.png";
 
 // function toggle
 // function toggleDropdown(id) {

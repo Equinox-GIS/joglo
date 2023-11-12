@@ -1,3 +1,6 @@
+import prevArrowImg from "../images/prev.png";
+import nextArrowImg from "../images/next.png";
+
 function getSliderDefaultOptions() {
   return {
     dots: true,
@@ -7,12 +10,12 @@ function getSliderDefaultOptions() {
     swipe: false,
     prevArrow: `<button type="button" class="slick-prev left-prev-custom" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
-                    <img style="margin-right: 1px;" class="custom-img-slick" src="./src/images/prev.png" alt="Previous">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
     nextArrow: `<button type="button" class="slick-next right-next-custom" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
-                    <img style="margin-left: 1px;" class="custom-img-slick" src="./src/images/next.png" alt="Next">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,
   };
