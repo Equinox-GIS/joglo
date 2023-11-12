@@ -575,32 +575,27 @@ const pulsingDot = {
     this.context = canvas.getContext("2d");
   },
 
-  // Properti untuk mengatur status aktif
-  isActive: false,
-
   render: function () {
     const duration = 1000;
     const t = (performance.now() % duration) / duration;
 
     const radius = (size / 2) * 0.3;
-    const outerRadius = this.isActive ? (size / 2) * 0.7 * t + radius : radius;
+    const outerRadius = (size / 2) * 0.7 * t + radius;
     const context = this.context;
 
     context.clearRect(0, 0, this.width, this.height);
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
-    context.fillStyle = `rgba(105,179,231, ${this.isActive ? 1 - t : 1})`;
+    context.fillStyle = `rgba(105,179,231, ${1 - t})`;
     context.fill();
 
-    if (this.isActive) {
-      context.beginPath();
-      context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
-      context.fillStyle = "rgba(105,179,231, 1)";
-      context.strokeStyle = "white";
-      context.lineWidth = 2 + 4 * (1 - t);
-      context.fill();
-      context.stroke();
-    }
+    context.beginPath();
+    context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+    context.fillStyle = "rgba(105,179,231, 1)";
+    context.strokeStyle = "white";
+    context.lineWidth = 2 + 4 * (1 - t);
+    context.fill();
+    context.stroke();
 
     this.data = context.getImageData(0, 0, this.width, this.height).data;
     map.triggerRepaint();
@@ -608,19 +603,6 @@ const pulsingDot = {
   },
 };
 
-// Fungsi untuk mengaktifkan pulsing dot
-window.activatePulsingDot = function () {
-  pulsingDot.isActive = true;
-  map.setFilter("layer-peta-soaraja", ["==", "OBJECTID", activeFeatureId]);
-  map.triggerRepaint();
-};
-
-// Fungsi untuk menonaktifkan pulsing dot
-function deactivatePulsingDot() {
-  map.setFilter("layer-pulsing-dot", ["==", "OBJECTID", ""]); // Nonaktifkan pulsing dot
-  pulsingDot.isActive = false;
-  map.triggerRepaint();
-}
 // Function to add the layer with the pulsing dot
 const IzinGalian = () => {
   map.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
@@ -631,13 +613,12 @@ const IzinGalian = () => {
   });
 
   map.addLayer({
-    id: "layer-semua-titik",
+    id: "layer-peta-soaraja",
     type: "symbol",
     source: "layer-peta-soaraja",
     layout: {
-      "icon-image": "icon-normal", // Ganti dengan nama icon Anda untuk titik normal
+      "icon-image": "pulsing-dot",
       "icon-size": 0.25,
-      // Jika Anda ingin menampilkan teks, tambahkan properti berikut
       "text-field": ["get", "sumber_data"],
       "text-offset": [1, 0],
       "text-anchor": "left",
@@ -646,18 +627,7 @@ const IzinGalian = () => {
     paint: {
       "text-color": "#374151",
     },
-    filter: ["==", "kategori", "rumah dijual"], // Filter default untuk 'rumah dijual'
-  });
-
-  map.addLayer({
-    id: "layer-pulsing-dot",
-    type: "symbol",
-    source: "layer-peta-soaraja",
-    layout: {
-      "icon-image": "pulsing-dot",
-      "icon-size": 0.25,
-    },
-    filter: ["==", "OBJECTID", ""], // Filter awal yang tidak menampilkan apa-apa
+    filter: ["==", "kategori", "rumah dijual"], // Default filter for 'rumah dijual'
   });
 };
 
@@ -688,14 +658,15 @@ buttons.forEach((button) => {
     const isActive = this.classList.contains("active_btn_peta");
 
     if (!isActive) {
-      deactivatePulsingDot();
+      // Reset all buttons and activate clicked button
       buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
       this.classList.add("active_btn_peta");
-      map.setFilter("layer-semua-titik", ["==", "kategori", category]);
+      updateMapForCategory(category);
     } else {
+      // Jika button yang sama diklik dan sudah aktif, tampilkan kembali kategori default
       this.classList.remove("active_btn_peta");
-      map.setFilter("layer-semua-titik", ["==", "kategori", "rumah dijual"]);
-      deactivatePulsingDot();
+      updateMapForCategory(null); // Mengubah kembali ke kategori default
+      defaultButton.classList.add("active_btn_peta"); // Mengaktifkan kembali button default
     }
   });
 });
@@ -704,164 +675,12 @@ $(
   ".mapboxgl-ctrl.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-geocoder.mapboxgl-ctrl, a.mapboxgl-ctrl-logo"
 ).css("visibility", "hidden");
 
-map.on("click", "layer-semua-titik", (e) => {
-  activeFeatureId = e.features[0].properties.OBJECTID; // Ganti dengan properti unik dari fitur Anda
-  map.setFilter("layer-pulsing-dot", ["==", "OBJECTID", activeFeatureId]);
-  pulsingDot.isActive = true;
-  map.triggerRepaint();
-
-  map.getCanvas().style.cursor = "pointer";
-  const coordinates = e.features[0].geometry.coordinates.slice();
-  // const data = e.features[0].properties;
-
-  const content = `
-<div class="w-full h-full"
-                        data-card-map="1534"
-                        data-active-tab="1"
-                        onclick="showCardInfoDetail(this)">
-                      <div
-                        class="flex flex-col cursor-pointer"
-                      >
-                        <div class="w-full relative">
-                          <div class="slider-card-info-detail-peta w-full h-full">
-                            <!--  -->
-                            <div class="relative">
-                              <video
-                                class="w-full h-full object-cover"
-                                loop
-                                muted
-                                preload="metadata"
-                                src="./src/video/Video1.mp4"
-                              ></video>
-                              <div class="absolute h-10 w-10 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
-                              </div>
-                            </div>
-                            <!--  -->
-                            <div class="relative">
-                              <img
-                                class="w-full h-full object-cover"
-                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
-                                alt=""
-                              />
-                              <div class="absolute h-10 w-10 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="px-2  pt-2 bg-white rounded-b-lg"
-                          style="user-select: none"
-                          >
-                            <div class="flex flex-row justify-start">
-                              <div>
-                                <a href="#">
-                                  <div class="inline-flex items-center">
-                                    <h5
-                                      class="text-sm font-bold tracking-tight text-black"
-                                    >
-                                      Rp 11.300.000.000
-                                    </h5>
-                                  </div>
-                                </a>
-                              </div>
-                              <div class="flex justify-between">
-                                <div
-                                  class="grid grid-cols-3 items-center gap-2 ml-2"
-                                >
-                                  <div>
-                                    <img
-                                      class="w-4 h-4 object-cover"
-                                      src="./src/images/heart-on.png"
-                                      alt=""
-                                    />
-                                  </div>
-
-                                  <div>
-                                    <img
-                                      class="w-3 h-3 object-cover"
-                                      src="./src/images/share.png"
-                                      alt=""
-                                    />
-                                  </div>
-
-                                  <div>
-                                    <img
-                                      class="w-4 h-4 object-cover"
-                                      src="./src/images/badge3d.svg"
-                                      alt=""
-                                    />
-                                  </div>
-                                </div>
-                                </div>
-                              </div>
-                            </div>
-
-                          <div class="flex flex-col font-normal px-2 pb-1">
-                            <div
-                              class="flex items-center text-[11px] text-gray-700"
-                            >
-                              <span class="mr-2">LT 80 m² |</span>
-                              <span class="mr-2">LB 276 m² |</span>
-                              <span class="mr-2">2 KT |</span>
-                              <span class="mr-2">5 KM</span>
-                            </div>
-                            <div class="text-xs text-gray-700">
-                              Sunter, Tanjung Priok, Jakarta Utara
-                            </div>
-                            <div class="text-[10px] text-gray-400">
-                              ERA JAKARTA
-                            </div>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-
-    `;
-
-  popup.setLngLat(coordinates).setHTML(content).addTo(map);
-  initSlickCardPeta(".slider-card-info-detail-peta");
-
-  map.once("render", function () {
-    $(".slider-card-info-detail-peta")
-      .on("mouseover", function () {
-        // Pilih video di dalam .slider-card-info-detail-peta
-        var video = $(this).find("video").get(0);
-
-        // Periksa jika video ditemukan dan memiliki metode play
-        if (video && typeof video.play === "function") {
-          video.play();
-        }
-      })
-      .on("mouseleave", function () {
-        // Pilih video di dalam .slider-card-info-detail-peta
-        var video = $(this).find("video").get(0);
-
-        // Periksa jika video ditemukan dan memiliki metode pause
-        if (video && typeof video.pause === "function") {
-          video.pause();
-        }
-      });
-  });
-
-  while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-  }
-});
-
-let activeFeatureId = null;
 // LAYER GALIAN IZIN
 map.on("click", "layer-peta-soaraja", (e) => {
   // console.log(e);
   map.getCanvas().style.cursor = "pointer";
   const coordinates = e.features[0].geometry.coordinates.slice();
   // const data = e.features[0].properties;
-
-  // Simpan ID dari fitur yang diklik
-  activeFeatureId = e.features[0].properties.OBJECTID; // Ganti dengan properti unik dari fitur Anda
-  activatePulsingDot();
 
   const content = `
 <div class="w-full h-full"
