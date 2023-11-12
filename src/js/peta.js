@@ -652,19 +652,21 @@ defaultButton.classList.add("active_btn_peta");
 
 // Button event listeners
 const buttons = document.querySelectorAll(".btn-on-map");
+// Button event listeners
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
     const category = this.innerText.trim();
     const isActive = this.classList.contains("active_btn_peta");
 
+    // Reset semua tombol
+    buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
+
     if (!isActive) {
-      // Reset all buttons and activate clicked button
-      buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
+      // Jika tombol tidak aktif, aktifkan dan perbarui filter peta
       this.classList.add("active_btn_peta");
       updateMapForCategory(category);
     } else {
-      // Jika button yang sama diklik dan sudah aktif, tampilkan kembali kategori default
-      this.classList.remove("active_btn_peta");
+      // Jika tombol sudah aktif dan diklik lagi, reset ke kategori default
       updateMapForCategory(null); // Mengubah kembali ke kategori default
       defaultButton.classList.add("active_btn_peta"); // Mengaktifkan kembali button default
     }

@@ -990,7 +990,7 @@ window.showCardInfoDetail = function (element) {
       hiddenSearchRunningElement.classList.remove("hidden");
 
       // Mengaktifkan pulsing dot ketika detail ditampilkan
-      activatePulsingDot();
+      // activatePulsingDot();
 
       //
       break;
