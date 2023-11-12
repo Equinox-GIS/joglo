@@ -1,3 +1,7 @@
+import prevArrowImg from "../images/prev.png";
+import nextArrowImg from "../images/next.png";
+// import prevArrowImg2 from "../images/prev.png";
+
 // function toggle
 // function toggleDropdown(id) {
 //   const menuButtons = document.querySelectorAll("[id^='menu-button-']");
@@ -713,12 +717,12 @@ function getSliderDefaultOptions() {
     swipe: false,
     prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
-                    <img style="margin-right: 1px;" class="custom-img-slick" src="./src/images/prev.png" alt="Previous">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
     nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
-                    <img style="margin-left: 1px;" class="custom-img-slick" src="./src/images/next.png" alt="Next">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,
   };
