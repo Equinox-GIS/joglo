@@ -68,28 +68,54 @@
     },
     {
       "type": "Feature",
-      "id": 1605,
+      "id": 1670,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.81464104768405, -6.21487679248488]
+        "coordinates": [106.8277103342757, -6.204989524808611]
       },
       "properties": {
-        "OBJECTID": 1605,
-        "kategori": "tempat ibadah",
-        "sumber_data": "Citra Garden"
+        "OBJECTID": 1670,
+        "sumber_data": "Puri Indah 2",
+        "kategori": "tempat ibadah"
       }
     },
     {
       "type": "Feature",
-      "id": 1606,
+      "id": 1671,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.82549862923777, -6.2190150993458655]
+        "coordinates": [106.82647651822627, -6.205714811062112]
       },
       "properties": {
-        "OBJECTID": 1606,
-        "kategori": "tempat ibadah",
-        "sumber_data": "BSD City"
+        "OBJECTID": 1671,
+        "sumber_data": "Puri Indah 2",
+        "kategori": "tempat ibadah"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1672,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82443803947606, -6.204232239580485]
+      },
+      "properties": {
+        "OBJECTID": 1672,
+        "sumber_data": "Puri Indah 2",
+        "kategori": "tempat ibadah"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1672,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82309693503514, -6.203293631018895]
+      },
+      "properties": {
+        "OBJECTID": 1672,
+        "sumber_data": "Puri Indah 2",
+        "kategori": "tempat ibadah"
       }
     },
     {
