@@ -897,6 +897,11 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
+window.closeDetailAgent = function () {
+  showElement(".card-agent");
+  hideElement(".card-agent-detail");
+};
+
 window.closeTab = function (element) {
   // Pencarian
   showElement(".card-info-pencarian");
@@ -935,6 +940,15 @@ window.closeTabPencarianDua = function (element) {
   initSlickFavoritDua();
 };
 
+window.showMessage = function () {
+  var menuTujuhTab = document.getElementById("MenuTujuhTab");
+  if (menuTujuhTab) {
+    menuTujuhTab.click(); // This simulates a click on the MenuTujuhTab
+  } else {
+    console.error("MenuTujuhTab not found");
+  }
+};
+
 window.showCardAgent = function () {
   var menuEmpatTab = document.getElementById("MenuEmpatTab");
   if (menuEmpatTab) {
@@ -944,7 +958,10 @@ window.showCardAgent = function () {
   }
 };
 
-window.showCardAgentDetail = function () {};
+window.showCardAgentDetail = function () {
+  showElement(".card-agent-detail");
+  hideElement(".card-agent");
+};
 
 document.addEventListener("DOMContentLoaded", function () {
   var menuEmpatTab = document.getElementById("MenuEmpatTab");
