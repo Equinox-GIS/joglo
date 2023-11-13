@@ -935,7 +935,11 @@ window.closeTabPencarianDua = function (element) {
   initSlickFavoritDua();
 };
 
-window.showCardAgent = function (element) {};
+window.showCardAgent = function (element) {
+  // const activeTab = element.getAttribute("data-active-tab");
+  // console.log(activeTab);
+  console.log("open");
+};
 
 window.showCardInfoDetail = function (element) {
   // console.log(element);
