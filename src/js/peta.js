@@ -586,14 +586,14 @@ const pulsingDot = {
     context.clearRect(0, 0, this.width, this.height);
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
-    context.fillStyle = `rgba(105,179,231, ${1 - t})`;
-    context.fill();
+    // context.fillStyle = `rgba(105,179,231, ${1 - t})`;
+    // context.fill();
 
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
     context.fillStyle = "rgba(105,179,231, 1)";
     context.strokeStyle = "white";
-    context.lineWidth = 2 + 4 * (1 - t);
+    // context.lineWidth = 2 + 4 * (1 - t);
     context.fill();
     context.stroke();
 

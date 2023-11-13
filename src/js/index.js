@@ -952,7 +952,8 @@ window.showMessage = function () {
 window.showCardAgent = function () {
   var menuEmpatTab = document.getElementById("MenuEmpatTab");
   if (menuEmpatTab) {
-    menuEmpatTab.click(); // This simulates a click on the MenuEmpatTab
+    menuEmpatTab.click();
+    showCardAgentDetail(); // Memanggil fungsi setelah klik
   } else {
     console.error("MenuEmpatTab not found");
   }
