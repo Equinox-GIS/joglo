@@ -1,32 +1,38 @@
+import prevArrowImg from "../images/prev.png";
+import nextArrowImg from "../images/next.png";
+
 // function toggle
-function toggleDropdown(id) {
-  const menuButtons = document.querySelectorAll("[id^='menu-button-']");
-  const dropdownMenus = document.querySelectorAll("[id^='dropdown-menu-']");
-  const selectedMenuButton = document.getElementById(`menu-button-${id}`);
-  const selectedDropdownMenu = document.getElementById(`dropdown-menu-${id}`);
-  const isExpanded =
-    selectedMenuButton.getAttribute("aria-expanded") === "true";
+// function toggleDropdown(id) {
+//   const menuButtons = document.querySelectorAll("[id^='menu-button-']");
+//   const dropdownMenus = document.querySelectorAll("[id^='dropdown-menu-']");
+//   const selectedMenuButton = document.getElementById(`menu-button-${id}`);
+//   const selectedDropdownMenu = document.getElementById(`dropdown-menu-${id}`);
+//   const isExpanded =
+//     selectedMenuButton.getAttribute("aria-expanded") === "true";
 
-  // Toggle the current dropdown menu
-  selectedMenuButton.setAttribute("aria-expanded", !isExpanded);
-  selectedDropdownMenu.classList.toggle("hidden", isExpanded);
+//   // Toggle the current dropdown menu
+//   selectedMenuButton.setAttribute("aria-expanded", !isExpanded);
+//   selectedDropdownMenu.classList.toggle("hidden", isExpanded);
 
-  // Rotate arrow
-  const arrow = selectedMenuButton.querySelector("svg");
-  arrow.style.transform = isExpanded ? "rotate(0deg)" : "rotate(180deg)";
+//   // Rotate arrow
+//   const arrow = selectedMenuButton.querySelector("svg");
+//   arrow.style.transform = isExpanded ? "rotate(0deg)" : "rotate(180deg)";
 
-  // Close all other dropdown menus
-  menuButtons.forEach((button, index) => {
-    if (button.id !== selectedMenuButton.id) {
-      button.setAttribute("aria-expanded", false);
-      dropdownMenus[index].classList.add("hidden");
+//   // Close all other dropdown menus
+//   menuButtons.forEach((button, index) => {
+//     if (button.id !== selectedMenuButton.id) {
+//       button.setAttribute("aria-expanded", false);
+//       dropdownMenus[index].classList.add("hidden");
 
-      // Rotate other arrows back
-      const otherArrow = button.querySelector("svg");
-      otherArrow.style.transform = "rotate(0deg)";
-    }
-  });
-}
+//       // Rotate other arrows back
+//       const otherArrow = button.querySelector("svg");
+//       otherArrow.style.transform = "rotate(0deg)";
+//     }
+//   });
+// }
+
+document.getElementById("luas1").innerHTML = "<100";
+document.getElementById("btn1").innerHTML = "<100";
 
 // ---------------------------------------------------------------------------------------------
 
@@ -175,6 +181,8 @@ window.addEventListener(
 
 // ------------End Drodpdown------------------
 
+// Fungsi Play dan Pause Video Menu Beranda, Favorit
+
 // Fungsi untuk memulai video berdasarkan ID
 function playVideoById(videoId) {
   var videoElement = document.getElementById(videoId);
@@ -317,7 +325,7 @@ function setActiveTab(tabButtonId, tabContentId) {
 // Fungsi untuk menambahkan event listener pada setiap tab
 function setTabListeners() {
   var tabs = document.querySelectorAll(
-    '#DetailBeranda [role="tab"], #Detail Favorit [role="tab"]'
+    '#DetailBeranda [role="tab"], #DetailFavorit [role="tab"]'
   );
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
@@ -336,14 +344,13 @@ function setFavoritTabListeners() {
   });
 }
 
-// diganti tujuh
 // Event listener yang dijalankan saat halaman web selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
   // Set tab beranda default
-  resetTabStyles('#DetailBeranda [role="tab"]', "detail-beranda-tujuh-tab");
+  resetTabStyles('#DetailBeranda [role="tab"]', "detail-beranda-satu-tab");
   resetActiveTabContent(
     '#DetailBeranda [role="tabpanel"]',
-    "detail-beranda-tujuh"
+    "detail-beranda-satu"
   );
   setTabListeners();
 
@@ -709,12 +716,12 @@ function getSliderDefaultOptions() {
     swipe: false,
     prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
-                    <img style="margin-right: 1px;" class="custom-img-slick" src="./src/images/prev.png" alt="Previous">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
     nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
-                    <img style="margin-left: 1px;" class="custom-img-slick" src="./src/images/next.png" alt="Next">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,
   };
@@ -890,7 +897,7 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
-function closeTab() {
+window.closeTab = function (element) {
   // Pencarian
   showElement(".card-info-pencarian");
   hideElement(".card-detail-beranda");
@@ -900,7 +907,7 @@ function closeTab() {
   hideElement(".card-detail-beranda");
 
   stopAndResetVideoById("video-detail-beranda");
-}
+};
 
 // Fungsi untuk menampilkan elemen
 function showElement(selector) {
@@ -912,23 +919,23 @@ function hideElement(selector) {
   document.querySelector(selector).classList.add("hidden");
 }
 
-function closeTabDisukai() {
+window.closeTabDisukai = function (element) {
   stopAndResetVideoById("video-detail-favorit");
 
   showElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
 
   // initSlickFavorit();
-}
+};
 
-function closeTabPencarianDua() {
+window.closeTabPencarianDua = function (element) {
   showElement(".card-info-favorit-dua");
   hideElement(".card-info-detail-favorit-dua");
 
   initSlickFavoritDua();
-}
+};
 
-function showCardInfoDetail(element) {
+window.showCardInfoDetail = function (element) {
   // console.log(element);
 
   const activeTab = element.getAttribute("data-active-tab");
@@ -981,6 +988,9 @@ function showCardInfoDetail(element) {
 
       // Menghapus kelas "hidden" dari elemen
       hiddenSearchRunningElement.classList.remove("hidden");
+
+      // Mengaktifkan pulsing dot ketika detail ditampilkan
+      // activatePulsingDot();
 
       //
       break;
@@ -1078,7 +1088,7 @@ function showCardInfoDetail(element) {
     case "4":
       break;
   }
-}
+};
 
 function resetAllCards() {
   hideElement(".card-info-pencarian");
@@ -1087,16 +1097,6 @@ function resetAllCards() {
   hideElement(".card-info-detail-favorit");
   hideElement(".card-info-favorit-dua");
   hideElement(".card-info-detail-favorit-dua");
-}
-
-function hideElement(selector) {
-  const elements = document.querySelectorAll(selector);
-  elements.forEach((el) => el.classList.add("hidden"));
-}
-
-function showElement(selector) {
-  const elements = document.querySelectorAll(selector);
-  elements.forEach((el) => el.classList.remove("hidden"));
 }
 
 // Function untuk pindah Menu Navigation
@@ -1160,6 +1160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ),
     ArrowIconJenisRumah: document.getElementById("arrow-icon-jenis-surat"),
     ArrowIconJscore: document.getElementById("arrow-icon-jscore"),
+    ArrowIconJscoreAgent: document.getElementById("arrow-icon-jscore-agent"),
   };
 
   const element_button = {
@@ -1795,33 +1796,3 @@ function teksBerjalan() {
     });
   }
 }
-
-// Aktif Button Maps
-const buttons = document.querySelectorAll(".btn-on-map");
-
-// Fungsi untuk mengatur ulang semua button ke warna default
-function resetButtons() {
-  buttons.forEach((button) => {
-    button.classList.remove("active_btn_peta");
-    button.classList.add("bg-white");
-    button.classList.add("text-black");
-  });
-}
-
-// Menambahkan event listener ke setiap button
-buttons.forEach((button) => {
-  button.addEventListener("click", function () {
-    // Jika button sudah aktif, kembalikan ke warna default
-    if (this.classList.contains("active_btn_peta")) {
-      this.classList.remove("active_btn_peta");
-      this.classList.add("bg-white");
-      this.classList.add("text-black");
-    } else {
-      // Atur ulang semua button dan ubah warna button yang diklik
-      resetButtons();
-      this.classList.remove("bg-white");
-      this.classList.remove("text-black");
-      this.classList.add("active_btn_peta");
-    }
-  });
-});

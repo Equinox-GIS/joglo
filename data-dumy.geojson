@@ -10,9 +10,8 @@
       },
       "properties": {
         "OBJECTID": 1600,
-        "no_permohonan": "C3/22050937A806017",
         "sumber_data": "Citra Garden",
-        "service_point": "DPMPTSP DKI JAKARTA"
+        "kategori": "rumah dijual"
       }
     },
     {
@@ -24,9 +23,8 @@
       },
       "properties": {
         "OBJECTID": 1601,
-        "no_permohonan": "C3/22050937A806018",
         "sumber_data": "BSD City",
-        "service_point": "DPMPTSP DKI JAKARTA"
+        "kategori": "rumah dijual"
       }
     },
     {
@@ -38,9 +36,8 @@
       },
       "properties": {
         "OBJECTID": 1602,
-        "no_permohonan": "C3/22050937A806019",
         "sumber_data": "Green Lake City",
-        "service_point": "DPMPTSP DKI JAKARTA"
+        "kategori": "rumah dijual"
       }
     },
     {
@@ -52,9 +49,8 @@
       },
       "properties": {
         "OBJECTID": 1603,
-        "no_permohonan": "C3/22050937A806020",
         "sumber_data": "Puri Indah",
-        "service_point": "DPMPTSP DKI JAKARTA"
+        "kategori": "rumah dijual"
       }
     },
     {
@@ -66,9 +62,138 @@
       },
       "properties": {
         "OBJECTID": 1604,
-        "no_permohonan": "C3/22050937A806021",
         "sumber_data": "Sakura Garden City",
-        "service_point": "DPMPTSP DKI JAKARTA"
+        "kategori": "rumah dijual"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1605,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.81464104768405, -6.21487679248488]
+      },
+      "properties": {
+        "OBJECTID": 1605,
+        "kategori": "tempat ibadah",
+        "sumber_data": "Citra Garden"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1606,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82549862923777, -6.2190150993458655]
+      },
+      "properties": {
+        "OBJECTID": 1606,
+        "kategori": "tempat ibadah",
+        "sumber_data": "BSD City"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1607,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.83391003666814, -6.209287893250768]
+      },
+      "properties": {
+        "OBJECTID": 1607,
+        "kategori": "Belanja",
+        "sumber_data": "Puri Indah"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1608,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.8296185024657, -6.20194970670231]
+      },
+      "properties": {
+        "OBJECTID": 1608,
+        "kategori": "Belanja",
+        "sumber_data": "Sakura Garden City"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1609,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.8313351161501, -6.214407497729598]
+      },
+      "properties": {
+        "OBJECTID": 1609,
+        "kategori": "Sekolah",
+        "sumber_data": "Puri Indah"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1610,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82541279893898, -6.220209655924755]
+      },
+      "properties": {
+        "OBJECTID": 1610,
+        "kategori": "Sekolah",
+        "sumber_data": "BSD City"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1611,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.81554226997271, -6.198237910615995]
+      },
+      "properties": {
+        "OBJECTID": 1611,
+        "kategori": "Restoran",
+        "sumber_data": "Citra Garden"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1612,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82549862934214, -6.208349293655467]
+      },
+      "properties": {
+        "OBJECTID": 1612,
+        "kategori": "Restoran",
+        "sumber_data": "BSD City"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1613,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.8365707876064, -6.202035035004004]
+      },
+      "properties": {
+        "OBJECTID": 1613,
+        "kategori": "Transportasi",
+        "sumber_data": "Puri Indah"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1614,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.83511166597468, -6.203570942719922]
+      },
+      "properties": {
+        "OBJECTID": 1614,
+        "kategori": "Transportasi",
+        "sumber_data": "Puri Indah"
       }
     }
   ]

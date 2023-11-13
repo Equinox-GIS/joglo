@@ -1,3 +1,6 @@
+import prevArrowImg from "../images/prev.png";
+import nextArrowImg from "../images/next.png";
+
 function getSliderDefaultOptions() {
   return {
     dots: true,
@@ -7,12 +10,12 @@ function getSliderDefaultOptions() {
     swipe: false,
     prevArrow: `<button type="button" class="slick-prev left-prev-custom" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
-                    <img style="margin-right: 1px;" class="custom-img-slick" src="./src/images/prev.png" alt="Previous">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
     nextArrow: `<button type="button" class="slick-next right-next-custom" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
-                    <img style="margin-left: 1px;" class="custom-img-slick" src="./src/images/next.png" alt="Next">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,
   };
@@ -21,15 +24,6 @@ function getSliderDefaultOptions() {
 function moveDotsToCustomContainer() {
   const dots = $(".slider-card-info-detail-peta .slick-dots");
   $(".custom-dot-slick").append(dots);
-}
-
-function addClickHandlerToDots() {
-  $(".slider-card-info-detail-peta .slick-dots li").on(
-    "click",
-    function (event) {
-      event.stopPropagation();
-    }
-  );
 }
 
 function addClickHandlerToDots() {
@@ -620,19 +614,20 @@ const IzinGalian = () => {
 
   map.addLayer({
     id: "layer-peta-soaraja",
-    type: "symbol", // Changed from 'circle' to 'symbol'
+    type: "symbol",
     source: "layer-peta-soaraja",
     layout: {
       "icon-image": "pulsing-dot",
       "icon-size": 0.25,
-      "text-field": ["get", "sumber_data"], // Use the 'text' property from your GeoJSON
-      "text-offset": [1, 0], // Adjust text position relative to the icon
+      "text-field": ["get", "sumber_data"],
+      "text-offset": [1, 0],
       "text-anchor": "left",
       "text-size": 12,
     },
     paint: {
-      "text-color": "#374151", // Set text color
+      "text-color": "#374151",
     },
+    filter: ["==", "kategori", "rumah dijual"], // Default filter for 'rumah dijual'
   });
 };
 
@@ -641,13 +636,42 @@ map.on("style.load", () => {
   IzinGalian();
 });
 
-function showLayer(layer) {
-  map.setLayoutProperty(layer, "visibility", "visible");
+// Function to update map for a specific category or default category
+function updateMapForCategory(category) {
+  if (category) {
+    map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
+  } else {
+    // Jika tidak ada kategori yang dipilih, tampilkan kategori default "rumah dijual"
+    map.setFilter("layer-peta-soaraja", ["==", "kategori", "rumah dijual"]);
+  }
 }
 
-function hideLayer(layer) {
-  map.setLayoutProperty(layer, "visibility", "none");
-}
+// Activate default button
+const defaultButton = document.getElementById("chip-rumah-dijual");
+defaultButton.classList.add("active_btn_peta");
+
+// Button event listeners
+const buttons = document.querySelectorAll(".btn-on-map");
+// Button event listeners
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const category = this.innerText.trim();
+    const isActive = this.classList.contains("active_btn_peta");
+
+    // Reset semua tombol
+    buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
+
+    if (!isActive) {
+      // Jika tombol tidak aktif, aktifkan dan perbarui filter peta
+      this.classList.add("active_btn_peta");
+      updateMapForCategory(category);
+    } else {
+      // Jika tombol sudah aktif dan diklik lagi, reset ke kategori default
+      updateMapForCategory(null); // Mengubah kembali ke kategori default
+      defaultButton.classList.add("active_btn_peta"); // Mengaktifkan kembali button default
+    }
+  });
+});
 
 $(
   ".mapboxgl-ctrl.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-geocoder.mapboxgl-ctrl, a.mapboxgl-ctrl-logo"

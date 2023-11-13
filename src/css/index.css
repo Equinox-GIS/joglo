@@ -197,7 +197,7 @@
 
 /* Layer and Location Icons */
 .btn-layer {
-  background-image: url("../src/images/layer-map.png");
+  background-image: url("../images/layer-map.png");
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
@@ -209,7 +209,7 @@
 }
 
 .btn-location {
-  background-image: url("../src/images/gm1/my-location.png");
+  background-image: url("../images/gm1/my-location.png");
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
@@ -219,7 +219,7 @@
 }
 
 .btn-stick {
-  background-image: url("../src/images/stick-map.png") !important;
+  background-image: url("../images/stick-map.png") !important;
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
@@ -231,7 +231,7 @@
 }
 
 .btn-stick2 {
-  background-image: url("../src/images/gm1/radius-off.png") !important;
+  background-image: url("../images/gm1/radius-off.png") !important;
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
@@ -241,7 +241,7 @@
 }
 
 .btn-stick3 {
-  background-image: url("../src/images/gm1/pentagon-off.png") !important;
+  background-image: url("../images/gm1/pentagon-off.png") !important;
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
