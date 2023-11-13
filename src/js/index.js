@@ -346,7 +346,7 @@ function setFavoritTabListeners() {
 
 // Event listener yang dijalankan saat halaman web selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
-  // Set tab beranda default
+  // Set tab beranda default - gantiii lg satu nanti
   resetTabStyles('#DetailBeranda [role="tab"]', "detail-beranda-satu-tab");
   resetActiveTabContent(
     '#DetailBeranda [role="tabpanel"]',
@@ -934,6 +934,8 @@ window.closeTabPencarianDua = function (element) {
 
   initSlickFavoritDua();
 };
+
+window.showCardAgentDetail = function (element) {};
 
 window.showCardInfoDetail = function (element) {
   // console.log(element);

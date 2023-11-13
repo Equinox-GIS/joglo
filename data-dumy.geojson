@@ -97,7 +97,7 @@
       "id": 1607,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.83391003666814, -6.209287893250768]
+        "coordinates": [106.82370847853305, -6.206184113401858]
       },
       "properties": {
         "OBJECTID": 1607,
@@ -110,7 +110,7 @@
       "id": 1608,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.8296185024657, -6.20194970670231]
+        "coordinates": [106.82566112659902, -6.20564014929476]
       },
       "properties": {
         "OBJECTID": 1608,
@@ -120,28 +120,68 @@
     },
     {
       "type": "Feature",
-      "id": 1609,
+      "id": 1640,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.8313351161501, -6.214407497729598]
+        "coordinates": [106.82937796161119, -6.210311530607896]
       },
       "properties": {
-        "OBJECTID": 1609,
+        "OBJECTID": 1640,
         "kategori": "Sekolah",
-        "sumber_data": "Puri Indah"
+        "sumber_data": "Puri Sekolah "
       }
     },
     {
       "type": "Feature",
-      "id": 1610,
+      "id": 1641,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.82541279893898, -6.220209655924755]
+        "coordinates": [106.82819778970318, -6.207261081866808]
       },
       "properties": {
-        "OBJECTID": 1610,
+        "OBJECTID": 1641,
         "kategori": "Sekolah",
-        "sumber_data": "BSD City"
+        "sumber_data": "Puri Sekolah 2"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": 1642,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82809050134792, -6.208199683361217]
+      },
+      "properties": {
+        "OBJECTID": 1642,
+        "kategori": "Sekolah",
+        "sumber_data": "Puri Sekolah 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1643,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82953638437363, -6.208994877178533]
+      },
+      "properties": {
+        "OBJECTID": 1643,
+        "kategori": "Sekolah",
+        "sumber_data": "Puri Sekolah 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1644,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.8298774395393, -6.21187683292648]
+      },
+      "properties": {
+        "OBJECTID": 1644,
+        "kategori": "Sekolah",
+        "sumber_data": "Puri Sekolah 5"
       }
     },
     {
@@ -149,12 +189,12 @@
       "id": 1611,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.81554226997271, -6.198237910615995]
+        "coordinates": [106.82323640992199, -6.207741340903282]
       },
       "properties": {
         "OBJECTID": 1611,
         "kategori": "Restoran",
-        "sumber_data": "Citra Garden"
+        "sumber_data": "BSD City"
       }
     },
     {
@@ -167,7 +207,46 @@
       "properties": {
         "OBJECTID": 1612,
         "kategori": "Restoran",
-        "sumber_data": "BSD City"
+        "sumber_data": "BSD City 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1630,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82851499700146, -6.208935923243965]
+      },
+      "properties": {
+        "OBJECTID": 1630,
+        "kategori": "Restoran",
+        "sumber_data": "BSD City 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1631,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82780689385666, -6.208039986742449]
+      },
+      "properties": {
+        "OBJECTID": 1631,
+        "kategori": "Restoran",
+        "sumber_data": "BSD City 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1632,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82464188737609, -6.207272039956784]
+      },
+      "properties": {
+        "OBJECTID": 1632,
+        "kategori": "Restoran",
+        "sumber_data": "BSD City 5"
       }
     },
     {
@@ -175,7 +254,7 @@
       "id": 1613,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.8365707876064, -6.202035035004004]
+        "coordinates": [106.82612246661766, -6.203090976671641]
       },
       "properties": {
         "OBJECTID": 1613,
@@ -188,12 +267,51 @@
       "id": 1614,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.83511166597468, -6.203570942719922]
+        "coordinates": [106.8277103342757, -6.204989524808611]
       },
       "properties": {
         "OBJECTID": 1614,
         "kategori": "Transportasi",
-        "sumber_data": "Puri Indah"
+        "sumber_data": "Puri Indah 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1615,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82647651822627, -6.205714811062112]
+      },
+      "properties": {
+        "OBJECTID": 1615,
+        "kategori": "Transportasi",
+        "sumber_data": "Puri Indah 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1618,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82443803947606, -6.204232239580485]
+      },
+      "properties": {
+        "OBJECTID": 1618,
+        "kategori": "Transportasi",
+        "sumber_data": "Puri Indah 6"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1619,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82309693503514, -6.203293631018895]
+      },
+      "properties": {
+        "OBJECTID": 1619,
+        "kategori": "Transportasi",
+        "sumber_data": "Puri Indah 7"
       }
     }
   ]
