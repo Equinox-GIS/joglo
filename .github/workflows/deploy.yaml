@@ -22,5 +22,7 @@ jobs:
           script: |
             cd /var/www/html/dev/joglo
             git pull origin main
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
             chmod +x automation_build_path.sh
             ./automation_build_path.sh
