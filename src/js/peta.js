@@ -638,6 +638,7 @@ map.on("style.load", () => {
 
 // Function to update map for a specific category or default category
 function updateMapForCategory(category) {
+  console.log(category);
   if (category) {
     map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
   } else {
@@ -656,6 +657,7 @@ const buttons = document.querySelectorAll(".btn-on-map");
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
     const category = this.innerText.trim();
+    // console.log(category);
     const isActive = this.classList.contains("active_btn_peta");
 
     // Reset semua tombol

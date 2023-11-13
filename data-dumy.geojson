@@ -71,49 +71,10 @@
       "id": 1670,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.8277103342757, -6.204989524808611]
+        "coordinates": [106.82758720560642, -6.209557189543744]
       },
       "properties": {
         "OBJECTID": 1670,
-        "sumber_data": "Puri Indah 2",
-        "kategori": "tempat ibadah"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 1671,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.82647651822627, -6.205714811062112]
-      },
-      "properties": {
-        "OBJECTID": 1671,
-        "sumber_data": "Puri Indah 2",
-        "kategori": "tempat ibadah"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 1672,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.82443803947606, -6.204232239580485]
-      },
-      "properties": {
-        "OBJECTID": 1672,
-        "sumber_data": "Puri Indah 2",
-        "kategori": "tempat ibadah"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 1672,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.82309693503514, -6.203293631018895]
-      },
-      "properties": {
-        "OBJECTID": 1672,
         "sumber_data": "Puri Indah 2",
         "kategori": "tempat ibadah"
       }
