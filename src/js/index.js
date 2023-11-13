@@ -935,6 +935,8 @@ window.closeTabPencarianDua = function (element) {
   initSlickFavoritDua();
 };
 
+window.showCardAgent = function (element) {};
+
 window.showCardInfoDetail = function (element) {
   // console.log(element);
 
