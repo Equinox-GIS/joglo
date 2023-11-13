@@ -1,4 +1,6 @@
 #!/bin/bash
+npm install
+npm run build
 
 # Get the current date in the format ddmmyyyy
 current_date=$(date +'%d%m%Y')
