@@ -23,5 +23,6 @@ jobs:
             cd /var/www/html/dev/joglo
             git pull origin main
             chmod +x automation_build_path.sh
+            npm install
             npm run build
             ./automation_build_path.sh
