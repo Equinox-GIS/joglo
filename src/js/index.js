@@ -935,11 +935,31 @@ window.closeTabPencarianDua = function (element) {
   initSlickFavoritDua();
 };
 
-window.showCardAgent = function (element) {
-  // const activeTab = element.getAttribute("data-active-tab");
-  // console.log(activeTab);
-  console.log("open");
+window.showCardAgent = function () {
+  var menuEmpatTab = document.getElementById("MenuEmpatTab");
+  if (menuEmpatTab) {
+    menuEmpatTab.click(); // This simulates a click on the MenuEmpatTab
+  } else {
+    console.error("MenuEmpatTab not found");
+  }
 };
+
+window.showCardAgentDetail = function () {};
+
+document.addEventListener("DOMContentLoaded", function () {
+  var menuEmpatTab = document.getElementById("MenuEmpatTab");
+  if (menuEmpatTab) {
+    menuEmpatTab.addEventListener("click", function () {
+      // Place the logic that should occur when MenuEmpatTab is clicked
+      // Example:
+      // toggleTab(this);
+      // hideElement(".card-detail-beranda");
+      // showElement(".card-agent");
+    });
+  } else {
+    console.error("MenuEmpatTab not found");
+  }
+});
 
 window.showCardInfoDetail = function (element) {
   // console.log(element);
@@ -1377,7 +1397,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function toggleTab(tab) {
+  window.toggleTab = function (tab) {
+    // console.log(tab);
     const parentDiv = tab.closest(".menus");
     const contentDiv = document.getElementById(
       tab.getAttribute("aria-controls")
@@ -1419,11 +1440,19 @@ document.addEventListener("DOMContentLoaded", function () {
         teksBerjalan();
         break;
       case "MenuEmpatTab":
-        enable();
+        // enable();
+        // closeTab();
+        // // stopAndResetVideo();
+        // isTeksBerjalanActive = false;
+
         closeTab();
+        disable();
         // stopAndResetVideo();
-        isTeksBerjalanActive = false;
+        isTeksBerjalanActive = true;
+        $(".teks-berjalan-pencarian").show();
+        teksBerjalan();
         break;
+
       case "MenuLimaTab":
         // stopAndResetVideo();
         closeTab();
@@ -1495,7 +1524,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isTeksBerjalanActive = false;
         break;
     }
-  }
+  };
 
   function activateTab(tab) {
     // Remove active class from all tabs
