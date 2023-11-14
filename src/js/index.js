@@ -335,14 +335,14 @@ function setTabListeners() {
 }
 
 // Fungsi untuk menambahkan event listener pada setiap tab favorit
-function setFavoritTabListeners() {
-  var tabs = document.querySelectorAll('#DetailFavorit [role="tab"]');
-  tabs.forEach(function (tab) {
-    tab.addEventListener("click", function () {
-      setActiveTab(tab.id, tab.getAttribute("aria-controls"));
-    });
-  });
-}
+// function setFavoritTabListeners() {
+//   var tabs = document.querySelectorAll('#DetailFavorit [role="tab"]');
+//   tabs.forEach(function (tab) {
+//     tab.addEventListener("click", function () {
+//       setActiveTab(tab.id, tab.getAttribute("aria-controls"));
+//     });
+//   });
+// }
 
 // Event listener yang dijalankan saat halaman web selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
@@ -1436,8 +1436,8 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuDuaTab":
         initSlickPasang();
-
         closeTab();
+        closeTabDisukai();
         disable();
 
         // stopAndResetVideo();
@@ -1448,6 +1448,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuTigaTab":
         // console.log("MenuTigaTab");
         initSlickFavorit();
+        closeTab();
         closeTabDisukai();
         // stopAndResetVideo();
         enable();
@@ -1456,7 +1457,8 @@ document.addEventListener("DOMContentLoaded", function () {
         teksBerjalan();
         break;
       case "MenuEmpatTab":
-        enable();
+        closeTab();
+        closeTabDisukai();
         closeTab();
         // stopAndResetVideo();
         isTeksBerjalanActive = false;
@@ -1464,6 +1466,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuLimaTab":
         // stopAndResetVideo();
         closeTab();
+        closeTabDisukai();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1472,6 +1475,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuEnamTab":
         // stopAndResetVideo();
         closeTab();
+        closeTabDisukai();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1481,6 +1485,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuTujuhTab":
         // stopAndResetVideo();
         closeTab();
+        closeTabDisukai();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1489,6 +1494,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuDelapanTab":
         // stopAndResetVideo();
         closeTab();
+        closeTabDisukai();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1497,6 +1503,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuSembilanTab":
         // stopAndResetVideo();
         closeTab();
+        closeTabDisukai();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1505,6 +1512,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuSepuluhTab":
         // stopAndResetVideo();
         closeTab();
+        closeTabDisukai();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1513,6 +1521,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuSebelasTab":
         // stopAndResetVideo();
         closeTab();
+        closeTabDisukai();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1521,6 +1530,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuDuaBelasTab":
         // stopAndResetVideo();
         closeTab();
+        closeTabDisukai();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
