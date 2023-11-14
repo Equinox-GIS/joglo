@@ -947,7 +947,6 @@ window.closeTabDisukai = function (element) {
   showElement(".card-info-favorit");
   hideElement(".card-info-detail-favorit");
 
-  // initSlickFavorit();
   stopAndResetVideoById("video-detail-favorit");
 };
 
@@ -958,11 +957,22 @@ window.closeTabPencarianDua = function (element) {
   initSlickFavoritDua();
 };
 
-window.showCardAgentDetail = function (element) {};
+window.showCardAgent = function () {
+  var menuEmpatTab = document.getElementById("MenuEmpatTab");
+  if (menuEmpatTab) {
+    menuEmpatTab.click();
+    showCardAgentDetail();
+  } else {
+    console.error("MenuEmpatTab not found");
+  }
+};
+
+window.showCardAgentDetail = function () {
+  showElement(".card-agent-detail");
+  hideElement(".card-agent");
+};
 
 window.showCardInfoDetail = function (element) {
-  // console.log(element);
-
   const activeTab = element.getAttribute("data-active-tab");
 
   resetAllCards();
