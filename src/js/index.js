@@ -919,6 +919,11 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
+window.closeDetailAgent = function () {
+  showElement(".card-agent");
+  hideElement(".card-agent-detail");
+};
+
 window.closeTab = function (element) {
   // Pencarian
   showElement(".card-info-pencarian");
