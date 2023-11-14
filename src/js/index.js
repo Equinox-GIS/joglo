@@ -921,8 +921,8 @@ $(document).ready(function () {
 });
 
 window.closeDetailAgent = function () {
-  // showElement(".card-agent");
-  // hideElement(".card-agent-detail");
+  showElement(".card-agent");
+  hideElement(".card-agent-detail");
   showCardInfoDetail("19");
 };
 
@@ -1506,9 +1506,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         break;
       case "MenuDuaTab":
-        initSlickPasang();
         closeTab();
         closeTabDisukai();
+        initSlickPasang();
+
         disable();
 
         // stopAndResetVideo();
@@ -1518,9 +1519,10 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
       case "MenuTigaTab":
         // console.log("MenuTigaTab");
-        initSlickFavorit();
         closeTab();
         closeTabDisukai();
+        initSlickFavorit();
+
         // stopAndResetVideo();
         enable();
         isTeksBerjalanActive = true;
@@ -1920,3 +1922,32 @@ function teksBerjalan() {
     });
   }
 }
+
+window.ShowDetailPesan = function () {
+  // Change the class of the default_pesan element
+  var defaultPesan = document.querySelector(".default_pesan");
+  defaultPesan.classList.remove("default_pesan");
+  defaultPesan.classList.add("default_pesan_aktif");
+
+  // Add 'semibold' class to the clicked name
+  var activeName = document.querySelector(".nama-pesan-aktif");
+  if (activeName) {
+    activeName.classList.add("font-semibold");
+  }
+
+  var showPesan = document.querySelector(".show-detail-pesan");
+  if (showPesan) {
+    showPesan.classList.remove("hidden");
+  }
+};
+
+window.closeTabDetailPesan = function () {
+  var defaultPesan = document.querySelector(".default_pesan_aktif");
+  defaultPesan.classList.remove("default_pesan_aktif");
+  defaultPesan.classList.add("default_pesan");
+
+  var activeName = document.querySelector(".nama-pesan-aktif");
+  if (activeName) {
+    activeName.classList.remove("font-semibold");
+  }
+};
