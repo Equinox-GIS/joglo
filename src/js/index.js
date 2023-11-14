@@ -261,6 +261,7 @@ function resetTabStyles(tabsSelector, activeTabId) {
 // Fungsi untuk menyembunyikan semua konten tab dan menampilkan konten untuk tab default
 function resetActiveTabContent(contentsSelector, defaultContentId) {
   var contents = document.querySelectorAll(contentsSelector);
+  // console.log(contents);
   contents.forEach(function (content) {
     content.classList.add("hidden");
   });
