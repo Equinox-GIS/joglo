@@ -920,9 +920,17 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
-window.closeDetailAgent = function () {
-  showElement(".card-agent");
-  hideElement(".card-agent-detail");
+window.closeDetailAgent = function (clickedElement) {
+  // showElement(".card-agent");
+  // hideElement(".card-agent-detail");
+
+  console.log(clickedElement);
+
+  // Set data-active-tab attribute to "1"
+  clickedElement.setAttribute("data-active-tab", "1");
+
+  // Trigger the showCardInfoDetail function
+  showCardInfoDetail(clickedElement);
 };
 
 window.closeTab = function (element) {
