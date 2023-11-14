@@ -335,18 +335,18 @@ function setTabListeners() {
 }
 
 // Fungsi untuk menambahkan event listener pada setiap tab favorit
-// function setFavoritTabListeners() {
-//   var tabs = document.querySelectorAll('#DetailFavorit [role="tab"]');
-//   tabs.forEach(function (tab) {
-//     tab.addEventListener("click", function () {
-//       setActiveTab(tab.id, tab.getAttribute("aria-controls"));
-//     });
-//   });
-// }
+function setFavoritTabListeners() {
+  var tabs = document.querySelectorAll('#DetailFavorit [role="tab"]');
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      setActiveTab(tab.id, tab.getAttribute("aria-controls"));
+    });
+  });
+}
 
 // Event listener yang dijalankan saat halaman web selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
-  // Set tab beranda default
+  // Set tab beranda default - gantiii lg satu nanti
   resetTabStyles('#DetailBeranda [role="tab"]', "detail-beranda-satu-tab");
   resetActiveTabContent(
     '#DetailBeranda [role="tabpanel"]',
@@ -876,16 +876,6 @@ $(document).ready(function () {
   });
   resizePlayer($(".slider-card-beranda video"));
 
-  // Pasang
-  $(".slider-card-pasang video").on("mouseover", function () {
-    $(this).get(0).play();
-  });
-
-  $(".slider-card-pasang video").on("mouseout", function () {
-    $(this).get(0).pause();
-  });
-  resizePlayer($(".slider-card-pasang video"));
-
   // Favorit
   $(".slider-favorit video").on("mouseover", function () {
     $(this).get(0).play();
@@ -906,11 +896,6 @@ $(document).ready(function () {
   });
   resizePlayer($(".slider-favorit-dua video"));
 });
-
-window.closeDetailAgent = function () {
-  showElement(".card-agent");
-  hideElement(".card-agent-detail");
-};
 
 window.closeTab = function (element) {
   // Pencarian
@@ -941,6 +926,7 @@ window.closeTabDisukai = function (element) {
   hideElement(".card-info-detail-favorit");
 
   // initSlickFavorit();
+  stopAndResetVideoById("video-detail-favorit");
 };
 
 window.closeTabPencarianDua = function (element) {
@@ -950,44 +936,7 @@ window.closeTabPencarianDua = function (element) {
   initSlickFavoritDua();
 };
 
-window.showMessage = function () {
-  var menuTujuhTab = document.getElementById("MenuTujuhTab");
-  if (menuTujuhTab) {
-    menuTujuhTab.click(); // This simulates a click on the MenuTujuhTab
-  } else {
-    console.error("MenuTujuhTab not found");
-  }
-};
-
-window.showCardAgent = function () {
-  var menuEmpatTab = document.getElementById("MenuEmpatTab");
-  if (menuEmpatTab) {
-    menuEmpatTab.click();
-    showCardAgentDetail(); // Memanggil fungsi setelah klik
-  } else {
-    console.error("MenuEmpatTab not found");
-  }
-};
-
-window.showCardAgentDetail = function () {
-  showElement(".card-agent-detail");
-  hideElement(".card-agent");
-};
-
-document.addEventListener("DOMContentLoaded", function () {
-  var menuEmpatTab = document.getElementById("MenuEmpatTab");
-  if (menuEmpatTab) {
-    menuEmpatTab.addEventListener("click", function () {
-      // Place the logic that should occur when MenuEmpatTab is clicked
-      // Example:
-      // toggleTab(this);
-      // hideElement(".card-detail-beranda");
-      // showElement(".card-agent");
-    });
-  } else {
-    console.error("MenuEmpatTab not found");
-  }
-});
+window.showCardAgentDetail = function (element) {};
 
 window.showCardInfoDetail = function (element) {
   // console.log(element);
@@ -1140,10 +1089,6 @@ window.showCardInfoDetail = function (element) {
       break;
     // agen
     case "4":
-      if (!$(".slider-card-pasang").hasClass("slick-initialized")) {
-        initSlick(".slider-card-pasang", getSliderDefaultOptions());
-      }
-
       break;
   }
 };
@@ -1429,8 +1374,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  window.toggleTab = function (tab) {
-    // console.log(tab);
+  function toggleTab(tab) {
     const parentDiv = tab.closest(".menus");
     const contentDiv = document.getElementById(
       tab.getAttribute("aria-controls")
@@ -1447,6 +1391,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuSatuTab":
         isTeksBerjalanActive = false;
         closeTab();
+        closeTabDisukai();
         enable();
         // stopAndResetVideo();
         if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
@@ -1472,24 +1417,11 @@ document.addEventListener("DOMContentLoaded", function () {
         teksBerjalan();
         break;
       case "MenuEmpatTab":
-        // enable();
-        // closeTab();
-        // // stopAndResetVideo();
-        // isTeksBerjalanActive = false;
-
+        enable();
         closeTab();
-        disable();
         // stopAndResetVideo();
-
-        if (!$(".slider-card-pasang").hasClass("slick-initialized")) {
-          initSlickCardPasang();
-        }
-
-        isTeksBerjalanActive = true;
-        $(".teks-berjalan-pencarian").show();
-        teksBerjalan();
+        isTeksBerjalanActive = false;
         break;
-
       case "MenuLimaTab":
         // stopAndResetVideo();
         closeTab();
@@ -1561,7 +1493,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isTeksBerjalanActive = false;
         break;
     }
-  };
+  }
 
   function activateTab(tab) {
     // Remove active class from all tabs

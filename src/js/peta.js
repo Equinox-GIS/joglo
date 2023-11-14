@@ -614,20 +614,19 @@ const IzinGalian = () => {
 
   map.addLayer({
     id: "layer-peta-soaraja",
-    type: "symbol",
+    type: "symbol", // Changed from 'circle' to 'symbol'
     source: "layer-peta-soaraja",
     layout: {
       "icon-image": "pulsing-dot",
       "icon-size": 0.25,
-      "text-field": ["get", "sumber_data"],
-      "text-offset": [1, 0],
+      "text-field": ["get", "sumber_data"], // Use the 'text' property from your GeoJSON
+      "text-offset": [1, 0], // Adjust text position relative to the icon
       "text-anchor": "left",
       "text-size": 12,
     },
     paint: {
-      "text-color": "#374151",
+      "text-color": "#374151", // Set text color
     },
-    filter: ["==", "kategori", "rumah dijual"], // Default filter for 'rumah dijual'
   });
 };
 
@@ -636,44 +635,13 @@ map.on("style.load", () => {
   IzinGalian();
 });
 
-// Function to update map for a specific category or default category
-function updateMapForCategory(category) {
-  console.log(category);
-  if (category) {
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
-  } else {
-    // Jika tidak ada kategori yang dipilih, tampilkan kategori default "rumah dijual"
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", "rumah dijual"]);
-  }
+function showLayer(layer) {
+  map.setLayoutProperty(layer, "visibility", "visible");
 }
 
-// Activate default button
-const defaultButton = document.getElementById("chip-rumah-dijual");
-defaultButton.classList.add("active_btn_peta");
-
-// Button event listeners
-const buttons = document.querySelectorAll(".btn-on-map");
-// Button event listeners
-buttons.forEach((button) => {
-  button.addEventListener("click", function () {
-    const category = this.innerText.trim();
-    // console.log(category);
-    const isActive = this.classList.contains("active_btn_peta");
-
-    // Reset semua tombol
-    buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
-
-    if (!isActive) {
-      // Jika tombol tidak aktif, aktifkan dan perbarui filter peta
-      this.classList.add("active_btn_peta");
-      updateMapForCategory(category);
-    } else {
-      // Jika tombol sudah aktif dan diklik lagi, reset ke kategori default
-      updateMapForCategory(null); // Mengubah kembali ke kategori default
-      defaultButton.classList.add("active_btn_peta"); // Mengaktifkan kembali button default
-    }
-  });
-});
+function hideLayer(layer) {
+  map.setLayoutProperty(layer, "visibility", "none");
+}
 
 $(
   ".mapboxgl-ctrl.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-geocoder.mapboxgl-ctrl, a.mapboxgl-ctrl-logo"
