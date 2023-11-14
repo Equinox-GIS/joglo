@@ -963,6 +963,15 @@ window.closeTabPencarianDua = function (element) {
   initSlickFavoritDua();
 };
 
+window.showMessage = function () {
+  var menuTujuhTab = document.getElementById("MenuTujuhTab");
+  if (menuTujuhTab) {
+    menuTujuhTab.click(); // This simulates a click on the MenuTujuhTab
+  } else {
+    console.error("MenuTujuhTab not found");
+  }
+};
+
 window.showCardAgent = function () {
   var menuEmpatTab = document.getElementById("MenuEmpatTab");
   if (menuEmpatTab) {
