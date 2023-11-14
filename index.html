@@ -10134,19 +10134,143 @@
             aria-labelledby="MenuEmpatTab"
           >
             <!-- Agen -->
-            <div class="px-3 pt-2 h-full">
+            <div class="px-3 pt-2 h-full card-agent">
               <div class="font-semibold text-xl">Agen</div>
 
-              <div class="flex h-[78vh] items-center">
-                <h3 class="mx-auto">
-                  <img
-                    class="w-32 h-32 object-cover"
-                    src="./src/images/road-work.png"
-                    alt=""
-                  />
-                </h3>
+              <div class="grid grid-cols-2 gap-4 mt-2">
+                <!--  -->
+                <div
+                  onclick="showCardAgentDetail(this)"
+                  class="cursor-pointer w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <div class="flex justify-end px-4 pt-4"></div>
+                  <div class="flex flex-col items-center pb-10">
+                    <img
+                      class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                      src="./src/images/user.png"
+                      alt="Bonnie image"
+                    />
+                    <h5
+                      class="mb-1 text-xl font-medium text-gray-900 dark:text-white"
+                    >
+                      Mochtar Riady
+                    </h5>
+                    <span class="text-sm text-gray-500 dark:text-gray-400"
+                      >Visual Designer</span
+                    >
+                  </div>
+                </div>
+                <!--  -->
+                <div
+                  class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <div class="flex justify-end px-4 pt-4"></div>
+                  <div class="flex flex-col items-center pb-10">
+                    <img
+                      class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                      src="./src/images/user.png"
+                      alt="Bonnie image"
+                    />
+                    <h5
+                      class="mb-1 text-xl font-medium text-gray-900 dark:text-white"
+                    >
+                      Putra
+                    </h5>
+                    <span class="text-sm text-gray-500 dark:text-gray-400"
+                      >Visual Designer</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <div class="flex justify-end px-4 pt-4"></div>
+                  <div class="flex flex-col items-center pb-10">
+                    <img
+                      class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                      src="./src/images/user.png"
+                      alt="Bonnie image"
+                    />
+                    <h5
+                      class="mb-1 text-xl font-medium text-gray-900 dark:text-white"
+                    >
+                      Budiman
+                    </h5>
+                    <span class="text-sm text-gray-500 dark:text-gray-400"
+                      >Visual Designer</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                >
+                  <div class="flex justify-end px-4 pt-4"></div>
+                  <div class="flex flex-col items-center pb-10">
+                    <img
+                      class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                      src="./src/images/user.png"
+                      alt="Bonnie image"
+                    />
+                    <h5
+                      class="mb-1 text-xl font-medium text-gray-900 dark:text-white"
+                    >
+                      Santoso
+                    </h5>
+                    <span class="text-sm text-gray-500 dark:text-gray-400"
+                      >Visual Designer</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- card detail -->
+            <div class="flex flex-col px-3 pt-2">
+              <!-- card-agent-detail -->
+              <div class="w-full hidden card-agent-detail">
+                <div class="flex flex-col">
+                  <div class="flex justify-between items-center">
+                    <div class="text-md font-bold flex-shrink-0">
+                      Detail Agent Mochtar Riady
+                    </div>
+                    <div class="flex items-start">
+                      <img
+                        class="w-10 h-10 object-cover cursor-pointer"
+                        onclick="closeDetailAgent()"
+                        src="./src/images/close_tab.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+
+                  <!--  -->
+
+                  <!-- card-agent -->
+                  <div
+                    class="cursor-pointer w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                  >
+                    <div class="flex justify-end px-4 pt-4"></div>
+                    <div class="flex flex-col items-center pb-10">
+                      <img
+                        class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                        src="./src/images/user.png"
+                        alt="Bonnie image"
+                      />
+                      <h5
+                        class="mb-1 text-xl font-medium text-gray-900 dark:text-white"
+                      >
+                        Mochtar Riady
+                      </h5>
+                      <span class="text-sm text-gray-500 dark:text-gray-400"
+                        >Visual Designer</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!--  -->
+              </div>
+            </div>
+            <!--  -->
           </div>
 
           <!-- Konten Menu Tujuh -->
