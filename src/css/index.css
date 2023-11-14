@@ -562,6 +562,16 @@
   @apply bg-blue-900 text-white border border-blue-900;
 }
 
+.default_pesan {
+  @apply grid grid-cols-1;
+
+}
+
+.default_pesan_aktif {
+  @apply grid grid-cols-[220px,1fr];
+
+}
+
 .slider-card-beranda {
   visibility: hidden;
 }

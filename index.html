@@ -64,7 +64,7 @@
     <div class="min-h-screen bg-gray-100 flex flex-col overflow-y-hidden">
       <!-- Start Section One Header -->
       <div
-        class="w-full h-[10vh] bg-slate-50 flex flex-row items-center justify-between pl-3 pr-4"
+        class="w-full h-[10vh] flex flex-row items-center justify-between pl-3 pr-4"
       >
         <div class="flex items-center space-x-4">
           <img
@@ -1516,7 +1516,7 @@
         <div class="grid grid-cols-[55px,1fr]">
           <!-- Menu -->
           <div
-            class="bg-slate-50 px-0 py-3"
+            class="px-0 py-3 border border-gray-300"
             id="kontenMenuTab"
             data-tabs-toggle="#kontenMenuContent"
             role="tablist"
@@ -2116,17 +2116,8 @@
                                 preload="metadata"
                                 src="./src/video/Video1.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0">
-                                <div class="relative">
-                                  <img src="./src/images/card/new.png" alt="" />
-                                  <div
-                                    class="absolute h-12 w-12 inset-0 flex justify-center items-center"
-                                  >
-                                    <span class="text-white font-bold text-sm"
-                                      >New</span
-                                    >
-                                  </div>
-                                </div>
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
+                                <img src="./src/images/new.png" alt="" />
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -2221,21 +2212,15 @@
                                 preload="metadata"
                                 src="./src/video/Video2.mp4"
                               ></video>
-                              <div class="absolute h-14 w-32 top-0 end-0">
-                                <div class="relative">
-                                  <img
-                                    src="./src/images/card/populer.png"
-                                    alt=""
-                                  />
-                                  <div
-                                    class="absolute h-9 top-1 w-28 inset-0 flex justify-center items-center"
-                                  >
-                                    <span
-                                      class="text-white font-bold text-sm ml-2"
-                                      >Populer</span
-                                    >
-                                  </div>
-                                </div>
+                              <div
+                                class="absolute top-1/2 left-1/2 h-28 w-40 transform -translate-x-1/2 -translate-y-1/2"
+                              >
+                                <img
+                                  class="opacity-75"
+                                  src="./src/images/gm1/sold.png"
+                                  alt="Sold"
+                                  class="z-10"
+                                />
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -2330,15 +2315,8 @@
                                 preload="metadata"
                                 src="./src/video/Video3.mp4"
                               ></video>
-                              <!-- <div class="absolute h-12 w-12 top-0 end-0 ...">
+                              <div class="absolute h-12 w-12 top-0 end-0 ...">
                                 <img src="./src/images/new.png" alt="" />
-                              </div> -->
-                              <div class="absolute right-0 top-0 h-10 w-10">
-                                <div
-                                  class="absolute transform rotate-45 bg-[#2074d8] text-center text-white font-semibold py-1 right-[-35px] top-[32px] w-[170px]"
-                                >
-                                  Eksklusif
-                                </div>
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -10647,7 +10625,6 @@
                     </div>
                     <div class="flex items-start">
                       <img
-                        data-active-tab="1"
                         class="w-10 h-10 object-cover cursor-pointer"
                         onclick="closeDetailAgent()"
                         src="./src/images/close_tab.png"
@@ -10694,77 +10671,204 @@
             role="tabpanel"
             aria-labelledby="MenuTujuhTab"
           >
-            <div class="grid grid-cols-[220px,1fr]">
-              <div class="">
-                <div class="">
-                  <div class="p-4">
-                    <div class="">
-                      <ul
-                        role="list"
-                        class="divide-y divide-gray-200 dark:divide-gray-700"
-                      >
-                        <li class="py-3 sm:py-4">
-                          <div class="flex items-center space-x-4">
-                            <div class="flex-shrink-0">
-                              <img
-                                class="w-8 h-8 rounded-full"
-                                src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
-                                alt="Neil image"
-                              />
-                            </div>
-                            <div class="flex-1 min-w-0">
-                              <p
-                                class="text-sm font-medium text-gray-900 truncate dark:text-white"
-                              >
-                                Putri Amalia
-                              </p>
-                            </div>
+            <div class="default_pesan">
+              <!--  -->
+              <div
+                class="h-[60vh] border border-red-500 overflow-y-auto hide-scrollbar"
+              >
+                <div class="p-4">
+                  <div class="">
+                    <ul
+                      role="list"
+                      class="divide-y divide-gray-200 dark:divide-gray-700"
+                    >
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img
+                              class="w-8 h-8 rounded-full"
+                              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                              alt="Neil image"
+                            />
                           </div>
-                        </li>
-                        <li class="py-3 sm:py-4">
-                          <div class="flex items-center space-x-4">
-                            <div class="flex-shrink-0">
-                              <img
-                                class="w-8 h-8 rounded-full"
-                                src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
-                                alt="Neil image"
-                              />
-                            </div>
-                            <div class="flex-1 min-w-0">
-                              <p
-                                class="text-sm font-semibold text-gray-900 truncate dark:text-white"
-                              >
-                                Mochtar Riadyy
-                              </p>
-                            </div>
+                          <div class="flex-1 min-w-0">
+                            <p
+                              class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                            >
+                              Putri Amalia
+                            </p>
                           </div>
-                        </li>
-                        <li class="py-3 sm:py-4">
-                          <div class="flex items-center space-x-4">
-                            <div class="flex-shrink-0">
-                              <img
-                                class="w-8 h-8 rounded-full"
-                                src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
-                                alt="Neil image"
-                              />
-                            </div>
-                            <div class="flex-1 min-w-0">
-                              <p
-                                class="text-sm font-medium text-gray-900 truncate dark:text-white"
-                              >
-                                Rudi
-                              </p>
-                            </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4" onclik="showpesan-detail()">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img
+                              class="w-8 h-8 rounded-full"
+                              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                              alt="Neil image"
+                            />
                           </div>
-                        </li>
-                      </ul>
-                    </div>
+                          <div class="flex-1 min-w-0">
+                            <p
+                              class="text-sm font-semibold text-gray-900 truncate dark:text-white"
+                            >
+                              Mochtar Riadyy
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img
+                              class="w-8 h-8 rounded-full"
+                              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                              alt="Neil image"
+                            />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p
+                              class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                            >
+                              Rudi
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img
+                              class="w-8 h-8 rounded-full"
+                              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                              alt="Neil image"
+                            />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p
+                              class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                            >
+                              Rudi 2
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img
+                              class="w-8 h-8 rounded-full"
+                              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                              alt="Neil image"
+                            />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p
+                              class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                            >
+                              Rudi 3
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img
+                              class="w-8 h-8 rounded-full"
+                              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                              alt="Neil image"
+                            />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p
+                              class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                            >
+                              Rudi 3
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img
+                              class="w-8 h-8 rounded-full"
+                              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                              alt="Neil image"
+                            />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p
+                              class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                            >
+                              Rudi 4
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img
+                              class="w-8 h-8 rounded-full"
+                              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                              alt="Neil image"
+                            />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p
+                              class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                            >
+                              Rudi 5
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img
+                              class="w-8 h-8 rounded-full"
+                              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                              alt="Neil image"
+                            />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p
+                              class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                            >
+                              Rudi 6
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4">
+                          <div class="flex-shrink-0">
+                            <img
+                              class="w-8 h-8 rounded-full"
+                              src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                              alt="Neil image"
+                            />
+                          </div>
+                          <div class="flex-1 min-w-0">
+                            <p
+                              class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                            >
+                              Rudi 7
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
               <!--  -->
               <div
-                class="flex-1 p:2 sm:p-6 justify-between flex flex-col h-[83vh] border-l-2 border-gray-300"
+                class="flex-1 p:2 sm:p-6 justify-between flex flex-col h-[83vh] border-l-2 border-gray-300 hidden"
               >
                 <div
                   class="flex sm:items-center justify-between py-3 border-b-2 border-gray-200"

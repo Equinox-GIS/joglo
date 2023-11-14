@@ -920,17 +920,10 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
-window.closeDetailAgent = function (clickedElement) {
+window.closeDetailAgent = function () {
   // showElement(".card-agent");
   // hideElement(".card-agent-detail");
-
-  console.log(clickedElement);
-
-  // Set data-active-tab attribute to "1"
-  clickedElement.setAttribute("data-active-tab", "1");
-
-  // Trigger the showCardInfoDetail function
-  showCardInfoDetail(clickedElement);
+  showCardInfoDetail("19");
 };
 
 window.closeTab = function (element) {
@@ -995,8 +988,21 @@ window.showCardAgentDetail = function () {
   hideElement(".card-agent");
 };
 
-window.showCardInfoDetail = function (element) {
-  const activeTab = element.getAttribute("data-active-tab");
+window.showCardInfoDetail = function (param) {
+  let activeTab;
+
+  // Check if param is an element or a string
+  if (typeof param === "string" || param instanceof String) {
+    // If it's a string, assume it's the activeTab value
+    activeTab = param;
+  } else if (param && param.getAttribute) {
+    // If it's an element, get the activeTab attribute
+    activeTab = param.getAttribute("data-active-tab");
+  } else {
+    // Handle cases where param is neither a string nor an element
+    console.error("Invalid parameter passed to showCardInfoDetail");
+    return;
+  }
 
   resetAllCards();
 
@@ -1147,7 +1153,49 @@ window.showCardInfoDetail = function (element) {
       if (!$(".slider-pasang").hasClass("slick-initialized")) {
         initSlick(".slider-pasang", getSliderDefaultOptions());
       }
+      break;
 
+    case "19":
+      // hideElement(".card-agent");
+      // hideElement(".card-agent-detail");
+
+      // // Pencarian
+      // showElement(".card-detail-beranda");
+      // hideElement(".card-info-pencarian");
+
+      // // Favorit
+      // showElement(".card-info-favorit");
+      // hideElement(".card-info-detail-favorit");
+
+      // // Pencarian Dua
+      // showElement(".card-info-favorit-dua");
+      // hideElement(".card-info-detail-favorit-dua");
+
+      // if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
+      //   setTimeout(function () {
+      //     initSlick(".slider-card-info-detail", getSliderDefaultOptions());
+      //     addVideoEventHandlers(".slider-card-info-detail");
+
+      //     $(".slider-card-info-detail").slick("resize");
+      //   }, 100);
+
+      //   // Play the first video (if it exists)
+      //   let firstVideo = $(".slider-card-info-detail").find(
+      //     "div.slick-current video"
+      //   );
+      //   if (firstVideo.length) {
+      //     firstVideo[0].play();
+      //   }
+      // }
+
+      // //
+      // // playVideoInWrapper(".video-wrapper-autoplay");
+      // if (!$(".card-detail-beranda").hasClass("hidden")) {
+      //   playVideoById("video-detail-beranda"); // Memulai video beranda
+      //   setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+      // }
+
+      //
       break;
   }
 };
