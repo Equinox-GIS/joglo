@@ -11,7 +11,7 @@
       "properties": {
         "OBJECTID": 1600,
         "sumber_data": "Rumah 1",
-        "kategori": "rumah dijual"
+        "kategori": "Rumah Dijual"
       }
     },
     {
@@ -24,7 +24,7 @@
       "properties": {
         "OBJECTID": 1601,
         "sumber_data": "Rumah 2",
-        "kategori": "rumah dijual"
+        "kategori": "Rumah Dijual"
       }
     },
     {
@@ -37,7 +37,7 @@
       "properties": {
         "OBJECTID": 1602,
         "sumber_data": "Rumah 3",
-        "kategori": "rumah dijual"
+        "kategori": "Rumah Dijual"
       }
     },
     {
@@ -50,7 +50,7 @@
       "properties": {
         "OBJECTID": 1603,
         "sumber_data": "Rumah 4",
-        "kategori": "rumah dijual"
+        "kategori": "Rumah Dijual"
       }
     },
     {
@@ -63,60 +63,34 @@
       "properties": {
         "OBJECTID": 1604,
         "sumber_data": "Rumah 5",
-        "kategori": "rumah dijual"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 1665,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.82614412976113, -6.208707148298302]
-      },
-      "properties": {
-        "OBJECTID": 1665,
-        "sumber_data": "Rumah 5",
-        "kategori": "tempat ibadah"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": 1670,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.82758720560642, -6.209557189543744]
-      },
-      "properties": {
-        "OBJECTID": 1670,
-        "sumber_data": "Masjid 1",
-        "kategori": "tempat ibadah"
+        "kategori": "Rumah Dijual"
       }
     },
 
     {
       "type": "Feature",
-      "id": 1649,
+      "id": 1676,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.82937796161119, -6.210311530607896]
+        "coordinates": [106.8298774395393, -6.21187683292648]
       },
       "properties": {
-        "OBJECTID": 1649,
-        "kategori": "tempat ibadah",
-        "sumber_data": "Masjid 2"
+        "OBJECTID": 1644,
+        "kategori": "Tempat Ibadah",
+        "sumber_data": "Masjid 1"
       }
     },
     {
       "type": "Feature",
-      "id": 1648,
+      "id": 1677,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.82819778970318, -6.207261081866808]
+        "coordinates": [106.82323640992199, -6.207741340903282]
       },
       "properties": {
-        "OBJECTID": 1648,
-        "kategori": "tempat ibadah",
-        "sumber_data": "Masjid 3"
+        "OBJECTID": 1611,
+        "kategori": "Tempat Ibadah",
+        "sumber_data": "Masjid 2"
       }
     },
 

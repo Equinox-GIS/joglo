@@ -614,19 +614,20 @@ const IzinGalian = () => {
 
   map.addLayer({
     id: "layer-peta-soaraja",
-    type: "symbol", // Changed from 'circle' to 'symbol'
+    type: "symbol",
     source: "layer-peta-soaraja",
     layout: {
       "icon-image": "pulsing-dot",
       "icon-size": 0.25,
-      "text-field": ["get", "sumber_data"], // Use the 'text' property from your GeoJSON
-      "text-offset": [1, 0], // Adjust text position relative to the icon
+      "text-field": ["get", "sumber_data"],
+      "text-offset": [1, 0],
       "text-anchor": "left",
       "text-size": 12,
     },
     paint: {
-      "text-color": "#374151", // Set text color
+      "text-color": "#374151",
     },
+    filter: ["==", "kategori", "Rumah Dijual"], // Default filter for 'rumah dijual'
   });
 };
 
@@ -635,13 +636,40 @@ map.on("style.load", () => {
   IzinGalian();
 });
 
-function showLayer(layer) {
-  map.setLayoutProperty(layer, "visibility", "visible");
+// Button event listeners
+const buttons = document.querySelectorAll(".btn-on-map");
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    // Ambil kategori dari tombol yang diklik
+    const category = this.innerText.trim();
+
+    // Reset semua tombol
+    buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
+
+    // Aktifkan tombol yang diklik
+    this.classList.add("active_btn_peta");
+
+    // Perbarui peta berdasarkan kategori yang dipilih
+    updateMapForCategory(category);
+    // console.log(category);
+  });
+});
+
+// Fungsi untuk memperbarui peta berdasarkan kategori
+function updateMapForCategory(category) {
+  console.log(category);
+  if (category) {
+    map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
+  } else {
+    // Jika tidak ada kategori yang dipilih, tampilkan kategori default "rumah dijual"
+    map.setFilter("layer-peta-soaraja", ["==", "kategori", "Rumah Dijual"]);
+  }
 }
 
-function hideLayer(layer) {
-  map.setLayoutProperty(layer, "visibility", "none");
-}
+// Aktifkan tombol default ("Rumah Dijual")
+const defaultButton = document.getElementById("chip-rumah-dijual");
+defaultButton.classList.add("active_btn_peta");
+// console.log(defaultButton);
 
 $(
   ".mapboxgl-ctrl.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-geocoder.mapboxgl-ctrl, a.mapboxgl-ctrl-logo"
