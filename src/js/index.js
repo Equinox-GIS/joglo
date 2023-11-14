@@ -814,6 +814,18 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
+function initSlickPasang() {
+  $(".slider-pasang")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderDefaultOptions());
+}
+
 function initSlickFavoritDua() {
   $(".slider-favorit-dua")
     .on("init", function () {
@@ -885,6 +897,16 @@ $(document).ready(function () {
     $(this).get(0).pause();
   });
   resizePlayer($(".slider-favorit video"));
+
+  // Pasang
+  $(".slider-pasang video").on("mouseover", function () {
+    $(this).get(0).play();
+  });
+
+  $(".slider-pasang video").on("mouseout", function () {
+    $(this).get(0).pause();
+  });
+  resizePlayer($(".slider-pasang video"));
 
   // Pencarian
   $(".slider-favorit-dua video").on("mouseover", function () {
@@ -1089,6 +1111,10 @@ window.showCardInfoDetail = function (element) {
       break;
     // agen
     case "4":
+      if (!$(".slider-pasang").hasClass("slick-initialized")) {
+        initSlick(".slider-pasang", getSliderDefaultOptions());
+      }
+
       break;
   }
 };
@@ -1399,8 +1425,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         break;
       case "MenuDuaTab":
+        initSlickPasang();
+
         closeTab();
         disable();
+
         // stopAndResetVideo();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
