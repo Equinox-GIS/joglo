@@ -283,7 +283,7 @@ function setActiveTab(tabButtonId, tabContentId) {
       tabButtonId
     );
     resetActiveTabContent(
-      '#DetailBeranda [role="tabpanel"], #DetailFavorit [role="tabpanel"]',
+      '#DetailBerandaContent [role="tabpanel"], #DetailFavoritContent [role="tabpanel"]',
       tabContentId
     );
 
