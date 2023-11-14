@@ -309,14 +309,15 @@ function setActiveTab(tabButtonId, tabContentId) {
     // Menampilkan konten tab yang aktif
     activeContent.classList.remove("hidden");
 
-    stopAndResetVideoById("video-detail-beranda"); // Sesuaikan ID ini
-    stopAndResetVideoById("video-detail-favorit");
-
     // Jika tab 'detail-beranda-satu' atau 'detail-favorit-satu' yang diaktifkan, putar videonya
     if (tabButtonId === "detail-beranda-satu-tab") {
       playVideoById("video-detail-beranda"); // Pastikan ID ini sesuai dengan ID video Anda
     } else if (tabButtonId === "detail-favorit-satu-tab") {
       playVideoById("video-detail-favorit"); // Pastikan ID ini sesuai dengan ID video Anda
+    } else {
+      // Jika tab lain yang diaktifkan, hentikan dan reset video 'detail-beranda-satu'
+      stopAndResetVideoById("video-detail-beranda"); // Pastikan ID ini sesuai dengan ID video Anda
+      stopAndResetVideoById("video-detail-favorit"); // Pastikan ID ini sesuai dengan ID video Anda
     }
   }
 }
@@ -334,14 +335,14 @@ function setTabListeners() {
 }
 
 // Fungsi untuk menambahkan event listener pada setiap tab favorit
-function setFavoritTabListeners() {
-  var tabs = document.querySelectorAll('#DetailFavorit [role="tab"]');
-  tabs.forEach(function (tab) {
-    tab.addEventListener("click", function () {
-      setActiveTab(tab.id, tab.getAttribute("aria-controls"));
-    });
-  });
-}
+// function setFavoritTabListeners() {
+//   var tabs = document.querySelectorAll('#DetailFavorit [role="tab"]');
+//   tabs.forEach(function (tab) {
+//     tab.addEventListener("click", function () {
+//       setActiveTab(tab.id, tab.getAttribute("aria-controls"));
+//     });
+//   });
+// }
 
 // Event listener yang dijalankan saat halaman web selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
@@ -875,6 +876,16 @@ $(document).ready(function () {
   });
   resizePlayer($(".slider-card-beranda video"));
 
+  // Pasang
+  $(".slider-card-pasang video").on("mouseover", function () {
+    $(this).get(0).play();
+  });
+
+  $(".slider-card-pasang video").on("mouseout", function () {
+    $(this).get(0).pause();
+  });
+  resizePlayer($(".slider-card-pasang video"));
+
   // Favorit
   $(".slider-favorit video").on("mouseover", function () {
     $(this).get(0).play();
@@ -1129,6 +1140,10 @@ window.showCardInfoDetail = function (element) {
       break;
     // agen
     case "4":
+      if (!$(".slider-card-pasang").hasClass("slick-initialized")) {
+        initSlick(".slider-card-pasang", getSliderDefaultOptions());
+      }
+
       break;
   }
 };
@@ -1465,6 +1480,11 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTab();
         disable();
         // stopAndResetVideo();
+
+        if (!$(".slider-card-pasang").hasClass("slick-initialized")) {
+          initSlickCardPasang();
+        }
+
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
