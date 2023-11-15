@@ -920,12 +920,6 @@ $(document).ready(function () {
   resizePlayer($(".slider-favorit-dua video"));
 });
 
-window.closeDetailAgent = function () {
-  showElement(".card-agent");
-  hideElement(".card-agent-detail");
-  showCardInfoDetail("19");
-};
-
 window.closeTab = function (element) {
   // Pencarian
   showElement(".card-info-pencarian");
@@ -973,7 +967,10 @@ window.showMessage = function () {
   }
 };
 
-window.showCardAgent = function () {
+let lastClickedAgent; // Variabel untuk menyimpan elemen terakhir yang diklik
+
+window.showCardAgent = function (element) {
+  lastClickedAgent = element; // Simpan elemen yang diklik
   var menuEmpatTab = document.getElementById("MenuEmpatTab");
   if (menuEmpatTab) {
     menuEmpatTab.click();
@@ -981,6 +978,32 @@ window.showCardAgent = function () {
   } else {
     console.error("MenuEmpatTab not found");
   }
+};
+
+window.closeDetailAgent = function () {
+  if (lastClickedAgent) {
+    console.log(lastClickedAgent);
+
+    document.getElementById("MenuSatuTab").click();
+
+    Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+    Array.from(document.getElementsByClassName("card-info-pencarian")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+    Array.from(document.getElementsByClassName("card-agent-detail")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+    Array.from(document.getElementsByClassName("card-agent")).forEach((elem) =>
+      elem.classList.remove("hidden")
+    );
+  } else {
+    // Jika tidak ada elemen yang diklik sebelumnya, kembalikan tampilan default
+    showElement(".card-agent");
+    hideElement(".card-agent-detail");
+  }
+  lastClickedAgent = null; // Reset variabel lastClickedAgent
 };
 
 window.showCardAgentDetail = function () {
