@@ -1542,20 +1542,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function disable() {
-    Object.values(elements).forEach((el) => {
-      if (el.classList) {
-        el.disabled = true;
-        el.classList.add("bg-gray-200", "text-gray-500");
-        el.classList.remove("bg-white");
-      }
-    });
-
-    Object.values(element_button).forEach((el) => {
-      el.disabled = true;
-      el.classList.add("bg-gray-200", "text-gray-500");
-      el.classList.remove("bg-blue-500", "text-white", "active_btn_search");
-    });
-
+    // Object.values(elements).forEach((el) => {
+    //   if (el.classList) {
+    //     el.disabled = true;
+    //     el.classList.add("bg-gray-200", "text-gray-500");
+    //     el.classList.remove("bg-white");
+    //   }
+    // });
+    // Object.values(element_button).forEach((el) => {
+    //   el.disabled = true;
+    //   el.classList.add("bg-gray-200", "text-gray-500");
+    //   el.classList.remove("bg-blue-500", "text-white", "active_btn_search");
+    // });
     // document.getElementById("btnSaveInstagram").src =
     //   "./src/images/save-instagram-off.png";
   }
