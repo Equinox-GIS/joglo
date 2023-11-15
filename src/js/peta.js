@@ -1,5 +1,9 @@
 import prevArrowImg from "../images/prev.png";
 import nextArrowImg from "../images/next.png";
+import logoNew from "../images/new.png";
+import rumaha2 from "../images/Hunian/Rmh1/rumaha2.jpg";
+import heartOn from "../images/heart-on.png";
+import share from "../images/share.png";
 
 function getSliderDefaultOptions() {
   return {
@@ -701,18 +705,18 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 src="./src/video/Video1.mp4"
                               ></video>
                               <div class="absolute h-10 w-10 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                                <img src="${logoNew}" alt="" />
                               </div>
                             </div>
                             <!--  -->
                             <div class="relative">
                               <img
                                 class="w-full h-full object-cover"
-                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                src="${rumaha2}"
                                 alt=""
                               />
                               <div class="absolute h-10 w-10 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                                <img src="${logoNew}" alt="" />
                               </div>
                             </div>
                           </div>
@@ -740,7 +744,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   <div>
                                     <img
                                       class="w-4 h-4 object-cover"
-                                      src="./src/images/heart-on.png"
+                                      src="${heartOn}"
                                       alt=""
                                     />
                                   </div>
@@ -748,7 +752,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   <div>
                                     <img
                                       class="w-3 h-3 object-cover"
-                                      src="./src/images/share.png"
+                                      src="${share}"
                                       alt=""
                                     />
                                   </div>
