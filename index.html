@@ -7246,124 +7246,8 @@
           >
             <!-- Menu Pasang -->
             <div class="h-full flex flex-col">
-              <!--  Card Pasang -->
-              <div
-                class="flex flex-col card-info-pasang h-[83vh] overflow-y-auto hide-scrollbar"
-              >
-                <!-- Judul Pasang -->
-                <div class="px-3 pt-2">
-                  <div class="font-semibold text-xl">Pasang</div>
-
-                  <div class="py-2 w-full"></div>
-                </div>
-
-                <!--  Konten Card Pasang -->
-                <div class="h-full px-3">
-                  <div class="grid grid-cols-2 gap-2">
-                    <!-- Card Pasangs 1 -->
-                    <div class="w-full">
-                      <div
-                        class="flex flex-col cursor-pointer"
-                        data-card-map="1534"
-                        data-active-tab="4"
-                        onclick="showCardInfoDetail(this)"
-                      >
-                        <div class="w-full h-[27vh] relative">
-                          <div class="slider-pasang w-full h-full">
-                            <div class="relative h-[27vh]">
-                              <video
-                                class="w-full h-full object-cover"
-                                loop
-                                muted
-                                preload="metadata"
-                                src="./src/video/Video1.mp4"
-                              ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
-                              </div>
-                            </div>
-                            <div class="relative h-[27vh]">
-                              <img
-                                class="w-full h-full object-cover"
-                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
-                                alt=""
-                              />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg"
-                          style="user-select: none"
-                        >
-                          <div class="flex flex-row justify-between">
-                            <div>
-                              <a href="#">
-                                <div class="inline-flex items-center">
-                                  <h5
-                                    class="text-xl font-bold tracking-tight text-black"
-                                  >
-                                    Rp 11.300.000.000
-                                  </h5>
-
-                                  <img
-                                    class="ml-3 -mt-0.5 w-5 h-5 object-cover"
-                                    src="./src/images/heart-on.png"
-                                    alt=""
-                                  />
-
-                                  <img
-                                    class="ml-3 -mt-0.5 w-4 h-4 object-cover"
-                                    src="./src/images/share.png"
-                                    alt=""
-                                  />
-
-                                  <img
-                                    class="ml-3 -mt-0.5 w-5 h-5 object-cover"
-                                    src="./src/images/badge3d.svg"
-                                    alt=""
-                                  />
-                                </div>
-                              </a>
-                            </div>
-                            <div class="flex items-center">
-                              <img
-                                class="ml-3 -mt-0.5 w-5 h-5 object-cover"
-                                src="./src/images/ad-off.png"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-
-                          <div class="flex flex-col mb-2 font-normal">
-                            <div
-                              class="flex items-center text-[11px] text-gray-700"
-                            >
-                              <span class="mr-2">LT 80 m² |</span>
-                              <span class="mr-2">LB 276 m² |</span>
-                              <span class="mr-2">2 KT |</span>
-                              <span class="mr-2">5 KM</span>
-                            </div>
-                            <div class="text-xs pt-1 text-gray-700">
-                              Sunter, Tanjung Priok, Jakarta Utara
-                            </div>
-                            <div class="text-[10px] pt-1 text-gray-400">
-                              ERA JAKARTA
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!--  -->
-              </div>
-
               <!-- Card Detail Pasang -->
-              <div class="flex flex-col w-full card-info-detail-pasang hidden">
+              <div class="flex flex-col w-full card-info-detail-pasang">
                 <!-- Judul Card Info Detail -->
                 <div class="px-3 pt-2">
                   <div class="w-full flex justify-between items-center">
@@ -7506,7 +7390,7 @@
                     <div id="DetailPasangContent" class="">
                       <!-- Konten Tab Satu Pasang -->
                       <div
-                        class="hidden pb-2 px-3"
+                        class="hidden px-4 py-2"
                         id="detail-pasang-satu"
                         role="tabpanel"
                         aria-labelledby="detail-pasang-satu-tab"
