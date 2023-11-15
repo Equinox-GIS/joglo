@@ -1,6 +1,38 @@
 import prevArrowImg from "../images/prev.png";
 import nextArrowImg from "../images/next.png";
 
+// Menyiapkan objek untuk menyimpan userName dan elemen terkait
+var userElements = {};
+
+// Memilih semua elemen dengan kelas 'name-user'
+var nameUserElements = document.querySelectorAll(".name-user");
+
+nameUserElements.forEach(function (element) {
+  var nameElement = element.querySelector("p");
+  if (nameElement) {
+    var userName = nameElement.textContent;
+    userElements[userName] = element;
+  }
+});
+
+// Fungsi untuk menambahkan kelas 'aktif-menu-pesan' ke elemen yang diklik
+// function addActiveClass() {
+//   // Menghapus kelas 'aktif-menu-pesan' dari semua elemen terlebih dahulu
+//   nameUserElements.forEach(function (el) {
+//     el.classList.remove("aktif-menu-pesan");
+//   });
+
+//   // Menambahkan kelas 'aktif-menu-pesan' ke elemen yang diklik
+//   element.classList.add("aktif-menu-pesan");
+// }
+
+// Menambahkan event listener ke setiap elemen
+// nameUserElements.forEach(function (element) {
+//   element.addEventListener("click", function () {
+//     addActiveClass(element);
+//   });
+// });
+
 // function toggle
 // function toggleDropdown(id) {
 //   const menuButtons = document.querySelectorAll("[id^='menu-button-']");
@@ -963,19 +995,75 @@ window.closeTabPasang = function () {
   hideElement(".card-info-detail-pasang");
 };
 
-window.showMessage = function () {
+// Pesan
+
+let lastClickedPesan;
+
+window.showMessage = function (element) {
+  lastClickedPesan = element;
+
+  let pesan = element.getAttribute("data-pesan");
+
+  console.log(pesan);
+  console.log(userElements);
+
+  // Memeriksa apakah ada elemen yang cocok dengan 'pesan'
+  // if (userElements[pesan]) {
+  //   // Menambahkan kelas 'aktif-menu-pesan' pada elemen yang cocok
+  //   // userElements[pesan].classList.add("aktif-menu-pesan");
+  //   console.log("sama");
+  // }
+
   var menuTujuhTab = document.getElementById("MenuTujuhTab");
   if (menuTujuhTab) {
     menuTujuhTab.click();
+    showCardPesantDetail();
+
+    // console.log(nameUserElements);
   } else {
     console.error("MenuTujuhTab not found");
   }
 };
 
-let lastClickedAgent; // Variabel untuk menyimpan elemen terakhir yang diklik
+window.CloseTabPesan = function () {
+  if (lastClickedPesan) {
+    document.getElementById("MenuSatuTab").click();
 
+    Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+    Array.from(document.getElementsByClassName("card-info-pencarian")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+    Array.from(document.getElementsByClassName("konten-pesan")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+    Array.from(
+      document.getElementsByClassName("konten-not-found-pesan")
+    ).forEach((elem) => elem.classList.remove("hidden"));
+    Array.from(
+      document.getElementsByClassName("konten-with-found-pesan")
+    ).forEach((elem) => elem.classList.add("hidden"));
+  } else {
+    // Jika tidak ada elemen yang diklik sebelumnya, kembalikan tampilan default
+    showElement(".konten-not-found-pesan");
+    hideElement(".konten-with-found-pesan");
+  }
+  lastClickedPesan = null;
+};
+
+window.showCardPesantDetail = function () {
+  showElement(".konten-with-found-pesan");
+  hideElement(".konten-not-found-pesan");
+};
+
+// Agent
+
+let lastClickedAgent;
 window.showCardAgent = function (element) {
-  lastClickedAgent = element; // Simpan elemen yang diklik
+  lastClickedAgent = element;
+
   var menuEmpatTab = document.getElementById("MenuEmpatTab");
   if (menuEmpatTab) {
     menuEmpatTab.click();
@@ -987,8 +1075,6 @@ window.showCardAgent = function (element) {
 
 window.closeDetailAgent = function () {
   if (lastClickedAgent) {
-    console.log(lastClickedAgent);
-
     document.getElementById("MenuSatuTab").click();
 
     Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
@@ -1016,6 +1102,8 @@ window.showCardAgentDetail = function () {
   hideElement(".card-agent");
 };
 
+//
+//
 window.showCardInfoDetail = function (param) {
   let activeTab;
 
@@ -1034,7 +1122,7 @@ window.showCardInfoDetail = function (param) {
 
   resetAllCards();
 
-  console.log(activeTab);
+  // console.log(activeTab);
 
   switch (activeTab) {
     case "1":
@@ -1523,7 +1611,8 @@ document.addEventListener("DOMContentLoaded", function () {
         isTeksBerjalanActive = false;
         closeTab();
         closeTabDisukai();
-        CloseTabPesan();
+        resetPortofolio();
+        // CloseTabPesan();
         enable();
         // stopAndResetVideo();
         if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
@@ -1533,7 +1622,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuDuaTab":
         closeTab();
         closeTabDisukai();
-        CloseTabPesan();
+        // CloseTabPesan();
 
         initSlickPasang();
 
@@ -1548,7 +1637,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // console.log("MenuTigaTab");
         closeTab();
         closeTabDisukai();
-        CloseTabPesan();
+        // CloseTabPesan();
 
         initSlickFavorit();
 
@@ -1561,7 +1650,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuEmpatTab":
         closeTab();
         closeTabDisukai();
-        CloseTabPesan();
+        // CloseTabPesan();
 
         // stopAndResetVideo();
         isTeksBerjalanActive = false;
@@ -1570,7 +1659,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
-        CloseTabPesan();
+        // CloseTabPesan();
 
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1581,7 +1670,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
-        CloseTabPesan();
+        // CloseTabPesan();
 
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1590,7 +1679,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuTujuhTab":
         closeTab();
         closeTabDisukai();
-        CloseTabPesan();
+        // CloseTabPesan();
 
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1601,7 +1690,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
-        CloseTabPesan();
+        // CloseTabPesan();
 
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1611,7 +1700,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuSembilanTab":
         closeTab();
         closeTabDisukai();
-        CloseTabPesan();
+        // CloseTabPesan();
 
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1621,7 +1710,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuSepuluhTab":
         closeTab();
         closeTabDisukai();
-        CloseTabPesan();
+        // CloseTabPesan();
 
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -1992,18 +2081,6 @@ window.closeTabDetailPesan = function () {
   }
 };
 
-// Mendefinisikan fungsi CloseTabPesan
-window.CloseTabPesan = function () {
-  // console.log("CloseTabPesan"); 
-
-  document.querySelector(".konten-with-found-pesan").classList.add("hidden");
-  document.querySelector(".konten-not-found-pesan").classList.remove("hidden");
-
-  document
-    .querySelectorAll(".menus-pesan")
-    .forEach((el) => el.classList.remove("aktif-menu-pesan"));
-};
-
 // Menangani klik pada menu pesan
 document.querySelectorAll(".menus-pesan").forEach((item) => {
   item.addEventListener("click", function () {
@@ -2042,3 +2119,79 @@ document.querySelectorAll(".menus-pesan").forEach((item) => {
     document.querySelector(".konten-not-found-pesan").classList.add("hidden");
   });
 });
+
+// Menu Beranda
+
+// let lastClickedBerandaCard;
+
+// window.showMessage = function (element) {
+//   lastClickedBerandaCard = element;
+
+//   var menuTujuhTab = document.getElementById("MenuTujuhTab");
+//   if (menuTujuhTab) {
+//     menuTujuhTab.click();
+//     showCardPesantDetail();
+
+//     // console.log(nameUserElements);
+//   } else {
+//     console.error("MenuTujuhTab not found");
+//   }
+// };
+
+// window.CloseTabPesan = function () {
+//   if (lastClickedBerandaCard) {
+//     document.getElementById("MenuSatuTab").click();
+
+//     Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
+//       (elem) => elem.classList.remove("hidden")
+//     );
+//     Array.from(document.getElementsByClassName("card-info-pencarian")).forEach(
+//       (elem) => elem.classList.add("hidden")
+//     );
+
+//     Array.from(document.getElementsByClassName("konten-pesan")).forEach(
+//       (elem) => elem.classList.remove("hidden")
+//     );
+//     Array.from(
+//       document.getElementsByClassName("konten-not-found-pesan")
+//     ).forEach((elem) => elem.classList.remove("hidden"));
+//     Array.from(
+//       document.getElementsByClassName("konten-with-found-pesan")
+//     ).forEach((elem) => elem.classList.add("hidden"));
+//   } else {
+//     // Jika tidak ada elemen yang diklik sebelumnya, kembalikan tampilan default
+//     showElement(".konten-not-found-pesan");
+//     hideElement(".konten-with-found-pesan");
+//   }
+//   lastClickedBerandaCard = null;
+// };
+
+// window.showCardPesantDetail = function () {
+//   showElement(".konten-with-found-pesan");
+//   hideElement(".konten-not-found-pesan");
+// };
+
+// nameUserElements = null;
+
+window.Portofolio = function () {
+  function toggleClass(elements, className, action) {
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].classList[action](className);
+    }
+  }
+
+  let judulPertama = document.getElementsByClassName("judul-dijual-pertama");
+  let kontenPertama = document.getElementsByClassName("konten-dijual-pertama");
+  toggleClass(judulPertama, "hidden", "remove"); // Menghapus kelas 'hidden' untuk menampilkan
+  toggleClass(kontenPertama, "hidden", "remove"); // Menghapus kelas 'hidden' untuk menampilkan
+
+  let judulKedua = document.getElementsByClassName("judul-dijual-kedua");
+  let kontenKedua = document.getElementsByClassName("konten-dijual-kedua");
+  toggleClass(judulKedua, "hidden", "add"); // Menambahkan kelas 'hidden' untuk menyembunyikan
+  toggleClass(kontenKedua, "hidden", "add"); // Menambahkan kelas 'hidden' untuk menyembunyikan
+
+  let menuSatuTab = document.getElementById("MenuSatuTab");
+  if (menuSatuTab) {
+    menuSatuTab.click();
+  }
+};

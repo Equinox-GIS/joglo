@@ -535,7 +535,7 @@
 } */
 
 .aktif-menu-pesan {
-  @apply bg-slate-200;
+  @apply bg-gray-200;
 }
 
 .bg-aktif-menu {
