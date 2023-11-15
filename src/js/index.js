@@ -1611,7 +1611,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isTeksBerjalanActive = false;
         closeTab();
         closeTabDisukai();
-        resetPortofolio();
+        // resetPortofolio();
         // CloseTabPesan();
         enable();
         // stopAndResetVideo();
@@ -2174,24 +2174,30 @@ document.querySelectorAll(".menus-pesan").forEach((item) => {
 // nameUserElements = null;
 
 window.Portofolio = function () {
-  function toggleClass(elements, className, action) {
-    for (let i = 0; i < elements.length; i++) {
-      elements[i].classList[action](className);
-    }
-  }
-
-  let judulPertama = document.getElementsByClassName("judul-dijual-pertama");
-  let kontenPertama = document.getElementsByClassName("konten-dijual-pertama");
-  toggleClass(judulPertama, "hidden", "remove"); // Menghapus kelas 'hidden' untuk menampilkan
-  toggleClass(kontenPertama, "hidden", "remove"); // Menghapus kelas 'hidden' untuk menampilkan
-
-  let judulKedua = document.getElementsByClassName("judul-dijual-kedua");
-  let kontenKedua = document.getElementsByClassName("konten-dijual-kedua");
-  toggleClass(judulKedua, "hidden", "add"); // Menambahkan kelas 'hidden' untuk menyembunyikan
-  toggleClass(kontenKedua, "hidden", "add"); // Menambahkan kelas 'hidden' untuk menyembunyikan
-
   let menuSatuTab = document.getElementById("MenuSatuTab");
   if (menuSatuTab) {
     menuSatuTab.click();
+    MenuTabList(1);
   }
+};
+
+// MenuSatuTab;
+
+// document.getElementById("MenuSatuTab").addEventListener("click", () => {
+//   const tabPanes = document.querySelectorAll(".konten-dijual");
+//   tabPanes.forEach((pane) => {
+//     pane.classList.remove("hidden");
+//   });
+// });
+
+const MenuTabList = (count) => {
+  const tabPanes = document.querySelectorAll(".konten-dijual");
+  // Limit show tabPanes by count
+  tabPanes.forEach((pane, index) => {
+    if (index + 1 !== count) {
+      pane.classList.add("hidden");
+    } else {
+      pane.classList.remove("hidden");
+    }
+  });
 };
