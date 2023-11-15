@@ -966,7 +966,7 @@ window.closeTabPasang = function () {
 window.showMessage = function () {
   var menuTujuhTab = document.getElementById("MenuTujuhTab");
   if (menuTujuhTab) {
-    menuTujuhTab.click(); // This simulates a click on the MenuTujuhTab
+    menuTujuhTab.click();
   } else {
     console.error("MenuTujuhTab not found");
   }
