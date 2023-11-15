@@ -1029,6 +1029,8 @@ window.showCardInfoDetail = function (param) {
 
   resetAllCards();
 
+  console.log(activeTab);
+
   switch (activeTab) {
     case "1":
       // Pencarian
@@ -1173,37 +1175,33 @@ window.showCardInfoDetail = function (param) {
       break;
     // agen
     case "4":
+      // Favorit
+      showElement(".card-info-detail-pasang");
+      hideElement(".card-pasang");
+
+      // Pencarian
+      showElement(".card-info-pencarian");
+      hideElement(".card-detail-beranda");
+
+      // Pencarian Dua
+      showElement(".card-info-favorit-dua");
+      hideElement(".card-info-detail-favorit-dua");
+
       if (!$(".slider-pasang").hasClass("slick-initialized")) {
         initSlick(".slider-pasang", getSliderDefaultOptions());
       }
-      break;
+      // if (!$(".slider-card-info-disukai").hasClass("slick-initialized")) {
+      //   initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
 
-    case "19":
-      // hideElement(".card-agent");
-      // hideElement(".card-agent-detail");
-
-      // // Pencarian
-      // showElement(".card-detail-beranda");
-      // hideElement(".card-info-pencarian");
-
-      // // Favorit
-      // showElement(".card-info-favorit");
-      // hideElement(".card-info-detail-favorit");
-
-      // // Pencarian Dua
-      // showElement(".card-info-favorit-dua");
-      // hideElement(".card-info-detail-favorit-dua");
-
-      // if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
       //   setTimeout(function () {
-      //     initSlick(".slider-card-info-detail", getSliderDefaultOptions());
-      //     addVideoEventHandlers(".slider-card-info-detail");
+      //     initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
+      //     addVideoEventHandlers(".slider-card-info-disukai");
 
-      //     $(".slider-card-info-detail").slick("resize");
+      //     $(".slider-card-info-disukai").slick("resize");
       //   }, 100);
 
       //   // Play the first video (if it exists)
-      //   let firstVideo = $(".slider-card-info-detail").find(
+      //   let firstVideo = $(".slider-card-info-disukai").find(
       //     "div.slick-current video"
       //   );
       //   if (firstVideo.length) {
@@ -1211,11 +1209,9 @@ window.showCardInfoDetail = function (param) {
       //   }
       // }
 
-      // //
-      // // playVideoInWrapper(".video-wrapper-autoplay");
-      // if (!$(".card-detail-beranda").hasClass("hidden")) {
-      //   playVideoById("video-detail-beranda"); // Memulai video beranda
-      //   setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+      // if (!$(".card-info-detail-favorit").hasClass("hidden")) {
+      //   playVideoById("video-detail-favorit"); // Memulai video favorit
+      //   setActiveTab("detail-favorit-satu-tab", "detail-favorit-satu");
       // }
 
       //
