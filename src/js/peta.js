@@ -707,7 +707,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 src="${Video1}"
                               ></video>
                               <div class="absolute h-10 w-10 top-0 end-0 ...">
-                                <img src="${nextArrowImg}" alt="" />
+                                <img src="${logoNew}" alt="" />
                               </div>
                             </div>
                             <!--  -->
@@ -718,7 +718,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 alt=""
                               />
                               <div class="absolute h-10 w-10 top-0 end-0 ...">
-                                <img src="${nextArrowImg}" alt="" />
+                                <img src="${logoNew}" alt="" />
                               </div>
                             </div>
                           </div>
