@@ -958,6 +958,11 @@ window.closeTabPencarianDua = function (element) {
   initSlickFavoritDua();
 };
 
+window.closeTabPasang = function () {
+  showElement(".card-info-pasang");
+  hideElement(".card-info-detail-pasang");
+};
+
 window.showMessage = function () {
   var menuTujuhTab = document.getElementById("MenuTujuhTab");
   if (menuTujuhTab) {
@@ -1177,7 +1182,7 @@ window.showCardInfoDetail = function (param) {
     case "4":
       // Favorit
       showElement(".card-info-detail-pasang");
-      hideElement(".card-pasang");
+      hideElement(".card-info-pasang");
 
       // Pencarian
       showElement(".card-info-pencarian");
@@ -1551,7 +1556,6 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuEmpatTab":
         closeTab();
         closeTabDisukai();
-        closeTab();
         // stopAndResetVideo();
         isTeksBerjalanActive = false;
         break;
