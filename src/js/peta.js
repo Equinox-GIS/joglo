@@ -567,7 +567,6 @@ const pulsingDot = {
   width: size,
   height: size,
   data: new Uint8Array(size * size * 4),
-  activeFeatureId: 1600, // Set ID dari fitur yang akan diberi efek pulsing
 
   onAdd: function () {
     const canvas = document.createElement("canvas");
@@ -587,18 +586,14 @@ const pulsingDot = {
     context.clearRect(0, 0, this.width, this.height);
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
-
-    // Cek apakah ID fitur aktif sama dengan yang ditentukan
-    if (this.activeFeatureId === 1600) {
-      context.fillStyle = `rgba(105,179,231, ${1 - t})`;
-      context.fill();
-      context.lineWidth = 2 + 4 * (1 - t);
-    }
+    // context.fillStyle = `rgba(105,179,231, ${1 - t})`;
+    // context.fill();
 
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
     context.fillStyle = "rgba(105,179,231, 1)";
     context.strokeStyle = "white";
+    // context.lineWidth = 2 + 4 * (1 - t);
     context.fill();
     context.stroke();
 
@@ -614,7 +609,7 @@ const IzinGalian = () => {
 
   map.addSource("layer-peta-soaraja", {
     type: "geojson",
-    data: "data-dumy.geojson", // Pastikan path ini benar
+    data: "data-dumy.geojson", // Ensure this path is correct
   });
 
   map.addLayer({
@@ -632,52 +627,48 @@ const IzinGalian = () => {
     paint: {
       "text-color": "#374151",
     },
-    filter: ["==", ["get", "OBJECTID"], 1600], // Filter hanya fitur dengan OBJECTID 1600
+    filter: ["==", "kategori", "Rumah Dijual"], // Default filter for 'rumah dijual'
   });
 };
 
-// Pastikan ini dipanggil setelah peta dimuat
+// Ensure this is called after the map loads
 map.on("style.load", () => {
   IzinGalian();
 });
-
-// Fungsi untuk memperbarui peta berdasarkan kategori
-function updateMapForCategory(category) {
-  if (category) {
-    map.setFilter("layer-peta-soaraja", ["==", ["get", "kategori"], category]);
-  } else {
-    // Mengatur filter yang selalu false untuk menghilangkan semua titik
-    map.setFilter("layer-peta-soaraja", ["==", ["get", "kategori"], ""]);
-  }
-}
 
 // Button event listeners
 const buttons = document.querySelectorAll(".btn-on-map");
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
+    // Ambil kategori dari tombol yang diklik
     const category = this.innerText.trim();
 
-    // Cek apakah tombol yang sama diklik lagi
-    if (this.classList.contains("active_btn_peta")) {
-      // Reset semua tombol dan filter
-      buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
-      updateMapForCategory(null); // Menghilangkan semua titik
-    } else {
-      // Reset semua tombol
-      buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
+    // Reset semua tombol
+    buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
 
-      // Aktifkan tombol yang diklik
-      this.classList.add("active_btn_peta");
+    // Aktifkan tombol yang diklik
+    this.classList.add("active_btn_peta");
 
-      // Perbarui peta berdasarkan kategori yang dipilih
-      updateMapForCategory(category);
-    }
+    // Perbarui peta berdasarkan kategori yang dipilih
+    updateMapForCategory(category);
+    // console.log(category);
   });
 });
+
+// Fungsi untuk memperbarui peta berdasarkan kategori
+function updateMapForCategory(category) {
+  console.log(category);
+  if (category) {
+    map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
+  } else {
+    // Jika tidak ada kategori yang dipilih, tampilkan kategori default "rumah dijual"
+    map.setFilter("layer-peta-soaraja", ["==", "kategori", "Rumah Dijual"]);
+  }
+}
+
 // Aktifkan tombol default ("Rumah Dijual")
 const defaultButton = document.getElementById("chip-rumah-dijual");
 defaultButton.classList.add("active_btn_peta");
-// defaultButton.click(); // Aktifkan tombol default ketika halaman dimuat
 
 $(
   ".mapboxgl-ctrl.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-geocoder.mapboxgl-ctrl, a.mapboxgl-ctrl-logo"
