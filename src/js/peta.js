@@ -643,12 +643,11 @@ map.on("style.load", () => {
 
 // Fungsi untuk memperbarui peta berdasarkan kategori
 function updateMapForCategory(category) {
-  console.log(category);
   if (category) {
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
+    map.setFilter("layer-peta-soaraja", ["==", ["get", "kategori"], category]);
   } else {
-    // Jika tidak ada kategori yang dipilih, tampilkan kategori default "Rumah Dijual"
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", "Rumah Dijual"]);
+    // Mengatur filter yang selalu false untuk menghilangkan semua titik
+    map.setFilter("layer-peta-soaraja", ["==", ["get", "kategori"], ""]);
   }
 }
 
@@ -656,23 +655,29 @@ function updateMapForCategory(category) {
 const buttons = document.querySelectorAll(".btn-on-map");
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
-    // Ambil kategori dari tombol yang diklik
     const category = this.innerText.trim();
 
-    // Reset semua tombol
-    buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
+    // Cek apakah tombol yang sama diklik lagi
+    if (this.classList.contains("active_btn_peta")) {
+      // Reset semua tombol dan filter
+      buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
+      updateMapForCategory(null); // Menghilangkan semua titik
+    } else {
+      // Reset semua tombol
+      buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
 
-    // Aktifkan tombol yang diklik
-    this.classList.add("active_btn_peta");
+      // Aktifkan tombol yang diklik
+      this.classList.add("active_btn_peta");
 
-    // Perbarui peta berdasarkan kategori yang dipilih
-    updateMapForCategory(category);
+      // Perbarui peta berdasarkan kategori yang dipilih
+      updateMapForCategory(category);
+    }
   });
 });
-
 // Aktifkan tombol default ("Rumah Dijual")
 const defaultButton = document.getElementById("chip-rumah-dijual");
 defaultButton.classList.add("active_btn_peta");
+// defaultButton.click(); // Aktifkan tombol default ketika halaman dimuat
 
 $(
   ".mapboxgl-ctrl.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-geocoder.mapboxgl-ctrl, a.mapboxgl-ctrl-logo"
