@@ -4,6 +4,8 @@ import logoNew from "../images/new.png";
 import rumaha2 from "../images/Hunian/Rmh1/rumaha2.jpg";
 import heartOn from "../images/heart-on.png";
 import share from "../images/share.png";
+import badge3d from "../images/badge3d.svg";
+import Video1 from "../video/Video1.mp4";
 
 function getSliderDefaultOptions() {
   return {
@@ -702,10 +704,10 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 loop
                                 muted
                                 preload="metadata"
-                                src="./src/video/Video1.mp4"
+                                src="${Video1}"
                               ></video>
                               <div class="absolute h-10 w-10 top-0 end-0 ...">
-                                <img src="${logoNew}" alt="" />
+                                <img src="${nextArrowImg}" alt="" />
                               </div>
                             </div>
                             <!--  -->
@@ -716,7 +718,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 alt=""
                               />
                               <div class="absolute h-10 w-10 top-0 end-0 ...">
-                                <img src="${logoNew}" alt="" />
+                                <img src="${nextArrowImg}" alt="" />
                               </div>
                             </div>
                           </div>
@@ -760,7 +762,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   <div>
                                     <img
                                       class="w-4 h-4 object-cover"
-                                      src="./src/images/badge3d.svg"
+                                      src="${badge3d}"
                                       alt=""
                                     />
                                   </div>
