@@ -101,9 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
       radio.addEventListener("change", function () {
         switch (this.value) {
           case "Default":
-            map.setStyle(
-              "mapbox://styles/menthoelsr/ckp4wrapq11m117pf2lr49l5t"
-            );
+            map.setStyle("mapbox://styles/mapbox/streets-v11");
             break;
           case "Satellite":
             map.setStyle(
@@ -111,7 +109,9 @@ document.addEventListener("DOMContentLoaded", function () {
             );
             break;
           case "Street":
-            map.setStyle("mapbox://styles/mapbox/streets-v11");
+            map.setStyle(
+              "mapbox://styles/menthoelsr/ckp4wrapq11m117pf2lr49l5t"
+            );
             break;
         }
       });
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const map = new mapboxgl.Map({
   container: "mapSoaraja",
-  style: "mapbox://styles/menthoelsr/ckp4wrapq11m117pf2lr49l5t",
+  style: "mapbox://styles/mapbox/streets-v11",
   zoom: 14.5,
   center: [106.8295257, -6.210588],
   preserveDrawingBuffer: true,
@@ -501,7 +501,7 @@ if (controlGroup) {
   dropdown.style.marginTop = "-3.5rem";
   dropdown.innerHTML = `
 <div class="py-1">
-  <div class="flex items-center mb-4 px-2 pt-3 cursor-pointer">
+  <div class="flex items-center mb-3 px-2 cursor-pointer" style="padding-top:0.55rem;">
     <input checked id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
     <label for="radio-default" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
   </div>

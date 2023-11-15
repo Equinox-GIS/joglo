@@ -1523,6 +1523,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isTeksBerjalanActive = false;
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
         enable();
         // stopAndResetVideo();
         if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
@@ -1532,6 +1533,8 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuDuaTab":
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
+
         initSlickPasang();
 
         disable();
@@ -1545,6 +1548,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // console.log("MenuTigaTab");
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
+
         initSlickFavorit();
 
         // stopAndResetVideo();
@@ -1556,6 +1561,8 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuEmpatTab":
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
+
         // stopAndResetVideo();
         isTeksBerjalanActive = false;
         break;
@@ -1563,6 +1570,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
+
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1572,16 +1581,17 @@ document.addEventListener("DOMContentLoaded", function () {
         // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
+
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
-        // initSlickFavoritDua();
-
         break;
       case "MenuTujuhTab":
-        // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
+
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1591,42 +1601,49 @@ document.addEventListener("DOMContentLoaded", function () {
         // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
+
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         disable();
         break;
       case "MenuSembilanTab":
-        // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
+
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         disable();
         break;
       case "MenuSepuluhTab":
-        // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
+
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
         disable();
         break;
       case "MenuSebelasTab":
-        // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
+        CloseTabPesan();
+
         disable();
         break;
       case "MenuDuaBelasTab":
         // stopAndResetVideo();
         closeTab();
         closeTabDisukai();
+        CloseTabPesan();
+
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
@@ -1974,3 +1991,52 @@ window.closeTabDetailPesan = function () {
     activeName.classList.remove("font-semibold");
   }
 };
+
+// Mendefinisikan fungsi CloseTabPesan
+window.CloseTabPesan = function () {
+  document.querySelector(".konten-with-found-pesan").classList.add("hidden");
+  document.querySelector(".konten-not-found-pesan").classList.remove("hidden");
+
+  document
+    .querySelectorAll(".menus-pesan")
+    .forEach((el) => el.classList.remove("aktif-menu-pesan"));
+};
+
+// Menangani klik pada menu pesan
+document.querySelectorAll(".menus-pesan").forEach((item) => {
+  item.addEventListener("click", function () {
+    // Menghapus class aktif dari semua menu
+    document
+      .querySelectorAll(".menus-pesan")
+      .forEach((el) => el.classList.remove("aktif-menu-pesan"));
+
+    // Menambahkan class aktif ke menu yang diklik
+    this.classList.add("aktif-menu-pesan");
+
+    // Menampilkan konten dan menyembunyikan pesan 'not found'
+    document
+      .querySelector(".konten-with-found-pesan")
+      .classList.remove("hidden");
+    document.querySelector(".konten-not-found-pesan").classList.add("hidden");
+  });
+});
+
+// Pesan
+
+document.querySelectorAll(".menus-pesan").forEach((item) => {
+  item.addEventListener("click", function () {
+    // Menghapus class aktif dari semua menu
+    document
+      .querySelectorAll(".menus-pesan")
+      .forEach((el) => el.classList.remove("aktif-menu-pesan"));
+
+    // Menambahkan class aktif ke menu yang diklik
+    this.classList.add("aktif-menu-pesan");
+
+    // Menampilkan konten dan menyembunyikan pesan 'not found'
+    document
+      .querySelector(".konten-with-found-pesan")
+      .classList.remove("hidden");
+    document.querySelector(".konten-not-found-pesan").classList.add("hidden");
+  });
+});
