@@ -1994,6 +1994,8 @@ window.closeTabDetailPesan = function () {
 
 // Mendefinisikan fungsi CloseTabPesan
 window.CloseTabPesan = function () {
+  // console.log("CloseTabPesan"); 
+
   document.querySelector(".konten-with-found-pesan").classList.add("hidden");
   document.querySelector(".konten-not-found-pesan").classList.remove("hidden");
 
