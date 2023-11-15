@@ -534,6 +534,10 @@
   display: block;
 } */
 
+.aktif-menu-pesan {
+  @apply bg-gray-200;
+}
+
 .bg-aktif-menu {
   @apply bg-slate-200 rounded-lg;
 }
@@ -560,6 +564,14 @@
 
 .active_btn_kamar {
   @apply bg-blue-900 text-white border border-blue-900;
+}
+
+.default_pesan {
+  @apply grid grid-cols-1;
+}
+
+.default_pesan_aktif {
+  @apply grid grid-cols-[220px,1fr];
 }
 
 .slider-card-beranda {

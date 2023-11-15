@@ -101,9 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
       radio.addEventListener("change", function () {
         switch (this.value) {
           case "Default":
-            map.setStyle(
-              "mapbox://styles/menthoelsr/ckp4wrapq11m117pf2lr49l5t"
-            );
+            map.setStyle("mapbox://styles/mapbox/streets-v11");
             break;
           case "Satellite":
             map.setStyle(
@@ -111,7 +109,9 @@ document.addEventListener("DOMContentLoaded", function () {
             );
             break;
           case "Street":
-            map.setStyle("mapbox://styles/mapbox/streets-v11");
+            map.setStyle(
+              "mapbox://styles/menthoelsr/ckp4wrapq11m117pf2lr49l5t"
+            );
             break;
         }
       });
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const map = new mapboxgl.Map({
   container: "mapSoaraja",
-  style: "mapbox://styles/menthoelsr/ckp4wrapq11m117pf2lr49l5t",
+  style: "mapbox://styles/mapbox/streets-v11",
   zoom: 14.5,
   center: [106.8295257, -6.210588],
   preserveDrawingBuffer: true,
@@ -501,7 +501,7 @@ if (controlGroup) {
   dropdown.style.marginTop = "-3.5rem";
   dropdown.innerHTML = `
 <div class="py-1">
-  <div class="flex items-center mb-4 px-2 pt-3 cursor-pointer">
+  <div class="flex items-center mb-3 px-2 cursor-pointer" style="padding-top:0.55rem;">
     <input checked id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
     <label for="radio-default" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
   </div>
@@ -586,14 +586,14 @@ const pulsingDot = {
     context.clearRect(0, 0, this.width, this.height);
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
-    context.fillStyle = `rgba(105,179,231, ${1 - t})`;
-    context.fill();
+    // context.fillStyle = `rgba(105,179,231, ${1 - t})`;
+    // context.fill();
 
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
     context.fillStyle = "rgba(105,179,231, 1)";
     context.strokeStyle = "white";
-    context.lineWidth = 2 + 4 * (1 - t);
+    // context.lineWidth = 2 + 4 * (1 - t);
     context.fill();
     context.stroke();
 
@@ -627,7 +627,7 @@ const IzinGalian = () => {
     paint: {
       "text-color": "#374151",
     },
-    filter: ["==", "kategori", "rumah dijual"], // Default filter for 'rumah dijual'
+    filter: ["==", "kategori", "Rumah Dijual"], // Default filter for 'rumah dijual'
   });
 };
 
@@ -636,42 +636,39 @@ map.on("style.load", () => {
   IzinGalian();
 });
 
-// Function to update map for a specific category or default category
-function updateMapForCategory(category) {
-  if (category) {
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
-  } else {
-    // Jika tidak ada kategori yang dipilih, tampilkan kategori default "rumah dijual"
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", "rumah dijual"]);
-  }
-}
-
-// Activate default button
-const defaultButton = document.getElementById("chip-rumah-dijual");
-defaultButton.classList.add("active_btn_peta");
-
 // Button event listeners
 const buttons = document.querySelectorAll(".btn-on-map");
-// Button event listeners
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
+    // Ambil kategori dari tombol yang diklik
     const category = this.innerText.trim();
-    const isActive = this.classList.contains("active_btn_peta");
 
     // Reset semua tombol
     buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
 
-    if (!isActive) {
-      // Jika tombol tidak aktif, aktifkan dan perbarui filter peta
-      this.classList.add("active_btn_peta");
-      updateMapForCategory(category);
-    } else {
-      // Jika tombol sudah aktif dan diklik lagi, reset ke kategori default
-      updateMapForCategory(null); // Mengubah kembali ke kategori default
-      defaultButton.classList.add("active_btn_peta"); // Mengaktifkan kembali button default
-    }
+    // Aktifkan tombol yang diklik
+    this.classList.add("active_btn_peta");
+
+    // Perbarui peta berdasarkan kategori yang dipilih
+    updateMapForCategory(category);
+    // console.log(category);
   });
 });
+
+// Fungsi untuk memperbarui peta berdasarkan kategori
+function updateMapForCategory(category) {
+  console.log(category);
+  if (category) {
+    map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
+  } else {
+    // Jika tidak ada kategori yang dipilih, tampilkan kategori default "rumah dijual"
+    map.setFilter("layer-peta-soaraja", ["==", "kategori", "Rumah Dijual"]);
+  }
+}
+
+// Aktifkan tombol default ("Rumah Dijual")
+const defaultButton = document.getElementById("chip-rumah-dijual");
+defaultButton.classList.add("active_btn_peta");
 
 $(
   ".mapboxgl-ctrl.mapboxgl-ctrl-attrib, .mapboxgl-ctrl-geocoder.mapboxgl-ctrl, a.mapboxgl-ctrl-logo"

@@ -10,8 +10,8 @@
       },
       "properties": {
         "OBJECTID": 1600,
-        "sumber_data": "Citra Garden",
-        "kategori": "rumah dijual"
+        "sumber_data": "Rumah 1",
+        "kategori": "Rumah Dijual"
       }
     },
     {
@@ -23,8 +23,8 @@
       },
       "properties": {
         "OBJECTID": 1601,
-        "sumber_data": "BSD City",
-        "kategori": "rumah dijual"
+        "sumber_data": "Rumah 2",
+        "kategori": "Rumah Dijual"
       }
     },
     {
@@ -36,8 +36,8 @@
       },
       "properties": {
         "OBJECTID": 1602,
-        "sumber_data": "Green Lake City",
-        "kategori": "rumah dijual"
+        "sumber_data": "Rumah 3",
+        "kategori": "Rumah Dijual"
       }
     },
     {
@@ -49,8 +49,8 @@
       },
       "properties": {
         "OBJECTID": 1603,
-        "sumber_data": "Puri Indah",
-        "kategori": "rumah dijual"
+        "sumber_data": "Rumah 4",
+        "kategori": "Rumah Dijual"
       }
     },
     {
@@ -62,47 +62,49 @@
       },
       "properties": {
         "OBJECTID": 1604,
-        "sumber_data": "Sakura Garden City",
-        "kategori": "rumah dijual"
+        "sumber_data": "Rumah 5",
+        "kategori": "Rumah Dijual"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": 1676,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.8298774395393, -6.21187683292648]
+      },
+      "properties": {
+        "OBJECTID": 1644,
+        "kategori": "Tempat Ibadah",
+        "sumber_data": "Masjid 1"
       }
     },
     {
       "type": "Feature",
-      "id": 1605,
+      "id": 1677,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.81464104768405, -6.21487679248488]
+        "coordinates": [106.82323640992199, -6.207741340903282]
       },
       "properties": {
-        "OBJECTID": 1605,
-        "kategori": "tempat ibadah",
-        "sumber_data": "Citra Garden"
+        "OBJECTID": 1611,
+        "kategori": "Tempat Ibadah",
+        "sumber_data": "Masjid 2"
       }
     },
-    {
-      "type": "Feature",
-      "id": 1606,
-      "geometry": {
-        "type": "Point",
-        "coordinates": [106.82549862923777, -6.2190150993458655]
-      },
-      "properties": {
-        "OBJECTID": 1606,
-        "kategori": "tempat ibadah",
-        "sumber_data": "BSD City"
-      }
-    },
+
     {
       "type": "Feature",
       "id": 1607,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.83391003666814, -6.209287893250768]
+        "coordinates": [106.82370847853305, -6.206184113401858]
       },
       "properties": {
         "OBJECTID": 1607,
         "kategori": "Belanja",
-        "sumber_data": "Puri Indah"
+        "sumber_data": "Toko 1"
       }
     },
     {
@@ -110,38 +112,78 @@
       "id": 1608,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.8296185024657, -6.20194970670231]
+        "coordinates": [106.82566112659902, -6.20564014929476]
       },
       "properties": {
         "OBJECTID": 1608,
         "kategori": "Belanja",
-        "sumber_data": "Sakura Garden City"
+        "sumber_data": "Toko 2"
       }
     },
     {
       "type": "Feature",
-      "id": 1609,
+      "id": 1640,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.8313351161501, -6.214407497729598]
+        "coordinates": [106.82937796161119, -6.210311530607896]
       },
       "properties": {
-        "OBJECTID": 1609,
+        "OBJECTID": 1640,
         "kategori": "Sekolah",
-        "sumber_data": "Puri Indah"
+        "sumber_data": "Sekolah 1"
       }
     },
     {
       "type": "Feature",
-      "id": 1610,
+      "id": 1641,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.82541279893898, -6.220209655924755]
+        "coordinates": [106.82819778970318, -6.207261081866808]
       },
       "properties": {
-        "OBJECTID": 1610,
+        "OBJECTID": 1641,
         "kategori": "Sekolah",
-        "sumber_data": "BSD City"
+        "sumber_data": "Sekolah 2"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": 1642,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82809050134792, -6.208199683361217]
+      },
+      "properties": {
+        "OBJECTID": 1642,
+        "kategori": "Sekolah",
+        "sumber_data": "Sekolah 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1643,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82953638437363, -6.208994877178533]
+      },
+      "properties": {
+        "OBJECTID": 1643,
+        "kategori": "Sekolah",
+        "sumber_data": "Sekolah 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1644,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.8298774395393, -6.21187683292648]
+      },
+      "properties": {
+        "OBJECTID": 1644,
+        "kategori": "Sekolah",
+        "sumber_data": "Sekolah 5"
       }
     },
     {
@@ -149,12 +191,12 @@
       "id": 1611,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.81554226997271, -6.198237910615995]
+        "coordinates": [106.82323640992199, -6.207741340903282]
       },
       "properties": {
         "OBJECTID": 1611,
         "kategori": "Restoran",
-        "sumber_data": "Citra Garden"
+        "sumber_data": "Resto 1"
       }
     },
     {
@@ -167,7 +209,46 @@
       "properties": {
         "OBJECTID": 1612,
         "kategori": "Restoran",
-        "sumber_data": "BSD City"
+        "sumber_data": "Resto 2"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1630,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82851499700146, -6.208935923243965]
+      },
+      "properties": {
+        "OBJECTID": 1630,
+        "kategori": "Restoran",
+        "sumber_data": "Resto 3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1631,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82780689385666, -6.208039986742449]
+      },
+      "properties": {
+        "OBJECTID": 1631,
+        "kategori": "Restoran",
+        "sumber_data": "Resto 4"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1632,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82464188737609, -6.207272039956784]
+      },
+      "properties": {
+        "OBJECTID": 1632,
+        "kategori": "Restoran",
+        "sumber_data": "Resto 5"
       }
     },
     {
@@ -175,25 +256,40 @@
       "id": 1613,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.8365707876064, -6.202035035004004]
+        "coordinates": [106.82612246661766, -6.203090976671641]
       },
       "properties": {
         "OBJECTID": 1613,
         "kategori": "Transportasi",
-        "sumber_data": "Puri Indah"
+        "sumber_data": "Halte 1"
       }
     },
+
     {
       "type": "Feature",
-      "id": 1614,
+      "id": 1677,
       "geometry": {
         "type": "Point",
-        "coordinates": [106.83511166597468, -6.203570942719922]
+        "coordinates": [106.82819778970318, -6.207261081866808]
       },
       "properties": {
-        "OBJECTID": 1614,
+        "OBJECTID": 1677,
         "kategori": "Transportasi",
-        "sumber_data": "Puri Indah"
+        "sumber_data": "Halte 2"
+      }
+    },
+
+    {
+      "type": "Feature",
+      "id": 1648,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82809050134792, -6.208199683361217]
+      },
+      "properties": {
+        "OBJECTID": 1648,
+        "kategori": "Transportasi",
+        "sumber_data": "Halte 3"
       }
     }
   ]
