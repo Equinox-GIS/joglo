@@ -1609,6 +1609,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isTeksBerjalanActive = false;
         closeTab();
         closeTabDisukai();
+        ResetTabBeranda();
         // resetPortofolio();
         // CloseTabPesan();
         enable();
@@ -1648,6 +1649,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuEmpatTab":
         closeTab();
         closeTabDisukai();
+        ResetTabAgen();
         // CloseTabPesan();
 
         // stopAndResetVideo();
@@ -1677,6 +1679,7 @@ document.addEventListener("DOMContentLoaded", function () {
       case "MenuTujuhTab":
         closeTab();
         closeTabDisukai();
+        ResetTabPesan();
         // CloseTabPesan();
 
         isTeksBerjalanActive = true;
@@ -2198,4 +2201,28 @@ const MenuTabList = (count) => {
       pane.classList.remove("hidden");
     }
   });
+};
+
+const ResetTabAgen = () => {
+  Array.from(document.getElementsByClassName("card-agent")).forEach((elem) =>
+    elem.classList.remove("hidden")
+  );
+  Array.from(document.getElementsByClassName("card-agent-detail")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
+};
+
+const ResetTabPesan = () => {
+  Array.from(document.getElementsByClassName("konten-not-found-pesan")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
+  Array.from(
+    document.getElementsByClassName("konten-with-found-pesan")
+  ).forEach((elem) => elem.classList.add("hidden"));
+};
+
+const ResetTabBeranda = () => {
+  Array.from(document.getElementsByClassName("konten-dijual")).forEach((elem) =>
+    elem.classList.remove("hidden")
+  );
 };
