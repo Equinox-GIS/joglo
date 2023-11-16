@@ -571,6 +571,36 @@ let activeObjectId = null;
 
 // Define the size and custom style for the pulsing dot
 const size = 200;
+
+// Non-Pulsing Dot
+const nopulsingDot = {
+  width: size,
+  height: size,
+  data: new Uint8Array(size * size * 4),
+  onAdd: function () {
+    const canvas = document.createElement("canvas");
+    canvas.width = this.width;
+    canvas.height = this.height;
+    this.context = canvas.getContext("2d");
+  },
+  render: function () {
+    const radius = (size / 2) * 0.3;
+    const context = this.context;
+
+    context.clearRect(0, 0, this.width, this.height);
+    context.beginPath();
+    context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+    context.fillStyle = "rgba(105,179,231, 1)";
+    context.strokeStyle = "white";
+    context.lineWidth = 1;
+    context.fill();
+    context.stroke();
+
+    this.data = context.getImageData(0, 0, this.width, this.height).data;
+    return true;
+  },
+};
+
 const pulsingDot = {
   width: size,
   height: size,
@@ -584,6 +614,7 @@ const pulsingDot = {
   },
 
   render: function () {
+    const isActive = activeObjectId !== null;
     // console.log(object_id, activeObjectId);
     const duration = 1000;
     const t = (performance.now() % duration) / duration;
@@ -621,10 +652,11 @@ const pulsingDot = {
 // Function to add the layer with the pulsing dot
 const IzinGalian = () => {
   map.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
+  map.addImage("nopulsing-dot", nopulsingDot, { pixelRatio: 2 });
 
   map.addSource("layer-peta-soaraja", {
     type: "geojson",
-    data: "data-dumy.geojson", // Ensure this path is correct
+    data: "data-dumy.geojson", // Pastikan ini adalah jalur yang benar
   });
 
   map.addLayer({
@@ -632,7 +664,13 @@ const IzinGalian = () => {
     type: "symbol",
     source: "layer-peta-soaraja",
     layout: {
-      "icon-image": "pulsing-dot",
+      "icon-image": [
+        "case",
+        ["==", ["get", "OBJECTID"], activeObjectId],
+        "pulsing-dot",
+        "nopulsing-dot",
+      ],
+      "icon-allow-overlap": true,
       "icon-size": 0.25,
       "text-field": ["get", "sumber_data"],
       "text-offset": [1, 0],
@@ -642,10 +680,18 @@ const IzinGalian = () => {
     paint: {
       "text-color": "#374151",
     },
-    filter: ["==", "kategori", "Rumah Dijual"], // Default filter for 'rumah dijual'
+    filter: ["==", "kategori", "Rumah Dijual"],
+  });
+
+  // Cursor interactivity for layer-peta-soaraja
+  map.on("mouseenter", "layer-peta-soaraja", () => {
+    map.getCanvas().style.cursor = "pointer";
+  });
+
+  map.on("mouseleave", "layer-peta-soaraja", () => {
+    map.getCanvas().style.cursor = "";
   });
 };
-
 // Ensure this is called after the map loads
 map.on("style.load", () => {
   IzinGalian();
@@ -696,9 +742,18 @@ map.on("click", "layer-peta-soaraja", (e) => {
   const coordinates = e.features[0].geometry.coordinates.slice();
   const data = e.features[0].properties;
 
-  activeObjectId = data.OBJECTID;
-
-  // console.log(activeObjectId);
+  const clickedObjectId = e.features[0].properties.OBJECTID;
+  if (activeObjectId !== clickedObjectId) {
+    activeObjectId = clickedObjectId;
+    console.log(activeObjectId);
+    map.setLayoutProperty("layer-peta-soaraja", "icon-image", [
+      "case",
+      ["==", ["get", "OBJECTID"], activeObjectId],
+      "pulsing-dot",
+      "nopulsing-dot",
+    ]);
+    pulsingDot.render();
+  }
 
   // Panggil ulang render dengan OBJECTID yang aktif
   pulsingDot.render(activeObjectId);
