@@ -567,6 +567,8 @@ const popup = new mapboxgl.Popup({
   closeOnClick: true,
 });
 
+let activeObjectId = null;
+
 // Define the size and custom style for the pulsing dot
 const size = 200;
 const pulsingDot = {
@@ -582,6 +584,7 @@ const pulsingDot = {
   },
 
   render: function () {
+    // console.log(object_id, activeObjectId);
     const duration = 1000;
     const t = (performance.now() % duration) / duration;
 
@@ -592,14 +595,20 @@ const pulsingDot = {
     context.clearRect(0, 0, this.width, this.height);
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
-    context.fillStyle = `rgba(105,179,231, ${1 - t})`;
-    context.fill();
+    if (activeObjectId) {
+      // console.log("active");
+      context.fillStyle = `rgba(105,179,231, ${1 - t})`;
+      context.fill();
+    }
 
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
     context.fillStyle = "rgba(105,179,231, 1)";
     context.strokeStyle = "white";
-    context.lineWidth = 2 + 4 * (1 - t);
+    if (activeObjectId) {
+      context.lineWidth = 2 + 4 * (1 - t);
+      context.lineWidth = 2 + 4 * (1 - t);
+    }
     context.fill();
     context.stroke();
 
@@ -685,10 +694,18 @@ map.on("click", "layer-peta-soaraja", (e) => {
   // console.log(e);
   map.getCanvas().style.cursor = "pointer";
   const coordinates = e.features[0].geometry.coordinates.slice();
-  // const data = e.features[0].properties;
+  const data = e.features[0].properties;
+
+  activeObjectId = data.OBJECTID;
+
+  // console.log(activeObjectId);
+
+  // Panggil ulang render dengan OBJECTID yang aktif
+  pulsingDot.render(activeObjectId);
 
   const content = `
 <div class="w-full h-full"
+                        data-object-id="${data.OBJECTID}"
                         data-card-map="1534"
                         data-active-tab="1"
                         onclick="showCardInfoDetail(this)">
