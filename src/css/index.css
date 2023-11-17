@@ -183,8 +183,8 @@
 
 /* Navigator MapboxGL */
 .mapboxgl-ctrl-top-right {
-  right: -1vh !important;
-  top: 50vh !important;
+  right: 0vh !important;
+  top: 50.5vh !important;
 }
 
 .mapboxgl-ctrl-group {
