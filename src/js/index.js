@@ -1948,25 +1948,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
   window.ChangeModeCard = function (element) {
     clickCount++;
 
-    let FirstMode = document.querySelector(".mode-card-pertama");
+    let firstMode = document.querySelector(".mode-card-pertama");
     let secondMode = document.querySelector(".mode-card-kedua");
     let thirdMode = document.querySelector(".mode-card-ketiga");
     let fourthMode = document.querySelector(".mode-card-keempat");
 
     // Sembunyikan semua konten
-    [FirstMode, secondMode, thirdMode, fourthMode].forEach((el) => {
+    [firstMode, secondMode, thirdMode, fourthMode].forEach((el) => {
       if (el) el.classList.add("hidden");
     });
 
     // Tampilkan konten berdasarkan jumlah klik
     if (clickCount % 4 === 1) {
-      if (FirstMode) FirstMode.classList.remove("hidden");
-    } else if (clickCount % 4 === 2) {
+      // Jika ini klik pertama, tampilkan mode-card-kedua
       if (secondMode) secondMode.classList.remove("hidden");
-    } else if (clickCount % 4 === 3) {
-      if (thirdMode) thirdMode.classList.remove("hidden");
-    } else {
+    }
+    // else if (clickCount % 4 === 2) {
+    //   // Jika ini klik kedua, tampilkan mode-card-ketiga
+    //   if (thirdMode) thirdMode.classList.remove("hidden");
+    // }
+    else if (clickCount % 4 === 2) {
+      // Jika ini klik ketiga, tampilkan mode-card-keempat
       if (fourthMode) fourthMode.classList.remove("hidden");
+    } else {
+      // Jika ini klik keempat, kembali ke mode-card-pertama
+      if (firstMode) firstMode.classList.remove("hidden");
       clickCount = 0; // Reset click count
     }
   };
