@@ -165,6 +165,62 @@ dropdownMenuPencarian.addEventListener(
   )
 );
 
+// Inisialisasi Dropdown Pencarian
+const dropdownButtonPencarianPertama = document.getElementById(
+  "dropdown-button-pencarian-pertama"
+);
+const dropdownMenuPencarianPertama = document.getElementById(
+  "dropdown-menu-pencarian-pertama"
+);
+const arrowIconPencarianPertama = document.getElementById(
+  "arrow-icon-pencarian-pertama"
+);
+const selectedItemPencarianPertama = document.getElementById(
+  "selected-item-pencarian-pertama"
+);
+let isDropdownPencarianOpenPertama = false;
+
+dropdownButtonPencarianPertama.addEventListener("click", () => {
+  isDropdownPencarianOpenPertama = toggleDropdown(
+    dropdownMenuPencarianPertama,
+    arrowIconPencarianPertama,
+    isDropdownPencarianOpenPertama
+  );
+});
+dropdownMenuPencarianPertama.addEventListener(
+  "click",
+  selectDropdownItem(
+    selectedItemPencarianPertama,
+    dropdownMenuPencarianPertama,
+    arrowIconPencarianPertama,
+    isDropdownPencarianOpenPertama
+  )
+);
+
+// Inisialisasi Dropdown Agent
+const dropdownButtonAgent = document.getElementById("dropdown-button-agent");
+const dropdownMenuAgent = document.getElementById("dropdown-menu-agent");
+const arrowIconAgent = document.getElementById("arrow-icon-agent");
+const selectedItemAgent = document.getElementById("selected-item-agent");
+let isDropdownAgentOpen = false;
+
+dropdownButtonAgent.addEventListener("click", () => {
+  isDropdownAgentOpen = toggleDropdown(
+    dropdownMenuAgent,
+    arrowIconAgent,
+    isDropdownAgentOpen
+  );
+});
+dropdownMenuAgent.addEventListener(
+  "click",
+  selectDropdownItem(
+    selectedItemAgent,
+    dropdownMenuAgent,
+    arrowIconAgent,
+    isDropdownAgentOpen
+  )
+);
+
 // Inisialisasi Dropdown Disukai
 const dropdownButtonDisukai = document.getElementById(
   "dropdown-disukai-button"
@@ -1472,7 +1528,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // });
 
   element_btn_search.MenuEmpatTab.addEventListener("click", function () {
-    toggleMenuSearch(elemnt_konten_search, "tagSearchAgen");
+    toggleMenuSearch(elemnt_konten_search, "tagTeksBerjalan");
   });
 
   //
