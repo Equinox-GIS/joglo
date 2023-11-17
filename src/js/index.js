@@ -1943,21 +1943,34 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Change Mode
-function ChangeModeCard(element) {
-  let defaultContent = document.getElementById("konten_mode_card_default");
-  let fullContent = document.getElementById("konten_mode_card_full");
+document.addEventListener("DOMContentLoaded", (event) => {
+  let clickCount = 0;
+  window.ChangeModeCard = function (element) {
+    clickCount++;
 
-  // Jika konten default saat ini ditampilkan, sembunyikan dan tampilkan konten penuh
-  if (!defaultContent.classList.contains("hidden")) {
-    defaultContent.classList.add("hidden");
-    fullContent.classList.remove("hidden");
-  }
-  // Sebaliknya, tampilkan konten default dan sembunyikan konten penuh
-  else {
-    defaultContent.classList.remove("hidden");
-    fullContent.classList.add("hidden");
-  }
-}
+    let FirstMode = document.querySelector(".mode-card-pertama");
+    let secondMode = document.querySelector(".mode-card-kedua");
+    let thirdMode = document.querySelector(".mode-card-ketiga");
+    let fourthMode = document.querySelector(".mode-card-keempat");
+
+    // Sembunyikan semua konten
+    [FirstMode, secondMode, thirdMode, fourthMode].forEach((el) => {
+      if (el) el.classList.add("hidden");
+    });
+
+    // Tampilkan konten berdasarkan jumlah klik
+    if (clickCount % 4 === 1) {
+      if (FirstMode) FirstMode.classList.remove("hidden");
+    } else if (clickCount % 4 === 2) {
+      if (secondMode) secondMode.classList.remove("hidden");
+    } else if (clickCount % 4 === 3) {
+      if (thirdMode) thirdMode.classList.remove("hidden");
+    } else {
+      if (fourthMode) fourthMode.classList.remove("hidden");
+      clickCount = 0; // Reset click count
+    }
+  };
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = {
