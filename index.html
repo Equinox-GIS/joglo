@@ -5726,13 +5726,14 @@
 
                       <!-- Konten Tab Tujuh Beranda -->
                       <div
-                        class="hidden px-4 py-2"
+                        class="hidden py-2"
                         id="detail-beranda-tujuh"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-tujuh-tab"
                       >
-                        <div class="grid grid-cols-3 gap-2 py-5">
-                          <div></div>
+                        <!-- <div class="h-70 border border-red-500"></div> -->
+                        <div class="grid grid-cols-3 pt-20">
+                          <div class="w-full"></div>
 
                           <!-- Card Agent 1 -->
                           <div
@@ -5806,17 +5807,17 @@
                             </div>
                           </div>
 
-                          <div></div>
+                          <div class="w-full"></div>
                           <!--  -->
                         </div>
-                        <div class="grid grid-cols-3">
+                        <div class="grid grid-cols-3 pt-8">
                           <div></div>
                           <div class="flex justify-center">
                             <button
                               data-pesan="Mochtar Riady"
                               onclick="showMessage(this)"
                               type="button"
-                              class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                              class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-[#69B3E7] rounded-md"
                             >
                               <svg
                                 class="w-3 h-3 text-white me-2"
@@ -12313,13 +12314,13 @@
                         <div class="text-md font-bold flex-shrink-0">
                           Detail Agent Budiman Ali
                         </div>
-                        <div class="flex col justify-center py-1">
+                        <div class="flex col justify-center py-1 mt-1">
                           <div
                             onclick="closeDetailAgent()"
-                            class="flex justify-center items-center flex-col menus w-7 h-7 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                            class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
                           >
                             <div
-                              class="w-4 h-4 flex justify-center items-center relative"
+                              class="w-5 h-5 mt-0.5 mr-0.5 flex justify-center items-center relative"
                             >
                               <img src="./src/images/back.png" alt="" />
                             </div>
@@ -12330,494 +12331,501 @@
                       <!--  -->
 
                       <!-- card nama -->
-                      <!-- <div
-                        class="cursor-pointer w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                      >
-                        <div class="flex justify-end px-4 pt-4"></div>
-                        <div class="flex flex-col items-center pb-10">
-                          <img
-                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
-                            src="./src/images/user.png"
-                            alt="Bonnie image"
-                          />
-                          <h5
-                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white"
-                          >
-                            Mochtar Riady
-                          </h5>
-                          <span class="text-sm text-gray-500 dark:text-gray-400"
-                            >Visual Designer</span
-                          >
-                        </div>
-                      </div> -->
+                      <div class="h-[77vh] overflow-y-auto hide-scrollbar">
+                        <div>
+                          <div class="grid grid-cols-4 h-20 mt-8">
+                            <div></div>
 
-                      <div>
-                        <div
-                          class="grid grid-cols-4 h-20 border border-gray-400"
-                        >
-                          <!-- <div class="flex flex-col justify-center items-end">
-                            <img
-                              class="w-18 h-16 rounded-full"
-                              src="./src/images/model/model8.jpeg"
-                              alt="Rounded avatar"
-                            />
-                          </div> -->
-                          <div></div>
-
-                          <div class="col-span-2 border border-red-500">
-                            <div class="grid grid-cols-[100px,1fr]">
-                              <div
-                                class="flex flex-col justify-center items-center"
-                              >
-                                <img
-                                  class="w-18 h-16 rounded-full"
-                                  src="./src/images/model/model8.jpeg"
-                                  alt="Rounded avatar"
-                                />
-                              </div>
-                              <div class="grid grid-row-2 w-full h-full">
-                                <div class="font-semibold text-center">
-                                  Budiman Ali
-                                </div>
-                                <div
-                                  class="grid grid-cols-2 place-items-center border border-green-500"
-                                >
-                                  <div class="flex flex-col">
-                                    <div class="text-center">10</div>
-                                    <div>Listing</div>
+                            <div class="col-span-2">
+                              <div class="grid grid-rows-2">
+                                <div class="grid grid-cols-[100px,1fr]">
+                                  <div
+                                    class="flex flex-col justify-center items-center"
+                                  >
+                                    <div class="relative">
+                                      <img
+                                        class="w-18 h-24 p-1.5 rounded-full ring-2 ring-gray-300"
+                                        src="./src/images/model/model8.jpeg"
+                                        alt="Rounded avatar"
+                                      />
+                                      <span
+                                        class="bottom-3 left-20 absolute w-3.5 h-3.5 bg-[#ffb500] border-2 border-white dark:border-gray-800 rounded-full"
+                                      ></span>
+                                    </div>
                                   </div>
-                                  <div class="flex flex-col">
-                                    <div class="text-center">10</div>
-                                    <div>Terjual</div>
+                                  <div class="grid grid-row-2 w-full h-full">
+                                    <div
+                                      class="grid grid-cols-3 mt-2 place-items-center text-gray-700"
+                                    >
+                                      <div class="flex flex-col">
+                                        <div
+                                          class="text-center text-xl font-bold"
+                                        >
+                                          10
+                                        </div>
+                                        <div class="text-sm">Listing</div>
+                                      </div>
+                                      <div class="flex flex-col">
+                                        <div
+                                          class="text-center text-xl font-bold"
+                                        >
+                                          3
+                                        </div>
+                                        <div class="text-sm">Terjual</div>
+                                      </div>
+                                      <div class="flex flex-col">
+                                        <div
+                                          class="text-center text-xl font-bold"
+                                        >
+                                          5
+                                        </div>
+                                        <div class="text-sm">Aktif</div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
+                                <!--  -->
+                                <div class="grid grid-cols-1 mt-3">
+                                  <div
+                                    class="font-semibold text-lg text-gray-700"
+                                  >
+                                    Budiman Ali
+                                  </div>
+
+                                  <!--  -->
+                                  <div class="text-sm text-gray-700">
+                                    lorem ipsum dolor sit amet, consectetur
+                                    elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua. Ut enim ad
+                                    minim veniam, quis nostrud
+                                  </div>
+                                </div>
+                                <!--  -->
+                                <div class="flex justify-center pt-5 pb-5">
+                                  <button
+                                    data-pesan="Mochtar Riady"
+                                    onclick="showMessage(this)"
+                                    type="button"
+                                    class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-[#69B3E7] rounded-md"
+                                  >
+                                    Kirim Pesan
+                                  </button>
+                                </div>
+                                <!--  -->
                               </div>
                             </div>
-                          </div>
-                          <!-- <div class="flex flex-col border border-red-500">
-                            <div class="font-semibold text-center">
-                              Budiman Ali
-                            </div>
-                            <div class="text-center">10</div>
-                            <div class="text-center">Listing</div>
-                          </div>
-                          <div class="flex flex-col border border-red-500">
-                            <div class="font-semibold text-center">&nbsp;</div>
-                            <div class="text-center">10</div>
-                            <div class="text-center">Listing</div>
-                          </div> -->
-                          <div></div>
-                        </div>
-                      </div>
 
-                      <!-- card portofolio -->
-                      <div
-                        class="grid grid-cols-3 gap-2 mt-3 mode-card-keempat"
-                      >
-                        <!--  Card 1 -->
-                        <div
-                          class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                          data-active-tab="1"
-                          data-object-id="1604"
-                          onclick="showCardInfoDetail(this)"
-                        >
-                          <a href="#">
-                            <img
-                              class="rounded-t-lg"
-                              src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <div class="flex flex-col p-1 w-full">
-                            <!--  -->
-                            <div class="flex flex-row justify-between">
-                              <div>
-                                <div class="inline-flex items-center">
-                                  <h5
-                                    class="text-xl font-bold tracking-tight text-black"
-                                  >
-                                    Rp 11.300.000.000
-                                  </h5>
+                            <div></div>
+                          </div>
+                        </div>
+
+                        <!-- card portofolio -->
+                        <div class="grid grid-cols-3 gap-2 mt-[12.5rem]">
+                          <!--  Card 1 -->
+                          <div
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <a href="#">
+                              <img
+                                class="rounded-t-lg"
+                                src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                alt=""
+                              />
+                            </a>
+                            <div class="flex flex-col p-1 w-full">
+                              <!--  -->
+                              <div class="flex flex-row justify-between">
+                                <div>
+                                  <div class="inline-flex items-center">
+                                    <h5
+                                      class="text-xl font-bold tracking-tight text-black"
+                                    >
+                                      Rp 11.300.000.000
+                                    </h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-col mb-1.5 font-normal">
+                                <div class="text-xs pt-1 text-gray-700">
+                                  Sunter, Tanjung Priok, Jakarta Utara
+                                </div>
+                                <div class="text-[10px] pt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-row justify-between w-full">
+                                <div class="inline-flex">
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/heart-on.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/share.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/badge3d.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  <img
+                                    class="w-5 h-5 object-cover mr-1"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
                                 </div>
                               </div>
                             </div>
-                            <!--  -->
-                            <div class="flex flex-col mb-1.5 font-normal">
-                              <div class="text-xs pt-1 text-gray-700">
-                                Sunter, Tanjung Priok, Jakarta Utara
-                              </div>
-                              <div class="text-[10px] pt-1 text-gray-400">
-                                ERA JAKARTA
-                              </div>
-                            </div>
-                            <!--  -->
-                            <div class="flex flex-row justify-between w-full">
-                              <div class="inline-flex">
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/heart-on.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-4 h-4 object-cover mr-2"
-                                  src="./src/images/share.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/badge3d.svg"
-                                  alt=""
-                                />
-                              </div>
-                              <div>
-                                <img
-                                  class="w-5 h-5 object-cover mr-1"
-                                  src="./src/images/ad-off.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
                           </div>
-                        </div>
-                        <!--  Card 1 -->
-                        <div
-                          class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                          data-active-tab="1"
-                          data-object-id="1604"
-                          onclick="showCardInfoDetail(this)"
-                        >
-                          <a href="#">
-                            <img
-                              class="rounded-t-lg"
-                              src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <div class="flex flex-col p-1 w-full">
-                            <!--  -->
-                            <div class="flex flex-row justify-between">
-                              <div>
-                                <div class="inline-flex items-center">
-                                  <h5
-                                    class="text-xl font-bold tracking-tight text-black"
-                                  >
-                                    Rp 11.300.000.000
-                                  </h5>
+                          <!--  Card 1 -->
+                          <div
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <a href="#">
+                              <img
+                                class="rounded-t-lg"
+                                src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                alt=""
+                              />
+                            </a>
+                            <div class="flex flex-col p-1 w-full">
+                              <!--  -->
+                              <div class="flex flex-row justify-between">
+                                <div>
+                                  <div class="inline-flex items-center">
+                                    <h5
+                                      class="text-xl font-bold tracking-tight text-black"
+                                    >
+                                      Rp 11.300.000.000
+                                    </h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-col mb-1.5 font-normal">
+                                <div class="text-xs pt-1 text-gray-700">
+                                  Sunter, Tanjung Priok, Jakarta Utara
+                                </div>
+                                <div class="text-[10px] pt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-row justify-between w-full">
+                                <div class="inline-flex">
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/heart-on.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/share.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/badge3d.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  <img
+                                    class="w-5 h-5 object-cover mr-1"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
                                 </div>
                               </div>
                             </div>
-                            <!--  -->
-                            <div class="flex flex-col mb-1.5 font-normal">
-                              <div class="text-xs pt-1 text-gray-700">
-                                Sunter, Tanjung Priok, Jakarta Utara
-                              </div>
-                              <div class="text-[10px] pt-1 text-gray-400">
-                                ERA JAKARTA
-                              </div>
-                            </div>
-                            <!--  -->
-                            <div class="flex flex-row justify-between w-full">
-                              <div class="inline-flex">
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/heart-on.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-4 h-4 object-cover mr-2"
-                                  src="./src/images/share.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/badge3d.svg"
-                                  alt=""
-                                />
-                              </div>
-                              <div>
-                                <img
-                                  class="w-5 h-5 object-cover mr-1"
-                                  src="./src/images/ad-off.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
                           </div>
-                        </div>
-                        <!--  Card 1 -->
-                        <div
-                          class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                          data-active-tab="1"
-                          data-object-id="1604"
-                          onclick="showCardInfoDetail(this)"
-                        >
-                          <a href="#">
-                            <img
-                              class="rounded-t-lg"
-                              src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <div class="flex flex-col p-1 w-full">
-                            <!--  -->
-                            <div class="flex flex-row justify-between">
-                              <div>
-                                <div class="inline-flex items-center">
-                                  <h5
-                                    class="text-xl font-bold tracking-tight text-black"
-                                  >
-                                    Rp 11.300.000.000
-                                  </h5>
+                          <!--  Card 1 -->
+                          <div
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <a href="#">
+                              <img
+                                class="rounded-t-lg"
+                                src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                alt=""
+                              />
+                            </a>
+                            <div class="flex flex-col p-1 w-full">
+                              <!--  -->
+                              <div class="flex flex-row justify-between">
+                                <div>
+                                  <div class="inline-flex items-center">
+                                    <h5
+                                      class="text-xl font-bold tracking-tight text-black"
+                                    >
+                                      Rp 11.300.000.000
+                                    </h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-col mb-1.5 font-normal">
+                                <div class="text-xs pt-1 text-gray-700">
+                                  Sunter, Tanjung Priok, Jakarta Utara
+                                </div>
+                                <div class="text-[10px] pt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-row justify-between w-full">
+                                <div class="inline-flex">
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/heart-on.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/share.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/badge3d.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  <img
+                                    class="w-5 h-5 object-cover mr-1"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
                                 </div>
                               </div>
                             </div>
-                            <!--  -->
-                            <div class="flex flex-col mb-1.5 font-normal">
-                              <div class="text-xs pt-1 text-gray-700">
-                                Sunter, Tanjung Priok, Jakarta Utara
-                              </div>
-                              <div class="text-[10px] pt-1 text-gray-400">
-                                ERA JAKARTA
-                              </div>
-                            </div>
-                            <!--  -->
-                            <div class="flex flex-row justify-between w-full">
-                              <div class="inline-flex">
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/heart-on.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-4 h-4 object-cover mr-2"
-                                  src="./src/images/share.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/badge3d.svg"
-                                  alt=""
-                                />
-                              </div>
-                              <div>
-                                <img
-                                  class="w-5 h-5 object-cover mr-1"
-                                  src="./src/images/ad-off.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
                           </div>
-                        </div>
-                        <!--  Card 1 -->
-                        <div
-                          class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                          data-active-tab="1"
-                          data-object-id="1604"
-                          onclick="showCardInfoDetail(this)"
-                        >
-                          <a href="#">
-                            <img
-                              class="rounded-t-lg"
-                              src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <div class="flex flex-col p-1 w-full">
-                            <!--  -->
-                            <div class="flex flex-row justify-between">
-                              <div>
-                                <div class="inline-flex items-center">
-                                  <h5
-                                    class="text-xl font-bold tracking-tight text-black"
-                                  >
-                                    Rp 11.300.000.000
-                                  </h5>
+                          <!--  Card 1 -->
+                          <div
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <a href="#">
+                              <img
+                                class="rounded-t-lg"
+                                src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                alt=""
+                              />
+                            </a>
+                            <div class="flex flex-col p-1 w-full">
+                              <!--  -->
+                              <div class="flex flex-row justify-between">
+                                <div>
+                                  <div class="inline-flex items-center">
+                                    <h5
+                                      class="text-xl font-bold tracking-tight text-black"
+                                    >
+                                      Rp 11.300.000.000
+                                    </h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-col mb-1.5 font-normal">
+                                <div class="text-xs pt-1 text-gray-700">
+                                  Sunter, Tanjung Priok, Jakarta Utara
+                                </div>
+                                <div class="text-[10px] pt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-row justify-between w-full">
+                                <div class="inline-flex">
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/heart-on.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/share.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/badge3d.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  <img
+                                    class="w-5 h-5 object-cover mr-1"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
                                 </div>
                               </div>
                             </div>
-                            <!--  -->
-                            <div class="flex flex-col mb-1.5 font-normal">
-                              <div class="text-xs pt-1 text-gray-700">
-                                Sunter, Tanjung Priok, Jakarta Utara
-                              </div>
-                              <div class="text-[10px] pt-1 text-gray-400">
-                                ERA JAKARTA
-                              </div>
-                            </div>
-                            <!--  -->
-                            <div class="flex flex-row justify-between w-full">
-                              <div class="inline-flex">
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/heart-on.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-4 h-4 object-cover mr-2"
-                                  src="./src/images/share.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/badge3d.svg"
-                                  alt=""
-                                />
-                              </div>
-                              <div>
-                                <img
-                                  class="w-5 h-5 object-cover mr-1"
-                                  src="./src/images/ad-off.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
                           </div>
-                        </div>
-                        <!--  Card 1 -->
-                        <div
-                          class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                          data-active-tab="1"
-                          data-object-id="1604"
-                          onclick="showCardInfoDetail(this)"
-                        >
-                          <a href="#">
-                            <img
-                              class="rounded-t-lg"
-                              src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <div class="flex flex-col p-1 w-full">
-                            <!--  -->
-                            <div class="flex flex-row justify-between">
-                              <div>
-                                <div class="inline-flex items-center">
-                                  <h5
-                                    class="text-xl font-bold tracking-tight text-black"
-                                  >
-                                    Rp 11.300.000.000
-                                  </h5>
+                          <!--  Card 1 -->
+                          <div
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <a href="#">
+                              <img
+                                class="rounded-t-lg"
+                                src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                alt=""
+                              />
+                            </a>
+                            <div class="flex flex-col p-1 w-full">
+                              <!--  -->
+                              <div class="flex flex-row justify-between">
+                                <div>
+                                  <div class="inline-flex items-center">
+                                    <h5
+                                      class="text-xl font-bold tracking-tight text-black"
+                                    >
+                                      Rp 11.300.000.000
+                                    </h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-col mb-1.5 font-normal">
+                                <div class="text-xs pt-1 text-gray-700">
+                                  Sunter, Tanjung Priok, Jakarta Utara
+                                </div>
+                                <div class="text-[10px] pt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-row justify-between w-full">
+                                <div class="inline-flex">
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/heart-on.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/share.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/badge3d.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  <img
+                                    class="w-5 h-5 object-cover mr-1"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
                                 </div>
                               </div>
                             </div>
-                            <!--  -->
-                            <div class="flex flex-col mb-1.5 font-normal">
-                              <div class="text-xs pt-1 text-gray-700">
-                                Sunter, Tanjung Priok, Jakarta Utara
-                              </div>
-                              <div class="text-[10px] pt-1 text-gray-400">
-                                ERA JAKARTA
-                              </div>
-                            </div>
-                            <!--  -->
-                            <div class="flex flex-row justify-between w-full">
-                              <div class="inline-flex">
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/heart-on.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-4 h-4 object-cover mr-2"
-                                  src="./src/images/share.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/badge3d.svg"
-                                  alt=""
-                                />
-                              </div>
-                              <div>
-                                <img
-                                  class="w-5 h-5 object-cover mr-1"
-                                  src="./src/images/ad-off.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
                           </div>
-                        </div>
-                        <!--  Card 1 -->
-                        <div
-                          class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                          data-active-tab="1"
-                          data-object-id="1604"
-                          onclick="showCardInfoDetail(this)"
-                        >
-                          <a href="#">
-                            <img
-                              class="rounded-t-lg"
-                              src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                              alt=""
-                            />
-                          </a>
-                          <div class="flex flex-col p-1 w-full">
-                            <!--  -->
-                            <div class="flex flex-row justify-between">
-                              <div>
-                                <div class="inline-flex items-center">
-                                  <h5
-                                    class="text-xl font-bold tracking-tight text-black"
-                                  >
-                                    Rp 11.300.000.000
-                                  </h5>
+                          <!--  Card 1 -->
+                          <div
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <a href="#">
+                              <img
+                                class="rounded-t-lg"
+                                src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                alt=""
+                              />
+                            </a>
+                            <div class="flex flex-col p-1 w-full">
+                              <!--  -->
+                              <div class="flex flex-row justify-between">
+                                <div>
+                                  <div class="inline-flex items-center">
+                                    <h5
+                                      class="text-xl font-bold tracking-tight text-black"
+                                    >
+                                      Rp 11.300.000.000
+                                    </h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-col mb-1.5 font-normal">
+                                <div class="text-xs pt-1 text-gray-700">
+                                  Sunter, Tanjung Priok, Jakarta Utara
+                                </div>
+                                <div class="text-[10px] pt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-row justify-between w-full">
+                                <div class="inline-flex">
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/heart-on.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/share.png"
+                                    alt=""
+                                  />
+
+                                  <img
+                                    class="w-5 h-5 object-cover mr-2"
+                                    src="./src/images/badge3d.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  <img
+                                    class="w-5 h-5 object-cover mr-1"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
                                 </div>
                               </div>
                             </div>
-                            <!--  -->
-                            <div class="flex flex-col mb-1.5 font-normal">
-                              <div class="text-xs pt-1 text-gray-700">
-                                Sunter, Tanjung Priok, Jakarta Utara
-                              </div>
-                              <div class="text-[10px] pt-1 text-gray-400">
-                                ERA JAKARTA
-                              </div>
-                            </div>
-                            <!--  -->
-                            <div class="flex flex-row justify-between w-full">
-                              <div class="inline-flex">
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/heart-on.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-4 h-4 object-cover mr-2"
-                                  src="./src/images/share.png"
-                                  alt=""
-                                />
-
-                                <img
-                                  class="w-5 h-5 object-cover mr-2"
-                                  src="./src/images/badge3d.svg"
-                                  alt=""
-                                />
-                              </div>
-                              <div>
-                                <img
-                                  class="w-5 h-5 object-cover mr-1"
-                                  src="./src/images/ad-off.png"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
                           </div>
-                        </div>
 
-                        <!--  -->
+                          <!--  -->
+                        </div>
                       </div>
                       <!--  -->
                     </div>
