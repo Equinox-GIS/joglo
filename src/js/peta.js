@@ -1,6 +1,6 @@
 import prevArrowImg from "../images/prev.png";
 import nextArrowImg from "../images/next.png";
-import logoNew from "../images/new.png";
+import logoNew from "../images/new2.png";
 import rumaha2 from "../images/Hunian/Rmh1/rumaha2.jpg";
 import heartOn from "../images/heart-on.png";
 import share from "../images/share.png";
@@ -506,20 +506,21 @@ if (controlGroup) {
   dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
   dropdown.style.marginTop = "-3.5rem";
   dropdown.innerHTML = `
-<div class="py-1">
-  <div class="flex items-center mb-3 px-2 cursor-pointer" style="padding-top:0.55rem;">
-    <input checked id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-1 mt-2">
+  <div class="flex items-center mb-3 px-2 cursor-pointer">
+    <input checked="" id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
     <label for="radio-default" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
   </div>
-  <div class="flex items-center mb-4 px-2 cursor-pointer">
+  <div class="flex items-center mb-3 px-2 cursor-pointer">
     <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
     <label for="radio-satellite" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
   </div>
-  <div class="flex items-center px-2 pb-3 cursor-pointer">
+  <div class="flex items-center px-2 pb-2 cursor-pointer">
     <input id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
     <label for="radio-street" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
   </div>
 </div>
+
 `;
 
   // Append dropdown to the body or to a specific container
@@ -778,7 +779,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 preload="metadata"
                                 src="${Video1}"
                               ></video>
-                              <div class="absolute h-10 w-10 top-0 end-0 ...">
+                              <div class="absolute h-10 w-10 top-0">
                                 <img src="${logoNew}" alt="" />
                               </div>
                             </div>
@@ -789,7 +790,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 src="${rumaha2}"
                                 alt=""
                               />
-                              <div class="absolute h-10 w-10 top-0 end-0 ...">
+                              <div class="absolute h-10 w-10 top-0">
                                 <img src="${logoNew}" alt="" />
                               </div>
                             </div>
