@@ -903,6 +903,18 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
+function initSlickAgent() {
+  $(".slider-agent")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderDefaultOptions());
+}
+
 function initSlickPasang() {
   $(".slider-pasang")
     .on("init", function () {
@@ -986,6 +998,16 @@ $(document).ready(function () {
     $(this).get(0).pause();
   });
   resizePlayer($(".slider-favorit video"));
+
+  // Agent
+  $(".slider-agent video").on("mouseover", function () {
+    $(this).get(0).play();
+  });
+
+  $(".slider-agent video").on("mouseout", function () {
+    $(this).get(0).pause();
+  });
+  resizePlayer($(".slider-agent video"));
 
   // Pasang
   $(".slider-pasang video").on("mouseover", function () {
@@ -1707,6 +1729,8 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTabDisukai();
         ResetTabAgen();
         // CloseTabPesan();
+
+        initSlickAgent();
 
         // stopAndResetVideo();
         isTeksBerjalanActive = false;
