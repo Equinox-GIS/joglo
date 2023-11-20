@@ -11285,7 +11285,7 @@
             <div class="h-full flex flex-col">
               <!--  Card Agent -->
               <div
-                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar"
+                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar card-agent"
               >
                 <!-- Judul Agent -->
                 <div class="px-3 pt-2">
@@ -11498,7 +11498,8 @@
                     <div class="grid grid-cols-3 gap-2">
                       <!-- Card Agent 1 -->
                       <div
-                        class="py-2 px-1 grid grid-cols-[70px,1fr] items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        class="py-2 px-1 grid grid-cols-[70px,1fr] cursor-pointer items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        onclick="showCardAgentDetail(this)"
                       >
                         <div class="flex flex-col items-center">
                           <img
@@ -11571,7 +11572,8 @@
                       </div>
                       <!-- Card Agent 1 -->
                       <div
-                        class="py-2 px-1 grid grid-cols-[70px,1fr] items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        class="py-2 px-1 grid grid-cols-[70px,1fr] cursor-pointer items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        onclick="showCardAgentDetail(this)"
                       >
                         <div class="flex flex-col items-center">
                           <img
@@ -12265,6 +12267,238 @@
               </div>
 
               <!-- Card Detail Berandaxx -->
+              <div class="hidden card-agent-detail">
+                <div class="flex flex-col px-3 pt-2">
+                  <div class="w-full">
+                    <div class="flex flex-col">
+                      <!--  -->
+                      <div class="flex justify-between items-center">
+                        <div class="text-md font-bold flex-shrink-0">
+                          Detail Agent Mochtar Riady
+                        </div>
+                        <div class="flex col justify-center py-1">
+                          <div
+                            onclick="closeDetailAgent()"
+                            class="flex justify-center items-center flex-col menus w-7 h-7 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                          >
+                            <div
+                              class="w-4 h-4 flex justify-center items-center relative"
+                            >
+                              <img src="./src/images/back.png" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--  -->
+
+                      <!-- card nama -->
+                      <div
+                        class="cursor-pointer w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                      >
+                        <div class="flex justify-end px-4 pt-4"></div>
+                        <div class="flex flex-col items-center pb-10">
+                          <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src="./src/images/user.png"
+                            alt="Bonnie image"
+                          />
+                          <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white"
+                          >
+                            Mochtar Riady
+                          </h5>
+                          <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Visual Designer</span
+                          >
+                        </div>
+                      </div>
+
+                      <!-- card portofolio -->
+                      <div class="grid grid-cols-2 gap-2 mt-5">
+                        <!-- Card Beranda 1 -->
+                        <div
+                          class="w-full konten-dijual border border-gray-500"
+                        >
+                          <div
+                            class="flex flex-col cursor-pointer"
+                            data-card-map="1534"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <div class="w-full h-[27vh] relative">
+                              <div class="slider-card-beranda w-full h-full">
+                                <div class="relative h-[27vh]">
+                                  <img
+                                    class="w-full h-full object-cover"
+                                    src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                    alt=""
+                                  />
+                                  <div class="absolute h-12 w-12 top-0">
+                                    <img src="./src/images/new2.png" alt="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg"
+                              style="user-select: none"
+                            >
+                              <div class="flex flex-row justify-between">
+                                <div>
+                                  <a href="#">
+                                    <div class="inline-flex items-center">
+                                      <h5
+                                        class="text-xl font-bold tracking-tight text-black"
+                                      >
+                                        Rp 11.300.000.000
+                                      </h5>
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                        src="./src/images/heart-on.png"
+                                        alt=""
+                                      />
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-4 h-4 object-cover"
+                                        src="./src/images/share.png"
+                                        alt=""
+                                      />
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                        src="./src/images/badge3d.svg"
+                                        alt=""
+                                      />
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="flex items-center">
+                                  <img
+                                    class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="flex flex-col mb-2 font-normal">
+                                <div
+                                  class="flex items-center text-[11px] text-gray-700"
+                                >
+                                  <span class="mr-2">LT 80 m² |</span>
+                                  <span class="mr-2">LB 276 m² |</span>
+                                  <span class="mr-2">2 KT |</span>
+                                  <span class="mr-2">5 KM</span>
+                                </div>
+                                <div class="text-xs pt-1 text-gray-700">
+                                  Sunter, Tanjung Priok, Jakarta Utara
+                                </div>
+                                <div class="text-[10px] pt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Card Beranda 2 -->
+                        <div
+                          class="w-full konten-dijual border border-gray-500"
+                        >
+                          <div
+                            class="flex flex-col cursor-pointer"
+                            data-card-map="1534"
+                            data-active-tab="1"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <div class="w-full h-[27vh] relative">
+                              <div class="slider-card-beranda w-full h-full">
+                                <div class="relative h-[27vh]">
+                                  <img
+                                    class="w-full h-full object-cover"
+                                    src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                    alt=""
+                                  />
+                                  <div class="absolute h-12 w-12 top-0">
+                                    <img src="./src/images/new2.png" alt="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg"
+                              style="user-select: none"
+                            >
+                              <div class="flex flex-row justify-between">
+                                <div>
+                                  <a href="#">
+                                    <div class="inline-flex items-center">
+                                      <h5
+                                        class="text-xl font-bold tracking-tight text-black"
+                                      >
+                                        Rp 11.300.000.000
+                                      </h5>
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                        src="./src/images/heart-on.png"
+                                        alt=""
+                                      />
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-4 h-4 object-cover"
+                                        src="./src/images/share.png"
+                                        alt=""
+                                      />
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                        src="./src/images/badge3d.svg"
+                                        alt=""
+                                      />
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="flex items-center">
+                                  <img
+                                    class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="flex flex-col mb-2 font-normal">
+                                <div
+                                  class="flex items-center text-[11px] text-gray-700"
+                                >
+                                  <span class="mr-2">LT 80 m² |</span>
+                                  <span class="mr-2">LB 276 m² |</span>
+                                  <span class="mr-2">2 KT |</span>
+                                  <span class="mr-2">5 KM</span>
+                                </div>
+                                <div class="text-xs pt-1 text-gray-700">
+                                  Sunter, Tanjung Priok, Jakarta Utara
+                                </div>
+                                <div class="text-[10px] pt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--  -->
+                      </div>
+                      <!--  -->
+                    </div>
+
+                    <!--  -->
+                  </div>
+                </div>
+              </div>
 
               <!--  -->
             </div>
