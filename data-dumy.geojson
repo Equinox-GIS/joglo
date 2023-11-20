@@ -76,7 +76,7 @@
       },
       "properties": {
         "OBJECTID": 1644,
-        "kategori": "Tempat Ibadah",
+        "kategori": "Ibadah",
         "sumber_data": "Masjid 1"
       }
     },
@@ -89,7 +89,7 @@
       },
       "properties": {
         "OBJECTID": 1611,
-        "kategori": "Tempat Ibadah",
+        "kategori": "Ibadah",
         "sumber_data": "Masjid 2"
       }
     },

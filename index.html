@@ -1913,7 +1913,7 @@
                 class="absolute flex justify-center place-items-center top-3 w-full"
               >
                 <!-- Start Menu Chip Peta -->
-                <div class="pr-3">
+                <!-- <div class="pr-3">
                   <button
                     id="chip-rumah-dijual"
                     class="btn-on-map inline-flex justify-center items-center h-8 px-4 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-gray-700"
@@ -1922,7 +1922,7 @@
                       >Rumah Dijual</span
                     >
                   </button>
-                </div>
+                </div> -->
                 <div class="pr-3">
                   <button
                     id="chip-tempat-ibadah"
@@ -2216,8 +2216,8 @@
                                 preload="metadata"
                                 src="./src/video/Video1.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -2226,8 +2226,8 @@
                                 src="./src/images/Hunian/Rmh1/rumaha2.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -2329,8 +2329,8 @@
                                 src="./src/images/Hunian/Rmh2/rumahb2.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -2415,8 +2415,8 @@
                                 preload="metadata"
                                 src="./src/video/Video3.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -2425,8 +2425,8 @@
                                 src="./src/images/Hunian/Rmh3/rumahc1.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -2511,8 +2511,8 @@
                                 preload="metadata"
                                 src="./src/video/Video4.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -2521,8 +2521,8 @@
                                 src="./src/images/Hunian/Rmh4/rumahd1.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -2600,10 +2600,15 @@
                     <div class="flex flex-col h-full">
                       <div>
                         <!-- Mode Ke Dua -->
-                        <div class="grid grid-cols-3 gap-2 mb-2">
+                        <div
+                          class="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-2"
+                        >
                           <!-- Card Agent 1 -->
                           <div
-                            class="grid grid-cols-[88px,1fr] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            class="grid grid-cols-[88px,1fr] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
                           >
                             <div class="flex flex-col items-center">
                               <img
@@ -2611,20 +2616,18 @@
                                 src="./src/images/hunian/rmh4/rumahd4.jpg"
                               />
                             </div>
-                            <div class="flex flex-col ml-2 px-1 mt-1.5">
+                            <div class="flex flex-col ml-2 px-1 mt-1">
                               <div class="font-semibold text-sm">
                                 Rp 11.300.000.000
                               </div>
-
                               <div
                                 class="grid grid-cols-1 text-[11px] text-gray-700"
                               >
-                                <div class="">LT 80 m² LB 276 m²</div>
-                                <div class="">2 KT 5 KM</div>
+                                <div>LT 80 m² LB 276 m²</div>
+                                <div>2 KT 5 KM</div>
                               </div>
-                              <!--  -->
                               <div
-                                class="flex flex-row justify-between w-full mt-2 -ml-1"
+                                class="flex flex-row justify-between w-full mt-1 -ml-1 mb-1"
                               >
                                 <div class="inline-flex">
                                   <img
@@ -2632,13 +2635,11 @@
                                     src="./src/images/heart-on.png"
                                     alt=""
                                   />
-
                                   <img
                                     class="w-3 h-3 object-cover mr-2 mt-0.5"
                                     src="./src/images/share.png"
                                     alt=""
                                   />
-
                                   <img
                                     class="w-4 h-4 object-cover mr-2"
                                     src="./src/images/badge3d.svg"
@@ -2653,12 +2654,14 @@
                                   />
                                 </div>
                               </div>
-                              <!--  -->
                             </div>
                           </div>
                           <!-- Card Agent 1 -->
                           <div
-                            class="grid grid-cols-[88px,1fr] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            class="grid grid-cols-[88px,1fr] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
                           >
                             <div class="flex flex-col items-center">
                               <img
@@ -2666,20 +2669,18 @@
                                 src="./src/images/hunian/rmh4/rumahd4.jpg"
                               />
                             </div>
-                            <div class="flex flex-col ml-2 px-1 mt-1.5">
+                            <div class="flex flex-col ml-2 px-1 mt-1">
                               <div class="font-semibold text-sm">
                                 Rp 11.300.000.000
                               </div>
-
                               <div
                                 class="grid grid-cols-1 text-[11px] text-gray-700"
                               >
-                                <div class="">LT 80 m² LB 276 m²</div>
-                                <div class="">2 KT 5 KM</div>
+                                <div>LT 80 m² LB 276 m²</div>
+                                <div>2 KT 5 KM</div>
                               </div>
-                              <!--  -->
                               <div
-                                class="flex flex-row justify-between w-full mt-2 -ml-1"
+                                class="flex flex-row justify-between w-full mt-1 -ml-1 mb-1"
                               >
                                 <div class="inline-flex">
                                   <img
@@ -2687,13 +2688,11 @@
                                     src="./src/images/heart-on.png"
                                     alt=""
                                   />
-
                                   <img
                                     class="w-3 h-3 object-cover mr-2 mt-0.5"
                                     src="./src/images/share.png"
                                     alt=""
                                   />
-
                                   <img
                                     class="w-4 h-4 object-cover mr-2"
                                     src="./src/images/badge3d.svg"
@@ -2708,81 +2707,220 @@
                                   />
                                 </div>
                               </div>
-                              <!--  -->
                             </div>
                           </div>
                           <!-- Card Agent 1 -->
                           <div
-                            class="py-2 px-1 grid grid-cols-[70px,1fr] items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            class="grid grid-cols-[88px,1fr] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
                           >
                             <div class="flex flex-col items-center">
                               <img
-                                class="w-14 h-14 rounded-full m-2"
-                                src="./src/images/model/model9.jpg"
+                                class="w-full h-full rounded-l-lg object-cover"
+                                src="./src/images/hunian/rmh4/rumahd4.jpg"
                               />
                             </div>
-                            <div class="flex flex-col justify-center ml-2">
-                              <div class="font-semibold">Lionel Messi</div>
-                              <div class="text-xs">RayWhite Kebayoran Baru</div>
-                              <div class="mt-2 flex justify-between">
-                                <div>
-                                  <label
-                                    for="star-agent-utama"
-                                    class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
-                                  >
-                                    <div>
-                                      <label
-                                        for="star-agent-utama"
-                                        class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
-                                      >
-                                        <svg
-                                          class="w-4 h-4 text-yellow-300"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          fill="currentColor"
-                                          viewBox="0 0 22 20"
-                                        >
-                                          <path
-                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                          ></path>
-                                        </svg>
-                                        <svg
-                                          class="w-4 h-4 text-yellow-300"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          fill="currentColor"
-                                          viewBox="0 0 22 20"
-                                        >
-                                          <path
-                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                          ></path>
-                                        </svg>
-                                        <svg
-                                          class="w-4 h-4 text-gray-300"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          fill="currentColor"
-                                          viewBox="0 0 22 20"
-                                        >
-                                          <path
-                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                          ></path>
-                                        </svg>
-                                      </label>
-                                    </div>
-                                  </label>
-                                </div>
-                                <div class="mr-2 mt-0.5">
+                            <div class="flex flex-col ml-2 px-1 mt-1">
+                              <div class="font-semibold text-sm">
+                                Rp 11.300.000.000
+                              </div>
+                              <div
+                                class="grid grid-cols-1 text-[11px] text-gray-700"
+                              >
+                                <div>LT 80 m² LB 276 m²</div>
+                                <div>2 KT 5 KM</div>
+                              </div>
+                              <div
+                                class="flex flex-row justify-between w-full mt-1 -ml-1 mb-1"
+                              >
+                                <div class="inline-flex">
                                   <img
-                                    class="w-3.5 h-3.5"
-                                    src="./src/images/trophy/trophy3.png"
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/heart-on.png"
+                                    alt=""
+                                  />
+                                  <img
+                                    class="w-3 h-3 object-cover mr-2 mt-0.5"
+                                    src="./src/images/share.png"
+                                    alt=""
+                                  />
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/badge3d.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  <img
+                                    class="w-4 h-4 object-cover"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
                                   />
                                 </div>
                               </div>
                             </div>
                           </div>
-
-                          <!--  -->
+                          <!-- Card Agent 1 -->
+                          <div
+                            class="grid grid-cols-[88px,1fr] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <div class="flex flex-col items-center">
+                              <img
+                                class="w-full h-full rounded-l-lg object-cover"
+                                src="./src/images/hunian/rmh4/rumahd4.jpg"
+                              />
+                            </div>
+                            <div class="flex flex-col ml-2 px-1 mt-1">
+                              <div class="font-semibold text-sm">
+                                Rp 11.300.000.000
+                              </div>
+                              <div
+                                class="grid grid-cols-1 text-[11px] text-gray-700"
+                              >
+                                <div>LT 80 m² LB 276 m²</div>
+                                <div>2 KT 5 KM</div>
+                              </div>
+                              <div
+                                class="flex flex-row justify-between w-full mt-1 -ml-1 mb-1"
+                              >
+                                <div class="inline-flex">
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/heart-on.png"
+                                    alt=""
+                                  />
+                                  <img
+                                    class="w-3 h-3 object-cover mr-2 mt-0.5"
+                                    src="./src/images/share.png"
+                                    alt=""
+                                  />
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/badge3d.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  <img
+                                    class="w-4 h-4 object-cover"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Card Agent 1 -->
+                          <div
+                            class="grid grid-cols-[88px,1fr] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <div class="flex flex-col items-center">
+                              <img
+                                class="w-full h-full rounded-l-lg object-cover"
+                                src="./src/images/hunian/rmh4/rumahd4.jpg"
+                              />
+                            </div>
+                            <div class="flex flex-col ml-2 px-1 mt-1">
+                              <div class="font-semibold text-sm">
+                                Rp 11.300.000.000
+                              </div>
+                              <div
+                                class="grid grid-cols-1 text-[11px] text-gray-700"
+                              >
+                                <div>LT 80 m² LB 276 m²</div>
+                                <div>2 KT 5 KM</div>
+                              </div>
+                              <div
+                                class="flex flex-row justify-between w-full mt-1 -ml-1 mb-1"
+                              >
+                                <div class="inline-flex">
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/heart-on.png"
+                                    alt=""
+                                  />
+                                  <img
+                                    class="w-3 h-3 object-cover mr-2 mt-0.5"
+                                    src="./src/images/share.png"
+                                    alt=""
+                                  />
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/badge3d.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  <img
+                                    class="w-4 h-4 object-cover"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Card Agent 1 -->
+                          <div
+                            class="grid grid-cols-[88px,1fr] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <div class="flex flex-col items-center">
+                              <img
+                                class="w-full h-full rounded-l-lg object-cover"
+                                src="./src/images/hunian/rmh4/rumahd4.jpg"
+                              />
+                            </div>
+                            <div class="flex flex-col ml-2 px-1 mt-1">
+                              <div class="font-semibold text-sm">
+                                Rp 11.300.000.000
+                              </div>
+                              <div
+                                class="grid grid-cols-1 text-[11px] text-gray-700"
+                              >
+                                <div>LT 80 m² LB 276 m²</div>
+                                <div>2 KT 5 KM</div>
+                              </div>
+                              <div
+                                class="flex flex-row justify-between w-full mt-1 -ml-1 mb-1"
+                              >
+                                <div class="inline-flex">
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/heart-on.png"
+                                    alt=""
+                                  />
+                                  <img
+                                    class="w-3 h-3 object-cover mr-2 mt-0.5"
+                                    src="./src/images/share.png"
+                                    alt=""
+                                  />
+                                  <img
+                                    class="w-4 h-4 object-cover mr-2"
+                                    src="./src/images/badge3d.svg"
+                                    alt=""
+                                  />
+                                </div>
+                                <div>
+                                  <img
+                                    class="w-4 h-4 object-cover"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2946,9 +3084,12 @@
                         <div
                           class="grid grid-cols-3 gap-2 mt-3 mode-card-keempat"
                         >
-                          <!--  -->
+                          <!--  Card 1 -->
                           <div
-                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
                           >
                             <a href="#">
                               <img
@@ -3010,9 +3151,12 @@
                               </div>
                             </div>
                           </div>
-                          <!--  -->
+                          <!--  Card 1 -->
                           <div
-                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
                           >
                             <a href="#">
                               <img
@@ -3074,9 +3218,12 @@
                               </div>
                             </div>
                           </div>
-                          <!--  -->
+                          <!--  Card 1 -->
                           <div
-                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
                           >
                             <a href="#">
                               <img
@@ -3138,10 +3285,12 @@
                               </div>
                             </div>
                           </div>
-                          <!--  -->
-                          <!--  -->
+                          <!--  Card 1 -->
                           <div
-                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
                           >
                             <a href="#">
                               <img
@@ -3203,9 +3352,12 @@
                               </div>
                             </div>
                           </div>
-                          <!--  -->
+                          <!--  Card 1 -->
                           <div
-                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
                           >
                             <a href="#">
                               <img
@@ -3267,9 +3419,12 @@
                               </div>
                             </div>
                           </div>
-                          <!--  -->
+                          <!--  Card 1 -->
                           <div
-                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
                           >
                             <a href="#">
                               <img
@@ -3331,200 +3486,6 @@
                               </div>
                             </div>
                           </div>
-                          <!--  -->
-                          <!--  -->
-                          <div
-                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                          >
-                            <a href="#">
-                              <img
-                                class="rounded-t-lg"
-                                src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                                alt=""
-                              />
-                            </a>
-                            <div class="flex flex-col p-1 w-full">
-                              <!--  -->
-                              <div class="flex flex-row justify-between">
-                                <div>
-                                  <div class="inline-flex items-center">
-                                    <h5
-                                      class="text-xl font-bold tracking-tight text-black"
-                                    >
-                                      Rp 11.300.000.000
-                                    </h5>
-                                  </div>
-                                </div>
-                              </div>
-                              <!--  -->
-                              <div class="flex flex-col mb-1.5 font-normal">
-                                <div class="text-xs pt-1 text-gray-700">
-                                  Sunter, Tanjung Priok, Jakarta Utara
-                                </div>
-                                <div class="text-[10px] pt-1 text-gray-400">
-                                  ERA JAKARTA
-                                </div>
-                              </div>
-                              <!--  -->
-                              <div class="flex flex-row justify-between w-full">
-                                <div class="inline-flex">
-                                  <img
-                                    class="w-5 h-5 object-cover mr-2"
-                                    src="./src/images/heart-on.png"
-                                    alt=""
-                                  />
-
-                                  <img
-                                    class="w-4 h-4 object-cover mr-2"
-                                    src="./src/images/share.png"
-                                    alt=""
-                                  />
-
-                                  <img
-                                    class="w-5 h-5 object-cover mr-2"
-                                    src="./src/images/badge3d.svg"
-                                    alt=""
-                                  />
-                                </div>
-                                <div>
-                                  <img
-                                    class="w-5 h-5 object-cover mr-1"
-                                    src="./src/images/ad-off.png"
-                                    alt=""
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!--  -->
-                          <div
-                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                          >
-                            <a href="#">
-                              <img
-                                class="rounded-t-lg"
-                                src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                                alt=""
-                              />
-                            </a>
-                            <div class="flex flex-col p-1 w-full">
-                              <!--  -->
-                              <div class="flex flex-row justify-between">
-                                <div>
-                                  <div class="inline-flex items-center">
-                                    <h5
-                                      class="text-xl font-bold tracking-tight text-black"
-                                    >
-                                      Rp 11.300.000.000
-                                    </h5>
-                                  </div>
-                                </div>
-                              </div>
-                              <!--  -->
-                              <div class="flex flex-col mb-1.5 font-normal">
-                                <div class="text-xs pt-1 text-gray-700">
-                                  Sunter, Tanjung Priok, Jakarta Utara
-                                </div>
-                                <div class="text-[10px] pt-1 text-gray-400">
-                                  ERA JAKARTA
-                                </div>
-                              </div>
-                              <!--  -->
-                              <div class="flex flex-row justify-between w-full">
-                                <div class="inline-flex">
-                                  <img
-                                    class="w-5 h-5 object-cover mr-2"
-                                    src="./src/images/heart-on.png"
-                                    alt=""
-                                  />
-
-                                  <img
-                                    class="w-4 h-4 object-cover mr-2"
-                                    src="./src/images/share.png"
-                                    alt=""
-                                  />
-
-                                  <img
-                                    class="w-5 h-5 object-cover mr-2"
-                                    src="./src/images/badge3d.svg"
-                                    alt=""
-                                  />
-                                </div>
-                                <div>
-                                  <img
-                                    class="w-5 h-5 object-cover mr-1"
-                                    src="./src/images/ad-off.png"
-                                    alt=""
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!--  -->
-                          <div
-                            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                          >
-                            <a href="#">
-                              <img
-                                class="rounded-t-lg"
-                                src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                                alt=""
-                              />
-                            </a>
-                            <div class="flex flex-col p-1 w-full">
-                              <!--  -->
-                              <div class="flex flex-row justify-between">
-                                <div>
-                                  <div class="inline-flex items-center">
-                                    <h5
-                                      class="text-xl font-bold tracking-tight text-black"
-                                    >
-                                      Rp 11.300.000.000
-                                    </h5>
-                                  </div>
-                                </div>
-                              </div>
-                              <!--  -->
-                              <div class="flex flex-col mb-1.5 font-normal">
-                                <div class="text-xs pt-1 text-gray-700">
-                                  Sunter, Tanjung Priok, Jakarta Utara
-                                </div>
-                                <div class="text-[10px] pt-1 text-gray-400">
-                                  ERA JAKARTA
-                                </div>
-                              </div>
-                              <!--  -->
-                              <div class="flex flex-row justify-between w-full">
-                                <div class="inline-flex">
-                                  <img
-                                    class="w-5 h-5 object-cover mr-2"
-                                    src="./src/images/heart-on.png"
-                                    alt=""
-                                  />
-
-                                  <img
-                                    class="w-4 h-4 object-cover mr-2"
-                                    src="./src/images/share.png"
-                                    alt=""
-                                  />
-
-                                  <img
-                                    class="w-5 h-5 object-cover mr-2"
-                                    src="./src/images/badge3d.svg"
-                                    alt=""
-                                  />
-                                </div>
-                                <div>
-                                  <img
-                                    class="w-5 h-5 object-cover mr-1"
-                                    src="./src/images/ad-off.png"
-                                    alt=""
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!--  -->
 
                           <!--  -->
                         </div>
@@ -3560,15 +3521,6 @@
                         </div>
                       </div>
                     </div>
-
-                    <!-- <div class="flex items-start">
-                      <img
-                        class="w-7 h-7 object-cover cursor-pointer"
-                        onclick="closeTab()"
-                        src="./src/images/back.png"
-                        alt=""
-                      />
-                    </div> -->
                   </div>
 
                   <!-- Menu Tab -->
@@ -3683,6 +3635,22 @@
                           Kontak
                         </button>
                       </li>
+
+                      <!-- Menu Tab Delapan Beranda -->
+                      <li class="" role="presentation">
+                        <button
+                          class="inline-block px-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                          id="detail-beranda-delapan-tab"
+                          data-tabs-target="#detail-beranda-delapan"
+                          type="button"
+                          role="tab"
+                          aria-controls="detail-beranda-delapan"
+                          aria-selected="true"
+                        >
+                          Survey
+                        </button>
+                      </li>
+
                       <!--  -->
                     </ul>
                   </div>
@@ -5834,6 +5802,17 @@
                           <!--  -->
                         </div>
                       </div>
+
+                      <!-- Konten Tab Delapan Beranda -->
+
+                      <div
+                        class="hidden px-4 py-2"
+                        id="detail-beranda-delapan"
+                        role="tabpanel"
+                        aria-labelledby="detail-beranda-delapan-tab"
+                      >
+                        Tab Survey
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5962,8 +5941,8 @@
                                 preload="metadata"
                                 src="./src/video/Video1.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <!--  -->
@@ -5973,8 +5952,8 @@
                                 src="./src/images/Hunian/Rmh1/rumaha2.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -6060,8 +6039,8 @@
                                 preload="metadata"
                                 src="./src/video/Video2.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <!--  -->
@@ -6071,8 +6050,8 @@
                                 src="./src/images/Hunian/Rmh2/rumahb2.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -6158,8 +6137,8 @@
                                 preload="metadata"
                                 src="./src/video/Video3.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <!--  -->
@@ -6169,8 +6148,8 @@
                                 src="./src/images/Hunian/Rmh3/rumahc1.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -6256,8 +6235,8 @@
                                 preload="metadata"
                                 src="./src/video/Video4.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <!--  -->
@@ -6267,8 +6246,8 @@
                                 src="./src/images/Hunian/Rmh4/rumahd1.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -6360,6 +6339,19 @@
                         src="./src/images/back.png"
                         alt=""
                       />
+                    </div>
+
+                    <div class="flex col justify-center py-1">
+                      <div
+                        onclick="closeTabPencarianDua()"
+                        class="flex justify-center items-center flex-col menus w-7 h-7 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                      >
+                        <div
+                          class="w-4 h-4 flex justify-center items-center relative"
+                        >
+                          <img src="./src/images/back.png" alt="" />
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -8290,18 +8282,21 @@
             <div class="h-full flex flex-col">
               <!--  Card Pasang -->
               <div class="px-3 pt-2">
-                <div
-                  class="w-full flex justify-between items-center border border-red-500"
-                >
+                <div class="w-full flex justify-between items-center">
                   <div class="font-semibold text-xl">Pasangg</div>
                   <!--  -->
-                  <div class="flex items-start">
-                    <img
-                      class="w-7 h-7 object-cover cursor-pointer"
+
+                  <div class="flex col justify-center py-1">
+                    <div
                       onclick="closeTabPasang()"
-                      src="./src/images/back.png"
-                      alt=""
-                    />
+                      class="flex justify-center items-center flex-col menus w-7 h-7 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                    >
+                      <div
+                        class="w-4 h-4 flex justify-center items-center relative"
+                      >
+                        <img src="./src/images/back.png" alt="" />
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -8640,8 +8635,8 @@
                                 preload="metadata"
                                 src="./src/video/Video1.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -8650,8 +8645,8 @@
                                 src="./src/images/Hunian/Rmh1/rumaha2.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -8736,8 +8731,8 @@
                                 preload="metadata"
                                 src="./src/video/Video2.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -8746,8 +8741,8 @@
                                 src="./src/images/Hunian/Rmh2/rumahb2.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -8832,8 +8827,8 @@
                                 preload="metadata"
                                 src="./src/video/Video3.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -8842,8 +8837,8 @@
                                 src="./src/images/Hunian/Rmh3/rumahc2.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -8928,8 +8923,8 @@
                                 preload="metadata"
                                 src="./src/video/Video4.mp4"
                               ></video>
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                             <div class="relative h-[27vh]">
@@ -8938,8 +8933,8 @@
                                 src="./src/images/Hunian/Rmh4/rumahd2.jpg"
                                 alt=""
                               />
-                              <div class="absolute h-12 w-12 top-0 end-0 ...">
-                                <img src="./src/images/new.png" alt="" />
+                              <div class="absolute h-12 w-12 top-0">
+                                <img src="./src/images/new2.png" alt="" />
                               </div>
                             </div>
                           </div>
@@ -9021,13 +9016,17 @@
                       Rumah Favorit Impian Strategis Dijual! Segera Miliki
                       Hunian Eksklusif di Lokasi Prime!
                     </div>
-                    <div class="flex items-start">
-                      <img
-                        class="w-7 h-7 object-cover cursor-pointer"
+                    <div class="flex col justify-center py-1">
+                      <div
                         onclick="closeTabDisukai()"
-                        src="./src/images/back.png"
-                        alt=""
-                      />
+                        class="flex justify-center items-center flex-col menus w-7 h-7 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                      >
+                        <div
+                          class="w-4 h-4 flex justify-center items-center relative"
+                        >
+                          <img src="./src/images/back.png" alt="" />
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -11287,7 +11286,7 @@
             <div class="h-full flex flex-col">
               <!--  Card Agent -->
               <div
-                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar"
+                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar card-agent"
               >
                 <!-- Judul Agent -->
                 <div class="px-3 pt-2">
@@ -11500,7 +11499,8 @@
                     <div class="grid grid-cols-3 gap-2">
                       <!-- Card Agent 1 -->
                       <div
-                        class="py-2 px-1 grid grid-cols-[70px,1fr] items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        class="py-2 px-1 grid grid-cols-[70px,1fr] cursor-pointer items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        onclick="showCardAgentDetail(this)"
                       >
                         <div class="flex flex-col items-center">
                           <img
@@ -11573,7 +11573,8 @@
                       </div>
                       <!-- Card Agent 1 -->
                       <div
-                        class="py-2 px-1 grid grid-cols-[70px,1fr] items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        class="py-2 px-1 grid grid-cols-[70px,1fr] cursor-pointer items-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        onclick="showCardAgentDetail(this)"
                       >
                         <div class="flex flex-col items-center">
                           <img
@@ -12267,6 +12268,238 @@
               </div>
 
               <!-- Card Detail Berandaxx -->
+              <div class="hidden card-agent-detail">
+                <div class="flex flex-col px-3 pt-2">
+                  <div class="w-full">
+                    <div class="flex flex-col">
+                      <!--  -->
+                      <div class="flex justify-between items-center">
+                        <div class="text-md font-bold flex-shrink-0">
+                          Detail Agent Mochtar Riady
+                        </div>
+                        <div class="flex col justify-center py-1">
+                          <div
+                            onclick="closeDetailAgent()"
+                            class="flex justify-center items-center flex-col menus w-7 h-7 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                          >
+                            <div
+                              class="w-4 h-4 flex justify-center items-center relative"
+                            >
+                              <img src="./src/images/back.png" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!--  -->
+
+                      <!-- card nama -->
+                      <div
+                        class="cursor-pointer w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                      >
+                        <div class="flex justify-end px-4 pt-4"></div>
+                        <div class="flex flex-col items-center pb-10">
+                          <img
+                            class="w-24 h-24 mb-3 rounded-full shadow-lg"
+                            src="./src/images/user.png"
+                            alt="Bonnie image"
+                          />
+                          <h5
+                            class="mb-1 text-xl font-medium text-gray-900 dark:text-white"
+                          >
+                            Mochtar Riady
+                          </h5>
+                          <span class="text-sm text-gray-500 dark:text-gray-400"
+                            >Visual Designer</span
+                          >
+                        </div>
+                      </div>
+
+                      <!-- card portofolio -->
+                      <div class="grid grid-cols-2 gap-2 mt-5">
+                        <!-- Card Beranda 1 -->
+                        <div
+                          class="w-full konten-dijual border border-gray-500"
+                        >
+                          <div
+                            class="flex flex-col cursor-pointer"
+                            data-card-map="1534"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <div class="w-full h-[27vh] relative">
+                              <div class="slider-card-beranda w-full h-full">
+                                <div class="relative h-[27vh]">
+                                  <img
+                                    class="w-full h-full object-cover"
+                                    src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                    alt=""
+                                  />
+                                  <div class="absolute h-12 w-12 top-0">
+                                    <img src="./src/images/new2.png" alt="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg"
+                              style="user-select: none"
+                            >
+                              <div class="flex flex-row justify-between">
+                                <div>
+                                  <a href="#">
+                                    <div class="inline-flex items-center">
+                                      <h5
+                                        class="text-xl font-bold tracking-tight text-black"
+                                      >
+                                        Rp 11.300.000.000
+                                      </h5>
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                        src="./src/images/heart-on.png"
+                                        alt=""
+                                      />
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-4 h-4 object-cover"
+                                        src="./src/images/share.png"
+                                        alt=""
+                                      />
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                        src="./src/images/badge3d.svg"
+                                        alt=""
+                                      />
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="flex items-center">
+                                  <img
+                                    class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="flex flex-col mb-2 font-normal">
+                                <div
+                                  class="flex items-center text-[11px] text-gray-700"
+                                >
+                                  <span class="mr-2">LT 80 m² |</span>
+                                  <span class="mr-2">LB 276 m² |</span>
+                                  <span class="mr-2">2 KT |</span>
+                                  <span class="mr-2">5 KM</span>
+                                </div>
+                                <div class="text-xs pt-1 text-gray-700">
+                                  Sunter, Tanjung Priok, Jakarta Utara
+                                </div>
+                                <div class="text-[10px] pt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Card Beranda 2 -->
+                        <div
+                          class="w-full konten-dijual border border-gray-500"
+                        >
+                          <div
+                            class="flex flex-col cursor-pointer"
+                            data-card-map="1534"
+                            data-active-tab="1"
+                            onclick="showCardInfoDetail(this)"
+                          >
+                            <div class="w-full h-[27vh] relative">
+                              <div class="slider-card-beranda w-full h-full">
+                                <div class="relative h-[27vh]">
+                                  <img
+                                    class="w-full h-full object-cover"
+                                    src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                    alt=""
+                                  />
+                                  <div class="absolute h-12 w-12 top-0">
+                                    <img src="./src/images/new2.png" alt="" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="px-3 pt-1.5 pb-0 bg-white rounded-b-lg"
+                              style="user-select: none"
+                            >
+                              <div class="flex flex-row justify-between">
+                                <div>
+                                  <a href="#">
+                                    <div class="inline-flex items-center">
+                                      <h5
+                                        class="text-xl font-bold tracking-tight text-black"
+                                      >
+                                        Rp 11.300.000.000
+                                      </h5>
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                        src="./src/images/heart-on.png"
+                                        alt=""
+                                      />
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-4 h-4 object-cover"
+                                        src="./src/images/share.png"
+                                        alt=""
+                                      />
+
+                                      <img
+                                        class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                        src="./src/images/badge3d.svg"
+                                        alt=""
+                                      />
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="flex items-center">
+                                  <img
+                                    class="ml-3 -mt-0.5 w-5 h-5 object-cover"
+                                    src="./src/images/ad-off.png"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="flex flex-col mb-2 font-normal">
+                                <div
+                                  class="flex items-center text-[11px] text-gray-700"
+                                >
+                                  <span class="mr-2">LT 80 m² |</span>
+                                  <span class="mr-2">LB 276 m² |</span>
+                                  <span class="mr-2">2 KT |</span>
+                                  <span class="mr-2">5 KM</span>
+                                </div>
+                                <div class="text-xs pt-1 text-gray-700">
+                                  Sunter, Tanjung Priok, Jakarta Utara
+                                </div>
+                                <div class="text-[10px] pt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--  -->
+                      </div>
+                      <!--  -->
+                    </div>
+
+                    <!--  -->
+                  </div>
+                </div>
+              </div>
 
               <!--  -->
             </div>
@@ -12281,22 +12514,26 @@
           >
             <div class="flex flex-col konten-pesan">
               <!-- Judul Pesan -->
-              <div class="px-3 grid grid-cols-[220px,1fr] pt-2">
+              <div class="px-3 grid grid-cols-[220px,1fr] pt-2 items-center">
                 <div
-                  class="font-semibold text-xl border-l-2 border-gray-300 border-y-2 border-gray-300"
+                  class="font-semibold text-xl border-l-2 border-gray-300 border-y-2 flex justify-start items-center"
                 >
                   Pesan
                 </div>
 
                 <div
-                  class="flex justify-end items-center text-lg pr-1 border-y-2 border-gray-300 border-r-2 border-gray-300"
+                  class="flex justify-end items-center text-lg pr-1 border-y-2 border-gray-300 border-r-2"
                 >
-                  <img
-                    class="w-7 h-7 object-cover cursor-pointer"
+                  <div
                     onclick="CloseTabPesan()"
-                    src="./src/images/back.png"
-                    alt=""
-                  />
+                    class="flex justify-center items-center flex-col menus w-7 h-7 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                  >
+                    <div
+                      class="w-4 h-4 flex justify-center items-center relative"
+                    >
+                      <img src="./src/images/back.png" alt="" />
+                    </div>
+                  </div>
                 </div>
               </div>
 
