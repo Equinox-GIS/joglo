@@ -2004,14 +2004,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //   if (thirdMode) thirdMode.classList.remove("hidden");
     // }
     else if (clickCount % 4 === 2) {
-      initSlickCardInfo("slider-card-mode-kedua");
-
       // Jika ini klik ketiga, tampilkan mode-card-keempat
       if (fourthMode) fourthMode.classList.remove("hidden");
     } else {
-      initSlickCardInfo("slider-card-mode-keempat");
-      initSlickCardInfo("slider-card-mode-kedua");
-
       // Jika ini klik keempat, kembali ke mode-card-pertama
       if (firstMode) firstMode.classList.remove("hidden");
       clickCount = 0; // Reset click count
