@@ -816,8 +816,8 @@ function getSliderDefaultOptions() {
   };
 }
 
-function initSlickCardInfo() {
-  var $slider = $(".slider-card-beranda");
+function initSlickCardInfo(sliderClass) {
+  var $slider = $("." + sliderClass);
   var $mediaElements = $slider.find("img, video");
   var mediaLoadedCount = 0;
 
@@ -962,7 +962,7 @@ function addClickHandlerToDots() {
 // -------------------Start Slider-------------------
 
 $(document).ready(function () {
-  initSlickCardInfo();
+  initSlickCardInfo("slider-card-beranda");
 });
 
 function playInFullscreen(videoElement) {
@@ -1692,9 +1692,18 @@ document.addEventListener("DOMContentLoaded", function () {
         // CloseTabPesan();
         enable();
         // stopAndResetVideo();
+        // Menginisialisasi setiap slider
         if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
-          initSlickCardInfo();
+          initSlickCardInfo("slider-card-beranda");
         }
+
+        // if (!$(".slider-card-mode-kedua").hasClass("slick-initialized")) {
+        //   initSlickCardInfo("slider-card-mode-kedua");
+        // }
+
+        // if (!$(".slider-card-mode-keempat").hasClass("slick-initialized")) {
+        //   initSlickCardInfo("slider-card-mode-keempat");
+        // }
         break;
       case "MenuDuaTab":
         closeTab();
@@ -1857,6 +1866,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  // close konten dropdown button
+
   //
 });
 
@@ -1883,10 +1894,11 @@ document.addEventListener("DOMContentLoaded", () => {
       input.classList.toggle("bg-transparent", !disabled);
       input.classList.toggle("bg-gray-200", disabled);
       if (withBorder) {
-        input.style.borderBottom = "1px solid";
-      } else {
-        input.style.border = "none";
+        input.style.borderBottom = "1px solid rgb(229, 231, 235)";
       }
+      // else {
+      //   input.style.borderBottom = "1px solid";
+      // }
     });
   };
 
@@ -1984,6 +1996,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // Tampilkan konten berdasarkan jumlah klik
     if (clickCount % 4 === 1) {
+      // initSlickCardInfo("slider-card-mode-kedua");
+
       // Jika ini klik pertama, tampilkan mode-card-kedua
       if (secondMode) secondMode.classList.remove("hidden");
     }
@@ -1993,6 +2007,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // }
     else if (clickCount % 4 === 2) {
       // Jika ini klik ketiga, tampilkan mode-card-keempat
+      // initSlickCardInfo("slider-card-mode-keempat");
+
       if (fourthMode) fourthMode.classList.remove("hidden");
     } else {
       // Jika ini klik keempat, kembali ke mode-card-pertama

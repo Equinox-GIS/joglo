@@ -505,6 +505,18 @@
 }
 
 /* Menghilangkan tanda panah pada browser yang menggunakan Webkit (seperti Chrome dan Safari) */
+#minInputCicilan::-webkit-inner-spin-button,
+#minInputCicilan::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Menghilangkan tanda panah pada Firefox */
+#minInputCicilan {
+  -moz-appearance: textfield;
+}
+
+/* Menghilangkan tanda panah pada browser yang menggunakan Webkit (seperti Chrome dan Safari) */
 #maxInput::-webkit-inner-spin-button,
 #maxInput::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -513,6 +525,17 @@
 
 /* Menghilangkan tanda panah pada Firefox */
 #maxInput {
+  -moz-appearance: textfield;
+}
+/*  */
+#maxInputCicilan::-webkit-inner-spin-button,
+#maxInputCicilan::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Menghilangkan tanda panah pada Firefox */
+#maxInputCicilan {
   -moz-appearance: textfield;
 }
 
@@ -559,7 +582,7 @@
 }
 
 .active_btn_tag {
-  @apply bg-blue-500 text-white border-white;
+  @apply bg-[#69B3E7] text-white border-white;
 }
 
 .active_btn_kamar {

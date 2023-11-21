@@ -506,21 +506,20 @@ if (controlGroup) {
   dropdown.style.marginRight = "10px"; // memberikan margin ke kanan
   dropdown.style.marginTop = "-3.5rem";
   dropdown.innerHTML = `
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-1 mt-2">
-  <div class="flex items-center mb-3 px-2 cursor-pointer">
-    <input checked="" id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
+<div class="py-1">
+  <div class="flex items-center mb-3 px-2 cursor-pointer" style="padding-top:0.55rem;">
+    <input checked id="radio-default" type="radio" value="Default" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
     <label for="radio-default" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Default</label>
   </div>
-  <div class="flex items-center mb-3 px-2 cursor-pointer">
+  <div class="flex items-center mb-2 mt-2 px-2 cursor-pointer">
     <input id="radio-satellite" type="radio" value="Satellite" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
     <label for="radio-satellite" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Satellite</label>
   </div>
-  <div class="flex items-center px-2 pb-2 cursor-pointer">
+  <div class="flex items-center px-2 pb-3 cursor-pointer">
     <input id="radio-street" type="radio" value="Street" name="map-layer" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0">
     <label for="radio-street" class="ml-2 text-sm font-medium cursor-pointer text-gray-900 dark:text-gray-300">Street</label>
   </div>
 </div>
-
 `;
 
   // Append dropdown to the body or to a specific container
@@ -698,35 +697,53 @@ map.on("style.load", () => {
   IzinGalian();
 });
 
+let activeCategories = ["Rumah Dijual"]; // Mulai dengan "Rumah Dijual" sebagai default
+
+// Fungsi untuk memperbarui peta berdasarkan kategori
+function updateMapForCategory() {
+  let filter = ["any", ["==", "kategori", "Rumah Dijual"]]; // Selalu tampilkan "Rumah Dijual"
+  activeCategories.forEach((category) => {
+    if (category !== "Rumah Dijual") {
+      filter.push(["==", "kategori", category]);
+    }
+  });
+  map.setFilter("layer-peta-soaraja", filter);
+}
 // Button event listeners
 const buttons = document.querySelectorAll(".btn-on-map");
+// Button event listeners
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
-    // Ambil kategori dari tombol yang diklik
     const category = this.innerText.trim();
 
-    // Reset semua tombol
-    buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
+    // Jika kategori bukan "Rumah Dijual", atur ulang kategori aktif
+    if (category !== "Rumah Dijual") {
+      // Cek apakah kategori ini sudah aktif
+      const categoryIndex = activeCategories.indexOf(category);
+      if (categoryIndex > -1) {
+        // Jika sudah aktif, hapus kategori dari daftar aktif dan hilangkan kelas aktif
+        activeCategories.splice(categoryIndex, 1);
+        this.classList.remove("active_btn_peta");
+      } else {
+        // Jika belum aktif, tambahkan kategori ke daftar aktif
+        // Hapus kelas aktif dari semua tombol kecuali "Rumah Dijual" dan tambahkan ke tombol ini
+        buttons.forEach((btn) => {
+          if (btn.innerText.trim() !== "Rumah Dijual") {
+            btn.classList.remove("active_btn_peta");
+          }
+        });
+        this.classList.add("active_btn_peta");
+        activeCategories.push(category);
+      }
+    }
 
-    // Aktifkan tombol yang diklik
-    this.classList.add("active_btn_peta");
-
-    // Perbarui peta berdasarkan kategori yang dipilih
-    updateMapForCategory(category);
-    // console.log(category);
+    // Perbarui peta
+    updateMapForCategory();
   });
 });
 
-// Fungsi untuk memperbarui peta berdasarkan kategori
-function updateMapForCategory(category) {
-  console.log(category);
-  if (category) {
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
-  } else {
-    // Jika tidak ada kategori yang dipilih, tampilkan kategori default "rumah dijual"
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", "Rumah Dijual"]);
-  }
-}
+// Inisialisasi peta dengan kategori default
+updateMapForCategory();
 
 // Aktifkan tombol default ("Rumah Dijual")
 const defaultButton = document.getElementById("chip-rumah-dijual");
