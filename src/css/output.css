@@ -1274,6 +1274,10 @@ input:checked + .toggle-bg {
   margin-right: 0.5rem;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .mt-0 {
   margin-top: 0px;
 }
@@ -1310,8 +1314,8 @@ input:checked + .toggle-bg {
   margin-top: 2rem;
 }
 
-.mt-\[12\.5rem\] {
-  margin-top: 12.5rem;
+.mt-\[14\.5rem\] {
+  margin-top: 14.5rem;
 }
 
 .block {
@@ -1434,12 +1438,20 @@ input:checked + .toggle-bg {
   height: 16vh;
 }
 
+.h-\[19vh\] {
+  height: 19vh;
+}
+
 .h-\[27vh\] {
   height: 27vh;
 }
 
 .h-\[30vh\] {
   height: 30vh;
+}
+
+.h-\[44vh\] {
+  height: 44vh;
 }
 
 .h-\[50vh\] {
@@ -1458,8 +1470,8 @@ input:checked + .toggle-bg {
   height: 67vh;
 }
 
-.h-\[73\.5vh\] {
-  height: 73.5vh;
+.h-\[70\.5vh\] {
+  height: 70.5vh;
 }
 
 .h-\[77\.5vh\] {
@@ -1602,8 +1614,20 @@ input:checked + .toggle-bg {
   width: 26vw;
 }
 
+.w-\[4\.5rem\] {
+  width: 4.5rem;
+}
+
+.w-\[5\.5rem\] {
+  width: 5.5rem;
+}
+
 .w-\[50vw\] {
   width: 50vw;
+}
+
+.w-\[6rem\] {
+  width: 6rem;
 }
 
 .w-full {
@@ -1753,16 +1777,12 @@ input:checked + .toggle-bg {
   grid-template-columns: 100px 1fr;
 }
 
+.grid-cols-\[1fr\2c 29px\] {
+  grid-template-columns: 1fr 29px;
+}
+
 .grid-cols-\[220px\2c 1fr\] {
   grid-template-columns: 220px 1fr;
-}
-
-.grid-cols-\[29px\2c 1fr\] {
-  grid-template-columns: 29px 1fr;
-}
-
-.grid-cols-\[30px\2c 1fr\] {
-  grid-template-columns: 30px 1fr;
 }
 
 .grid-cols-\[55px\2c 1fr\] {
@@ -1973,19 +1993,9 @@ input:checked + .toggle-bg {
   border-end-end-radius: 0.5rem;
 }
 
-.rounded-l-\[0\.5rem\] {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
-
 .rounded-l-lg {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
-}
-
-.rounded-r-\[0\.5rem\] {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
 }
 
 .rounded-r-lg {
@@ -2058,10 +2068,6 @@ input:checked + .toggle-bg {
   border-right-width: 2px;
 }
 
-.border-t {
-  border-top-width: 1px;
-}
-
 .border-t-2 {
   border-top-width: 2px;
 }
@@ -2085,11 +2091,6 @@ input:checked + .toggle-bg {
   border-color: rgb(26 86 219 / var(--tw-border-opacity));
 }
 
-.border-blue-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(35 56 118 / var(--tw-border-opacity));
-}
-
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
@@ -2110,6 +2111,16 @@ input:checked + .toggle-bg {
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
 }
 
+.border-green-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 159 110 / var(--tw-border-opacity));
+}
+
+.border-purple-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(144 97 249 / var(--tw-border-opacity));
+}
+
 .border-red-500 {
   --tw-border-opacity: 1;
   border-color: rgb(240 82 82 / var(--tw-border-opacity));
@@ -2122,6 +2133,11 @@ input:checked + .toggle-bg {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-yellow-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(194 120 3 / var(--tw-border-opacity));
 }
 
 .bg-\[\#69B3E7\] {
@@ -2176,6 +2192,11 @@ input:checked + .toggle-bg {
 
 .bg-gray-900\/50 {
   background-color: rgb(17 24 39 / 0.5);
+}
+
+.bg-purple-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(172 148 250 / var(--tw-bg-opacity));
 }
 
 .bg-slate-200 {
@@ -2330,10 +2351,6 @@ input:checked + .toggle-bg {
 
 .pb-4 {
   padding-bottom: 1rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
 }
 
 .pl-1 {
@@ -2521,11 +2538,6 @@ input:checked + .toggle-bg {
 .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
-}
-
-.text-blue-900 {
-  --tw-text-opacity: 1;
-  color: rgb(35 56 118 / var(--tw-text-opacity));
 }
 
 .text-gray-300 {
@@ -3229,6 +3241,20 @@ input:checked + .toggle-bg {
 
 /* Menghilangkan tanda panah pada browser yang menggunakan Webkit (seperti Chrome dan Safari) */
 
+#minInputCicilan::-webkit-inner-spin-button,
+#minInputCicilan::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Menghilangkan tanda panah pada Firefox */
+
+#minInputCicilan {
+  -moz-appearance: textfield;
+}
+
+/* Menghilangkan tanda panah pada browser yang menggunakan Webkit (seperti Chrome dan Safari) */
+
 #maxInput::-webkit-inner-spin-button,
 #maxInput::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -3238,6 +3264,20 @@ input:checked + .toggle-bg {
 /* Menghilangkan tanda panah pada Firefox */
 
 #maxInput {
+  -moz-appearance: textfield;
+}
+
+/*  */
+
+#maxInputCicilan::-webkit-inner-spin-button,
+#maxInputCicilan::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Menghilangkan tanda panah pada Firefox */
+
+#maxInputCicilan {
   -moz-appearance: textfield;
 }
 
@@ -3298,7 +3338,7 @@ input:checked + .toggle-bg {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(63 131 248 / var(--tw-bg-opacity));
+  background-color: rgb(105 179 231 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
