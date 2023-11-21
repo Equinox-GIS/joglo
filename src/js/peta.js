@@ -701,29 +701,29 @@ map.on("style.load", () => {
 const buttons = document.querySelectorAll(".btn-on-map");
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
-    // Ambil kategori dari tombol yang diklik
     const category = this.innerText.trim();
 
-    // Reset semua tombol
-    buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
-
-    // Aktifkan tombol yang diklik
-    this.classList.add("active_btn_peta");
-
-    // Perbarui peta berdasarkan kategori yang dipilih
-    updateMapForCategory(category);
-    // console.log(category);
+    // Cek apakah tombol ini sudah aktif
+    if (this.classList.contains("active_btn_peta")) {
+      // Jika sudah aktif, nonaktifkan
+      this.classList.remove("active_btn_peta");
+      updateMapForCategory(null); // Nonaktifkan kategori pada peta
+    } else {
+      // Jika belum aktif, aktifkan dan nonaktifkan tombol lain
+      buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
+      this.classList.add("active_btn_peta");
+      updateMapForCategory(category); // Perbarui peta berdasarkan kategori yang dipilih
+    }
   });
 });
 
 // Fungsi untuk memperbarui peta berdasarkan kategori
 function updateMapForCategory(category) {
-  console.log(category);
   if (category) {
     map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
   } else {
-    // Jika tidak ada kategori yang dipilih, tampilkan kategori default "rumah dijual"
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", "Rumah Dijual"]);
+    // Jika tidak ada kategori yang dipilih, tampilkan semua kategori atau sembunyikan
+    map.setFilter("layer-peta-soaraja", ["==", "kategori", "Rumah Dijual"]); // Atau sesuaikan filter sesuai kebutuhan
   }
 }
 
