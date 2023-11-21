@@ -816,8 +816,9 @@ function getSliderDefaultOptions() {
   };
 }
 
-function initSlickCardInfo() {
-  var $slider = $(".slider-card-beranda");
+function initSlickCardInfo(sliderClass) {
+  console.log(sliderClass);
+  var $slider = $("." + sliderClass);
   var $mediaElements = $slider.find("img, video");
   var mediaLoadedCount = 0;
 
@@ -962,7 +963,9 @@ function addClickHandlerToDots() {
 // -------------------Start Slider-------------------
 
 $(document).ready(function () {
-  initSlickCardInfo();
+  initSlickCardInfo("slider-card-beranda");
+  initSlickCardInfo("slider-card-mode-kedua");
+  initSlickCardInfo("slider-card-mode-keempat");
 });
 
 function playInFullscreen(videoElement) {
@@ -1692,8 +1695,17 @@ document.addEventListener("DOMContentLoaded", function () {
         // CloseTabPesan();
         enable();
         // stopAndResetVideo();
+        // Menginisialisasi setiap slider
         if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
-          initSlickCardInfo();
+          initSlickCardInfo("slider-card-beranda");
+        }
+
+        if (!$(".slider-card-mode-kedua").hasClass("slick-initialized")) {
+          initSlickCardInfo("slider-card-mode-kedua");
+        }
+
+        if (!$(".slider-card-mode-keempat").hasClass("slick-initialized")) {
+          initSlickCardInfo("slider-card-mode-keempat");
         }
         break;
       case "MenuDuaTab":
