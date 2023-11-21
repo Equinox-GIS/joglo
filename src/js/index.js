@@ -1996,6 +1996,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // Tampilkan konten berdasarkan jumlah klik
     if (clickCount % 4 === 1) {
+      initSlickCardInfo("slider-card-mode-kedua");
+
       // Jika ini klik pertama, tampilkan mode-card-kedua
       if (secondMode) secondMode.classList.remove("hidden");
     }
@@ -2005,6 +2007,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // }
     else if (clickCount % 4 === 2) {
       // Jika ini klik ketiga, tampilkan mode-card-keempat
+      initSlickCardInfo("slider-card-mode-keempat");
+
       if (fourthMode) fourthMode.classList.remove("hidden");
     } else {
       // Jika ini klik keempat, kembali ke mode-card-pertama
