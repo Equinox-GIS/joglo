@@ -1697,13 +1697,13 @@ document.addEventListener("DOMContentLoaded", function () {
           initSlickCardInfo("slider-card-beranda");
         }
 
-        if (!$(".slider-card-mode-kedua").hasClass("slick-initialized")) {
-          initSlickCardInfo("slider-card-mode-kedua");
-        }
+        // if (!$(".slider-card-mode-kedua").hasClass("slick-initialized")) {
+        //   initSlickCardInfo("slider-card-mode-kedua");
+        // }
 
-        if (!$(".slider-card-mode-keempat").hasClass("slick-initialized")) {
-          initSlickCardInfo("slider-card-mode-keempat");
-        }
+        // if (!$(".slider-card-mode-keempat").hasClass("slick-initialized")) {
+        //   initSlickCardInfo("slider-card-mode-keempat");
+        // }
         break;
       case "MenuDuaTab":
         closeTab();
@@ -1996,7 +1996,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // Tampilkan konten berdasarkan jumlah klik
     if (clickCount % 4 === 1) {
-      initSlickCardInfo("slider-card-mode-kedua");
+      // initSlickCardInfo("slider-card-mode-kedua");
 
       // Jika ini klik pertama, tampilkan mode-card-kedua
       if (secondMode) secondMode.classList.remove("hidden");
@@ -2007,7 +2007,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // }
     else if (clickCount % 4 === 2) {
       // Jika ini klik ketiga, tampilkan mode-card-keempat
-      initSlickCardInfo("slider-card-mode-keempat");
+      // initSlickCardInfo("slider-card-mode-keempat");
 
       if (fourthMode) fourthMode.classList.remove("hidden");
     } else {
