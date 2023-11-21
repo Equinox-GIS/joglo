@@ -697,35 +697,53 @@ map.on("style.load", () => {
   IzinGalian();
 });
 
+let activeCategories = ["Rumah Dijual"]; // Mulai dengan "Rumah Dijual" sebagai default
+
+// Fungsi untuk memperbarui peta berdasarkan kategori
+function updateMapForCategory() {
+  let filter = ["any", ["==", "kategori", "Rumah Dijual"]]; // Selalu tampilkan "Rumah Dijual"
+  activeCategories.forEach((category) => {
+    if (category !== "Rumah Dijual") {
+      filter.push(["==", "kategori", category]);
+    }
+  });
+  map.setFilter("layer-peta-soaraja", filter);
+}
 // Button event listeners
 const buttons = document.querySelectorAll(".btn-on-map");
+// Button event listeners
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
     const category = this.innerText.trim();
 
-    // Cek apakah tombol ini sudah aktif
-    if (this.classList.contains("active_btn_peta")) {
-      // Jika sudah aktif, nonaktifkan
-      this.classList.remove("active_btn_peta");
-      updateMapForCategory(null); // Nonaktifkan kategori pada peta
-    } else {
-      // Jika belum aktif, aktifkan dan nonaktifkan tombol lain
-      buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
-      this.classList.add("active_btn_peta");
-      updateMapForCategory(category); // Perbarui peta berdasarkan kategori yang dipilih
+    // Jika kategori bukan "Rumah Dijual", atur ulang kategori aktif
+    if (category !== "Rumah Dijual") {
+      // Cek apakah kategori ini sudah aktif
+      const categoryIndex = activeCategories.indexOf(category);
+      if (categoryIndex > -1) {
+        // Jika sudah aktif, hapus kategori dari daftar aktif dan hilangkan kelas aktif
+        activeCategories.splice(categoryIndex, 1);
+        this.classList.remove("active_btn_peta");
+      } else {
+        // Jika belum aktif, tambahkan kategori ke daftar aktif
+        // Hapus kelas aktif dari semua tombol kecuali "Rumah Dijual" dan tambahkan ke tombol ini
+        buttons.forEach((btn) => {
+          if (btn.innerText.trim() !== "Rumah Dijual") {
+            btn.classList.remove("active_btn_peta");
+          }
+        });
+        this.classList.add("active_btn_peta");
+        activeCategories.push(category);
+      }
     }
+
+    // Perbarui peta
+    updateMapForCategory();
   });
 });
 
-// Fungsi untuk memperbarui peta berdasarkan kategori
-function updateMapForCategory(category) {
-  if (category) {
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", category]);
-  } else {
-    // Jika tidak ada kategori yang dipilih, tampilkan semua kategori atau sembunyikan
-    map.setFilter("layer-peta-soaraja", ["==", "kategori", "Rumah Dijual"]); // Atau sesuaikan filter sesuai kebutuhan
-  }
-}
+// Inisialisasi peta dengan kategori default
+updateMapForCategory();
 
 // Aktifkan tombol default ("Rumah Dijual")
 const defaultButton = document.getElementById("chip-rumah-dijual");
