@@ -1892,10 +1892,11 @@ document.addEventListener("DOMContentLoaded", () => {
       input.classList.toggle("bg-transparent", !disabled);
       input.classList.toggle("bg-gray-200", disabled);
       if (withBorder) {
-        input.style.borderBottom = "1px solid";
-      } else {
-        input.style.border = "none";
+        input.style.borderBottom = "1px solid rgb(229, 231, 235)";
       }
+      // else {
+      //   input.style.borderBottom = "1px solid";
+      // }
     });
   };
 

@@ -546,7 +546,7 @@
                         id="btn1M"
                         class="border-[1px] bg-white border-black text-black text-[11px] font-medium px-1.5 py-0.5 rounded-full cursor-pointer"
                       >
-                        Rp 1M</span
+                        &lt; Rp 1M</span
                       >
                     </div>
                     <div>
@@ -651,12 +651,12 @@
                 <!--  -->
 
                 <div class="flex flex-col px-3">
-                  <div class="grid grid-cols-[30px,1fr] gap-y-3 py-3">
+                  <div class="grid grid-cols-[90px,1fr] gap-y-3 py-3">
                     <!--  -->
                     <div
                       class="flex items-end text-xs font-medium text-gray-900"
                     >
-                      Rp
+                      Minimum (Rp)
                     </div>
                     <div>
                       <input
@@ -667,7 +667,22 @@
                         required
                       />
                     </div>
+
                     <!--  -->
+                    <div
+                      class="flex items-center text-xs font-medium text-gray-900"
+                    >
+                      Maksimum (Rp)
+                    </div>
+                    <div>
+                      <input
+                        id="maxInputCicilan"
+                        type="number"
+                        class="max-input block p-0 w-full text-xs text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300 peer"
+                        required
+                        style="border: none; border-bottom: 1px solid"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -797,101 +812,6 @@
                       </div>
                     </div>
                   </div>
-                  <!-- kamar tidur -->
-                  <div>
-                    <div
-                      class="w-full bg-slate-200 py-1 px-2 text-xs font-semibold text-gray-500"
-                    >
-                      Kamar Tidur
-                    </div>
-
-                    <!--  -->
-                    <div class="px-2 py-3 flex justify-center">
-                      <div
-                        class="inline-flex rounded-md shadow-sm"
-                        role="group"
-                      >
-                        <button
-                          type="button"
-                          class="room-button w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-l-[0.5rem]"
-                        >
-                          1
-                        </button>
-                        <button
-                          type="button"
-                          class="room-button w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900"
-                        >
-                          2
-                        </button>
-                        <button
-                          type="button"
-                          class="room-button w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900"
-                        >
-                          3
-                        </button>
-                        <button
-                          type="button"
-                          class="room-button w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900"
-                        >
-                          4
-                        </button>
-                        <button
-                          type="button"
-                          class="room-button w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-r-[0.5rem]"
-                        >
-                          5+
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- kamar mandi -->
-                  <div>
-                    <div
-                      class="w-full bg-slate-200 py-1 px-2 text-xs font-semibold text-gray-500"
-                    >
-                      Kamar Mandi
-                    </div>
-
-                    <!--  -->
-                    <div class="px-2 py-3 flex justify-center">
-                      <div
-                        class="inline-flex rounded-md shadow-sm"
-                        role="group"
-                      >
-                        <button
-                          type="button"
-                          class="room-button w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-l-[0.5rem]"
-                        >
-                          1
-                        </button>
-                        <button
-                          type="button"
-                          class="room-button w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900"
-                        >
-                          2
-                        </button>
-                        <button
-                          type="button"
-                          class="room-button w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900"
-                        >
-                          3
-                        </button>
-                        <button
-                          type="button"
-                          class="room-button w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border-t border-b border-blue-900"
-                        >
-                          4
-                        </button>
-                        <button
-                          type="button"
-                          class="room-button w-9 h-6 flex items-center justify-center text-xs font-medium text-blue-900 bg-transparent border border-blue-900 rounded-r-[0.5rem]"
-                        >
-                          5+
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
                 </div>
               </div>
             </div>
@@ -952,7 +872,7 @@
                           >Pemilik Langsung</label
                         >
                       </div>
-                      <div class="flex items-center">
+                      <div class="flex items-center mb-2">
                         <input
                           checked
                           id="agen"
@@ -964,6 +884,20 @@
                           for="agen"
                           class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
                           >Agen</label
+                        >
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          checked
+                          id="pengembang"
+                          type="checkbox"
+                          value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0"
+                        />
+                        <label
+                          for="pengembang"
+                          class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
+                          >Pengembang</label
                         >
                       </div>
                     </div>
@@ -983,7 +917,7 @@
                   id="btnJenisProperti"
                   class="inline-flex justify-center items-center pl-1 w-32 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-white text-gray-500"
                 >
-                  <span class="pl-2">Jenis Properti</span>
+                  <span class="pl-2">Properti</span>
 
                   <svg
                     id="arrow-icon-jenis-properti"
@@ -1011,7 +945,7 @@
                     <div
                       class="w-full bg-slate-200 py-1 px-2 text-xs font-semibold text-gray-500 hidden"
                     >
-                      Jenis Properti
+                      Properti
                     </div>
 
                     <!--  -->
@@ -1117,7 +1051,7 @@
                   id="btnJenisSurat"
                   class="inline-flex justify-center items-center pl-1 w-28 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-white text-gray-500"
                 >
-                  <span class="pl-2">Jenis Surat</span>
+                  <span class="pl-2">Surat</span>
 
                   <svg
                     id="arrow-icon-jenis-surat"
