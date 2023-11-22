@@ -585,16 +585,30 @@ const nopulsingDot = {
   },
   render: function () {
     const radius = (size / 2) * 0.3;
+    const border = 14; // Ketebalan border
     const context = this.context;
 
+    // Menggambar border
     context.clearRect(0, 0, this.width, this.height);
+    context.beginPath();
+    context.arc(
+      this.width / 2,
+      this.height / 2,
+      radius + border / 2,
+      0,
+      Math.PI * 2
+    );
+    context.fillStyle = "rgba(105,179,231, 1)";
+    context.fill();
+    context.strokeStyle = "rgb(203 213 225)";
+    context.lineWidth = border;
+    context.stroke();
+
+    // Menggambar bagian dalam
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
     context.fillStyle = "rgba(105,179,231, 1)";
-    context.strokeStyle = "white";
-    context.lineWidth = 1;
     context.fill();
-    context.stroke();
 
     this.data = context.getImageData(0, 0, this.width, this.height).data;
     return true;
@@ -888,7 +902,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
 
     `;
 
-  popup.setLngLat(coordinates).setHTML(content).addTo(map);
+  popup.setLngLat(coordinates).addTo(map).on("open", triggerClickOnElement);
   initSlickCardPeta(".slider-card-info-detail-peta");
 
   map.once("render", function () {
@@ -912,6 +926,18 @@ map.on("click", "layer-peta-soaraja", (e) => {
         }
       });
   });
+
+  // Fungsi untuk memicu klik pada elemen tertentu
+  function triggerClickOnElement() {
+    // Cari elemen berdasarkan atribut yang ditetapkan
+    const element = document.querySelector(
+      'div[data-active-tab="1"][data-object-id="1604"]'
+    );
+    if (element) {
+      // Memicu fungsi onclick pada elemen tersebut
+      showCardInfoDetail(element);
+    }
+  }
 
   while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
