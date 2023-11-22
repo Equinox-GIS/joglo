@@ -695,6 +695,9 @@ const IzinGalian = () => {
 // Ensure this is called after the map loads
 map.on("style.load", () => {
   IzinGalian();
+
+  // Inisialisasi peta dengan kategori default
+  updateMapForCategory();
 });
 
 let activeCategories = ["Rumah Dijual"]; // Mulai dengan "Rumah Dijual" sebagai default
@@ -702,13 +705,17 @@ let activeCategories = ["Rumah Dijual"]; // Mulai dengan "Rumah Dijual" sebagai 
 // Fungsi untuk memperbarui peta berdasarkan kategori
 function updateMapForCategory() {
   let filter = ["any", ["==", "kategori", "Rumah Dijual"]]; // Selalu tampilkan "Rumah Dijual"
+
+  // Tambahkan kategori aktif lainnya ke filter
   activeCategories.forEach((category) => {
     if (category !== "Rumah Dijual") {
       filter.push(["==", "kategori", category]);
     }
   });
+
   map.setFilter("layer-peta-soaraja", filter);
 }
+
 // Button event listeners
 const buttons = document.querySelectorAll(".btn-on-map");
 // Button event listeners
@@ -741,9 +748,6 @@ buttons.forEach((button) => {
     updateMapForCategory();
   });
 });
-
-// Inisialisasi peta dengan kategori default
-updateMapForCategory();
 
 // Aktifkan tombol default ("Rumah Dijual")
 const defaultButton = document.getElementById("chip-rumah-dijual");
