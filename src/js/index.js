@@ -2014,6 +2014,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
       });
+      initSlickFavorit();
     }
   };
 });
