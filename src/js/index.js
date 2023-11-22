@@ -1984,36 +1984,36 @@ document.addEventListener("DOMContentLoaded", (event) => {
   window.ChangeModeCard = function (element) {
     clickCount++;
 
-    let firstMode = document.querySelector(".mode-card-pertama");
-    let secondMode = document.querySelector(".mode-card-kedua");
-    let thirdMode = document.querySelector(".mode-card-ketiga");
-    let fourthMode = document.querySelector(".mode-card-keempat");
+    let firstMode = document.querySelectorAll(".mode-card-pertama");
+    let secondMode = document.querySelectorAll(".mode-card-kedua");
+    let thirdMode = document.querySelectorAll(".mode-card-ketiga");
+    let fourthMode = document.querySelectorAll(".mode-card-keempat");
 
     // Sembunyikan semua konten
-    [firstMode, secondMode, thirdMode, fourthMode].forEach((el) => {
-      if (el) el.classList.add("hidden");
+    [firstMode, secondMode, thirdMode, fourthMode].forEach((modeList) => {
+      modeList.forEach((el) => {
+        el.classList.add("hidden");
+      });
     });
 
     // Tampilkan konten berdasarkan jumlah klik
     if (clickCount % 4 === 1) {
-      // initSlickCardInfo("slider-card-mode-kedua");
-
-      // Jika ini klik pertama, tampilkan mode-card-kedua
-      if (secondMode) secondMode.classList.remove("hidden");
-    }
-    // else if (clickCount % 4 === 2) {
-    //   // Jika ini klik kedua, tampilkan mode-card-ketiga
-    //   if (thirdMode) thirdMode.classList.remove("hidden");
-    // }
-    else if (clickCount % 4 === 2) {
-      // Jika ini klik ketiga, tampilkan mode-card-keempat
-      // initSlickCardInfo("slider-card-mode-keempat");
-
-      if (fourthMode) fourthMode.classList.remove("hidden");
+      secondMode.forEach((el) => {
+        el.classList.remove("hidden");
+      });
+      initSlickFavorit();
+    } else if (clickCount % 4 === 2) {
+      thirdMode.forEach((el) => {
+        el.classList.remove("hidden");
+      });
+    } else if (clickCount % 4 === 3) {
+      fourthMode.forEach((el) => {
+        el.classList.remove("hidden");
+      });
     } else {
-      // Jika ini klik keempat, kembali ke mode-card-pertama
-      if (firstMode) firstMode.classList.remove("hidden");
-      clickCount = 0; // Reset click count
+      firstMode.forEach((el) => {
+        el.classList.remove("hidden");
+      });
     }
   };
 });
