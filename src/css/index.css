@@ -240,6 +240,16 @@
   height: 60% !important;
 }
 
+.btn-penggaris {
+  background-image: url("../images/gm1/penggaris-map.png") !important;
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  display: block !important;
+  background-size: inherit !important;
+  width: 60% !important;
+  height: 60% !important;
+}
+
 .btn-stick3 {
   background-image: url("../images/gm1/pentagon-off.png") !important;
   background-position: 50% !important;

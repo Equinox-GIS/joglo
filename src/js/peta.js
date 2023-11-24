@@ -301,6 +301,52 @@ if (controlGroup) {
   // Menambahkan tooltip ke DOM
   document.body.insertAdjacentHTML("beforeend", tooltipHTML);
 
+  // Stick Button 4
+  var stickButton4 = document.createElement("button");
+  stickButton4.className =
+    "mapboxgl-ctrl-icon custom-control-button btn-penggaris";
+  stickButton4.setAttribute("type", "button");
+  stickButton4.setAttribute("aria-label", "Stick Action 4");
+
+  // Menambahkan atribut untuk tooltips
+  stickButton4.setAttribute("data-tooltip-target", "control-map-penggaris");
+  stickButton4.setAttribute("data-tooltip-placement", "left");
+
+  stickButton4.addEventListener("click", function (event) {
+    makeActive(event);
+  });
+
+  // Menambahkan event listener untuk menampilkan tooltip
+  stickButton4.addEventListener("mouseenter", function (event) {
+    var tooltip = document.getElementById("control-map-penggaris");
+    tooltip.classList.remove("invisible", "opacity-0");
+    tooltip.classList.add("visible", "opacity-100");
+  });
+
+  stickButton4.addEventListener("mouseleave", function (event) {
+    var tooltip = document.getElementById("control-map-penggaris");
+    tooltip.classList.add("invisible", "opacity-0");
+    tooltip.classList.remove("visible", "opacity-100");
+  });
+
+  // Menambahkan button ke DOM
+  document.body.appendChild(stickButton4);
+
+  // Tooltip HTML
+  var tooltipHTML = `
+  <div
+    id="control-map-penggaris"
+    role="tooltip"
+    class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+  >
+    Penggaris
+    <div class="tooltip-arrow" data-popper-arrow></div>
+  </div>
+`;
+
+  // Menambahkan tooltip ke DOM
+  document.body.insertAdjacentHTML("beforeend", tooltipHTML);
+
   // Stick Button 3
   var stickButton3 = document.createElement("button");
   stickButton3.className =
@@ -549,6 +595,7 @@ if (controlGroup) {
 
   // Add buttons to control group in the desired order
   controlGroup.appendChild(stickButton1);
+  controlGroup.appendChild(stickButton4);
   controlGroup.appendChild(stickButton2);
   controlGroup.appendChild(stickButton3);
   controlGroup.appendChild(separator);
