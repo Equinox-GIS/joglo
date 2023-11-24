@@ -1997,16 +1997,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // Tampilkan konten berdasarkan jumlah klik
-    if (clickCount % 4 === 1) {
+    if (clickCount % 3 === 1) {
       secondMode.forEach((el) => {
         el.classList.remove("hidden");
       });
       initSlickFavorit();
-    } else if (clickCount % 4 === 2) {
-      thirdMode.forEach((el) => {
+    } else if (clickCount % 3 === 2) {
+      firstMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-    } else if (clickCount % 4 === 3) {
+    } else if (clickCount % 3 === 3) {
       fourthMode.forEach((el) => {
         el.classList.remove("hidden");
       });
@@ -2014,6 +2014,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
       });
+      initSlickFavorit();
     }
   };
 });
