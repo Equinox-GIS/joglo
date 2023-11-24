@@ -6514,9 +6514,11 @@
                             class="max-w-screen-md px-10 py-6 mx-4 bg-white rounded-lg shadow md:mx-auto border-1"
                           >
                             <div
-                              class="flex flex-col items-start w-full m-auto sm:flex-row"
+                              class="flex flex-col items-start w-full m-auto sm:flex-row border border-red-500"
                             >
-                              <div class="flex mx-auto sm:mr-10 sm:m-0">
+                              <div
+                                class="flex items-center border border-blue-500"
+                              >
                                 <div
                                   class="items-center justify-center w-20 h-20 m-auto mr-4 sm:w-32 sm:h-32"
                                 >
@@ -6528,7 +6530,7 @@
                                 </div>
                               </div>
                               <div
-                                class="flex flex-col pt-4 mx-auto my-auto sm:pt-0 sm:mx-0"
+                                class="flex flex-col pt-4 mx-auto my-auto sm:pt-0 sm:mx-0 border border-purple-500"
                               >
                                 <div
                                   class="flex flex-col mx-auto sm:flex-row sm:mx-0"
@@ -6551,15 +6553,15 @@
                                 >
                                   <div class="flex">
                                     <span class="mr-1 font-semibold">55 </span>
-                                    Post
+                                    listing
                                   </div>
                                   <div class="flex">
                                     <span class="mr-1 font-semibold">10k </span>
-                                    Follower
+                                    Terjual
                                   </div>
                                   <div class="flex">
-                                    <span class="mr-1 font-semibold">20</span>
-                                    Following
+                                    <span class="mr-1 font-semibold">2M</span>
+                                    Nilai Tengah
                                   </div>
                                 </div>
                               </div>
@@ -6575,7 +6577,8 @@
                               </p>
                               <p class="text-sm text-gray-800 md:text-base">
                                 Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Cupiditate, quam?
+                                adipisicing elit. Cupiditate, quam adipisicing
+                                elit. Cupiditate, quam
                               </p>
                             </div>
                           </div>
@@ -13564,14 +13567,114 @@
             <!-- Menu Agent -->
             <div class="h-full flex flex-col">
               <!--  Card Agent -->
-              <div
-                class="flex flex-col card-info-pencarian h-[83vh] overflow-y-auto hide-scrollbar card-agent"
-              >
-                <!-- Judul Agent -->
+              <div class="flex flex-col card-info-pencarian card-agent">
+                <!--  -->
+
                 <div class="px-3 pt-2">
+                  <div class="font-semibold text-xl">Agent</div>
+
+                  <!--  judul-dijual-kedua -->
+                  <div
+                    class="flex flex-row items-stretch justify-between mt-1 judul-dijual-kedua"
+                  >
+                    <div
+                      class="font-normal text-sm self-end text-gray-700 -mb-0.5"
+                    >
+                      Menampilkan 101 data
+                    </div>
+
+                    <div class="">
+                      <div class="relative flex flex-row">
+                        <!-- Mode Card -->
+                        <div class="flex items-center mr-2">
+                          <div
+                            class="w-9 h-9 flex items-center justify-center cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                          >
+                            <img
+                              onclick="ChangeModeCard(this)"
+                              class="w-7 h-7 object-contain cursor-pointer hidden"
+                              src="./src/images/list.png"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+
+                        <!-- Dropdown Filter -->
+                        <div class="flex items-center hidden">
+                          <div class="relative inline-block text-left">
+                            <button
+                              id="dropdown-button-pencarian"
+                              class="inline-flex justify-between items-center pl-1 w-40 h-8 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-0"
+                            >
+                              <span id="selected-item" class="pl-2"
+                                >Terbaru</span
+                              >
+
+                              <svg
+                                id="arrow-icon-pencarian"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5 mr-2 transition-transform duration-200 transform"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                style="transform: rotate(0deg)"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </button>
+
+                            <div
+                              id="dropdown-menu-pencarian"
+                              class="hidden origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
+                            >
+                              <div
+                                class="py-2 p-2"
+                                role="menu"
+                                aria-orientation="vertical"
+                                aria-labelledby="dropdown-button-pencarian"
+                              >
+                                <a
+                                  id="item-harga-tertinggi"
+                                  class="flex block rounded-md px-1 py-1 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
+                                  role="menuitem"
+                                >
+                                  Harga Tertinggi
+                                </a>
+                                <a
+                                  id="item-harga-terendah"
+                                  class="flex block rounded-md px-1 py-1 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
+                                  role="menuitem"
+                                >
+                                  Harga Terendah
+                                </a>
+                                <a
+                                  id="item-populer"
+                                  class="flex block rounded-md px-1 py-1 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
+                                  role="menuitem"
+                                >
+                                  Populer
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--  -->
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                  <div class="py-2 w-full"></div>
+                </div>
+
+                <!-- Judul Agent -->
+                <div class="px-3 pt-2 hidden">
                   <div class="font-semibold text-xl">Agentss</div>
 
-                  <div class="flex flex-row items-stretch justify-between mt-1">
+                  <div class="flex flex-row items-stretch justify-between mt-5">
                     <div class="font-normal text-sm self-end">
                       Menampilkan 101 data
                     </div>
@@ -13636,12 +13739,12 @@
                     </div>
                   </div>
                   <!--  -->
-                  <div class="py-2 w-full"></div>
+                  <div class="py-1 mb-0.5 w-full"></div>
                 </div>
 
                 <!-- Mode Default -->
                 <div class="h-full px-3 grid grid-cols-[1fr,29px]">
-                  <div class="">
+                  <div class="h-[79vh] overflow-y-auto hide-scrollbar">
                     <div class="grid grid-cols-3 gap-2">
                       <!-- Card Agent 1 -->
                       <div
@@ -15251,151 +15354,94 @@
 
                       <!-- card nama -->
                       <div class="h-[77vh] overflow-y-auto hide-scrollbar">
-                        <div>
-                          <div class="grid grid-cols-4 h-20 mt-8">
-                            <div></div>
-
-                            <div class="col-span-2">
-                              <div class="grid grid-rows-2">
-                                <div class="grid grid-cols-[100px,1fr]">
-                                  <div
-                                    class="flex flex-col justify-center items-center"
-                                  >
-                                    <div class="relative">
-                                      <img
-                                        class="w-18 h-24 p-1.5 rounded-full ring-2 ring-gray-300"
-                                        src="./src/images/model/model8.jpeg"
-                                        alt="Rounded avatar"
-                                      />
-                                      <span
-                                        class="bottom-3 left-20 absolute w-3.5 h-3.5 bg-[#ffb500] border-2 border-white dark:border-gray-800 rounded-full"
-                                      ></span>
-                                    </div>
-                                  </div>
-                                  <div class="grid grid-row-2 w-full h-full">
-                                    <div
-                                      class="grid grid-cols-3 mt-2 place-items-center text-gray-700"
-                                    >
-                                      <div class="flex flex-col">
-                                        <div
-                                          class="text-center text-xl font-bold"
-                                        >
-                                          10
-                                        </div>
-                                        <div class="text-sm">Listing</div>
-                                      </div>
-                                      <div class="flex flex-col">
-                                        <div
-                                          class="text-center text-xl font-bold"
-                                        >
-                                          3
-                                        </div>
-                                        <div class="text-sm">Terjual</div>
-                                      </div>
-                                      <div class="flex flex-col">
-                                        <div
-                                          class="text-center text-xl font-bold"
-                                        >
-                                          5
-                                        </div>
-                                        <div class="text-sm">Aktif</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!--  -->
-                                <div class="grid grid-cols-1 mt-3">
-                                  <div
-                                    class="font-semibold text-lg text-gray-700"
-                                  >
-                                    <div class="inline-flex items-center">
-                                      <span class="mr-2"> Budiman Alis </span>
-                                      <div
-                                        class="w-5 h-5 -mt-0.5 flex justify-center items-center relative"
-                                      >
-                                        <img
-                                          src="./src/images/verif.png"
-                                          alt=""
-                                        />
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <!--s  -->
-
-                                  <div class="text-xs text-gray-400">
-                                    RayWhite Kuningan Barat
-                                  </div>
-                                  <div class="text-sm text-gray-700 mt-5">
-                                    lorem ipsum dolor sit amet, consectetur
-                                    elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna
-                                  </div>
-                                </div>
-
-                                <!--  -->
-                                <div
-                                  class="flex justify-start items-center pb-2 mt-0.5"
-                                >
-                                  <div class="inline-flex items-center">
-                                    <!-- <div
-                                      class="w-3 h-3 mr-2 flex justify-center items-center relative"
-                                    >
-                                      <img src="./src/images/link.png" alt="" />
-                                    </div> -->
-                                    <div class="text-[#2074d8] text-sm">
-                                      soaraja.page/agentrumah
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!--  -->
-                                <div class="flex justify-center items-center">
-                                  <div class="inline-flex">
-                                    <a class="mr-4" href="#!" role="button">
-                                      <!-- Facebook -->
-                                      <div
-                                        class="w-5 h-5 flex justify-center items-center relative"
-                                      >
-                                        <img
-                                          src="./src/images/facebook.png"
-                                          alt=""
-                                        />
-                                      </div>
-                                    </a>
-
-                                    <a class="mr-4" href="#!" role="button">
-                                      <!-- Instagram -->
-                                      <div
-                                        class="w-5 h-5 flex justify-center items-center relative"
-                                      >
-                                        <img
-                                          src="./src/images/instagram.png"
-                                          alt=""
-                                        />
-                                      </div>
-                                    </a>
-                                  </div>
-
-                                  <button
-                                    data-pesan="Mochtar Riady"
-                                    onclick="showMessage(this)"
-                                    type="button"
-                                    class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-[#69B3E7] rounded-md"
-                                  >
-                                    Kirim Pesan
-                                  </button>
-                                </div>
-                                <!--  -->
+                        <div
+                          class="grid grid-cols-1 w-full h-[28vh] place-items-center border border-red-500"
+                        >
+                          <!-- okee -->
+                          <div
+                            class="w-[30vw] h-full grid grid-cols-[120px,1fr] border border-red-500"
+                          >
+                            <div
+                              class="h-full w-full flex items-center justify-center border border-blue-500"
+                            >
+                              <div class="self-center">
+                                <img
+                                  alt="profil"
+                                  src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFufGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                                  class="object-cover w-16 h-16 mx-auto rounded-full"
+                                />
                               </div>
                             </div>
+                            <!-- isi dataaa -->
+                            <div>
+                              <!--  -->
+                              <div class="w-full">
+                                <h1 class="text-md font-semibold text-gray-800">
+                                  Budiman Alisss
+                                </h1>
+                                <p class="text-sm text-gray-400">
+                                  RayWhite Kebayoran Baru
+                                </p>
+                              </div>
+                              <!--  -->
+                              <div class="flex flex-row">
+                                <div class="flex flex-col text-center">
+                                  <div class="font-semibold text-xl">55</div>
+                                  <div>Listing</div>
+                                </div>
+                                <div class="flex flex-col text-center">
+                                  <div class="font-semibold text-xl">10</div>
+                                  <div>Terjual</div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div>
+                                <p
+                                  class="text-sm text-gray-700 py-1 md:text-base"
+                                >
+                                  Lorem ipsum dolor sit amet consectetur
+                                  adipisicing elit. Cupiditate, quam?
+                                  adipisicing elit. Cupiditate, quam?
+                                </p>
+                                <p class="text-sm text-[#2074d8] md:text-base">
+                                  soaraja.page/agentrumah
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
-                            <div></div>
+                        <!--  -->
+                        <!-- yuii -->
+                        <div class="grid grid-cols-1 pb-6">
+                          <div class="flex justify-center">
+                            <button
+                              data-pesan="Mochtar Riady"
+                              onclick="showMessage(this)"
+                              type="button"
+                              class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-[#69B3E7] rounded-md"
+                            >
+                              <svg
+                                class="w-3 h-3 text-white me-2"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 20 16"
+                              >
+                                <path
+                                  d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                                ></path>
+                                <path
+                                  d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                                ></path>
+                              </svg>
+                              Kirim Pesan
+                            </button>
                           </div>
                         </div>
 
                         <!-- card portofolio -->
-                        <div class="grid grid-cols-3 gap-2 mt-[14.5rem]">
+                        <div class="grid grid-cols-3 gap-2">
                           <!--  Card 1 -->
                           <div
                             class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
