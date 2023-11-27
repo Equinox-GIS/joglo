@@ -903,6 +903,18 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
+function initSlickAgenDetail() {
+  $(".slider-detailagen")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderDefaultOptions());
+}
+
 function initSlickAgent() {
   $(".slider-agent")
     .on("init", function () {
@@ -998,6 +1010,16 @@ $(document).ready(function () {
     $(this).get(0).pause();
   });
   resizePlayer($(".slider-favorit video"));
+
+  // Detail Agen
+  $(".slider-detailagen video").on("mouseover", function () {
+    $(this).get(0).play();
+  });
+
+  $(".slider-detailagen video").on("mouseout", function () {
+    $(this).get(0).pause();
+  });
+  resizePlayer($(".slider-detailagen video"));
 
   // Agent
   $(".slider-agent video").on("mouseover", function () {
@@ -1270,6 +1292,10 @@ window.showCardInfoDetail = function (param) {
 
       if (!$(".slider-favorit").hasClass("slick-initialized")) {
         initSlick(".slider-favorit", getSliderDefaultOptions());
+      }
+
+      if (!$(".slider-detailagen").hasClass("slick-initialized")) {
+        initSlick(".slider-detailagen", getSliderDefaultOptions());
       }
 
       if (!$(".slider-card-info-disukai").hasClass("slick-initialized")) {
@@ -1740,6 +1766,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // CloseTabPesan();
 
         initSlickAgent();
+        initSlickAgenDetail();
 
         // stopAndResetVideo();
         isTeksBerjalanActive = false;
@@ -2002,6 +2029,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         el.classList.remove("hidden");
       });
       initSlickFavorit();
+      initSlickAgenDetail();
     } else if (clickCount % 3 === 2) {
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
@@ -2015,6 +2043,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         el.classList.remove("hidden");
       });
       initSlickFavorit();
+      initSlickAgenDetail();
     }
   };
 });
