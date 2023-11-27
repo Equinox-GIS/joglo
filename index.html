@@ -4133,41 +4133,73 @@
               <div class="flex flex-col w-full card-detail-beranda hidden">
                 <!-- Judul Card Detail Beranda -->
                 <div class="px-3 mx-0.5 pt-2">
-                  <div class="w-full flex justify-between items-center">
-                    <div class="inline-flex">
+                  <div class="flex flex-col">
+                    <div
+                      class="w-full h-[3.5rem] grid grid-cols-[80px,1fr] border border-red-500"
+                    >
                       <div
-                        class="flex flex-col items-center pb-0 mr-2 cursor-pointer"
-                        onclick="showMessage(this)"
+                        class="w-full h-full flex items-center justify-center"
                       >
                         <img
-                          class="w-8 h-8 rounded-full mx-1"
+                          onclick="showMessage(this)"
+                          class="w-12 h-12 rounded-full cursor-pointer mx-1"
                           src="./src/images/model/model11.jpg"
                         />
                       </div>
+                      <div class="flex flex-col w-full border border-green-500">
+                        <div class="text-md font-semibold text-gray-800">
+                          Budiman Ali
+                        </div>
+                        <div class="text-xs text-gray-400">RayWhite</div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex justify-between w-full border border-green-500"
+                    >
+                      <div class="text-md font-bold flex items-center">
+                        Rumahs Impian Strategis Dijual! Segera Miliki Hunian
+                        Eksklusif di Lokasi Prime!
+                      </div>
+                      <div>
+                        <div
+                          onclick="closeTab()"
+                          class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                        >
+                          <div
+                            class="w-5 h-5 mt-0.5 mr-0.5 flex justify-center items-center relative"
+                          >
+                            <img src="./src/images/back.png" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="w-full h-full flex justify-beetwen hidden">
                       <div class="flex items-center">
                         <div class="text-md font-bold flex-shrink-0">
                           Rumahs Impian Strategis Dijual! Segera Miliki Hunian
                           Eksklusif di Lokasi Prime!
                         </div>
                       </div>
-                    </div>
-
-                    <div class="flex col justify-center py-1 mt-1">
-                      <div
-                        onclick="closeTab()"
-                        class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
-                      >
+                      <!--  -->
+                      <div class="flex col justify-center py-1 mt-1">
                         <div
-                          class="w-5 h-5 mt-0.5 mr-0.5 flex justify-center items-center relative"
+                          onclick="closeTab()"
+                          class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
                         >
-                          <img src="./src/images/back.png" alt="" />
+                          <div
+                            class="w-5 h-5 mt-0.5 mr-0.5 flex justify-center items-center relative"
+                          >
+                            <img src="./src/images/back.png" alt="" />
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <!-- Menu Tab -->
-                  <div class="border-b border-gray-200 -mt-2">
+                  <div class="border-b border-gray-200 mt-1.5">
                     <ul
                       class="flex flex-wrap -mb-px text-sm font-medium text-center pr-4"
                       id="DetailBeranda"
@@ -4320,7 +4352,7 @@
                                   class="video-wrapper video-wrapper-autoplay"
                                 >
                                   <video
-                                    class="h-[62vh] w-[50vw]"
+                                    class="h-[54vh] w-[50vw]"
                                     id="video-detail-beranda"
                                     controls
                                     src="./src/video/Video1.mp4"
@@ -17293,10 +17325,10 @@
                   <div class="w-full">
                     <div class="flex flex-col">
                       <!--  -->
-                      <div class="flex justify-between items-center">
-                        <div class="text-md font-bold flex-shrink-0">
-                          Detail
-                        </div>
+                      <div class="w-full flex justify-between items-center">
+                        <div class="font-semibold text-xl">Profil Agen</div>
+                        <!--  -->
+
                         <div class="flex col justify-center py-1 mt-1">
                           <div
                             onclick="closeDetailAgent()"
@@ -17310,14 +17342,65 @@
                           </div>
                         </div>
                       </div>
+                      <div
+                        class="flex flex-row items-stretch justify-between border-b border-gray-200 mt-2"
+                      >
+                        <!-- Menu Tab AgenProfil -->
+
+                        <div class="border-b border-gray-200">
+                          <!-- Tab Menu AgenProfil -->
+                          <ul
+                            class="flex flex-wrap -mb-px text-sm font-medium text-center pr-4"
+                            id="DetailAgenProfil"
+                            data-tabs-toggle="#DetailAgenProfilContent"
+                            role="tablist"
+                          >
+                            <!-- Menu Tab Satu AgenProfil -->
+                            <li
+                              class="border-b border-gray-200"
+                              role="presentation"
+                            >
+                              <button
+                                class="inline-block pr-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                                id="detail-agenprofil-satu-tab"
+                                data-tabs-target="#detail-agenprofil-satu"
+                                type="button"
+                                role="tab"
+                                aria-controls="detail-agenprofil-satu"
+                                aria-selected="true"
+                              >
+                                Info
+                              </button>
+                            </li>
+
+                            <!-- Menu Tab Tiga AgenProfil -->
+                            <li class="" role="presentation">
+                              <button
+                                class="inline-block px-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                                id="detail-agenprofil-dua-tab"
+                                data-tabs-target="#detail-agenprofil-dua"
+                                type="button"
+                                role="tab"
+                                aria-controls="detail-agenprofil-dua"
+                                aria-selected="false"
+                              >
+                                Listing
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                        <!--  -->
+                      </div>
 
                       <!--  -->
 
-                      <!-- card nama -->
-                      <div class="h-[75vh] overflow-y-auto hide-scrollbar">
+                      <!-- card namass -->
+                      <div
+                        class="h-[75vh] overflow-y-auto hide-scrollbar hidden"
+                      >
                         <!-- tyyy  -->
 
-                        <div class="grid grid-cols-5 mb-5">
+                        <div class="grid grid-cols-5 my-5">
                           <div></div>
                           <div class="col-span-3 w-full grid grid-row-2">
                             <div class="h-[11vh]">
@@ -17337,7 +17420,7 @@
                                   <div
                                     class="flex flex-col justify-center items-center"
                                   >
-                                    <div class="text-2xl font-semibold">55</div>
+                                    <div class="text-2xl">556</div>
                                     <div class="text-sm">Listing</div>
                                   </div>
                                   <div
@@ -18692,6 +18775,328 @@
 
                           <!--  -->
                         </div>
+                      </div>
+                      <!--  -->
+                    </div>
+
+                    <!--  -->
+                  </div>
+                </div>
+                <!-- Konten Card Details agenprofil -->
+                <div class="w-full h-full card-disukai-detail">
+                  <div class="flex flex-col h-full">
+                    <!-- Tabs AgenProfil -->
+
+                    <div id="DetailAgenProfilContent" class="">
+                      <!-- Konten Tab Satu AgenProfil -->
+                      <div
+                        class="hidden px-4 py-2"
+                        id="detail-agenprofil-satu"
+                        role="tabpanel"
+                        aria-labelledby="detail-agenprofil-satu-tab"
+                      >
+                        <!-- Info -->
+                        <div class="grid grid-cols-7 my-5 agentssdetail">
+                          <div></div>
+                          <div class="col-span-5 w-full grid grid-row-2">
+                            <div class="h-[11vh]">
+                              <div
+                                class="grid grid-cols-[90px,1fr] h-full w-full"
+                              >
+                                <div
+                                  class="w-full h-full flex flex-col justify-center items-center"
+                                >
+                                  <img
+                                    alt="profil"
+                                    src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFufGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                                    class="object-cover w-16 h-16 mx-auto rounded-full"
+                                  />
+                                </div>
+                                <div class="w-full h-full grid grid-cols-5">
+                                  <div
+                                    class="flex flex-col justify-center items-center"
+                                  >
+                                    <div class="text-2xl">557</div>
+                                    <div class="text-sm">Listing</div>
+                                  </div>
+                                  <div
+                                    class="flex flex-col justify-center items-center"
+                                  >
+                                    <div class="text-2xl">10</div>
+                                    <div class="text-sm">Terjual</div>
+                                  </div>
+                                  <div
+                                    class="flex flex-col justify-center items-center"
+                                  >
+                                    <div class="text-2xl">10</div>
+                                    <div class="text-sm">Peringkat</div>
+                                  </div>
+                                  <div
+                                    class="col-span-2 flex justify-center items-center"
+                                  >
+                                    <button
+                                      data-pesan="Mochtar Riady"
+                                      onclick="showMessage(this)"
+                                      type="button"
+                                      class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-[#69B3E7] rounded-md"
+                                    >
+                                      Kirim Pesan
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--  -->
+                            <div class="grid grid-row-4">
+                              <div class="inline-flex items-center">
+                                <div
+                                  class="text-md font-semibold text-gray-800 mr-2"
+                                >
+                                  Budiman Alisss
+                                </div>
+                                <!--  -->
+                                <div
+                                  class="w-5 h-5 flex mt-0.5 mr-2 justify-center items-center relative"
+                                >
+                                  <img src="./src/images/verif.png" alt="" />
+                                </div>
+
+                                <!--  -->
+                                <div>
+                                  <label
+                                    for="star-agent-utama"
+                                    class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                  >
+                                    <div>
+                                      <label
+                                        for="star-agent-utama"
+                                        class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                      >
+                                        <svg
+                                          class="w-4 h-4 text-yellow-300"
+                                          aria-hidden="true"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="currentColor"
+                                          viewBox="0 0 22 20"
+                                        >
+                                          <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                          ></path>
+                                        </svg>
+                                        <svg
+                                          class="w-4 h-4 text-yellow-300"
+                                          aria-hidden="true"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="currentColor"
+                                          viewBox="0 0 22 20"
+                                        >
+                                          <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                          ></path>
+                                        </svg>
+                                        <svg
+                                          class="w-4 h-4 text-gray-300"
+                                          aria-hidden="true"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="currentColor"
+                                          viewBox="0 0 22 20"
+                                        >
+                                          <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                          ></path>
+                                        </svg>
+                                      </label>
+                                    </div>
+                                  </label>
+                                </div>
+
+                                <!--  -->
+                              </div>
+
+                              <div class="text-xs text-gray-400 mb-2">
+                                RayWhite Kebayoran Baru
+                              </div>
+
+                              <div>
+                                <span
+                                  class="text-sm text-[#2074d8] cursor-pointer"
+                                >
+                                  Linktr.ee/RumahMurahMinimalis</span
+                                >
+                              </div>
+
+                              <div class="text-sm text-gray-700 pb-1 mt-4">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupidit Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit. Cupidit Lorem
+                                ipsum dolor sit amet consectetur adipisicing
+                                elit. Cupidit Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Cupidit elit.
+                                Cupidit Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupidit
+                              </div>
+
+                              <!-- BUtton DetailAgent -->
+                              <div
+                                class="flex flex-col justify-between w-full pb-2 mt-4"
+                              >
+                                <div
+                                  class="text-sm font-semibold text-gray-800 pb-1"
+                                >
+                                  Spesialisasi Aset
+                                </div>
+
+                                <div class="flex flex-row">
+                                  <div class="mr-2">
+                                    <button
+                                      type="button"
+                                      class="h-8 px-4 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs px-3"
+                                    >
+                                      Rumah Baru
+                                    </button>
+                                  </div>
+                                  <div class="mr-2">
+                                    <button
+                                      type="button"
+                                      class="h-8 px-4 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs px-3"
+                                    >
+                                      Rumah Seken
+                                    </button>
+                                  </div>
+                                  <div class="mr-2">
+                                    <button
+                                      type="button"
+                                      class="h-8 px-4 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs px-3"
+                                    >
+                                      Apartemen Seken
+                                    </button>
+                                  </div>
+                                  <div class="mr-2">
+                                    <button
+                                      type="button"
+                                      class="h-8 px-4 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs px-3"
+                                    >
+                                      Apartemen Baru
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="flex flex-col justify-between w-full mt-4"
+                              >
+                                <div
+                                  class="text-sm font-semibold text-gray-800 pb-1"
+                                >
+                                  Spesialisasi Area
+                                </div>
+                                <div class="flex flex-row">
+                                  <div class="mr-2">
+                                    <button
+                                      type="button"
+                                      class="h-8 px-4 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs px-3"
+                                    >
+                                      Kelapa Gading
+                                    </button>
+                                  </div>
+                                  <div class="mr-2">
+                                    <button
+                                      type="button"
+                                      class="h-8 px-4 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs px-3"
+                                    >
+                                      Pluit
+                                    </button>
+                                  </div>
+                                  <div class="mr-2">
+                                    <button
+                                      type="button"
+                                      class="h-8 px-4 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs px-3"
+                                    >
+                                      Senayan
+                                    </button>
+                                  </div>
+                                  <div class="mr-2">
+                                    <button
+                                      type="button"
+                                      class="h-8 px-4 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs px-3"
+                                    >
+                                      Cilandak
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div></div>
+                        </div>
+                      </div>
+
+                      <!-- Konten Tab Dua AgenProfil -->
+                      <div
+                        class="hidden px-4 py-2"
+                        id="detail-agenprofil-dua"
+                        role="tabpanel"
+                        aria-labelledby="detail-agenprofil-dua-tab"
+                      >
+                        dua
+                      </div>
+
+                      <!-- Konten Tab Tiga AgenProfil -->
+                      <div
+                        class="hidden px-4 py-2 mt-1"
+                        id="detail-agenprofil-dua"
+                        role="tabpanel"
+                        aria-labelledby="detail-agenprofil-dua-tab"
+                      >
+                        tiga
+                      </div>
+
+                      <!-- Konten Tab Empat AgenProfil -->
+                      <div
+                        class="hidden px-4 py-2"
+                        id="detail-agenprofil-empat"
+                        role="tabpanel"
+                        aria-labelledby="detail-agenprofil-empat-tab"
+                      >
+                        <!-- iini -->
+
+                        empat
+
+                        <!--  -->
+                      </div>
+
+                      <!-- Konten Tab Lima AgenProfil -->
+                      <div
+                        class="hidden px-4 py-2 mt-1"
+                        id="detail-agenprofil-lima"
+                        role="tabpanel"
+                        aria-labelledby="detail-agenprofil-lima-tab"
+                      >
+                        <!-- konten Sarpras agenprofil -->
+                        lima
+                      </div>
+
+                      <!-- Konten Tab Enam AgenProfil -->
+                      <div
+                        class="hidden px-4 py-2"
+                        id="detail-agenprofil-enam"
+                        role="tabpanel"
+                        aria-labelledby="detail-agenprofil-enam-tab"
+                      >
+                        <!-- Tab Menu -->
+
+                        enam
+                        <!--  -->
+                      </div>
+
+                      <!-- Konten Tab Tujuh AgenProfil -->
+                      <div
+                        class="hidden px-4 py-2"
+                        id="detail-agenprofil-tujuh"
+                        role="tabpanel"
+                        aria-labelledby="detail-agenprofil-tujuh-tab"
+                      >
+                        tujuh
                       </div>
                       <!--  -->
                     </div>
