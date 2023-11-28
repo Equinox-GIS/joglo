@@ -11262,42 +11262,100 @@
               <!-- Card Detail Beranda -->
               <div class="flex flex-col w-full card-info-detail-favorit hidden">
                 <!-- Judul Card Info Detail -->
-                <div class="px-3 pt-2">
-                  <div class="w-full flex justify-between items-center">
-                    <div class="inline-flex">
+                <div class="px-3 mx-0.5 pt-2">
+                  <div class="flex flex-col">
+                    <div class="w-full h-[3.5rem] grid grid-cols-[48px,1fr]">
                       <div
-                        class="flex flex-col items-center pb-0 mr-2 cursor-pointer"
-                        onclick="showMessage(this)"
+                        class="w-full h-full flex items-center justify-start"
                       >
                         <img
-                          class="w-8 h-8 rounded-full mx-1"
+                          class="w-10 h-10 rounded-full"
                           src="./src/images/model/model11.jpg"
                         />
                       </div>
+                      <div class="grid grid-cols-2">
+                        <div class="w-full grid grid-cols-[117px,1fr]">
+                          <div class="w-full">
+                            <div class="inline-flex">
+                              <div
+                                class="text-sm font-semibold text-gray-800 cursor-pointer mt-1"
+                                onclick="showMessage(this)"
+                              >
+                                Budiman Alisy
+                              </div>
+                              <div
+                                class="flex items-center justify-center ml-1"
+                              >
+                                <div
+                                  class="w-4 h-4 mt-1 ml-0.5 flex justify-center items-center relative"
+                                >
+                                  <img src="/src/images/verif.png" alt="" />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="text-xs text-gray-400">RayWhite</div>
+                          </div>
+                          <div class="w-full grid items-center">
+                            <div class="inline-flex items-center justify-start">
+                              <button
+                                data-pesan="Mochtar Riady"
+                                onclick="showMessage(this)"
+                                type="button"
+                                class="h-4 p-3 ml-3 text-xs font-medium text-center inline-flex items-center text-gray-700 border border-gray-700 bg-gray-100 hover:bg-slate-200 rounded-md"
+                              >
+                                Kirim Pesan
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="w-full grid justify-items-end relative">
+                          <div class="absolute right-0 top-0">
+                            <div
+                              onclick="closeTab()"
+                              class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                            >
+                              <div
+                                class="w-5 h-5 mt-0.5 flex justify-center items-center relative"
+                              >
+                                <img src="./src/images/back.png" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex justify-between w-full">
+                      <div class="text-md font-bold flex items-center">
+                        Rumahs Impian Strategis Dijual! Segera Miliki Hunian
+                        Eksklusif di Lokasi Prime!
+                      </div>
+                    </div>
+
+                    <div class="w-full h-full flex justify-beetwen hidden">
                       <div class="flex items-center">
                         <div class="text-md font-bold flex-shrink-0">
                           Rumahs Impian Strategis Dijual! Segera Miliki Hunian
                           Eksklusif di Lokasi Prime!
                         </div>
                       </div>
-                    </div>
-
-                    <div class="flex col justify-center py-1 mt-1">
-                      <div
-                        onclick="closeTabDisukai()"
-                        class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
-                      >
+                      <!--  -->
+                      <div class="flex col justify-center py-1 mt-1">
                         <div
-                          class="w-5 h-5 mt-0.5 mr-0.5 flex justify-center items-center relative"
+                          onclick="closeTab()"
+                          class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
                         >
-                          <img src="./src/images/back.png" alt="" />
+                          <div
+                            class="w-5 h-5 mt-0.5 mr-0.5 flex justify-center items-center relative"
+                          >
+                            <img src="./src/images/back.png" alt="" />
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <!-- Menu Tab Favorit -->
-
+                  <!-- Menu Tab -->
                   <div class="border-b border-gray-200">
                     <!-- Tab Menu Favorit -->
                     <ul
@@ -11428,7 +11486,6 @@
                     </ul>
                   </div>
                 </div>
-
                 <!--  -->
 
                 <!-- Konten Card Details favorit -->
@@ -19749,15 +19806,15 @@
               <!-- Judul Pesan -->
               <div class="px-3 grid grid-cols-[220px,1fr] pt-2 items-center">
                 <div
-                  class="font-semibold text-xl py-[1.35vh] border-l-2 border-gray-300 border-y-2 flex justify-start items-center"
+                  class="font-semibold text-xl py-[0.5vh] border-l-2 border-gray-300 border-y-2 flex justify-start items-center"
                 >
                   Pesan
                 </div>
 
                 <div
-                  class="flex justify-end items-center text-lg pr-1 border-y-2 border-gray-300 border-r-2"
+                  class="flex justify-end items-center text-lg border-y-2 border-gray-300 border-r-2"
                 >
-                  <div class="flex col justify-center py-1 mt-1">
+                  <div class="flex col justify-center">
                     <div
                       onclick="CloseTabPesan()"
                       class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
