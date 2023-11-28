@@ -249,6 +249,36 @@ dropdownMenuDisukai.addEventListener(
   )
 );
 
+// Inisialisasi Dropdown DetailAgent
+const dropdownButtonDetailAgent = document.getElementById(
+  "dropdown-agen-button"
+);
+const dropdownMenuDetailAgent = document.getElementById("dropdown-agen-menu");
+const arrowIconDetailAgent = document.getElementById(
+  "dropdown-agen-arrow-icon"
+);
+const selectedItemDetailAgent = document.getElementById(
+  "dropdown-agen-selected-item"
+);
+let isDropdownDetailAgentOpen = false;
+
+dropdownButtonDetailAgent.addEventListener("click", () => {
+  isDropdownDetailAgentOpen = toggleDropdown(
+    dropdownMenuDetailAgent,
+    arrowIconDetailAgent,
+    isDropdownDetailAgentOpen
+  );
+});
+dropdownMenuDetailAgent.addEventListener(
+  "click",
+  selectDropdownItem(
+    selectedItemDetailAgent,
+    dropdownMenuDetailAgent,
+    arrowIconDetailAgent,
+    isDropdownDetailAgentOpen
+  )
+);
+
 // Menambahkan event listener ke window untuk menutup dropdown jika klik di luar
 window.addEventListener(
   "click",

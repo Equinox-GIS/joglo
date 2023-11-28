@@ -329,6 +329,18 @@
   border-top-left-radius: 0.5rem !important;
   border-top-right-radius: 0.5rem !important;
 }
+
+.slider-card-agendetaill {
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.slider-card-agendetaill video,
+.slider-card-agendetaill img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
 /*  */
 
 #mapSoaraja,
@@ -732,5 +744,5 @@ body {
 
 .slider-card-info-detail {
   width: 100%;
-  height: 56.5vh;
+  height: 54.5vh;
 }
