@@ -294,11 +294,11 @@
 }
 
 /* Rounded */
-.slider-card-beranda {
+/* .slider-card-beranda {
   overflow: hidden;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-}
+} */
 
 .slider-card-beranda video,
 .slider-card-beranda img {
