@@ -2236,10 +2236,19 @@ window.ShowDetailPesan = function () {
   }
 };
 
+window.ShowDetailPesanDua = function () {
+  // Change the class of the default_pesan element
+  var defaultPesan = document.querySelector(".default_pesan_dua");
+  defaultPesan.classList.add("hidden");
+
+  var defaultPesan = document.querySelector(".default_pesan_dua_aktif");
+  defaultPesan.classList.remove("hidden");
+};
+
 window.closeTabDetailPesan = function () {
-  var defaultPesan = document.querySelector(".default_pesan_aktif");
-  defaultPesan.classList.remove("default_pesan_aktif");
-  defaultPesan.classList.add("default_pesan");
+  var defaultPesan = document.querySelector(".default_pesan_dua_aktif");
+  defaultPesan.classList.remove("default_pesan_dua_aktif");
+  defaultPesan.classList.add("default_pesan_dua");
 
   var activeName = document.querySelector(".nama-pesan-aktif");
   if (activeName) {
