@@ -249,6 +249,36 @@ dropdownMenuDisukai.addEventListener(
   )
 );
 
+// Inisialisasi Dropdown DetailAgent
+const dropdownButtonDetailAgent = document.getElementById(
+  "dropdown-agen-button"
+);
+const dropdownMenuDetailAgent = document.getElementById("dropdown-agen-menu");
+const arrowIconDetailAgent = document.getElementById(
+  "dropdown-agen-arrow-icon"
+);
+const selectedItemDetailAgent = document.getElementById(
+  "dropdown-agen-selected-item"
+);
+let isDropdownDetailAgentOpen = false;
+
+dropdownButtonDetailAgent.addEventListener("click", () => {
+  isDropdownDetailAgentOpen = toggleDropdown(
+    dropdownMenuDetailAgent,
+    arrowIconDetailAgent,
+    isDropdownDetailAgentOpen
+  );
+});
+dropdownMenuDetailAgent.addEventListener(
+  "click",
+  selectDropdownItem(
+    selectedItemDetailAgent,
+    dropdownMenuDetailAgent,
+    arrowIconDetailAgent,
+    isDropdownDetailAgentOpen
+  )
+);
+
 // Menambahkan event listener ke window untuk menutup dropdown jika klik di luar
 window.addEventListener(
   "click",
@@ -1102,28 +1132,18 @@ let lastClickedPesan;
 window.showMessage = function (element) {
   lastClickedPesan = element;
 
-  let pesan = element.getAttribute("data-pesan");
-
-  console.log(pesan);
-  console.log(userElements);
-
-  // Memeriksa apakah ada elemen yang cocok dengan 'pesan'
-  // if (userElements[pesan]) {
-  //   // Menambahkan kelas 'aktif-menu-pesan' pada elemen yang cocok
-  //   // userElements[pesan].classList.add("aktif-menu-pesan");
-  //   console.log("sama");
-  // }
-
   var menuTujuhTab = document.getElementById("MenuTujuhTab");
   if (menuTujuhTab) {
     menuTujuhTab.click();
     showCardPesantDetail();
-
-    // console.log(nameUserElements);
   } else {
     console.error("MenuTujuhTab not found");
   }
 };
+
+//
+
+//
 
 window.CloseTabPesan = function () {
   if (lastClickedPesan) {
