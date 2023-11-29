@@ -2138,6 +2138,18 @@
                         >
                           <div class="w-full h-[27vh] relative">
                             <div class="slider-card-beranda w-full h-full">
+                              <div class="relative h-[27vh]">
+                                <video
+                                  class="w-full h-full object-cover"
+                                  loop
+                                  muted
+                                  preload="metadata"
+                                  src="./src/video/Video1.mp4"
+                                ></video>
+                                <div class="absolute h-12 w-12 top-0">
+                                  <img src="./src/images/new2.png" alt="" />
+                                </div>
+                              </div>
                               <div class="relative h-[27vh] bg-black">
                                 <img
                                   class="w-full h-full object-contain"
@@ -4126,83 +4138,104 @@
                       </div>
                       <div class="grid grid-cols-2">
                         <div class="w-full grid grid-cols-[125px,1fr]">
-                          <div class="w-full">
-                            <div class="inline-flex">
-                              <div
-                                class="text-sm font-semibold text-gray-800 cursor-pointer mt-1"
-                                onclick="showMessage(this)"
-                              >
-                                Budiman Alisys
-                              </div>
-                              <div
-                                class="flex items-center justify-center ml-1"
-                              >
+                          <div class="w-full flex items-center justify-center">
+                            <div class="flex flex-col">
+                              <div class="inline-flex mb-0.5">
                                 <div
-                                  class="w-4 h-4 mt-1 ml-0.5 flex justify-center items-center relative"
+                                  class="text-sm font-semibold text-gray-800 cursor-pointer mt-1"
+                                  onclick="showMessage(this)"
                                 >
-                                  <img src="/src/images/verif.png" alt="" />
+                                  Budiman Alisys
+                                </div>
+                                <div
+                                  class="flex items-center justify-center ml-1"
+                                >
+                                  <div
+                                    class="w-4 h-4 mt-1 ml-0.5 flex justify-center items-center relative"
+                                  >
+                                    <img src="/src/images/verif.png" alt="" />
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                            <div class="">
-                              <label
-                                for="star-agent-utama"
-                                class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
-                              >
-                                <div>
-                                  <label
-                                    for="star-agent-utama"
-                                    class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
-                                  >
-                                    <svg
-                                      class="w-3.5 h-3.5 text-yellow-300"
-                                      aria-hidden="true"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      fill="currentColor"
-                                      viewBox="0 0 22 20"
+
+                              <div class="">
+                                <label
+                                  for="star-agent-utama"
+                                  class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                >
+                                  <div>
+                                    <label
+                                      for="star-agent-utama"
+                                      class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
                                     >
-                                      <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                      ></path>
-                                    </svg>
-                                    <svg
-                                      class="w-3.5 h-3.5 text-yellow-300"
-                                      aria-hidden="true"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      fill="currentColor"
-                                      viewBox="0 0 22 20"
-                                    >
-                                      <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                      ></path>
-                                    </svg>
-                                    <svg
-                                      class="w-3.5 h-3.5 text-gray-300"
-                                      aria-hidden="true"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      fill="currentColor"
-                                      viewBox="0 0 22 20"
-                                    >
-                                      <path
-                                        d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                      ></path>
-                                    </svg>
-                                  </label>
-                                </div>
-                              </label>
+                                      <svg
+                                        class="w-3.5 h-3.5 text-yellow-300"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor"
+                                        viewBox="0 0 22 20"
+                                      >
+                                        <path
+                                          d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                        ></path>
+                                      </svg>
+                                      <svg
+                                        class="w-3.5 h-3.5 text-yellow-300"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor"
+                                        viewBox="0 0 22 20"
+                                      >
+                                        <path
+                                          d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                        ></path>
+                                      </svg>
+                                      <svg
+                                        class="w-3.5 h-3.5 text-yellow-300"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor"
+                                        viewBox="0 0 22 20"
+                                      >
+                                        <path
+                                          d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                        ></path>
+                                      </svg>
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-300"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor"
+                                        viewBox="0 0 22 20"
+                                      >
+                                        <path
+                                          d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                        ></path>
+                                      </svg>
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-300 hidden"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="currentColor"
+                                        viewBox="0 0 22 20"
+                                      >
+                                        <path
+                                          d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                        ></path>
+                                      </svg>
+                                    </label>
+                                  </div>
+                                </label>
+                              </div>
                             </div>
                           </div>
                           <div class="w-full grid items-center">
                             <div class="inline-flex items-center justify-start">
-                              <img
-                                class="w-8 h-8 object-contain mr-6"
-                                src="./src/images/agent/era-property.png"
-                              />
                               <button
                                 data-pesan="Mochtar Riady"
                                 onclick="showMessage(this)"
                                 type="button"
-                                class="h-4 p-3 -ml-0 text-xs font-medium text-center inline-flex items-center text-gray-700 border border-gray-700 bg-gray-100 hover:bg-slate-200 rounded-md"
+                                class="h-4 p-3 ml-2 text-xs font-medium text-center inline-flex items-center text-gray-700 border border-gray-700 bg-gray-100 hover:bg-slate-200 rounded-md"
                               >
                                 Kirim Pesan
                               </button>
@@ -19072,7 +19105,7 @@
                                   >
                                     <div class="inline-flex items-center">
                                       <img
-                                        class="w-6 h-6 object-contain mr-5"
+                                        class="w-5 h-5 object-contain mr-5"
                                         src="./src/images/instagram.png"
                                       />
                                       <img
@@ -19080,7 +19113,7 @@
                                         src="./src/images/facebook.png"
                                       />
                                       <img
-                                        class="w-6 h-6 object-contain mr-5"
+                                        class="w-5 h-5 object-contain mr-5"
                                         src="./src/images/tiktok.png"
                                       />
                                     </div>
@@ -19096,80 +19129,64 @@
                             <div
                               class="bg-white rounded-lg shadow-xl h-[22.7vh] mt-2"
                             >
-                              <div class="flex flex-col mx-5 mt-2">
-                                <div class="font text-sm font-semibold mb-1">
+                              <div class="flex flex-col mx-5 mt-4">
+                                <div class="font text-xs font-semibold mb-1">
                                   Spesialisasi Areaa
                                 </div>
                                 <div class="flex flex-wrap">
-                                  <div class="mr-2 mb-2">
+                                  <div class="mr-2 mb-1">
                                     <button
                                       type="button"
-                                      class="h-5 px-2 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs"
+                                      class="h-5 px-2 bg-white border border-gray-700 text-black font-medium rounded-full text-xs"
                                     >
                                       Kelapa Gading
                                     </button>
                                   </div>
-                                  <div class="mr-2 mb-2">
+                                  <div class="mr-2 mb-1">
                                     <button
                                       type="button"
-                                      class="h-5 px-2 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs"
+                                      class="h-5 px-2 bg-white border border-gray-700 text-black font-medium rounded-full text-xs"
                                     >
                                       Pluit
                                     </button>
                                   </div>
-                                  <div class="mr-2 mb-2">
+                                  <div class="mr-2 mb-1">
                                     <button
                                       type="button"
-                                      class="h-5 px-2 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs"
+                                      class="h-5 px-2 bg-white border border-gray-700 text-black font-medium rounded-full text-xs"
                                     >
                                       Senayan
                                     </button>
                                   </div>
-                                  <div class="mr-2 mb-2">
+                                  <div class="mr-2 mb-1">
                                     <button
                                       type="button"
-                                      class="h-5 px-2 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs"
+                                      class="h-5 px-2 bg-white border border-gray-700 text-black font-medium rounded-full text-xs"
                                     >
                                       Cilandak
                                     </button>
                                   </div>
                                 </div>
                               </div>
-                              <div class="flex flex-col mx-5 mt-2">
-                                <div class="font text-sm font-semibold mb-1">
+                              <div class="flex flex-col mx-5 mt-3">
+                                <div class="font text-xs font-semibold mb-1">
                                   Spesialisasi Asett
                                 </div>
                                 <div class="flex flex-wrap">
                                   <div class="mr-2 mb-2">
                                     <button
                                       type="button"
-                                      class="h-5 px-2 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs"
+                                      class="h-5 px-2 bg-white border border-gray-700 text-black font-medium rounded-full text-xs"
                                     >
-                                      Rumah Baru
+                                      Rumah
                                     </button>
                                   </div>
                                   <div class="mr-2 mb-2">
                                     <button
                                       type="button"
-                                      class="h-5 px-2 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs"
+                                      class="h-5 px-2 bg-white border border-gray-700 text-black font-medium rounded-full text-xs"
                                     >
-                                      Rumah Seken
-                                    </button>
-                                  </div>
-                                  <div class="mr-2 mb-2">
-                                    <button
-                                      type="button"
-                                      class="h-5 px-2 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs"
-                                    >
-                                      Apartemen Seken
-                                    </button>
-                                  </div>
-                                  <div class="mr-2 mb-2">
-                                    <button
-                                      type="button"
-                                      class="h-5 px-2 bg-gray-100 border border-gray-700 text-black font-medium rounded-full text-xs"
-                                    >
-                                      Apartemen Baru
+                                      Apartemen
                                     </button>
                                   </div>
                                 </div>
@@ -19180,8 +19197,12 @@
                           </div>
 
                           <div
-                            class="bg-white rounded-lg shadow-xl p-5 flex flex-col"
+                            class="bg-white rounded-lg shadow-xl px-5 py-2 flex flex-col"
                           >
+                            <div class="text-sm font-semibold mt-3 mb-2">
+                              About Me
+                            </div>
+
                             <div class="text-sm text-gray-700 pb-1">
                               Lorem ipsum dolor sit amet consectetur adipisicing
                               elit. Cupidit Lorem ipsum dolor sit amet
@@ -19224,8 +19245,7 @@
                             <div class="text-sm text-gray-700 pb-1">
                               Lorem ipsum dolor sit amet consectetur adipisicing
                               elit. Cupidit Lorem ipsum dolor sit amet
-                              consectetur adipisicing elit. Cupidit Lorem ipsum
-                              dolor sit amet consectetur adipisicing
+                              consectetur adipisicing elit
                             </div>
                           </div>
                         </div>
