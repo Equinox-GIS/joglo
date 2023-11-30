@@ -2483,3 +2483,11 @@ const ResetTabBeranda = () => {
     elem.classList.remove("hidden")
   );
 };
+
+function handleFileUpload(event) {
+  const file = event.target.files[0];
+  if (file) {
+    // Lakukan sesuatu dengan file gambar yang diunggah
+    console.log("File uploaded:", file.name);
+  }
+}
