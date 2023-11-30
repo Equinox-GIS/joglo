@@ -1149,6 +1149,10 @@ window.CloseTabPesan = function () {
   if (lastClickedPesan) {
     document.getElementById("MenuSatuTab").click();
 
+    Array.from(
+      document.getElementsByClassName("hidden-close-tab-pesan")
+    ).forEach((elem) => elem.classList.remove("hidden"));
+    //
     Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
       (elem) => elem.classList.remove("hidden")
     );
@@ -1221,6 +1225,55 @@ window.showCardAgentDetail = function () {
   showElement(".card-agent-detail");
   hideElement(".card-agent");
 };
+
+// BackPesanToGaleri
+
+// let showMessage;
+
+// window.showMessage = function (element) {
+//   lastClickedGaleriBack = element;
+
+//   var menuTujuhTab = document.getElementById("MenuTujuhTab");
+//   if (menuTujuhTab) {
+//     menuTujuhTab.click();
+//     showCardPesantDetail();
+//   } else {
+//     console.error("MenuTujuhTab not found");
+//   }
+// };
+
+// window.CloseTabPesan = function () {
+//   if (lastClickedPesan) {
+//     document.getElementById("MenuSatuTab").click();
+
+//     Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
+//       (elem) => elem.classList.remove("hidden")
+//     );
+//     Array.from(document.getElementsByClassName("card-info-pencarian")).forEach(
+//       (elem) => elem.classList.add("hidden")
+//     );
+
+//     Array.from(document.getElementsByClassName("konten-pesan")).forEach(
+//       (elem) => elem.classList.remove("hidden")
+//     );
+//     Array.from(
+//       document.getElementsByClassName("konten-not-found-pesan")
+//     ).forEach((elem) => elem.classList.remove("hidden"));
+//     Array.from(
+//       document.getElementsByClassName("konten-with-found-pesan")
+//     ).forEach((elem) => elem.classList.add("hidden"));
+//   } else {
+//     // Jika tidak ada elemen yang diklik sebelumnya, kembalikan tampilan default
+//     showElement(".konten-not-found-pesan");
+//     hideElement(".konten-with-found-pesan");
+//   }
+//   lastClickedPesan = null;
+// };
+
+// window.showCardPesantDetail = function () {
+//   showElement(".konten-with-found-pesan");
+//   hideElement(".konten-not-found-pesan");
+// };
 
 //
 //
