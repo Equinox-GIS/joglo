@@ -2236,13 +2236,43 @@ window.ShowDetailPesan = function () {
   }
 };
 
+// Nama Oran di Pesan
 window.ShowDetailPesanDua = function () {
-  // Change the class of the default_pesan element
   var defaultPesan = document.querySelector(".default_pesan_dua");
-  defaultPesan.classList.add("hidden");
+  var defaultPesanAktif = document.querySelector(".default_pesan_dua_aktif");
 
-  var defaultPesan = document.querySelector(".default_pesan_dua_aktif");
-  defaultPesan.classList.remove("hidden");
+  // Periksa apakah defaultPesan memiliki kelas 'hidden'
+  if (defaultPesan.classList.contains("hidden")) {
+    // Jika iya, berarti pesan sedang tersembunyi, maka tampilkan
+    defaultPesan.classList.remove("hidden");
+    defaultPesanAktif.classList.add("hidden");
+  } else {
+    // Jika tidak, berarti pesan sedang ditampilkan, maka sembunyikan
+    defaultPesan.classList.add("hidden");
+    defaultPesanAktif.classList.remove("hidden");
+  }
+};
+
+// Nama orang pindah ke profil agen
+window.ShowDetailProfilAgen = function () {
+  let MenuEmpatTab = document.getElementById("MenuEmpatTab");
+  if (MenuEmpatTab) {
+    MenuEmpatTab.click();
+    showCardAgentDetail();
+  }
+  // var defaultPesan = document.querySelector(".default_pesan_dua");
+  // var defaultPesanAktif = document.querySelector(".default_pesan_dua_aktif");
+
+  // // Periksa apakah defaultPesan memiliki kelas 'hidden'
+  // if (defaultPesan.classList.contains("hidden")) {
+  //   // Jika iya, berarti pesan sedang tersembunyi, maka tampilkan
+  //   defaultPesan.classList.remove("hidden");
+  //   defaultPesanAktif.classList.add("hidden");
+  // } else {
+  //   // Jika tidak, berarti pesan sedang ditampilkan, maka sembunyikan
+  //   defaultPesan.classList.add("hidden");
+  //   defaultPesanAktif.classList.remove("hidden");
+  // }
 };
 
 window.closeTabDetailPesan = function () {
