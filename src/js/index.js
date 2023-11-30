@@ -933,6 +933,18 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
+function initSlickPesan() {
+  $(".slider-card-info-detail-peta")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderDefaultOptions());
+}
+
 function initSlickAgenDetail() {
   $(".slider-detailagen")
     .on("init", function () {
