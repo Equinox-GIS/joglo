@@ -933,6 +933,18 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
+function initSlickPesan() {
+  $(".slider-card-info-detail-peta")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderDefaultOptions());
+}
+
 function initSlickAgenDetail() {
   $(".slider-detailagen")
     .on("init", function () {
@@ -1149,6 +1161,10 @@ window.CloseTabPesan = function () {
   if (lastClickedPesan) {
     document.getElementById("MenuSatuTab").click();
 
+    Array.from(
+      document.getElementsByClassName("hidden-close-tab-pesan")
+    ).forEach((elem) => elem.classList.remove("hidden"));
+    //
     Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
       (elem) => elem.classList.remove("hidden")
     );
@@ -1221,6 +1237,55 @@ window.showCardAgentDetail = function () {
   showElement(".card-agent-detail");
   hideElement(".card-agent");
 };
+
+// BackPesanToGaleri
+
+// let showMessage;
+
+// window.showMessage = function (element) {
+//   lastClickedGaleriBack = element;
+
+//   var menuTujuhTab = document.getElementById("MenuTujuhTab");
+//   if (menuTujuhTab) {
+//     menuTujuhTab.click();
+//     showCardPesantDetail();
+//   } else {
+//     console.error("MenuTujuhTab not found");
+//   }
+// };
+
+// window.CloseTabPesan = function () {
+//   if (lastClickedPesan) {
+//     document.getElementById("MenuSatuTab").click();
+
+//     Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
+//       (elem) => elem.classList.remove("hidden")
+//     );
+//     Array.from(document.getElementsByClassName("card-info-pencarian")).forEach(
+//       (elem) => elem.classList.add("hidden")
+//     );
+
+//     Array.from(document.getElementsByClassName("konten-pesan")).forEach(
+//       (elem) => elem.classList.remove("hidden")
+//     );
+//     Array.from(
+//       document.getElementsByClassName("konten-not-found-pesan")
+//     ).forEach((elem) => elem.classList.remove("hidden"));
+//     Array.from(
+//       document.getElementsByClassName("konten-with-found-pesan")
+//     ).forEach((elem) => elem.classList.add("hidden"));
+//   } else {
+//     // Jika tidak ada elemen yang diklik sebelumnya, kembalikan tampilan default
+//     showElement(".konten-not-found-pesan");
+//     hideElement(".konten-with-found-pesan");
+//   }
+//   lastClickedPesan = null;
+// };
+
+// window.showCardPesantDetail = function () {
+//   showElement(".konten-with-found-pesan");
+//   hideElement(".konten-not-found-pesan");
+// };
 
 //
 //
@@ -2236,13 +2301,43 @@ window.ShowDetailPesan = function () {
   }
 };
 
+// Nama Oran di Pesan
 window.ShowDetailPesanDua = function () {
-  // Change the class of the default_pesan element
   var defaultPesan = document.querySelector(".default_pesan_dua");
-  defaultPesan.classList.add("hidden");
+  var defaultPesanAktif = document.querySelector(".default_pesan_dua_aktif");
 
-  var defaultPesan = document.querySelector(".default_pesan_dua_aktif");
-  defaultPesan.classList.remove("hidden");
+  // Periksa apakah defaultPesan memiliki kelas 'hidden'
+  if (defaultPesan.classList.contains("hidden")) {
+    // Jika iya, berarti pesan sedang tersembunyi, maka tampilkan
+    defaultPesan.classList.remove("hidden");
+    defaultPesanAktif.classList.add("hidden");
+  } else {
+    // Jika tidak, berarti pesan sedang ditampilkan, maka sembunyikan
+    defaultPesan.classList.add("hidden");
+    defaultPesanAktif.classList.remove("hidden");
+  }
+};
+
+// Nama orang pindah ke profil agen
+window.ShowDetailProfilAgen = function () {
+  let MenuEmpatTab = document.getElementById("MenuEmpatTab");
+  if (MenuEmpatTab) {
+    MenuEmpatTab.click();
+    showCardAgentDetail();
+  }
+  // var defaultPesan = document.querySelector(".default_pesan_dua");
+  // var defaultPesanAktif = document.querySelector(".default_pesan_dua_aktif");
+
+  // // Periksa apakah defaultPesan memiliki kelas 'hidden'
+  // if (defaultPesan.classList.contains("hidden")) {
+  //   // Jika iya, berarti pesan sedang tersembunyi, maka tampilkan
+  //   defaultPesan.classList.remove("hidden");
+  //   defaultPesanAktif.classList.add("hidden");
+  // } else {
+  //   // Jika tidak, berarti pesan sedang ditampilkan, maka sembunyikan
+  //   defaultPesan.classList.add("hidden");
+  //   defaultPesanAktif.classList.remove("hidden");
+  // }
 };
 
 window.closeTabDetailPesan = function () {
@@ -2400,3 +2495,11 @@ const ResetTabBeranda = () => {
     elem.classList.remove("hidden")
   );
 };
+
+function handleFileUpload(event) {
+  const file = event.target.files[0];
+  if (file) {
+    // Lakukan sesuatu dengan file gambar yang diunggah
+    console.log("File uploaded:", file.name);
+  }
+}
