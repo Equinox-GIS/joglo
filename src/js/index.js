@@ -1147,7 +1147,19 @@ window.showMessage = function (element) {
   var menuTujuhTab = document.getElementById("MenuTujuhTab");
   if (menuTujuhTab) {
     menuTujuhTab.click();
-    showCardPesantDetail();
+    // showCardPesantDetail();
+    ShowDetailPesanDua();
+    let elements = document.getElementsByClassName("bg-aktif-pesan");
+
+    let elements2 = document.getElementsByClassName("hidden-close-tab-pesan");
+
+    for (let element of elements) {
+      element.classList.add("bg-slate-200");
+    }
+
+    for (let element of elements2) {
+      element.classList.remove("hidden");
+    }
   } else {
     console.error("MenuTujuhTab not found");
   }
@@ -1161,9 +1173,9 @@ window.CloseTabPesan = function () {
   if (lastClickedPesan) {
     document.getElementById("MenuSatuTab").click();
 
-    Array.from(
-      document.getElementsByClassName("hidden-close-tab-pesan")
-    ).forEach((elem) => elem.classList.remove("hidden"));
+    // Array.from(
+    //   document.getElementsByClassName("hidden-close-tab-pesan")
+    // ).forEach((elem) => elem.classList.remove("hidden"));
     //
     Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
       (elem) => elem.classList.remove("hidden")
@@ -1497,6 +1509,16 @@ window.showCardInfoDetail = function (param) {
       // }
 
       //
+      break;
+
+    case "5":
+      showElement(".card-agent-detail");
+      hideElement(".card-agent");
+
+      if (!$(".slider-pasang").hasClass("slick-initialized")) {
+        initSlick(".slider-pasang", getSliderDefaultOptions());
+      }
+
       break;
   }
 };
@@ -1850,8 +1872,10 @@ document.addEventListener("DOMContentLoaded", function () {
         ResetTabAgen();
         // CloseTabPesan();
 
-        initSlickAgent();
-        initSlickAgenDetail();
+        initSlickPasang();
+
+        // initSlickAgent();
+        // initSlickAgenDetail();
 
         // stopAndResetVideo();
         isTeksBerjalanActive = false;
@@ -2503,3 +2527,10 @@ function handleFileUpload(event) {
     console.log("File uploaded:", file.name);
   }
 }
+
+$(document).ready(function () {
+  // Menambahkan event listener untuk klik pada elemen dengan ID 'detail-agenprofil-dua-tab'
+  $("#detail-agenprofil-dua-tab").on("click", function () {
+    // hapus semua class hidden dari ini
+  });
+});
