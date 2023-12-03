@@ -1924,6 +1924,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTabDisukai();
         ResetTabPesan();
         // CloseTabPesan();
+        // cardModeTiga();
 
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -2389,10 +2390,12 @@ window.ShowDetailPesanDua = function () {
     // Jika iya, berarti pesan sedang tersembunyi, maka tampilkan
     defaultPesan.classList.remove("hidden");
     defaultPesanAktif.classList.add("hidden");
+    // cardModeTiga();
   } else {
     // Jika tidak, berarti pesan sedang ditampilkan, maka sembunyikan
     defaultPesan.classList.add("hidden");
     defaultPesanAktif.classList.remove("hidden");
+    // cardModeTiga();
   }
 };
 

@@ -847,9 +847,9 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 preload="metadata"
                                 src="${Video1}"
                               ></video>
-                              <div class="absolute h-10 w-10 top-0">
-                                <img src="${logoNew}" alt="" />
-                              </div>
+                                    <div class="arrow-right-custom-mini-peta">
+                                      <span class="font-semibold">NEW</span>
+                                    </div>
                             </div>
                             <!--  -->
                             <div class="relative">
@@ -858,9 +858,9 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 src="${rumaha2}"
                                 alt=""
                               />
-                              <div class="absolute h-10 w-10 top-0">
-                                <img src="${logoNew}" alt="" />
-                              </div>
+                                  <div class="arrow-right-custom-mini-peta">
+                                      <span class="font-semibold">NEW</span>
+                                    </div>
                             </div>
                           </div>
                         </div>
