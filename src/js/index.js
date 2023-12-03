@@ -1871,6 +1871,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTab();
         closeTabDisukai();
         // CloseTabPesan();
+        cardModeTiga();
 
         initSlickFavorit();
         cardModeTigaFavorit();
@@ -2133,6 +2134,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Change Mode
 document.addEventListener("DOMContentLoaded", (event) => {
+  function cardModeTigaFavorit() {
+    // Elemen untuk slider favorit dan card mode ketiga
+    var sliderFavorit = document.querySelector(".slider-favorit");
+    var sliderCardModeKetiga = document.querySelector(
+      ".slider-card-mode-ketiga"
+    );
+
+    // Fungsi untuk menginisialisasi atau menghancurkan Slick
+    function handleSlickInitialization(sliderElement) {
+      if (sliderElement) {
+        if ($(sliderElement).hasClass("slick-initialized")) {
+          $(sliderElement).slick("unslick");
+        }
+        $(sliderElement).slick(/* Opsi Slick di sini */);
+      }
+    }
+
+    // Cek dan tangani slider favorit
+    if (sliderFavorit) {
+      handleSlickInitialization(sliderFavorit);
+    }
+
+    // Cek dan tangani slider card mode ketiga
+    if (sliderCardModeKetiga) {
+      handleSlickInitialization(sliderCardModeKetiga);
+    }
+  }
+
   let clickCount = 0;
   window.ChangeModeCard = function (element) {
     clickCount++;
@@ -2154,7 +2183,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
       secondMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      initSlickFavorit();
+      // initSlickFavorit();
+      // cardModeTigaFavorit();
       cardModeTigaFavorit();
 
       initSlickAgenDetail();
@@ -2171,7 +2201,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      initSlickFavorit();
+      // initSlickFavorit();
+      // cardModeTigaFavorit();
       cardModeTigaFavorit();
 
       initSlickAgenDetail();
