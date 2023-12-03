@@ -933,6 +933,18 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
+function cardModeTigaFavorit() {
+  $(".slider-card-mode-ketiga-fav")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderDefaultOptions());
+}
+
 function initSlickPesan() {
   $(".slider-card-info-detail-peta")
     .on("init", function () {
@@ -1017,6 +1029,8 @@ function addClickHandlerToDots() {
 
 $(document).ready(function () {
   initSlickCardInfo("slider-card-beranda");
+  cardModeTiga();
+  // cardModeTigaFavorit();
 });
 
 function playInFullscreen(videoElement) {
@@ -1859,6 +1873,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // CloseTabPesan();
 
         initSlickFavorit();
+        cardModeTigaFavorit();
 
         // stopAndResetVideo();
         enable();
@@ -2140,7 +2155,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         el.classList.remove("hidden");
       });
       initSlickFavorit();
+      cardModeTigaFavorit();
+
       initSlickAgenDetail();
+      cardModeTiga();
     } else if (clickCount % 3 === 2) {
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
@@ -2154,7 +2172,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         el.classList.remove("hidden");
       });
       initSlickFavorit();
+      cardModeTigaFavorit();
+
       initSlickAgenDetail();
+      cardModeTiga();
     }
   };
 });
@@ -2550,3 +2571,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   });
 });
+
+function cardModeTiga() {
+  setTimeout(function () {
+    if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+      $(".slider-card-mode-ketiga").slick("setPosition");
+    } else {
+      initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+    }
+  }, 100);
+}
