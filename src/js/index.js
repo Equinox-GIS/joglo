@@ -1498,6 +1498,16 @@ window.showCardInfoDetail = function (param) {
 
       //
       break;
+
+    case "5":
+      showElement(".card-agent-detail");
+      hideElement(".card-agent");
+
+      if (!$(".slider-pasang").hasClass("slick-initialized")) {
+        initSlick(".slider-pasang", getSliderDefaultOptions());
+      }
+
+      break;
   }
 };
 
@@ -1850,8 +1860,10 @@ document.addEventListener("DOMContentLoaded", function () {
         ResetTabAgen();
         // CloseTabPesan();
 
-        initSlickAgent();
-        initSlickAgenDetail();
+        initSlickPasang();
+
+        // initSlickAgent();
+        // initSlickAgenDetail();
 
         // stopAndResetVideo();
         isTeksBerjalanActive = false;
@@ -2503,3 +2515,10 @@ function handleFileUpload(event) {
     console.log("File uploaded:", file.name);
   }
 }
+
+$(document).ready(function () {
+  // Menambahkan event listener untuk klik pada elemen dengan ID 'detail-agenprofil-dua-tab'
+  $("#detail-agenprofil-dua-tab").on("click", function () {
+    // hapus semua class hidden dari ini
+  });
+});
