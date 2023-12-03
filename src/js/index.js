@@ -1924,7 +1924,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTabDisukai();
         ResetTabPesan();
         // CloseTabPesan();
-        // cardModeTiga();
+        cardModeTiga();
 
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -2384,6 +2384,8 @@ window.ShowDetailPesan = function () {
 window.ShowDetailPesanDua = function () {
   var defaultPesan = document.querySelector(".default_pesan_dua");
   var defaultPesanAktif = document.querySelector(".default_pesan_dua_aktif");
+
+  cardModeTiga();
 
   // Periksa apakah defaultPesan memiliki kelas 'hidden'
   if (defaultPesan.classList.contains("hidden")) {
