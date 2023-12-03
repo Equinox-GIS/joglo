@@ -1481,9 +1481,9 @@ window.showCardInfoDetail = function (param) {
       showElement(".card-info-favorit-dua");
       hideElement(".card-info-detail-favorit-dua");
 
-      if (!$(".slider-pasang").hasClass("slick-initialized")) {
-        initSlick(".slider-pasang", getSliderDefaultOptions());
-      }
+      // if (!$(".slider-pasang").hasClass("slick-initialized")) {
+      //   initSlick(".slider-pasang", getSliderDefaultOptions());
+      // }
       // if (!$(".slider-card-info-disukai").hasClass("slick-initialized")) {
       //   initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
 
@@ -1515,9 +1515,9 @@ window.showCardInfoDetail = function (param) {
       showElement(".card-agent-detail");
       hideElement(".card-agent");
 
-      if (!$(".slider-pasang").hasClass("slick-initialized")) {
-        initSlick(".slider-pasang", getSliderDefaultOptions());
-      }
+      // if (!$(".slider-pasang").hasClass("slick-initialized")) {
+      //   initSlick(".slider-pasang", getSliderDefaultOptions());
+      // }
 
       break;
   }
@@ -1843,7 +1843,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTabDisukai();
         // CloseTabPesan();
 
-        initSlickPasang();
+        // initSlickPasang();
 
         disable();
 
@@ -1867,12 +1867,14 @@ document.addEventListener("DOMContentLoaded", function () {
         teksBerjalan();
         break;
       case "MenuEmpatTab":
+        initSlickPasang();
+
         closeTab();
         closeTabDisukai();
         ResetTabAgen();
         // CloseTabPesan();
 
-        initSlickPasang();
+        // console.log("MenuEmpatTab");
 
         // initSlickAgent();
         // initSlickAgenDetail();
@@ -2532,5 +2534,19 @@ $(document).ready(function () {
   // Menambahkan event listener untuk klik pada elemen dengan ID 'detail-agenprofil-dua-tab'
   $("#detail-agenprofil-dua-tab").on("click", function () {
     // hapus semua class hidden dari ini
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var tabButton = document.getElementById("detail-agenprofil-dua-tab");
+
+  tabButton.addEventListener("click", function () {
+    setTimeout(function () {
+      if ($(".slider-pasang").hasClass("slick-initialized")) {
+        $(".slider-pasang").slick("setPosition");
+      } else {
+        initSlick(".slider-pasang", getSliderDefaultOptions());
+      }
+    }, 100);
   });
 });
