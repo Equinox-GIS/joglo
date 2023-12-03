@@ -933,6 +933,18 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
+function cardModeTigaFavorit() {
+  $(".slider-card-mode-ketiga-fav")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderDefaultOptions());
+}
+
 function initSlickPesan() {
   $(".slider-card-info-detail-peta")
     .on("init", function () {
@@ -1017,6 +1029,8 @@ function addClickHandlerToDots() {
 
 $(document).ready(function () {
   initSlickCardInfo("slider-card-beranda");
+  cardModeTiga();
+  // cardModeTigaFavorit();
 });
 
 function playInFullscreen(videoElement) {
@@ -1481,9 +1495,9 @@ window.showCardInfoDetail = function (param) {
       showElement(".card-info-favorit-dua");
       hideElement(".card-info-detail-favorit-dua");
 
-      if (!$(".slider-pasang").hasClass("slick-initialized")) {
-        initSlick(".slider-pasang", getSliderDefaultOptions());
-      }
+      // if (!$(".slider-pasang").hasClass("slick-initialized")) {
+      //   initSlick(".slider-pasang", getSliderDefaultOptions());
+      // }
       // if (!$(".slider-card-info-disukai").hasClass("slick-initialized")) {
       //   initSlick(".slider-card-info-disukai", getSliderDefaultOptions());
 
@@ -1515,9 +1529,9 @@ window.showCardInfoDetail = function (param) {
       showElement(".card-agent-detail");
       hideElement(".card-agent");
 
-      if (!$(".slider-pasang").hasClass("slick-initialized")) {
-        initSlick(".slider-pasang", getSliderDefaultOptions());
-      }
+      // if (!$(".slider-pasang").hasClass("slick-initialized")) {
+      //   initSlick(".slider-pasang", getSliderDefaultOptions());
+      // }
 
       break;
   }
@@ -1843,7 +1857,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTabDisukai();
         // CloseTabPesan();
 
-        initSlickPasang();
+        // initSlickPasang();
 
         disable();
 
@@ -1857,8 +1871,10 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTab();
         closeTabDisukai();
         // CloseTabPesan();
+        cardModeTiga();
 
         initSlickFavorit();
+        cardModeTigaFavorit();
 
         // stopAndResetVideo();
         enable();
@@ -1867,12 +1883,14 @@ document.addEventListener("DOMContentLoaded", function () {
         teksBerjalan();
         break;
       case "MenuEmpatTab":
+        initSlickPasang();
+
         closeTab();
         closeTabDisukai();
         ResetTabAgen();
         // CloseTabPesan();
 
-        initSlickPasang();
+        // console.log("MenuEmpatTab");
 
         // initSlickAgent();
         // initSlickAgenDetail();
@@ -1906,6 +1924,7 @@ document.addEventListener("DOMContentLoaded", function () {
         closeTabDisukai();
         ResetTabPesan();
         // CloseTabPesan();
+        cardModeTiga();
 
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -2116,6 +2135,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Change Mode
 document.addEventListener("DOMContentLoaded", (event) => {
+  function cardModeTigaFavorit() {
+    // Elemen untuk slider favorit dan card mode ketiga
+    var sliderFavorit = document.querySelector(".slider-favorit");
+    var sliderCardModeKetiga = document.querySelector(
+      ".slider-card-mode-ketiga"
+    );
+
+    // Fungsi untuk menginisialisasi atau menghancurkan Slick
+    function handleSlickInitialization(sliderElement) {
+      if (sliderElement) {
+        if ($(sliderElement).hasClass("slick-initialized")) {
+          $(sliderElement).slick("unslick");
+        }
+        $(sliderElement).slick(/* Opsi Slick di sini */);
+      }
+    }
+
+    // Cek dan tangani slider favorit
+    if (sliderFavorit) {
+      handleSlickInitialization(sliderFavorit);
+    }
+
+    // Cek dan tangani slider card mode ketiga
+    if (sliderCardModeKetiga) {
+      handleSlickInitialization(sliderCardModeKetiga);
+    }
+  }
+
   let clickCount = 0;
   window.ChangeModeCard = function (element) {
     clickCount++;
@@ -2137,8 +2184,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
       secondMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      initSlickFavorit();
+      // initSlickFavorit();
+      // cardModeTigaFavorit();
+      cardModeTigaFavorit();
+
       initSlickAgenDetail();
+      cardModeTiga();
     } else if (clickCount % 3 === 2) {
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
@@ -2151,8 +2202,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      initSlickFavorit();
+      // initSlickFavorit();
+      // cardModeTigaFavorit();
+      cardModeTigaFavorit();
+
       initSlickAgenDetail();
+      cardModeTiga();
     }
   };
 });
@@ -2330,15 +2385,19 @@ window.ShowDetailPesanDua = function () {
   var defaultPesan = document.querySelector(".default_pesan_dua");
   var defaultPesanAktif = document.querySelector(".default_pesan_dua_aktif");
 
+  cardModeTiga();
+
   // Periksa apakah defaultPesan memiliki kelas 'hidden'
   if (defaultPesan.classList.contains("hidden")) {
     // Jika iya, berarti pesan sedang tersembunyi, maka tampilkan
     defaultPesan.classList.remove("hidden");
     defaultPesanAktif.classList.add("hidden");
+    // cardModeTiga();
   } else {
     // Jika tidak, berarti pesan sedang ditampilkan, maka sembunyikan
     defaultPesan.classList.add("hidden");
     defaultPesanAktif.classList.remove("hidden");
+    // cardModeTiga();
   }
 };
 
@@ -2534,3 +2593,27 @@ $(document).ready(function () {
     // hapus semua class hidden dari ini
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var tabButton = document.getElementById("detail-agenprofil-dua-tab");
+
+  tabButton.addEventListener("click", function () {
+    setTimeout(function () {
+      if ($(".slider-pasang").hasClass("slick-initialized")) {
+        $(".slider-pasang").slick("setPosition");
+      } else {
+        initSlick(".slider-pasang", getSliderDefaultOptions());
+      }
+    }, 100);
+  });
+});
+
+function cardModeTiga() {
+  setTimeout(function () {
+    if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+      $(".slider-card-mode-ketiga").slick("setPosition");
+    } else {
+      initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+    }
+  }, 100);
+}
