@@ -1147,7 +1147,19 @@ window.showMessage = function (element) {
   var menuTujuhTab = document.getElementById("MenuTujuhTab");
   if (menuTujuhTab) {
     menuTujuhTab.click();
-    showCardPesantDetail();
+    // showCardPesantDetail();
+    ShowDetailPesanDua();
+    let elements = document.getElementsByClassName("bg-aktif-pesan");
+
+    let elements2 = document.getElementsByClassName("hidden-close-tab-pesan");
+
+    for (let element of elements) {
+      element.classList.add("bg-slate-200");
+    }
+
+    for (let element of elements2) {
+      element.classList.remove("hidden");
+    }
   } else {
     console.error("MenuTujuhTab not found");
   }
@@ -1161,9 +1173,9 @@ window.CloseTabPesan = function () {
   if (lastClickedPesan) {
     document.getElementById("MenuSatuTab").click();
 
-    Array.from(
-      document.getElementsByClassName("hidden-close-tab-pesan")
-    ).forEach((elem) => elem.classList.remove("hidden"));
+    // Array.from(
+    //   document.getElementsByClassName("hidden-close-tab-pesan")
+    // ).forEach((elem) => elem.classList.remove("hidden"));
     //
     Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
       (elem) => elem.classList.remove("hidden")
