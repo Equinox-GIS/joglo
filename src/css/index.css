@@ -846,3 +846,14 @@ body {
   display: none; /* Sembunyikan sampai gambar diunggah */
   margin-top: 2px; /* Jarak antara tombol dan gambar */
 }
+
+.custom-radis-pesan {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.custom-radis-pesan video,
+.custom-radis-pesan img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
