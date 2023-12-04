@@ -340,7 +340,7 @@ function resetTabStyles(tabsSelector, activeTabId) {
     );
     // Menambahkan kelas gaya untuk tab tidak aktif
     tab.classList.add(
-      "hover:text-gray-600",
+      "hover:text-gray-700",
       "hover:border-gray-300",
       "dark:border-transparent",
       "text-gray-500",
@@ -357,7 +357,7 @@ function resetTabStyles(tabsSelector, activeTabId) {
   var defaultTab = document.getElementById(activeTabId);
   if (defaultTab) {
     defaultTab.classList.remove(
-      "hover:text-gray-600",
+      "hover:text-gray-700",
       "hover:border-gray-300",
       "dark:border-transparent",
       "text-gray-500",
@@ -408,7 +408,7 @@ function setActiveTab(tabButtonId, tabContentId) {
 
     // Mengatur gaya dan atribut 'aria-selected' untuk tab aktif
     activeTab.classList.remove(
-      "hover:text-gray-600",
+      "hover:text-gray-700",
       "hover:border-gray-300",
       "dark:border-transparent",
       "text-gray-500",
