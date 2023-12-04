@@ -858,7 +858,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 src="${rumaha2}"
                                 alt=""
                               />
-                                  <div class="arrow-right-custom-mini-peta">
+                                    <div class="arrow-right-custom-mini-peta">
                                       <span class="font-semibold">NEW</span>
                                     </div>
                             </div>
