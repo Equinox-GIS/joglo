@@ -873,7 +873,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 <a href="#">
                                   <div class="inline-flex items-center">
                                     <h5
-                                      class="text-sm font-bold tracking-tight text-black"
+                                      class="text-md font-bold tracking-tight text-black"
                                     >
                                       Rp 11.300.000.000
                                     </h5>
