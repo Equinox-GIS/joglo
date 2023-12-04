@@ -2617,3 +2617,20 @@ function cardModeTiga() {
     }
   }, 100);
 }
+
+function activateMenuPesan(clickedElement) {
+  const menuPesanElements = document.querySelectorAll(".menu-pesan-area");
+  menuPesanElements.forEach((element) => {
+    element.classList.remove("bg-aktif-menu-pesan");
+  });
+  clickedElement.classList.add("bg-aktif-menu-pesan");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuPesanElements = document.querySelectorAll(".menu-pesan-area");
+  menuPesanElements.forEach((element) => {
+    element.addEventListener("click", function () {
+      activateMenuPesan(this);
+    });
+  });
+});

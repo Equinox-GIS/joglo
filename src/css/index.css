@@ -592,6 +592,10 @@
   @apply bg-slate-200 rounded-lg;
 }
 
+.bg-aktif-menu-pesan {
+  @apply bg-slate-200;
+}
+
 .btn_search_color {
   @apply text-slate-200;
 }
