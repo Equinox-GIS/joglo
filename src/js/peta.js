@@ -675,7 +675,7 @@ const pulsingDot = {
     const duration = 1000;
     const t = (performance.now() % duration) / duration;
 
-    const radius = (size / 2) * 0.3;
+    const radius = (size / 2) * 0.45;
     const outerRadius = (size / 2) * 0.7 * t + radius;
     const context = this.context;
 
@@ -685,14 +685,14 @@ const pulsingDot = {
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
     if (activeObjectId) {
-      context.fillStyle = `rgba(105,179,231, ${1 - t})`;
+      context.fillStyle = `rgba(229,55,55, ${1 - t})`;
       context.fill();
     }
 
     // Bagian untuk inner circle
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
-    context.fillStyle = "rgba(105,179,231, 1)";
+    context.fillStyle = "rgba(229,55,55, 1)";
     context.strokeStyle = "white";
     context.lineWidth = 10;
     context.fill();
