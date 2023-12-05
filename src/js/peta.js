@@ -631,17 +631,27 @@ const nopulsingDot = {
     this.context = canvas.getContext("2d");
   },
   render: function () {
-    const radius = (size / 2) * 0.3;
+    const radius = (size / 2) * 0.45;
     const context = this.context;
 
     context.clearRect(0, 0, this.width, this.height);
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
-    context.fillStyle = "rgba(105,179,231, 1)";
+    context.fillStyle = "red";
     context.strokeStyle = "white";
-    context.lineWidth = 1;
+    context.lineWidth = 16;
+
+    // shadow
+    context.shadowColor = "black";
+    context.shadowBlur = 10;
+    context.shadowOffsetX = 5;
+    context.shadowOffsetY = 5;
+
     context.fill();
     context.stroke();
+
+    // Reset shadow effects to avoid affecting other elements
+    context.shadowColor = "transparent";
 
     this.data = context.getImageData(0, 0, this.width, this.height).data;
     return true;
@@ -662,7 +672,6 @@ const pulsingDot = {
 
   render: function () {
     const isActive = activeObjectId !== null;
-    // console.log(object_id, activeObjectId);
     const duration = 1000;
     const t = (performance.now() % duration) / duration;
 
@@ -671,22 +680,21 @@ const pulsingDot = {
     const context = this.context;
 
     context.clearRect(0, 0, this.width, this.height);
+
+    // Bagian untuk outer circle
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
     if (activeObjectId) {
-      // console.log("active");
       context.fillStyle = `rgba(105,179,231, ${1 - t})`;
       context.fill();
     }
 
+    // Bagian untuk inner circle
     context.beginPath();
     context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
     context.fillStyle = "rgba(105,179,231, 1)";
     context.strokeStyle = "white";
-    if (activeObjectId) {
-      context.lineWidth = 2 + 4 * (1 - t);
-      context.lineWidth = 2 + 4 * (1 - t);
-    }
+    context.lineWidth = 10;
     context.fill();
     context.stroke();
 
@@ -1002,7 +1010,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   </div> -->
                                 </div>
                                 <!--  -->
-                                <div class="flex flex-col mb-1 -mt-1 font-normal" style="
+                                <div class="flex flex-col -mt-1 font-normal" style="
     margin-top: -0.3rem;
 ">
                                   <div class="flex items-center text-[11px] text-gray-700">
@@ -1018,18 +1026,6 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   </div>
                                 </div>
                                 <!--  -->
-                                <div class="flex flex-row justify-between w-full">
-                                  <div class="inline-flex">
-                                    <img class="w-5 h-5 object-cover mr-2" src="./src/images/heart-on.png" alt="">
-
-                                    <img class="w-4 h-4 object-cover mr-2 mt-0.5" src="./src/images/share.png" alt="">
-
-                                    <img class="w-5 h-5 object-cover mr-2" src="./src/images/badge3d.svg" alt="">
-                                  </div>
-                                  <div>
-                                    <img class="w-5 h-5 object-cover mr-1" src="./src/images/ad-off.png" alt="">
-                                  </div>
-                                </div>
                               </div>
                             </div>`;
 
