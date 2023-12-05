@@ -7193,7 +7193,7 @@
               </div>
 
               <!-- Card Detail Beranda -->
-              <div class="flex flex-col w-full card-detail-beranda hidden">
+              <div class="flex flex-col w-full h-full card-detail-beranda hidden">
                 <!-- Judul Card Detail Beranda -->
                 <div class="px-3 mx-0.5 pt-2">
                   <div class="flex flex-col">
@@ -7329,7 +7329,7 @@
                       </div>
                     </div>
 
-                    <div class="flex justify-between w-full">
+                    <div class="flex justify-between w-full py-2">
                       <div class="text-md font-bold flex items-center">
                         Rumahs Impian Strategis Dijual! Segera Miliki Hunian
                         Eksklusif di Lokasi Prime!
@@ -7378,7 +7378,7 @@
                           aria-controls="detail-beranda-satu"
                           aria-selected="false"
                         >
-                          Tampak Bangunan
+                          Bangunan
                         </button>
                       </li>
 
@@ -7438,7 +7438,7 @@
                           aria-controls="detail-beranda-lima"
                           aria-selected="false"
                         >
-                          Indeks
+                        Livability Index
                         </button>
                       </li>
 
@@ -7494,95 +7494,57 @@
 
                 <!-- Konten Card Detail Beranda -->
                 <div class="w-full h-full card-disukai-detail">
-                  <div class="flex flex-col h-full">
-                    <div id="DetailBerandaContent" class="">
+                  <div class="flex flex-col w-full h-full">
+                    <div id="DetailBerandaContent" class="w-full h-full">
                       <!-- Konten Tab Satu Beranda -->
                       <div
-                        class="hidden pb-2 px-3 mx-0.5"
+                        class="hidden pb-2 px-3  w-full h-full"
                         id="detail-beranda-satu"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-satu-tab"
                       >
                         <!--  -->
-                        <div class="h-full grid grid-cols-1 mt-3">
-                          <div class="w-full place-self-center items-center">
+                        <div class="w-full h-full grid grid-cols-1">
+                          <div class="w-full h-[64.5vh] flex items-center justify-center">
                             <!-- Slider -->
                             <div class="slider-card-info-detail w-full h-full">
                               <div>
                                 <div
                                   class="video-wrapper video-wrapper-autoplay"
                                 >
+                                <div class="h-[56vh] w-full bg-black">
                                   <video
-                                    class="h-[56vh] w-[50vw]"
+                                    class="w-full h-full object-contain"
                                     id="video-detail-beranda"
                                     controls
                                     src="./src/video/Video1.mp4"
                                   ></video>
                                 </div>
+                                </div>
                               </div>
 
                               <div class="relative">
                                 <div class="video-wrapper">
+                                  <div class="w-full !h-[56vh] bg-black">
                                   <img
-                                    class="w-full !h-[56vh] object-cover"
+                                    class="w-full h-full object-contain"
                                     src="./src/images/Hunian/Rmh2/rumahb1.jpg"
                                     alt=""
                                   />
                                 </div>
-                              </div>
-
-                              <div class="relative">
-                                <img
-                                  class="w-full !h-[56vh] object-cover"
-                                  src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                                  alt=""
-                                />
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- Information Kiri -->
-                          <div class="flex flex-col mt-2">
-                            <!-- Deskripsi -->
-
-                            <div
-                              class="grid grid-cols-1 text-sm content-center"
-                            >
-                              <div class="flex flex-row">
-                                <div class="flex flex-col">
-                                  <div class="flex flex-row items-center">
-                                    <div>
-                                      <div class="font-semibold text-2xl">
-                                        Rp 11.000.000.000
-                                      </div>
-                                    </div>
-                                    <div>
-                                      <div
-                                        class="text-md inline-flex font-bold flex-shrink-0 ml-1 mt-1"
-                                      >
-                                        <img
-                                          class="w-5 h-5 object-cover ml-2"
-                                          src="./src/images/heart-off.png"
-                                          alt=""
-                                        />
-                                        <img
-                                          class="w-4 h-4 object-cover mt-0.5 ml-3"
-                                          src="./src/images/share.png"
-                                          alt=""
-                                        />
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="text-sm text-gray-500 hidden">
-                                    Perkiraan NJOP: Rp 3.000.000 / m²
-                                  </div>
                                 </div>
                               </div>
 
-                              <div class="text-sm text-gray-500">
-                                Jl. Pondok Hijau Blok AB No. 7, RT/RW 08/07,
-                                Pondok Indah, Kebayoran Baru, Jakarta Selatan
+                              <div class="relative">
+                                <div class="video-wrapper">
+                                  <div class="w-full !h-[56vh] bg-black">
+                                  <img
+                                    class="w-full h-full object-contain"
+                                    src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                    alt=""
+                                  />
+                                </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -7601,114 +7563,181 @@
 
                       <!-- Konten Tab Tiga Beranda -->
                       <div
-                        class="hidden px-4 py-2 mt-1 mx-0.5"
+                        class="hidden px-4 py-2 mt-4 mx-0.5"
                         id="detail-beranda-tiga"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-tiga-tab"
                       >
-                        <div class="flex flex-col">
-                          <!-- Deskripsi hidden Sementara -->
-                          <div class="grid grid-cols-1 gap-y-1 hidden">
-                            <div class="grid grid-cols-1 text-sm">
-                              <div class="grid grid-cols-1 gap-4">
-                                <div></div>
-                                <div class="text-gray-700">
-                                  <p>
-                                    Kami mempersembahkan sebuah hunian eksklusif
-                                    yang siap untuk Anda tempati. Kenyamanan dan
-                                    kemudahan akses menjadi keunggulan utama
-                                    rumah istimewa ini. Berlokasi hanya 10 menit
-                                    dari pintu tol dalam kota, Anda bisa
-                                    menjangkau berbagai destinasi favorit tanpa
-                                    harus menghabiskan banyak waktu.
-                                  </p>
+                        <div
+                          class="grid grid-cols-2 gap-1 text-sm text-gray-700"
+                        >
+                        <div class="col-span-2 w-full">
+                                          <div
+                                          class="w-full h-full grid grid-cols-[150px,1fr]"
+                                        >
+                                          <div class="font-semibold">Koordinat</div>
+                                          <div class=""><a href="https://www.google.com/maps/search/-6.167524106481267,106.83083574853504" target="blank_" class="cursor-pointer text-[#69B3E7]">-6.167524106481267, 106.83083574853504</a></div>
+                                        </div>
+                        </div>
+                        <div class="col-span-2 mb-4 w-full">
+                                          <div
+                                          class="w-full h-full grid grid-cols-[150px,1fr]"
+                                        >
+                                          <div class="font-semibold">Alamat</div>
+                                          <div class="">
+                                            lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                                          </div>
+                                        </div>
+                        </div>
+                          <div class="flex flex-col">
+                            <!-- Detail -->
+                            <div class="grid grid-cols-1 gap-y-1">
 
-                                  <div class="flex flex-col mt-2">
-                                    <p>
-                                      Akses mudah ke berbagai pusat
-                                      perbelanjaan, fasilitas pendidikan,
-                                      kesehatan, dan rekreasi.Bangunan dengan
-                                      desain modern dan penataan interior yang
-                                      elegan.Material bangunan berkualitas
-                                      tinggi yang menjamin kekuatan dan daya
-                                      tahan rumah.Berada di lingkungan yang
-                                      tenang dan hijau, cocok untuk Anda yang
-                                      mencari kedamaian.
-                                    </p>
-                                  </div>
-                                </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                              >
+                                <div class="font-semibold">Kelurahan</div>
+                                <div class=""> Pondok Indah</div>
                               </div>
-                            </div>
-                          </div>
-
-                          <!-- Detail -->
-                          <div class="grid grid-cols-1 gap-y-1 mt-6">
-                            <div class="w-full text-md font-bold mb-2">
-                              Spesifikasi Aset1
-                            </div>
-
-                            <div class="grid grid-cols-1 text-sm">
-                              <div class="grid grid-cols-5 gap-4 text-gray-700">
-                                <div>Tipe Aset</div>
-                                <div class="col-span-4">Rumah Seken</div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                              >
+                                <div class="font-semibold">Kecamatan</div>
+                                <div class="">Kebayoran Baru</div>
                               </div>
-                              <div class="grid grid-cols-5 gap-4 text-gray-700">
-                                <div>Kepemilikan</div>
-                                <div class="col-span-4">SHM</div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                              >
+                                <div class="font-semibold">Kota</div>
+                                <div class="">Jakarta Selatan</div>
                               </div>
 
-                              <div>&nbsp;</div>
-
-                              <div class="grid grid-cols-5 gap-4 text-gray-700">
-                                <div>Luas Tanah</div>
-                                <div class="col-span-4">100 m²</div>
-                              </div>
-                              <div class="grid grid-cols-5 gap-4 text-gray-700">
-                                <div>Luas Bangunan</div>
-                                <div class="col-span-4">130 m²</div>
-                              </div>
-
-                              <div>&nbsp;</div>
-
-                              <div class="grid grid-cols-5 gap-4 text-gray-700">
-                                <div>Kamar Tidur</div>
-                                <div class="col-span-4">2 + 1</div>
-                              </div>
-                              <div class="grid grid-cols-5 gap-4 text-gray-700">
-                                <div>Kamar Mandi</div>
-                                <div class="col-span-4">1 + 1</div>
-                              </div>
-
-                              <div>&nbsp;</div>
-
-                              <div class="grid grid-cols-5 gap-4 text-gray-700">
-                                <div>Listrik</div>
-                                <div class="col-span-4">2200 Watt</div>
-                              </div>
-                              <div class="grid grid-cols-5 gap-4 text-gray-700">
-                                <div>Arah</div>
-                                <div class="col-span-4">Barat Lauts</div>
-                              </div>
-
-                              <div>&nbsp;</div>
-
-                              <div class="grid grid-cols-5 gap-4 text-gray-700">
-                                <div>Lain-lain</div>
-                                <div class="col-span-4 flex-row">
-                                  <div>Carport 2 mobil</div>
-                                  <div>Swimming pool</div>
-                                  <div>IMB</div>
-                                  <div>Gated cluster</div>
-                                  <div>Bangunan 2 lantai</div>
-                                </div>
-                              </div>
-
-                              <div>&nbsp;</div>
                               <!--  -->
                             </div>
-                          </div>
 
-                          <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
+                            <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
+                          </div>
+                          <div class="flex flex-col">
+                            <!-- Detail -->
+                            <div class="grid grid-cols-1 gap-y-1">
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr] "
+                              >
+                                <div class="font-semibold">Tipe Aset</div>
+                                <div class="">Rumah Seken</div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr] mb-3"
+                              >
+                                <div class="font-semibold">Kepemilikan</div>
+                                <div class="">
+                                  SHM
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                              >
+                                <div class="font-semibold">Luas Tanah</div>
+                                <div class="">100 m²</div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr] mb-3"
+                              >
+                                <div class="font-semibold">Luas Bangunan</div>
+                                <div class="">130 m²</div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                              >
+                                <div class="font-semibold">Kamar Tidur</div>
+                                <div class="">2 + 1</div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr] mb-3"
+                              >
+                                <div class="font-semibold">Kamar Mandi</div>
+                                <div class="">1 + 1</div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                              >
+                                <div class="font-semibold">Listrik</div>
+                                <div class="">2200 Watt</div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr] mb-3"
+                              >
+                                <div class="font-semibold">Arah Muka</div>
+                                <div class="">Barat Lauts</div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                              >
+                                  <div class="w-full">
+                                    <div class="flex items-center mb-2">
+                                      <div>
+                                        <svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                        </svg>
+                                      </div>
+                                      <label class="ml-2  cursor-pointer font-medium text-gray-700">Carport 2 mobil</label>
+                                    </div>
+                                  </div>
+                                  <div class="w-full">
+                                    <div class="flex items-center mb-2">
+                                      <div>
+                                        <svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                        </svg>
+                                      </div>
+                                      <label class="ml-2  cursor-pointer font-medium text-gray-700">Swimming pool</label>
+                                    </div>
+                                  </div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                              >
+                              <div class="w-full">
+                                <div class="flex items-center mb-2">
+                                  <div>
+                                    <svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                    </svg>
+                                  </div>
+                                  <label class="ml-2  cursor-pointer font-medium text-gray-700">IMB</label>
+                                </div>
+                              </div>
+                              <div class="w-full">
+                                <div class="flex items-center mb-2">
+                                  <div>
+                                    <svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                    </svg>
+                                  </div>
+                                  <label class="ml-2  cursor-pointer font-medium text-gray-700">Gated cluster</label>
+                                </div>
+                              </div>
+                              </div>
+
+
+                              <!--  -->
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
+                          </div>
                         </div>
                       </div>
 
@@ -28779,7 +28808,7 @@
 
                               <!-- Mode Ketiga -->
                               <div class="h-full mode-card-kedua hidden">
-                                <div class="pt-1 h-full">
+                                <div class="h-full">
                                   <!-- Card Beranda Mode 2 -->
                                   <div class="flex flex-col h-full">
                                     <!-- Mode Ke Ketiga -->

@@ -648,7 +648,7 @@
 .video-wrapper video {
   /* height: 58vh; */
   /* width: 100vh; */
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .video-wrapper-peta video {
@@ -874,3 +874,4 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
