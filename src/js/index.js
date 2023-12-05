@@ -846,6 +846,26 @@ function getSliderDefaultOptions() {
   };
 }
 
+function getSliderDefaultOptionsPesan() {
+  return {
+    dots: true,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
+                  <div class="img-wrapper-pesan">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
+                  <div class="img-wrapper-pesan">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+  };
+}
+
 function initSlickCardInfo(sliderClass) {
   var $slider = $("." + sliderClass);
   var $mediaElements = $slider.find("img, video");
@@ -1030,6 +1050,8 @@ function addClickHandlerToDots() {
 $(document).ready(function () {
   initSlickCardInfo("slider-card-beranda");
   cardModeTiga();
+  cardModePesan();
+
   // cardModeTigaFavorit();
 });
 
@@ -1925,6 +1947,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ResetTabPesan();
         // CloseTabPesan();
         cardModeTiga();
+        cardModePesan();
 
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
@@ -2386,6 +2409,7 @@ window.ShowDetailPesanDua = function () {
   var defaultPesanAktif = document.querySelector(".default_pesan_dua_aktif");
 
   cardModeTiga();
+  cardModePesan();
 
   // Periksa apakah defaultPesan memiliki kelas 'hidden'
   if (defaultPesan.classList.contains("hidden")) {
@@ -2614,6 +2638,16 @@ function cardModeTiga() {
       $(".slider-card-mode-ketiga").slick("setPosition");
     } else {
       initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+    }
+  }, 100);
+}
+
+function cardModePesan() {
+  setTimeout(function () {
+    if ($(".slider-card-mode-pesan").hasClass("slick-initialized")) {
+      $(".slider-card-mode-pesan").slick("setPosition");
+    } else {
+      initSlick(".slider-card-mode-pesan", getSliderDefaultOptionsPesan());
     }
   }, 100);
 }
