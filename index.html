@@ -7193,7 +7193,9 @@
               </div>
 
               <!-- Card Detail Beranda -->
-              <div class="flex flex-col w-full h-full card-detail-beranda hidden">
+              <div
+                class="flex flex-col w-full h-full card-detail-beranda hidden"
+              >
                 <!-- Judul Card Detail Beranda -->
                 <div class="px-3 mx-0.5 pt-2">
                   <div class="flex flex-col">
@@ -7438,7 +7440,7 @@
                           aria-controls="detail-beranda-lima"
                           aria-selected="false"
                         >
-                        Livability Index
+                          Livability Index
                         </button>
                       </li>
 
@@ -7498,52 +7500,54 @@
                     <div id="DetailBerandaContent" class="w-full h-full">
                       <!-- Konten Tab Satu Beranda -->
                       <div
-                        class="hidden pb-2 px-3  w-full h-full"
+                        class="hidden pb-2 px-3 w-full h-full"
                         id="detail-beranda-satu"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-satu-tab"
                       >
                         <!--  -->
                         <div class="w-full h-full grid grid-cols-1">
-                          <div class="w-full h-[64.5vh] flex items-center justify-center">
+                          <div
+                            class="w-full h-[64.5vh] flex items-center justify-center"
+                          >
                             <!-- Slider -->
                             <div class="slider-card-info-detail w-full h-full">
                               <div>
                                 <div
                                   class="video-wrapper video-wrapper-autoplay"
                                 >
-                                <div class="h-[56vh] w-full bg-black">
-                                  <video
-                                    class="w-full h-full object-contain"
-                                    id="video-detail-beranda"
-                                    controls
-                                    src="./src/video/Video1.mp4"
-                                  ></video>
-                                </div>
-                                </div>
-                              </div>
-
-                              <div class="relative">
-                                <div class="video-wrapper">
-                                  <div class="w-full !h-[56vh] bg-black">
-                                  <img
-                                    class="w-full h-full object-contain"
-                                    src="./src/images/Hunian/Rmh2/rumahb1.jpg"
-                                    alt=""
-                                  />
-                                </div>
+                                  <div class="h-[56vh] w-full bg-black">
+                                    <video
+                                      class="w-full h-full object-contain"
+                                      id="video-detail-beranda"
+                                      controls
+                                      src="./src/video/Video1.mp4"
+                                    ></video>
+                                  </div>
                                 </div>
                               </div>
 
                               <div class="relative">
                                 <div class="video-wrapper">
                                   <div class="w-full !h-[56vh] bg-black">
-                                  <img
-                                    class="w-full h-full object-contain"
-                                    src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                                    alt=""
-                                  />
+                                    <img
+                                      class="w-full h-full object-contain"
+                                      src="./src/images/Hunian/Rmh2/rumahb1.jpg"
+                                      alt=""
+                                    />
+                                  </div>
                                 </div>
+                              </div>
+
+                              <div class="relative">
+                                <div class="video-wrapper">
+                                  <div class="w-full !h-[56vh] bg-black">
+                                    <img
+                                      class="w-full h-full object-contain"
+                                      src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                      alt=""
+                                    />
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -7571,34 +7575,40 @@
                         <div
                           class="grid grid-cols-2 gap-1 text-sm text-gray-700"
                         >
-                        <div class="col-span-2 w-full">
-                                          <div
-                                          class="w-full h-full grid grid-cols-[150px,1fr]"
-                                        >
-                                          <div class="font-semibold">Koordinat</div>
-                                          <div class=""><a href="https://www.google.com/maps/search/-6.167524106481267,106.83083574853504" target="blank_" class="cursor-pointer text-[#69B3E7]">-6.167524106481267, 106.83083574853504</a></div>
-                                        </div>
-                        </div>
-                        <div class="col-span-2 mb-4 w-full">
-                                          <div
-                                          class="w-full h-full grid grid-cols-[150px,1fr]"
-                                        >
-                                          <div class="font-semibold">Alamat</div>
-                                          <div class="">
-                                            lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                          </div>
-                                        </div>
-                        </div>
+                          <div class="col-span-2 w-full">
+                            <div
+                              class="w-full h-full grid grid-cols-[150px,1fr]"
+                            >
+                              <div class="font-semibold">Koordinat</div>
+                              <div class="">
+                                <a
+                                  href="https://www.google.com/maps/search/-6.167524106481267,106.83083574853504"
+                                  target="blank_"
+                                  class="cursor-pointer text-[#69B3E7]"
+                                  >-6.167524106481267, 106.83083574853504</a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-span-2 mb-3 w-full">
+                            <div
+                              class="w-full h-full grid grid-cols-[150px,1fr]"
+                            >
+                              <div class="font-semibold">Alamat</div>
+                              <div class="">
+                                Jl. Epicentrum Sel. No.Kav. 22, RT.2/RW.5
+                              </div>
+                            </div>
+                          </div>
                           <div class="flex flex-col">
                             <!-- Detail -->
                             <div class="grid grid-cols-1 gap-y-1">
-
                               <!--  -->
                               <div
                                 class="w-full h-full grid grid-cols-[150px,1fr]"
                               >
                                 <div class="font-semibold">Kelurahan</div>
-                                <div class=""> Pondok Indah</div>
+                                <div class="">Pondok Indah</div>
                               </div>
                               <!--  -->
                               <div
@@ -7609,37 +7619,34 @@
                               </div>
                               <!--  -->
                               <div
-                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                                class="w-full h-full grid grid-cols-[150px,1fr] mb-3"
                               >
                                 <div class="font-semibold">Kota</div>
                                 <div class="">Jakarta Selatan</div>
                               </div>
-
-                              <!--  -->
-                            </div>
-
-                            <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
-                          </div>
-                          <div class="flex flex-col">
-                            <!-- Detail -->
-                            <div class="grid grid-cols-1 gap-y-1">
                               <!--  -->
                               <div
-                                class="w-full h-full grid grid-cols-[150px,1fr] "
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
                               >
                                 <div class="font-semibold">Tipe Aset</div>
-                                <div class="">Rumah Seken</div>
+                                <div class="">Rumah Baru</div>
+                              </div>
+                              <!--  -->
+                              <div
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                              >
+                                <div class="font-semibold">Tahun dibangun</div>
+                                <div class="">2023</div>
                               </div>
                               <!--  -->
                               <div
                                 class="w-full h-full grid grid-cols-[150px,1fr] mb-3"
                               >
                                 <div class="font-semibold">Kepemilikan</div>
-                                <div class="">
-                                  SHM
-                                </div>
+                                <div class="">SHM</div>
                               </div>
                               <!--  -->
+
                               <div
                                 class="w-full h-full grid grid-cols-[150px,1fr]"
                               >
@@ -7654,6 +7661,15 @@
                                 <div class="">130 m²</div>
                               </div>
                               <!--  -->
+
+                              <!--  -->
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
+                          </div>
+                          <div class="flex flex-col">
+                            <!-- Detail -->
+                            <div class="grid grid-cols-1 gap-y-1">
                               <div
                                 class="w-full h-full grid grid-cols-[150px,1fr]"
                               >
@@ -7676,62 +7692,139 @@
                               </div>
                               <!--  -->
                               <div
+                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                              >
+                                <div class="font-semibold">Air</div>
+                                <div class="">PAM</div>
+                              </div>
+                              <!--  -->
+
+                              <div
                                 class="w-full h-full grid grid-cols-[150px,1fr] mb-3"
                               >
                                 <div class="font-semibold">Arah Muka</div>
                                 <div class="">Barat Lauts</div>
                               </div>
                               <!--  -->
+
                               <div
                                 class="w-full h-full grid grid-cols-[150px,1fr]"
                               >
-                                  <div class="w-full">
-                                    <div class="flex items-center mb-2">
-                                      <div>
-                                        <svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                                        </svg>
-                                      </div>
-                                      <label class="ml-2  cursor-pointer font-medium text-gray-700">Carport 2 mobil</label>
-                                    </div>
-                                  </div>
-                                  <div class="w-full">
-                                    <div class="flex items-center mb-2">
-                                      <div>
-                                        <svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                                        </svg>
-                                      </div>
-                                      <label class="ml-2  cursor-pointer font-medium text-gray-700">Swimming pool</label>
-                                    </div>
-                                  </div>
+                                <div class="font-semibold">Garasi</div>
+                                <div class="">2</div>
                               </div>
                               <!--  -->
                               <div
-                                class="w-full h-full grid grid-cols-[150px,1fr]"
+                                class="w-full h-full grid grid-cols-[150px,1fr] mb-3"
                               >
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <div>
-                                    <svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                                    </svg>
-                                  </div>
-                                  <label class="ml-2  cursor-pointer font-medium text-gray-700">IMB</label>
-                                </div>
+                                <div class="font-semibold">Lantai</div>
+                                <div class="">2</div>
                               </div>
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <div>
-                                    <svg class="w-3.5 h-3.5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
-                                    </svg>
-                                  </div>
-                                  <label class="ml-2  cursor-pointer font-medium text-gray-700">Gated cluster</label>
+                              <!--  -->
+
+                              <div class="flex flex-col">
+                                <div
+                                  class="w-full font-semibold col-span2 mb-1"
+                                >
+                                  Fasilitas
                                 </div>
-                              </div>
+
+                                <div
+                                  class="w-full h-full grid grid-cols-[150px,1fr]"
+                                >
+                                  <div class="w-full">
+                                    <div class="flex items-center">
+                                      <div>
+                                        <svg
+                                          class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                          aria-hidden="true"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="none"
+                                          viewBox="0 0 16 12"
+                                        >
+                                          <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M1 5.917 5.724 10.5 15 1.5"
+                                          />
+                                        </svg>
+                                      </div>
+                                      <label
+                                        class="ml-2 cursor-pointer font-medium text-gray-700"
+                                        >Carport 2 mobil</label
+                                      >
+                                    </div>
+                                  </div>
+                                  <div class="w-full">
+                                    <div class="flex items-center">
+                                      <div>
+                                        <svg
+                                          class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                          aria-hidden="true"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="none"
+                                          viewBox="0 0 16 12"
+                                        >
+                                          <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M1 5.917 5.724 10.5 15 1.5"
+                                          />
+                                        </svg>
+                                      </div>
+                                      <label
+                                        class="ml-2 cursor-pointer font-medium text-gray-700"
+                                        >Swimming pool</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--  -->
+                                <div
+                                  class="w-full h-full grid grid-cols-[150px,1fr]"
+                                >
+                                  <div class="w-full">
+                                    <div class="flex items-center">
+                                      <div>
+                                        <svg
+                                          class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                          aria-hidden="true"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="none"
+                                          viewBox="0 0 16 12"
+                                        >
+                                          <path
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M1 5.917 5.724 10.5 15 1.5"
+                                          />
+                                        </svg>
+                                      </div>
+                                      <label
+                                        class="ml-2 cursor-pointer font-medium text-gray-700"
+                                        >IMB</label
+                                      >
+                                    </div>
+                                  </div>
+                                  <div class="w-full">
+                                    <div class="flex items-center">
+                                      <div class="w-3.5 h-3.5"></div>
+                                      <label
+                                        class="ml-2 cursor-pointer font-medium text-gray-700"
+                                        >Gated cluster</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
 
+                              <!--  -->
 
                               <!--  -->
                             </div>
@@ -7743,7 +7836,7 @@
 
                       <!-- Konten Tab Empat Beranda -->
                       <div
-                        class="hidden px-4 py-2 mt-1 mx-0.5"
+                        class="hidden px-4 py-2 mt-4 mx-0.5"
                         id="detail-beranda-lima"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-lima-tab"
@@ -7751,6 +7844,55 @@
                         <!-- iini -->
 
                         <div class="flex flex-col">
+                          <div
+                            class="grid grid-cols-2 gap-1 text-sm text-gray-700"
+                          >
+                            <div
+                              class="col-span-2 w-full flex items-center justify-center"
+                            >
+                              <div
+                                class="w-full h-full grid grid-cols-2 items-center"
+                              >
+                                <div
+                                  class="h-[30vh] flex items-center justify-center"
+                                >
+                                  <canvas
+                                    style="
+                                      display: block;
+                                      height: 474px;
+                                      width: 356px;
+                                    "
+                                    id="mySecondRadarChart"
+                                    class="w-full h-full"
+                                  ></canvas>
+                                </div>
+                                <div class="flex flex-col text-sm mt-1">
+                                  <div class="flex flex-col mb-4">
+                                    <div class="">
+                                      1. Tingkat Konektivitas Pejalan Kaki
+                                      Rendah
+                                    </div>
+                                    <div class="">
+                                      2. Ruang Terbuka dan Publik Terjangkau
+                                      Sangat Baik
+                                    </div>
+                                    <div class="">
+                                      3. Fasilitas Komunitas Terjangkau Sangat
+                                      Baik
+                                    </div>
+                                    <div class="">
+                                      4. Aktivitas Budaya Perkotaan Sedang
+                                    </div>
+                                    <div class="">
+                                      5. Tempat untuk Bekerja Kurang Tersedia
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--  -->
                           <!-- Deskripsi hidden Sementara -->
                           <div class="grid grid-cols-1 gap-y-1 hidden">
                             <div class="grid grid-cols-1 text-sm">
@@ -7786,7 +7928,7 @@
                           </div>
 
                           <!-- Detail -->
-                          <div class="grid grid-cols-1 gap-y-1 mt-6">
+                          <div class="grid grid-cols-1 gap-y-1 mt-6 hidden">
                             <div class="w-full text-md font-bold mb-2">
                               Livability Index
                             </div>
@@ -7875,7 +8017,9 @@
                             </div>
                           </div>
 
-                          <div class="grid grid-cols-1 gap-y-1 mt-8"></div>
+                          <div
+                            class="grid grid-cols-1 gap-y-1 mt-8 hidden"
+                          ></div>
                         </div>
 
                         <!-- Tab Menu -->
@@ -8088,17 +8232,6 @@
                             <div class="grid grid-cols-2">
                               <!-- Chart -->
 
-                              <div class="h-[30vh]">
-                                <canvas
-                                  style="
-                                    display: block;
-                                    height: 474px;
-                                    width: 356px;
-                                  "
-                                  id="mySecondRadarChart"
-                                  class="w-full h-full"
-                                ></canvas>
-                              </div>
                               <!-- Teks -->
                               <div class="">
                                 <div class="flex flex-col text-sm mt-1">
@@ -32664,7 +32797,7 @@
                       >
                         <div class="relative">
                           <img
-                            class="object-cover w-10 h-10 rounded-full border border-red-500"
+                            class="object-cover w-10 h-10 rounded-full"
                             src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383__340.jpg"
                             alt=""
                           />
