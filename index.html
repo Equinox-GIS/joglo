@@ -7440,7 +7440,7 @@
                           aria-controls="detail-beranda-lima"
                           aria-selected="false"
                         >
-                          Livability Index
+                          Metriks
                         </button>
                       </li>
 
@@ -7628,22 +7628,25 @@
                               <div
                                 class="w-full h-full grid grid-cols-[150px,1fr]"
                               >
-                                <div class="font-semibold">Tipe Aset</div>
+                                <div class="font-semibold">Tipe Properti</div>
                                 <div class="">Rumah Baru</div>
                               </div>
                               <!--  -->
                               <div
                                 class="w-full h-full grid grid-cols-[150px,1fr]"
                               >
-                                <div class="font-semibold">Tahun dibangun</div>
+                                <div class="font-semibold">Tahun Dibangun</div>
                                 <div class="">2023</div>
                               </div>
                               <!--  -->
                               <div
                                 class="w-full h-full grid grid-cols-[150px,1fr] mb-3"
                               >
-                                <div class="font-semibold">Kepemilikan</div>
-                                <div class="">SHM</div>
+                                <div class="font-semibold">Surat</div>
+                                <div class="flex flex-col">
+                                  <div>SHM</div>
+                                  <div>IMB</div>
+                                </div>
                               </div>
                               <!--  -->
 
@@ -7702,7 +7705,7 @@
                               <div
                                 class="w-full h-full grid grid-cols-[150px,1fr] mb-3"
                               >
-                                <div class="font-semibold">Arah Muka</div>
+                                <div class="font-semibold">Arah Bangunan</div>
                                 <div class="">Barat Lauts</div>
                               </div>
                               <!--  -->
@@ -7789,31 +7792,6 @@
                                 >
                                   <div class="w-full">
                                     <div class="flex items-center">
-                                      <div>
-                                        <svg
-                                          class="w-3.5 h-3.5 text-gray-800 dark:text-white"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          fill="none"
-                                          viewBox="0 0 16 12"
-                                        >
-                                          <path
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M1 5.917 5.724 10.5 15 1.5"
-                                          />
-                                        </svg>
-                                      </div>
-                                      <label
-                                        class="ml-2 cursor-pointer font-medium text-gray-700"
-                                        >IMB</label
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="w-full">
-                                    <div class="flex items-center">
                                       <div class="w-3.5 h-3.5"></div>
                                       <label
                                         class="ml-2 cursor-pointer font-medium text-gray-700"
@@ -7867,7 +7845,12 @@
                                   ></canvas>
                                 </div>
                                 <div class="flex flex-col text-sm mt-1">
-                                  <div class="flex flex-col mb-4">
+                                  <!--  -->
+                                  <div class="w-full text-base font-bold mb-2">
+                                    Livability Index
+                                  </div>
+                                  <!--  -->
+                                  <div class="flex flex-col text-sm mb-4">
                                     <div class="">
                                       1. Tingkat Konektivitas Pejalan Kaki
                                       Rendah
@@ -12612,7 +12595,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="koordinat"
                                   >
                                     Koordinat
@@ -12629,7 +12612,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="jenis-properti"
                                   >
                                     Jenis Properti
@@ -12658,7 +12641,7 @@
                               <!-- Judul -->
                               <div class="w-full col-span-2">
                                 <div class="relative w-full">
-                                  <label class="block text-xs mb-2" for="judul">
+                                  <label class="block text-sm mb-2" for="judul">
                                     Judul
                                   </label>
                                   <input
@@ -12673,7 +12656,7 @@
                               <div class="col-span-2">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="deskripsi"
                                   >
                                     Deskripsi
@@ -12690,7 +12673,7 @@
                               <div class="col-span-2">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="deskripsi2"
                                   >
                                     Deskripsi 2
@@ -12707,7 +12690,7 @@
                               <div class="col-span-2">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="alamat1"
                                   >
                                     Alamat 1
@@ -12724,7 +12707,7 @@
                               <div class="col-span-2">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="alamat2"
                                   >
                                     Alamat 2
@@ -12741,7 +12724,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="kelurahan"
                                   >
                                     Kelurahan
@@ -12758,7 +12741,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="kecamatan"
                                   >
                                     Kecamatan
@@ -12775,7 +12758,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="luas-tanah"
                                   >
                                     Luas Tanah m²
@@ -12792,7 +12775,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="luas-bangunan"
                                   >
                                     Luas Bangunan m²
@@ -12809,7 +12792,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="kamar-tidur-utama"
                                   >
                                     Jumlah Kamar Tidur Utama
@@ -12826,7 +12809,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="kamar-tidur-tambahan"
                                   >
                                     Jumlah Kamar Tidur Tambahan
@@ -12843,7 +12826,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="jenis-surat"
                                   >
                                     Jenis Surat
@@ -12862,7 +12845,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="jenis-properti"
                                   >
                                     Penjual
@@ -12901,7 +12884,7 @@
                                           for="gambar-rumah-1"
                                           class="custom-file-upload"
                                         >
-                                          <div class="block text-xs mb-2">
+                                          <div class="block text-sm mb-2">
                                             Unggah Gambar 1
                                           </div>
                                           <input
@@ -12927,7 +12910,7 @@
                                           for="gambar-rumah-2"
                                           class="custom-file-upload"
                                         >
-                                          <div class="block text-xs mb-2">
+                                          <div class="block text-sm mb-2">
                                             Unggah Gambar 2
                                           </div>
                                           <input
@@ -12953,7 +12936,7 @@
                                           for="gambar-rumah-3"
                                           class="custom-file-upload"
                                         >
-                                          <div class="block text-xs mb-2">
+                                          <div class="block text-sm mb-2">
                                             Unggah Gambar 3
                                           </div>
                                           <input
@@ -12979,7 +12962,7 @@
                                           for="gambar-rumah-4"
                                           class="custom-file-upload"
                                         >
-                                          <div class="block text-xs mb-2">
+                                          <div class="block text-sm mb-2">
                                             Unggah Gambar 4
                                           </div>
                                           <input
@@ -13005,7 +12988,7 @@
                                           for="gambar-rumah-5"
                                           class="custom-file-upload"
                                         >
-                                          <div class="block text-xs mb-2">
+                                          <div class="block text-sm mb-2">
                                             Unggah Gambar 5
                                           </div>
                                           <input
@@ -13030,7 +13013,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="harga-listrik"
                                   >
                                     Harga Listrik
@@ -13047,7 +13030,7 @@
                               <div class="w-full">
                                 <div class="relative w-full">
                                   <label
-                                    class="block text-xs mb-2"
+                                    class="block text-sm mb-2"
                                     for="arah-bangunan"
                                   >
                                     Arah Bangunan
