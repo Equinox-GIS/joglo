@@ -875,3 +875,16 @@ body {
   border-top-right-radius: 10px;
 }
 
+
+
+/* Menghilangkan tanda panah pada browser yang menggunakan Webkit (seperti Chrome dan Safari) */
+.hapus_style_kalkulator::-webkit-inner-spin-button,
+.hapus_style_kalkulator::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Menghilangkan tanda panah pada Firefox */
+.hapus_style_kalkulator {
+  -moz-appearance: textfield;
+}
