@@ -9643,17 +9643,19 @@
                               id="kalkulatorhargawajar"
                               role="tabpanel-kalkulator"
                             >
-                              <div class="text-sm">
+                              <div class="">
                                 <!-- col1 -->
-                                <div class="grid grid-cols-5">
+                                <div class="grid grid-cols-5 mb-3">
                                   <div class="w-full col-span-2"></div>
                                   <div class="w-full"></div>
-                                  <div class="w-full col-span-2 font-semibold">
+                                  <div
+                                    class="w-full text-base col-span-2 font-semibold"
+                                  >
                                     Ringkasan
                                   </div>
                                 </div>
                                 <!-- col1 -->
-                                <div class="grid grid-cols-5">
+                                <div class="grid grid-cols-5 text-sm">
                                   <div class="w-full">Harga Properti</div>
                                   <div class="w-full flex flex-row">
                                     <div>
@@ -9675,7 +9677,7 @@
                                   <div class="w-full">Uang Mukaa</div>
                                   <div class="w-full">
                                     <input
-                                      type="number"
+                                      type="text"
                                       class="hapus_style_kalkulator max-input block p-0 w-full text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300 peer"
                                       required=""
                                       placeholder="0"
@@ -9689,12 +9691,12 @@
                                   </div>
                                 </div>
                                 <!-- col1 -->
-                                <div class="grid grid-cols-5">
+                                <div class="grid grid-cols-5 text-sm">
                                   <div class="w-full">Uang Muka</div>
                                   <div class="w-full flex flex-row">
                                     <div>
                                       <input
-                                        type="number"
+                                        type="text"
                                         class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
                                         placeholder="0"
                                         oninput="formatNumber(this)"
@@ -9711,7 +9713,7 @@
                                   <div class="w-full">Angsuran Pertama</div>
                                   <div class="w-full">
                                     <input
-                                      type="number"
+                                      type="text"
                                       class="hapus_style_kalkulator max-input block p-0 w-full text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300 peer"
                                       placeholder="0"
                                       oninput="formatNumber(this)"
@@ -9725,21 +9727,108 @@
                                   </div>
                                 </div>
                                 <!-- col1 -->
-                                <div class="grid grid-cols-5">
-                                  <div class="w-full col-span-2">
-                                    <input
-                                      type="range"
-                                      class="w-full"
-                                      id="ControlRangeBeranda"
-                                      min="0.5"
-                                      max="3"
-                                      step="0.5"
-                                      style="height: 4px"
-                                      value="1"
-                                    />
+                                <div class="grid grid-cols-5 text-sm">
+                                  <div class="w-full col-span-2 flex flex-col">
+                                    <div>
+                                      <input
+                                        type="range"
+                                        class="w-full"
+                                        id="ControlRangeBeranda"
+                                        min="0.5"
+                                        max="3"
+                                        step="0.5"
+                                        style="height: 4px"
+                                        value="1"
+                                      />
+                                    </div>
+                                    <div class="flex justify-between text-xs">
+                                      <div class="font-semibold">1%</div>
+                                      <div class="font-semibold">50%</div>
+                                    </div>
                                   </div>
                                   <div class="w-full"></div>
-                                  <div class="w-full col-span-2"></div>
+                                  <div class="w-full">Estimasi Biaya</div>
+                                  <div class="w-full">
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator max-input block p-0 w-full text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300 peer"
+                                      placeholder="0"
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                    />
+                                  </div>
+                                </div>
+                                <!-- col1 -->
+                                <div class="grid grid-cols-5 text-sm">
+                                  <div class="w-full">Suku Bunga (%)</div>
+                                  <div class="w-full flex flex-row">
+                                  </div>
+                                  <div class="w-full"></div>
+                                  <div class="w-full">Total</div>
+                                  <div class="w-full">
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator max-input block p-0 w-full text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-300 peer"
+                                      placeholder="0"
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                    />
+                                  </div>
+                                </div>
+                                <!-- col1 -->
+                                <div class="grid grid-cols-5 text-sm">
+                                  <div class="w-full col-span-2 flex flex-col">
+                                    <div>
+                                      <input type="range" class="w-full" id="ControlRangeBeranda" min="0.5" max="3" step="0.5" style="height: 4px" value="1">
+                                    </div>
+                                    <div class="flex justify-between text-xs">
+                                      <div class="font-semibold">1%</div>
+                                      <div class="font-semibold">15%</div>
+                                    </div>
+                                  </div>
+                                  <div class="w-full"></div>
+                                  <div class="w-full"></div>
+                                  <div class="w-full">
+
+                                  </div>
+                                </div>
+                                <!-- col1 -->
+                                <div class="grid grid-cols-5 text-sm">
+                                  <div class="w-full">Jangka Waktu (tahun)</div>
+                                  <div class="w-full flex flex-row">
+                                  </div>
+                                  <div class="w-full"></div>
+                                  <div class="w-full"></div>
+                                  <div class="w-full">
+
+                                  </div>
+                                </div>
+                                <!-- col1 -->
+                                <div class="grid grid-cols-5 text-sm">
+                                  <div class="w-full col-span-2 flex flex-col">
+                                    <div>
+                                      <input type="range" class="w-full" id="ControlRangeBeranda" min="0.5" max="3" step="0.5" style="height: 4px" value="1">
+                                    </div>
+                                    <div class="flex justify-between text-xs">
+                                      <div class="font-semibold">5</div>
+                                      <div class="font-semibold">20</div>
+                                    </div>
+                                  </div>
+                                  <div class="w-full"></div>
+                                  <div class="w-full"></div>
+                                  <div class="w-full">
+
+                                  </div>
                                 </div>
                                 <!--  -->
                               </div>
@@ -33552,5 +33641,14 @@
       // Menetapkan nilai yang telah diformat kembali ke input
       input.value = value;
     }
+
+    // Menambahkan event listener untuk semua input dengan class 'format-number'
+    document
+      .querySelectorAll(".hapus_style_kalkulator")
+      .forEach(function (input) {
+        input.addEventListener("input", function () {
+          formatNumber(this);
+        });
+      });
   </script>
 </html>
