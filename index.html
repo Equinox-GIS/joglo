@@ -7197,7 +7197,7 @@
                 class="flex flex-col w-full h-full card-detail-beranda hidden"
               >
                 <!-- Judul Card Detail Beranda -->
-                <div class="px-3 mx-0.5 pt-2">
+                <div class="px-2 mx-0.5 pt-2">
                   <div class="flex flex-col">
                     <div class="w-full h-[3.5rem] grid grid-cols-[48px,1fr]">
                       <div
@@ -7455,12 +7455,12 @@
                           aria-controls="detail-beranda-enam"
                           aria-selected="false"
                         >
-                          Kalkulator
+                          Simulasi KPR
                         </button>
                       </li>
 
                       <!-- Menu Tab Tujuh Beranda -->
-                      <li class="hidden" role="presentation">
+                      <li class="" role="presentation">
                         <button
                           class="inline-block px-4 pb-1 pt-1 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
                           id="detail-beranda-tujuh-tab"
@@ -7470,7 +7470,7 @@
                           aria-controls="detail-beranda-tujuh"
                           aria-selected="true"
                         >
-                          Kontak
+                          Harga Wajar
                         </button>
                       </li>
 
@@ -7557,7 +7557,7 @@
 
                       <!-- Konten Tab Dua Beranda -->
                       <div
-                        class="hidden px-4 py-2"
+                        class="hidden pb-2 px-3"
                         id="detail-beranda-dua"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-dua-tab"
@@ -7567,7 +7567,7 @@
 
                       <!-- Konten Tab Tiga Beranda -->
                       <div
-                        class="hidden px-4 py-2 mt-4 mx-0.5"
+                        class="hidden px-3 py-2 mt-4"
                         id="detail-beranda-tiga"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-tiga-tab"
@@ -7840,7 +7840,7 @@
 
                       <!-- Konten Tab Empat Beranda -->
                       <div
-                        class="hidden px-4 py-2 mt-4 mx-0.5"
+                        class="hidden px-3 py-2 mt-4"
                         id="detail-beranda-lima"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-lima-tab"
@@ -7878,7 +7878,7 @@
 
                                   <div class="flex flex-row text-2xl my-1">
                                     <div class="font-bold">4.7</div>
-                                    <div class="">/</div>
+                                    <div class="">&nbsp;/&nbsp;</div>
                                     <div class="">5</div>
                                   </div>
                                   <!--  -->
@@ -8363,7 +8363,7 @@
 
                       <!-- Konten Tab Lima Beranda -->
                       <div
-                        class="hidden px-4 py-2 mt-1"
+                        class="hidden px-3 py-2 mt-4"
                         id="detail-beranda-empat"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-empat-tab"
@@ -9579,7 +9579,7 @@
 
                       <!-- Konten Tab Enam Beranda -->
                       <div
-                        class="hidden px-4 py-2 mx-0.5"
+                        class="hidden px-3 py-2 mt-4"
                         id="detail-beranda-enam"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-enam-tab"
@@ -9587,7 +9587,7 @@
                         <!-- Tab Menu -->
 
                         <div
-                          class="w-[26vw] flex justify-around mt-6"
+                          class="w-[26vw] flex justify-around mt-6 hidden"
                           id="kontenKalkulatorTab"
                           data-tabs-toggle="#kontenKalkulatorTabContent"
                           role="tablist"
@@ -9636,14 +9636,255 @@
 
                         <!-- Konten Menu  -->
 
-                        <div class="grid grid-cols-1 gap-y-1 mt-6">
-                          <div id="kontenKalkulatorTabContent">
+                        <div class="grid grid-cols-1 gap-y-1">
+                          <div id="">
                             <div
-                              class="pr-2 hidden"
+                              class="hidden"
                               id="kalkulatorhargawajar"
                               role="tabpanel-kalkulator"
                             >
-                              <div class="">
+                              <div class="grid grid-cols-2 gap-2">
+                                <!-- Card Beranda 1 -->
+                                <div class="w-full bg-white rounded-lg h-[60vh] p-5 flex flex-col text-sm">
+                                  <!--  -->
+                                  <div class="flex flex-row mb-1">
+                                    <div class="w-full ">Harga Properti</div>
+                                    <div>
+                                      <input type="text" class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300" placeholder="300.000.000" style="
+                                          border: none;
+                                          border-bottom: 1px solid;
+                                          text-align: right;
+                                        " oninput="formatNumber(this)" required="">
+                                    </div>
+                                  </div>
+                                  <!--  -->
+
+                                  <!--  -->
+                                  <div class="mb-7">
+                                    <div class="flex flex-row mb-3">
+                                      <div class="w-full ">Uang Muka</div>
+                                      <div>
+                                        <input type="text" class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300" placeholder="30.000.000" style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          " oninput="formatNumber(this)" required="">
+                                      </div>
+                                    </div>
+                                    <div class="w-full my-1">
+                                      <input type="range" class="w-full" id="ControlRangeBeranda" min="0.5" max="3" step="0.5" style="height: 4px" value="1.5">
+                                    </div>
+                                    <!--  -->
+                                    <div class="flex justify-between text-xs w-full mt-1">
+                                      <div class="">10%</div>
+                                      <div class="">50%</div>
+                                    </div>
+                                  </div>
+
+                                  <!--  -->
+                                  <div class="mb-7">
+                                    <div class="flex flex-row mb-3">
+                                      <div class="w-full ">Suku Bunga (%)</div>
+                                      <div>
+                                        <input type="text" class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300" placeholder="14" style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          " oninput="formatNumber(this)" required="">
+                                      </div>
+                                    </div>
+                                    <div class="w-full my-1">
+                                      <input type="range" class="w-full" id="ControlRangeBeranda" min="0.5" max="3" step="0.5" style="height: 4px" value="1.5">
+                                    </div>
+                                    <!--  -->
+                                    <div class="flex justify-between text-xs w-full mt-1">
+                                      <div class="">1%</div>
+                                      <div class="">50%</div>
+                                    </div>
+                                  </div>
+
+                                  <!--  -->
+                                  <div class="mb-7">
+                                    <div class="flex flex-row mb-3">
+                                      <div class="w-full ">Tenor (tahun)</div>
+                                      <div>
+                                        <input type="text" class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300" placeholder="15" style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          " oninput="formatNumber(this)" required="">
+                                      </div>
+                                    </div>
+                                    <div class="w-full my-1">
+                                      <input type="range" class="w-full" id="ControlRangeBeranda" min="0.5" max="3" step="0.5" style="height: 4px" value="1.5">
+                                    </div>
+                                    <!--  -->
+                                    <div class="flex justify-between text-xs w-full mt-1">
+                                      <div class="">5</div>
+                                      <div class="">20</div>
+                                    </div>
+                                  </div>
+
+
+
+                                  <!--  -->
+                                </div>
+                                <!-- Card Beranda 1 -->
+                                <div
+                                  class="w-full bg-white rounded-lg h-[60vh] p-5 flex flex-col text-sm"
+                                >
+                                  <!-- new1 -->
+                                  <div class="flex flex-row mb-2">
+                                    <div class="w-full font-semibold">Angsuran (Estimasi suku harga 14%)</div>
+                                  </div>
+                                  <!--  -->
+                                  <div class="flex flex-row mb-2">
+                                    <div class="w-full">Bunga Pinjaman</div>
+                                    <div>
+                                      <input
+                                        type="text"
+                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                        placeholder="5"
+                                        style="
+                                          border: none;
+                                          border-bottom: 1px solid;
+                                          text-align: right;
+                                        "
+                                        oninput="formatNumber(this)"
+                                        required=""
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <!--  -->
+                                  <!-- new1 -->
+                                  <div class="flex flex-row mb-2 mt-2">
+                                    <div class="w-full font-semibold">Estimasi Pembayaran Pertama</div>
+                                  </div>
+                                  <!--  -->
+                                  <div class="flex flex-row mb-2">
+                                    <div class="w-full">Uang Muka</div>
+                                    <div>
+                                      <input
+                                        type="text"
+                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                        placeholder="30.000.000"
+                                        style="
+                                          border: none;
+                                          border-bottom: 1px solid;
+                                          text-align: right;
+                                        "
+                                        oninput="formatNumber(this)"
+                                        required=""
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="flex flex-row mb-2">
+                                    <div class="w-full">Anguran Pertama</div>
+                                    <div>
+                                      <input
+                                        type="text"
+                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                        placeholder="80.000.000"
+                                        style="
+                                          border: none;
+                                          border-bottom: 1px solid;
+                                          text-align: right;
+                                        "
+                                        oninput="formatNumber(this)"
+                                        required=""
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="flex flex-row mb-2">
+                                    <div class="w-full">Estimasi Biaya Lainnya</div>
+                                    <div>
+                                      <input
+                                        type="text"
+                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                        placeholder="10.000.000"
+                                        style="
+                                          border: none;
+                                          border-bottom: 1px solid;
+                                          text-align: right;
+                                        "
+                                        oninput="formatNumber(this)"
+                                        required=""
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="flex flex-row mb-2">
+                                    <div class="w-full">Total</div>
+                                    <div>
+                                      <input
+                                        type="text"
+                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                        placeholder="220.000.000"
+                                        style="
+                                          border: none;
+                                          border-bottom: 1px solid;
+                                          text-align: right;
+                                        "
+                                        oninput="formatNumber(this)"
+                                        required=""
+                                      />
+                                    </div>
+                                  </div>
+                                  <!--  -->
+                                  <!-- new1 -->
+                                  <div class="flex flex-row mb-2 mt-2">
+                                    <div class="w-full font-semibold">Detil Pinjaman</div>
+                                  </div>
+                                  <!--  -->
+                                  <div class="flex flex-row mb-2">
+                                    <div class="w-full">Pinjaman Pokok</div>
+                                    <div>
+                                      <input
+                                        type="text"
+                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                        placeholder="245.000.000"
+                                        style="
+                                          border: none;
+                                          border-bottom: 1px solid;
+                                          text-align: right;
+                                        "
+                                        oninput="formatNumber(this)"
+                                        required=""
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="flex flex-row mb-2">
+                                    <div class="w-full">Estimasi Bunga Pinjaman</div>
+                                    <div>
+                                      <input
+                                        type="text"
+                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                        placeholder="500.000.000"
+                                        style="
+                                          border: none;
+                                          border-bottom: 1px solid;
+                                          text-align: right;
+                                        "
+                                        oninput="formatNumber(this)"
+                                        required=""
+                                      />
+                                    </div>
+                                  </div>
+                                  <!--  -->
+
+                                  
+                                </div>
+                              </div>
+
+                              <!--  -->
+                              <div class="hidden">
+                                <!--  -->
+
+                                <!--  -->
                                 <!-- col1 -->
                                 <div class="grid grid-cols-5 mb-3">
                                   <div class="w-full col-span-2"></div>
@@ -9951,250 +10192,7 @@
                               id="kalkulatorkpr"
                               role="tabpanel-kalkulator"
                             >
-                              <div class="grid grid-cols-1 gap-y-1 mt-0">
-                                <div class="w-full text-md font-bold mb-2">
-                                  Perkiraan Harga Wajars
-                                </div>
-
-                                <div
-                                  class="h-[46.5vh] overflow-y-auto hide-scrollbar"
-                                >
-                                  <div class="grid grid-cols-1 text-sm">
-                                    <!--  -->
-                                    <div
-                                      class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
-                                    >
-                                      <div
-                                        class="col-span-3 flex items-stretch"
-                                      >
-                                        <div class="self-end">
-                                          Luas Tanah (m²)
-                                        </div>
-                                      </div>
-                                      <div class="col-span-2 -ml-2">
-                                        <input
-                                          type="text"
-                                          class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-span-1"></div>
-                                    </div>
-                                    <!--  -->
-                                    <div
-                                      class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
-                                    >
-                                      <div
-                                        class="col-span-3 flex items-stretch"
-                                      >
-                                        <div class="self-end">
-                                          Perkiraan NJOP (Rp/m²)
-                                        </div>
-                                      </div>
-                                      <div class="col-span-2 -ml-2">
-                                        <input
-                                          type="text"
-                                          class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
-                                          placeholder="2,000,000"
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-span-1"></div>
-                                    </div>
-
-                                    <!--  -->
-
-                                    <div
-                                      class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
-                                    >
-                                      <div
-                                        class="col-span-3 flex items-stretch"
-                                      >
-                                        <div class="self-end">
-                                          Angka Pengali NJOP
-                                        </div>
-                                      </div>
-                                      <div class="col-span-2 -ml-2">
-                                        <input
-                                          type="text"
-                                          class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
-                                          placeholder="2.5"
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-span-1"></div>
-                                    </div>
-                                    <div
-                                      class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
-                                    >
-                                      <div
-                                        class="col-span-3 flex items-stretch"
-                                      >
-                                        <div class="self-end font-semibold">
-                                          Nilai Tanah (Rp)
-                                        </div>
-                                      </div>
-                                      <div class="col-span-2 -ml-2">
-                                        <input
-                                          type="text"
-                                          class="h-6 block w-32 text-right text-xs text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300 font-semibold"
-                                          style="
-                                            border: none;
-                                            border-bottom: 1px solid;
-                                          "
-                                          placeholder=""
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-span-1"></div>
-                                    </div>
-                                    <div>&nbsp;</div>
-
-                                    <!--  -->
-
-                                    <div
-                                      class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
-                                    >
-                                      <div
-                                        class="col-span-3 flex items-stretch"
-                                      >
-                                        <div class="self-end">
-                                          Luas Bangunan (m²)
-                                        </div>
-                                      </div>
-                                      <div class="col-span-2 -ml-2">
-                                        <input
-                                          type="text"
-                                          class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-span-1"></div>
-                                    </div>
-                                    <!--  -->
-                                    <div
-                                      class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
-                                    >
-                                      <div
-                                        class="col-span-3 flex items-stretch"
-                                      >
-                                        <div class="self-end">
-                                          Perkiraan Harga Bangunan (Rp/m²)
-                                        </div>
-                                      </div>
-                                      <div class="col-span-2 -ml-2">
-                                        <input
-                                          type="text"
-                                          class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
-                                          placeholder="3,000,000"
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-span-1"></div>
-                                    </div>
-                                    <!--  -->
-                                    <div
-                                      class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
-                                    >
-                                      <div
-                                        class="col-span-3 flex items-stretch"
-                                      >
-                                        <div class="self-end">
-                                          Usia Bangunan (thn)
-                                        </div>
-                                      </div>
-                                      <div class="col-span-2 -ml-2">
-                                        <input
-                                          type="text"
-                                          class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
-                                          placeholder="5"
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-span-1"></div>
-                                    </div>
-                                    <!--  -->
-                                    <div
-                                      class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
-                                    >
-                                      <div
-                                        class="col-span-3 flex items-stretch"
-                                      >
-                                        <div class="self-end">
-                                          Depresiasi Bangunan (%)
-                                        </div>
-                                      </div>
-                                      <div class="col-span-2 -ml-2">
-                                        <input
-                                          type="text"
-                                          class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
-                                          placeholder="5"
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-span-1"></div>
-                                    </div>
-                                    <!--  -->
-                                    <div
-                                      class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
-                                    >
-                                      <div
-                                        class="col-span-3 flex items-stretch"
-                                      >
-                                        <div class="self-end font-semibold">
-                                          Nilai Bangunan (Rp)
-                                        </div>
-                                      </div>
-                                      <div class="col-span-2 -ml-2">
-                                        <input
-                                          type="text"
-                                          class="h-6 block w-32 text-right text-xs text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300 font-semibold"
-                                          style="
-                                            border: none;
-                                            border-bottom: 1px solid;
-                                          "
-                                          placeholder=""
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-span-1"></div>
-                                    </div>
-
-                                    <div>&nbsp;</div>
-
-                                    <!--  -->
-
-                                    <div
-                                      class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
-                                    >
-                                      <div
-                                        class="col-span-3 flex items-stretch"
-                                      >
-                                        <div class="self-end font-semibold">
-                                          Perkiraan Nilai Aset (Rp)
-                                        </div>
-                                      </div>
-                                      <div class="col-span-2 -ml-2">
-                                        <input
-                                          type="text"
-                                          class="h-6 block w-32 text-right text-xs text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300 font-semibold"
-                                          style="
-                                            border: none;
-                                            border-bottom: 1px solid;
-                                          "
-                                          placeholder=""
-                                          required
-                                        />
-                                      </div>
-                                      <div class="col-span-1"></div>
-                                    </div>
-
-                                    <div>&nbsp;</div>
-
-                                    <!--  -->
-                                  </div>
-                                </div>
-                              </div>
+                              <!--  -->
                             </div>
                           </div>
                         </div>
@@ -10204,120 +10202,241 @@
 
                       <!-- Konten Tab Tujuh Beranda -->
                       <div
-                        class="hidden py-2"
+                        class="hidden px-3 py-2 mt-4"
                         id="detail-beranda-tujuh"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-tujuh-tab"
                       >
-                        <div class="grid grid-cols-1 pt-20">
-                          <div
-                            class="max-w-screen-md px-10 py-6 mx-4 bg-white rounded-lg shadow md:mx-auto border-1"
-                          >
+                        <div class="">
+                          <div class="grid grid-cols-1 gap-y-1 mt-0">
+                            <div class="w-full text-md font-bold mb-2">
+                              Perkiraan Harga Wajars
+                            </div>
+
                             <div
-                              class="flex flex-col items-start w-full m-auto sm:flex-row"
+                              class="h-[55.5vh] overflow-y-auto hide-scrollbar"
                             >
-                              <div class="flex items-center">
+                              <div class="grid grid-cols-1 text-sm">
+                                <!--  -->
                                 <div
-                                  class="items-center justify-center w-20 h-20 m-auto mr-4 sm:w-32 sm:h-32"
+                                  class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
                                 >
-                                  <img
-                                    alt="profil"
-                                    src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFufGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
-                                    class="object-cover w-20 h-20 mx-auto rounded-full sm:w-32 sm:h-32"
-                                  />
+                                  <div class="col-span-3 flex items-stretch">
+                                    <div class="self-end">Luas Tanah (m²)</div>
+                                  </div>
+                                  <div class="col-span-2 -ml-2">
+                                    <input
+                                      type="text"
+                                      class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-span-1"></div>
                                 </div>
-                              </div>
-                              <div
-                                class="flex flex-col pt-4 mx-auto my-auto sm:pt-0 sm:mx-0"
-                              >
+                                <!--  -->
                                 <div
-                                  class="flex flex-col mx-auto sm:flex-row sm:mx-0"
+                                  class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
                                 >
-                                  <h2
-                                    class="flex pr-4 text-xl font-light text-gray-900 sm:text-3xl"
-                                  >
-                                    Budiman Ali
-                                  </h2>
-                                  <div class="flex">
-                                    <div
-                                      class="w-5 h-5 -mt-0.5 flex justify-center items-center relative"
-                                    >
-                                      <img src="./assets/verif.png" alt="" />
+                                  <div class="col-span-3 flex items-stretch">
+                                    <div class="self-end">
+                                      Perkiraan NJOP (Rp/m²)
                                     </div>
                                   </div>
+                                  <div class="col-span-2 -ml-2">
+                                    <input
+                                      type="text"
+                                      class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="2,000,000"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-span-1"></div>
+                                </div>
+
+                                <!--  -->
+
+                                <div
+                                  class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
+                                >
+                                  <div class="col-span-3 flex items-stretch">
+                                    <div class="self-end">
+                                      Angka Pengali NJOP
+                                    </div>
+                                  </div>
+                                  <div class="col-span-2 -ml-2">
+                                    <input
+                                      type="text"
+                                      class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="2.5"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-span-1"></div>
                                 </div>
                                 <div
-                                  class="flex items-center justify-between mt-3 space-x-2"
+                                  class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
                                 >
-                                  <div class="flex">
-                                    <span class="mr-1 font-semibold">55 </span>
-                                    listing
+                                  <div class="col-span-3 flex items-stretch">
+                                    <div class="self-end font-semibold">
+                                      Nilai Tanah (Rp)
+                                    </div>
                                   </div>
-                                  <div class="flex">
-                                    <span class="mr-1 font-semibold">10k </span>
-                                    Terjual
+                                  <div class="col-span-2 -ml-2">
+                                    <input
+                                      type="text"
+                                      class="h-6 block w-32 text-right text-xs text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300 font-semibold"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                      "
+                                      placeholder=""
+                                      required
+                                    />
                                   </div>
-                                  <div class="flex">
-                                    <span class="mr-1 font-semibold">2M</span>
-                                    Nilai Tengah
-                                  </div>
+                                  <div class="col-span-1"></div>
                                 </div>
+                                <div>&nbsp;</div>
+
+                                <!--  -->
+
+                                <div
+                                  class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
+                                >
+                                  <div class="col-span-3 flex items-stretch">
+                                    <div class="self-end">
+                                      Luas Bangunan (m²)
+                                    </div>
+                                  </div>
+                                  <div class="col-span-2 -ml-2">
+                                    <input
+                                      type="text"
+                                      class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-span-1"></div>
+                                </div>
+                                <!--  -->
+                                <div
+                                  class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
+                                >
+                                  <div class="col-span-3 flex items-stretch">
+                                    <div class="self-end">
+                                      Perkiraan Harga Bangunan (Rp/m²)
+                                    </div>
+                                  </div>
+                                  <div class="col-span-2 -ml-2">
+                                    <input
+                                      type="text"
+                                      class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="3,000,000"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-span-1"></div>
+                                </div>
+                                <!--  -->
+                                <div
+                                  class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
+                                >
+                                  <div class="col-span-3 flex items-stretch">
+                                    <div class="self-end">
+                                      Usia Bangunan (thn)
+                                    </div>
+                                  </div>
+                                  <div class="col-span-2 -ml-2">
+                                    <input
+                                      type="text"
+                                      class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="5"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-span-1"></div>
+                                </div>
+                                <!--  -->
+                                <div
+                                  class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
+                                >
+                                  <div class="col-span-3 flex items-stretch">
+                                    <div class="self-end">
+                                      Depresiasi Bangunan (%)
+                                    </div>
+                                  </div>
+                                  <div class="col-span-2 -ml-2">
+                                    <input
+                                      type="text"
+                                      class="bg-gray-50 h-6 w-32 border border-gray-300 text-gray-900 text-xs text-right rounded-sm focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="5"
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-span-1"></div>
+                                </div>
+                                <!--  -->
+                                <div
+                                  class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
+                                >
+                                  <div class="col-span-3 flex items-stretch">
+                                    <div class="self-end font-semibold">
+                                      Nilai Bangunan (Rp)
+                                    </div>
+                                  </div>
+                                  <div class="col-span-2 -ml-2">
+                                    <input
+                                      type="text"
+                                      class="h-6 block w-32 text-right text-xs text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300 font-semibold"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                      "
+                                      placeholder=""
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-span-1"></div>
+                                </div>
+
+                                <div>&nbsp;</div>
+
+                                <!--  -->
+
+                                <div
+                                  class="grid grid-cols-8 gap-4 text-gray-700 mb-2"
+                                >
+                                  <div class="col-span-3 flex items-stretch">
+                                    <div class="self-end font-semibold">
+                                      Perkiraan Nilai Aset (Rp)
+                                    </div>
+                                  </div>
+                                  <div class="col-span-2 -ml-2">
+                                    <input
+                                      type="text"
+                                      class="h-6 block w-32 text-right text-xs text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300 font-semibold"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                      "
+                                      placeholder=""
+                                      required
+                                    />
+                                  </div>
+                                  <div class="col-span-1"></div>
+                                </div>
+
+                                <div>&nbsp;</div>
+
+                                <!--  -->
                               </div>
                             </div>
-                            <div class="w-full pt-5">
-                              <h1
-                                class="text-lg font-semibold text-gray-700 sm:text-xl"
-                              >
-                                Alexander Noah
-                              </h1>
-                              <p class="text-sm text-gray-500 md:text-base">
-                                Fotografer
-                              </p>
-                              <p class="text-sm text-gray-700 md:text-base">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Cupiditate, quam adipisicing
-                                elit. Cupiditate, quam
-                              </p>
-                            </div>
                           </div>
-
-                          <!--  -->
-                        </div>
-                        <!--  -->
-                        <div class="grid grid-cols-3 pt-8">
-                          <div></div>
-                          <div class="flex justify-center">
-                            <button
-                              data-pesan="Mochtar Riady"
-                              onclick="showMessage(this)"
-                              type="button"
-                              class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-[#69B3E7] rounded-md"
-                            >
-                              <svg
-                                class="w-3 h-3 text-white me-2"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 20 16"
-                              >
-                                <path
-                                  d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
-                                />
-                                <path
-                                  d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
-                                />
-                              </svg>
-                              Kirim Pesan
-                            </button>
-                          </div>
-                          <div></div>
                         </div>
                       </div>
 
                       <!-- Konten Tab Delapan Beranda -->
 
                       <div
-                        class="hidden px-4 py-2"
+                        class="hidden px-3 py-2 mt-4"
                         id="detail-beranda-delapan"
                         role="tabpanel"
                         aria-labelledby="detail-beranda-delapan-tab"
