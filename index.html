@@ -33589,16 +33589,17 @@
         features.forEach((f) => (point[f] = 1 + Math.random() * 8));
         data.push(point);
       }
-      console.log(data);
 
-      let width = 250;
-      let height = 250;
-      let radius = width / 2 - 50;
+      let width = 400;
+      let height = 400;
+      let radius = Math.min(width, height) / 2 - 50;
       let svg = d3
         .select("#chartSpiderr")
         .append("svg")
         .attr("width", width)
-        .attr("height", height);
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
 
       let radialScale = d3.scaleLinear().domain([0, 10]).range([0, radius]);
       let ticks = [2, 4, 6, 8, 10];
@@ -33606,41 +33607,40 @@
       svg
         .selectAll("circle")
         .data(ticks)
-        .join((enter) =>
-          enter
-            .append("circle")
-            .attr("cx", width / 2)
-            .attr("cy", height / 2)
-            .attr("fill", "none")
-            .attr("stroke", "gray")
-            .attr("r", (d) => radialScale(d))
-        );
+        .enter()
+        .append("circle")
+        .attr("cx", 0)
+        .attr("cy", 0)
+        .attr("fill", "none")
+        .attr("stroke", "gray")
+        .attr("r", (d) => radialScale(d));
+
       // draw tick labels
       svg
         .selectAll(".ticklabel")
         .data(ticks)
-        .join((enter) =>
-          enter
-            .append("text")
-            .attr("class", "ticklabel")
-            .attr("x", width / 2 + 5)
-            .attr("y", (d) => height / 2 - radialScale(d))
-            .text((d) => d.toString())
-        );
+        .enter()
+        .append("text")
+        .attr("class", "ticklabel")
+        .attr("x", 0)
+        .attr("y", (d) => -radialScale(d))
+        .attr("dy", "0.3em")
+        .text((d) => d.toString());
+
       // draw axis for each feature
       function angleToCoordinate(angle, value) {
         let x = Math.cos(angle) * radialScale(value);
         let y = Math.sin(angle) * radialScale(value);
-        return { x: width / 2 + x, y: height / 2 - y };
+        return { x: x, y: -y };
       }
 
       let featureData = features.map((f, i) => {
-        let angle = Math.PI / 2 + (2 * Math.PI * i) / features.length;
+        let angle = (Math.PI * 2 * i) / features.length;
         return {
           name: f,
           angle: angle,
           line_coord: angleToCoordinate(angle, 10),
-          label_coord: angleToCoordinate(angle, 10.5),
+          label_coord: angleToCoordinate(angle, 12), // Adjust label position
         };
       });
 
@@ -33648,61 +33648,48 @@
       svg
         .selectAll("line")
         .data(featureData)
-        .join((enter) =>
-          enter
-            .append("line")
-            .attr("x1", width / 2)
-            .attr("y1", height / 2)
-            .attr("x2", (d) => d.line_coord.x)
-            .attr("y2", (d) => d.line_coord.y)
-            .attr("stroke", "black")
-        );
+        .enter()
+        .append("line")
+        .attr("x1", 0)
+        .attr("y1", 0)
+        .attr("x2", (d) => d.line_coord.x)
+        .attr("y2", (d) => d.line_coord.y)
+        .attr("stroke", "black");
 
       // draw axis label
       svg
         .selectAll(".axislabel")
         .data(featureData)
-        .join((enter) =>
-          enter
-            .append("text")
-            .attr("x", (d) => d.label_coord.x)
-            .attr("y", (d) => d.label_coord.y)
-            .text((d) => d.name)
-        );
+        .enter()
+        .append("text")
+        .attr("x", (d) => d.label_coord.x)
+        .attr("y", (d) => d.label_coord.y)
+        .text((d) => d.name);
 
-      // drawing the line for the spider chart
-      let line = d3
-        .line()
+      // drawing the area for the spider chart
+      let area = d3
+        .area()
         .x((d) => d.x)
         .y((d) => d.y);
-      let colors = ["darkorange", "gray", "navy"];
-
-      // get coordinates for a data point
-      function getPathCoordinates(data_point) {
-        let coordinates = [];
-        for (var i = 0; i < features.length; i++) {
-          let ft_name = features[i];
-          let angle = Math.PI / 2 + (2 * Math.PI * i) / features.length;
-          coordinates.push(angleToCoordinate(angle, data_point[ft_name]));
-        }
-        return coordinates;
-      }
 
       // draw the path element
       svg
         .selectAll("path")
         .data(data)
-        .join((enter) =>
-          enter
-            .append("path")
-            .datum((d) => getPathCoordinates(d))
-            .attr("d", line)
-            .attr("stroke-width", 3)
-            .attr("stroke", (_, i) => colors[i])
-            .attr("fill", (_, i) => colors[i])
-            .attr("stroke-opacity", 1)
-            .attr("opacity", 0.5)
-        );
+        .enter()
+        .append("path")
+        .attr("d", (d) => area(getPathCoordinates(d)))
+        .attr("fill", (_, i) => colors[i])
+        .attr("fill-opacity", 0.5);
+
+      function getPathCoordinates(data_point) {
+        let coordinates = features.map((ft_name, i) => {
+          let angle = (Math.PI * 2 * i) / features.length;
+          let r = radialScale(data_point[ft_name]);
+          return { x: r * Math.cos(angle), y: -r * Math.sin(angle) };
+        });
+        return coordinates;
+      }
     </script>
   </body>
 
