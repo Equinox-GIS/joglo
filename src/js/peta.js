@@ -6,6 +6,7 @@ import heartOn from "../images/heart-on.png";
 import share from "../images/share.png";
 import badge3d from "../images/badge3d.svg";
 import Video1 from "../video/Video1.mp4";
+import era from "../images/agent/era-property.png";
 
 function getSliderDefaultOptions() {
   return {
@@ -958,7 +959,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   <div class="flex items-center">
                                     <img
                                       class="w-6 h-6 object-contain"
-                                      src="./src/images/agent/era-property.png"
+                                      src="${era}"
                                     />
                                   </div>
                                 </div>
