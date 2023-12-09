@@ -7,6 +7,7 @@ import share from "../images/share.png";
 import badge3d from "../images/badge3d.svg";
 import Video1 from "../video/Video1.mp4";
 import era from "../images/agent/era-property.png";
+import verif from "../images/verif.png";
 import model from "../images/model/model11.jpg";
 
 function getSliderDefaultOptions() {
@@ -854,7 +855,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   <div class="flex items-center">
                                     <img
                                       class="w-7 h-7 rounded-full"
-                                      src="${rumaha2}"
+                                      src="${model}"
                                     />
                                   </div>
 
@@ -992,13 +993,15 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   </div>
                                 </div>
                               </div>
-                            <div class="flex flex-col w-full px-1 pb-1">
+                             <div class="flex flex-col w-full px-1 pb-1">
                                 <!--  -->
                                 <div class="flex flex-row justify-between">
                                   <div>
                                     <div class="inline-flex items-center">
                                       <h5 class="font-bold tracking-tight text-black">
-                                        <span class="text-xl" style=" font-size: 1rem;">Rp 11.300.000.000</span>
+                                        <span class="text-xl" style="
+    font-size: 1rem;
+">Rp 11.300.000.000</span>
                                       </h5>
                                     </div>
                                   </div>
@@ -1010,14 +1013,18 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   </div> -->
                                 </div>
                                 <!--  -->
-                                <div class="flex flex-col -mt-1 font-normal" style="margin-top: -0.3rem;">
+                                <div class="flex flex-col -mt-1 font-normal" style="
+    margin-top: -0.3rem;
+">
                                   <div class="flex items-center text-[11px] text-gray-700">
                                     <span class="mr-2">LT 80 m² |</span>
                                     <span class="mr-2">LB 276 m² |</span>
                                     <span class="mr-2">2 KT |</span>
                                     <span class="mr-2">5 KM</span>
                                   </div>
-                                  <div class="text-xs text-gray-700" style="margin-top: -0.2rem;">
+                                  <div class="text-xs text-gray-700" style="
+    margin-top: -0.2rem;
+">
                                     Sunter, Tanjung Priok, keduacard
                                   </div>
                                 </div>
