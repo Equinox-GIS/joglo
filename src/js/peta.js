@@ -978,23 +978,25 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 <div
                                   class="slider-card-info-detail-peta w-full h-full"
                                 >
-                                  <div class="relative h-[19vh]">
-                                    <img
-                                      class="w-full h-full object-cover"
-                                      src="${rumaha2}"
-                                      alt=""
-                                    />
-                                    <div class="arrow-right-custom-mini">
+                                  <div class="relative h-[19vh] bg-black z-index-10">
+                                    <video
+                                      class="w-full h-full object-contain"
+                                      loop
+                                      muted
+                                      preload="metadata"
+                                      src="${Video1}"
+                                    ></video>
+                                    <div class="arrow-right-custom-mini-peta">
                                       <span class="font-semibold">NEW</span>
                                     </div>
                                   </div>
-                                  <div class="relative h-[19vh]">
+                                  <div class="relative h-[19vh] bg-black z-index-10">
                                     <img
-                                      class="w-full h-full object-cover"
+                                      class="w-full h-full object-contain"
                                       src="${rumaha2}"
                                       alt=""
                                     />
-                                    <div class="arrow-right-custom-mini">
+                                    <div class="arrow-right-custom-mini-peta">
                                       <span class="font-semibold">NEW</span>
                                     </div>
                                   </div>
