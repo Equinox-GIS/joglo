@@ -57,14 +57,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
-
-    <!-- D3.js -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"
-      charset="utf-8"
-    ></script>
-
-
+    <link rel="stylesheet" type="text/css" href="/src/css/output.css" />
   </head>
 
   <body class="font-roboto">
@@ -82,7 +75,6 @@
           />
           <div class="text-3xl font-bold font-lobster text-[#2074d8]">
             Soaraja
-
           </div>
         </div>
 
@@ -8133,8 +8125,6 @@
                                         height="277"
                                       ></canvas>
                                       <!-- <div id="chartSpiderr"></div> -->
-                                                      <div class="radarChart"></div>
-
                                     </div>
                                     <!-- Tag penutup untuk div canvas dan chartSpiderr -->
 
@@ -32373,153 +32363,191 @@
       <!-- End Section Three Main -->
     </div>
     <!-- End Main -->
-    <script type="module" src="/main.js"></script>
-    <script src="/radarChart.js"></script>
-
+    <!-- <script type="module" src="/main.js"></script> -->
 
     <!-- Custom JS -->
     <script type="module" src="./src/js/index.js" defer></script>
     <script type="module" src="./src/js/peta.js" defer></script>
 
-    <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Slick JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-      defer
-    ></script>
-
-    <!-- JS Flowbite -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"
-      defer
-    ></script>
-
-    <!-- Chart JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- Marquee JS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.6.0/jquery.marquee.min.js"
-      integrity="sha512-JHJv/L48s1Hod24iSI0u9bcF/JlUi+YaxliKdbasnw/U1Lp9xxWkaZ3O5OuQPMkVwOVXeFkF4n4176ouA6Py3A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-
-        <script>
-      /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
-
-      //////////////////////////////////////////////////////////////
-      //////////////////////// Set-Up //////////////////////////////
-      //////////////////////////////////////////////////////////////
-
-      var margin = { top: 100, right: 100, bottom: 100, left: 100 },
-        width =
-          Math.min(350, window.innerWidth - 10) - margin.left - margin.right,
-        height = Math.min(
-          width,
-          window.innerHeight - margin.top - margin.bottom - 20
-        );
-
-      //////////////////////////////////////////////////////////////
-      ////////////////////////// Data //////////////////////////////
-      //////////////////////////////////////////////////////////////
-
-      var data = [
-        [
-          //iPhone
-          { axis: "Battery Life", value: 0.22 },
-          { axis: "Brand", value: 0.28 },
-          { axis: "Contract Cost", value: 0.29 },
-          { axis: "Design And Quality", value: 0.17 },
-          { axis: " Connectivity", value: 0.22 },
-          { axis: "Large Screen", value: 0.02 },
-          { axis: "Price Of Device", value: 0.21 },
-          { axis: "To Be A Smartphone", value: 0.5 },
-        ],
-        [
-          //Samsung
-          { axis: "Battery Life", value: 0.27 },
-          { axis: "Brand", value: 0.16 },
-          { axis: "Contract Cost", value: 0.35 },
-          { axis: "Design And Quality", value: 0.13 },
-          { axis: " Connectivity", value: 0.2 },
-          { axis: "Large Screen", value: 0.13 },
-          { axis: "Price Of Device", value: 0.35 },
-          { axis: "To Be A Smartphone", value: 0.38 },
-        ],
-        [
-          //Nokia Smartphone
-          { axis: "Battery Life", value: 0.26 },
-          { axis: "Brand", value: 0.1 },
-          { axis: "Contract Cost", value: 0.3 },
-          { axis: "Design And Quality", value: 0.14 },
-          { axis: "Have Internet Connectivity", value: 0.22 },
-          { axis: "Large Screen", value: 0.04 },
-          { axis: "Price Of Device", value: 0.41 },
-          { axis: "To Be A Smartphone", value: 0.3 },
-        ],
-      ];
-      //////////////////////////////////////////////////////////////
-      //////////////////// Draw the Chart //////////////////////////
-      //////////////////////////////////////////////////////////////
-
-      var color = d3.scale.ordinal().range(["#EDC951", "#CC333F", "#00A0B0"]);
-
-      var radarChartOptions = {
-        w: width,
-        h: height,
-        margin: margin,
-        maxValue: 0.5,
-        levels: 5,
-        roundStrokes: true,
-        color: color,
-      };
-      //Call function to draw the Radar chart
-      RadarChart(".radarChart", data, radarChartOptions);
-    </script>
-
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script>
-      function previewImageListing(num) {
-        var preview = document.getElementById("preview-gambar-" + num);
-        var file = document.getElementById("gambar-rumah-" + num).files[0];
-        var reader = new FileReader();
+      let data = [];
+      let features = ["A", "B", "C", "D", "E", "F"];
+      // generate the data
+      for (var i = 0; i < 3; i++) {
+        var point = {};
+        //each feature will be a random number from 1-9
+        features.forEach((f) => (point[f] = 1 + Math.random() * 8));
+        data.push(point);
+      }
 
-        reader.onloadend = function () {
-          preview.src = reader.result;
-          preview.classList.remove("hidden");
+      let width = 400;
+      let height = 400;
+      let radius = Math.min(width, height) / 2 - 50;
+      let svg = d3
+        .select("#chartSpiderr")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
+
+      let radialScale = d3.scaleLinear().domain([0, 10]).range([0, radius]);
+      let ticks = [2, 4, 6, 8, 10];
+      // draw grid lines (circles)
+      svg
+        .selectAll("circle")
+        .data(ticks)
+        .enter()
+        .append("circle")
+        .attr("cx", 0)
+        .attr("cy", 0)
+        .attr("fill", "none")
+        .attr("stroke", "gray")
+        .attr("r", (d) => radialScale(d));
+
+      // draw tick labels
+      svg
+        .selectAll(".ticklabel")
+        .data(ticks)
+        .enter()
+        .append("text")
+        .attr("class", "ticklabel")
+        .attr("x", 0)
+        .attr("y", (d) => -radialScale(d))
+        .attr("dy", "0.3em")
+        .text((d) => d.toString());
+
+      // draw axis for each feature
+      function angleToCoordinate(angle, value) {
+        let x = Math.cos(angle) * radialScale(value);
+        let y = Math.sin(angle) * radialScale(value);
+        return { x: x, y: -y };
+      }
+
+      let featureData = features.map((f, i) => {
+        let angle = (Math.PI * 2 * i) / features.length;
+        return {
+          name: f,
+          angle: angle,
+          line_coord: angleToCoordinate(angle, 10),
+          label_coord: angleToCoordinate(angle, 12), // Adjust label position
         };
+      });
 
-        if (file) {
-          reader.readAsDataURL(file);
-        } else {
-          preview.src = "";
-          preview.classList.add("hidden");
-        }
-      }
-      <!--  -->
+      // draw axis line
+      svg
+        .selectAll("line")
+        .data(featureData)
+        .enter()
+        .append("line")
+        .attr("x1", 0)
+        .attr("y1", 0)
+        .attr("x2", (d) => d.line_coord.x)
+        .attr("y2", (d) => d.line_coord.y)
+        .attr("stroke", "black");
 
-      function formatNumber(input) {
-        // Menghapus karakter selain digit
-        let value = input.value.replace(/\D/g, "");
+      // draw axis label
+      svg
+        .selectAll(".axislabel")
+        .data(featureData)
+        .enter()
+        .append("text")
+        .attr("x", (d) => d.label_coord.x)
+        .attr("y", (d) => d.label_coord.y)
+        .text((d) => d.name);
 
-        // Menambahkan titik setiap 3 digit dari belakang
-        value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      // drawing the area for the spider chart
+      let area = d3
+        .area()
+        .x((d) => d.x)
+        .y((d) => d.y);
 
-        // Menetapkan nilai yang telah diformat kembali ke input
-        input.value = value;
-      }
+      // draw the path element
+      svg
+        .selectAll("path")
+        .data(data)
+        .enter()
+        .append("path")
+        .attr("d", (d) => area(getPathCoordinates(d)))
+        .attr("fill", (_, i) => colors[i])
+        .attr("fill-opacity", 0.5);
 
-      // Menambahkan event listener untuk semua input dengan class 'format-number'
-      document
-        .querySelectorAll(".hapus_style_kalkulator")
-        .forEach(function (input) {
-          input.addEventListener("input", function () {
-            formatNumber(this);
-          });
+      function getPathCoordinates(data_point) {
+        let coordinates = features.map((ft_name, i) => {
+          let angle = (Math.PI * 2 * i) / features.length;
+          let r = radialScale(data_point[ft_name]);
+          return { x: r * Math.cos(angle), y: -r * Math.sin(angle) };
         });
+        return coordinates;
+      }
     </script>
   </body>
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Slick JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    defer
+  ></script>
+
+  <!-- JS Flowbite -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"
+    defer
+  ></script>
+
+  <!-- Chart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Marquee JS -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.6.0/jquery.marquee.min.js"
+    integrity="sha512-JHJv/L48s1Hod24iSI0u9bcF/JlUi+YaxliKdbasnw/U1Lp9xxWkaZ3O5OuQPMkVwOVXeFkF4n4176ouA6Py3A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script>
+    function previewImageListing(num) {
+      var preview = document.getElementById("preview-gambar-" + num);
+      var file = document.getElementById("gambar-rumah-" + num).files[0];
+      var reader = new FileReader();
+
+      reader.onloadend = function () {
+        preview.src = reader.result;
+        preview.classList.remove("hidden");
+      };
+
+      if (file) {
+        reader.readAsDataURL(file);
+      } else {
+        preview.src = "";
+        preview.classList.add("hidden");
+      }
+    }
+    <!--  -->
+
+    function formatNumber(input) {
+      // Menghapus karakter selain digit
+      let value = input.value.replace(/\D/g, "");
+
+      // Menambahkan titik setiap 3 digit dari belakang
+      value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+      // Menetapkan nilai yang telah diformat kembali ke input
+      input.value = value;
+    }
+
+    // Menambahkan event listener untuk semua input dengan class 'format-number'
+    document
+      .querySelectorAll(".hapus_style_kalkulator")
+      .forEach(function (input) {
+        input.addEventListener("input", function () {
+          formatNumber(this);
+        });
+      });
+  </script>
 </html>
