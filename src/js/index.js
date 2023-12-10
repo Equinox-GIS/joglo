@@ -1137,7 +1137,6 @@ $(document).ready(function () {
     $(this).get(0).pause();
   });
   resizePlayer($(".mode-mini-video video"));
-
 });
 
 window.closeTab = function (element) {
