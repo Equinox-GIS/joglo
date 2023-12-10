@@ -760,6 +760,11 @@
   height: 29vh !important;
 }
 
+.slider-card-mode-pesan video {
+  width: 100%;
+  height: 20vh !important;
+}
+
 .slider-card-info-detail-peta img {
   max-width: 100%;
   /* Gambar tidak akan melebihi lebar area pembungkus */
