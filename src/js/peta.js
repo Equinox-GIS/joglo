@@ -697,7 +697,14 @@ const pulsingDot = {
     context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
     context.fillStyle = "rgba(229,55,55, 1)";
     context.strokeStyle = "white";
-    context.lineWidth = 10;
+    context.lineWidth = 16;
+
+    // shadow
+    context.shadowColor = "black";
+    context.shadowBlur = 10;
+    context.shadowOffsetX = 5;
+    context.shadowOffsetY = 5;
+
     context.fill();
     context.stroke();
 

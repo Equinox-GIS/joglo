@@ -1128,6 +1128,16 @@ $(document).ready(function () {
     $(this).get(0).pause();
   });
   resizePlayer($(".slider-favorit-dua video"));
+
+  $(".mode-mini-video video").on("mouseover", function () {
+    $(this).get(0).play();
+  });
+
+  $(".mode-mini-video video").on("mouseout", function () {
+    $(this).get(0).pause();
+  });
+  resizePlayer($(".mode-mini-video video"));
+
 });
 
 window.closeTab = function (element) {
