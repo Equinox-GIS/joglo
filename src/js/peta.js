@@ -847,13 +847,13 @@ map.on("click", "layer-peta-soaraja", (e) => {
 
   const content = `
                               <div
-                              class="max-w-sm bg-white cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                              class="max-w-sm bg-white rounded-t-lg cursor-pointer border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
                               data-object-id="${data.OBJECTID}"
                               data-card-map="1534"
                               data-active-tab="1"
                               onclick="showCardInfoDetail(this)">
                               <div
-                                class="p-1 h-[5vh] bg-white select-none"
+                                class="p-1 h-[5vh] bg-white rounded-t-lg select-none"
                               >
                                 <div
                                   class="flex items-center justify-between w-full h-full"
@@ -1002,7 +1002,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   </div>
                                 </div>
                               </div>
-                             <div class="flex flex-col w-full px-1 pb-1">
+                              <div class="flex flex-col w-full px-1 ml-0.5 pb-1">
                                 <!--  -->
                                 <div class="flex flex-row justify-between">
                                   <div>
