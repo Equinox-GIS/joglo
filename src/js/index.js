@@ -1187,6 +1187,9 @@ window.closeTabPasang = function () {
 let lastClickedPesan;
 
 window.showMessage = function (element) {
+
+ // event.stopPropagation();
+
   lastClickedPesan = element;
 
   var menuTujuhTab = document.getElementById("MenuTujuhTab");
@@ -1255,6 +1258,9 @@ window.showCardPesantDetail = function () {
 
 let lastClickedAgent;
 window.showCardAgent = function (element) {
+
+ event.stopPropagation();
+
   lastClickedAgent = element;
 
   var menuEmpatTab = document.getElementById("MenuEmpatTab");
