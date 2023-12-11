@@ -874,7 +874,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                       <div class="inline-flex">
                                         <div
                                           class="text-xs font-semibold text-gray-700 cursor-pointer"
-                                          onclick="showMessage(this)"
+                                          onclick="showCardAgent(this)"
                                         >
                                           Budiman Alisysiaa
                                         </div>
@@ -1004,36 +1004,40 @@ map.on("click", "layer-peta-soaraja", (e) => {
                               </div>
                               <div class="flex flex-col w-full px-1 ml-0.5 pb-1">
                                 <!--  -->
-                                <div class="flex flex-row justify-between">
+                                <div class="flex flex-row justify-start">
                                   <div>
                                     <div class="inline-flex items-center">
                                       <h5 class="font-bold tracking-tight text-black">
-                                        <span class="text-xl" style="
-    font-size: 1rem;
-">Rp 11.300.000.000</span>
+                                        <span class="text-xl" style="font-size: 1rem;">Rp 11.300.000.000</span>
                                       </h5>
                                     </div>
                                   </div>
-                                  <!-- <div class="mr-1 mt-1">
-                                    <img
-                                      class="w-6 h-6 rounded-full"
-                                      src="${model}"
-                                    />
-                                  </div> -->
+
+                                  <div class="flex justify-between">
+                                    <div class="grid grid-cols-3 items-center gap-2 ml-2">
+                                      <div>
+                                        <img class="w-4 h-4 object-cover" src="${heartOn}" alt="">
+                                      </div>
+
+                                      <div>
+                                        <img class="w-3 h-3 object-cover" src="${share}" alt="">
+                                      </div>
+
+                                      <div>
+                                        <img class="w-4 h-4 object-cover" src="${badge3d}" alt="">
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                                 <!--  -->
-                                <div class="flex flex-col -mt-1 font-normal" style="
-    margin-top: -0.3rem;
-">
+                                <div class="flex flex-col -mt-1 font-normal" style="margin-top: -0.3rem;">
                                   <div class="flex items-center text-[11px] text-gray-700">
                                     <span class="mr-2">LT 80 m² |</span>
                                     <span class="mr-2">LB 276 m² |</span>
                                     <span class="mr-2">2 KT |</span>
                                     <span class="mr-2">5 KM</span>
                                   </div>
-                                  <div class="text-xs text-gray-700" style="
-    margin-top: -0.2rem;
-">
+                                  <div class="text-xs text-gray-700" style="margin-top: -0.2rem;">
                                     Sunter, Tanjung Priok, keduacard
                                   </div>
                                 </div>
