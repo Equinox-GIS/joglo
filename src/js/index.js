@@ -2196,7 +2196,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   let clickCount = 0;
-
   window.ChangeModeCard = function (element) {
     clickCount++;
 
@@ -2218,15 +2217,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
       secondMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-
       cardModeTigaFavorit();
       initSlickAgenDetail();
       cardModeTiga();
     } else if (clickCount % 3 === 2) {
-      // Tampilkan mode ketiga pada klik kedua
-      thirdMode.forEach((el) => {
-        el.classList.remove("hidden");
-      });
+      // Tampilkan mode ketiga pada klik kedua, hanya jika elemen yang diklik memiliki class 'profil-agent-klik'
+      if (element.classList.contains("profil-agent-klik")) {
+        thirdMode.forEach((el) => {
+          el.classList.remove("hidden");
+        });
+      } else {
+        // Jika tidak ada class 'profil-agent-klik', kembali ke mode pertama
+        firstMode.forEach((el) => {
+          el.classList.remove("hidden");
+        });
+        cardModeTigaFavorit();
+        initSlickAgenDetail();
+        cardModeTiga();
+      }
     } else {
       // Tampilkan mode pertama pada klik ketiga
       firstMode.forEach((el) => {
