@@ -2196,16 +2196,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   let clickCount = 0;
+
   window.ChangeModeCard = function (element) {
     clickCount++;
 
     let firstMode = document.querySelectorAll(".mode-card-pertama");
     let secondMode = document.querySelectorAll(".mode-card-kedua");
     let thirdMode = document.querySelectorAll(".mode-card-ketiga");
-    let fourthMode = document.querySelectorAll(".mode-card-keempat");
+    // let fourthMode = document.querySelectorAll(".mode-card-keempat");
 
     // Sembunyikan semua konten
-    [firstMode, secondMode, thirdMode, fourthMode].forEach((modeList) => {
+    [firstMode, secondMode, thirdMode].forEach((modeList) => {
       modeList.forEach((el) => {
         el.classList.add("hidden");
       });
@@ -2213,31 +2214,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // Tampilkan konten berdasarkan jumlah klik
     if (clickCount % 3 === 1) {
+      // Tampilkan mode kedua pada klik pertama
       secondMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      // initSlickFavorit();
-      // cardModeTigaFavorit();
-      cardModeTigaFavorit();
 
+      cardModeTigaFavorit();
       initSlickAgenDetail();
       cardModeTiga();
     } else if (clickCount % 3 === 2) {
-      firstMode.forEach((el) => {
-        el.classList.remove("hidden");
-      });
-    } else if (clickCount % 3 === 3) {
-      fourthMode.forEach((el) => {
+      // Tampilkan mode ketiga pada klik kedua
+      thirdMode.forEach((el) => {
         el.classList.remove("hidden");
       });
     } else {
+      // Tampilkan mode pertama pada klik ketiga
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      // initSlickFavorit();
-      // cardModeTigaFavorit();
       cardModeTigaFavorit();
-
       initSlickAgenDetail();
       cardModeTiga();
     }
