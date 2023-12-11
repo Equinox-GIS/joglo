@@ -2202,10 +2202,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let firstMode = document.querySelectorAll(".mode-card-pertama");
     let secondMode = document.querySelectorAll(".mode-card-kedua");
     let thirdMode = document.querySelectorAll(".mode-card-ketiga");
-    let fourthMode = document.querySelectorAll(".mode-card-keempat");
+    // let fourthMode = document.querySelectorAll(".mode-card-keempat");
 
     // Sembunyikan semua konten
-    [firstMode, secondMode, thirdMode, fourthMode].forEach((modeList) => {
+    [firstMode, secondMode, thirdMode].forEach((modeList) => {
       modeList.forEach((el) => {
         el.classList.add("hidden");
       });
@@ -2213,31 +2213,34 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // Tampilkan konten berdasarkan jumlah klik
     if (clickCount % 3 === 1) {
+      // Tampilkan mode kedua pada klik pertama
       secondMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      // initSlickFavorit();
-      // cardModeTigaFavorit();
       cardModeTigaFavorit();
-
       initSlickAgenDetail();
       cardModeTiga();
     } else if (clickCount % 3 === 2) {
-      firstMode.forEach((el) => {
-        el.classList.remove("hidden");
-      });
-    } else if (clickCount % 3 === 3) {
-      fourthMode.forEach((el) => {
-        el.classList.remove("hidden");
-      });
+      // Tampilkan mode ketiga pada klik kedua, hanya jika elemen yang diklik memiliki class 'profil-agent-klik'
+      if (element.classList.contains("profil-agent-klik")) {
+        thirdMode.forEach((el) => {
+          el.classList.remove("hidden");
+        });
+      } else {
+        // Jika tidak ada class 'profil-agent-klik', kembali ke mode pertama
+        firstMode.forEach((el) => {
+          el.classList.remove("hidden");
+        });
+        cardModeTigaFavorit();
+        initSlickAgenDetail();
+        cardModeTiga();
+      }
     } else {
+      // Tampilkan mode pertama pada klik ketiga
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      // initSlickFavorit();
-      // cardModeTigaFavorit();
       cardModeTigaFavorit();
-
       initSlickAgenDetail();
       cardModeTiga();
     }

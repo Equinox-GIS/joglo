@@ -1026,3 +1026,12 @@ body {
   border: 2px solid #f50;
   box-shadow: -407px 0 0 400px #f50;
 }
+
+/* Mapbox GL */
+
+.mapboxgl-popup-content {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
