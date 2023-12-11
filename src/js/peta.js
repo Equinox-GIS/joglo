@@ -1004,7 +1004,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                               </div>
                               <div class="flex flex-col w-full px-1 ml-0.5 pb-1">
                                 <!--  -->
-                                <div class="flex flex-row justify-between">
+                                <div class="flex flex-row justify-start">
                                   <div>
                                     <div class="inline-flex items-center">
                                       <h5 class="font-bold tracking-tight text-black">
@@ -1012,12 +1012,22 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                       </h5>
                                     </div>
                                   </div>
-                                  <!-- <div class="mr-1 mt-1">
-                                    <img
-                                      class="w-6 h-6 rounded-full"
-                                      src="${model}"
-                                    />
-                                  </div> -->
+
+                                  <div class="flex justify-between">
+                                    <div class="grid grid-cols-3 items-center gap-2 ml-2">
+                                      <div>
+                                        <img class="w-4 h-4 object-cover" src="${heartOn}" alt="">
+                                      </div>
+
+                                      <div>
+                                        <img class="w-3 h-3 object-cover" src="${share}" alt="">
+                                      </div>
+
+                                      <div>
+                                        <img class="w-4 h-4 object-cover" src="${badge3d}" alt="">
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                                 <!--  -->
                                 <div class="flex flex-col -mt-1 font-normal" style="margin-top: -0.3rem;">
@@ -1030,16 +1040,6 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                   <div class="text-xs text-gray-700" style="margin-top: -0.2rem;">
                                     Sunter, Tanjung Priok, keduacard
                                   </div>
-                                </div>
-                                <div class="flex flex-row justify-between w-full">
-                                  <div class="inline-flex">
-                                    <img class="w-5 h-5 object-cover mr-2" src="./src/images/heart-on.png" alt="">
-
-                                    <img class="w-3.5 h-3.5 object-cover mr-2 mt-0.5" src="./src/images/share.png" alt="">
-
-                                    <img class="w-5 h-5 object-cover ml-0.5 mr-2" src="./src/images/badge3d.svg" alt="">
-                                  </div>
-
                                 </div>
                                 <!--  -->
                               </div>
