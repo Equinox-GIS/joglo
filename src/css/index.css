@@ -426,6 +426,20 @@
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+
+/* listing profil */
+
+.slider-card-mode-ketiga {
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  /* border-top-right-radius: 0.5rem; */
+}
+
+.slider-card-mode-ketiga video,
+.slider-card-mode-ketiga img {
+  border-top-left-radius: 0.5rem;
+  /* border-top-right-radius: 0.5rem; */
+}
 /*  */
 
 #mapSoaraja,
