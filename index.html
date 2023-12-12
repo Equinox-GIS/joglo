@@ -126,24 +126,58 @@
             <div
               class="teks-berjalan-pencarian w-full text-sm text-gray-700 whitespace-nowrap"
             >
-              Rumah
-              <!-- murah dijual masa promo di wilayah Kebayoran Lama. Hanya
-              sampai dengan 1 November 2023. -->
+              <div class="inline-flex items-center">
+                <!--   Rumah murah dijual masa promo di wilayah Kebayoran Lama. Hanya
+              sampai dengan 1 -->
+                November 2023.
+                <span
+                  class="text-blue-500 cursor-pointer ml-1"
+                  data-active-tab="1"
+                  onclick="showCardInfoDetail(this)"
+                >
+                  Iklan rumah #1</span
+                >. Terbaru dari Agung Sedayu - rumah 2 lantai DP hanya Rp 100
+                juta. Iklan rumah
+              </div>
 
-              <span
-                class="text-blue-500 cursor-pointer"
-                data-active-tab="1"
-                onclick="showCardInfoDetail(this)"
-                >Iklan rumah #1</span
-              >. Terbaru dari Agung Sedayu - rumah 2 lantai DP hanya Rp 100
-              juta. Iklan rumah #2. Agent
-              <span
-                class="text-blue-500 cursor-pointer"
-                onclick="showCardAgent(this)"
-                >terpercaya</span
-              >
-              untuk mencari rumah siap huni dijakart selatan
+              <div class="inline-flex items-center">
+                #2
+                <div class="mx-1">
+                  <img
+                    class="w-6 h-6 rounded-full"
+                    src="./src/images/model/model11.jpg"
+                  />
+                </div>
+                Agen
+                <span
+                  class="text-blue-500 cursor-pointer mx-1"
+                  onclick="showCardAgent(this)"
+                >
+                  terpercaya</span
+                >untuk mencari rumah siap huni dijakarta selatan
+              </div>
+
+              <div class="inline-flex items-center text-blue-400">
+                #3
+                <div class="mx-1">
+                  <img
+                    class="w-6 h-6 rounded-full"
+                    src="./src/images/model/model11.jpg"
+                  />
+                </div>
+                Agen
+                <span
+                  class="text-blue-500 cursor-pointer mx-1"
+                  onclick="showCardAgent(this)"
+                >
+                  terpercaya</span
+                >untuk mencari rumah siap huni dijakarta selatan
+              </div>
+
+              <!--  -->
             </div>
+            <!--  -->
+            <!--  -->
           </div>
         </div>
         <!-- Search Agen -->
@@ -11193,27 +11227,7 @@
                             class="w-full col-span-2 bg-white rounded-lg h-full p-5 flex flex-col text-sm"
                           >
                             <!--  -->
-                            <!--  -->
-                            <div class="flex flex-row">
-                              <div class="flex flex-row mb-1 basis-7/12">
-                                <div class="w-full">Harga Propertissz</div>
-                                <div>
-                                  <input
-                                    type="text"
-                                    class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                    placeholder="300.000.000"
-                                    style="
-                                      border: none;
-                                      border-bottom: 1px solid;
-                                      text-align: right;
-                                    "
-                                    oninput="formatNumber(this)"
-                                    required=""
-                                  />
-                                </div>
-                              </div>
-                              <div class="flex basis-5/12"></div>
-                            </div>
+
                             <!--  -->
                             <div class="flex flex-row">
                               <div class="flex flex-row mb-1 basis-7/12">
@@ -21247,9 +21261,7 @@
                       <div class="relative flex flex-row">
                         <!-- Mode Card -->
                         <div class="flex items-center mr-2">
-                          <div
-                            class="w-9 h-9 flex items-center justify-center cursor-pointer hover:bg-slate-200 hover:rounded-lg"
-                          >
+                          <div class="w-9 h-9 flex items-center justify-center">
                             <img
                               onclick="ChangeModeCard(this)"
                               class="w-7 h-7 object-contain cursor-pointer hidden"
