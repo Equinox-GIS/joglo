@@ -1049,3 +1049,16 @@ body {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
+
+#DetailBeranda button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+#DetailAgenProfil button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+#DetailPasang button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
