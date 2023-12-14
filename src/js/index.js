@@ -2641,13 +2641,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tabButton.addEventListener("click", function () {
     setTimeout(function () {
-      if ($(".slider-pasang").hasClass("slick-initialized")) {
-        $(".slider-pasang").slick("setPosition");
+      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+        $(".slider-card-mode-ketiga").slick("setPosition");
       } else {
-        initSlick(".slider-pasang", getSliderDefaultOptions());
+        initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
       }
     }, 100);
   });
+
+  // tabButton.addEventListener("click", function () {
+  //   setTimeout(function () {
+  //     if ($(".slider-pasang").hasClass("slick-initialized")) {
+  //       $(".slider-pasang").slick("setPosition");
+  //     } else {
+  //       initSlick(".slider-pasang", getSliderDefaultOptions());
+  //     }
+  //   }, 100);
+  // });
+
 });
 
 function cardModeTiga() {
