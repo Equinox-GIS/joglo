@@ -658,49 +658,49 @@ var myRadarChartFavorit = new Chart(ctx1, {
   },
 });
 
-var ctx2 = document.getElementById("mySecondRadarChart").getContext("2d");
-var mySecondRadarChart = new Chart(ctx2, {
-  type: "radar",
-  data: {
-    labels: [
-      "Pengelolaan Limbah",
-      "Topografi",
-      "Kebencanaan",
-      "Keseterdian Air",
-      "Kualitas Vegetasi",
-    ],
-    datasets: [
-      {
-        data: [3, 5, 2, 4, 3],
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      r: {
-        beginAtZero: true,
-        max: 5,
-        stepSize: 1, // Menambahkan ini agar tidak ada angka desimal
-        ticks: {
-          precision: 0, // Menambahkan ini agar tidak ada angka desimal
-        },
-      },
-    },
-    plugins: {
-      legend: {
-        display: false, // Menyembunyikan legenda
-      },
-      tooltip: {
-        enabled: true, // Menyembunyikan tooltip
-      },
-    },
-  },
-});
+// var ctx2 = document.getElementById("mySecondRadarChart").getContext("2d");
+// var mySecondRadarChart = new Chart(ctx2, {
+//   type: "radar",
+//   data: {
+//     labels: [
+//       "Pengelolaan Limbah",
+//       "Topografi",
+//       "Kebencanaan",
+//       "Keseterdian Air",
+//       "Kualitas Vegetasi",
+//     ],
+//     datasets: [
+//       {
+//         data: [3, 5, 2, 4, 3],
+//         backgroundColor: "rgba(255, 99, 132, 0.2)",
+//         borderColor: "rgba(255, 99, 132, 1)",
+//         borderWidth: 1,
+//       },
+//     ],
+//   },
+//   options: {
+//     responsive: true,
+//     maintainAspectRatio: false,
+//     scales: {
+//       r: {
+//         beginAtZero: true,
+//         max: 5,
+//         stepSize: 1, // Menambahkan ini agar tidak ada angka desimal
+//         ticks: {
+//           precision: 0, // Menambahkan ini agar tidak ada angka desimal
+//         },
+//       },
+//     },
+//     plugins: {
+//       legend: {
+//         display: false, // Menyembunyikan legenda
+//       },
+//       tooltip: {
+//         enabled: true, // Menyembunyikan tooltip
+//       },
+//     },
+//   },
+// });
 
 var ctx2 = document
   .getElementById("mySecondRadarChartFavorit")
@@ -1187,8 +1187,7 @@ window.closeTabPasang = function () {
 let lastClickedPesan;
 
 window.showMessage = function (element) {
-
- // event.stopPropagation();
+  // event.stopPropagation();
 
   lastClickedPesan = element;
 
@@ -1258,8 +1257,7 @@ window.showCardPesantDetail = function () {
 
 let lastClickedAgent;
 window.showCardAgent = function (element) {
-
- event.stopPropagation();
+  event.stopPropagation();
 
   lastClickedAgent = element;
 
@@ -2658,7 +2656,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //     }
   //   }, 100);
   // });
-
 });
 
 function cardModeTiga() {
