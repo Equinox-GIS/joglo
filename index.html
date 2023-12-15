@@ -10675,14 +10675,29 @@
                         <div
                           class="w-full h-full grid justify-items-end items-center relative"
                         >
-                          <div
-                            onclick="closeTab()"
-                            class="menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500 flex justify-center items-center"
-                          >
+                          <div class="inline-flex">
                             <div
-                              class="w-5 h-5 flex justify-center items-center"
+                              onclick="closeTab()"
+                              class="menus w-9 h-9 mr-2 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500 flex justify-center items-center"
                             >
-                              <img src="./src/images/back.png" alt="" />
+                              <div
+                                class="w-5 h-5 flex justify-center items-center"
+                              >
+                                <img src="./src/images/back.png" alt="" />
+                              </div>
+                            </div>
+                            <div
+                              onclick="closeTab()"
+                              class="menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500 flex justify-center items-center"
+                            >
+                              <div
+                                class="w-5 h-5 flex justify-center items-center"
+                              >
+                                <img
+                                  src="./src/images/right-arrow.png"
+                                  alt=""
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -10715,6 +10730,7 @@
                             <img src="./src/images/back.png" alt="" />
                           </div>
                         </div>
+                        <!--  -->
                       </div>
                     </div>
                   </div>
@@ -10864,50 +10880,58 @@
                         aria-labelledby="detail-beranda-satu-tab"
                       >
                         <!--  -->
+                        <!-- new3 -->
+
                         <div class="w-full h-full grid grid-cols-1">
-                          <div class="w-full h-[64.5vh] mt-6">
-                            <!-- Slider -->
-                            <div class="slider-card-info-detail w-full h-full">
-                              <div>
-                                <div
-                                  class="video-wrapper video-wrapper-autoplay"
-                                >
-                                  <div class="h-[56vh] w-full bg-black">
-                                    <video
-                                      class="w-full h-full object-contain"
-                                      id="video-detail-beranda"
-                                      controls
-                                      src="./src/video/Video1.mp4"
-                                    ></video>
+                          <!--  -->
+                          <div class="w-full h-full bg-black mt-6">
+                            <div class="w-full h-[64.5vh] mt-6">
+                              <!-- Slider -->
+                              <div
+                                class="slider-card-info-detail w-full h-full"
+                              >
+                                <div>
+                                  <div
+                                    class="video-wrapper video-wrapper-autoplay"
+                                  >
+                                    <div class="h-[56vh] w-full bg-black">
+                                      <video
+                                        class="w-full h-full object-contain"
+                                        id="video-detail-beranda"
+                                        controls
+                                        src="./src/video/Video1.mp4"
+                                      ></video>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
 
-                              <div class="relative">
-                                <div class="video-wrapper">
-                                  <div class="w-full !h-[56vh] bg-black">
-                                    <img
-                                      class="w-full h-full object-contain"
-                                      src="./src/images/Hunian/Rmh2/rumahb1.jpg"
-                                      alt=""
-                                    />
+                                <div class="relative">
+                                  <div class="video-wrapper">
+                                    <div class="w-full !h-[56vh] bg-black">
+                                      <img
+                                        class="w-full h-full object-contain"
+                                        src="./src/images/Hunian/Rmh2/rumahb1.jpg"
+                                        alt=""
+                                      />
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
 
-                              <div class="relative">
-                                <div class="video-wrapper">
-                                  <div class="w-full !h-[56vh] bg-black">
-                                    <img
-                                      class="w-full h-full object-contain"
-                                      src="./src/images/Hunian/Rmh2/rumahb2.jpg"
-                                      alt=""
-                                    />
+                                <div class="relative">
+                                  <div class="video-wrapper">
+                                    <div class="w-full !h-[56vh] bg-black">
+                                      <img
+                                        class="w-full h-full object-contain"
+                                        src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                        alt=""
+                                      />
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
+                          <!--  -->
                         </div>
                       </div>
 
@@ -11387,273 +11411,123 @@
                         aria-labelledby="detail-beranda-lima-tab"
                       >
                         <!-- neww -->
-                        <!-- iini -->
 
                         <!--  -->
-                        <div class="h-[60vh] overflow-y-auto hide-scrollbar">
+                        <div class="h-[60.5vh] overflow-y-auto hide-scrollbar">
                           <div class="grid grid-cols-2 gap-2">
                             <!-- Card Beranda 1 -->
                             <div
-                              class="w-full bg-white rounded-lg h-[60vh] p-5 text-sm"
+                              class="w-full bg-white rounded-lg h-[76vh] p-5 text-sm"
                             >
                               <!--  -->
-                              <div class="flex flex-row">
-                                <div
-                                  class="flex flex-row mb-1 basis-12/12 w-full"
-                                >
-                                  <div class="w-full">Luas Tanah (m²)</div>
-                                  <div>
-                                    <input
-                                      type="text"
-                                      class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                      placeholder="120"
-                                      style="
-                                        border: none;
-                                        border-bottom: 1px solid;
-                                        text-align: right;
-                                      "
-                                      oninput="formatNumber(this)"
-                                      required=""
-                                    />
-                                  </div>
+                              <div class="w-full h-full">
+                                <!--  -->
+                                <div class="w-full text-base font-bold">
+                                  Livability Indexsss
                                 </div>
-                              </div>
 
-                              <!--  -->
-                              <div class="flex flex-row">
                                 <div
-                                  class="flex flex-row mb-1 basis-12/12 w-full"
+                                  class="h-[30vh] flex items-center justify-center"
                                 >
-                                  <div class="w-full">
-                                    Perkiraan NJOP (Rp/m²)
-                                  </div>
-                                  <div>
-                                    <input
-                                      type="text"
-                                      class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                      placeholder="2.000.000"
-                                      style="
-                                        border: none;
-                                        border-bottom: 1px solid;
-                                        text-align: right;
-                                      "
-                                      oninput="formatNumber(this)"
-                                      required=""
-                                    />
-                                  </div>
+                                  <div class="radarChart mt-6 -ml-6"></div>
                                 </div>
-                              </div>
 
-                              <!--  -->
-                              <div class="flex flex-row">
-                                <div
-                                  class="flex flex-row mb-1 basis-12/12 w-full"
-                                >
-                                  <div class="w-full">Angka Pengali NJOP</div>
-                                  <div>
-                                    <input
-                                      type="text"
-                                      class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                      placeholder="2.5"
-                                      style="
-                                        border: none;
-                                        border-bottom: 1px solid;
-                                        text-align: right;
-                                      "
-                                      oninput="formatNumber(this)"
-                                      required=""
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <!--  -->
-                              <!--  -->
-                              <div class="flex flex-row mb-4">
-                                <div
-                                  class="flex flex-row mb-1 basis-12/12 w-full"
-                                >
-                                  <div class="w-full font-semibold">
-                                    Nilai Tanah (Rp)
-                                  </div>
-                                  <div>
-                                    <input
-                                      type="text"
-                                      class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                      placeholder="600.000"
-                                      style="
-                                        border: none;
-                                        border-bottom: 1px solid;
-                                        text-align: right;
-                                      "
-                                      oninput="formatNumber(this)"
-                                      required=""
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <!--  -->
+                                <!--  -->
 
-                              <!--  -->
-                              <div class="flex flex-row">
                                 <div
-                                  class="flex flex-row mb-1 basis-12/12 w-full"
+                                  class="flex flex-row text-2xl my-1"
+                                  style="padding: 0.5rem 0 0"
                                 >
-                                  <div class="w-full">Luas Bangunan (m²)</div>
-                                  <div>
-                                    <input
-                                      type="text"
-                                      class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                      placeholder="80"
-                                      style="
-                                        border: none;
-                                        border-bottom: 1px solid;
-                                        text-align: right;
-                                      "
-                                      oninput="formatNumber(this)"
-                                      required=""
-                                    />
-                                  </div>
+                                  <div class="font-bold">4.7</div>
+                                  <div class="">&nbsp;/&nbsp;</div>
+                                  <div class="">5</div>
                                 </div>
-                              </div>
-                              <!--  -->
 
-                              <!--  -->
-                              <div class="flex flex-row">
                                 <div
-                                  class="flex flex-row mb-1 basis-12/12 w-full"
+                                  style="padding: 0 0 0.5rem 0"
+                                  class="flex flex-row text-sm my-1"
                                 >
-                                  <div class="w-full">
-                                    Harga Bangunan (Rp/m²)
-                                  </div>
-                                  <div>
-                                    <input
-                                      type="text"
-                                      class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                      placeholder="3.000.0000"
-                                      style="
-                                        border: none;
-                                        border-bottom: 1px solid;
-                                        text-align: right;
-                                      "
-                                      oninput="formatNumber(this)"
-                                      required=""
-                                    />
-                                  </div>
+                                  <div class="font-bold">Kategori Tinggi</div>
                                 </div>
-                              </div>
-                              <!--  -->
 
-                              <!--  -->
-                              <div class="flex flex-row">
-                                <div
-                                  class="flex flex-row mb-1 basis-12/12 w-full"
-                                >
-                                  <div class="w-full">
-                                    Usia Bangunan (tahun)
-                                  </div>
-                                  <div>
-                                    <input
-                                      type="text"
-                                      class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                      placeholder="5"
-                                      style="
-                                        border: none;
-                                        border-bottom: 1px solid;
-                                        text-align: right;
-                                      "
-                                      oninput="formatNumber(this)"
-                                      required=""
-                                    />
+                                <div class="w-full h-full">
+                                  <div class="flex flex-col text-sm mb-4">
+                                    <div class="">
+                                      1. Tingkat Konektivitas Pejalan Kaki
+                                      Sedang
+                                    </div>
+                                    <div class="">
+                                      2. Ruang Terbuka dan Publik Terjangkau
+                                      Sangat Baik
+                                    </div>
+                                    <div class="">
+                                      3. Fasilitas Komunitas Terjangkau Sangat
+                                      Baik
+                                    </div>
+                                    <div class="">
+                                      4. Aktivitas Budaya Perkotaan Sedang
+                                    </div>
+                                    <div class="">
+                                      5. Tempat untuk Bekerja Tersedia Sangat
+                                      Baik
+                                    </div>
+                                    <div class="">
+                                      6. Pelayanan Kesehatan Terjangkau Sangat
+                                      Baik
+                                    </div>
+                                    <div class="">
+                                      7. Fasilitas Pendidikan Kurang Terjangkau
+                                    </div>
+                                    <div class="">
+                                      8. Terjangkau sangat dekat dengan
+                                      transportasi publik
+                                    </div>
+                                    <div class="">
+                                      9. Tingkat Campuran Guna Lahan Sangat
+                                      Rendah
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <!--  -->
 
-                              <!--  -->
-                              <div class="flex flex-row">
-                                <div
-                                  class="flex flex-row mb-1 basis-12/12 w-full"
-                                >
-                                  <div class="w-full">
-                                    Depresiasi Bangunan (%)
-                                  </div>
-                                  <div>
-                                    <input
-                                      type="text"
-                                      class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                      placeholder="10"
-                                      style="
-                                        border: none;
-                                        border-bottom: 1px solid;
-                                        text-align: right;
-                                      "
-                                      oninput="formatNumber(this)"
-                                      required=""
-                                    />
-                                  </div>
-                                </div>
+                                <!--  -->
+                                <!--  -->
                               </div>
-                              <!--  -->
-
-                              <!--  -->
-                              <div class="flex flex-row mb-4">
-                                <div
-                                  class="flex flex-row mb-1 basis-12/12 w-full"
-                                >
-                                  <div class="w-full font-semibold">
-                                    Nilai Bangunan (Rp)
-                                  </div>
-                                  <div>
-                                    <input
-                                      type="text"
-                                      class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                      placeholder="216.000.000"
-                                      style="
-                                        border: none;
-                                        border-bottom: 1px solid;
-                                        text-align: right;
-                                      "
-                                      oninput="formatNumber(this)"
-                                      required=""
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <!--  -->
-
-                              <!--  -->
-                              <div class="flex flex-row">
-                                <div
-                                  class="flex flex-row mb-1 basis-12/12 w-full"
-                                >
-                                  <div class="w-full font-semibold">
-                                    Perkiraan Nilai Aset (Rp)
-                                  </div>
-                                  <div>
-                                    <input
-                                      type="text"
-                                      class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                      placeholder="816.000.0000"
-                                      style="
-                                        border: none;
-                                        border-bottom: 1px solid;
-                                        text-align: right;
-                                      "
-                                      oninput="formatNumber(this)"
-                                      required=""
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <!--  -->
 
                               <!--  -->
                             </div>
                             <!-- Card Beranda 1 -->
                             <div
-                              class="w-full bg-white rounded-lg h-[60vh] p-5 flex flex-col text-sm"
+                              class="w-full bg-white rounded-lg h-[76vh] p-5 flex flex-col text-sm"
                             >
                               <!-- bagian kanan -->
+
+                              <div class="w-full h-full">
+                                <div
+                                  class="w-full text-base text-center font-bold mb-3"
+                                >
+                                  Urban Indekssss
+                                </div>
+
+                                <div
+                                  class="w-full text-sm text-center font-bold mb-3"
+                                >
+                                  Kategori Urban Core - Skyscraper
+                                </div>
+
+                                <div class="flex flex-col text-sm mb-4">
+                                  <div class="">
+                                    1. Urban Index (UI) Non-Permukiman Bangunan
+                                    Diatas 25 Lantai
+                                  </div>
+                                  <div class="">
+                                    2. Sangat Dekat Terhadap Jalan Arteri
+                                  </div>
+                                  <div class="">3. Dekat Terhadap Mall</div>
+                                  <div class="">
+                                    4. Dekat Terhadap Titik Transit
+                                  </div>
+                                </div>
+                              </div>
 
                               <!--  -->
                             </div>
@@ -11661,279 +11535,6 @@
                         </div>
 
                         <!--  -->
-                        <!-- iini -->
-
-                        <div class="grid grid-cols-2 gap-2 mb-2 hidden">
-                          <!-- Card Beranda 1 -->
-                          <div
-                            class="col-span-2 w-full bg-white rounded-lg py-5 px-5 py-3 flex flex-col text-sm"
-                          >
-                            <div class="flex flex-col">
-                              <div
-                                class="grid grid-cols-1 h-[56vh] overflow-y-auto hide-scrollbar text-sm text-gray-700"
-                              >
-                                <div
-                                  class="col-span-2 w-full flex items-center justify-center"
-                                >
-                                  <div
-                                    class="w-full h-full grid grid-cols-2 items-center"
-                                  >
-                                    <!--  -->
-                                    <div class="w-full h-full">
-                                      <!--  -->
-                                      <div
-                                        class="h-[30vh] flex items-center justify-center"
-                                      >
-                                        <div
-                                          class="radarChart mt-6 -ml-6"
-                                        ></div>
-                                      </div>
-                                      <!--  -->
-                                    </div>
-                                    <div class="w-full h-full">
-                                      <div class="w-full text-base font-bold">
-                                        Livability Indexss
-                                      </div>
-
-                                      <div
-                                        class="flex flex-row text-2xl my-1"
-                                        style="padding: 0.5rem 0 0.5rem 0"
-                                      >
-                                        <div class="font-bold">4.7</div>
-                                        <div class="">&nbsp;/&nbsp;</div>
-                                        <div class="">5</div>
-                                      </div>
-
-                                      <div class="flex flex-col text-sm mb-4">
-                                        <div class="">
-                                          1. Tingkat Konektivitas Pejalan Kaki
-                                          Sedang
-                                        </div>
-                                        <div class="">
-                                          2. Ruang Terbuka dan Publik Terjangkau
-                                          Sangat Baik
-                                        </div>
-                                        <div class="">
-                                          3. Fasilitas Komunitas Terjangkau
-                                          Sangat Baik
-                                        </div>
-                                        <div class="">
-                                          4. Aktivitas Budaya Perkotaan Sedang
-                                        </div>
-                                        <div class="">
-                                          5. Tempat untuk Bekerja Tersedia
-                                          Sangat Baik
-                                        </div>
-                                        <div class="">
-                                          6. Pelayanan Kesehatan Terjangkau
-                                          Sangat Baik
-                                        </div>
-                                        <div class="">
-                                          7. Fasilitas Pendidikan Kurang
-                                          Terjangkau
-                                        </div>
-                                        <div class="">
-                                          8. Terjangkau sangat dekat dengan
-                                          transportasi publik
-                                        </div>
-                                        <div class="">
-                                          9. Tingkat Campuran Guna Lahan Sangat
-                                          Rendah
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!--  -->
-                                    <div class="w-full h-full">
-                                      <!--  -->
-                                      <div
-                                        class="h-[30vh] flex items-center justify-center"
-                                      ></div>
-                                      <!--  -->
-                                    </div>
-                                    <div class="w-full h-full">
-                                      <div
-                                        class="w-full text-base font-bold mb-3"
-                                      >
-                                        Urban Indeks
-                                      </div>
-
-                                      <div class="flex flex-col text-sm mb-4">
-                                        <div class="">
-                                          1. Urban Index (UI) Non-Permukiman
-                                          Bangunan Diatas 25 Lantai
-                                        </div>
-                                        <div class="">
-                                          2. Sangat Dekat Terhadap Jalan Arteri
-                                        </div>
-                                        <div class="">
-                                          3. Dekat Terhadap Mall
-                                        </div>
-                                        <div class="">
-                                          4. Dekat Terhadap Titik Transit
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!--  -->
-                                  </div>
-                                  <!-- Tag penutup untuk div grid utama -->
-                                </div>
-                              </div>
-
-                              <!--  -->
-                              <!-- Deskripsi hidden Sementara -->
-                              <div class="grid grid-cols-1 gap-y-1 hidden">
-                                <div class="grid grid-cols-1 text-sm">
-                                  <div class="grid grid-cols-1 gap-4">
-                                    <div></div>
-                                    <div class="text-gray-700">
-                                      <p>
-                                        Kami mempersembahkan sebuah hunian
-                                        eksklusif yang siap untuk Anda tempati.
-                                        Kenyamanan dan kemudahan akses menjadi
-                                        keunggulan utama rumah istimewa ini.
-                                        Berlokasi hanya 10 menit dari pintu tol
-                                        dalam kota, Anda bisa menjangkau
-                                        berbagai destinasi favorit tanpa harus
-                                        menghabiskan banyak waktu.
-                                      </p>
-
-                                      <div class="flex flex-col mt-2">
-                                        <p>
-                                          Akses mudah ke berbagai pusat
-                                          perbelanjaan, fasilitas pendidikan,
-                                          kesehatan, dan rekreasi.Bangunan
-                                          dengan desain modern dan penataan
-                                          interior yang elegan.Material bangunan
-                                          berkualitas tinggi yang menjamin
-                                          kekuatan dan daya tahan rumah.Berada
-                                          di lingkungan yang tenang dan hijau,
-                                          cocok untuk Anda yang mencari
-                                          kedamaian.
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <!-- Detail -->
-                              <div class="grid grid-cols-1 gap-y-1 mt-6 hidden">
-                                <div class="w-full text-md font-bold mb-2">
-                                  Livability Index
-                                </div>
-
-                                <div class="flex flex-col text-sm mt-1">
-                                  <div class="flex flex-col mb-4">
-                                    <div>
-                                      1. Tingkat Konektivitas Pejalan Kaki
-                                      Rendah
-                                    </div>
-                                    <div>
-                                      2. Ruang Terbuka dan Publik Terjangkau
-                                      Sangat Baik
-                                    </div>
-                                    <div>
-                                      3. Fasilitas Komunitas Terjangkau Sangat
-                                      Baik
-                                    </div>
-                                    <div>
-                                      4. Aktivitas Budaya Perkotaan Sedang
-                                    </div>
-                                    <div>
-                                      5. Tempat untuk Bekerja Kurang Tersedia
-                                    </div>
-                                  </div>
-                                  <div class="flex flex-col mb-4">
-                                    <div>
-                                      1. Tingkat Konektivitas Pejalan Kaki
-                                      Rendah
-                                    </div>
-                                    <div>
-                                      2. Ruang Terbuka dan Publik Terjangkau
-                                      Sangat Baik
-                                    </div>
-                                    <div>
-                                      3. Fasilitas Komunitas Terjangkau Sangat
-                                      Baik
-                                    </div>
-                                    <div>
-                                      4. Aktivitas Budaya Perkotaan Sedang
-                                    </div>
-                                    <div>
-                                      5. Tempat untuk Bekerja Kurang Tersedia
-                                    </div>
-                                  </div>
-                                  <div class="flex flex-col mb-4">
-                                    <div>
-                                      1. Tingkat Konektivitas Pejalan Kaki
-                                      Rendah
-                                    </div>
-                                    <div>
-                                      2. Ruang Terbuka dan Publik Terjangkau
-                                      Sangat Baik
-                                    </div>
-                                    <div>
-                                      3. Fasilitas Komunitas Terjangkau Sangat
-                                      Baik
-                                    </div>
-                                    <div>
-                                      4. Aktivitas Budaya Perkotaan Sedang
-                                    </div>
-                                    <div>
-                                      5. Tempat untuk Bekerja Kurang Tersedia
-                                    </div>
-                                  </div>
-                                  <div class="flex flex-col mb-4">
-                                    <div>
-                                      1. Tingkat Konektivitas Pejalan Kaki
-                                      Rendah
-                                    </div>
-                                    <div>
-                                      2. Ruang Terbuka dan Publik Terjangkau
-                                      Sangat Baik
-                                    </div>
-                                    <div>
-                                      3. Fasilitas Komunitas Terjangkau Sangat
-                                      Baik
-                                    </div>
-                                    <div>
-                                      4. Aktivitas Budaya Perkotaan Sedang
-                                    </div>
-                                    <div>
-                                      5. Tempat untuk Bekerja Kurang Tersedia
-                                    </div>
-                                  </div>
-                                  <div class="flex flex-col mb-4">
-                                    <div>
-                                      1. Tingkat Konektivitas Pejalan Kaki
-                                      Rendah
-                                    </div>
-                                    <div>
-                                      2. Ruang Terbuka dan Publik Terjangkau
-                                      Sangat Baik
-                                    </div>
-                                    <div>
-                                      3. Fasilitas Komunitas Terjangkau Sangat
-                                      Baik
-                                    </div>
-                                    <div>
-                                      4. Aktivitas Budaya Perkotaan Sedang
-                                    </div>
-                                    <div>
-                                      5. Tempat untuk Bekerja Kurang Tersedia
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div
-                                class="grid grid-cols-1 gap-y-1 mt-8 hidden"
-                              ></div>
-                            </div>
-
-                            <!--  -->
-                          </div>
-                        </div>
 
                         <!-- Tab Menu -->
                         <div
@@ -13801,10 +13402,9 @@
                                       <div
                                         style="
                                           border-bottom: 1px solid;
-                                          margin-bottom: 4px;
+                                          margin-top: 0.5vh;
                                         "
                                       ></div>
-                                      <!-- mb-1 biasanya sekitar 4px -->
                                     </div>
                                   </div>
                                   <!--  -->
@@ -14421,7 +14021,7 @@
                                   class="flex flex-row mb-1 basis-12/12 w-full"
                                 >
                                   <div class="w-full font-semibold">
-                                    Perkiraan Nilai Aset (Rp)
+                                    Perkiraan Nilai Aset (Rp)ss
                                   </div>
                                   <div>
                                     <input
@@ -14436,6 +14036,12 @@
                                       oninput="formatNumber(this)"
                                       required=""
                                     />
+                                    <div
+                                      style="
+                                        border-bottom: 1px solid;
+                                        margin-top: 0.5vh;
+                                      "
+                                    ></div>
                                   </div>
                                 </div>
                               </div>
@@ -32257,7 +31863,7 @@
                                         style="user-select: none"
                                       >
                                         <div
-                                          class="flex flex-row justify-between border border-red-500"
+                                          class="flex flex-row justify-between"
                                         >
                                           <div>
                                             <a href="#">
@@ -32339,7 +31945,7 @@
                                     <!-- Mode Ke Ketiga -->
 
                                     <div
-                                      class="grid grid-cols-3 gap-2 mode-card-kedua bg-white cursor-pointer border border-gray-200 rounded-lg shadow border border-red-500"
+                                      class="grid grid-cols-3 gap-2 mode-card-kedua bg-white cursor-pointer border border-gray-200 rounded-lg shadow"
                                     >
                                       <!--  Cards 1 -->
                                       <div
@@ -32388,13 +31994,6 @@
                                             </div>
                                           </div>
                                         </div>
-                                        <!--  -->
-                                      </div>
-                                      <!--  -->
-                                      <div
-                                        class="col-span-2 w-full grid grid-cols-2 gap-2 pt-1"
-                                      >
-                                        <!--  -->
                                         <div class="flex flex-col p-1 w-full">
                                           <!--  -->
                                           <div
@@ -32407,14 +32006,14 @@
                                                 <h5
                                                   class="text-md font-bold tracking-tight text-black"
                                                 >
-                                                  Rp 111.300.000.000
+                                                  Rp 11.300.000.000
                                                 </h5>
                                               </div>
                                             </div>
                                           </div>
                                           <!--  -->
                                           <div
-                                            class="flex flex-col mb-2 font-normal"
+                                            class="flex flex-col font-normal"
                                           >
                                             <div
                                               class="flex items-center text-[11px] text-gray-700"
@@ -32433,49 +32032,14 @@
                                             </div>
                                           </div>
                                           <!--  -->
-                                          <div
-                                            class="grid grid-cols-3 justify-center items-center w-full text-sm"
-                                          >
-                                            <!-- Item 1 -->
-                                            <div
-                                              class="flex justify-start items-center"
-                                            >
-                                              <img
-                                                class="w-5 h-5 mr-2"
-                                                src="/src/images/show.png"
-                                                alt=""
-                                              />
-                                              <div>3256</div>
-                                            </div>
-
-                                            <!-- Item 2 -->
-                                            <div
-                                              class="flex justify-start items-center"
-                                            >
-                                              <img
-                                                class="w-4 h-4 mr-2"
-                                                src="/src/images/heart-off.png"
-                                                alt=""
-                                              />
-                                              <div>3256</div>
-                                            </div>
-
-                                            <!-- Item 3 -->
-                                            <div
-                                              class="flex justify-start items-center"
-                                            >
-                                              <img
-                                                class="w-4 h-4 mr-2"
-                                                src="/src/images/up-arrow-listing2.png"
-                                                alt=""
-                                              />
-                                              <div>3256</div>
-                                            </div>
-                                          </div>
                                         </div>
-                                        <!--  -->
+                                      </div>
+                                      <!--  -->
+                                      <div
+                                        class="col-span-2 w-full flex flex-row pt-1"
+                                      >
                                         <div
-                                          class="w-96 flex flex-col text-sm mt-2 ml-2 hidden"
+                                          class="w-96 flex flex-col text-sm mt-2 ml-2"
                                         >
                                           <div class="flex justify-between">
                                             <div
