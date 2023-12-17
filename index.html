@@ -10678,7 +10678,7 @@
                           <div class="inline-flex">
                             <div
                               onclick="closeTab()"
-                              class="menus w-9 h-9 mr-2 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500 flex justify-center items-center"
+                              class="menus w-9 h-9 mr-1 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500 flex justify-center items-center"
                             >
                               <div
                                 class="w-5 h-5 flex justify-center items-center"
@@ -13162,11 +13162,11 @@
                               <div class="grid grid-cols-2 gap-2">
                                 <!-- Card Beranda 1 -->
                                 <div
-                                  class="w-full bg-white rounded-lg h-[60vh] p-5 text-sm"
+                                  class="w-full bg-white rounded-lg h-[60vh] p-5"
                                 >
                                   <!--  -->
-                                  <div class="flex flex-row mb-1">
-                                    <div class="w-full">Harga Properti</div>
+                                  <!--   <div class="flex flex-row mb-1">
+                                    <div class="w-full text-sm">Harga Properti</div>
                                     <div>
                                       <input
                                         type="text"
@@ -13181,17 +13181,41 @@
                                         required=""
                                       />
                                     </div>
+                                  </div> -->
+
+                                  <div class="flex flex-row mb-2">
+                                    <div class="w-full text-sm">
+                                      Harga Properti
+                                    </div>
+                                    <div>
+                                      <input
+                                        type="text"
+                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                        placeholder="300.000.000"
+                                        style="
+                                          border: none;
+                                          border-bottom: 1px solid;
+                                          text-align: right;
+                                        "
+                                        oninput="formatNumber(this)"
+                                        required=""
+                                      />
+                                    </div>
                                   </div>
+
                                   <!--  -->
 
                                   <!--  -->
                                   <div class="mb-7">
-                                    <div class="flex flex-row mb-3">
-                                      <div class="w-full">Uang Muka</div>
+                                    <!--  -->
+                                    <div class="flex flex-row mb-2">
+                                      <div class="w-full text-sm">
+                                        Uang Muka
+                                      </div>
                                       <div>
                                         <input
                                           type="text"
-                                          class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
                                           placeholder="30.000.000"
                                           style="
                                             border: none;
@@ -13203,6 +13227,8 @@
                                         />
                                       </div>
                                     </div>
+
+                                    <!--  -->
                                     <div class="w-full my-1">
                                       <input
                                         type="range"
@@ -13227,7 +13253,9 @@
                                   <!--  -->
                                   <div class="mb-7">
                                     <div class="flex flex-row mb-3">
-                                      <div class="w-full">Suku Bunga (%)</div>
+                                      <div class="w-full text-sm">
+                                        Suku Bunga (%)
+                                      </div>
                                       <div>
                                         <input
                                           type="text"
@@ -13312,13 +13340,13 @@
                                 >
                                   <!-- new1 -->
                                   <div class="flex flex-row mb-2">
-                                    <div class="w-full font-semibold">
+                                    <div class="w-full font-semibold text-sm">
                                       Angsuran (estimasi suku bunga 14%)
                                     </div>
                                   </div>
                                   <!--  -->
                                   <div class="flex flex-row mb-2">
-                                    <div class="w-full">
+                                    <div class="w-full text-sm">
                                       Bunga Pinjaman (Rp)
                                     </div>
                                     <div>
@@ -13340,13 +13368,13 @@
                                   <!--  -->
                                   <!-- new1 -->
                                   <div class="flex flex-row mb-2 mt-2">
-                                    <div class="w-full font-semibold">
+                                    <div class="w-full font-semibold text-sm">
                                       Estimasi Pembayaran Pertama
                                     </div>
                                   </div>
                                   <!--  -->
                                   <div class="flex flex-row mb-2">
-                                    <div class="w-full">Uang Muka</div>
+                                    <div class="w-full text-sm">Uang Muka</div>
                                     <div>
                                       <input
                                         type="text"
@@ -13364,7 +13392,9 @@
                                   </div>
 
                                   <div class="flex flex-row mb-2">
-                                    <div class="w-full">Angsuran Pertama</div>
+                                    <div class="w-full text-sm">
+                                      Angsuran Pertama
+                                    </div>
                                     <div>
                                       <input
                                         type="text"
@@ -13382,7 +13412,7 @@
                                   </div>
 
                                   <div class="flex flex-row mb-2">
-                                    <div class="w-full">
+                                    <div class="w-full text-sm">
                                       Estimasi Biaya Lainnya
                                     </div>
                                     <div>
@@ -13402,7 +13432,7 @@
                                   </div>
 
                                   <div class="flex flex-row mb-2">
-                                    <div class="w-full">Total</div>
+                                    <div class="w-full text-sm">Total</div>
                                     <div>
                                       <input
                                         type="text"
@@ -13427,13 +13457,15 @@
                                   <!--  -->
                                   <!-- new1 -->
                                   <div class="flex flex-row mb-2 mt-2">
-                                    <div class="w-full font-semibold">
+                                    <div class="w-full font-semibold text-sm">
                                       Detil Pinjaman
                                     </div>
                                   </div>
                                   <!--  -->
                                   <div class="flex flex-row mb-2">
-                                    <div class="w-full">Pinjaman Pokok</div>
+                                    <div class="w-full text-sm">
+                                      Pinjaman Pokok
+                                    </div>
                                     <div>
                                       <input
                                         type="text"
@@ -13812,7 +13844,9 @@
                             >
                               <!-- new1 -->
                               <div class="flex flex-row mb-2">
-                                <div class="w-full">Luas Tanahs (m²)22</div>
+                                <div class="w-full text-sm">
+                                  Luas Tanahs (m²)22
+                                </div>
                                 <div>
                                   <input
                                     type="text"
@@ -13831,7 +13865,9 @@
 
                               <!-- new1 -->
                               <div class="flex flex-row mb-2">
-                                <div class="w-full">Perkiraan NJOP (Rp/m²)</div>
+                                <div class="w-full text-sm">
+                                  Perkiraan NJOP (Rp/m²)
+                                </div>
                                 <div>
                                   <input
                                     type="text"
@@ -13850,7 +13886,9 @@
 
                               <!-- new1 -->
                               <div class="flex flex-row mb-2">
-                                <div class="w-full">Angka Pengali NJOP</div>
+                                <div class="w-full text-sm">
+                                  Angka Pengali NJOP
+                                </div>
                                 <div>
                                   <input
                                     type="text"
@@ -13869,7 +13907,7 @@
 
                               <!-- new1 -->
                               <div class="flex flex-row mb-5">
-                                <div class="w-full font-semibold">
+                                <div class="w-full text-sm font-semibold">
                                   Nilai Tanah (Rp)
                                 </div>
                                 <div>
@@ -13890,7 +13928,9 @@
 
                               <!-- new1 -->
                               <div class="flex flex-row mb-2">
-                                <div class="w-full">Luas Bangunan (m²)</div>
+                                <div class="w-full text-sm">
+                                  Luas Bangunan (m²)
+                                </div>
                                 <div>
                                   <input
                                     type="text"
@@ -13909,7 +13949,9 @@
 
                               <!-- new1 -->
                               <div class="flex flex-row mb-2">
-                                <div class="w-full">Harga Bangunan (Rp/m²)</div>
+                                <div class="w-full text-sm">
+                                  Harga Bangunan (Rp/m²)
+                                </div>
                                 <div>
                                   <input
                                     type="text"
@@ -13928,7 +13970,9 @@
 
                               <!-- new1 -->
                               <div class="flex flex-row mb-2">
-                                <div class="w-full">Usia Bangunan (tahun)</div>
+                                <div class="w-full text-sm">
+                                  Usia Bangunan (tahun)
+                                </div>
                                 <div>
                                   <input
                                     type="text"
@@ -13947,7 +13991,7 @@
 
                               <!-- new1 -->
                               <div class="flex flex-row mb-2">
-                                <div class="w-full">
+                                <div class="w-full text-sm">
                                   Depresiasi Bangunan (%)
                                 </div>
                                 <div>
@@ -13968,7 +14012,9 @@
 
                               <!-- new1 -->
                               <div class="flex flex-row mb-2">
-                                <div class="w-full">Luas Tanah (m²)22</div>
+                                <div class="w-full text-sm">
+                                  Luas Tanah (m²)22
+                                </div>
                                 <div>
                                   <input
                                     type="text"
@@ -13987,7 +14033,7 @@
 
                               <!-- new1 -->
                               <div class="flex flex-row mb-5">
-                                <div class="w-full font-semibold">
+                                <div class="w-full text-sm font-semibold">
                                   Nilai Bangunan (Rp)
                                 </div>
                                 <div>
@@ -14008,7 +14054,7 @@
 
                               <!-- new1 -->
                               <div class="flex flex-row mb-2">
-                                <div class="w-full">
+                                <div class="w-full text-sm font-semibold">
                                   Perkiraan Nilai Aset (Rp)
                                 </div>
                                 <div>
