@@ -1525,6 +1525,40 @@
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
+            <!-- Menu 8 Video -->
+            <div
+              class="flex col justify-center py-1"
+              data-tooltip-target="menu-wishes"
+              data-tooltip-placement="right"
+            >
+              <div
+                id="MenuDelapanTab"
+                data-tabs-target="#MenuDelapanContent"
+                type="button"
+                role="tab"
+                aria-controls="MenuDelapanContent"
+                aria-selected="false"
+                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+              >
+                <div class="w-7 h-7 flex justify-center items-center relative">
+                  <img
+                    class="menu-icon"
+                    data-menu="0"
+                    src="./src/images/play.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              id="menu-wishes"
+              role="tooltip"
+              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+            >
+              Video
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
             <!-- Menu 2 Pasang Iklan -->
             <div
               class="flex col justify-center py-2"
@@ -1664,40 +1698,6 @@
               class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
             >
               Pesan
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu 8 Wishes -->
-            <div
-              class="flex col justify-center py-1 hidden"
-              data-tooltip-target="menu-wishes"
-              data-tooltip-placement="right"
-            >
-              <div
-                id="MenuDelapanTab"
-                data-tabs-target="#MenuDelapanContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuDelapanContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
-              >
-                <div class="w-7 h-7 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="0"
-                    src="./src/images/star6.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              id="menu-wishes"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Wishes
               <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
 
@@ -11077,7 +11077,7 @@
                                   <!-- Judul -->
                                   <div class="flex flex-row mb-2">
                                     <div
-                                      class="w-full basis-5/5 font-semibold text-base"
+                                      class="w-full basis-5/5 font-black text-xl"
                                     >
                                       Lokasi
                                     </div>
@@ -11085,10 +11085,12 @@
 
                                   <!--  -->
                                   <div class="flex flex-row mb-2">
-                                    <div class="w-full basis-1/5 font-semibold">
+                                    <div
+                                      class="w-full basis-1/5 font-semibold text-sm"
+                                    >
                                       Koordinattt
                                     </div>
-                                    <div class="w-full basis-4/5">
+                                    <div class="w-full basis-4/5 text-sm">
                                       <a
                                         href="https://www.google.com/maps/search/-6.167524106481267,106.83083574853504"
                                         target="blank_"
