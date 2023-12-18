@@ -506,6 +506,10 @@
   bottom: 0px !important;
 }
 
+#detail-beranda-satu, .slick-dots {
+  bottom: 10px !important;
+}
+
 .slick-dots li {
   margin: 0 -5px !important;
 }
