@@ -1968,15 +1968,20 @@ document.addEventListener("DOMContentLoaded", function () {
         disable();
         break;
       case "MenuDelapanTab":
-        // stopAndResetVideo();
+        // console.log("MenuTigaTab");
         closeTab();
         closeTabDisukai();
         // CloseTabPesan();
+        cardModeTiga();
 
+        initSlickFavorit();
+        cardModeTigaFavorit();
+
+        // stopAndResetVideo();
+        enable();
         isTeksBerjalanActive = true;
         $(".teks-berjalan-pencarian").show();
         teksBerjalan();
-        disable();
         break;
       case "MenuSembilanTab":
         closeTab();
