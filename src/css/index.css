@@ -506,7 +506,8 @@
   bottom: 0px !important;
 }
 
-#detail-beranda-satu, .slick-dots {
+#detail-beranda-satu,
+.slick-dots {
   bottom: 10px !important;
 }
 
