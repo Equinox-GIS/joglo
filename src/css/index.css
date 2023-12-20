@@ -506,11 +506,11 @@
   bottom: 0px !important;
 }
 
-#detail-beranda-satu,
+/*.slider-card-info-detail,
 .slick-dots {
   bottom: 20px !important;
 }
-
+*/
 .slick-dots li {
   margin: 0 -5px !important;
 }
