@@ -506,11 +506,10 @@
   bottom: 0px !important;
 }
 
-/*.slider-card-info-detail,
-.slick-dots {
+#detail-custom-slick-dots {
   bottom: 20px !important;
 }
-*/
+
 .slick-dots li {
   margin: 0 -5px !important;
 }

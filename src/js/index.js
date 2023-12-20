@@ -846,6 +846,29 @@ function getSliderDefaultOptions() {
   };
 }
 
+function getSliderDetail() {
+  return {
+    dots: true,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+    // appendDots: (dotsContainer) => {
+    //   dotsContainer.id = "custom-slick-dots";
+    // },
+  };
+}
+
 function getSliderDefaultOptionsPesan() {
   return {
     dots: true,
@@ -1386,7 +1409,7 @@ window.showCardInfoDetail = function (param) {
 
       if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
         setTimeout(function () {
-          initSlick(".slider-card-info-detail", getSliderDefaultOptions());
+          initSlick(".slider-card-info-detail", getSliderDetail());
           addVideoEventHandlers(".slider-card-info-detail");
 
           $(".slider-card-info-detail").slick("resize");
