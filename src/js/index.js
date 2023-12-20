@@ -846,6 +846,49 @@ function getSliderDefaultOptions() {
   };
 }
 
+function getSliderVideo() {
+  return {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+  };
+}
+
+function getSliderDetail() {
+  return {
+    dots: true,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+    // appendDots: (dotsContainer) => {
+    //   dotsContainer.id = "custom-slick-dots";
+    // },
+  };
+}
+
 function getSliderDefaultOptionsPesan() {
   return {
     dots: true,
@@ -950,7 +993,7 @@ function initSlickFavorit() {
         disableClickHandlerToDots();
       }, 0);
     })
-    .slick(getSliderDefaultOptions());
+    .slick(getSliderVideo());
 }
 
 function cardModeTigaFavorit() {
@@ -1386,7 +1429,7 @@ window.showCardInfoDetail = function (param) {
 
       if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
         setTimeout(function () {
-          initSlick(".slider-card-info-detail", getSliderDefaultOptions());
+          initSlick(".slider-card-info-detail", getSliderDetail());
           addVideoEventHandlers(".slider-card-info-detail");
 
           $(".slider-card-info-detail").slick("resize");
@@ -2205,23 +2248,72 @@ document.addEventListener("DOMContentLoaded", (event) => {
   }
 
   let clickCount = 0;
+  // window.ChangeModeCard = function (element) {
+  //   clickCount++;
+
+  //   let firstMode = document.querySelectorAll(".mode-card-pertama");
+  //   let secondMode = document.querySelectorAll(".mode-card-kedua");
+  //   let thirdMode = document.querySelectorAll(".mode-card-ketiga");
+  //   // let fourthMode = document.querySelectorAll(".mode-card-keempat");
+
+  //   // Sembunyikan semua konten
+  //   [firstMode, secondMode, thirdMode].forEach((modeList) => {
+  //     modeList.forEach((el) => {
+  //       el.classList.add("hidden");
+  //     });
+  //   });
+
+  //   // Tampilkan konten berdasarkan jumlah klik
+  //   if (clickCount % 3 === 1) {
+  //     // Tampilkan mode kedua pada klik pertama
+  //     secondMode.forEach((el) => {
+  //       el.classList.remove("hidden");
+  //     });
+  //     cardModeTigaFavorit();
+  //     initSlickAgenDetail();
+  //     cardModeTiga();
+  //   } else if (clickCount % 3 === 2) {
+  //     // Tampilkan mode ketiga pada klik kedua, hanya jika elemen yang diklik memiliki class 'profil-agent-klik'
+  //     if (element.classList.contains("profil-agent-klik")) {
+  //       thirdMode.forEach((el) => {
+  //         el.classList.remove("hidden");
+  //       });
+  //     } else {
+  //       // Jika tidak ada class 'profil-agent-klik', kembali ke mode pertama
+  //       firstMode.forEach((el) => {
+  //         el.classList.remove("hidden");
+  //       });
+  //       cardModeTigaFavorit();
+  //       initSlickAgenDetail();
+  //       cardModeTiga();
+  //     }
+  //   } else {
+  //     // Tampilkan mode pertama pada klik ketiga
+  //     firstMode.forEach((el) => {
+  //       el.classList.remove("hidden");
+  //     });
+  //     cardModeTigaFavorit();
+  //     initSlickAgenDetail();
+  //     cardModeTiga();
+  //   }
+  // };
+
+  //
   window.ChangeModeCard = function (element) {
     clickCount++;
 
     let firstMode = document.querySelectorAll(".mode-card-pertama");
     let secondMode = document.querySelectorAll(".mode-card-kedua");
-    let thirdMode = document.querySelectorAll(".mode-card-ketiga");
-    // let fourthMode = document.querySelectorAll(".mode-card-keempat");
 
     // Sembunyikan semua konten
-    [firstMode, secondMode, thirdMode].forEach((modeList) => {
+    [firstMode, secondMode].forEach((modeList) => {
       modeList.forEach((el) => {
         el.classList.add("hidden");
       });
     });
 
     // Tampilkan konten berdasarkan jumlah klik
-    if (clickCount % 3 === 1) {
+    if (clickCount % 2 === 1) {
       // Tampilkan mode kedua pada klik pertama
       secondMode.forEach((el) => {
         el.classList.remove("hidden");
@@ -2229,23 +2321,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
       cardModeTigaFavorit();
       initSlickAgenDetail();
       cardModeTiga();
-    } else if (clickCount % 3 === 2) {
-      // Tampilkan mode ketiga pada klik kedua, hanya jika elemen yang diklik memiliki class 'profil-agent-klik'
-      if (element.classList.contains("profil-agent-klik")) {
-        thirdMode.forEach((el) => {
-          el.classList.remove("hidden");
-        });
-      } else {
-        // Jika tidak ada class 'profil-agent-klik', kembali ke mode pertama
-        firstMode.forEach((el) => {
-          el.classList.remove("hidden");
-        });
-        cardModeTigaFavorit();
-        initSlickAgenDetail();
-        cardModeTiga();
-      }
     } else {
-      // Tampilkan mode pertama pada klik ketiga
+      // Tampilkan mode pertama pada klik kedua
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
       });
@@ -2254,6 +2331,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
       cardModeTiga();
     }
   };
+
+  //
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -2633,16 +2712,30 @@ function handleFileUpload(event) {
 }
 
 $(document).ready(function () {
-  // Menambahkan event listener untuk klik pada elemen dengan ID 'detail-agenprofil-dua-tab'
+  // Menambahkan event listener untuk klik pada elemen dengan ID 'detail-statistik-tiga-tab'
+  $("#detail-statistik-tiga-tab").on("click", function () {
+    // hapus semua class hidden dari ini
+  });
   $("#detail-agenprofil-dua-tab").on("click", function () {
     // hapus semua class hidden dari ini
   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var tabButton = document.getElementById("detail-agenprofil-dua-tab");
+  var tabButtonTiga = document.getElementById("detail-statistik-tiga-tab");
+  var tabButtonDua = document.getElementById("detail-agenprofil-dua-tab");
 
-  tabButton.addEventListener("click", function () {
+  tabButtonDua.addEventListener("click", function () {
+    setTimeout(function () {
+      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+        $(".slider-card-mode-ketiga").slick("setPosition");
+      } else {
+        initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+      }
+    }, 100);
+  });
+
+  tabButtonTiga.addEventListener("click", function () {
     setTimeout(function () {
       if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
         $(".slider-card-mode-ketiga").slick("setPosition");
