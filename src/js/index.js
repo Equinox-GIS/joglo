@@ -846,6 +846,26 @@ function getSliderDefaultOptions() {
   };
 }
 
+function getSliderVideo() {
+  return {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+  };
+}
+
 function getSliderDetail() {
   return {
     dots: true,
@@ -973,7 +993,7 @@ function initSlickFavorit() {
         disableClickHandlerToDots();
       }, 0);
     })
-    .slick(getSliderDefaultOptions());
+    .slick(getSliderVideo());
 }
 
 function cardModeTigaFavorit() {
