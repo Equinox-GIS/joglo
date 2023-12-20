@@ -2351,7 +2351,7 @@
                                 <a href="#">
                                   <div class="inline-flex items-center w-full">
                                     <h5
-                                      class="text-xl font-bold tracking-tight text-black"
+                                      class="text-lg font-bold tracking-tight text-black"
                                     >
                                       Rp 11.300.000.000
                                     </h5>
@@ -2572,7 +2572,7 @@
                                 <a href="#">
                                   <div class="inline-flex items-center w-full">
                                     <h5
-                                      class="text-xl font-bold tracking-tight text-black"
+                                      class="text-lg font-bold tracking-tight text-black"
                                     >
                                       Rp 11.300.000.000
                                     </h5>
@@ -6828,7 +6828,7 @@
                                   <div class="grid grid-cols-2 gap-2">
                                     <!-- Card Beranda 1 -->
                                     <div
-                                      class="w-full bg-white rounded-lg h-[62.5vh] p-5"
+                                      class="w-full bg-white rounded-lg h-[62.5vh] px-5 py-3"
                                     >
                                       <!--  -->
                                       <!--   <div class="flex flex-row mb-1">
@@ -7017,7 +7017,7 @@
                                     </div>
                                     <!-- Card Beranda 1 -->
                                     <div
-                                      class="w-full bg-white rounded-lg h-[62.5vh] p-5 flex flex-col text-sm"
+                                      class="w-full bg-white rounded-lg h-[62.5vh] px-5 py-3 flex flex-col text-sm"
                                     >
                                       <!--  -->
 
@@ -7553,7 +7553,7 @@
                           >
                             <!--  -->
                             <div
-                              class="h-[62.5vh] overflow-y-auto hide-scrollbar"
+                              class="h-[62.6vh] overflow-y-auto hide-scrollbar"
                             >
                               <div class="grid grid-cols-2 gap-2">
                                 <!-- Card Beranda 1 -->
@@ -7564,269 +7564,275 @@
                                   <!--  -->
                                   <div class="flex flex-row">
                                     <div
-                                      class="w-full basis-5/5 font-semibold text-2xl text-center"
+                                      class="w-full basis-5/5 text-left flex flex-col"
                                     >
-                                      Rp. 215.000.000
+                                      <div class="text-sm">Penawaran</div>
+
+                                      <div class="font-semibold text-lg">
+                                        Rp. 215.000.000
+                                      </div>
                                     </div>
                                   </div>
 
                                   <!--  -->
                                 </div>
 
-                                <div
-                                  class="w-full bg-white rounded-lg h-[62.5vh] p-5 flex flex-col text-sm"
-                                >
-                                  <!--  -->
+                                <div class="bg-white h-full rounded-lg">
+                                  <div
+                                    class="w-full bg-white rounded-lg h-[55.5vh] px-5 py-3 flex flex-col text-sm"
+                                  >
+                                    <!--  -->
 
-                                  <div class="flex flex-row mb-3">
-                                    <div
-                                      class="w-full basis-5/5 font-semibold text-base"
-                                    >
-                                      Perkiraan harga berdasarkan aset fisik
-                                    </div>
-                                  </div>
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-2">
-                                    <div class="w-full text-sm">
-                                      Luas Tanahs (m²)22
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="120"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-2">
-                                    <div class="w-full text-sm">
-                                      Perkiraan NJOP (Rp/m²)
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="2.000.000"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-2">
-                                    <div class="w-full text-sm">
-                                      Angka Pengali NJOP
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="2.5"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-5">
-                                    <div class="w-full text-sm font-semibold">
-                                      Nilai Tanah (Rp)
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="600.000"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-2">
-                                    <div class="w-full text-sm">
-                                      Luas Bangunan (m²)
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="80"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-2">
-                                    <div class="w-full text-sm">
-                                      Harga Bangunan (Rp/m²)
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="3.000.000"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-2">
-                                    <div class="w-full text-sm">
-                                      Usia Bangunan (tahun)
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="5"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-2">
-                                    <div class="w-full text-sm">
-                                      Depresiasi Bangunan (%)
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="10"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-2">
-                                    <div class="w-full text-sm">
-                                      Luas Tanah (m²)22
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="2.000.000"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-5">
-                                    <div class="w-full text-sm font-semibold">
-                                      Nilai Bangunan (Rp)
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="216.000.000"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- new1 -->
-                                  <div class="flex flex-row mb-2">
-                                    <div class="w-full text-sm font-semibold">
-                                      Perkiraan Nilai Aset (Rp)
-                                    </div>
-                                    <div>
-                                      <input
-                                        type="text"
-                                        class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        placeholder="800.000.000"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                          text-align: right;
-                                        "
-                                        oninput="formatNumber(this)"
-                                        required=""
-                                      />
+                                    <div class="flex flex-row mb-3">
                                       <div
-                                        style="
-                                          border-bottom: 1px solid;
-                                          margin-top: 0.5vh;
-                                        "
-                                      ></div>
+                                        class="w-full basis-5/5 font-semibold text-base"
+                                      >
+                                        Perkiraan harga berdasarkan aset fisik
+                                      </div>
                                     </div>
-                                  </div>
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-2">
+                                      <div class="w-full text-sm">
+                                        Luas Tanahs (m²)22
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="120"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                      </div>
+                                    </div>
 
-                                  <!--  -->
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-2">
+                                      <div class="w-full text-sm">
+                                        Perkiraan NJOP (Rp/m²)
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="2.000.000"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-2">
+                                      <div class="w-full text-sm">
+                                        Angka Pengali NJOP
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="2.5"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-5">
+                                      <div class="w-full text-sm font-semibold">
+                                        Nilai Tanah (Rp)
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="600.000"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-2">
+                                      <div class="w-full text-sm">
+                                        Luas Bangunan (m²)
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="80"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-2">
+                                      <div class="w-full text-sm">
+                                        Harga Bangunan (Rp/m²)
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="3.000.000"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-2">
+                                      <div class="w-full text-sm">
+                                        Usia Bangunan (tahun)
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="5"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-2">
+                                      <div class="w-full text-sm">
+                                        Depresiasi Bangunan (%)
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="10"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-2">
+                                      <div class="w-full text-sm">
+                                        Luas Tanah (m²)22
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="2.000.000"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-5">
+                                      <div class="w-full text-sm font-semibold">
+                                        Nilai Bangunan (Rp)
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="216.000.000"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- new1 -->
+                                    <div class="flex flex-row mb-2">
+                                      <div class="w-full text-sm font-semibold">
+                                        Perkiraan Nilai Aset (Rp)
+                                      </div>
+                                      <div>
+                                        <input
+                                          type="text"
+                                          class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                          placeholder="800.000.000"
+                                          style="
+                                            border: none;
+                                            border-bottom: 1px solid;
+                                            text-align: right;
+                                          "
+                                          oninput="formatNumber(this)"
+                                          required=""
+                                        />
+                                        <div
+                                          style="
+                                            border-bottom: 1px solid;
+                                            margin-top: 0.5vh;
+                                          "
+                                        ></div>
+                                      </div>
+                                    </div>
+
+                                    <!--  -->
+                                  </div>
                                 </div>
 
                                 <div
-                                  class="w-full bg-white rounded-lg h-[62.5vh] p-5 text-sm"
+                                  class="w-full bg-white rounded-lg h-[55.5vh] p-5 text-sm"
                                 >
                                   <!--  -->
                                   <div class="flex flex-row"></div>
@@ -25329,16 +25335,6 @@
                         <!--  -->
                       </div>
 
-                      <!-- Konten Tab Tiga AgenProfil -->
-                      <div
-                        class="hidden px-3 py-2 mt-1"
-                        id="detail-agenprofil-dua"
-                        role="tabpanel"
-                        aria-labelledby="detail-agenprofil-dua-tab"
-                      >
-                        tiga
-                      </div>
-
                       <!-- Konten Tab Empat AgenProfil -->
                       <div
                         class="hidden px-3 py-2"
@@ -25935,7 +25931,7 @@
                           class="flex flex-col justify-center flex-grow h-full bg-black"
                         >
                           <div class="relative">
-                            <div class="slider-favorit">
+                            <div class="">
                               <div
                                 class="relative h-[43vh] bg-black z-index-10"
                               >
@@ -26107,6 +26103,7 @@
                                     <li>
                                       deket akses toll Andara dan Brigif 5menit
                                     </li>
+                                    <li>CCTV Lingkungan area</li>
                                   </ol>
                                 </ul>
                               </div>
@@ -26117,7 +26114,7 @@
                           <div>
                             <!--  -->
                             <div
-                              class="grid grid-cols-5 items-center justify-center pt-3 pb-1"
+                              class="grid grid-cols-5 items-center justify-center pt-2 pb-1"
                             >
                               <!--  -->
 
