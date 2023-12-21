@@ -883,9 +883,7 @@ function getSliderDetail() {
                     <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,
-    // appendDots: (dotsContainer) => {
-    //   dotsContainer.id = "custom-slick-dots";
-    // },
+    dotsClass: 'slick-dots custom-dots-class'
   };
 }
 
