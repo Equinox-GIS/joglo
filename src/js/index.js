@@ -848,7 +848,7 @@ function getSliderDefaultOptions() {
 
 function getSliderVideo() {
   return {
-    dots: true,
+    dots: false,
     infinite: false,
     arrows: true,
     pauseOnHover: false,
@@ -883,7 +883,7 @@ function getSliderDetail() {
                     <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,
-    dotsClass: 'slick-dots custom-dots-class'
+    dotsClass: "slick-dots custom-dots-class",
   };
 }
 
@@ -984,6 +984,18 @@ function resizePlayer(videos) {
 
 function initSlickFavorit() {
   $(".slider-favorit")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderDefaultOptions());
+}
+
+function initSlickVideo() {
+  $(".slider-menu-video")
     .on("init", function () {
       setTimeout(function () {
         moveDotsToCustomContainer();
@@ -1129,6 +1141,16 @@ $(document).ready(function () {
     $(this).get(0).pause();
   });
   resizePlayer($(".slider-favorit video"));
+
+  // Video
+  $(".slider-menu-video video").on("mouseover", function () {
+    $(this).get(0).play();
+  });
+
+  $(".slider-menu-video video").on("mouseout", function () {
+    $(this).get(0).pause();
+  });
+  resizePlayer($(".slider-menu-video video"));
 
   // Detail Agen
   $(".slider-detailagen video").on("mouseover", function () {
@@ -2015,7 +2037,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // CloseTabPesan();
         cardModeTiga();
 
-        initSlickFavorit();
+        // initSlickFavorit();
+        initSlickVideo();
         cardModeTigaFavorit();
 
         // stopAndResetVideo();
