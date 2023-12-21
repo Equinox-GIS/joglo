@@ -848,7 +848,7 @@ function getSliderDefaultOptions() {
 
 function getSliderVideo() {
   return {
-    dots: false,
+    dots: true,
     infinite: false,
     arrows: true,
     pauseOnHover: false,
