@@ -1,5 +1,5 @@
-import prevArrowImg from "http://soaraja.com:9000/soaraja/image/Card/prev.png";
-import nextArrowImg from "http://soaraja.com:9000/soaraja/image/Card/next.png";
+let prevArrowImg = "http://soaraja.com:9000/soaraja/image/semua/prev.png";
+let nextArrowImg = "http://soaraja.com:9000/soaraja/image/semua/next.png";
 
 // Menyiapkan objek untuk menyimpan userName dan elemen terkait
 var userElements = {};
@@ -1878,7 +1878,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //   el.classList.remove("bg-blue-500", "text-white", "active_btn_search");
     // });
     // document.getElementById("btnSaveInstagram").src =
-    //   "./src/images/save-instagram-off.png";
+    //   "http://soaraja.com:9000/soaraja/image/semua/save-instagram-off.png";
   }
 
   function enable() {
@@ -1897,7 +1897,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // document.getElementById("btnSaveInstagram").src =
-    //   "./src/images/http://soaraja.com:9000/soaraja/image/Card/save-instagram-on.png";
+    //   "http://soaraja.com:9000/soaraja/image/semua/save-instagram-on.png";
   }
 
   function hideAllContent() {
@@ -2417,9 +2417,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const paths = {
-    sarpras: "./src/images/sarpras",
-    indeks: "./src/images/indeks",
-    kalkulasi: "./src/images/kalkulator",
+    sarpras: "http://soaraja.com:9000/soaraja/image/semua/sarpras",
+    indeks: "http://soaraja.com:9000/soaraja/image/semua/indeks",
+    kalkulasi: "http://soaraja.com:9000/soaraja/image/semua/kalkulator",
   };
 
   function updateImages(category, selectedTab) {
