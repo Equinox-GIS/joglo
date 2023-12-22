@@ -430,7 +430,8 @@ function setActiveTab(tabButtonId, tabContentId) {
 
     // Jika tab 'detail-beranda-satu' atau 'detail-favorit-satu' yang diaktifkan, putar videonya
     if (tabButtonId === "detail-beranda-satu-tab") {
-      playVideoById("video-detail-beranda"); // Pastikan ID ini sesuai dengan ID video Anda
+      // Nonaktifkan video 'detail-favorit-satu' jika sedang diputar
+      // playVideoById("video-detail-beranda");
     } else if (tabButtonId === "detail-favorit-satu-tab") {
       playVideoById("video-detail-favorit"); // Pastikan ID ini sesuai dengan ID video Anda
     } else {
@@ -465,7 +466,7 @@ function setTabListeners() {
 
 // Event listener yang dijalankan saat halaman web selesai dimuat
 document.addEventListener("DOMContentLoaded", function () {
-  // Set tab beranda default - gantiii lg satu nanti
+  // nonaktifkan video 'detail-beranda-satu' jika sedang diputar
   resetTabStyles('#DetailBeranda [role="tab"]', "detail-beranda-satu-tab");
   resetActiveTabContent(
     '#DetailBeranda [role="tabpanel"]',
@@ -1467,8 +1468,9 @@ window.showCardInfoDetail = function (param) {
       //
       // playVideoInWrapper(".video-wrapper-autoplay");
       if (!$(".card-detail-beranda").hasClass("hidden")) {
-        playVideoById("video-detail-beranda"); // Memulai video beranda
-        setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
+        // nonaktif video play otomatiss
+        // playVideoById("video-detail-beranda");
+        // setActiveTab("detail-beranda-satu-tab", "detail-beranda-satu");
       }
 
       //
