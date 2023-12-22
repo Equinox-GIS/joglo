@@ -1,5 +1,5 @@
-import prevArrowImg from "../images/prev.png";
-import nextArrowImg from "../images/next.png";
+import prevArrowImg from "http://soaraja.com:9000/soaraja/image/Card/prev.png";
+import nextArrowImg from "http://soaraja.com:9000/soaraja/image/Card/next.png";
 
 // Menyiapkan objek untuk menyimpan userName dan elemen terkait
 var userElements = {};
@@ -1897,7 +1897,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // document.getElementById("btnSaveInstagram").src =
-    //   "./src/images/save-instagram-on.png";
+    //   "./src/images/http://soaraja.com:9000/soaraja/image/Card/save-instagram-on.png";
   }
 
   function hideAllContent() {
