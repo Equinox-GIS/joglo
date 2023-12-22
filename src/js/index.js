@@ -1,5 +1,5 @@
-let prevArrowImg = "http://soaraja.com:9000/soaraja/image/semua/prev.png";
-let nextArrowImg = "http://soaraja.com:9000/soaraja/image/semua/next.png";
+import prevArrowImg from "../images/prev.png";
+import nextArrowImg from "../images/next.png";
 
 // Menyiapkan objek untuk menyimpan userName dan elemen terkait
 var userElements = {};

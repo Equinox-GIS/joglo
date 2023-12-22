@@ -1,14 +1,14 @@
-let prevArrowImg = "http://soaraja.com:9000/soaraja/image/Card/prev.png";
-let nextArrowImg = "http://soaraja.com:9000/soaraja/image/Card/next.png";
-let logoNew = "http://soaraja.com:9000/soaraja/image/Card/new2.png";
-let rumaha2 = "http://soaraja.com:9000/soaraja/image/hunian/Rmh1/rumaha2.jpg";
-let heartOn = "http://soaraja.com:9000/soaraja/image/Card/heart-on.png";
-let share = "http://soaraja.com:9000/soaraja/image/Card/share.png";
-let badge3d = "http://soaraja.com:9000/soaraja/image/Card/badge3d.svg";
-let Video1 = "http://soaraja.com:9000/soaraja/video/001.mp4";
-let era = "http://soaraja.com:9000/soaraja/image/Card/era2.png";
-let verif = "http://soaraja.com:9000/soaraja/image/Card/verif.png";
-let model = "http://soaraja.com:9000/soaraja/image/Card/model/model11.jpg";
+import prevArrowImg from "../images/prev.png";
+import nextArrowImg from "../images/next.png";
+import logoNew from "../images/new2.png";
+import rumaha2 from "../images/Hunian/Rmh1/rumaha2.jpg";
+import heartOn from "../images/heart-on.png";
+import share from "../images/share.png";
+import badge3d from "../images/badge3d.svg";
+import Video1 from "../video/Video1.mp4";
+import era from "../images/agent/era-property.png";
+import verif from "../images/verif.png";
+import model from "../images/model/model11.jpg";
 
 function getSliderDefaultOptions() {
   return {
