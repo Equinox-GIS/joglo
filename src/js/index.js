@@ -847,6 +847,46 @@ function getSliderDefaultOptions() {
   };
 }
 
+function getSliderStoryGaleri() {
+  return {
+    slidesToShow: 10,
+    slidesToScroll: 10,
+    infinite: false,
+    dots: false,
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+  };
+}
+
+// Example of initializing the slider and setting up the wheel event handler
+$(document).ready(function () {
+  var slider = $(".slider-story-galeri");
+  var sliderConfig = getSliderStoryGaleri();
+
+  slider.slick(sliderConfig);
+
+  slider.on("wheel", function (e) {
+    e.preventDefault();
+
+    // Check horizontal wheel movement (deltaX) for left/right navigation
+    if (Math.abs(e.originalEvent.deltaX) > Math.abs(e.originalEvent.deltaY)) {
+      if (e.originalEvent.deltaX > 0) {
+        slider.slick("slickNext");
+      } else {
+        slider.slick("slickPrev");
+      }
+    }
+  });
+});
+
 function getSliderVideo() {
   return {
     dots: false,
@@ -995,6 +1035,18 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
+function initSlickStoryGaleri() {
+  $(".slider-story-galeri")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderStoryGaleri());
+}
+
 function initSlickVideo() {
   $(".slider-menu-video")
     .on("init", function () {
@@ -1103,6 +1155,7 @@ function addClickHandlerToDots() {
 
 $(document).ready(function () {
   initSlickCardInfo("slider-card-beranda");
+  initSlickStoryGaleri();
   cardModeTiga();
   cardModePesan();
 
@@ -1654,6 +1707,14 @@ window.showCardInfoDetail = function (param) {
       // console.log("aku");
 
       break;
+          // case "7":
+    case "7":
+      showElement(".story-galeri-on-dua");
+      hideElement(".story-galeri-off");
+
+      // console.log("aku");
+
+      break;
   }
 };
 
@@ -1963,6 +2024,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
           initSlickCardInfo("slider-card-beranda");
         }
+
+        initSlickStoryGaleri();
 
         // if (!$(".slider-card-mode-kedua").hasClass("slick-initialized")) {
         //   initSlickCardInfo("slider-card-mode-kedua");
