@@ -8901,23 +8901,29 @@
                   <!--  -->
                 </div>
 
-                <div class="story-galeri-on-dua p-3">
+                                <div class="story-galeri-on-dua">
                   <!--  -->
                   <!--  Konten Card buatFavorti -->
-                  <div class="h-[75vh] overflow-y-auto hide-scrollbar bg-white">
+                  <div
+                    class="h-[77.5vh] overflow-y-auto hide-scrollbar bg-white"
+                  >
                     <!-- Mode Pertama -->
                     <div class="h-full mode-card-pertama grid grid-cols-1">
                       <!-- Model Video PersegiPanjang -->
-                      <div class="grid grid-cols-5 bg-gray-100">
-                        <div class="w-full col-span-3 h-full">
+                      <div
+                        class="grid grid-cols-5 bg-gray-100 border-t border-gray-300"
+                      >
+                        <div
+                          class="w-full col-span-3 h-full border-r border-gray-300 pl-3"
+                        >
                           <div
-                            class="flex flex-col justify-center flex-grow h-full border border-red-500"
+                            class="flex flex-col flex-grow h-full"
                           >
                             <div class="relative">
                               <div class="slider-menu-video">
-                                <div class="relative h-full z-index-10">
+                                <div class="relative h-[77vh] z-index-10">
                                   <div class="video-wrapper">
-                                    <div class="h-[74.5vh] flex items-center">
+                                    <div class="h-[77vh] flex items-center">
                                       <video
                                         class="w-full !h-full object-contain"
                                         id="video-detail-beranda"
@@ -8934,29 +8940,11 @@
                         <div
                           class="col-span-2 w-full h-full flex flex-col justify-between"
                         >
-                          <!--  -->
-                          <div
-                            class="w-full grid justify-items-end items-center relative mb-1"
-                          >
-                            <div class="inline-flex">
-                              <div
-                                onclick="closeTab()"
-                                class="menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500 flex justify-center items-center"
-                              >
-                                <div
-                                  class="w-5 h-5 flex justify-center items-center"
-                                >
-                                  <img src="./src/images/back.png" alt="" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="flex-1 flex flex-col mx-5">
+                          <div class="flex-1 flex flex-col">
                             <!--  -->
 
                             <!--  -->
-                            <div class="h-[5vh]">
+                            <div class="h-[5vh] mx-3 my-2">
                               <div
                                 class="flex items-center justify-beetwen w-full h-full"
                               >
@@ -8973,7 +8961,7 @@
                                         class="text-sm -mt-1 font-semibold text-gray-700 cursor-pointer"
                                         onclick="showCardAgent(this)"
                                       >
-                                        Budimanz123
+                                        Budimanz1235
                                       </div>
                                       <div
                                         class="flex items-center justify-center ml-1"
@@ -9068,14 +9056,16 @@
                                 </div>
                               </div>
                             </div>
+
+                            <div class="border-b border-gray-300"></div>
                             <!--  -->
                             <div class="flex-1 flex flex-col">
                               <!--  -->
-                              <div class="text-gray-400 text-sm pt-1">
+                              <div class="text-gray-400 text-sm pt-2 mx-3">
                                 23 jam
                               </div>
                               <div
-                                class="inline-flex justify-start w-full pt-1 pb-3"
+                                class="inline-flex justify-start w-full pt-1 pb-3 mx-3"
                               >
                                 <div>
                                   <h5
@@ -9088,7 +9078,7 @@
                               <!--  -->
                               <div class="grid grid-cols-1">
                                 <div
-                                  class="flex flex-col mb-3 font-normal text-sm text-gray-700"
+                                  class="flex flex-col mb-5 font-normal text-sm text-gray-700 mx-3"
                                 >
                                   <div class="flex items-center">
                                     <span class="mr-1">LT 80 m² |</span>
@@ -9100,8 +9090,8 @@
                                     Sunter, Tanjung Priok, Jakarta Utara
                                   </div>
                                   <!--  -->
-                                  <div>
-                                    <ul class="list-disc list-inside">
+                                  <div class="mx-3">
+                                    <ul class="list-disc">
                                       <ol
                                         class="ps-3 list-decimal list-outside"
                                       >
@@ -9125,42 +9115,46 @@
                                   <!--  -->
                                 </div>
                                 <!--  -->
-                                <div>
-                                  <!--  -->
-                                  <div class="flex items-end mb-3">
+                                <div class="border-t border-gray-300"></div>
+                                <!--  -->
+                                <div class="flex items-end mx-2 pt-1">
+                                  <div
+                                    class="grid grid-cols-5 items-center justify-start mt-2.5 gap-2"
+                                  >
+                                    <!-- Existing heart icon -->
+                                    <div class="flex flex-col items-center">
+                                      <img
+                                        class="w-5 h-5 object-cover"
+                                        src="./src/images/heart-off.png"
+                                        alt="Love"
+                                      />
+                                      <div
+                                        class="text-xs ml-1 mt-1 text-gray-500"
+                                      >
+                                        1.100
+                                      </div>
+                                    </div>
+
+                                    <!-- Existing share icon -->
                                     <div
-                                      class="grid grid-cols-5 items-center justify-center"
+                                      class="flex h-full flex-col items-start mr-2"
                                     >
-                                      <div
-                                        class="flex items-center justify-start"
-                                      >
-                                        <img
-                                          class="w-[1.05rem] h-[1.05rem] object-cover"
-                                          src="./src/images/heart-off.png"
-                                          alt="Love"
-                                        />
-                                        <div class="ml-2 text-xs">11</div>
-                                      </div>
+                                      <img
+                                        class="w-5 h-5 object-cover"
+                                        src="./src/images/share.png"
+                                        alt="Love"
+                                      />
+                                    </div>
 
-                                      <div
-                                        class="flex items-center justify-start pl-3"
-                                      >
-                                        <img
-                                          class="w-[1.05rem] h-[1.05rem] object-cover"
-                                          src="./src/images/share.png"
-                                          alt="Share"
-                                        />
-                                      </div>
-
-                                      <div
-                                        class="flex items-center justify-start"
-                                      >
-                                        <img
-                                          class="w-5 h-5 object-contain"
-                                          src="./src/images/chat-bubble-2.png"
-                                          alt="Chat"
-                                        />
-                                      </div>
+                                    <!-- Existing chat bubble icon -->
+                                    <div
+                                      class="flex h-full flex-col items-start"
+                                    >
+                                      <img
+                                        class="w-6 h-6 object-cover"
+                                        src="./src/images/chat-bubble-2.png"
+                                        alt="Love"
+                                      />
                                     </div>
                                   </div>
                                 </div>
