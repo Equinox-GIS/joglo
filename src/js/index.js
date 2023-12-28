@@ -1212,6 +1212,9 @@ window.closeTab = function (element) {
   showElement(".card-info-pencarian");
   hideElement(".card-detail-beranda");
 
+  showElement(".story-galeri-off");
+  hideElement(".story-galeri-on");
+
   stopAndResetVideoById("video-detail-beranda");
 };
 
@@ -1430,12 +1433,12 @@ window.showCardInfoDetail = function (param) {
     return;
   }
 
-  resetAllCards();
-
   // console.log(activeTab);
 
   switch (activeTab) {
     case "1":
+      resetAllCards();
+
       // Pencarian
       showElement(".card-detail-beranda");
       hideElement(".card-info-pencarian");
@@ -1489,6 +1492,8 @@ window.showCardInfoDetail = function (param) {
       break;
 
     case "2":
+      resetAllCards();
+
       // Favorit
       showElement(".card-info-detail-favorit");
       hideElement(".card-info-favorit");
@@ -1540,6 +1545,8 @@ window.showCardInfoDetail = function (param) {
 
       break;
     case "3":
+      resetAllCards();
+
       // Favorit
       showElement(".card-info-favorit");
       hideElement(".card-info-detail-favorit");
@@ -1583,6 +1590,8 @@ window.showCardInfoDetail = function (param) {
       break;
     // agen
     case "4":
+      resetAllCards();
+
       // Favorit
       showElement(".card-info-detail-pasang");
       hideElement(".card-info-pasang");
@@ -1626,12 +1635,23 @@ window.showCardInfoDetail = function (param) {
       break;
 
     case "5":
+      resetAllCards();
+
       showElement(".card-agent-detail");
       hideElement(".card-agent");
 
       // if (!$(".slider-pasang").hasClass("slick-initialized")) {
       //   initSlick(".slider-pasang", getSliderDefaultOptions());
       // }
+
+      break;
+
+    // case "6":
+    case "6":
+      showElement(".story-galeri-on");
+      hideElement(".story-galeri-off");
+
+      // console.log("aku");
 
       break;
   }
