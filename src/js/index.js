@@ -1704,18 +1704,46 @@ window.showCardInfoDetail = function (param) {
     case "6":
       showElement(".story-galeri-on");
       hideElement(".story-galeri-off");
-
-      // console.log("aku");
-
       break;
     // case "7":
     case "7":
-      showElement(".story-galeri-on-dua");
-      hideElement(".story-galeri-off");
 
-      // console.log("aku");
+      showElement(".story-galeri-on-tujuh");
+
+      // konten hidden
+      hideElement(".story-galeri-off");
+      hideElement(".story-galeri-on");
+
 
       break;
+
+    // case "8":
+    case "8":
+      showElement(".story-galeri-on-delapan");
+
+      // konten hidden
+      hideElement(".story-galeri-off");
+      hideElement(".story-galeri-on");
+
+      hideElement(".story-galeri-on-tujuh");
+
+      break;
+
+    // case "9":
+    case "9":
+      showElement(".story-galeri-on-sembilan");
+
+      // konten hidden
+      hideElement(".story-galeri-off");
+      hideElement(".story-galeri-on");
+
+      hideElement(".story-galeri-on-tujuh");
+      hideElement(".story-galeri-on-delapan");
+
+
+      break;
+
+
   }
 };
 
