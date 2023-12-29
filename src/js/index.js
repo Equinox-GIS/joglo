@@ -853,12 +853,13 @@ function getSliderStoryGaleri() {
     slidesToScroll: 10,
     infinite: false,
     dots: false,
-    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
+    prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-1.1rem;" onclick="event.stopPropagation();">
+    <div>
                   <div class="img-wrapper">
                     <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
-    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
+    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-0.9rem;" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
                     <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
@@ -1707,7 +1708,7 @@ window.showCardInfoDetail = function (param) {
       // console.log("aku");
 
       break;
-          // case "7":
+    // case "7":
     case "7":
       showElement(".story-galeri-on-dua");
       hideElement(".story-galeri-off");
