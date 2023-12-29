@@ -850,7 +850,7 @@ function getSliderDefaultOptions() {
 function getSliderStoryGaleri() {
   return {
     slidesToShow: 10,
-    slidesToScroll: 10,
+    slidesToScroll: 5,
     infinite: false,
     dots: false,
     prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-1.1rem;" onclick="event.stopPropagation();">
@@ -1258,6 +1258,10 @@ $(document).ready(function () {
 });
 
 window.closeTab = function (element) {
+  var BtnBackStories = document.querySelectorAll(".stories_back");
+  BtnBackStories.forEach(function (element) {
+    element.classList.add("hidden");
+  });
   // Pencarian
   showElement(".card-info-pencarian");
   hideElement(".card-detail-beranda");
@@ -1270,6 +1274,12 @@ window.closeTab = function (element) {
   hideElement(".story-galeri-on");
 
   stopAndResetVideoById("video-detail-beranda");
+
+  // Mengubah teks semua elemen dengan class 'judulStory'
+  var judulStoryElements = document.querySelectorAll(".judulStory");
+  judulStoryElements.forEach(function (element) {
+    element.textContent = "Galeri";
+  });
 };
 
 // Fungsi untuk menampilkan elemen
@@ -1489,6 +1499,21 @@ window.showCardInfoDetail = function (param) {
 
   // console.log(activeTab);
 
+  function StoriesGaleri() {
+    var judulStoryElements = document.querySelectorAll(".judulStory");
+    judulStoryElements.forEach(function (element) {
+      element.textContent = "Stories";
+    });
+  }
+
+  function BackStoriesGaleri() {
+    // remove hidden
+    var BtnBackStories = document.querySelectorAll(".stories_back");
+    BtnBackStories.forEach(function (element) {
+      element.classList.remove("hidden");
+    });
+  }
+
   switch (activeTab) {
     case "1":
       resetAllCards();
@@ -1703,17 +1728,28 @@ window.showCardInfoDetail = function (param) {
     // case "6":
     case "6":
       showElement(".story-galeri-on");
+
+      StoriesGaleri();
+      BackStoriesGaleri();
+
       hideElement(".story-galeri-off");
+      hideElement(".story-galeri-on-tujuh");
+      hideElement(".story-galeri-on-delapan");
+      hideElement(".story-galeri-on-sembilan");
+
       break;
     // case "7":
     case "7":
-
       showElement(".story-galeri-on-tujuh");
+
+      StoriesGaleri();
+      BackStoriesGaleri();
 
       // konten hidden
       hideElement(".story-galeri-off");
       hideElement(".story-galeri-on");
-
+      hideElement(".story-galeri-on-delapan");
+      hideElement(".story-galeri-on-sembilan");
 
       break;
 
@@ -1721,17 +1757,23 @@ window.showCardInfoDetail = function (param) {
     case "8":
       showElement(".story-galeri-on-delapan");
 
+      StoriesGaleri();
+      BackStoriesGaleri();
       // konten hidden
       hideElement(".story-galeri-off");
       hideElement(".story-galeri-on");
 
       hideElement(".story-galeri-on-tujuh");
+      hideElement(".story-galeri-on-sembilan");
 
       break;
 
     // case "9":
     case "9":
       showElement(".story-galeri-on-sembilan");
+
+      StoriesGaleri();
+      BackStoriesGaleri();
 
       // konten hidden
       hideElement(".story-galeri-off");
@@ -1740,10 +1782,7 @@ window.showCardInfoDetail = function (param) {
       hideElement(".story-galeri-on-tujuh");
       hideElement(".story-galeri-on-delapan");
 
-
       break;
-
-
   }
 };
 
