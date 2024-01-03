@@ -847,6 +847,47 @@ function getSliderDefaultOptions() {
   };
 }
 
+function getSliderStoryGaleri() {
+  return {
+    slidesToShow: 9,
+    slidesToScroll: 5,
+    infinite: false,
+    dots: false,
+    prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-2.8rem;" onclick="event.stopPropagation();">
+    <div>
+                  <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-2.9rem;" onclick="event.stopPropagation();">
+                  <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+  };
+}
+
+// Example of initializing the slider and setting up the wheel event handler
+$(document).ready(function () {
+  var slider = $(".slider-story-galeri");
+  var sliderConfig = getSliderStoryGaleri();
+
+  slider.slick(sliderConfig);
+
+  slider.on("wheel", function (e) {
+    e.preventDefault();
+
+    // Check horizontal wheel movement (deltaX) for left/right navigation
+    if (Math.abs(e.originalEvent.deltaX) > Math.abs(e.originalEvent.deltaY)) {
+      if (e.originalEvent.deltaX > 0) {
+        slider.slick("slickNext");
+      } else {
+        slider.slick("slickPrev");
+      }
+    }
+  });
+});
+
 function getSliderVideo() {
   return {
     dots: false,
@@ -995,6 +1036,18 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
+function initSlickStoryGaleri() {
+  $(".slider-story-galeri")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderStoryGaleri());
+}
+
 function initSlickVideo() {
   $(".slider-menu-video")
     .on("init", function () {
@@ -1103,6 +1156,7 @@ function addClickHandlerToDots() {
 
 $(document).ready(function () {
   initSlickCardInfo("slider-card-beranda");
+  initSlickStoryGaleri();
   cardModeTiga();
   cardModePesan();
 
@@ -1204,6 +1258,10 @@ $(document).ready(function () {
 });
 
 window.closeTab = function (element) {
+  var BtnBackStories = document.querySelectorAll(".stories_back");
+  BtnBackStories.forEach(function (element) {
+    element.classList.add("hidden");
+  });
   // Pencarian
   showElement(".card-info-pencarian");
   hideElement(".card-detail-beranda");
@@ -1211,8 +1269,17 @@ window.closeTab = function (element) {
   // Pencarian
   showElement(".card-info-pencarian");
   hideElement(".card-detail-beranda");
+
+  showElement(".story-galeri-off");
+  hideElement(".story-galeri-on");
 
   stopAndResetVideoById("video-detail-beranda");
+
+  // Mengubah teks semua elemen dengan class 'judulStory'
+  var judulStoryElements = document.querySelectorAll(".judulStory");
+  judulStoryElements.forEach(function (element) {
+    element.textContent = "Galeri";
+  });
 };
 
 // Fungsi untuk menampilkan elemen
@@ -1430,12 +1497,27 @@ window.showCardInfoDetail = function (param) {
     return;
   }
 
-  resetAllCards();
-
   // console.log(activeTab);
+
+  function StoriesGaleri() {
+    var judulStoryElements = document.querySelectorAll(".judulStory");
+    judulStoryElements.forEach(function (element) {
+      element.textContent = "Stories";
+    });
+  }
+
+  function BackStoriesGaleri() {
+    // remove hidden
+    var BtnBackStories = document.querySelectorAll(".stories_back");
+    BtnBackStories.forEach(function (element) {
+      element.classList.remove("hidden");
+    });
+  }
 
   switch (activeTab) {
     case "1":
+      resetAllCards();
+
       // Pencarian
       showElement(".card-detail-beranda");
       hideElement(".card-info-pencarian");
@@ -1489,6 +1571,8 @@ window.showCardInfoDetail = function (param) {
       break;
 
     case "2":
+      resetAllCards();
+
       // Favorit
       showElement(".card-info-detail-favorit");
       hideElement(".card-info-favorit");
@@ -1540,6 +1624,8 @@ window.showCardInfoDetail = function (param) {
 
       break;
     case "3":
+      resetAllCards();
+
       // Favorit
       showElement(".card-info-favorit");
       hideElement(".card-info-detail-favorit");
@@ -1583,6 +1669,8 @@ window.showCardInfoDetail = function (param) {
       break;
     // agen
     case "4":
+      resetAllCards();
+
       // Favorit
       showElement(".card-info-detail-pasang");
       hideElement(".card-info-pasang");
@@ -1626,12 +1714,73 @@ window.showCardInfoDetail = function (param) {
       break;
 
     case "5":
+      resetAllCards();
+
       showElement(".card-agent-detail");
       hideElement(".card-agent");
 
       // if (!$(".slider-pasang").hasClass("slick-initialized")) {
       //   initSlick(".slider-pasang", getSliderDefaultOptions());
       // }
+
+      break;
+
+    // case "6":
+    case "6":
+      showElement(".story-galeri-on");
+
+      StoriesGaleri();
+      BackStoriesGaleri();
+
+      hideElement(".story-galeri-off");
+      hideElement(".story-galeri-on-tujuh");
+      hideElement(".story-galeri-on-delapan");
+      hideElement(".story-galeri-on-sembilan");
+
+      break;
+    // case "7":
+    case "7":
+      showElement(".story-galeri-on-tujuh");
+
+      StoriesGaleri();
+      BackStoriesGaleri();
+
+      // konten hidden
+      hideElement(".story-galeri-off");
+      hideElement(".story-galeri-on");
+      hideElement(".story-galeri-on-delapan");
+      hideElement(".story-galeri-on-sembilan");
+
+      break;
+
+    // case "8":
+    case "8":
+      showElement(".story-galeri-on-delapan");
+
+      StoriesGaleri();
+      BackStoriesGaleri();
+      // konten hidden
+      hideElement(".story-galeri-off");
+      hideElement(".story-galeri-on");
+
+      hideElement(".story-galeri-on-tujuh");
+      hideElement(".story-galeri-on-sembilan");
+
+      break;
+
+    // case "9":
+    case "9":
+      showElement(".story-galeri-on-sembilan");
+
+      StoriesGaleri();
+      BackStoriesGaleri();
+
+      // konten hidden
+      hideElement(".story-galeri-off");
+      hideElement(".story-galeri-on");
+
+      hideElement(".story-galeri-on-tujuh");
+      hideElement(".story-galeri-on-delapan");
 
       break;
   }
@@ -1943,6 +2092,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
           initSlickCardInfo("slider-card-beranda");
         }
+
+        initSlickStoryGaleri();
 
         // if (!$(".slider-card-mode-kedua").hasClass("slick-initialized")) {
         //   initSlickCardInfo("slider-card-mode-kedua");

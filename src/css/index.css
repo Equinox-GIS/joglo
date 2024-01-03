@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Reguler*/
+@font-face {
+  font-family: "Font Instagram reguler";
+  src: url("../font/3/SF-Pro-Text-Regular.otf") format("opentype");
+  /*  font-weight: 400;*/
+  font-style: normal;
+}
+
+/*Bold3*/
+@font-face {
+  font-family: "Font Instagram bold";
+  src: url("../font/3/SF-Pro-Display-Heavy.otf") format("opentype");
+  /*  font-weight: 600;*/
+  font-style: normal;
+}
+
 /* Mengatur Button Slider Card Info */
 .slider-thumbnails {
   margin-left: -15px;
@@ -24,6 +40,18 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease-out;
   border-radius: 3px;
+}
+
+.slick-prev-story {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.slick-next-story {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .slick-prev,
@@ -624,10 +652,10 @@
   color: rgb(202, 255, 195); */
 /* } */
 
-#InputanSearch::placeholder {
+/*#InputanSearch::placeholder {
   color: rgb(51 65 85);
 }
-
+*/
 /* uji */
 /* .slick-dots li button:before {
   color: red;
@@ -1068,6 +1096,5 @@ body {
 }
 
 .custom-dots-class {
-    bottom: 15px !important;
+  bottom: 15px !important;
 }
-

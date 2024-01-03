@@ -12,7 +12,12 @@ module.exports = {
     extend: {
       fontFamily: {
         lobster: ['"Lobster"'],
-        roboto: ['"Roboto"'],
+        // roboto: ['"Roboto"'],
+        instagram_reguler: ["Font Instagram reguler"],
+        instagram_bold: ["Font Instagram bold"],
+
+
+
       },
     },
   },
