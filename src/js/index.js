@@ -92,6 +92,35 @@ function changeTab(event) {
   tab.classList.add("border-gray-400");
 }
 
+  window.showAddFormStories = function (element) {
+  event.preventDefault();
+  event.stopPropagation();
+
+        // resetAllCards();
+
+      // Favorit
+      // hideElement(".card-info-detail-favorit");
+
+      // // Pencarian
+      // ".card-info-pencarian";
+      // hideElement(".card-detail-beranda");
+
+      // // Pencarian Dua
+      // hideElement(".card-info-favorit-dua");
+      // showElement(".card-info-detail-favorit-dua");
+      hideElement(".story-galeri-off");
+      hideElement(".story-galeri-on");
+      hideElement(".story-galeri-on-tujuh");
+      hideElement(".story-galeri-on-delapan");
+      hideElement(".story-galeri-on-sembilan");
+      showElement(".story-add-form");
+
+
+
+}
+
+
+
 // ------------Start Drodpdown------------------
 
 // Fungsi umum untuk mengganti tampilan dropdown
@@ -1793,6 +1822,8 @@ function resetAllCards() {
   hideElement(".card-info-detail-favorit");
   hideElement(".card-info-favorit-dua");
   hideElement(".card-info-detail-favorit-dua");
+  hideElement(".story-add-form");
+
 }
 
 // Function untuk pindah Menu Navigation
