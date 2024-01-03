@@ -1999,10 +1999,10 @@
                     Galeri
                   </div>
 
-                  <!--  -->
+                  <!-- Stories -->
                   <div
                     class="w-full grid justify-items-end items-center relative mr-1"
-                  >
+                    >
                     <div class="inline-flex">
                       <div
                         onclick="closeTab()"
@@ -2019,7 +2019,7 @@
                 <!--  Konten Card Info -->
                 <div
                   class="h-[79vh] overflow-y-auto hide-scrollbar story-galeri-off"
-                >
+                  >
                   <div class="px-3">
                     <!--  -->
                     <div
@@ -2032,6 +2032,8 @@
                           <!--  -->
                           <!-- Your Story -->
                           <div
+                            data-active-tab="6"
+                            onclick="showCardInfoDetail(this)"
                             class="relative !flex !flex-col !items-center cursor-pointer"
                           >
                             <div class="w-16 h-16 rounded-full relative">
@@ -2047,6 +2049,7 @@
                                 viewBox="0 0 16 16"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
+                                onclick="showAddFormStories(event)"
                                 class="absolute bottom-0 right-1 border border-white border-2 rounded-full"
                               >
                                 <path
@@ -2478,7 +2481,7 @@
                     <!--  judul-dijual-kedua -->
                     <div
                       class="flex flex-row items-stretch justify-between mt-1 judul-dijual-kedua"
-                    >
+                      >
                       <div
                         class="font-normal text-sm self-end text-gray-700 -mb-0.5"
                       >
@@ -8669,7 +8672,7 @@
                   <!--  -->
                   <!--  Konten Card buatFavorti -->
                   <div
-                    class="h-[77.5vh] overflow-y-auto hide-scrollbar bg-white"
+                    class="h-[75.2vh] overflow-y-auto hide-scrollbar bg-white"
                   >
                     <!-- Mode Pertama -->
                     <div class="h-full mode-card-pertama grid grid-cols-1">
@@ -8678,7 +8681,7 @@
                         class="grid grid-cols-5 bg-gray-100 border-t border-gray-300"
                       >
                         <div
-                          class="w-full col-span-3 h-full border-r border-gray-300 pl-3"
+                          class="w-full col-span-3 h-full border-r border-gray-300 px-3"
                         >
                           <div
                             class="flex flex-col justify-center flex-grow h-full"
@@ -8708,7 +8711,7 @@
                             <!--  -->
 
                             <!--  -->
-                            <div class="h-[6vh] mx-3 my-2">
+                            <div class="h-[7.5vh] mx-3 my-2">
                               <div
                                 class="flex items-center justify-beetwen w-full h-full pt-1"
                               >
@@ -8725,7 +8728,7 @@
                                         class="text-sm -mt-1 font-semibold text-gray-700 cursor-pointer"
                                         onclick="showCardAgent(this)"
                                       >
-                                        Budimanz1235
+                                        Budimandff1235
                                       </div>
                                       <div
                                         class="flex items-center justify-center ml-1"
@@ -8843,7 +8846,7 @@
                               <!--  -->
                               <div class="grid grid-cols-1">
                                 <div
-                                  class="flex flex-col mb-5 font-normal text-sm text-gray-700 mx-3"
+                                  class="flex flex-col mb-4 font-normal text-sm text-gray-700 mx-3"
                                 >
                                   <div class="flex items-center">
                                     <span class="mr-1">LT 80 m² |</span>
@@ -8884,7 +8887,7 @@
                                 <!--  -->
                                 <div class="flex items-end mx-2 pt-3">
                                   <div
-                                    class="grid grid-cols-5 items-center justify-start mt-2.5 ml-1 gap-2"
+                                    class="grid grid-cols-5 items-center justify-start mt-1 ml-1 gap-2"
                                   >
                                     <!-- Existing heart icon -->
                                     <div class="flex flex-col items-center">
@@ -8945,9 +8948,9 @@
                 <!-- Tujuh -->
                 <div class="story-galeri-on-tujuh">
                   <!--  -->
-                  <!--  Konten Card buatFavorti -->
+                  <!--  Konten Card epiic -->
                   <div
-                    class="h-[77.5vh] overflow-y-auto hide-scrollbar bg-white"
+                    class="h-[76.2vh] overflow-y-auto hide-scrollbar bg-white"
                   >
                     <!-- Mode Pertama -->
                     <div class="h-full mode-card-pertama grid grid-cols-1">
@@ -8956,9 +8959,11 @@
                         class="grid grid-cols-5 bg-gray-100 border-t border-gray-300"
                       >
                         <div
-                          class="w-full col-span-3 h-full border-r border-gray-300"
+                          class="w-full col-span-3 h-full border-r border-gray-300 px-3"
                         >
-                          <div class="flex flex-col flex-grow h-full">
+                          <div
+                            class="flex flex-col justify-center flex-grow h-full"
+                          >
                             <div class="relative">
                               <div class="slider-menu-video">
                                 <div class="relative h-[77vh] z-index-10">
@@ -8984,9 +8989,9 @@
                             <!--  -->
 
                             <!--  -->
-                            <div class="h-[5vh] mx-3 my-2">
+                            <div class="h-[7.5vh] mx-3 my-2">
                               <div
-                                class="flex items-center justify-beetwen w-full h-full"
+                                class="flex items-center justify-beetwen w-full h-full pt-1"
                               >
                                 <div class="flex flex-row w-full">
                                   <div class="">
@@ -9001,7 +9006,7 @@
                                         class="text-sm -mt-1 font-semibold text-gray-700 cursor-pointer"
                                         onclick="showCardAgent(this)"
                                       >
-                                        Budimanz1235
+                                        Budimandff1235
                                       </div>
                                       <div
                                         class="flex items-center justify-center ml-1"
@@ -9017,7 +9022,7 @@
                                       </div>
                                     </div>
                                     <!--  -->
-                                    <div class="">
+                                    <div class="mb-1 mt-0.5">
                                       <label
                                         for="star-agent-utama"
                                         class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
@@ -9086,6 +9091,11 @@
                                         </div>
                                       </label>
                                     </div>
+
+                                    <!--  -->
+                                    <div class="text-gray-400 text-xs">
+                                      23 jam
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="flex justify-end relative">
@@ -9100,12 +9110,8 @@
                             <div class="border-b border-gray-300"></div>
                             <!--  -->
                             <div class="flex-1 flex flex-col">
-                              <!--  -->
-                              <div class="text-gray-400 text-sm pt-2 mx-3">
-                                23 jam
-                              </div>
                               <div
-                                class="inline-flex justify-start w-full pt-1 pb-3 mx-3"
+                                class="inline-flex justify-start w-full pt-3 pb-2 mx-3"
                               >
                                 <div>
                                   <h5
@@ -9118,7 +9124,7 @@
                               <!--  -->
                               <div class="grid grid-cols-1">
                                 <div
-                                  class="flex flex-col mb-5 font-normal text-sm text-gray-700 mx-3"
+                                  class="flex flex-col mb-4 font-normal text-sm text-gray-700 mx-3"
                                 >
                                   <div class="flex items-center">
                                     <span class="mr-1">LT 80 m² |</span>
@@ -9148,7 +9154,7 @@
                                         <li>Akses jalan raya utama</li>
                                         <li>Perumahan TOWNHOUSE mewah</li>
                                         <li>Row jalan 6.5 meter (2mobil)</li>
-                                        <li>One gate security xxx</li>
+                                        <li>One gate security xxx11</li>
                                       </ol>
                                     </ul>
                                   </div>
@@ -9157,9 +9163,9 @@
                                 <!--  -->
                                 <div class="border-t border-gray-300"></div>
                                 <!--  -->
-                                <div class="flex items-end mx-2 pt-1">
+                                <div class="flex items-end mx-2 pt-3">
                                   <div
-                                    class="grid grid-cols-5 items-center justify-start mt-2.5 gap-2"
+                                    class="grid grid-cols-5 items-center justify-start mt-1 ml-1 gap-2"
                                   >
                                     <!-- Existing heart icon -->
                                     <div class="flex flex-col items-center">
@@ -9177,7 +9183,7 @@
 
                                     <!-- Existing share icon -->
                                     <div
-                                      class="flex h-full flex-col items-start mr-2"
+                                      class="flex h-full flex-col items-start mr-2 ml-1"
                                     >
                                       <img
                                         class="w-5 h-5 object-cover"
@@ -9222,7 +9228,7 @@
                   <!--  -->
                   <!--  Konten Card buatFavorti -->
                   <div
-                    class="h-[77.5vh] overflow-y-auto hide-scrollbar bg-white"
+                    class="h-[75.2vh] overflow-y-auto hide-scrollbar bg-white"
                   >
                     <!-- Mode Pertama -->
                     <div class="h-full mode-card-pertama grid grid-cols-1">
@@ -9503,7 +9509,7 @@
                   <!--  -->
                   <!--  Konten Card buatFavorti -->
                   <div
-                    class="h-[77.5vh] overflow-y-auto hide-scrollbar bg-white"
+                    class="h-[75.2vh] overflow-y-auto hide-scrollbar bg-white"
                   >
                     <!-- Mode Pertama -->
                     <div class="h-full mode-card-pertama grid grid-cols-1">
@@ -9777,6 +9783,12 @@
                     </div>
                   </div>
                   <!--  -->
+                </div>
+
+                <div class="story-add-form">
+                  <div class="h-[76.5vh] px-3 grid grid-cols-1 border border-red-500">
+                    <div>Tambah Stories</div>
+                  </div>
                 </div>
 
                 <!--  -->
@@ -45680,7 +45692,7 @@
                                         <!--  -->
                                         <div class="grid grid-cols-4">
                                           <div class="col-span-3">
-                                            <div class="h-[19vh] mt-2">
+                                            <div class="h-[19vh] mt-2 pl-1">
                                               <canvas
                                                 id="analytics-card-01"
                                                 width="800"
@@ -45694,7 +45706,7 @@
                                           >
                                             <div class="w-full">
                                               <div
-                                                class="w-full flex justify-center mt-2"
+                                                class="w-full flex justify-center pt-2 pb-3"
                                               >
                                                 <img
                                                   class="w-7 h-7"
@@ -45704,48 +45716,57 @@
                                               </div>
 
                                               <!--  -->
-
-                                              <div
-                                                class="w-full flex justify-center py-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex items-center cursor-pointer"
+                                              <div class="grid grid-cols-2">
+                                                <div
+                                                  class="w-full flex justify-center pt-4"
                                                 >
-                                                  <input
-                                                    type="checkbox"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                  />
-                                                  <div
-                                                    class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
+                                                  <label
+                                                    class="relative inline-flex items-center cursor-pointer"
+                                                  >
+                                                    <input
+                                                      type="checkbox"
+                                                      value=""
+                                                      class="sr-only peer"
+                                                    />
+                                                    <div
+                                                      class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                                                    ></div>
+                                                  </label>
+                                                </div>
+
+                                                <div class="flex items-center">
                                                   <span
-                                                    class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                                    class="text-sm font-medium text-gray-900 dark:text-gray-300"
                                                     >Terjual</span
                                                   >
-                                                </label>
+                                                </div>
                                               </div>
 
-                                              <div
-                                                class="w-full flex justify-center"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer"
+                                              <div class="grid grid-cols-2">
+                                                <div
+                                                  class="w-full flex justify-center py-4"
                                                 >
-                                                  <input
-                                                    type="checkbox"
-                                                    value=""
-                                                    checked
-                                                    class="sr-only peer"
-                                                  />
-                                                  <div
-                                                    class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
+                                                  <label
+                                                    class="relative inline-flex items-center cursor-pointer"
+                                                  >
+                                                    <input
+                                                      type="checkbox"
+                                                      value=""
+                                                      checked
+                                                      class="sr-only peer"
+                                                    />
+                                                    <div
+                                                      class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                                                    ></div>
+                                                  </label>
+                                                </div>
+
+                                                <div class="flex items-center">
                                                   <span
-                                                    class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                                    class="text-sm font-medium text-gray-900 dark:text-gray-300"
                                                     >Inactive</span
                                                   >
-                                                </label>
+                                                </div>
                                               </div>
 
                                               <!--  -->
@@ -46567,7 +46588,7 @@
                           class="flex flex-col justify-center flex-grow h-full bg-white"
                         >
                           <div class="relative">
-                            <div class="slider-menu-video">
+                            <div class="slider-menu-video px-3">
                               <div
                                 class="relative h-[43vh] bg-white z-index-10"
                               >
@@ -46591,7 +46612,7 @@
                       >
                         <!--  -->
 
-                        <div class="flex-1 flex flex-col mt-3">
+                        <div class="flex-1 flex flex-col mt-4">
                           <div class="h-[5vh]">
                             <div
                               class="flex items-center justify-beetwen w-full h-full"
@@ -46759,7 +46780,7 @@
                         </div>
 
                         <!--  -->
-                        <div class="flex items-end mb-4">
+                        <div class="flex items-end mb-3">
                           <div
                             class="grid grid-cols-5 items-center justify-center"
                           >
@@ -46804,7 +46825,7 @@
                           class="flex flex-col justify-center flex-grow h-full bg-white"
                         >
                           <div class="relative">
-                            <div class="slider-menu-video">
+                            <div class="slider-menu-video px-3">
                               <div
                                 class="relative h-[43vh] bg-white z-index-10"
                               >
@@ -46828,7 +46849,7 @@
                       >
                         <!--  -->
 
-                        <div class="flex-1 flex flex-col mt-3">
+                        <div class="flex-1 flex flex-col mt-4">
                           <div class="h-[5vh]">
                             <div
                               class="flex items-center justify-beetwen w-full h-full"
@@ -46846,7 +46867,7 @@
                                       class="text-sm -mt-1 font-semibold text-gray-700 cursor-pointer"
                                       onclick="showCardAgent(this)"
                                     >
-                                      Agus
+                                      Budimanzz11
                                     </div>
                                     <div
                                       class="flex items-center justify-center ml-1"
@@ -46996,7 +47017,7 @@
                         </div>
 
                         <!--  -->
-                        <div class="flex items-end mb-4">
+                        <div class="flex items-end mb-3">
                           <div
                             class="grid grid-cols-5 items-center justify-center"
                           >
