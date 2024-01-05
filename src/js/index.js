@@ -888,7 +888,7 @@ function getSliderStoryGaleri() {
                     <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
-    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-33px; onclick="event.stopPropagation();">
+    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-35px; onclick="event.stopPropagation();">
                   <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
                     <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
