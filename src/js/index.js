@@ -1765,6 +1765,8 @@ window.showCardInfoDetail = function (param) {
       hideElement(".story-galeri-on-tujuh");
       hideElement(".story-galeri-on-delapan");
       hideElement(".story-galeri-on-sembilan");
+      hideElement(".story-add-form");
+    
 
       break;
     // case "7":
@@ -1779,6 +1781,8 @@ window.showCardInfoDetail = function (param) {
       hideElement(".story-galeri-on");
       hideElement(".story-galeri-on-delapan");
       hideElement(".story-galeri-on-sembilan");
+      hideElement(".story-add-form");
+      
 
       break;
 
@@ -2997,3 +3001,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+
