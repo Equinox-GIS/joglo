@@ -92,34 +92,29 @@ function changeTab(event) {
   tab.classList.add("border-gray-400");
 }
 
-  window.showAddFormStories = function (element) {
+window.showAddFormStories = function (element) {
   event.preventDefault();
   event.stopPropagation();
 
-        // resetAllCards();
+  // resetAllCards();
 
-      // Favorit
-      // hideElement(".card-info-detail-favorit");
+  // Favorit
+  // hideElement(".card-info-detail-favorit");
 
-      // // Pencarian
-      // ".card-info-pencarian";
-      // hideElement(".card-detail-beranda");
+  // // Pencarian
+  // ".card-info-pencarian";
+  // hideElement(".card-detail-beranda");
 
-      // // Pencarian Dua
-      // hideElement(".card-info-favorit-dua");
-      // showElement(".card-info-detail-favorit-dua");
-      hideElement(".story-galeri-off");
-      hideElement(".story-galeri-on");
-      hideElement(".story-galeri-on-tujuh");
-      hideElement(".story-galeri-on-delapan");
-      hideElement(".story-galeri-on-sembilan");
-      showElement(".story-add-form");
-
-
-
-}
-
-
+  // // Pencarian Dua
+  // hideElement(".card-info-favorit-dua");
+  // showElement(".card-info-detail-favorit-dua");
+  hideElement(".story-galeri-off");
+  hideElement(".story-galeri-on");
+  hideElement(".story-galeri-on-tujuh");
+  hideElement(".story-galeri-on-delapan");
+  hideElement(".story-galeri-on-sembilan");
+  showElement(".story-add-form");
+};
 
 // ------------Start Drodpdown------------------
 
@@ -1766,7 +1761,6 @@ window.showCardInfoDetail = function (param) {
       hideElement(".story-galeri-on-delapan");
       hideElement(".story-galeri-on-sembilan");
       hideElement(".story-add-form");
-    
 
       break;
     // case "7":
@@ -1782,7 +1776,6 @@ window.showCardInfoDetail = function (param) {
       hideElement(".story-galeri-on-delapan");
       hideElement(".story-galeri-on-sembilan");
       hideElement(".story-add-form");
-
 
       break;
 
@@ -1827,7 +1820,6 @@ function resetAllCards() {
   hideElement(".card-info-favorit-dua");
   hideElement(".card-info-detail-favorit-dua");
   hideElement(".story-add-form");
-
 }
 
 // Function untuk pindah Menu Navigation
@@ -3002,29 +2994,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-  window.toggleActiveInactive = function () {
+window.toggleActiveInactive = function () {
   var checkBox = document.getElementById("toggleSwitchActiveInactive");
   var text = document.getElementById("toggleTextActiveInactive");
 
-  if (checkBox.checked == true){
+  if (checkBox.checked == true) {
     text.innerHTML = "Active";
   } else {
     text.innerHTML = "Inactive";
   }
-}
+};
 
-
-  window.toggleTerjualTersedia = function () {
+window.toggleTerjualTersedia = function () {
   var checkBox = document.getElementById("toggleSwitchTerjualTersedia");
   var text = document.getElementById("toggleTextTerjualTersedia");
 
-  if (checkBox.checked == true){
+  if (checkBox.checked == true) {
     text.innerHTML = "Tersedia";
   } else {
     text.innerHTML = "Terjual";
   }
-}
-
-
-
+};
