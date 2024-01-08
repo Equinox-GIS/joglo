@@ -15,9 +15,7 @@ module.exports = {
         // roboto: ['"Roboto"'],
         instagram_reguler: ["Font Instagram reguler"],
         instagram_bold: ["Font Instagram bold"],
-
-
-
+        instagram_medium: ["Font Instagram medium"],
       },
     },
   },

@@ -3003,4 +3003,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+  window.toggleActiveInactive = function () {
+  var checkBox = document.getElementById("toggleSwitchActiveInactive");
+  var text = document.getElementById("toggleTextActiveInactive");
+
+  if (checkBox.checked == true){
+    text.innerHTML = "Active";
+  } else {
+    text.innerHTML = "Inactive";
+  }
+}
+
+
+  window.toggleTerjualTersedia = function () {
+  var checkBox = document.getElementById("toggleSwitchTerjualTersedia");
+  var text = document.getElementById("toggleTextTerjualTersedia");
+
+  if (checkBox.checked == true){
+    text.innerHTML = "Tersedia";
+  } else {
+    text.innerHTML = "Terjual";
+  }
+}
+
+
 
