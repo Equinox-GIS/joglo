@@ -878,17 +878,17 @@ function getSliderDefaultOptions() {
 
 function getSliderStoryGaleri() {
   return {
-    slidesToShow: 8,
+    slidesToShow: 9,
     slidesToScroll: 5,
     infinite: false,
     dots: false,
-    prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-33px; onclick="event.stopPropagation();">
+    prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-43px !important; onclick="event.stopPropagation();">
     <div>
                   <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
                     <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
-    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-35px; onclick="event.stopPropagation();">
+    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-49px!important; onclick="event.stopPropagation();">
                   <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
                     <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
