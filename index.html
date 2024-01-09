@@ -10186,7 +10186,7 @@
                             <div
                               class="h-[62.5vh] overflow-y-auto hide-scrollbar"
                             >
-                              <div class="grid grid-cols-2 gap-2 mb-2">
+                              <div class="grid grid-cols-2 gap-2 mb-24">
                                 <!-- Card Beranda 1 -->
                                 <!--  -->
                                 <div
@@ -10197,6 +10197,39 @@
                                 <div
                                   class="col-span-2 w-full bg-gray-100 rounded-lg h-[21vh] px-5 py-3 flex flex-col"
                                 >
+                                  <!--  -->
+                                  <div class="flex flex-row mb-2 text-sm">
+                                    <div class="w-full basis-1/5 font-semibold">
+                                      Kode Sub Zona
+                                    </div>
+                                    <div class="w-full basis-4/5">
+                                      <div class="">HK</div>
+                                    </div>
+                                  </div>
+
+                                  <!--  -->
+                                  <div class="flex flex-row mb-2 text-sm">
+                                    <div class="w-full basis-1/5 font-semibold">
+                                      Sub Zona
+                                    </div>
+                                    <div class="w-full basis-4/5">
+                                      <div class="">
+                                        Pertahanan dan Keamanan
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!--  -->
+                                  <div class="flex flex-row mb-2 text-sm">
+                                    <div class="w-full basis-1/5 font-semibold">
+                                      Zona
+                                    </div>
+                                    <div class="w-full basis-4/5">
+                                      <div class="">
+                                        Pertahanan dan Keamanan
+                                      </div>
+                                    </div>
+                                  </div>
                                   <!--  -->
                                   <div class="flex flex-row mb-2">
                                     <div
@@ -16080,7 +16113,7 @@
                             aria-controls="detail-pasang-satu"
                             aria-selected="true"
                           >
-                            Tampak Bangunan
+                            Listing
                           </button>
                         </li>
 
@@ -16110,12 +16143,12 @@
                             aria-controls="detail-pasang-tiga"
                             aria-selected="false"
                           >
-                            Info
+                            Stories
                           </button>
                         </li>
 
                         <!-- Menu Tab Empat Pasang -->
-                        <li class="hidden" role="presentation">
+                        <li class="" role="presentation">
                           <button
                             class="inline-block px-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
                             id="detail-pasang-empat-tab"
@@ -16125,7 +16158,7 @@
                             aria-controls="detail-pasang-empat"
                             aria-selected="false"
                           >
-                            Sarana Prasarana
+                            Teks Baris
                           </button>
                         </li>
 
@@ -16486,136 +16519,29 @@
                               <div class="w-ful col-span-2">
                                 <div class="relative w-full">
                                   <!-- Upload Gambar -->
-                                  <div class="grid grid-cols-5 gap-y-3 gap-x-4">
+                                  <div class="grid grid-cols-1 gap-y-3 gap-x-4">
                                     <!-- Gambar 1 -->
-                                    <div class="w-full">
-                                      <div class="relative w-full">
-                                        <label
-                                          for="gambar-rumah-1"
-                                          class="custom-file-upload"
-                                        >
-                                          <div class="block text-sm mb-2">
-                                            Unggah Gambar 1
-                                          </div>
-                                          <input
-                                            type="file"
-                                            id="gambar-rumah-1"
-                                            accept="image/*"
-                                            onchange="previewImageListing(1);"
-                                          />
-                                        </label>
-                                        <img
-                                          id="preview-gambar-1"
-                                          src=""
-                                          alt="Pratinjau Gambar 1"
-                                          class="hidden w-full mt-2"
-                                        />
+
+                                    <div
+                                      class="border border-dashed border-gray-500 relative"
+                                    >
+                                      <input
+                                        type="file"
+                                        class="cursor-pointer relative block opacity-0 w-full h-full p-20 z-50"
+                                      />
+                                      <div
+                                        class="text-center p-10 absolute top-0 right-0 left-0 m-auto"
+                                      >
+                                        <h4>
+                                          Seret berkas di mana saja untuk
+                                          mengunggah
+                                          <br />atau
+                                        </h4>
+                                        <p class="">Pilih Berkas</p>
                                       </div>
                                     </div>
 
-                                    <!-- Gambar 2 -->
-                                    <div class="w-full">
-                                      <div class="relative w-full">
-                                        <label
-                                          for="gambar-rumah-2"
-                                          class="custom-file-upload"
-                                        >
-                                          <div class="block text-sm mb-2">
-                                            Unggah Gambar 2
-                                          </div>
-                                          <input
-                                            type="file"
-                                            id="gambar-rumah-2"
-                                            accept="image/*"
-                                            onchange="previewImageListing(2);"
-                                          />
-                                        </label>
-                                        <img
-                                          id="preview-gambar-2"
-                                          src=""
-                                          alt="Pratinjau Gambar 2"
-                                          class="hidden w-full mt-2"
-                                        />
-                                      </div>
-                                    </div>
-
-                                    <!-- Gambar 3 -->
-                                    <div class="w-full">
-                                      <div class="relative w-full">
-                                        <label
-                                          for="gambar-rumah-3"
-                                          class="custom-file-upload"
-                                        >
-                                          <div class="block text-sm mb-2">
-                                            Unggah Gambar 3
-                                          </div>
-                                          <input
-                                            type="file"
-                                            id="gambar-rumah-3"
-                                            accept="image/*"
-                                            onchange="previewImageListing(3);"
-                                          />
-                                        </label>
-                                        <img
-                                          id="preview-gambar-3"
-                                          src=""
-                                          alt="Pratinjau Gambar 3"
-                                          class="hidden w-full mt-2"
-                                        />
-                                      </div>
-                                    </div>
-
-                                    <!-- Gambar 4 -->
-                                    <div class="w-full">
-                                      <div class="relative w-full">
-                                        <label
-                                          for="gambar-rumah-4"
-                                          class="custom-file-upload"
-                                        >
-                                          <div class="block text-sm mb-2">
-                                            Unggah Gambar 4
-                                          </div>
-                                          <input
-                                            type="file"
-                                            id="gambar-rumah-4"
-                                            accept="image/*"
-                                            onchange="previewImageListing(4);"
-                                          />
-                                        </label>
-                                        <img
-                                          id="preview-gambar-4"
-                                          src=""
-                                          alt="Pratinjau Gambar 4"
-                                          class="hidden w-full mt-2"
-                                        />
-                                      </div>
-                                    </div>
-
-                                    <!-- Gambar 5 -->
-                                    <div class="w-full">
-                                      <div class="relative w-full">
-                                        <label
-                                          for="gambar-rumah-5"
-                                          class="custom-file-upload"
-                                        >
-                                          <div class="block text-sm mb-2">
-                                            Unggah Gambar 5
-                                          </div>
-                                          <input
-                                            type="file"
-                                            id="gambar-rumah-5"
-                                            accept="image/*"
-                                            onchange="previewImageListing(5);"
-                                          />
-                                        </label>
-                                        <img
-                                          id="preview-gambar-5"
-                                          src=""
-                                          alt="Pratinjau Gambar 5"
-                                          class="hidden w-full mt-2"
-                                        />
-                                      </div>
-                                    </div>
+                                    <!--  -->
                                   </div>
                                 </div>
                               </div>
@@ -16626,7 +16552,7 @@
                                     class="block text-sm mb-2"
                                     for="harga-listrik"
                                   >
-                                    Harga Listrik
+                                    Listrik
                                   </label>
                                   <input
                                     type="text"
@@ -16669,7 +16595,7 @@
                                   />
                                   <label
                                     for="carport"
-                                    class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
                                     >Carport</label
                                   >
                                 </div>
@@ -16686,7 +16612,7 @@
                                   />
                                   <label
                                     for="swimming-pool"
-                                    class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
                                     >Swimming Pool</label
                                   >
                                 </div>
@@ -16703,7 +16629,7 @@
                                   />
                                   <label
                                     for="imb"
-                                    class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
                                     >IMB</label
                                   >
                                 </div>
@@ -16720,7 +16646,7 @@
                                   />
                                   <label
                                     for="gate-cluster"
-                                    class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
                                     >Gate Cluster</label
                                   >
                                 </div>
@@ -16749,7 +16675,80 @@
                         role="tabpanel"
                         aria-labelledby="detail-pasang-tiga-tab"
                       >
-                        tiga
+                        <div class="py-2">
+                          <div
+                            class="h-[70.5vh] overflow-y-auto hide-scrollbar text-gray-700"
+                          >
+                            <form>
+                              <div
+                                class="grid grid-cols-2 gap-y-3 gap-x-4 mt-1"
+                              >
+                                <!-- Deskripsi -->
+                                <div class="col-span-2">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-sm mb-2"
+                                      for="url_video"
+                                    >
+                                      URl Video
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="url_video"
+                                      class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- Deskripsi 2 -->
+                                <div class="col-span-2">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-sm mb-2"
+                                      for="id_unik"
+                                    >
+                                      ID Unik
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="id_unik"
+                                      class="border-0 px-2 py-2 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                    />
+                                  </div>
+                                </div>
+                                <!--  -->
+                                <div class="col-span-2">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-sm mb-2"
+                                      for="id_unik"
+                                    >
+                                      Deskripsi
+                                    </label>
+                                    <textarea
+                                      id="id_unik"
+                                      rows="6"
+                                      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                    ></textarea>
+                                  </div>
+                                </div>
+                                <!--  -->
+
+                                <div
+                                  class="flex justify-center col-span-2 mt-2"
+                                >
+                                  <button
+                                    type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                  >
+                                    Simpan
+                                  </button>
+                                </div>
+                                <!--  -->
+                              </div>
+                            </form>
+                          </div>
+                        </div>
                       </div>
 
                       <!-- Konten Tab Empat Pasang -->
@@ -16761,7 +16760,63 @@
                       >
                         <!-- iini -->
 
-                        empat
+                        <div class="py-2">
+                          <div
+                            class="h-[70.5vh] overflow-y-auto hide-scrollbar text-gray-700"
+                          >
+                            <form>
+                              <div
+                                class="grid grid-cols-2 gap-y-3 gap-x-4 mt-1"
+                              >
+                                <!-- Deskripsi 2 -->
+                                <div class="col-span-2">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-sm mb-2"
+                                      for="id_unik"
+                                    >
+                                      ID Unik
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="id_unik"
+                                      class="border-0 px-2 py-2 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                    />
+                                  </div>
+                                </div>
+                                <!--  -->
+                                <div class="col-span-2">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-sm mb-2"
+                                      for="id_unik"
+                                    >
+                                      Deskripsi
+                                    </label>
+                                    <textarea
+                                      id="id_unik"
+                                      rows="6"
+                                      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                    ></textarea>
+                                  </div>
+                                </div>
+                                <!--  -->
+
+                                <div
+                                  class="flex justify-center col-span-2 mt-2"
+                                >
+                                  <button
+                                    type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                  >
+                                    Simpan
+                                  </button>
+                                </div>
+                                <!--  -->
+                              </div>
+                            </form>
+                          </div>
+                        </div>
 
                         <!--  -->
                       </div>
@@ -31336,6 +31391,21 @@
                                 Analitik
                               </button>
                             </li>
+                            <!-- Menu Tab Stories -->
+                            <li class="" role="presentation">
+                              <button
+                                class="inline-block px-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
+                                id="detail-statistik-empat-tab"
+                                data-tabs-target="#detail-statistik-empat"
+                                type="button"
+                                role="tab"
+                                aria-controls="detail-statistik-empat"
+                                aria-selected="false"
+                              >
+                                Stories
+                              </button>
+                            </li>
+                            <!--  -->
                           </ul>
                         </div>
                         <!--  -->
@@ -45534,7 +45604,7 @@
 
                                   <!-- Card Judul -->
                                   <div
-                                    class="grid grid-row-3 px-2.5 pb-2.5 gap-1 pt-2 mode-card-kedua bg-white cursor-pointer rounded-lg shadow w-full"
+                                    class="grid grid-row-3 p-5 gap-4 mode-card-kedua bg-white cursor-pointer rounded-lg shadow w-full"
                                   >
                                     <div class="w-full grid grid-cols-3">
                                       <div class="w-full flex flex-col">
@@ -45586,7 +45656,7 @@
                                           Rp 66.000.000.000
                                         </div>
                                         <div class="w-full flex text-sm ml-1">
-                                          Total Penjualan Bulan ini
+                                          Penjualan Bulan ini
                                         </div>
                                       </div>
                                       <div class="w-full flex flex-col">
@@ -47759,6 +47829,15 @@
                           </div>
                         </div>
                         <!--  -->
+                      </div>
+
+                      <div
+                        class="hidden px-3 py-2"
+                        id="detail-statistik-empat"
+                        role="tabpanel"
+                        aria-labelledby="detail-statistik-empat-tab"
+                      >
+                        <div class="py-2">sadasdsa</div>
                       </div>
 
                       <!-- Konten Tab Empat AgenProfil -->
@@ -52478,7 +52557,6 @@
           preview.classList.add("hidden");
         }
       }
-      <!--  -->
 
       function formatNumber(input) {
         // Menghapus karakter selain digit
