@@ -1106,3 +1106,15 @@ body {
 .custom-dots-class {
   bottom: 15px !important;
 }
+
+/* Chrome, Safari, Edge, Opera */
+.remove_style_arrow_inputan, input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.remove_style_arrow_inputan, input[type="number"] {
+  -moz-appearance: textfield;
+}
