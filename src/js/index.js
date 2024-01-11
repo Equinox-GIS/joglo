@@ -1180,7 +1180,7 @@ function addClickHandlerToDots() {
 
 $(document).ready(function () {
   initSlickCardInfo("slider-card-beranda");
-  initSlickStoryGaleri();
+  // initSlickStoryGaleri();
   cardModeTiga();
   cardModePesan();
 
@@ -1440,7 +1440,6 @@ window.showCardTambahStories = function (element) {
     console.error("MenuDuaTab not found");
   }
 };
-
 
 window.closeDetailAgent = function () {
   if (lastClickedAgent) {
