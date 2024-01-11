@@ -1409,7 +1409,6 @@ window.showCardPesantDetail = function () {
 };
 
 // Agent
-
 let lastClickedAgent;
 window.showCardAgent = function (element) {
   event.stopPropagation();
@@ -1424,6 +1423,23 @@ window.showCardAgent = function (element) {
     console.error("MenuEmpatTab not found");
   }
 };
+
+// TambahStories
+let lastClickedTambahStories;
+window.showCardTambahStories = function (element) {
+  event.stopPropagation();
+
+  lastClickedTambahStories = element;
+
+  var menuEmpatTab = document.getElementById("MenuDuaTab");
+  if (MenuDuaTab) {
+    MenuDuaTab.click();
+    showCardTambahStoriesDetail();
+  } else {
+    console.error("MenuDuaTab not found");
+  }
+};
+
 
 window.closeDetailAgent = function () {
   if (lastClickedAgent) {
