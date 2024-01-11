@@ -1432,9 +1432,10 @@ window.showCardTambahStories = function (element) {
   lastClickedTambahStories = element;
 
   var menuEmpatTab = document.getElementById("MenuDuaTab");
+  var AddFormStories = document.getElementById("detail-pasang-tiga-tab");
   if (MenuDuaTab) {
     MenuDuaTab.click();
-    showCardTambahStoriesDetail();
+    AddFormStories.click();
   } else {
     console.error("MenuDuaTab not found");
   }
