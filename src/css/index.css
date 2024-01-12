@@ -478,6 +478,19 @@
 }
 /*  */
 
+.custom_rounded_analitik {
+  overflow: hidden;
+    border-top-left-radius: 0.5rem !important;
+  /* border-top-right-radius: 0.5rem; */
+}
+
+.custom_rounded_analitik video,
+.custom_rounded_analitik img {
+    border-top-left-radius: 0.5rem !important;
+  /* border-top-right-radius: 0.5rem; */
+}
+/*  */
+
 #mapSoaraja,
 .mapboxgl-popup-content {
   padding: 0px !important;
