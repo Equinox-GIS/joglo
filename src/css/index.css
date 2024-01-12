@@ -467,13 +467,13 @@
 
 .slider-card-mode-ketiga {
   overflow: hidden;
-  border-top-left-radius: 0.5rem;
+  /*  border-top-left-radius: 0.5rem;*/
   /* border-top-right-radius: 0.5rem; */
 }
 
 .slider-card-mode-ketiga video,
 .slider-card-mode-ketiga img {
-  border-top-left-radius: 0.5rem;
+  /*  border-top-left-radius: 0.5rem;*/
   /* border-top-right-radius: 0.5rem; */
 }
 /*  */
@@ -1108,18 +1108,20 @@ body {
 }
 
 /* Chrome, Safari, Edge, Opera */
-.remove_style_arrow_inputan, input[type="number"]::-webkit-outer-spin-button,
+.remove_style_arrow_inputan,
+input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
-.remove_style_arrow_inputan, input[type="number"] {
+.remove_style_arrow_inputan,
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
- .hapus_focus_checkbox:focus {
-    outline: none !important;
-    box-shadow: none !important;
-  }
+.hapus_focus_checkbox:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
