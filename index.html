@@ -781,7 +781,10 @@
 
                     <!--  -->
                     <div class="py-3 flex justify-center">
-                      <div class="grid grid-cols-4 text-xs items-center gap-2">
+                      <div
+                        class="grid grid-cols-4 text-xs items-center gap-x-1"
+                      >
+                        <!--  -->
                         <div class="text-center flex justify-end">
                           <span
                             id="luas1"
@@ -790,6 +793,7 @@
                             <!-- inner html karna < membuat vite tidak bisa compile -->
                           </span>
                         </div>
+                        <!--  -->
                         <div class="text-center">
                           <span
                             id="luas2"
@@ -798,6 +802,7 @@
                             100-200
                           </span>
                         </div>
+                        <!--  -->
                         <div class="text-center">
                           <span
                             id="luas3"
@@ -806,6 +811,7 @@
                             200-300
                           </span>
                         </div>
+                        <!--  -->
                         <div class="text-center flex justify-start">
                           <span
                             id="luas4"
@@ -814,6 +820,7 @@
                             > 300
                           </span>
                         </div>
+                        <!--  -->
                       </div>
                     </div>
                   </div>
@@ -827,7 +834,9 @@
 
                     <!--  -->
                     <div class="py-3 flex justify-center">
-                      <div class="grid grid-cols-4 text-xs items-center gap-2">
+                      <div
+                        class="grid grid-cols-4 text-xs items-center gap-x-1"
+                      >
                         <div class="text-center flex justify-end">
                           <span
                             id="btn1"
@@ -13810,7 +13819,7 @@
                                           <li>Akses jalan raya utama</li>
                                           <li>Perumahan TOWNHOUSE mewah</li>
                                           <li>Row jalan 6.5 meter (2mobil)</li>
-                                          <li>One gate security xxxx12</li>
+                                          <li>One gate security xxxx129</li>
                                         </ol>
                                       </ul>
                                     </div>
@@ -21654,7 +21663,7 @@
                         </li>
 
                         <!-- Menu Tab Dua Pasang -->
-                        <li class="hidden" role="presentation">
+                        <li class="" role="presentation">
                           <button
                             class="inline-block px-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
                             id="detail-pasang-dua-tab"
@@ -21664,7 +21673,7 @@
                             aria-controls="detail-pasang-dua"
                             aria-selected="false"
                           >
-                            3D Tour
+                            Iklan Agen
                           </button>
                         </li>
 
@@ -22212,7 +22221,46 @@
                         role="tabpanel"
                         aria-labelledby="detail-pasang-dua-tab"
                       >
-                        dua
+                        <div class="py-2">
+                          <div
+                            class="h-[70.5vh] overflow-y-auto hide-scrollbar text-gray-700"
+                          >
+                            <form>
+                              <div
+                                class="grid grid-cols-2 gap-y-3 gap-x-4 mt-1"
+                              >
+                                <!--  -->
+                                <div class="col-span-2">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-sm mb-2"
+                                      for="deskripsi_iklan_agen"
+                                    >
+                                      Deskripsi (maks. 30 karakter)
+                                    </label>
+                                    <textarea
+                                      id="deskripsi_iklan_agen"
+                                      class="block p-2.5 h-[34vh] resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                                    ></textarea>
+                                  </div>
+                                </div>
+                                <!--  -->
+
+                                <div
+                                  class="flex justify-center col-span-2 pt-3 pb-6"
+                                >
+                                  <button
+                                    type="button"
+                                    class="text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                                  >
+                                    Simpan
+                                  </button>
+                                </div>
+                                <!--  -->
+                              </div>
+                            </form>
+                          </div>
+                        </div>
                       </div>
 
                       <!-- Konten Tab Tiga Pasang -->
@@ -42923,7 +42971,7 @@
                       </div>
 
                       <div
-                        class="hidden px-3 py-2"
+                        class="hidden px-3 py-2.5"
                         id="detail-statistik-tiga"
                         role="tabpanel"
                         aria-labelledby="detail-statistik-tiga-tab"
@@ -42933,106 +42981,6 @@
                           <!--  Card DetailAgen card-info-detailagen -->
                           <div class="flex flex-col">
                             <!-- Judul DetailAgen -->
-                            <div class="">
-                              <!--  judul-dijual-kedua -->
-                              <div
-                                class="flex flex-row items-stretch justify-between"
-                              >
-                                <div
-                                  class="font-normal text-sm self-center text-gray-700 -mb-0.5"
-                                >
-                                  Menampilkan 9999 data
-                                </div>
-
-                                <div class="">
-                                  <div class="relative flex flex-row">
-                                    <!-- Mode Card -->
-                                    <div class="flex items-center mr-2">
-                                      <div
-                                        class="w-9 h-9 flex items-center justify-center cursor-pointer"
-                                      >
-                                        <!--   <img
-                                          onclick="ChangeModeCard(this)"
-                                          class="w-7 h-7 object-contain cursor-pointer profil-agent-klik"
-                                          src="./src/images/list.png"
-                                          alt=""
-                                        /> -->
-                                      </div>
-                                    </div>
-
-                                    <!-- Dropdown Filter -->
-                                    <div class="flex items-center">
-                                      <div
-                                        class="relative inline-block text-left"
-                                      >
-                                        <button
-                                          id="dropdown-agen-button"
-                                          class="inline-flex justify-between items-center pl-1 w-40 h-8 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-0"
-                                        >
-                                          <span
-                                            id="dropdown-agen-selected-item"
-                                            class="pl-2"
-                                            >Terbaru</span
-                                          >
-
-                                          <svg
-                                            id="dropdown-agen-arrow-icon"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 mr-2 transition-transform duration-200 transform"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                          >
-                                            <path
-                                              fill-rule="evenodd"
-                                              d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                                              clip-rule="evenodd"
-                                            ></path>
-                                          </svg>
-                                        </button>
-
-                                        <div
-                                          id="dropdown-agen-menu"
-                                          class="hidden origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
-                                        >
-                                          <div
-                                            class="py-2 p-2"
-                                            role="menu"
-                                            aria-orientation="vertical"
-                                            aria-labelledby="dropdown-agen-button"
-                                          >
-                                            <a
-                                              id="item-harga-tertinggi"
-                                              class="flex block rounded-md px-1 py-1 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
-                                              role="menuitem"
-                                            >
-                                              Harga Tertinggi
-                                            </a>
-                                            <a
-                                              id="item-harga-terendah"
-                                              class="flex block rounded-md px-1 py-1 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
-                                              role="menuitem"
-                                            >
-                                              Harga Terendah
-                                            </a>
-                                            <a
-                                              id="item-populer"
-                                              class="flex block rounded-md px-1 py-1 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
-                                              role="menuitem"
-                                            >
-                                              Populer
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <!--  -->
-                                  </div>
-                                </div>
-                              </div>
-                              <!--  -->
-                              <div class="py-1 w-full"></div>
-                            </div>
 
                             <!--  Konten Card buatFavorti -->
                             <!--     <div
@@ -43042,7 +42990,7 @@
                             <div class="h-full mode-card-kedua">
                               <!-- Card Beranda Mode 2 -->
                               <div
-                                class="w-full h-[80.5vh] overflow-y-auto overflow-x-hidden hide-scrollbar"
+                                class="w-full h-[87.5vh] overflow-y-auto overflow-x-hidden hide-scrollbar"
                               >
                                 <div class="flex flex-col h-full">
                                   <!-- Mode Ke Ketiga -->
@@ -43407,7 +43355,7 @@
                                             class="flex flex-col font-normal"
                                           >
                                             <div
-                                              class="flex items-center text-[11px] text-gray-700"
+                                              class="flex items-center text-xs text-gray-700"
                                             >
                                               <span class="">LT 80 m² |</span>
                                               <span class="">LB 276 m² |</span>
@@ -43513,12 +43461,12 @@
                                         </div>
                                         <!--  -->
                                         <div
-                                          class="w-full h-full grid grid-rows-7"
+                                          class="w-full h-full grid grid-rows-4"
                                         >
                                           <!-- <div class="w-full h-full items-center"> -->
 
                                           <div
-                                            class="w-full flex justify-center row-span-6 my-8"
+                                            class="w-full flex justify-center row-span-2 my-6"
                                           >
                                             <div
                                               class="flex flex-col justify-center"
@@ -43611,7 +43559,6 @@
                                   </div>
 
                                   <!-- Card Dummy -->
-
                                   <div
                                     class="grid grid-cols-6 h-[28vh] mode-card-kedua bg-white cursor-pointer rounded-lg shadow mt-3"
                                   >
@@ -43684,7 +43631,7 @@
                                             class="flex flex-col font-normal"
                                           >
                                             <div
-                                              class="flex items-center text-[11px] text-gray-700"
+                                              class="flex items-center text-xs text-gray-700"
                                             >
                                               <span class="">LT 80 m² |</span>
                                               <span class="">LB 276 m² |</span>
@@ -43790,12 +43737,12 @@
                                         </div>
                                         <!--  -->
                                         <div
-                                          class="w-full h-full grid grid-rows-7"
+                                          class="w-full h-full grid grid-rows-4"
                                         >
                                           <!-- <div class="w-full h-full items-center"> -->
 
                                           <div
-                                            class="w-full flex justify-center row-span-6 my-8"
+                                            class="w-full flex justify-center row-span-2 my-6"
                                           >
                                             <div
                                               class="flex flex-col justify-center"
@@ -43827,10 +43774,10 @@
                                                 >
                                                   <input
                                                     type="checkbox"
-                                                    id="toggleSwitchTerjualTersediaDummy"
+                                                    id="toggleSwitchTerjualTersedia"
                                                     value=""
                                                     class="sr-only peer"
-                                                    onclick="toggleTerjualTersediaDummy()"
+                                                    onclick="toggleTerjualTersedia()"
                                                   />
                                                   <div
                                                     class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
@@ -43840,7 +43787,7 @@
 
                                               <div class="flex">
                                                 <span
-                                                  id="toggleTextTerjualTersediaDummy"
+                                                  id="toggleTextTerjualTersedia"
                                                   class="text-sm font-medium text-gray-900 dark:text-gray-300"
                                                   >Terjual</span
                                                 >
@@ -43856,10 +43803,10 @@
                                                 >
                                                   <input
                                                     type="checkbox"
-                                                    id="toggleSwitchActiveInactiveDummy"
+                                                    id="toggleSwitchActiveInactive"
                                                     value=""
                                                     class="sr-only peer"
-                                                    onclick="toggleActiveInactiveDummy()"
+                                                    onclick="toggleActiveInactive()"
                                                   />
                                                   <div
                                                     class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
@@ -43869,7 +43816,7 @@
 
                                               <div class="flex">
                                                 <span
-                                                  id="toggleTextActiveInactiveDummy"
+                                                  id="toggleTextActiveInactive"
                                                   class="text-sm font-medium text-gray-900 dark:text-gray-300"
                                                   >Inactive</span
                                                 >
@@ -43888,7 +43835,6 @@
                                   </div>
 
                                   <!-- Card Dummy -->
-
                                   <div
                                     class="grid grid-cols-6 h-[28vh] mode-card-kedua bg-white cursor-pointer rounded-lg shadow mt-3"
                                   >
@@ -43961,7 +43907,7 @@
                                             class="flex flex-col font-normal"
                                           >
                                             <div
-                                              class="flex items-center text-[11px] text-gray-700"
+                                              class="flex items-center text-xs text-gray-700"
                                             >
                                               <span class="">LT 80 m² |</span>
                                               <span class="">LB 276 m² |</span>
@@ -44067,12 +44013,12 @@
                                         </div>
                                         <!--  -->
                                         <div
-                                          class="w-full h-full grid grid-rows-7"
+                                          class="w-full h-full grid grid-rows-4"
                                         >
                                           <!-- <div class="w-full h-full items-center"> -->
 
                                           <div
-                                            class="w-full flex justify-center row-span-6 my-8"
+                                            class="w-full flex justify-center row-span-2 my-6"
                                           >
                                             <div
                                               class="flex flex-col justify-center"
@@ -44104,10 +44050,10 @@
                                                 >
                                                   <input
                                                     type="checkbox"
-                                                    id="toggleSwitchTerjualTersediaDummy"
+                                                    id="toggleSwitchTerjualTersedia"
                                                     value=""
                                                     class="sr-only peer"
-                                                    onclick="toggleTerjualTersediaDummy()"
+                                                    onclick="toggleTerjualTersedia()"
                                                   />
                                                   <div
                                                     class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
@@ -44117,7 +44063,7 @@
 
                                               <div class="flex">
                                                 <span
-                                                  id="toggleTextTerjualTersediaDummy"
+                                                  id="toggleTextTerjualTersedia"
                                                   class="text-sm font-medium text-gray-900 dark:text-gray-300"
                                                   >Terjual</span
                                                 >
@@ -44133,10 +44079,10 @@
                                                 >
                                                   <input
                                                     type="checkbox"
-                                                    id="toggleSwitchActiveInactiveDummy"
+                                                    id="toggleSwitchActiveInactive"
                                                     value=""
                                                     class="sr-only peer"
-                                                    onclick="toggleActiveInactiveDummy()"
+                                                    onclick="toggleActiveInactive()"
                                                   />
                                                   <div
                                                     class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
@@ -44146,7 +44092,7 @@
 
                                               <div class="flex">
                                                 <span
-                                                  id="toggleTextActiveInactiveDummy"
+                                                  id="toggleTextActiveInactive"
                                                   class="text-sm font-medium text-gray-900 dark:text-gray-300"
                                                   >Inactive</span
                                                 >
@@ -44165,7 +44111,6 @@
                                   </div>
 
                                   <!-- Card Dummy -->
-
                                   <div
                                     class="grid grid-cols-6 h-[28vh] mode-card-kedua bg-white cursor-pointer rounded-lg shadow mt-3"
                                   >
@@ -44238,7 +44183,7 @@
                                             class="flex flex-col font-normal"
                                           >
                                             <div
-                                              class="flex items-center text-[11px] text-gray-700"
+                                              class="flex items-center text-xs text-gray-700"
                                             >
                                               <span class="">LT 80 m² |</span>
                                               <span class="">LB 276 m² |</span>
@@ -44344,12 +44289,12 @@
                                         </div>
                                         <!--  -->
                                         <div
-                                          class="w-full h-full grid grid-rows-7"
+                                          class="w-full h-full grid grid-rows-4"
                                         >
                                           <!-- <div class="w-full h-full items-center"> -->
 
                                           <div
-                                            class="w-full flex justify-center row-span-6 my-8"
+                                            class="w-full flex justify-center row-span-2 my-6"
                                           >
                                             <div
                                               class="flex flex-col justify-center"
@@ -44381,10 +44326,10 @@
                                                 >
                                                   <input
                                                     type="checkbox"
-                                                    id="toggleSwitchTerjualTersediaDummy"
+                                                    id="toggleSwitchTerjualTersedia"
                                                     value=""
                                                     class="sr-only peer"
-                                                    onclick="toggleTerjualTersediaDummy()"
+                                                    onclick="toggleTerjualTersedia()"
                                                   />
                                                   <div
                                                     class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
@@ -44394,7 +44339,7 @@
 
                                               <div class="flex">
                                                 <span
-                                                  id="toggleTextTerjualTersediaDummy"
+                                                  id="toggleTextTerjualTersedia"
                                                   class="text-sm font-medium text-gray-900 dark:text-gray-300"
                                                   >Terjual</span
                                                 >
@@ -44410,10 +44355,10 @@
                                                 >
                                                   <input
                                                     type="checkbox"
-                                                    id="toggleSwitchActiveInactiveDummy"
+                                                    id="toggleSwitchActiveInactive"
                                                     value=""
                                                     class="sr-only peer"
-                                                    onclick="toggleActiveInactiveDummy()"
+                                                    onclick="toggleActiveInactive()"
                                                   />
                                                   <div
                                                     class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
@@ -44423,7 +44368,559 @@
 
                                               <div class="flex">
                                                 <span
-                                                  id="toggleTextActiveInactiveDummy"
+                                                  id="toggleTextActiveInactive"
+                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
+                                                  >Inactive</span
+                                                >
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <!--  -->
+                                          <!-- </div> -->
+                                        </div>
+                                        <!--  -->
+                                      </div>
+                                    </div>
+
+                                    <!--  -->
+                                  </div>
+
+                                  <!-- Card Dummy -->
+                                  <div
+                                    class="grid grid-cols-6 h-[28vh] mode-card-kedua bg-white cursor-pointer rounded-lg shadow mt-3"
+                                  >
+                                    <div class="w-full h-full col-span-2">
+                                      <div
+                                        class="max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                                        data-active-tab="1"
+                                        data-object-id="1604"
+                                        onclick="showCardInfoDetail(this)"
+                                      >
+                                        <div class="w-full h-[19vh] relative">
+                                          <div
+                                            class="slider-card-mode-ketiga mode-mini-video w-full h-full"
+                                          >
+                                            <div
+                                              class="relative h-[19vh] bg-black z-index-10"
+                                            >
+                                              <img
+                                                class="w-full h-full object-contain"
+                                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                                alt=""
+                                              />
+                                              <div
+                                                class="arrow-right-custom-mini"
+                                              >
+                                                <span class="font-semibold"
+                                                  >NEW</span
+                                                >
+                                              </div>
+                                            </div>
+                                            <div
+                                              class="relative h-[19vh] bg-black z-index-10"
+                                            >
+                                              <img
+                                                class="w-full h-full object-contain"
+                                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                                alt=""
+                                              />
+                                              <div
+                                                class="arrow-right-custom-mini"
+                                              >
+                                                <span class="font-semibold"
+                                                  >NEW</span
+                                                >
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div
+                                          class="flex flex-col py-1 pr-1 pl-1.5 w-full"
+                                        >
+                                          <!--  -->
+                                          <div
+                                            class="flex flex-row justify-between"
+                                          >
+                                            <div>
+                                              <div
+                                                class="inline-flex items-center"
+                                              >
+                                                <h5
+                                                  class="text-md font-bold tracking-tight text-black"
+                                                >
+                                                  Rp 11.300.000.000
+                                                </h5>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <!--  -->
+                                          <div
+                                            class="flex flex-col font-normal"
+                                          >
+                                            <div
+                                              class="flex items-center text-xs text-gray-700"
+                                            >
+                                              <span class="">LT 80 m² |</span>
+                                              <span class="">LB 276 m² |</span>
+                                              <span class="">2 KT |</span>
+                                              <span class="">5 KM</span>
+                                            </div>
+                                            <div class="text-xs text-gray-700">
+                                              Sunter, Tanjung Priok, Jakuut
+                                            </div>
+                                          </div>
+                                          <!--  -->
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div
+                                      class="col-span-4 w-full h-full flex flex-col"
+                                    >
+                                      <div class="w-full flex flex-row">
+                                        <!--  -->
+                                        <div
+                                          class="w-full flex flex-row pt-3 justify-center"
+                                        >
+                                          <div>
+                                            <img
+                                              class="w-4 h-4"
+                                              src="/src/images/show.png"
+                                              alt=""
+                                            />
+                                          </div>
+                                          <!--  -->
+                                          <div
+                                            class="ml-2 text-xs text-gray-700"
+                                          >
+                                            325
+                                            <span class="text-green-500 ml-1"
+                                              >4%</span
+                                            >
+                                          </div>
+                                          <!--  -->
+                                        </div>
+
+                                        <div
+                                          class="w-full flex flex-row justify-center py-3"
+                                        >
+                                          <div>
+                                            <img
+                                              class="w-4 h-4"
+                                              src="/src/images/people.png"
+                                              alt=""
+                                            />
+                                          </div>
+                                          <!--  -->
+                                          <div
+                                            class="ml-2 text-xs text-gray-700"
+                                          >
+                                            325
+                                            <span class="text-green-500 ml-1"
+                                              >4%</span
+                                            >
+                                          </div>
+                                          <!--  -->
+                                        </div>
+
+                                        <!--  -->
+
+                                        <div
+                                          class="w-full flex flex-row justify-center py-3"
+                                        >
+                                          <div>
+                                            <img
+                                              class="w-4 h-4"
+                                              src="/src/images/heart-off.png"
+                                              alt=""
+                                            />
+                                          </div>
+                                          <!--  -->
+                                          <div
+                                            class="ml-2 text-xs text-gray-700"
+                                          >
+                                            325
+                                            <span class="text-green-500 ml-1"
+                                              >4%</span
+                                            >
+                                          </div>
+                                          <!--  -->
+                                        </div>
+                                        <!--  -->
+                                      </div>
+                                      <!--  -->
+                                      <div
+                                        class="w-full h-full grid grid-cols-4"
+                                      >
+                                        <!--  -->
+                                        <div class="col-span-3">
+                                          <div class="h-[19vh] mt-2 pl-1">
+                                            <canvas
+                                              id="analytics-card-02"
+                                              width="800"
+                                              height="300"
+                                            ></canvas>
+                                          </div>
+                                        </div>
+                                        <!--  -->
+                                        <div
+                                          class="w-full h-full grid grid-rows-4"
+                                        >
+                                          <!-- <div class="w-full h-full items-center"> -->
+
+                                          <div
+                                            class="w-full flex justify-center row-span-2 my-6"
+                                          >
+                                            <div
+                                              class="flex flex-col justify-center"
+                                            >
+                                              <div
+                                                class="w-full flex justify-center"
+                                              >
+                                                <img
+                                                  class="w-7 h-7"
+                                                  src="/src/images/up-arrow-listing2.png"
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                class="text-gray-700 text-xs flex justify-center mt-0.5"
+                                              >
+                                                Sundul
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="flex flex-col row-span-2">
+                                            <div class="grid grid-cols-2">
+                                              <div
+                                                class="w-full flex justify-center items-center pl-5"
+                                              >
+                                                <label
+                                                  class="relative inline-flex cursor-pointer w-full"
+                                                >
+                                                  <input
+                                                    type="checkbox"
+                                                    id="toggleSwitchTerjualTersedia"
+                                                    value=""
+                                                    class="sr-only peer"
+                                                    onclick="toggleTerjualTersedia()"
+                                                  />
+                                                  <div
+                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                                                  ></div>
+                                                </label>
+                                              </div>
+
+                                              <div class="flex">
+                                                <span
+                                                  id="toggleTextTerjualTersedia"
+                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
+                                                  >Terjual</span
+                                                >
+                                              </div>
+                                            </div>
+                                            <!--  -->
+                                            <div class="grid grid-cols-2">
+                                              <div
+                                                class="w-full flex justify-center items-center pl-5"
+                                              >
+                                                <label
+                                                  class="relative inline-flex cursor-pointer w-full"
+                                                >
+                                                  <input
+                                                    type="checkbox"
+                                                    id="toggleSwitchActiveInactive"
+                                                    value=""
+                                                    class="sr-only peer"
+                                                    onclick="toggleActiveInactive()"
+                                                  />
+                                                  <div
+                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                                                  ></div>
+                                                </label>
+                                              </div>
+
+                                              <div class="flex">
+                                                <span
+                                                  id="toggleTextActiveInactive"
+                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
+                                                  >Inactive</span
+                                                >
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <!--  -->
+                                          <!-- </div> -->
+                                        </div>
+                                        <!--  -->
+                                      </div>
+                                    </div>
+
+                                    <!--  -->
+                                  </div>
+
+                                  <!-- Card Dummy -->
+                                  <div
+                                    class="grid grid-cols-6 h-[28vh] mode-card-kedua bg-white cursor-pointer rounded-lg shadow mt-3"
+                                  >
+                                    <div class="w-full h-full col-span-2">
+                                      <div
+                                        class="max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                                        data-active-tab="1"
+                                        data-object-id="1604"
+                                        onclick="showCardInfoDetail(this)"
+                                      >
+                                        <div class="w-full h-[19vh] relative">
+                                          <div
+                                            class="slider-card-mode-ketiga mode-mini-video w-full h-full"
+                                          >
+                                            <div
+                                              class="relative h-[19vh] bg-black z-index-10"
+                                            >
+                                              <img
+                                                class="w-full h-full object-contain"
+                                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                                alt=""
+                                              />
+                                              <div
+                                                class="arrow-right-custom-mini"
+                                              >
+                                                <span class="font-semibold"
+                                                  >NEW</span
+                                                >
+                                              </div>
+                                            </div>
+                                            <div
+                                              class="relative h-[19vh] bg-black z-index-10"
+                                            >
+                                              <img
+                                                class="w-full h-full object-contain"
+                                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
+                                                alt=""
+                                              />
+                                              <div
+                                                class="arrow-right-custom-mini"
+                                              >
+                                                <span class="font-semibold"
+                                                  >NEW</span
+                                                >
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div
+                                          class="flex flex-col py-1 pr-1 pl-1.5 w-full"
+                                        >
+                                          <!--  -->
+                                          <div
+                                            class="flex flex-row justify-between"
+                                          >
+                                            <div>
+                                              <div
+                                                class="inline-flex items-center"
+                                              >
+                                                <h5
+                                                  class="text-md font-bold tracking-tight text-black"
+                                                >
+                                                  Rp 11.300.000.000
+                                                </h5>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <!--  -->
+                                          <div
+                                            class="flex flex-col font-normal"
+                                          >
+                                            <div
+                                              class="flex items-center text-xs text-gray-700"
+                                            >
+                                              <span class="">LT 80 m² |</span>
+                                              <span class="">LB 276 m² |</span>
+                                              <span class="">2 KT |</span>
+                                              <span class="">5 KM</span>
+                                            </div>
+                                            <div class="text-xs text-gray-700">
+                                              Sunter, Tanjung Priok, Jakuut
+                                            </div>
+                                          </div>
+                                          <!--  -->
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div
+                                      class="col-span-4 w-full h-full flex flex-col"
+                                    >
+                                      <div class="w-full flex flex-row">
+                                        <!--  -->
+                                        <div
+                                          class="w-full flex flex-row pt-3 justify-center"
+                                        >
+                                          <div>
+                                            <img
+                                              class="w-4 h-4"
+                                              src="/src/images/show.png"
+                                              alt=""
+                                            />
+                                          </div>
+                                          <!--  -->
+                                          <div
+                                            class="ml-2 text-xs text-gray-700"
+                                          >
+                                            325
+                                            <span class="text-green-500 ml-1"
+                                              >4%</span
+                                            >
+                                          </div>
+                                          <!--  -->
+                                        </div>
+
+                                        <div
+                                          class="w-full flex flex-row justify-center py-3"
+                                        >
+                                          <div>
+                                            <img
+                                              class="w-4 h-4"
+                                              src="/src/images/people.png"
+                                              alt=""
+                                            />
+                                          </div>
+                                          <!--  -->
+                                          <div
+                                            class="ml-2 text-xs text-gray-700"
+                                          >
+                                            325
+                                            <span class="text-green-500 ml-1"
+                                              >4%</span
+                                            >
+                                          </div>
+                                          <!--  -->
+                                        </div>
+
+                                        <!--  -->
+
+                                        <div
+                                          class="w-full flex flex-row justify-center py-3"
+                                        >
+                                          <div>
+                                            <img
+                                              class="w-4 h-4"
+                                              src="/src/images/heart-off.png"
+                                              alt=""
+                                            />
+                                          </div>
+                                          <!--  -->
+                                          <div
+                                            class="ml-2 text-xs text-gray-700"
+                                          >
+                                            325
+                                            <span class="text-green-500 ml-1"
+                                              >4%</span
+                                            >
+                                          </div>
+                                          <!--  -->
+                                        </div>
+                                        <!--  -->
+                                      </div>
+                                      <!--  -->
+                                      <div
+                                        class="w-full h-full grid grid-cols-4"
+                                      >
+                                        <!--  -->
+                                        <div class="col-span-3">
+                                          <div class="h-[19vh] mt-2 pl-1">
+                                            <canvas
+                                              id="analytics-card-02"
+                                              width="800"
+                                              height="300"
+                                            ></canvas>
+                                          </div>
+                                        </div>
+                                        <!--  -->
+                                        <div
+                                          class="w-full h-full grid grid-rows-4"
+                                        >
+                                          <!-- <div class="w-full h-full items-center"> -->
+
+                                          <div
+                                            class="w-full flex justify-center row-span-2 my-6"
+                                          >
+                                            <div
+                                              class="flex flex-col justify-center"
+                                            >
+                                              <div
+                                                class="w-full flex justify-center"
+                                              >
+                                                <img
+                                                  class="w-7 h-7"
+                                                  src="/src/images/up-arrow-listing2.png"
+                                                  alt=""
+                                                />
+                                              </div>
+                                              <div
+                                                class="text-gray-700 text-xs flex justify-center mt-0.5"
+                                              >
+                                                Sundul
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="flex flex-col row-span-2">
+                                            <div class="grid grid-cols-2">
+                                              <div
+                                                class="w-full flex justify-center items-center pl-5"
+                                              >
+                                                <label
+                                                  class="relative inline-flex cursor-pointer w-full"
+                                                >
+                                                  <input
+                                                    type="checkbox"
+                                                    id="toggleSwitchTerjualTersedia"
+                                                    value=""
+                                                    class="sr-only peer"
+                                                    onclick="toggleTerjualTersedia()"
+                                                  />
+                                                  <div
+                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                                                  ></div>
+                                                </label>
+                                              </div>
+
+                                              <div class="flex">
+                                                <span
+                                                  id="toggleTextTerjualTersedia"
+                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
+                                                  >Terjual</span
+                                                >
+                                              </div>
+                                            </div>
+                                            <!--  -->
+                                            <div class="grid grid-cols-2">
+                                              <div
+                                                class="w-full flex justify-center items-center pl-5"
+                                              >
+                                                <label
+                                                  class="relative inline-flex cursor-pointer w-full"
+                                                >
+                                                  <input
+                                                    type="checkbox"
+                                                    id="toggleSwitchActiveInactive"
+                                                    value=""
+                                                    class="sr-only peer"
+                                                    onclick="toggleActiveInactive()"
+                                                  />
+                                                  <div
+                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                                                  ></div>
+                                                </label>
+                                              </div>
+
+                                              <div class="flex">
+                                                <span
+                                                  id="toggleTextActiveInactive"
                                                   class="text-sm font-medium text-gray-900 dark:text-gray-300"
                                                   >Inactive</span
                                                 >
@@ -45145,7 +45642,7 @@
                                 <!--  -->
                               </div>
 
-                                                            <!-- card 1 -->
+                              <!-- card 1 -->
                               <div class="grid grid-cols-5 bg-gray-100">
                                 <div
                                   class="w-full col-span-3 h-full px-3 pt-3 border-b border-gray-300"
@@ -45307,7 +45804,7 @@
                                 <!--  -->
                               </div>
 
-                                                                                          <!-- card 1 -->
+                              <!-- card 1 -->
                               <div class="grid grid-cols-5 bg-gray-100">
                                 <div
                                   class="w-full col-span-3 h-full px-3 pt-3 border-b border-gray-300"
@@ -45469,7 +45966,7 @@
                                 <!--  -->
                               </div>
 
-                                                                                          <!-- card 1 -->
+                              <!-- card 1 -->
                               <div class="grid grid-cols-5 bg-gray-100">
                                 <div
                                   class="w-full col-span-3 h-full px-3 pt-3 border-b border-gray-300"
@@ -45631,7 +46128,7 @@
                                 <!--  -->
                               </div>
 
-                                                                                          <!-- card 1 -->
+                              <!-- card 1 -->
                               <div class="grid grid-cols-5 bg-gray-100">
                                 <div
                                   class="w-full col-span-3 h-full px-3 pt-3 border-b border-gray-300"
@@ -45793,7 +46290,7 @@
                                 <!--  -->
                               </div>
 
-                                                                                          <!-- card 1 -->
+                              <!-- card 1 -->
                               <div class="grid grid-cols-5 bg-gray-100">
                                 <div
                                   class="w-full col-span-3 h-full px-3 pt-3 border-b border-gray-300"
@@ -45955,7 +46452,7 @@
                                 <!--  -->
                               </div>
 
-                                                        <!-- card 1 -->
+                              <!-- card 1 -->
                               <div class="grid grid-cols-5 bg-gray-100">
                                 <div
                                   class="w-full col-span-3 h-full pl-3 border-b border-gray-300"
@@ -46113,7 +46610,7 @@
                                 <!--  -->
                               </div>
 
-                                                        <!-- card 1 -->
+                              <!-- card 1 -->
                               <div class="grid grid-cols-5 bg-gray-100">
                                 <div
                                   class="w-full col-span-3 h-full pl-3 border-b border-gray-300"
@@ -46271,7 +46768,7 @@
                                 <!--  -->
                               </div>
 
-                                                        <!-- card 1 -->
+                              <!-- card 1 -->
                               <div class="grid grid-cols-5 bg-gray-100">
                                 <div
                                   class="w-full col-span-3 h-full pl-3 border-b border-gray-300"
@@ -46429,7 +46926,7 @@
                                 <!--  -->
                               </div>
 
-                                                        <!-- card 1 -->
+                              <!-- card 1 -->
                               <div class="grid grid-cols-5 bg-gray-100">
                                 <div
                                   class="w-full col-span-3 h-full pl-3 border-b border-gray-300"
@@ -46587,7 +47084,7 @@
                                 <!--  -->
                               </div>
 
-                                                        <!-- card 1 -->
+                              <!-- card 1 -->
                               <div class="grid grid-cols-5 bg-gray-100">
                                 <div
                                   class="w-full col-span-3 h-full pl-3 border-b border-gray-300"
@@ -46744,8 +47241,6 @@
 
                                 <!--  -->
                               </div>
-
-
 
                               <!--  -->
                             </div>
