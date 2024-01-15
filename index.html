@@ -106,7 +106,6 @@
             class="z-10 hidden bg-white rounded-lg shadow w-44"
           >
             <div class="p-2">
-
               <div
                 class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
               >
@@ -13719,101 +13718,114 @@
 
                 <!--  Registrasi -->
                 <div
-                  class="h-[76.5vh] overflow-y-hidden overflow-x-hidden hide-scrollbar form-registrasi"
+                  class="h-[76.5vh] flex justify-center items-center overflow-y-hidden overflow-x-hidden hide-scrollbar form-registrasi"
                 >
-
-
-                <!--  -->
-                  <div class="h-[75.5vh] flex justify-center items-center p-5">
-                    <div class="w-96 bg-white rounded-xl p-8">
-                      <div class="my-6">
+                  <!-- Login  -->
+                  <div
+                    class="h-[60vh] w-[25vw] flex justify-center items-center p-5 rounded-xl form-login-with-google"
+                  >
+                    <div class="w-full">
+                      <div class="my-5">
                         <button
-                          class="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 text-base hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150"
+                          class="w-full text-center text-sm py-2 my-2 border-2 border-gray-300 flex space-x-2 items-center justify-center rounded-lg text-gray-700"
                         >
                           <img
                             src="https://www.svgrepo.com/show/355037/google.svg"
-                            class="w-6 h-6"
+                            class="w-5 h-5"
                             alt=""
                           />
-                          <span>Login with Google</span>
+                          <span>Login dengan Google</span>
                         </button>
                       </div>
-                      <form action="" class="my-6">
-                        <div class="flex flex-col space-y-5">
-                          <div class="relative">
-                            <input
-                              type="text"
-                              id="floating_filled"
-                              class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                              placeholder=" "
-                            />
-                            <label
-                              for="floating_filled"
-                              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-                              >Nomor telepon atau email</label
-                            >
+
+                      <div class="flex justify-center items-center">
+                        <span class="w-full border border-gray-300"></span>
+                        <span class="px-4 text-xs text-gray-500">atau</span>
+                        <span class="w-full border border-gray-300"></span>
+                      </div>
+
+                      <form action="" class="my-3">
+                        <div class="flex flex-col">
+                          <div class="flex flex-col space-y-3 mb-3">
+                            <div>
+                              <label
+                                for="email-input"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                >Nomor Ponsel atau Email</label
+                              >
+                              <input
+                                type="text"
+                                id="email-input"
+                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                              />
+                            </div>
                           </div>
 
-                          <div class="relative">
-                            <input
-                              type="text"
-                              id="floating_filled"
-                              class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                              placeholder=" "
-                            />
-                            <label
-                              for="floating_filled"
-                              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
-                              >Kata sandi</label
-                            >
+                          <div class="flex flex-col space-y-3 mb-2">
+                            <div>
+                              <label
+                                for="password-input"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                >Kata Sandi</label
+                              >
+                              <input
+                                type="password"
+                                id="password-input"
+                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                              />
+                            </div>
                           </div>
+
+                          <p class="text-right text-xs">
+                            <a
+                              onclick="FormRegistration()"
+                              class="text-[#2074D8] font-medium inline-flex space-x-1 items-center cursor-pointer"
+                              target="_blank"
+                            >
+                              <span> Lupa kata sandi? </span>
+                            </a>
+                          </p>
 
                           <button
-                            class="w-full py-3 font-medium text-white text-sm bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center"
+                            class="w-full py-2 mt-6 mb-5 font-medium text-white text-sm bg-[#2074D8] rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center"
                           >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              class="h-6 w-6"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              stroke-width="2"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-                              ></path>
-                            </svg>
                             <span>Masuk</span>
                           </button>
-                          <p class="text-center text-sm">
+
+                          <p class="text-center text-xs">
                             Tidak punya akun?
                             <a
-                              class="text-indigo-600 font-medium inline-flex space-x-1 items-center"
+                              onclick="FormRegistration()"
+                              class="text-[#2074D8] font-medium inline-flex space-x-1 items-center cursor-pointer"
                               target="_blank"
-                              ><span>Buat Akun </span
-                              ><span
-                                ><svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  class="h-4 w-4"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                  stroke-width="2"
-                                >
-                                  <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                  ></path></svg></span
-                            ></a>
+                            >
+                              <span>Registrasi </span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                ></path>
+                              </svg>
+                            </a>
                           </p>
                         </div>
                       </form>
                     </div>
                   </div>
                   <!--  -->
+
+                  <!-- Registration v2 -->
+                  <div class="form-registration hidden">
+                    <div class="px-3">Test</div>
+                  </div>
 
                   <!--  -->
                 </div>
