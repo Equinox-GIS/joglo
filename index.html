@@ -103,14 +103,88 @@
           </div>
           <div
             id="DropdownMenuKeluar"
-            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            class="z-10 hidden bg-white rounded-lg shadow w-44"
           >
-            <div class="py-2">
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                >Keluar</a
+            <div class="p-2">
+              <div
+                class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
               >
+                <div class="w-8 h-8 flex items-center justify-center mx-3">
+                  <img
+                    class="w-6 h-6 object-contain"
+                    src="./src/images/documen.png"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full h-8 flex items-center justify-start">
+                  <a
+                    onclick="ShowRegistrasi()"
+                    href="#"
+                    class="text-sm text-gray-700"
+                    >Registrasi</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
+              >
+                <div class="w-8 h-8 flex items-center justify-center mx-3">
+                  <img
+                    class="w-7 h-7 object-contain -ml-1"
+                    src="./src/images/arrow.png"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full h-8 flex items-center justify-start">
+                  <a
+                    onclick="ShowRegistrasi()"
+                    href="#"
+                    class="text-sm text-gray-700"
+                    >Login</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
+              >
+                <div class="w-8 h-8 flex items-center justify-center mx-3">
+                  <img
+                    class="w-5 h-5 object-contain"
+                    src="./src/images/profile.png"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full h-8 flex items-center justify-start">
+                  <a
+                    onclick="ShowRegistrasi()"
+                    href="#"
+                    class="text-sm text-gray-700"
+                    >Profil</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
+              >
+                <div class="w-8 h-8 flex items-center justify-center mx-3">
+                  <img
+                    class="w-4 h-4 object-contain"
+                    src="./src/images/shutdown.png"
+                    alt=""
+                  />
+                </div>
+                <div class="w-full h-8 flex items-center justify-start">
+                  <a
+                    onclick="ShowRegistrasi()"
+                    href="#"
+                    class="text-sm text-gray-700"
+                    >Keluar</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1997,13 +2071,13 @@
           >
             <!-- Menu Beranda -->
             <div class="h-full flex flex-col">
-              <!--  Card Beranda -->
+              <!--  Card Beranda Cek1-->
               <div class="flex flex-col card-info-pencarian">
                 <!-- Judul Beranda -->
 
                 <div
                   class="w-full flex justify-between border-b border-gray-300"
-                >
+                  >
                   <div
                     class="font-instagram_bold text-2xl px-3 py-2 judulStory"
                   >
@@ -2030,13 +2104,13 @@
                 <!--  Konten Card Info -->
                 <div
                   class="h-[76vh] overflow-y-auto overflow-x-hidden hide-scrollbar story-galeri-off"
-                >
+                  >
                   <div class="px-3">
                     <!--  -->
                     <div class="w-full pl-2.5 pr-4">
                       <div
                         class="grid grid-cols-12 items-center justify-center"
-                      >
+                        >
                         <div class="w-full col-span-full">
                           <div
                             class="w-full h-full flex overflow-x-visible hide-scrollbar flex-row justify-between items-center mt-3 mb-2 justify-center slider-story-galeri"
@@ -2359,7 +2433,7 @@
                     <!--  judul-dijual-pertama -->
                     <div
                       class="flex flex-row items-stretch justify-between mt-1 hidden judul-dijual-pertama"
-                    >
+                      >
                       <div class="font-normal text-sm self-end">
                         Menampilkan 1 data
                       </div>
@@ -2442,7 +2516,7 @@
                     <!--  judul-dijual-kedua -->
                     <div
                       class="flex flex-row items-stretch justify-between mt-1 judul-dijual-kedua"
-                    >
+                      >
                       <div
                         class="font-normal text-sm self-end text-gray-700 -mb-0.5"
                       >
@@ -10574,7 +10648,7 @@
                   <!--  -->
                   <div
                     class="h-[76.4vh] overflow-y-auto overflow-x-hidden hide-scrollbar bg-white"
-                  >
+                    >
                     <!-- Mode Pertama -->
                     <div class="h-full mode-card-pertama grid grid-cols-1">
                       <!-- galeri stories kedua -->
@@ -13086,16 +13160,16 @@
                   <!--  Konten Card buatFavorti -->
                   <div
                     class="h-[75.2vh] overflow-y-auto overflow-x-hidden hide-scrollbar bg-white"
-                  >
+                    >
                     <!-- Mode Pertama -->
                     <div class="h-full mode-card-pertama grid grid-cols-1">
                       <!-- Model Video PersegiPanjang -->
                       <div
                         class="grid grid-cols-5 bg-gray-100 border-t border-gray-300"
-                      >
+                        >
                         <div
                           class="w-full col-span-3 h-full border-r border-gray-300"
-                        >
+                          >
                           <div class="flex flex-col flex-grow h-full">
                             <div class="relative">
                               <div class="slider-menu-video">
@@ -13240,7 +13314,7 @@
 
                         <div
                           class="col-span-2 w-full h-full flex flex-col justify-between"
-                        >
+                          >
                           <div class="flex-1 flex flex-col">
                             <!--  -->
 
@@ -13649,14 +13723,100 @@
                     <div>Tambah Stories</div>
                   </div>
                 </div>
-
-                <!--  -->
               </div>
+
+              <!-- Halaman Registrasi Cek2-->
+              <div class="flex flex-col card-info-pencarian">
+                <!-- Judul Beranda -->
+
+                <div
+                  class="w-full flex justify-between border-b border-gray-300"
+                >
+                  <div
+                    class="font-instagram_bold text-2xl px-3 py-2 judulStory"
+                  >
+                    Galeri
+                  </div>
+
+                  <!-- Stories -->
+                  <div
+                    class="w-full grid justify-items-end items-center relative mr-1"
+                  >
+                    <div class="inline-flex">
+                      <div
+                        onclick="closeTab()"
+                        class="menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 border-blue-600 flex justify-center items-center hidden stories_back"
+                      >
+                        <div class="w-5 h-5 flex justify-center items-center">
+                          <img src="./src/images/back.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  Konten Card Info -->
+                <div
+                  class="h-[76.2vh] overflow-y-auto overflow-x-hidden hide-scrollbar border border-red-500"
+                  >
+                  <div class="px-3 w-full flex justify-center py-5">
+                    <div class="grid-cols-2 gap-2">
+                      <button
+                        type="button"
+                        class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-[30vw] h-12 grid grid-cols-3 place-items-center mb-5"
+                      >
+                        <svg
+                          class="w-4 h-4 text-gray-700 me-2 -ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 18 18"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="0.9"
+                            d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"
+                          />
+                        </svg>
+                        <span class="justify-self-center">Nomor Telepon</span>
+                      </button>
+
+                      <button
+                        type="button"
+                        class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-[30vw] h-12 grid grid-cols-3 place-items-center"
+                      >
+                        <svg
+                          class="w-4 h-4 text-gray-700 me-2 -ms-1"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 18 18"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="0.9"
+                            d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"
+                          />
+                        </svg>
+                        <span class="justify-self-center">Nomor Telepon</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!--  -->
+
+                  <!--  -->
+                </div>
+              </div>
+              <!-- Halaman End Registrasi -->
 
               <!-- Card Detail Beranda -->
               <div
                 class="flex flex-col w-full h-full card-detail-beranda hidden"
-              >
+                >
                 <!-- neww1 -->
                 <div class="h-[83vh] px-3">
                   <!-- neww2 -->

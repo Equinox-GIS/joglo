@@ -3031,3 +3031,18 @@ window.toggleTerjualTersedia = function () {
     text.innerHTML = "Terjual";
   }
 };
+
+window.ShowRegistrasi = function () {
+  showJudulRegistrasi();
+
+  resetAllCards();
+  // showElement(".card-agent-detail");
+  // hideElement(".card-agent");
+};
+
+function showJudulRegistrasi() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Registrasi";
+  });
+}
