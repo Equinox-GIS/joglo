@@ -3086,7 +3086,7 @@ window.ShowProfil = function () {
 function showJudulRegistrasi() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
-    element.textContent = "Registrasi";
+    element.textContent = "Login";
   });
 }
 
