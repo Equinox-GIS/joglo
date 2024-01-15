@@ -106,18 +106,6 @@
             class="z-10 hidden bg-white rounded-lg shadow w-44"
           >
             <div class="p-2">
-              <div
-                class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
-              >
-                <div class="w-full h-8 flex items-center justify-start mx-3">
-                  <a
-                    onclick="ShowRegistrasi()"
-                    href="#"
-                    class="text-sm text-gray-700"
-                    >Registrasi</a
-                  >
-                </div>
-              </div>
 
               <div
                 class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
@@ -13731,55 +13719,98 @@
 
                 <!--  Registrasi -->
                 <div
-                  class="h-[76.2vh] overflow-y-auto overflow-x-hidden hide-scrollbar form-registrasi"
+                  class="h-[76.5vh] overflow-y-hidden overflow-x-hidden hide-scrollbar form-registrasi"
                 >
-                  <div class="px-3 w-full flex justify-center py-5">
-                    <div class="mt-10 w-[20vw] grid space-y-4">
-                      <button
-                        class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
-                      >
-                        <div
-                          class="relative flex items-center space-x-4 justify-center"
-                        >
-                          <svg
-                            class="absolute left-0 w-5 text-gray-700"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 18 18"
-                          >
-                            <path
-                              stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"
-                            />
-                          </svg>
 
-                          <span
-                            class="block w-max font-semibold tracking-wide text-gray-700 text-sm transition dark:text-white duration-300 group-hover:text-blue-600 sm:text-base"
-                            >Nomor Telepon
-                          </span>
-                        </div>
-                      </button>
-                      <button
-                        class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
-                      >
-                        <div
-                          class="relative flex items-center space-x-4 justify-center"
+
+                <!--  -->
+                  <div class="h-[75.5vh] flex justify-center items-center p-5">
+                    <div class="w-96 bg-white rounded-xl p-8">
+                      <div class="my-6">
+                        <button
+                          class="w-full text-center py-3 my-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 text-base hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150"
                         >
                           <img
-                            src="https://www.svgrepo.com/show/475656/google-color.svg"
-                            class="absolute left-0 w-5"
-                            alt="google logo"
+                            src="https://www.svgrepo.com/show/355037/google.svg"
+                            class="w-6 h-6"
+                            alt=""
                           />
-                          <span
-                            class="block w-max font-semibold tracking-wide text-gray-700 dark:text-white text-sm transition duration-300 group-hover:text-blue-600 sm:text-base"
-                            >Continue with Google
-                          </span>
+                          <span>Login with Google</span>
+                        </button>
+                      </div>
+                      <form action="" class="my-6">
+                        <div class="flex flex-col space-y-5">
+                          <div class="relative">
+                            <input
+                              type="text"
+                              id="floating_filled"
+                              class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                              placeholder=" "
+                            />
+                            <label
+                              for="floating_filled"
+                              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                              >Nomor telepon atau email</label
+                            >
+                          </div>
+
+                          <div class="relative">
+                            <input
+                              type="text"
+                              id="floating_filled"
+                              class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                              placeholder=" "
+                            />
+                            <label
+                              for="floating_filled"
+                              class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                              >Kata sandi</label
+                            >
+                          </div>
+
+                          <button
+                            class="w-full py-3 font-medium text-white text-sm bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-6 w-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                              ></path>
+                            </svg>
+                            <span>Masuk</span>
+                          </button>
+                          <p class="text-center text-sm">
+                            Tidak punya akun?
+                            <a
+                              class="text-indigo-600 font-medium inline-flex space-x-1 items-center"
+                              target="_blank"
+                              ><span>Buat Akun </span
+                              ><span
+                                ><svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-4 w-4"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  stroke-width="2"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                  ></path></svg></span
+                            ></a>
+                          </p>
                         </div>
-                      </button>
+                      </form>
                     </div>
                   </div>
                   <!--  -->
@@ -13788,15 +13819,15 @@
                 </div>
                 <!-- Profil -->
                 <div
-                  class="h-[76.2vh] overflow-y-auto overflow-x-hidden hide-scrollbar hidden form-profil"
+                  class="h-full overflow-y-hidden overflow-x-hidden hide-scrollbar hidden form-profil"
                 >
                   <div class="h-full w-full px-3">
                     <!--  -->
 
                     <div class="bg-transparent rounded-lg">
-                      <div class="px-4 py-4 space-y-6">
+                      <div class="px-4 pt-4 pb-4">
                         <form action="#">
-                          <div class="grid grid-cols-1 gap-y-3">
+                          <div class="grid grid-cols-2 gap-x-4 mb-4">
                             <!-- Nama -->
                             <div>
                               <label
@@ -13828,7 +13859,10 @@
                                 required
                               />
                             </div>
+                          </div>
 
+                          <!--  -->
+                          <div class="grid grid-cols-2 gap-x-4 mb-4">
                             <!-- Afiliasi -->
                             <div>
                               <label
@@ -13860,22 +13894,11 @@
                                 required
                               />
                             </div>
+                          </div>
 
-                            <!-- Deskripsi -->
-                            <div>
-                              <label
-                                for="deskripsi"
-                                class="text-sm font-medium text-gray-900 block mb-2"
-                                >Deskripsi</label
-                              >
-                              <textarea
-                                name="deskripsi"
-                                id="deskripsi"
-                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-[#69B3E7] focus:border-[#69B3E7] block w-full p-2.5"
-                                required
-                              ></textarea>
-                            </div>
+                          <!--  -->
 
+                          <div class="grid grid-cols-2 gap-x-4 mb-4">
                             <!-- Spesialisasi Area -->
                             <div>
                               <label
@@ -13914,10 +13937,34 @@
                               </select>
                             </div>
                           </div>
+
+                          <!--  -->
+
+                          <div class="grid grid-cols-2 mb-2">
+                            <div class="col-span-2">
+                              <!-- Deskripsi -->
+                              <div>
+                                <label
+                                  for="deskripsi"
+                                  class="text-sm font-medium text-gray-900 block mb-2"
+                                  >Deskripsi</label
+                                >
+                                <textarea
+                                  name="deskripsi"
+                                  id="deskripsi"
+                                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-[#69B3E7] focus:border-[#69B3E7] block w-full p-2.5"
+                                  required
+                                  rows="7"
+                                ></textarea>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--  -->
                         </form>
                       </div>
 
-                      <div class="p-5 mt-2 border-t border-gray-200 rounded-b">
+                      <div class="p-5 border-t border-gray-200 rounded-b">
                         <button
                           type="button"
                           class="text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
