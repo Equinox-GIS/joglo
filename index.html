@@ -106,7 +106,6 @@
             class="z-10 hidden bg-white rounded-lg shadow w-44"
           >
             <div class="p-2">
-
               <div
                 class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
               >
@@ -13721,10 +13720,10 @@
                 <div
                   class="h-[76.5vh] overflow-y-hidden overflow-x-hidden hide-scrollbar form-registrasi"
                 >
-
-
-                <!--  -->
-                  <div class="h-[75.5vh] flex justify-center items-center p-5">
+                  <!-- Login  -->
+                  <div
+                    class="h-[76.5vh] flex justify-center items-center p-5 form-login-with-google"
+                  >
                     <div class="w-96 bg-white rounded-xl p-8">
                       <div class="my-6">
                         <button
@@ -13790,7 +13789,8 @@
                           <p class="text-center text-sm">
                             Tidak punya akun?
                             <a
-                              class="text-indigo-600 font-medium inline-flex space-x-1 items-center"
+                              onclick="FormRegistration()"
+                              class="text-indigo-600 font-medium inline-flex space-x-1 items-center cursor-pointer"
                               target="_blank"
                               ><span>Buat Akun </span
                               ><span
@@ -13814,6 +13814,11 @@
                     </div>
                   </div>
                   <!--  -->
+
+                  <!-- Registration v2 -->
+                  <div class="form-registration hidden">
+                    <div class="px-3">Test</div>
+                  </div>
 
                   <!--  -->
                 </div>

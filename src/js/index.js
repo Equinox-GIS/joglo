@@ -3096,3 +3096,35 @@ function showJudulProfil() {
     element.textContent = "Profil";
   });
 }
+
+
+window.FormRegistration = function () {
+
+    Array.from(document.getElementsByClassName("form-login-with-google")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+        Array.from(document.getElementsByClassName("form-registration")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+// 
+
+
+//                 Array.from(document.getElementsByClassName("form-registrasi")).forEach(
+//       (elem) => elem.classList.add("hidden")
+//     );
+
+
+//         Array.from(document.getElementsByClassName("form-profil")).forEach(
+//       (elem) => elem.classList.remove("hidden")
+//     );
+
+    
+
+//   showJudulProfil();
+
+//   resetAllCards();
+
+
+};
