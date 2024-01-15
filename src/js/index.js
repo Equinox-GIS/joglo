@@ -3033,16 +3033,66 @@ window.toggleTerjualTersedia = function () {
 };
 
 window.ShowRegistrasi = function () {
+
+    Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+    Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+  // hideElement(".hidden-konten-galeri");
+  // showElement(".show-form-registrasi");
+
   showJudulRegistrasi();
 
   resetAllCards();
-  // showElement(".card-agent-detail");
-  // hideElement(".card-agent");
+
+
+};
+
+window.ShowProfil = function () {
+
+    Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+        Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+// 
+
+
+                Array.from(document.getElementsByClassName("form-registrasi")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+
+        Array.from(document.getElementsByClassName("form-profil")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+    
+
+  showJudulProfil();
+
+  resetAllCards();
+
+
 };
 
 function showJudulRegistrasi() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
     element.textContent = "Registrasi";
+  });
+}
+
+function showJudulProfil() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Profil";
   });
 }

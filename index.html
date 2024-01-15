@@ -158,7 +158,7 @@
                 </div>
                 <div class="w-full h-8 flex items-center justify-start">
                   <a
-                    onclick="ShowRegistrasi()"
+                    onclick="ShowProfil()"
                     href="#"
                     class="text-sm text-gray-700"
                     >Profil</a
@@ -2072,12 +2072,14 @@
             <!-- Menu Beranda -->
             <div class="h-full flex flex-col">
               <!--  Card Beranda Cek1-->
-              <div class="flex flex-col card-info-pencarian">
+              <div
+                class="flex flex-col card-info-pencarian hidden-form-registrasi"
+              >
                 <!-- Judul Beranda -->
 
                 <div
                   class="w-full flex justify-between border-b border-gray-300"
-                  >
+                >
                   <div
                     class="font-instagram_bold text-2xl px-3 py-2 judulStory"
                   >
@@ -2104,13 +2106,13 @@
                 <!--  Konten Card Info -->
                 <div
                   class="h-[76vh] overflow-y-auto overflow-x-hidden hide-scrollbar story-galeri-off"
-                  >
+                >
                   <div class="px-3">
                     <!--  -->
                     <div class="w-full pl-2.5 pr-4">
                       <div
                         class="grid grid-cols-12 items-center justify-center"
-                        >
+                      >
                         <div class="w-full col-span-full">
                           <div
                             class="w-full h-full flex overflow-x-visible hide-scrollbar flex-row justify-between items-center mt-3 mb-2 justify-center slider-story-galeri"
@@ -2433,7 +2435,7 @@
                     <!--  judul-dijual-pertama -->
                     <div
                       class="flex flex-row items-stretch justify-between mt-1 hidden judul-dijual-pertama"
-                      >
+                    >
                       <div class="font-normal text-sm self-end">
                         Menampilkan 1 data
                       </div>
@@ -2516,7 +2518,7 @@
                     <!--  judul-dijual-kedua -->
                     <div
                       class="flex flex-row items-stretch justify-between mt-1 judul-dijual-kedua"
-                      >
+                    >
                       <div
                         class="font-normal text-sm self-end text-gray-700 -mb-0.5"
                       >
@@ -10648,7 +10650,7 @@
                   <!--  -->
                   <div
                     class="h-[76.4vh] overflow-y-auto overflow-x-hidden hide-scrollbar bg-white"
-                    >
+                  >
                     <!-- Mode Pertama -->
                     <div class="h-full mode-card-pertama grid grid-cols-1">
                       <!-- galeri stories kedua -->
@@ -13160,16 +13162,16 @@
                   <!--  Konten Card buatFavorti -->
                   <div
                     class="h-[75.2vh] overflow-y-auto overflow-x-hidden hide-scrollbar bg-white"
-                    >
+                  >
                     <!-- Mode Pertama -->
                     <div class="h-full mode-card-pertama grid grid-cols-1">
                       <!-- Model Video PersegiPanjang -->
                       <div
                         class="grid grid-cols-5 bg-gray-100 border-t border-gray-300"
-                        >
+                      >
                         <div
                           class="w-full col-span-3 h-full border-r border-gray-300"
-                          >
+                        >
                           <div class="flex flex-col flex-grow h-full">
                             <div class="relative">
                               <div class="slider-menu-video">
@@ -13314,7 +13316,7 @@
 
                         <div
                           class="col-span-2 w-full h-full flex flex-col justify-between"
-                          >
+                        >
                           <div class="flex-1 flex flex-col">
                             <!--  -->
 
@@ -13726,7 +13728,7 @@
               </div>
 
               <!-- Halaman Registrasi Cek2-->
-              <div class="flex flex-col card-info-pencarian">
+              <div class="flex flex-col show-form-registrasi hidden">
                 <!-- Judul Beranda -->
 
                 <div
@@ -13735,7 +13737,7 @@
                   <div
                     class="font-instagram_bold text-2xl px-3 py-2 judulStory"
                   >
-                    Galeri
+                    Registrasi
                   </div>
 
                   <!-- Stories -->
@@ -13745,7 +13747,7 @@
                     <div class="inline-flex">
                       <div
                         onclick="closeTab()"
-                        class="menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 border-blue-600 flex justify-center items-center hidden stories_back"
+                        class="menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 border-blue-600 flex justify-center items-center stories_back"
                       >
                         <div class="w-5 h-5 flex justify-center items-center">
                           <img src="./src/images/back.png" alt="" />
@@ -13755,54 +13757,56 @@
                   </div>
                 </div>
 
-                <!--  Konten Card Info -->
+                <!--  Registrasi -->
                 <div
-                  class="h-[76.2vh] overflow-y-auto overflow-x-hidden hide-scrollbar border border-red-500"
-                  >
+                  class="h-[76.2vh] overflow-y-auto overflow-x-hidden hide-scrollbar form-registrasi"
+                >
                   <div class="px-3 w-full flex justify-center py-5">
-                    <div class="grid-cols-2 gap-2">
+                    <div class="mt-10 w-[20vw] grid space-y-4">
                       <button
-                        type="button"
-                        class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-[30vw] h-12 grid grid-cols-3 place-items-center mb-5"
+                        class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                       >
-                        <svg
-                          class="w-4 h-4 text-gray-700 me-2 -ms-1"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 18 18"
+                        <div
+                          class="relative flex items-center space-x-4 justify-center"
                         >
-                          <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="0.9"
-                            d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"
-                          />
-                        </svg>
-                        <span class="justify-self-center">Nomor Telepon</span>
-                      </button>
+                          <svg
+                            class="absolute left-0 w-5 text-gray-700"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 18 18"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"
+                            />
+                          </svg>
 
+                          <span
+                            class="block w-max font-semibold tracking-wide text-gray-700 text-sm transition dark:text-white duration-300 group-hover:text-blue-600 sm:text-base"
+                            >Nomor Telepon
+                          </span>
+                        </div>
+                      </button>
                       <button
-                        type="button"
-                        class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 w-[30vw] h-12 grid grid-cols-3 place-items-center"
+                        class="group h-12 px-6 border-2 border-gray-300 rounded-full transition duration-300 hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100"
                       >
-                        <svg
-                          class="w-4 h-4 text-gray-700 me-2 -ms-1"
-                          aria-hidden="true"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 18 18"
+                        <div
+                          class="relative flex items-center space-x-4 justify-center"
                         >
-                          <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="0.9"
-                            d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"
+                          <img
+                            src="https://www.svgrepo.com/show/475656/google-color.svg"
+                            class="absolute left-0 w-5"
+                            alt="google logo"
                           />
-                        </svg>
-                        <span class="justify-self-center">Nomor Telepon</span>
+                          <span
+                            class="block w-max font-semibold tracking-wide text-gray-700 dark:text-white text-sm transition duration-300 group-hover:text-blue-600 sm:text-base"
+                            >Continue with Google
+                          </span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -13810,13 +13814,158 @@
 
                   <!--  -->
                 </div>
+                <!-- Profil -->
+                <div
+                  class="h-[76.2vh] overflow-y-auto overflow-x-hidden hide-scrollbar hidden form-profil"
+                >
+                  <div class="h-full w-full px-3">
+                    <!--  -->
+
+                    <div class="bg-transparent rounded-lg">
+                      <div class="px-4 py-4 space-y-6">
+                        <form action="#">
+                          <div class="grid grid-cols-1 gap-y-3">
+                            <!-- Nama -->
+                            <div>
+                              <label
+                                for="nama-profil"
+                                class="text-sm font-medium text-gray-900 block mb-2"
+                                >Nama</label
+                              >
+                              <input
+                                type="text"
+                                name="nama-profil"
+                                id="nama-profil"
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-[#69B3E7] focus:border-[#69B3E7] block w-full p-2.5"
+                                required
+                              />
+                            </div>
+
+                            <!-- Domisili -->
+                            <div>
+                              <label
+                                for="domisili"
+                                class="text-sm font-medium text-gray-900 block mb-2"
+                                >Domisili</label
+                              >
+                              <input
+                                type="text"
+                                name="domisili"
+                                id="domisili"
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-[#69B3E7] focus:border-[#69B3E7] block w-full p-2.5"
+                                required
+                              />
+                            </div>
+
+                            <!-- Afiliasi -->
+                            <div>
+                              <label
+                                for="afiliasi"
+                                class="text-sm font-medium text-gray-900 block mb-2"
+                                >Afiliasi</label
+                              >
+                              <input
+                                type="text"
+                                name="afiliasi"
+                                id="afiliasi"
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-[#69B3E7] focus:border-[#69B3E7] block w-full p-2.5"
+                                required
+                              />
+                            </div>
+
+                            <!-- URL -->
+                            <div>
+                              <label
+                                for="url"
+                                class="text-sm font-medium text-gray-900 block mb-2"
+                                >URL</label
+                              >
+                              <input
+                                type="text"
+                                name="url"
+                                id="url"
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-[#69B3E7] focus:border-[#69B3E7] block w-full p-2.5"
+                                required
+                              />
+                            </div>
+
+                            <!-- Deskripsi -->
+                            <div>
+                              <label
+                                for="deskripsi"
+                                class="text-sm font-medium text-gray-900 block mb-2"
+                                >Deskripsi</label
+                              >
+                              <textarea
+                                name="deskripsi"
+                                id="deskripsi"
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-[#69B3E7] focus:border-[#69B3E7] block w-full p-2.5"
+                                required
+                              ></textarea>
+                            </div>
+
+                            <!-- Spesialisasi Area -->
+                            <div>
+                              <label
+                                for="spesialisasi-area"
+                                class="text-sm font-medium text-gray-900 block mb-2"
+                                >Spesialisasi Area</label
+                              >
+                              <select
+                                name="spesialisasi-area"
+                                id="spesialisasi-area"
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-[#69B3E7] focus:border-[#69B3E7] block w-full p-2.5"
+                              >
+                                <option value="#" selected>Pilih</option>
+                                <option value="kelapa-gading">
+                                  Kelapa Gading
+                                </option>
+                                <option value="pluit">Pluit</option>
+                              </select>
+                            </div>
+
+                            <!-- Spesialisasi Aset -->
+                            <div>
+                              <label
+                                for="spesialisasi-aset"
+                                class="text-sm font-medium text-gray-900 block mb-2"
+                                >Spesialisasi Aset</label
+                              >
+                              <select
+                                name="spesialisasi-aset"
+                                id="spesialisasi-aset"
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-700 sm:text-sm rounded-lg focus:ring-[#69B3E7] focus:border-[#69B3E7] block w-full p-2.5"
+                              >
+                                <option value="#" selected>Pilih</option>
+                                <option value="rumah">Rumah</option>
+                                <option value="apartemen">Apartemen</option>
+                              </select>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+
+                      <div class="p-5 mt-2 border-t border-gray-200 rounded-b">
+                        <button
+                          type="button"
+                          class="text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                        >
+                          Simpan
+                        </button>
+                      </div>
+                    </div>
+
+                    <!--  -->
+                  </div>
+                </div>
+                <!--  -->
               </div>
               <!-- Halaman End Registrasi -->
 
               <!-- Card Detail Beranda -->
               <div
                 class="flex flex-col w-full h-full card-detail-beranda hidden"
-                >
+              >
                 <!-- neww1 -->
                 <div class="h-[83vh] px-3">
                   <!-- neww2 -->
