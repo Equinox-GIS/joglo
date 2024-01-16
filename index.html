@@ -106,10 +106,8 @@
             />
           </div>
 
-          <div
-            id="DropdownMenuKeluar"
-            class="z-10 hidden bg-white rounded-lg shadow w-44"
-          >
+          <!--   id="DropdownMenuKeluar" dihidden -->
+          <div class="z-10 hidden bg-white rounded-lg shadow w-44">
             <div class="p-2">
               <div
                 class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
@@ -143,7 +141,7 @@
         <!-- Login -->
         <div
           onclick="ShowRegistrasi()"
-          class="flex justify-end text-base font-semibold text-gray-700 cursor-pointer user-login-soaraja"
+          class="flex justify-end text-sm text-gray-700 cursor-pointer user-login-soaraja"
         >
           Login
         </div>
@@ -1532,390 +1530,495 @@
         <div class="grid grid-cols-[55px,1fr]">
           <!-- Menu -->
           <div
-            class="px-0 py-3 border-x-[1px] border-gray-300"
+            class="w-full h-[83vh] flex flex-col justify-between border-x-[1px] border-gray-300 py-4"
             id="kontenMenuTab"
             data-tabs-toggle="#kontenMenuContent"
             role="tablist"
           >
-            <!-- Menu 1 Beranda -->
-            <div
-              class="flex col justify-center py-2"
-              data-tooltip-target="menu-beranda"
-              data-tooltip-placement="right"
-            >
+            <!-- Menu Button -->
+            <div>
+              <!-- Menu 1 Beranda -->
               <div
-                id="MenuSatuTab"
-                data-tabs-target="#MenuSatuContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuSatuContent"
-                aria-selected="false"
-                class="bg-aktif-menu BtntagSearchAgen BtnRemoveCard flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
-                onclik="MenuTabList(4)"
+                class="flex col justify-center py-1"
+                data-tooltip-target="menu-beranda"
+                data-tooltip-placement="right"
               >
-                <div class="w-7 h-7 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="1"
-                    src="./src/images/galeri.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              id="menu-beranda"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Galeri
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu 8 Video Hidden & Kontennya-->
-            <div
-              class="flex col justify-center py-1 hidden"
-              data-tooltip-target="menu-wishes"
-              data-tooltip-placement="right"
-            >
-              <div
-                id="MenuDelapanTab"
-                data-tabs-target="#MenuDelapanContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuDelapanContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
-              >
-                <div class="w-6 h-6 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="0"
-                    src="./src/images/new/reels.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              id="menu-wishes"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Video
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu 2 Pasang Iklan -->
-            <div
-              class="flex col justify-center py-2"
-              data-tooltip-target="menu-pasang-iklan"
-              data-tooltip-placement="right"
-            >
-              <div
-                id="MenuDuaTab"
-                data-tabs-target="#MenuDuaContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuDuaContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
-              >
-                <div class="w-6 h-6 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="2"
-                    src="./src/images/more.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              id="menu-pasang-iklan"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Postingan
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu3 Favorit -->
-            <div
-              class="flex col justify-center py-2"
-              data-tooltip-target="menu-favorit"
-              data-tooltip-placement="right"
-            >
-              <div
-                id="MenuTigaTab"
-                data-tabs-target="#MenuTigaContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuTigaContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
-              >
-                <div class="w-6 h-6 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="3"
-                    src="./src/images/favorite.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              id="menu-favorit"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Favorit
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu 4 Agent -->
-            <div
-              class="flex col justify-center py-2"
-              data-tooltip-target="tooltip-right4"
-              data-tooltip-placement="right"
-            >
-              <div
-                id="MenuEmpatTab"
-                data-tabs-target="#MenuEmpatContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuEmpatContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
-              >
-                <div class="w-6 h-6 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="4"
-                    src="./src/images/real-estate-agent.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              id="tooltip-right4"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Agen
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu 7 Pesan -->
-            <div
-              class="flex col justify-center py-2"
-              data-tooltip-target="menu-pesan"
-              data-tooltip-placement="right"
-            >
-              <div
-                id="MenuTujuhTab"
-                data-tabs-target="#MenuTujuhContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuTujuhContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
-              >
-                <div class="w-6 h-6 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="0"
-                    src="./src/images/messenger.png"
-                    alt=""
-                  />
-
+                <div
+                  id="MenuSatuTab"
+                  data-tabs-target="#MenuSatuContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuSatuContent"
+                  aria-selected="false"
+                  class="bg-aktif-menu BtntagSearchAgen BtnRemoveCard flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                  onclik="MenuTabList(4)"
+                >
                   <div
-                    class="absolute inline-flex items-center justify-center px-1 min-w-[18px] h-[21px] text-[11px] font-bold text-white bg-red-600 border border-white rounded-full -top-[0.45rem] -right-[0.7rem]"
+                    class="w-7 h-7 flex justify-center items-center relative"
                   >
-                    188
+                    <img
+                      class="menu-icon"
+                      data-menu="1"
+                      src="./src/images/galeri.png"
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              id="menu-pesan"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Pesan
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu 9 Solusi Keuangan -->
-            <div
-              class="flex col justify-center py-1 hidden"
-              data-tooltip-target="menu-solusi-keuangan"
-              data-tooltip-placement="right"
-            >
               <div
-                id="MenuSembilanTab"
-                data-tabs-target="#MenuSembilanContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuSembilanContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                id="menu-beranda"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
               >
-                <div class="w-6 h-6 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="0"
-                    src="./src/images/wallet.png"
-                    alt=""
-                  />
+                Galeri
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
+              <!-- Menu 8 Video Hidden & Kontennya-->
+              <div
+                class="flex col justify-center py-1 hidden"
+                data-tooltip-target="menu-wishes"
+                data-tooltip-placement="right"
+              >
+                <div
+                  id="MenuDelapanTab"
+                  data-tabs-target="#MenuDelapanContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuDelapanContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-6 h-6 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="0"
+                      src="./src/images/new/reels.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              id="menu-solusi-keuangan"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Solusi Keuangan
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu 10 Layanan Profesional -->
-            <div
-              class="flex col justify-center py-1 hidden"
-              data-tooltip-target="menu-layanan-profesional"
-              data-tooltip-placement="right"
-            >
               <div
-                id="MenuSepuluhTab"
-                data-tabs-target="#MenuSepuluhContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuSepuluhContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                id="menu-wishes"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
               >
-                <div class="w-6 h-6 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="0"
-                    src="./src/images/official-store.png"
-                    alt=""
-                  />
+                Video
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
+              <!-- Menu 2 Pasang Iklan -->
+              <div
+                class="flex col justify-center py-2"
+                data-tooltip-target="menu-pasang-iklan"
+                data-tooltip-placement="right"
+              >
+                <div
+                  id="MenuDuaTab"
+                  data-tabs-target="#MenuDuaContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuDuaContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-6 h-6 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="2"
+                      src="./src/images/more.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              id="menu-layanan-profesional"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Layanan Profesional
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu 11 Marketplace -->
-            <div
-              class="flex col justify-center py-1 hidden"
-              data-tooltip-target="menu-marketplace"
-              data-tooltip-placement="right"
-            >
               <div
-                id="MenuSebelasTab"
-                data-tabs-target="#MenuSebelasContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuSebelasContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                id="menu-pasang-iklan"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
               >
-                <div class="w-6 h-6 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="0"
-                    src="./src/images/asbestos.png"
-                    alt=""
-                  />
+                Postingan
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
+              <!-- Menu3 Favorit -->
+              <div
+                class="flex col justify-center py-2"
+                data-tooltip-target="menu-favorit"
+                data-tooltip-placement="right"
+              >
+                <div
+                  id="MenuTigaTab"
+                  data-tabs-target="#MenuTigaContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuTigaContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-6 h-6 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="3"
+                      src="./src/images/favorite.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              id="menu-marketplace"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Marketplace
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu 12 Rekomendasi -->
-            <div
-              class="flex col justify-center py-1 hidden"
-              data-tooltip-target="menu-rekomendasi"
-              data-tooltip-placement="right"
-            >
               <div
-                id="MenuDuaBelasTab"
-                data-tabs-target="#MenuDuaBelasContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuDuaBelasContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                id="menu-favorit"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
               >
-                <div class="w-6 h-6 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="0"
-                    src="./src/images/like.png"
-                    alt=""
-                  />
+                Favorit
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
+              <!-- Menu 4 Agent -->
+              <div
+                class="flex col justify-center py-2"
+                data-tooltip-target="tooltip-right4"
+                data-tooltip-placement="right"
+              >
+                <div
+                  id="MenuEmpatTab"
+                  data-tabs-target="#MenuEmpatContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuEmpatContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-6 h-6 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="4"
+                      src="./src/images/real-estate-agent.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div
-              id="menu-rekomendasi"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              Rekomendasi
-              <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-
-            <!-- Menu 13 AI Assistant -->
-            <div
-              class="flex col justify-center py-1 hidden"
-              data-tooltip-target="menu-ai-asisten"
-              data-tooltip-placement="right"
-            >
               <div
-                id="MenuTigaBelasTab"
-                data-tabs-target="#MenuTigaBelasContent"
-                type="button"
-                role="tab"
-                aria-controls="MenuTigaBelasContent"
-                aria-selected="false"
-                class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                id="tooltip-right4"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
               >
-                <div class="w-6 h-6 flex justify-center items-center relative">
-                  <img
-                    class="menu-icon"
-                    data-menu="0"
-                    src="./src/images/gm1/robot.png"
-                    alt=""
-                  />
+                Agen
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
+              <!-- Menu 7 Pesan -->
+              <div
+                class="flex col justify-center py-2"
+                data-tooltip-target="menu-pesan"
+                data-tooltip-placement="right"
+              >
+                <div
+                  id="MenuTujuhTab"
+                  data-tabs-target="#MenuTujuhContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuTujuhContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-6 h-6 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="0"
+                      src="./src/images/messenger.png"
+                      alt=""
+                    />
+
+                    <div
+                      class="absolute inline-flex items-center justify-center px-1 min-w-[18px] h-[21px] text-[11px] font-bold text-white bg-red-600 border border-white rounded-full -top-[0.45rem] -right-[0.7rem]"
+                    >
+                      188
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div
+                id="menu-pesan"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+              >
+                Pesan
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
+              <!-- Menu 9 Solusi Keuangan -->
+              <div
+                class="flex col justify-center py-1 hidden"
+                data-tooltip-target="menu-solusi-keuangan"
+                data-tooltip-placement="right"
+              >
+                <div
+                  id="MenuSembilanTab"
+                  data-tabs-target="#MenuSembilanContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuSembilanContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-6 h-6 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="0"
+                      src="./src/images/wallet.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                id="menu-solusi-keuangan"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+              >
+                Solusi Keuangan
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
+              <!-- Menu 10 Layanan Profesional -->
+              <div
+                class="flex col justify-center py-1 hidden"
+                data-tooltip-target="menu-layanan-profesional"
+                data-tooltip-placement="right"
+              >
+                <div
+                  id="MenuSepuluhTab"
+                  data-tabs-target="#MenuSepuluhContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuSepuluhContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-6 h-6 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="0"
+                      src="./src/images/official-store.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                id="menu-layanan-profesional"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+              >
+                Layanan Profesional
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
+              <!-- Menu 11 Marketplace -->
+              <div
+                class="flex col justify-center py-1 hidden"
+                data-tooltip-target="menu-marketplace"
+                data-tooltip-placement="right"
+              >
+                <div
+                  id="MenuSebelasTab"
+                  data-tabs-target="#MenuSebelasContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuSebelasContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-6 h-6 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="0"
+                      src="./src/images/asbestos.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                id="menu-marketplace"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+              >
+                Marketplace
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
+              <!-- Menu 12 Rekomendasi -->
+              <div
+                class="flex col justify-center py-1 hidden"
+                data-tooltip-target="menu-rekomendasi"
+                data-tooltip-placement="right"
+              >
+                <div
+                  id="MenuDuaBelasTab"
+                  data-tabs-target="#MenuDuaBelasContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuDuaBelasContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-6 h-6 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="0"
+                      src="./src/images/like.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                id="menu-rekomendasi"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+              >
+                Rekomendasi
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
+              <!-- Menu 13 AI Assistant -->
+              <div
+                class="flex col justify-center py-1 hidden"
+                data-tooltip-target="menu-ai-asisten"
+                data-tooltip-placement="right"
+              >
+                <div
+                  id="MenuTigaBelasTab"
+                  data-tabs-target="#MenuTigaBelasContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuTigaBelasContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-6 h-6 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="0"
+                      src="./src/images/gm1/robot.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                id="menu-ai-asisten"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+              >
+                AI Assistant
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
             </div>
-            <div
-              id="menu-ai-asisten"
-              role="tooltip"
-              class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-            >
-              AI Assistant
-              <div class="tooltip-arrow" data-popper-arrow></div>
+            <!-- Menu Setting -->
+            <div class="akun-login-soaraja hidden">
+              <!--  -->
+              <div class="">
+                <!-- Menu 14 profil -->
+                <div
+                  onclick="ShowProfil()"
+                  class="flex col justify-center py-1"
+                  data-tooltip-target="menu-profil"
+                  data-tooltip-placement="right"
+                >
+                  <div
+                    id="MenuEmpatBelasTab"
+                    data-tabs-target="#MenuEmpatBelasContent"
+                    type="button"
+                    role="tab"
+                    aria-controls="MenuEmpatBelasContent"
+                    aria-selected="false"
+                    class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                  >
+                    <div
+                      class="w-7 h-7 flex justify-center items-center relative"
+                    >
+                      <img
+                        class="menu-icon"
+                        data-menu="0"
+                        src="./src/images/settings.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="menu-profil"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Profil
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <!-- Menu 15 logout -->
+                <div
+                  onclick="KeluarAkun()"
+                  class="flex col justify-center py-1"
+                  data-tooltip-target="menu-logout"
+                  data-tooltip-placement="right"
+                >
+                  <div
+                    id="MenuLimaBelasTab"
+                    data-tabs-target="#MenuLimaBelasContent"
+                    type="button"
+                    role="tab"
+                    aria-controls="MenuLimaBelasContent"
+                    aria-selected="false"
+                    class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                  >
+                    <div
+                      class="w-6 h-6 flex justify-center items-center relative"
+                    >
+                      <img
+                        class="menu-icon"
+                        data-menu="0"
+                        src="./src/images/logout3.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="menu-logout"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Keluar
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <!--  -->
+              </div>
+              <!--  -->
             </div>
             <!--  -->
           </div>
@@ -49539,6 +49642,28 @@
             id="MenuTigaBelasContent"
             role="tabpanel"
             aria-labelledby="MenuTigaBelasTab"
+          >
+            <div class="px-3 pt-2 h-full">
+              <div class="font-instagram_bold text-xl">Ai Assistant</div>
+
+              <div class="flex h-[78vh] items-center">
+                <h3 class="mx-auto">
+                  <img
+                    class="w-32 h-32 object-cover"
+                    src="./src/images/road-work.png"
+                    alt=""
+                  />
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Konten Menu EmpatBelas -->
+          <div
+            class="hidden px-4 py-2"
+            id="MenuEmpatBelasContent"
+            role="tabpanel"
+            aria-labelledby="MenuEmpatBelasTab"
           >
             <div class="px-3 pt-2 h-full">
               <div class="font-instagram_bold text-xl">Ai Assistant</div>
