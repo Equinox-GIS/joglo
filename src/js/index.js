@@ -3038,9 +3038,11 @@ window.ShowRegistrasi = function () {
       (elem) => elem.classList.add("hidden")
     );
 
+
     Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
       (elem) => elem.classList.remove("hidden")
     );
+
 
   // hideElement(".hidden-konten-galeri");
   // showElement(".show-form-registrasi");
@@ -3082,6 +3084,38 @@ window.ShowProfil = function () {
 
 
 };
+
+window.MasukAkunLogin = function () {
+
+    Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+        Array.from(document.getElementsByClassName("akun-login-soaraja")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+
+        Array.from(document.getElementsByClassName("user-login-soaraja")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+};
+
+
+window.KeluarAkun = function () {
+
+        Array.from(document.getElementsByClassName("user-login-soaraja")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+
+        Array.from(document.getElementsByClassName("akun-login-soaraja")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+};
+
 
 function showJudulRegistrasi() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
