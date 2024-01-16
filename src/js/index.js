@@ -3038,9 +3038,11 @@ window.ShowRegistrasi = function () {
       (elem) => elem.classList.add("hidden")
     );
 
+
     Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
       (elem) => elem.classList.remove("hidden")
     );
+
 
   // hideElement(".hidden-konten-galeri");
   // showElement(".show-form-registrasi");
@@ -3083,6 +3085,38 @@ window.ShowProfil = function () {
 
 };
 
+window.MasukAkunLogin = function () {
+
+    Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+        Array.from(document.getElementsByClassName("akun-login-soaraja")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+
+        Array.from(document.getElementsByClassName("user-login-soaraja")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+};
+
+
+window.KeluarAkun = function () {
+
+        Array.from(document.getElementsByClassName("user-login-soaraja")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+
+        Array.from(document.getElementsByClassName("akun-login-soaraja")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+};
+
+
 function showJudulRegistrasi() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
@@ -3097,6 +3131,13 @@ function showJudulProfil() {
   });
 }
 
+function showJudulFormRegistrasi() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Registrasi";
+  });
+}
+
 
 window.FormRegistration = function () {
 
@@ -3108,23 +3149,30 @@ window.FormRegistration = function () {
       (elem) => elem.classList.remove("hidden")
     );
 
-// 
-
-
-//                 Array.from(document.getElementsByClassName("form-registrasi")).forEach(
-//       (elem) => elem.classList.add("hidden")
-//     );
-
-
-//         Array.from(document.getElementsByClassName("form-profil")).forEach(
-//       (elem) => elem.classList.remove("hidden")
-//     );
-
-    
-
-//   showJudulProfil();
-
-//   resetAllCards();
-
+        showJudulFormRegistrasi();
 
 };
+
+window.FormLupaPassword = function () {
+
+    Array.from(document.getElementsByClassName("form-login-with-google")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+        Array.from(document.getElementsByClassName("form-lupa-password")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+};
+
+
+// Hide Show Kata Sandi Login
+
+document.querySelectorAll('.toggle-password').forEach(item => {
+    item.addEventListener('click', function(e) {
+        let passwordInput = this.previousElementSibling;
+        let type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        this.querySelector('i').classList.toggle('fa-eye-slash');
+    });
+});
