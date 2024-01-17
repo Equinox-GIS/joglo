@@ -3171,7 +3171,7 @@ function showJudulFormRegistrasi() {
 function LupaKataSandi() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
-    element.textContent = "Lupa Kata Sandi";
+    element.textContent = "Reset";
   });
 }
 
@@ -3197,4 +3197,21 @@ document.querySelectorAll('.toggle-password').forEach(item => {
             hideIcon.classList.remove('hidden');
         }
     });
+});
+
+
+// Validasi register
+
+document.getElementById('username-input').addEventListener('input', function(e) {
+    let username = this.value;
+    let tickIcon = this.nextElementSibling.querySelector('.tick-icon');
+    let closeIcon = this.nextElementSibling.querySelector('.close-icon');
+
+    if (username.toLowerCase() === 'agus') {
+        tickIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+    } else {
+        tickIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+    }
 });
