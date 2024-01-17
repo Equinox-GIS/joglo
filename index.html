@@ -90,10 +90,7 @@
         <!-- Start Dropdown Menu Keluar -->
         <div class="flex hidden akun-login-soaraja">
           <!-- data-dropdown-toggle="DropdownMenuKeluar" -->
-          <div
-            
-            class="flex cursor-pointer items-center"
-          >
+          <div class="flex cursor-pointer items-center">
             <span class="sr-only">Open user menu</span>
 
             <span class="text-sm font-medium text-gray-700 mr-2"
@@ -107,7 +104,7 @@
             />
           </div>
 
-        <div
+          <div
             id="DropdownMenuKeluar"
             class="z-10 hidden bg-white rounded-lg shadow w-44"
           >
@@ -1953,7 +1950,7 @@
                   class="flex col justify-center py-3"
                   data-tooltip-target="menu-profil"
                   data-tooltip-placement="right"
-                  >
+                >
                   <div
                     id="MenuEmpatBelasTab"
                     data-tabs-target="#MenuEmpatBelasContent"
@@ -1979,11 +1976,10 @@
                   id="menu-profil"
                   role="tooltip"
                   class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-                  >
+                >
                   Pengaturan
                   <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-
               </div>
               <!--  -->
             </div>
@@ -13749,9 +13745,7 @@
                 </div>
 
                 <div class="story-add-form">
-                  <div
-                    class="h-[76.5vh] px-3 grid grid-cols-1"
-                  >
+                  <div class="h-[76.5vh] px-3 grid grid-cols-1">
                     <div>Tambah Stories</div>
                   </div>
                 </div>
@@ -13841,13 +13835,23 @@
                               >
                               <div class="relative">
                                 <input
+                                  id="password-input1"
                                   type="password"
                                   class="password-input border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full pr-10"
                                 />
                                 <span
                                   class="toggle-password absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 cursor-pointer"
                                 >
-                                  <i class="fa fa-eye"></i>
+                                  <img
+                                    class="view-icon w-4 h-4 object-contain mt-0.5"
+                                    src="./src/images/view.png"
+                                    alt="Lihat"
+                                  />
+                                  <img
+                                    class="hide-icon w-4 h-4 object-contain mt-0.5 hidden"
+                                    src="./src/images/hide.png"
+                                    alt="Sembunyikan"
+                                  />
                                 </span>
                               </div>
                             </div>
@@ -13901,125 +13905,109 @@
                   <!--  -->
 
                   <!-- Registration v2 -->
-                  <div class="form-registration hidden">
+                  <div
+                    class="h-[76.5vh] flex justify-center items-center overflow-y-hidden overflow-x-hidden hide-scrollbar form-registration hidden"
+                  >
                     <div
-                      class="h-[76.5vh] flex justify-center items-center overflow-y-hidden overflow-x-hidden hide-scrollbar"
+                      class="h-[60vh] w-[25vw] flex justify-center items-center p-5 rounded-xl"
                     >
-                      <!-- Login  -->
-                      <div
-                        class="h-[76.5vh] w-[35vw] flex justify-center items-center p-5 rounded-xl"
-                      >
-                        <div class="w-full">
-                          <div class="my-5 w-full flex justify-center">
-                            <div class="w-[15vw]">
-                              <button
-                                class="w-full text-center text-sm py-2 my-2 border-2 border-gray-300 flex space-x-2 items-center justify-center rounded-lg text-gray-700"
-                              >
-                                <img
-                                  src="https://www.svgrepo.com/show/355037/google.svg"
-                                  class="w-5 h-5"
-                                  alt=""
-                                />
-                                <span>Register dengan Google</span>
-                              </button>
-                            </div>
-                          </div>
-
-                          <div class="flex justify-center items-center">
-                            <span class="w-full border border-gray-300"></span>
-                            <span class="px-4 text-xs text-gray-500">atau</span>
-                            <span class="w-full border border-gray-300"></span>
-                          </div>
-
-                          <form action="" class="my-3">
-                            <div class="flex flex-col">
-                              <div class="grid grid-cols-2 gap-5">
-                                <div class="flex flex-col space-y-3 mb-3">
-                                  <div>
-                                    <label
-                                      for="email-input"
-                                      class="block mb-2 text-sm font-medium text-gray-900"
-                                      >Nomor Ponsel atau Email</label
-                                    >
-                                    <input
-                                      type="text"
-                                      id="email-input"
-                                      class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
-                                    />
-                                  </div>
-                                </div>
-
-                                <div class="flex flex-col space-y-3 mb-2">
-                                  <div>
-                                    <label
-                                      for="password-input"
-                                      class="block mb-2 text-sm font-medium text-gray-900"
-                                      >Nama Lengkap</label
-                                    >
-                                    <input
-                                      type="text"
-                                      id="password-input"
-                                      class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="grid grid-cols-2 gap-5">
-                                <div class="flex flex-col space-y-3 mb-3">
-                                  <div>
-                                    <label
-                                      for="email-input"
-                                      class="block mb-2 text-sm font-medium text-gray-900"
-                                      >Nama Pengguna</label
-                                    >
-                                    <input
-                                      type="text"
-                                      id="email-input"
-                                      class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
-                                    />
-                                  </div>
-                                </div>
-
-                                <div class="flex flex-col space-y-3 mb-2">
-                                  <div>
-                                    <label
-                                      for="password-input2"
-                                      class="block mb-2 text-sm font-medium text-gray-900"
-                                      >Kata Sandi</label
-                                    >
-                                    <div class="relative">
-                                      <input
-                                        type="password"
-                                        class="password-input border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full pr-10"
-                                      />
-                                      <span
-                                        class="toggle-password absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 cursor-pointer"
-                                      >
-                                        <i class="fa fa-eye"></i>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="my-0 w-full flex justify-center">
-                                <div class="w-[15vw]">
-                                  <button
-                                    onclick="MasukAkunLogin()"
-                                    class="w-full py-2 mt-5 mb-5 font-medium text-white text-sm bg-[#2074D8] rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center"
-                                  >
-                                    <span>Register</span>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </form>
+                      <div class="w-full">
+                        <div class="my-5">
+                          <button
+                            class="w-full text-center text-sm py-2 my-2 border-2 border-gray-300 flex space-x-2 items-center justify-center rounded-lg text-gray-700"
+                          >
+                            <img
+                              src="https://www.svgrepo.com/show/355037/google.svg"
+                              class="w-5 h-5"
+                              alt=""
+                            />
+                            <span>Registerrrr dengan Google</span>
+                          </button>
                         </div>
-                      </div>
-                      <!--  -->
 
-                      <!--  -->
+                        <div class="flex justify-center items-center">
+                          <span class="w-full border border-gray-300"></span>
+                          <span class="px-4 text-xs text-gray-500">atau</span>
+                          <span class="w-full border border-gray-300"></span>
+                        </div>
+
+                        <form action="" class="my-3">
+                          <div class="flex flex-col">
+                            <div class="flex flex-col space-y-3 mb-3">
+                              <div>
+                                <label
+                                  for="email-input"
+                                  class="block mb-2 text-sm font-medium text-gray-900"
+                                  >Nomor Ponsel atau Email</label
+                                >
+                                <input
+                                  type="text"
+                                  id="email-input"
+                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="flex flex-col space-y-3 mb-3">
+                              <div>
+                                <label
+                                  for="email-input"
+                                  class="block mb-2 text-sm font-medium text-gray-900"
+                                  >Nama Lengkap</label
+                                >
+                                <input
+                                  type="text"
+                                  id="email-input"
+                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="flex flex-col space-y-3 mb-3">
+                              <div>
+                                <label
+                                  for="email-input"
+                                  class="block mb-2 text-sm font-medium text-gray-900"
+                                  >Nama Pengguna</label
+                                >
+                                <input
+                                  type="text"
+                                  id="email-input"
+                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="flex flex-col space-y-3 mb-2">
+                              <div>
+                                <label
+                                  for="password-input1"
+                                  class="block mb-2 text-sm font-medium text-gray-900"
+                                  >Kata Sandi</label
+                                >
+                                <div class="relative">
+                                  <input
+                                    type="password"
+                                    class="password-input border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full pr-10"
+                                  />
+                                  <span
+                                    class="toggle-password absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 cursor-pointer"
+                                  >
+                                    <i class="fa fa-eye"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <button
+                              onclick="MasukAkunLogin()"
+                              class="w-full py-2 mt-6 mb-5 font-medium text-white text-sm bg-[#2074D8] rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center"
+                            >
+                              <span>Daftar</span>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
 

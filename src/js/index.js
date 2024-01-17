@@ -3182,6 +3182,19 @@ document.querySelectorAll('.toggle-password').forEach(item => {
         let passwordInput = this.previousElementSibling;
         let type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordInput.setAttribute('type', type);
-        this.querySelector('i').classList.toggle('fa-eye-slash');
+
+        // Toggle antara gambar view dan hide
+        let viewIcon = this.querySelector('.view-icon');
+        let hideIcon = this.querySelector('.hide-icon');
+        
+        if (type === 'password') {
+            // Jika tipe input adalah password, tampilkan icon 'view' dan sembunyikan 'hide'
+            viewIcon.classList.remove('hidden');
+            hideIcon.classList.add('hidden');
+        } else {
+            // Jika tipe input adalah text, tampilkan icon 'hide' dan sembunyikan 'view'
+            viewIcon.classList.add('hidden');
+            hideIcon.classList.remove('hidden');
+        }
     });
 });
