@@ -3117,28 +3117,6 @@ window.KeluarAkun = function () {
 };
 
 
-function showJudulRegistrasi() {
-  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
-  judulRegistrasiPanelLogin.forEach(function (element) {
-    element.textContent = "Login";
-  });
-}
-
-function showJudulProfil() {
-  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
-  judulRegistrasiPanelLogin.forEach(function (element) {
-    element.textContent = "Profil";
-  });
-}
-
-function showJudulFormRegistrasi() {
-  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
-  judulRegistrasiPanelLogin.forEach(function (element) {
-    element.textContent = "Registrasi";
-  });
-}
-
-
 window.FormRegistration = function () {
 
     Array.from(document.getElementsByClassName("form-login-with-google")).forEach(
@@ -3163,8 +3141,39 @@ window.FormLupaPassword = function () {
       (elem) => elem.classList.remove("hidden")
     );
 
+LupaKataSandi();
+
 };
 
+
+
+function showJudulRegistrasi() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Login";
+  });
+}
+
+function showJudulProfil() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Profil";
+  });
+}
+
+function showJudulFormRegistrasi() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Registrasi";
+  });
+}
+
+function LupaKataSandi() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Lupa Kata Sandi";
+  });
+}
 
 // Hide Show Kata Sandi Login
 
