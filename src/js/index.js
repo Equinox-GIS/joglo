@@ -877,13 +877,13 @@ function getSliderStoryGaleri() {
     slidesToScroll: 5,
     infinite: false,
     dots: false,
-    prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-40px !important; onclick="event.stopPropagation();">
+    prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-55px !important; onclick="event.stopPropagation();">
     <div>
                   <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
                     <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
-    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-46px!important; onclick="event.stopPropagation();">
+    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-55px!important; onclick="event.stopPropagation();">
                   <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
                     <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
@@ -3033,16 +3033,13 @@ window.toggleTerjualTersedia = function () {
 };
 
 window.ShowRegistrasi = function () {
+  Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-    Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
-
-
-    Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
+  Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
   // hideElement(".hidden-konten-galeri");
   // showElement(".show-form-registrasi");
@@ -3050,102 +3047,79 @@ window.ShowRegistrasi = function () {
   showJudulRegistrasi();
 
   resetAllCards();
-
-
 };
 
 window.ShowProfil = function () {
+  Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-    Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-        Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
+  //
 
-// 
+  Array.from(document.getElementsByClassName("form-registrasi")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-
-                Array.from(document.getElementsByClassName("form-registrasi")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
-
-
-        Array.from(document.getElementsByClassName("form-profil")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
-    
+  Array.from(document.getElementsByClassName("form-profil")).forEach((elem) =>
+    elem.classList.remove("hidden")
+  );
 
   showJudulProfil();
 
   resetAllCards();
-
-
 };
 
 window.MasukAkunLogin = function () {
+  Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-    Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
+  Array.from(document.getElementsByClassName("akun-login-soaraja")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-        Array.from(document.getElementsByClassName("akun-login-soaraja")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
-
-        Array.from(document.getElementsByClassName("user-login-soaraja")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
-
+  Array.from(document.getElementsByClassName("user-login-soaraja")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 };
-
 
 window.KeluarAkun = function () {
+  Array.from(document.getElementsByClassName("user-login-soaraja")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-        Array.from(document.getElementsByClassName("user-login-soaraja")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
-
-        Array.from(document.getElementsByClassName("akun-login-soaraja")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
-
+  Array.from(document.getElementsByClassName("akun-login-soaraja")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 };
 
-
 window.FormRegistration = function () {
+  Array.from(document.getElementsByClassName("form-login-with-google")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-    Array.from(document.getElementsByClassName("form-login-with-google")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("form-registration")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-        Array.from(document.getElementsByClassName("form-registration")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
-        showJudulFormRegistrasi();
-
+  showJudulFormRegistrasi();
 };
 
 window.FormLupaPassword = function () {
+  Array.from(document.getElementsByClassName("form-login-with-google")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-    Array.from(document.getElementsByClassName("form-login-with-google")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("form-lupa-password")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-        Array.from(document.getElementsByClassName("form-lupa-password")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
-LupaKataSandi();
-
+  LupaKataSandi();
 };
-
-
 
 function showJudulRegistrasi() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
@@ -3171,17 +3145,49 @@ function showJudulFormRegistrasi() {
 function LupaKataSandi() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
-    element.textContent = "Lupa Kata Sandi";
+    element.textContent = "Reset";
   });
 }
 
 // Hide Show Kata Sandi Login
 
-document.querySelectorAll('.toggle-password').forEach(item => {
-    item.addEventListener('click', function(e) {
-        let passwordInput = this.previousElementSibling;
-        let type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        passwordInput.setAttribute('type', type);
-        this.querySelector('i').classList.toggle('fa-eye-slash');
-    });
+document.querySelectorAll(".toggle-password").forEach((item) => {
+  item.addEventListener("click", function (e) {
+    let passwordInput = this.previousElementSibling;
+    let type =
+      passwordInput.getAttribute("type") === "password" ? "text" : "password";
+    passwordInput.setAttribute("type", type);
+
+    // Toggle antara gambar view dan hide
+    let viewIcon = this.querySelector(".view-icon");
+    let hideIcon = this.querySelector(".hide-icon");
+
+    if (type === "password") {
+      // Jika tipe input adalah password, tampilkan icon 'view' dan sembunyikan 'hide'
+      viewIcon.classList.remove("hidden");
+      hideIcon.classList.add("hidden");
+    } else {
+      // Jika tipe input adalah text, tampilkan icon 'hide' dan sembunyikan 'view'
+      viewIcon.classList.add("hidden");
+      hideIcon.classList.remove("hidden");
+    }
+  });
 });
+
+// Validasi register
+
+document
+  .getElementById("username-input")
+  .addEventListener("input", function (e) {
+    let username = this.value;
+    let tickIcon = this.nextElementSibling.querySelector(".tick-icon");
+    let closeIcon = this.nextElementSibling.querySelector(".close-icon");
+
+    if (username.toLowerCase() === "agus") {
+      tickIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+    } else {
+      tickIcon.classList.add("hidden");
+      closeIcon.classList.remove("hidden");
+    }
+  });
