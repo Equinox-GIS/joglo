@@ -113,9 +113,12 @@
                 class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
               >
                 <div class="w-full h-8 flex items-center justify-start mx-3">
-                  <div onclick="ShowProfil()" class="text-sm text-gray-700">
-                    Profil
-                  </div>
+                  <a
+                    onclick="ShowProfil()"
+                    href="#"
+                    class="text-sm text-gray-700"
+                    >Profil</a
+                  >
                 </div>
               </div>
 
@@ -123,9 +126,12 @@
                 class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
               >
                 <div class="w-full h-8 flex items-center justify-start mx-3">
-                  <div onclick="KeluarAkun()" class="text-sm text-gray-700">
-                    Keluar
-                  </div>
+                  <a
+                    onclick="KeluarAkun()"
+                    href="#"
+                    class="text-sm text-gray-700"
+                    >Keluar</a
+                  >
                 </div>
               </div>
             </div>
@@ -1524,7 +1530,7 @@
         <div class="grid grid-cols-[55px,1fr]">
           <!-- Menu -->
           <div
-            class="w-full h-[83vh] flex flex-col justify-between border-x-[1px] border-gray-300 py-4"
+            class="w-full h-[85vh] flex flex-col justify-between border-x-[1px] border-gray-300 py-4"
             id="kontenMenuTab"
             data-tabs-toggle="#kontenMenuContent"
             role="tablist"
@@ -1938,57 +1944,15 @@
 
             <div class="akun-login-soaraja hidden">
               <!--  -->
-              <div>
-                <!-- Menu 14 profil -->
+              <div class="">
+                <!-- Menu 15 profil -->
                 <div
                   onclick="ShowProfil()"
-                  class="flex col justify-center py-1"
+                  class="flex col justify-center py-2"
                   data-tooltip-target="menu-profil"
                   data-tooltip-placement="right"
-                >
-                  <div
-                    id="MenuEmpatBelasTab"
-                    data-tabs-target="#MenuEmpatBelasContent"
-                    type="button"
-                    role="tab"
-                    aria-controls="MenuEmpatBelasContent"
-                    aria-selected="false"
-                    class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
                   >
-                    <div
-                      class="w-7 h-7 flex justify-center items-center relative"
-                    >
-                      <img
-                        class="menu-icon"
-                        data-menu="0"
-                        src="./src/images/settings.png"
-                        alt="Profil Settings Icon"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  id="menu-profil"
-                  role="tooltip"
-                  class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-                >
-                  Profil
-                  <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-
-                <!-- Menu 15 logout -->
-                <div
-                  onclick="KeluarAkun()"
-                  class="flex col justify-center py-1"
-                  data-tooltip-target="menu-logout"
-                  data-tooltip-placement="right"
-                >
                   <div
-                    id="MenuLimaBelasTab"
-                    data-tabs-target="#MenuLimaBelasContent"
-                    type="button"
-                    role="tab"
-                    aria-controls="MenuLimaBelasContent"
                     aria-selected="false"
                     class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
                   >
@@ -1998,22 +1962,56 @@
                       <img
                         class="menu-icon"
                         data-menu="0"
-                        src="./src/images/logout3.png"
-                        alt="Logout Icon"
+                        src="./src/images/settings.png"
+                        alt=""
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  id="menu-logout"
+                  id="menu-profil"
                   role="tooltip"
                   class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-                >
+                  >
+                  Pengaturan
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+
+                <!-- Menu 16 Keluar -->
+
+                   <div
+                  onclick="KeluarAkun()"
+                  class="flex col justify-center py-2"
+                  data-tooltip-target="menu-keluar"
+                  data-tooltip-placement="right"
+                  >
+                  <div
+                    aria-selected="false"
+                    class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                  >
+                    <div
+                      class="w-5 h-5 flex justify-center items-center relative"
+                    >
+                      <img
+                        class="menu-icon"
+                        data-menu="0"
+                        src="./src/images/logout3.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="menu-keluar"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+                  >
                   Keluar
                   <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
-              </div>
 
+                <!--  -->
+              </div>
               <!--  -->
             </div>
 
@@ -13845,7 +13843,7 @@
                         <span class="w-full border border-gray-300"></span>
                       </div>
 
-                      <form action="" class="my-3">
+                      <div class="my-3">
                         <div class="flex flex-col">
                           <div class="flex flex-col space-y-3 mb-3">
                             <div>
@@ -13935,7 +13933,7 @@
                             </a>
                           </p>
                         </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
                   <!--  -->
