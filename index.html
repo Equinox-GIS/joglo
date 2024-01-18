@@ -113,12 +113,9 @@
                 class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
               >
                 <div class="w-full h-8 flex items-center justify-start mx-3">
-                  <a
-                    onclick="ShowProfil()"
-                    href="#"
-                    class="text-sm text-gray-700"
-                    >Profil</a
-                  >
+                  <div onclick="ShowProfil()" class="text-sm text-gray-700">
+                    Profil
+                  </div>
                 </div>
               </div>
 
@@ -126,12 +123,9 @@
                 class="flex flex-row w-full hover:bg-gray-100 cursor-pointer"
               >
                 <div class="w-full h-8 flex items-center justify-start mx-3">
-                  <a
-                    onclick="KeluarAkun()"
-                    href="#"
-                    class="text-sm text-gray-700"
-                    >Keluar</a
-                  >
+                  <div onclick="KeluarAkun()" class="text-sm text-gray-700">
+                    Keluar
+                  </div>
                 </div>
               </div>
             </div>
@@ -1941,13 +1935,14 @@
               </div>
             </div>
             <!-- Menu Setting -->
+
             <div class="akun-login-soaraja hidden">
               <!--  -->
-              <div class="">
+              <div>
                 <!-- Menu 14 profil -->
                 <div
                   onclick="ShowProfil()"
-                  class="flex col justify-center py-3"
+                  class="flex col justify-center py-1"
                   data-tooltip-target="menu-profil"
                   data-tooltip-placement="right"
                 >
@@ -1967,7 +1962,7 @@
                         class="menu-icon"
                         data-menu="0"
                         src="./src/images/settings.png"
-                        alt=""
+                        alt="Profil Settings Icon"
                       />
                     </div>
                   </div>
@@ -1977,12 +1972,51 @@
                   role="tooltip"
                   class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
                 >
-                  Pengaturan
+                  Profil
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+
+                <!-- Menu 15 logout -->
+                <div
+                  onclick="KeluarAkun()"
+                  class="flex col justify-center py-1"
+                  data-tooltip-target="menu-logout"
+                  data-tooltip-placement="right"
+                >
+                  <div
+                    id="MenuLimaBelasTab"
+                    data-tabs-target="#MenuLimaBelasContent"
+                    type="button"
+                    role="tab"
+                    aria-controls="MenuLimaBelasContent"
+                    aria-selected="false"
+                    class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                  >
+                    <div
+                      class="w-6 h-6 flex justify-center items-center relative"
+                    >
+                      <img
+                        class="menu-icon"
+                        data-menu="0"
+                        src="./src/images/logout3.png"
+                        alt="Logout Icon"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="menu-logout"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Keluar
                   <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
               </div>
+
               <!--  -->
             </div>
+
             <!--  -->
           </div>
 
@@ -14055,8 +14089,8 @@
                         </div>
 
                         <p class="text-center text-sm text-gray-700 mt-5">
-                          Masukkan nomor ponsel, atau email dan kami akan
-                          mengirimi tautan ke akun anda.
+                          Masukkan nomor ponsel atau email dan kami akan
+                          kirimkan tautan ke akun anda.
                         </p>
 
                         <form action="" class="my-3">
