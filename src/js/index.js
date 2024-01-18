@@ -2973,6 +2973,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var tabButtonTiga = document.getElementById("detail-pasang-enam-tab");
+
+  tabButtonTiga.addEventListener("click", function () {
+    setTimeout(function () {
+      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+        $(".slider-card-mode-ketiga").slick("setPosition");
+      } else {
+        initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+      }
+    }, 100);
+  });
+
+});
+
 function cardModeTiga() {
   setTimeout(function () {
     if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
