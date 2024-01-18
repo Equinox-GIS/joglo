@@ -1530,7 +1530,7 @@
         <div class="grid grid-cols-[55px,1fr]">
           <!-- Menu -->
           <div
-            class="w-full h-[83vh] flex flex-col justify-between border-x-[1px] border-gray-300 py-4"
+            class="w-full h-[85vh] flex flex-col justify-between border-x-[1px] border-gray-300 py-4"
             id="kontenMenuTab"
             data-tabs-toggle="#kontenMenuContent"
             role="tablist"
@@ -1948,16 +1948,16 @@
                 <!-- Menu 15 profil -->
                 <div
                   onclick="ShowProfil()"
-                  class="flex col justify-center py-3"
+                  class="flex col justify-center py-2"
                   data-tooltip-target="menu-profil"
                   data-tooltip-placement="right"
-                >
+                  >
                   <div
                     aria-selected="false"
                     class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
                   >
                     <div
-                      class="w-7 h-7 flex justify-center items-center relative"
+                      class="w-6 h-6 flex justify-center items-center relative"
                     >
                       <img
                         class="menu-icon"
@@ -1972,8 +1972,41 @@
                   id="menu-profil"
                   role="tooltip"
                   class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-                >
+                  >
                   Pengaturan
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+
+                <!-- Menu 16 Keluar -->
+
+                   <div
+                  onclick="KeluarAkun()"
+                  class="flex col justify-center py-2"
+                  data-tooltip-target="menu-keluar"
+                  data-tooltip-placement="right"
+                  >
+                  <div
+                    aria-selected="false"
+                    class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                  >
+                    <div
+                      class="w-5 h-5 flex justify-center items-center relative"
+                    >
+                      <img
+                        class="menu-icon"
+                        data-menu="0"
+                        src="./src/images/logout3.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="menu-keluar"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+                  >
+                  Keluar
                   <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
 
