@@ -3110,6 +3110,9 @@ window.KeluarAkun = function () {
   Array.from(document.getElementsByClassName("akun-login-soaraja")).forEach(
     (elem) => elem.classList.add("hidden")
   );
+
+showJudulGaleri();
+
 };
 
 window.FormRegistration = function () {
@@ -3161,6 +3164,13 @@ function LupaKataSandi() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
     element.textContent = "Reset";
+  });
+}
+
+function showJudulGaleri() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Galeri";
   });
 }
 
