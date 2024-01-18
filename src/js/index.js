@@ -3131,7 +3131,7 @@ function showJudulRegistrasi() {
 function showJudulProfil() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
-    element.textContent = "Profil";
+    element.textContent = "Pengaturan";
   });
 }
 
