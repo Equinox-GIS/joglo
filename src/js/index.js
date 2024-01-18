@@ -3089,6 +3089,10 @@ window.ShowProfil = function () {
 };
 
 window.MasukAkunLogin = function () {
+
+showJudulGaleri();
+
+
   Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
     (elem) => elem.classList.remove("hidden")
   );
@@ -3111,7 +3115,6 @@ window.KeluarAkun = function () {
     (elem) => elem.classList.add("hidden")
   );
 
-showJudulGaleri();
 
 };
 
