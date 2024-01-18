@@ -2985,7 +2985,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 100);
   });
-
 });
 
 function cardModeTiga() {
@@ -3089,9 +3088,7 @@ window.ShowProfil = function () {
 };
 
 window.MasukAkunLogin = function () {
-
-showJudulGaleri();
-
+  showJudulGaleri();
 
   Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
     (elem) => elem.classList.remove("hidden")
@@ -3114,8 +3111,6 @@ window.KeluarAkun = function () {
   Array.from(document.getElementsByClassName("akun-login-soaraja")).forEach(
     (elem) => elem.classList.add("hidden")
   );
-
-
 };
 
 window.FormRegistration = function () {
