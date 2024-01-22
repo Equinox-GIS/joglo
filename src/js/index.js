@@ -3100,6 +3100,12 @@ window.ShowRegistrasi = function () {
 };
 
 window.ShowProfil = function () {
+
+  Array.from(document.getElementsByClassName("stories_back")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
+
+
   Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
     (elem) => elem.classList.add("hidden")
   );
