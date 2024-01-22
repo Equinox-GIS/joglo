@@ -1441,6 +1441,42 @@ window.showCardTambahStories = function (element) {
   }
 };
 
+// Buka Halaman Posting - Stories
+
+let lastClickedshowPostingStories;
+window.showPostingStories = function (element) {
+  event.stopPropagation();
+
+  lastClickedshowPostingStories = element;
+
+  var menuDuaTab = document.getElementById("MenuDuaTab");
+  var MenuStories = document.getElementById("detail-pasang-tiga-tab");
+  if (menuDuaTab) {
+    MenuDuaTab.click();
+    MenuStories.click();
+  } else {
+    console.error("MenuDuaTab not found");
+  }
+};
+
+// Buka Halaman Posting - Listing 
+
+let lastClickedshowPostingListing;
+window.showPostingListing = function (element) {
+  event.stopPropagation();
+
+  lastClickedshowPostingListing = element;
+
+  var menuDuaTab = document.getElementById("MenuDuaTab");
+  var MenuListing = document.getElementById("detail-pasang-satu-tab");
+  if (menuDuaTab) {
+    MenuDuaTab.click();
+    MenuListing.click();
+  } else {
+    console.error("MenuDuaTab not found");
+  }
+};
+
 window.closeDetailAgent = function () {
   if (lastClickedAgent) {
     document.getElementById("MenuSatuTab").click();

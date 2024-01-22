@@ -1610,9 +1610,9 @@
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
 
-              <!-- Menu 2 Pasang Iklan -->
+              <!-- Menu 2 Pasang Iklan Hidden -->
               <div
-                class="flex col justify-center py-2"
+                class="flex col justify-center py-2 hidden"
                 data-tooltip-target="menu-pasang-iklan"
                 data-tooltip-placement="right"
               >
@@ -35055,11 +35055,38 @@
                                   <div
                                     class="w-full h-full flex flex-col justify-center items-center"
                                   >
-                                    <img
-                                      alt="profil"
-                                      src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFufGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
-                                      class="object-cover w-12 h-12 mx-auto rounded-full"
-                                    />
+                                    <div
+                                      class="w-12 h-12 rounded-full relative"
+                                    >
+                                      <img
+                                        class="w-full h-full p-[0.15rem] rounded-full"
+                                        src="/src/images/model/model11.jpg"
+                                        alt=""
+                                      />
+
+                                      <svg
+                                        width="17"
+                                        height="17"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        onclick="showPostingStories(this)"
+                                        class="absolute bottom-0 right-0.5 border border-white border-2 rounded-full cursor-pointer"
+                                      >
+                                        <path
+                                          fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M8.125 16C12.4742 16 16 12.4742 16 8.125C16 3.77576 12.4742 0.25 8.125 0.25C3.77576 0.25 0.25 3.77576 0.25 8.125C0.25 12.4742 3.77576 16 8.125 16Z"
+                                          fill="#1877F2"
+                                        ></path>
+                                        <path
+                                          fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M8.61719 4.67969C8.61719 4.40786 8.39683 4.1875 8.125 4.1875C7.85317 4.1875 7.63281 4.40786 7.63281 4.67969V7.63281H4.67969C4.40786 7.63281 4.1875 7.85317 4.1875 8.125C4.1875 8.39683 4.40786 8.61719 4.67969 8.61719H7.63281V11.5703C7.63281 11.8421 7.85317 12.0625 8.125 12.0625C8.39683 12.0625 8.61719 11.8421 8.61719 11.5703V8.61719H11.5703C11.8421 8.61719 12.0625 8.39683 12.0625 8.125C12.0625 7.85317 11.8421 7.63281 11.5703 7.63281H8.61719V4.67969Z"
+                                          fill="#FFFFFF"
+                                        ></path>
+                                      </svg>
+                                    </div>
                                   </div>
                                   <div class="w-full h-full flex flex-row">
                                     <div
@@ -35483,6 +35510,7 @@
                                     class="w-full h-[45vh] flex flex-col items-center justify-center bg-white rounded-lg konten-dijual"
                                   >
                                     <img
+                                      onclick="showPostingListing()"
                                       class="w-24 h-24 object-contain cursor-pointer"
                                       src="./src/images/plus.png"
                                       alt="tambah listing agent"
