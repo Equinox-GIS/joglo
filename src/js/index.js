@@ -1443,6 +1443,14 @@ window.showCardTambahStories = function (element) {
 
 // Buka Halaman Posting - Stories
 
+function showJudulPostinganStories() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Postingan Stories";
+  });
+}
+
+
 let lastClickedshowPostingStories;
 window.showPostingStories = function (element) {
   event.stopPropagation();
@@ -1454,12 +1462,20 @@ window.showPostingStories = function (element) {
   if (menuDuaTab) {
     MenuDuaTab.click();
     MenuStories.click();
+    showJudulPostinganStories();
   } else {
     console.error("MenuDuaTab not found");
   }
 };
 
 // Buka Halaman Posting - Listing 
+function showJudulPostinganListing() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Postingan Listing";
+  });
+}
+
 
 let lastClickedshowPostingListing;
 window.showPostingListing = function (element) {
@@ -1472,6 +1488,7 @@ window.showPostingListing = function (element) {
   if (menuDuaTab) {
     MenuDuaTab.click();
     MenuListing.click();
+    showJudulPostinganListing();
   } else {
     console.error("MenuDuaTab not found");
   }
