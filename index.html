@@ -45330,7 +45330,7 @@
               <!--  Card Favorit -->
               <div class="flex flex-col card-info-favorit">
                 <!-- Judul Favorit -->
-                <div class="px-3 pt-2">
+                <div class="px-4 pt-2">
                   <div class="font-instagram_bold text-2xl mb-2">Promo</div>
 
                   <div
@@ -45381,7 +45381,7 @@
                         <!-- Menu Tab Empat Pasang -->
                         <li class="" role="presentation">
                           <button
-                            class="inline-block px-3.5 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
+                            class="inline-block px-3.5 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
                             id="detail-pasang-empat-tab"
                             data-tabs-target="#detail-pasang-empat"
                             type="button"
@@ -45389,7 +45389,7 @@
                             aria-controls="detail-pasang-empat"
                             aria-selected="false"
                           >
-                            Baris Iklan
+                            Iklan Baris
                           </button>
                         </li>
 
@@ -45496,119 +45496,134 @@
                           <div
                             class="h-[70.5vh] overflow-y-auto hide-scrollbar text-gray-700"
                           >
-                            <!-- Listing -->
                             <form>
-                              <!-- Iklan Baris Listing -->
-                              <div
-                                class="grid grid-cols-2 gap-y-3 gap-x-4 mt-1"
-                              >
-                                <div class="col-span-2">
-                                  <div class="w-full">
-                                    <div class="flex items-center">
-                                      <input
-                                        id="iklan_baris_listing"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                      />
-                                      <label
-                                        for="carport"
-                                        class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                        >Listing</label
-                                      >
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!-- id iklan baris 2 -->
-                                <div class="col-span-2">
-                                  <div class="relative w-full">
-                                    <label
-                                      class="block text-sm mb-2"
-                                      for="id_iklan_baris"
-                                      >ID Iklan</label
-                                    >
-                                    <select
-                                      id="id_iklan_baris"
-                                      class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                    >
-                                      <option value="#" selected>Pilih</option>
-                                      <option value="78AC61">ID 78AC61</option>
-                                      <option value="78AC62">ID 78AC62</option>
-                                      <option value="78AC63">ID 78AC63</option>
-                                      <option value="78AC64">ID 78AC64</option>
-                                      <option value="78AC665">ID 78AC65</option>
-                                    </select>
-                                  </div>
-                                </div>
-
-                                <!--  -->
-                                <div class="col-span-2">
-                                  <div class="relative w-full">
-                                    <label
-                                      class="block text-sm mb-2"
-                                      for="deskripsi_iklan_baris"
-                                    >
-                                      Deskripsi (maks. 100 karakter)
-                                    </label>
-                                    <textarea
-                                      id="deskripsi_iklan_baris"
-                                      class="block p-2.5 h-[8vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
-                                    ></textarea>
-                                  </div>
-                                </div>
-                                <!--  -->
-                              </div>
-                              <!-- Iklan Baris Agent -->
-                              <div
-                                class="grid grid-cols-2 gap-y-3 gap-x-4 mt-6"
-                              >
-                                <div class="col-span-2">
-                                  <div class="w-full">
-                                    <div class="flex items-center">
-                                      <input
-                                        id="iklan_baris_agen"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                      />
-                                      <label
-                                        for="carport"
-                                        class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                        >Agen</label
-                                      >
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!--  -->
-                                <div class="col-span-2">
-                                  <div class="relative w-full">
-                                    <label
-                                      class="block text-sm mb-2"
-                                      for="deskripsi_iklan_baris"
-                                    >
-                                      Deskripsi (maks. 100 karakter)
-                                    </label>
-                                    <textarea
-                                      id="deskripsi_iklan_baris"
-                                      class="block p-2.5 h-[8vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
-                                    ></textarea>
-                                  </div>
-                                </div>
-                                <!--  -->
-
+                              <div class="grid grid-cols-2 gap-x-5 gap-y-3">
                                 <div
-                                  class="flex justify-center col-span-2 pt-3 pb-6"
-                                >
-                                  <button
-                                    type="button"
-                                    class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                                  class="w-full h-full flex flex-col"
                                   >
-                                    Simpan
-                                  </button>
+                                  <!-- Iklan Baris Listing -->
+                                  <div class="grid grid-cols-2 gap-y-5">
+                                    <div
+                                      class="col-span-2 grid grid-cols-1 "
+                                    >
+                                      <div class="flex items-center">
+                                        <input
+                                          id="default-radio-1"
+                                          type="radio"
+                                          value=""
+                                          name="default-radio"
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-transparent focus:outline-none focus:ring-0"
+                                        />
+                                        <label
+                                          for="default-radio-1"
+                                          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                          >Listing</label
+                                        >
+                                      </div>
+                                    </div>
+
+                                    <!-- id iklan baris 2 -->
+                                    <div class="col-span-2">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-sm mb-2"
+                                          for="id_iklan_baris"
+                                          >ID Iklan</label
+                                        >
+                                        <select
+                                          id="id_iklan_baris"
+                                          class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                        >
+                                          <option value="#" selected>
+                                            Pilih
+                                          </option>
+                                          <option value="78AC61">
+                                            ID 78AC61
+                                          </option>
+                                          <option value="78AC62">
+                                            ID 78AC62
+                                          </option>
+                                          <option value="78AC63">
+                                            ID 78AC63
+                                          </option>
+                                          <option value="78AC64">
+                                            ID 78AC64
+                                          </option>
+                                          <option value="78AC665">
+                                            ID 78AC65
+                                          </option>
+                                        </select>
+                                      </div>
+                                    </div>
+
+                                    <!--  -->
+                                    <div class="col-span-2">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-sm mb-2"
+                                          for="deskripsi_iklan_baris"
+                                        >
+                                          Deskripsi (maks. 100 karakter)
+                                        </label>
+                                        <textarea
+                                          id="deskripsi_iklan_baris"
+                                          class="block p-2.5 h-[8vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                                        ></textarea>
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                  </div>
                                 </div>
-                                <!--  -->
+                                <div
+                                  class="w-full h-full  flex flex-col"
+                                  >
+                                  <!-- Iklan Baris Agen -->
+                                  <div class="grid grid-cols-2 gap-y-5">
+                                    <div
+                                      class="col-span-2 grid grid-cols-1"
+                                    >
+                                      <div class="flex items-center">
+                                        <input
+                                          id="default-radio-2"
+                                          type="radio"
+                                          value=""
+                                          name="default-radio"
+                                          class="text-blue-600 bg-gray-100 border-gray-300 focus:ring-transparent focus:outline-none focus:ring-0"
+                                        />
+                                        <label
+                                          for="default-radio-2"
+                                          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                          >Agen</label
+                                        >
+                                      </div>
+                                    </div>
+
+                                    <!--  -->
+                                    <div class="col-span-2">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-sm mb-2"
+                                          for="deskripsi_iklan_baris"
+                                        >
+                                          Deskripsi (maks. 100 karakter)
+                                        </label>
+                                        <textarea
+                                          id="deskripsi_iklan_baris"
+                                          class="block p-2.5 h-[8vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                                        ></textarea>
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                  </div>
+                                </div>
+                                <div class="col-span-2 flex justify-center">
+                                            <button
+                                      type="button"
+                                      class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                                    >
+                                      Simpan
+                                    </button>
+                                </div>
                               </div>
                             </form>
                           </div>

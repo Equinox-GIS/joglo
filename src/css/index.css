@@ -1143,8 +1143,4 @@ input[type="number"] {
   overflow:hidden;
 }
 
-.slick-prev, .slick-next {
-    opacity: 1 !important; /* Memastikan tombol selalu terlihat */
-    visibility: visible !important;
-}
 
