@@ -1425,21 +1425,21 @@ window.showCardAgent = function (element) {
 };
 
 // TambahStories
-let lastClickedTambahStories;
-window.showCardTambahStories = function (element) {
-  event.stopPropagation();
+// let lastClickedTambahStories;
+// window.showCardTambahStories = function (element) {
+//   event.stopPropagation();
 
-  lastClickedTambahStories = element;
+//   lastClickedTambahStories = element;
 
-  var menuEmpatTab = document.getElementById("MenuDuaTab");
-  var AddFormStories = document.getElementById("detail-pasang-tiga-tab");
-  if (MenuDuaTab) {
-    MenuDuaTab.click();
-    AddFormStories.click();
-  } else {
-    console.error("MenuDuaTab not found");
-  }
-};
+//   var menuEmpatTab = document.getElementById("MenuDuaTab");
+//   var AddFormStories = document.getElementById("detail-pasang-tiga-tab");
+//   if (MenuDuaTab) {
+//     MenuDuaTab.click();
+//     AddFormStories.click();
+//   } else {
+//     console.error("MenuDuaTab not found");
+//   }
+// };
 
 // Buka Halaman Posting - Stories
 
