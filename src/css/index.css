@@ -1134,6 +1134,12 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.slick-prev, .slick-next {
+    opacity: 1 !important; /* Memastikan tombol selalu terlihat */
+    visibility: visible !important;
+}
+
+
 .hapus_focus_checkbox:focus {
   outline: none !important;
   box-shadow: none !important;
