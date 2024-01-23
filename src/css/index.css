@@ -1134,8 +1134,8 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.slick-prev, .slick-next {
-    opacity: 1 !important; /* Memastikan tombol selalu terlihat */
+.slider-story-galeri, .slick-prev, .slick-next {
+    opacity: 1 !important;
     visibility: visible !important;
 }
 
