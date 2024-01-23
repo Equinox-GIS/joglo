@@ -2252,12 +2252,14 @@
                               <div
                                 data-active-tab="6"
                                 onclick="showCardInfoDetail(this)"
-                                class="relative !flex !flex-col cursor-pointer"
+                                class="relative flex flex-col items-center cursor-pointer"
                               >
                                 <div class="">
-                                  <div class="w-16 h-16 rounded-full relative">
+                                  <div
+                                    class="w-16 h-16 p-[0.15rem] bg-gradient-to-r from-yellow-200 to-pink-600 rounded-full"
+                                  >
                                     <img
-                                      class="w-full h-full p-[0.15rem] rounded-full"
+                                      class="w-full h-full p-[0.15rem] bg-white rounded-full relative"
                                       src="/src/images/model/model11.jpg"
                                       alt=""
                                     />
@@ -2269,7 +2271,7 @@
                                       fill="none"
                                       xmlns="http://www.w3.org/2000/svg"
                                       onclick="showPostingStories(this)"
-                                      class="absolute bottom-0 right-1 border border-white border-2 rounded-full"
+                                      class="absolute bottom-0 right-3 border bg-white border-white border-2 rounded-full"
                                     >
                                       <path
                                         fill-rule="evenodd"
@@ -20999,453 +21001,499 @@
                         aria-labelledby="detail-pasang-satu-tab"
                       >
                         <!-- ingfo -->
-                        <div
-                          class="h-[76.5vh] overflow-y-auto hide-scrollbar text-gray-700"
-                        >
-                          <form>
-                            <h6 class="text-lg font-instagram_bold mt-3 mb-3">
-                              Detail Rumahssss
-                            </h6>
-                            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
-                              <!-- Koordinat -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="koordinat"
-                                  >
-                                    Koordinat
-                                  </label>
-                                  <input
-                                    readonly
-                                    disabled
-                                    type="text"
-                                    id="koordinat"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
 
-                              <!-- Jenis Properti -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="jenis-properti"
-                                  >
-                                    Jenis Properti
-                                  </label>
-                                  <select
-                                    id="jenis-properti"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="rumah-baru">
-                                      Rumah Baru
-                                    </option>
-                                    <option value="rumah-seken">
-                                      Rumah Seken
-                                    </option>
-                                    <option value="apartemen-baru">
-                                      Apartemen Baru
-                                    </option>
-                                    <option value="apartemen-seken">
-                                      Apartemen Seken
-                                    </option>
-                                    <option value="ruko">Ruko</option>
-                                  </select>
-                                </div>
-                              </div>
+                        <!--  -->
+                        <div class="px-0 pt-2">
+                          <div
+                            class="flex flex-row items-stretch justify-between border-b border-gray-200"
+                          >
+                            <!-- Menu Tab Pasang -->
 
-                              <!-- Judul -->
-                              <div class="w-full col-span-2">
-                                <div class="relative w-full">
-                                  <label class="block text-sm mb-2" for="judul">
-                                    Judul
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="judul"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Deskripsi -->
-                              <div class="col-span-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="deskripsi"
-                                  >
-                                    Deskripsi
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="deskripsi"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Deskripsi 2 -->
-                              <div class="col-span-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="deskripsi2"
-                                  >
-                                    Deskripsi 2
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="deskripsi2"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Alamat 1 -->
-                              <div class="col-span-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="alamat1"
-                                  >
-                                    Alamat 1
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="alamat1"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Alamat 2 -->
-                              <div class="col-span-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="alamat2"
-                                  >
-                                    Alamat 2
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="alamat2"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Kelurahan -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="kelurahan"
-                                  >
-                                    Kelurahan
-                                  </label>
-                                  <input
-                                    readonly
-                                    disabled
-                                    type="text"
-                                    id="kelurahan"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Kecamatan -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="kecamatan"
-                                  >
-                                    Kecamatan
-                                  </label>
-                                  <input
-                                    readonly
-                                    disabled
-                                    type="text"
-                                    id="kecamatan"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Luas Tanah m2 -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="luas-tanah"
-                                  >
-                                    Luas Tanah m²
-                                  </label>
-                                  <input
-                                    type="number"
-                                    id="luas-tanah"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Luas Bangunan m2 -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="luas-bangunan"
-                                  >
-                                    Luas Bangunan m²
-                                  </label>
-                                  <input
-                                    type="number"
-                                    id="luas-bangunan"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Jumlah Kamar Tidur Utama -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="kamar-tidur-utama"
-                                  >
-                                    Jumlah Kamar Tidur Utama
-                                  </label>
-                                  <input
-                                    type="number"
-                                    id="kamar-tidur-utama"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Jumlah Kamar Tidur Tambahan -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="kamar-tidur-tambahan"
-                                  >
-                                    Jumlah Kamar Tidur Tambahan
-                                  </label>
-                                  <input
-                                    type="number"
-                                    id="kamar-tidur-tambahan"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Jenis Surat -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="jenis-surat"
-                                  >
-                                    Jenis Surat
-                                  </label>
-                                  <select
-                                    id="jenis-surat"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="shm">SHM</option>
-                                    <option value="shgb">SHGB</option>
-                                  </select>
-                                </div>
-                              </div>
-
-                              <!-- Penjual -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="jenis-properti"
-                                  >
-                                    Penjual
-                                  </label>
-                                  <select
-                                    id="jenis-properti"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="pemilik-langsung">
-                                      Pemilik Langsung
-                                    </option>
-                                    <option value="agen">Agen</option>
-                                    <option value="pengembang">
-                                      Pengembang
-                                    </option>
-                                  </select>
-                                </div>
-                              </div>
-
-                              <!--  -->
-                            </div>
-
-                            <h6 class="text-lg font-instagram_bold my-6">
-                              Tampak Rumah
-                            </h6>
-
-                            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
-                              <div
-                                class="w-ful col-span-2 bg-white p-3 rounded shadow"
+                            <div class="border-b border-gray-200">
+                              <!-- Tab Menu Pasang -->
+                              <ul
+                                class="flex flex-wrap -mb-px text-sm font-medium text-center pr-4"
+                                id="DetailsPostinganAgen"
+                                data-tabs-toggle="#DetailsPostinganAgenContent"
+                                role="tablist"
                               >
-                                <div class="relative w-full">
-                                  <!-- Upload Gambar -->
-                                  <div class="grid grid-cols-1 gap-y-3 gap-x-4">
-                                    <!-- Gambar 1 -->
+                                <!-- Menu Tab Satu Pasang -->
 
-                                    <div class="relative">
-                                      <input
-                                        type="file"
-                                        class="cursor-pointer relative block opacity-0 w-full h-full p-20 z-50"
-                                      />
+                                <!-- Menu Tab Tujuh Pasang -->
+                                <li class="" role="presentation">
+                                  <button
+                                    class="inline-block pr-4 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
+                                    id="detail-postingan-agen-tujuh-tab"
+                                    data-tabs-target="#detail-postingan-agen-tujuh"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="detail-postingan-agen-tujuh"
+                                    aria-selected="false"
+                                  >
+                                    Listing
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                            <!--  -->
+                          </div>
+                        </div>
+
+                        <!-- Konten Card Details pasang -->
+                        <div class="w-full h-full card-disukai-detail">
+                          <div class="flex flex-col h-full">
+                            <!-- Tabs Pasang -->
+
+                            <div id="DetailsPostinganAgenContent" class="">
+                              <!-- Konten Tab Tujuh Pasang -->
+                              <div
+                                class="hidden px-0 py-2"
+                                id="detail-postingan-agen-tujuh"
+                                role="tabpanel"
+                                aria-labelledby="detail-postingan-agen-tujuh-tab"
+                              >
+                                <div
+                                  class="h-[70.5vh] overflow-y-auto hide-scrollbar text-gray-700"
+                                >
+                                  <form>
+                                    <h6
+                                      class="text-lg font-instagram_bold mt-3"
+                                    >
+                                      Detail Rumah
+                                    </h6>
+                                    <div
+                                      class="grid grid-cols-2 gap-y-3 gap-x-4"
+                                    >
+                                      <!-- Upload Gambar -->
+
                                       <div
-                                        class="text-center p-10 absolute top-0 right-0 left-0 m-auto text-gray-700"
+                                        class="w-full h-[47vh] mt-6 bg-white flex justify-center items-center rounded shadow"
                                       >
-                                        <h4>
-                                          Seret berkas di mana saja untuk
-                                          mengunggah
-                                          <br />atau
-                                        </h4>
-                                        <p class="">Pilih Berkas</p>
+                                        <!-- Upload Gambar -->
+                                        <!-- Gambar 1 -->
+                                        <img
+                                          class="w-20 h-20 object-contain"
+                                          src="./src/images/image-gallery.png"
+                                        />
+
+                                        <!--  -->
+                                      </div>
+
+                                      <!-- Koordinat -->
+                                      <div class="w-full h-full flex flex-col">
+                                        <div class="w-full mb-4">
+                                          <div class="relative w-full">
+                                            <label
+                                              class="block text-sm mb-1"
+                                              for="koordinat"
+                                            >
+                                              Koordinatzz
+                                            </label>
+                                            <input
+                                              readonly
+                                              disabled
+                                              type="text"
+                                              id="koordinat"
+                                              class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                            />
+                                          </div>
+                                        </div>
+
+                                        <div class="grid grid-cols-2 gap-4">
+                                          <!-- Kelurahan -->
+                                          <div class="w-full">
+                                            <div class="relative w-full">
+                                              <label
+                                                class="block text-sm mb-1"
+                                                for="kelurahan"
+                                              >
+                                                Kelurahan
+                                              </label>
+                                              <input
+                                                readonly
+                                                disabled
+                                                type="text"
+                                                id="kelurahan"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <!-- Kecamatan -->
+                                          <div class="w-full">
+                                            <div class="relative w-full">
+                                              <label
+                                                class="block text-sm mb-1"
+                                                for="kecamatan"
+                                              >
+                                                Kecamatan
+                                              </label>
+                                              <input
+                                                readonly
+                                                disabled
+                                                type="text"
+                                                id="kecamatan"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <!-- Luas Tanah m2 -->
+                                          <div class="w-full">
+                                            <div class="relative w-full">
+                                              <label
+                                                class="block text-sm mb-1"
+                                                for="luas-tanah"
+                                              >
+                                                Luas Tanah m²
+                                              </label>
+                                              <input
+                                                type="number"
+                                                id="luas-tanah"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <!-- Luas Bangunan m2 -->
+                                          <div class="w-full">
+                                            <div class="relative w-full">
+                                              <label
+                                                class="block text-sm mb-1"
+                                                for="luas-bangunan"
+                                              >
+                                                Luas Bangunan m²
+                                              </label>
+                                              <input
+                                                type="number"
+                                                id="luas-bangunan"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <!-- Jumlah Kamar Tidur Utama -->
+                                          <div class="w-full">
+                                            <div class="relative w-full">
+                                              <label
+                                                class="block text-sm mb-1"
+                                                for="kamar-tidur-utama"
+                                              >
+                                                Kamar Tidur Utama
+                                              </label>
+                                              <input
+                                                type="number"
+                                                id="kamar-tidur-utama"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <!-- Jumlah Kamar Tidur Tambahan -->
+                                          <div class="w-full">
+                                            <div class="relative w-full">
+                                              <label
+                                                class="block text-sm mb-1"
+                                                for="kamar-tidur-tambahan"
+                                              >
+                                                Kamar Tidur Tambahan
+                                              </label>
+                                              <input
+                                                type="number"
+                                                id="kamar-tidur-tambahan"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <!-- Penjual -->
+                                          <div class="w-full">
+                                            <div class="relative w-full">
+                                              <label
+                                                class="block text-sm mb-1"
+                                                for="jenis-properti"
+                                              >
+                                                Penjual
+                                              </label>
+                                              <select
+                                                id="jenis-properti"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                              >
+                                                <option
+                                                  value="pemilik-langsung"
+                                                >
+                                                  Pemilik Langsung
+                                                </option>
+                                                <option value="agen">
+                                                  Agen
+                                                </option>
+                                                <option value="pengembang">
+                                                  Pengembang
+                                                </option>
+                                              </select>
+                                            </div>
+                                          </div>
+
+                                          <!-- Jenis Surat -->
+                                          <div class="w-full">
+                                            <div class="relative w-full">
+                                              <label
+                                                class="block text-sm mb-1"
+                                                for="jenis-surat"
+                                              >
+                                                Jenis Surat
+                                              </label>
+                                              <select
+                                                id="jenis-surat"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                              >
+                                                <option value="shm">SHM</option>
+                                                <option value="shgb">
+                                                  SHGB
+                                                </option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <!-- Judul -->
+                                      <div class="w-full col-span-2">
+                                        <div class="relative w-full">
+                                          <label
+                                            class="block text-sm mb-2"
+                                            for="judul"
+                                          >
+                                            Judul
+                                          </label>
+                                          <input
+                                            type="text"
+                                            id="judul"
+                                            class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                          />
+                                        </div>
+                                      </div>
+
+                                      <!-- Alamat 1 -->
+                                      <div class="col-span-2">
+                                        <div class="relative w-full">
+                                          <label
+                                            class="block text-sm mb-2"
+                                            for="alamat1"
+                                          >
+                                            Alamat
+                                          </label>
+                                          <input
+                                            type="text"
+                                            id="alamat1"
+                                            class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                          />
+                                        </div>
+                                      </div>
+
+                                      <!-- Deskripsi -->
+                                      <div class="col-span-2">
+                                        <div class="relative w-full">
+                                          <label
+                                            class="block text-sm mb-2"
+                                            for="deskripsi_postingan"
+                                          >
+                                            Deskripsi
+                                          </label>
+                                          <textarea
+                                            name="deskripsi_postingan"
+                                            id="deskripsi_postingan"
+                                            class="block p-2.5 h-[14vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                                            required=""
+                                            rows="9"
+                                          ></textarea>
+                                        </div>
+                                      </div>
+
+                                      <!--  -->
+                                    </div>
+
+                                    <h6
+                                      class="text-lg font-instagram_bold my-6"
+                                    >
+                                      Tambahan
+                                    </h6>
+                                    <div
+                                      class="grid grid-cols-3 gap-y-1 gap-x-4"
+                                    >
+                                      <!-- Carport -->
+                                      <div class="w-full">
+                                        <div class="flex items-center mb-2">
+                                          <input
+                                            id="carport"
+                                            type="checkbox"
+                                            value=""
+                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                          />
+                                          <label
+                                            for="carport"
+                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                            >Carport</label
+                                          >
+                                        </div>
+                                      </div>
+
+                                      <!-- Swimming Pool -->
+                                      <div class="w-full">
+                                        <div class="flex items-center mb-2">
+                                          <input
+                                            id="swimming-pool"
+                                            type="checkbox"
+                                            value=""
+                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                          />
+                                          <label
+                                            for="swimming-pool"
+                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                            >Swimming Pool</label
+                                          >
+                                        </div>
+                                      </div>
+
+                                      <!-- Swimming Pool -->
+                                      <div class="w-full">
+                                        <div class="flex items-center mb-2">
+                                          <input
+                                            id="swimming-pool"
+                                            type="checkbox"
+                                            value=""
+                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                          />
+                                          <label
+                                            for="swimming-pool"
+                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                            >Swimming Pool</label
+                                          >
+                                        </div>
+                                      </div>
+
+                                      <!-- IMB -->
+                                      <div class="w-full">
+                                        <div class="flex items-center mb-2">
+                                          <input
+                                            id="imb"
+                                            type="checkbox"
+                                            value=""
+                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                          />
+                                          <label
+                                            for="imb"
+                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                            >IMB</label
+                                          >
+                                        </div>
+                                      </div>
+
+                                      <!-- Gate Cluster -->
+                                      <div class="w-full">
+                                        <div class="flex items-center">
+                                          <input
+                                            id="gate-cluster"
+                                            type="checkbox"
+                                            value=""
+                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                          />
+                                          <label
+                                            for="gate-cluster"
+                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                            >Gate Cluster</label
+                                          >
+                                        </div>
+                                      </div>
+                                      <!-- Gate Cluster -->
+                                      <div class="w-full">
+                                        <div class="flex items-center">
+                                          <input
+                                            id="gate-cluster"
+                                            type="checkbox"
+                                            value=""
+                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                          />
+                                          <label
+                                            for="gate-cluster"
+                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                            >Gate Cluster</label
+                                          >
+                                        </div>
+                                      </div>
+                                      <!-- IMB -->
+                                      <div class="w-full">
+                                        <div class="flex items-center mb-2">
+                                          <input
+                                            id="imb"
+                                            type="checkbox"
+                                            value=""
+                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                          />
+                                          <label
+                                            for="imb"
+                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                            >IMB</label
+                                          >
+                                        </div>
+                                      </div>
+
+                                      <!-- Gate Cluster -->
+                                      <div class="w-full">
+                                        <div class="flex items-center">
+                                          <input
+                                            id="gate-cluster"
+                                            type="checkbox"
+                                            value=""
+                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                          />
+                                          <label
+                                            for="gate-cluster"
+                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                            >Gate Cluster</label
+                                          >
+                                        </div>
+                                      </div>
+                                      <!-- Gate Cluster -->
+                                      <div class="w-full">
+                                        <div class="flex items-center">
+                                          <input
+                                            id="gate-cluster"
+                                            type="checkbox"
+                                            value=""
+                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                          />
+                                          <label
+                                            for="gate-cluster"
+                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                            >Gate Cluster</label
+                                          >
+                                        </div>
                                       </div>
                                     </div>
 
+                                    <div
+                                      class="flex justify-center col-span-2 pt-3 pb-5"
+                                    >
+                                      <button
+                                        type="button"
+                                        class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                                      >
+                                        Simpan
+                                      </button>
+                                    </div>
+
                                     <!--  -->
-                                  </div>
+                                  </form>
                                 </div>
                               </div>
-                              <!-- Harga Listrik -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="harga-listrik"
-                                  >
-                                    Listrik
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="harga-listrik"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Arah Bangunan -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="arah-bangunan"
-                                  >
-                                    Arah Bangunan
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="arah-bangunan"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-
-                            <h6 class="text-lg font-instagram_bold my-6">
-                              Tambahan
-                            </h6>
-                            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
-                              <!-- Carport -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="carport"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="carport"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Carport</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- Swimming Pool -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="swimming-pool"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="swimming-pool"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Swimming Pool</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- IMB -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="imb"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="imb"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >IMB</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- Gate Cluster -->
-                              <div class="w-full">
-                                <div class="flex items-center">
-                                  <input
-                                    id="gate-cluster"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="gate-cluster"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Gate Cluster</label
-                                  >
-                                </div>
-                              </div>
-                            </div>
-
-                            <div
-                              class="flex justify-center col-span-2 pt-3 pb-5"
-                            >
-                              <button
-                                type="button"
-                                class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
-                              >
-                                Simpan
-                              </button>
+                              <!--  -->
                             </div>
 
                             <!--  -->
-                          </form>
+                          </div>
                         </div>
+                        <!--  -->
                       </div>
 
                       <!-- Konten Tab Tiga Pasang -->
@@ -35447,36 +35495,42 @@
                                     class="w-full h-full flex flex-col justify-center items-center"
                                   >
                                     <div
-                                      class="w-12 h-12 p-[0.007rem] bg-gradient-to-r from-yellow-200 to-pink-600 rounded-full relative"
+                                      class="relative flex flex-col items-center cursor-pointer"
                                     >
-                                      <img
-                                        class="w-full h-full p-[0.15rem] rounded-full"
-                                        src="/src/images/model/model11.jpg"
-                                        alt=""
-                                      />
+                                      <div class="">
+                                        <div
+                                          class="w-12 h-12 p-[0.15rem] bg-gradient-to-r from-yellow-200 to-pink-600 rounded-full"
+                                        >
+                                          <img
+                                            class="w-full h-full p-[0.15rem] bg-white rounded-full relative"
+                                            src="/src/images/model/model11.jpg"
+                                            alt=""
+                                          />
 
-                                      <svg
-                                        width="17"
-                                        height="17"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        onclick="showPostingStories(this)"
-                                        class="absolute bottom-0 right-0.5 border border-white border-2 rounded-full cursor-pointer"
-                                      >
-                                        <path
-                                          fill-rule="evenodd"
-                                          clip-rule="evenodd"
-                                          d="M8.125 16C12.4742 16 16 12.4742 16 8.125C16 3.77576 12.4742 0.25 8.125 0.25C3.77576 0.25 0.25 3.77576 0.25 8.125C0.25 12.4742 3.77576 16 8.125 16Z"
-                                          fill="#1877F2"
-                                        ></path>
-                                        <path
-                                          fill-rule="evenodd"
-                                          clip-rule="evenodd"
-                                          d="M8.61719 4.67969C8.61719 4.40786 8.39683 4.1875 8.125 4.1875C7.85317 4.1875 7.63281 4.40786 7.63281 4.67969V7.63281H4.67969C4.40786 7.63281 4.1875 7.85317 4.1875 8.125C4.1875 8.39683 4.40786 8.61719 4.67969 8.61719H7.63281V11.5703C7.63281 11.8421 7.85317 12.0625 8.125 12.0625C8.39683 12.0625 8.61719 11.8421 8.61719 11.5703V8.61719H11.5703C11.8421 8.61719 12.0625 8.39683 12.0625 8.125C12.0625 7.85317 11.8421 7.63281 11.5703 7.63281H8.61719V4.67969Z"
-                                          fill="#FFFFFF"
-                                        ></path>
-                                      </svg>
+                                          <svg
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 16 16"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            onclick="showPostingStories(this)"
+                                            class="absolute bottom-0 -right-0.5 border bg-white border-white border-2 rounded-full"
+                                          >
+                                            <path
+                                              fill-rule="evenodd"
+                                              clip-rule="evenodd"
+                                              d="M8.125 16C12.4742 16 16 12.4742 16 8.125C16 3.77576 12.4742 0.25 8.125 0.25C3.77576 0.25 0.25 3.77576 0.25 8.125C0.25 12.4742 3.77576 16 8.125 16Z"
+                                              fill="#1877F2"
+                                            ></path>
+                                            <path
+                                              fill-rule="evenodd"
+                                              clip-rule="evenodd"
+                                              d="M8.61719 4.67969C8.61719 4.40786 8.39683 4.1875 8.125 4.1875C7.85317 4.1875 7.63281 4.40786 7.63281 4.67969V7.63281H4.67969C4.40786 7.63281 4.1875 7.85317 4.1875 8.125C4.1875 8.39683 4.40786 8.61719 4.67969 8.61719H7.63281V11.5703C7.63281 11.8421 7.85317 12.0625 8.125 12.0625C8.39683 12.0625 8.61719 11.8421 8.61719 11.5703V8.61719H11.5703C11.8421 8.61719 12.0625 8.39683 12.0625 8.125C12.0625 7.85317 11.8421 7.63281 11.5703 7.63281H8.61719V4.67969Z"
+                                              fill="#FFFFFF"
+                                            ></path>
+                                          </svg>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                   <div class="w-full h-full flex flex-row">
@@ -45374,7 +45428,7 @@
 
           <!-- Konten Menu DelapanBelas -->
           <div
-            class="hidden pr-2"
+            class="hidden"
             id="MenuDelapanBelasContent"
             role="tabpanel"
             aria-labelledby="MenuDelapanBelasTab"

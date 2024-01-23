@@ -480,13 +480,13 @@
 
 .custom_rounded_analitik {
   overflow: hidden;
-    border-top-left-radius: 0.5rem !important;
+  border-top-left-radius: 0.5rem !important;
   /* border-top-right-radius: 0.5rem; */
 }
 
 .custom_rounded_analitik video,
 .custom_rounded_analitik img {
-    border-top-left-radius: 0.5rem !important;
+  border-top-left-radius: 0.5rem !important;
   /* border-top-right-radius: 0.5rem; */
 }
 /*  */
@@ -1134,19 +1134,16 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.slick-prev, .slick-next {
-    opacity: 1 !important; /* Memastikan tombol selalu terlihat */
+/* .slider-story-galeri, .slick-prev, .slick-next {
+    opacity: 1 !important;
     visibility: visible !important;
-}
-
+} */
 
 .hapus_focus_checkbox:focus {
   outline: none !important;
   box-shadow: none !important;
 }
 
-.remove-scroll-textarea{
-  overflow:hidden;
+.remove-scroll-textarea {
+  overflow: hidden;
 }
-
-

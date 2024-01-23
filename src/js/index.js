@@ -877,13 +877,13 @@ function getSliderStoryGaleri() {
     slidesToScroll: 5,
     infinite: false,
     dots: false,
-    prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-55px !important; onclick="event.stopPropagation();">
+    prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-55px !important; opacity:1; onclick="event.stopPropagation();">
     <div>
                   <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
                     <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
-    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-55px!important; onclick="event.stopPropagation();">
+    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-55px!important; opacity:1; onclick="event.stopPropagation();">
                   <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
                     <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
@@ -1450,7 +1450,6 @@ function showJudulPostinganStories() {
   });
 }
 
-
 let lastClickedshowPostingStories;
 window.showPostingStories = function (element) {
   event.stopPropagation();
@@ -1468,14 +1467,13 @@ window.showPostingStories = function (element) {
   }
 };
 
-// Buka Halaman Posting - Listing 
+// Buka Halaman Posting - Listing
 function showJudulPostinganListing() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
     element.textContent = "Postingan Listing";
   });
 }
-
 
 let lastClickedshowPostingListing;
 window.showPostingListing = function (element) {
@@ -3117,11 +3115,9 @@ window.ShowRegistrasi = function () {
 };
 
 window.ShowProfil = function () {
-
-  Array.from(document.getElementsByClassName("stories_back")).forEach(
-    (elem) => elem.classList.add("hidden")
+  Array.from(document.getElementsByClassName("stories_back")).forEach((elem) =>
+    elem.classList.add("hidden")
   );
-
 
   Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
     (elem) => elem.classList.add("hidden")
