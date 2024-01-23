@@ -74,7 +74,7 @@
     <div class="min-h-screen bg-gray-100 flex flex-col overflow-y-hidden">
       <!-- Start Section One Header -->
       <div
-        class="w-full h-[10vh] flex flex-row items-center justify-between pl-3 pr-4"
+        class="w-full h-[10vh] flex flex-row items-center justify-between pl-3 pr-8"
       >
         <div class="flex items-center space-x-4">
           <img
@@ -1526,16 +1526,16 @@
 
       <!-- Start Section Three Main -->
       <div class="w-full h-[82vh] grid grid-cols-2">
-        <!-- Start Menu Navigation -->
+        <!-- Menu Navigation & Peta -->
         <div class="grid grid-cols-[55px,1fr]">
-          <!-- Menu -->
+          <!-- Semua Tab Menu -->
           <div
             class="w-full h-[85vh] flex flex-col justify-between border-x-[1px] border-gray-300 py-4"
             id="kontenMenuTab"
             data-tabs-toggle="#kontenMenuContent"
             role="tablist"
           >
-            <!-- Menu Button -->
+            <!-- Main Button -->
             <div>
               <!-- Menu 1 Beranda -->
               <div
@@ -1610,9 +1610,9 @@
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
 
-              <!-- Menu 2 Pasang Iklan -->
+              <!-- Menu 2 Pasang Iklan Hidden -->
               <div
-                class="flex col justify-center py-2"
+                class="flex col justify-center py-2 hidden"
                 data-tooltip-target="menu-pasang-iklan"
                 data-tooltip-placement="right"
               >
@@ -2055,7 +2055,7 @@
             <!--  -->
           </div>
 
-          <!-- Main Map -->
+          <!-- Peta Soaraja -->
           <div class="w-full h-full">
             <nav id="menu"></nav>
             <div class="relative w-full h-screen">
@@ -2150,10 +2150,9 @@
             </div>
           </div>
         </div>
-        <!-- End Menu Navigation -->
+        <!-- End Menu Navigation & Peta -->
 
-        <!-- Start Konten Card Three -->
-
+        <!-- Start Konten Utama -->
         <div id="kontenMenuContent" class="h-full w-full">
           <!-- Start Main Konten Menu -->
 
@@ -14166,155 +14165,277 @@
                   <div class="h-full w-full px-3">
                     <!--  -->
 
-                    <div class="bg-transparent rounded-lg">
-                      <div class="px-4 pt-4">
-                        <form action="#">
-                          <div class="grid grid-cols-2 gap-x-4 mb-5">
-                            <!-- Nama -->
-                            <div class="flex flex-col space-y-3">
-                              <div>
-                                <label
-                                  for="nama-profil"
-                                  class="block mb-2 text-sm font-medium text-gray-900"
-                                  >Nama</label
-                                >
-                                <input
-                                  type="text"
-                                  name="nama-profil"
-                                  id="nama-profil"
-                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
-                                />
-                              </div>
-                            </div>
-
-                            <!-- Domisili -->
-                            <div class="flex flex-col space-y-3">
-                              <div>
-                                <label
-                                  for="domisili-profil"
-                                  class="block mb-2 text-sm font-medium text-gray-900"
-                                  >Domisili</label
-                                >
-                                <input
-                                  type="text"
-                                  name="domisili-profil"
-                                  id="domisili-profil"
-                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
-                                />
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="grid grid-cols-2 gap-x-4 mb-5">
-                            <!-- Afiliasi -->
-                            <div class="flex flex-col space-y-3">
-                              <div>
-                                <label
-                                  for="afiliasi-profil"
-                                  class="block mb-2 text-sm font-medium text-gray-900"
-                                  >Afiliasi</label
-                                >
-                                <input
-                                  type="text"
-                                  name="afiliasi-profil"
-                                  id="afiliasi-profil"
-                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
-                                />
-                              </div>
-                            </div>
-
-                            <!-- URL -->
-                            <div class="flex flex-col space-y-3">
-                              <div>
-                                <label
-                                  for="url-profil"
-                                  class="block mb-2 text-sm font-medium text-gray-900"
-                                  >URL</label
-                                >
-                                <input
-                                  type="text"
-                                  name="url-profil"
-                                  id="url-profil"
-                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
-                                />
-                              </div>
-                            </div>
-                          </div>
-
-                          <!--  -->
-                          <div class="grid grid-cols-2 gap-x-4 mb-5">
-                            <!-- Spesialisasi Area -->
-                            <div>
-                              <label
-                                for="spesialisasi-area"
-                                class="block mb-2 text-sm font-medium text-gray-900"
-                                >Spesialisasi Area</label
-                              >
-                              <select
-                                name="spesialisasi-area"
-                                id="spesialisasi-area"
-                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
-                              >
-                                <option value="#" selected>Pilih</option>
-                                <option value="kelapa-gading">
-                                  Kelapa Gading
-                                </option>
-                                <option value="pluit">Pluit</option>
-                              </select>
-                            </div>
-
-                            <div>
-                              <label
-                                for="spesialisasi-aset"
-                                class="block mb-2 text-sm font-medium text-gray-900"
-                                >Spesialisasi Aset</label
-                              >
-                              <select
-                                name="spesialisasi-aset"
-                                id="spesialisasi-aset"
-                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
-                              >
-                                <option value="#" selected>Pilih</option>
-                                <option value="rumah">Rumah</option>
-                                <option value="apartemen">Apartemen</option>
-                              </select>
-                            </div>
-                          </div>
-
-                          <!--  -->
-                          <div class="grid grid-cols-2">
-                            <div class="col-span-2">
-                              <!-- Deskripsi -->
-                              <div class="h-full flex flex-col justify-between">
-                                <label
-                                  for="deskripsi"
-                                  class="block mb-2 text-sm font-medium text-gray-900"
-                                  >Deskripsi</label
-                                >
-                                <textarea
-                                  name="deskripsi"
-                                  id="deskripsi"
-                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
-                                  required
-                                  rows="9"
-                                ></textarea>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!--  -->
-                        </form>
-                      </div>
-
-                      <div class="px-5 mt-4 flex w-full">
-                        <div class="w-full flex justify-center">
-                          <button
-                            type="button"
-                            class="text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                    <!-- MenuPengaturan -->
+                    <div class="h-full flex flex-col">
+                      <!--  Card Favorit -->
+                      <div class="flex flex-col">
+                        <!-- Judul Favorit -->
+                        <div class="px-0 pt-0">
+                          <div
+                            class="flex flex-row items-stretch justify-between mt-1.5 border-b border-gray-200"
                           >
-                            Simpan
-                          </button>
+                            <!-- Menu Tab Pasang -->
+
+                            <div class="border-b border-gray-200">
+                              <!-- Tab Menu Pasang -->
+                              <ul
+                                class="flex flex-wrap -mb-px text-sm font-medium text-center pr-4"
+                                id="DetailPengaturan"
+                                data-tabs-toggle="#DetailPengaturanContent"
+                                role="tablist"
+                              >
+                                <!-- Menu Tab Satu Pasang -->
+                                <li
+                                  class="border-b border-gray-200"
+                                  role="presentation"
+                                >
+                                  <button
+                                    class="inline-block pr-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
+                                    id="detail-pengaturan-satu-tab"
+                                    data-tabs-target="#detail-pengaturan-satu"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="detail-pengaturan-satu"
+                                    aria-selected="true"
+                                  >
+                                    Profil
+                                  </button>
+                                </li>
+
+                                <!-- Menu Tab Tiga Pasang -->
+                                <li class="hidden" role="presentation">
+                                  <button
+                                    class="inline-block px-3.5 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
+                                    id="detail-pengaturan-tiga-tab"
+                                    data-tabs-target="#detail-pengaturan-tiga"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="detail-pengaturan-tiga"
+                                    aria-selected="false"
+                                  >
+                                    Kedua
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                            <!--  -->
+                          </div>
                         </div>
+
+                        <!-- Konten Card Details pasang -->
+                        <div class="w-full h-full">
+                          <div class="flex flex-col h-full">
+                            <!-- Tabs Pasang -->
+
+                            <div id="DetailPengaturanContent" class="">
+                              <!-- Konten Tab Satu Pasang -->
+                              <div
+                                class="py-2"
+                                id="detail-pengaturan-satu"
+                                role="tabpanel"
+                                aria-labelledby="detail-pengaturan-satu-tab"
+                              >
+                                <!-- Profil bner-->
+                                <div class="h-[70.5vh] form-profil px-0">
+                                  <!--  -->
+
+                                  <div
+                                    class="bg-transparent rounded-lg h-[67.5vh] overflow-y-auto overflow-x-hidden hide-scrollbar"
+                                  >
+                                    <div class="pt-0">
+                                      <form action="#">
+                                        <div
+                                          class="grid grid-cols-2 gap-x-4 mb-5"
+                                        >
+                                          <!-- Nama -->
+                                          <div class="flex flex-col space-y-3">
+                                            <div>
+                                              <label
+                                                for="nama-profil"
+                                                class="block mb-2 text-sm font-medium text-gray-900"
+                                                >Nama</label
+                                              >
+                                              <input
+                                                type="text"
+                                                name="nama-profil"
+                                                id="nama-profil"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <!-- Domisili -->
+                                          <div class="flex flex-col space-y-3">
+                                            <div>
+                                              <label
+                                                for="domisili-profil"
+                                                class="block mb-2 text-sm font-medium text-gray-900"
+                                                >Domisili</label
+                                              >
+                                              <input
+                                                type="text"
+                                                name="domisili-profil"
+                                                id="domisili-profil"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div
+                                          class="grid grid-cols-2 gap-x-4 mb-5"
+                                        >
+                                          <!-- Afiliasi -->
+                                          <div class="flex flex-col space-y-3">
+                                            <div>
+                                              <label
+                                                for="afiliasi-profil"
+                                                class="block mb-2 text-sm font-medium text-gray-900"
+                                                >Afiliasi</label
+                                              >
+                                              <input
+                                                type="text"
+                                                name="afiliasi-profil"
+                                                id="afiliasi-profil"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <!-- URL -->
+                                          <div class="flex flex-col space-y-3">
+                                            <div>
+                                              <label
+                                                for="url-profil"
+                                                class="block mb-2 text-sm font-medium text-gray-900"
+                                                >URL</label
+                                              >
+                                              <input
+                                                type="text"
+                                                name="url-profil"
+                                                id="url-profil"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <!--  -->
+                                        <div
+                                          class="grid grid-cols-2 gap-x-4 mb-5"
+                                        >
+                                          <!-- Spesialisasi Area -->
+                                          <div>
+                                            <label
+                                              for="spesialisasi-area"
+                                              class="block mb-2 text-sm font-medium text-gray-900"
+                                              >Spesialisasi Area</label
+                                            >
+                                            <select
+                                              name="spesialisasi-area"
+                                              id="spesialisasi-area"
+                                              class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                            >
+                                              <option value="#" selected>
+                                                Pilih
+                                              </option>
+                                              <option value="kelapa-gading">
+                                                Kelapa Gading
+                                              </option>
+                                              <option value="pluit">
+                                                Pluit
+                                              </option>
+                                            </select>
+                                          </div>
+
+                                          <div>
+                                            <label
+                                              for="spesialisasi-aset"
+                                              class="block mb-2 text-sm font-medium text-gray-900"
+                                              >Spesialisasi Aset</label
+                                            >
+                                            <select
+                                              name="spesialisasi-aset"
+                                              id="spesialisasi-aset"
+                                              class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                            >
+                                              <option value="#" selected>
+                                                Pilih
+                                              </option>
+                                              <option value="rumah">
+                                                Rumah
+                                              </option>
+                                              <option value="apartemen">
+                                                Apartemen
+                                              </option>
+                                            </select>
+                                          </div>
+                                        </div>
+
+                                        <!--  -->
+                                        <div class="grid grid-cols-2">
+                                          <div class="col-span-2">
+                                            <!-- Deskripsi -->
+                                            <div
+                                              class="h-full flex flex-col justify-between"
+                                            >
+                                              <label
+                                                for="deskripsi"
+                                                class="block mb-2 text-sm font-medium text-gray-900"
+                                                >Deskripsi</label
+                                              >
+                                              <textarea
+                                                name="deskripsi"
+                                                id="deskripsi"
+                                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                                required
+                                                rows="9"
+                                              ></textarea>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <!--  -->
+                                      </form>
+                                    </div>
+
+                                    <div class="px-5 mt-4 flex w-full">
+                                      <div class="w-full flex justify-center">
+                                        <button
+                                          type="button"
+                                          class="text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                                        >
+                                          Simpan
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!--  -->
+                                </div>
+                              </div>
+
+                              <!-- Konten Tab Tiga Pasang -->
+                              <div
+                                class="hidden px-4 py-2"
+                                id="detail-pengaturan-tiga"
+                                role="tabpanel"
+                                aria-labelledby="detail-pengaturan-tiga-tab"
+                              >
+                                <!-- konten -->
+                                Kedua
+
+                                <!--  -->
+                              </div>
+
+                              <!--  -->
+                            </div>
+
+                            <!--  -->
+                          </div>
+                        </div>
+
+                        <!--  -->
                       </div>
                     </div>
 
@@ -20668,10 +20789,8 @@
                   <div class="font-instagram_bold text-2xl">Postingan</div>
 
                   <div
-                    class="flex flex-row items-stretch justify-between mt-1.5 border-b border-gray-200"
+                    class="flex flex-row items-stretch justify-between mt-1.5 border-b border-gray-200 hidden"
                   >
-                    <!-- Menu Tab Pasang -->
-
                     <div class="border-b border-gray-200">
                       <!-- Tab Menu Pasang -->
                       <ul
@@ -20737,7 +20856,7 @@
                         >
                           <form>
                             <h6 class="text-lg font-instagram_bold mt-3 mb-3">
-                              Detail Rumah
+                              Detail Rumahssss
                             </h6>
                             <div class="grid grid-cols-2 gap-y-3 gap-x-4">
                               <!-- Koordinat -->
@@ -35055,11 +35174,38 @@
                                   <div
                                     class="w-full h-full flex flex-col justify-center items-center"
                                   >
-                                    <img
-                                      alt="profil"
-                                      src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFufGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
-                                      class="object-cover w-12 h-12 mx-auto rounded-full"
-                                    />
+                                    <div
+                                      class="w-12 h-12 rounded-full relative"
+                                    >
+                                      <img
+                                        class="w-full h-full p-[0.15rem] rounded-full"
+                                        src="/src/images/model/model11.jpg"
+                                        alt=""
+                                      />
+
+                                      <svg
+                                        width="17"
+                                        height="17"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        onclick="showPostingStories(this)"
+                                        class="absolute bottom-0 right-0.5 border border-white border-2 rounded-full cursor-pointer"
+                                      >
+                                        <path
+                                          fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M8.125 16C12.4742 16 16 12.4742 16 8.125C16 3.77576 12.4742 0.25 8.125 0.25C3.77576 0.25 0.25 3.77576 0.25 8.125C0.25 12.4742 3.77576 16 8.125 16Z"
+                                          fill="#1877F2"
+                                        ></path>
+                                        <path
+                                          fill-rule="evenodd"
+                                          clip-rule="evenodd"
+                                          d="M8.61719 4.67969C8.61719 4.40786 8.39683 4.1875 8.125 4.1875C7.85317 4.1875 7.63281 4.40786 7.63281 4.67969V7.63281H4.67969C4.40786 7.63281 4.1875 7.85317 4.1875 8.125C4.1875 8.39683 4.40786 8.61719 4.67969 8.61719H7.63281V11.5703C7.63281 11.8421 7.85317 12.0625 8.125 12.0625C8.39683 12.0625 8.61719 11.8421 8.61719 11.5703V8.61719H11.5703C11.8421 8.61719 12.0625 8.39683 12.0625 8.125C12.0625 7.85317 11.8421 7.63281 11.5703 7.63281H8.61719V4.67969Z"
+                                          fill="#FFFFFF"
+                                        ></path>
+                                      </svg>
+                                    </div>
                                   </div>
                                   <div class="w-full h-full flex flex-row">
                                     <div
@@ -35480,10 +35626,11 @@
 
                                   <!-- Card Beranda 1 -->
                                   <div
-                                    class="w-full h-[45vh] flex flex-col items-center justify-center bg-white rounded-lg konten-dijual"
+                                    class="w-full h-[45vh] flex flex-col items-center justify-center bg-transparent rounded-lg konten-dijual"
                                   >
                                     <img
-                                      class="w-24 h-24 object-contain cursor-pointer"
+                                      onclick="showPostingListing()"
+                                      class="w-16 h-16 object-contain cursor-pointer"
                                       src="./src/images/plus.png"
                                       alt="tambah listing agent"
                                     />
@@ -45183,7 +45330,7 @@
               <!--  Card Favorit -->
               <div class="flex flex-col card-info-favorit">
                 <!-- Judul Favorit -->
-                <div class="px-3 pt-2">
+                <div class="px-4 pt-2">
                   <div class="font-instagram_bold text-2xl mb-2">Promo</div>
 
                   <div
@@ -45234,7 +45381,7 @@
                         <!-- Menu Tab Empat Pasang -->
                         <li class="" role="presentation">
                           <button
-                            class="inline-block px-3.5 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
+                            class="inline-block px-3.5 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
                             id="detail-pasang-empat-tab"
                             data-tabs-target="#detail-pasang-empat"
                             type="button"
@@ -45242,12 +45389,12 @@
                             aria-controls="detail-pasang-empat"
                             aria-selected="false"
                           >
-                            Baris Listing
+                            Iklan Baris
                           </button>
                         </li>
 
                         <!-- Menu Tab Dua Pasang -->
-                        <li class="" role="presentation">
+                        <li class="hidden" role="presentation">
                           <button
                             class="inline-block px-3.5 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
                             id="detail-pasang-dua-tab"
@@ -45350,59 +45497,133 @@
                             class="h-[70.5vh] overflow-y-auto hide-scrollbar text-gray-700"
                           >
                             <form>
-                              <div
-                                class="grid grid-cols-2 gap-y-3 gap-x-4 mt-1"
-                              >
-                                <!-- id iklan baris 2 -->
-                                <div class="col-span-2">
-                                  <div class="relative w-full">
-                                    <label
-                                      class="block text-sm mb-2"
-                                      for="id_iklan_baris"
-                                      >ID Iklan</label
-                                    >
-                                    <select
-                                      id="id_iklan_baris"
-                                      class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                    >
-                                      <option value="#" selected>Pilih</option>
-                                      <option value="78AC61">ID 78AC61</option>
-                                      <option value="78AC62">ID 78AC62</option>
-                                      <option value="78AC63">ID 78AC63</option>
-                                      <option value="78AC64">ID 78AC64</option>
-                                      <option value="78AC665">ID 78AC65</option>
-                                    </select>
-                                  </div>
-                                </div>
-
-                                <!--  -->
-                                <div class="col-span-2">
-                                  <div class="relative w-full">
-                                    <label
-                                      class="block text-sm mb-2"
-                                      for="deskripsi_iklan_baris"
-                                    >
-                                      Deskripsi (maks. 100 karakter)
-                                    </label>
-                                    <textarea
-                                      id="deskripsi_iklan_baris"
-                                      class="block p-2.5 h-[8vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
-                                    ></textarea>
-                                  </div>
-                                </div>
-                                <!--  -->
-
+                              <div class="grid grid-cols-2 gap-x-5 gap-y-3">
                                 <div
-                                  class="flex justify-center col-span-2 pt-3 pb-6"
-                                >
-                                  <button
-                                    type="button"
-                                    class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                                  class="w-full h-full flex flex-col"
                                   >
-                                    Simpan
-                                  </button>
+                                  <!-- Iklan Baris Listing -->
+                                  <div class="grid grid-cols-2 gap-y-5">
+                                    <div
+                                      class="col-span-2 grid grid-cols-1 "
+                                    >
+                                      <div class="flex items-center">
+                                        <input
+                                          id="default-radio-1"
+                                          type="radio"
+                                          value=""
+                                          name="default-radio"
+                                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-transparent focus:outline-none focus:ring-0"
+                                        />
+                                        <label
+                                          for="default-radio-1"
+                                          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                          >Listing</label
+                                        >
+                                      </div>
+                                    </div>
+
+                                    <!-- id iklan baris 2 -->
+                                    <div class="col-span-2">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-sm mb-2"
+                                          for="id_iklan_baris"
+                                          >ID Iklan</label
+                                        >
+                                        <select
+                                          id="id_iklan_baris"
+                                          class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                        >
+                                          <option value="#" selected>
+                                            Pilih
+                                          </option>
+                                          <option value="78AC61">
+                                            ID 78AC61
+                                          </option>
+                                          <option value="78AC62">
+                                            ID 78AC62
+                                          </option>
+                                          <option value="78AC63">
+                                            ID 78AC63
+                                          </option>
+                                          <option value="78AC64">
+                                            ID 78AC64
+                                          </option>
+                                          <option value="78AC665">
+                                            ID 78AC65
+                                          </option>
+                                        </select>
+                                      </div>
+                                    </div>
+
+                                    <!--  -->
+                                    <div class="col-span-2">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-sm mb-2"
+                                          for="deskripsi_iklan_baris"
+                                        >
+                                          Deskripsi (maks. 100 karakter)
+                                        </label>
+                                        <textarea
+                                          id="deskripsi_iklan_baris"
+                                          class="block p-2.5 h-[8vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                                        ></textarea>
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                  </div>
                                 </div>
-                                <!--  -->
+                                <div
+                                  class="w-full h-full  flex flex-col"
+                                  >
+                                  <!-- Iklan Baris Agen -->
+                                  <div class="grid grid-cols-2 gap-y-5">
+                                    <div
+                                      class="col-span-2 grid grid-cols-1"
+                                    >
+                                      <div class="flex items-center">
+                                        <input
+                                          id="default-radio-2"
+                                          type="radio"
+                                          value=""
+                                          name="default-radio"
+                                          class="text-blue-600 bg-gray-100 border-gray-300 focus:ring-transparent focus:outline-none focus:ring-0"
+                                        />
+                                        <label
+                                          for="default-radio-2"
+                                          class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                          >Agen</label
+                                        >
+                                      </div>
+                                    </div>
+
+                                    <!--  -->
+                                    <div class="col-span-2">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-sm mb-2"
+                                          for="deskripsi_iklan_baris"
+                                        >
+                                          Deskripsi (maks. 100 karakter)
+                                        </label>
+                                        <textarea
+                                          id="deskripsi_iklan_baris"
+                                          class="block p-2.5 h-[8vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                                        ></textarea>
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                  </div>
+                                </div>
+                                <div class="col-span-2 flex justify-center">
+                                            <button
+                                      type="button"
+                                      class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                                    >
+                                      Simpan
+                                    </button>
+                                </div>
                               </div>
                             </form>
                           </div>
@@ -45419,7 +45640,127 @@
                         aria-labelledby="detail-pasang-lima-tab"
                       >
                         <!-- konten Sarpras pasang -->
-                        lima
+                        <div class="grid grid-cols-2 gap-2">
+                          <!-- Card Agent 1 -->
+                          <div
+                            data-active-tab="5"
+                            onclick="showCardInfoDetail(this)"
+                            class="cursor-pointer py-2 px-1 grid grid-cols-[90px,1fr] items-center bg-yellow-50 border-2 border-yellow-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                          >
+                            <div class="flex flex-col items-center">
+                              <div
+                                class="bg-gradient-to-tr from-yellow-400 to-purple-600 p-[0.15rem] rounded-full w-16 h-16"
+                              >
+                                <!--  -->
+                                <div
+                                  class="block bg-white p-0.5 rounded-full transform transition"
+                                >
+                                  <img
+                                    class="w-full h-full rounded-full"
+                                    src="/src/images/model/model7.jpg"
+                                    alt="model"
+                                  />
+                                </div>
+                                <!--  -->
+                              </div>
+                            </div>
+
+                            <div class="flex flex-col justify-center ml-2">
+                              <!--  -->
+                              <div class="inline-flex w-full">
+                                <div class="font-semibold mr-1">
+                                  Wulandary Agustiop
+                                </div>
+                                <div class="flex">
+                                  <div
+                                    class="w-5 h-5 mt-0.5 ml-0.5 flex justify-center items-center relative"
+                                  >
+                                    <img src="/src/images/verif.png" alt="" />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--  -->
+                              <div class="text-xs h-8 text-gray-700">
+                                Agen terpercaya wilayah Pondok Indah sejak 1981.
+                                Telah melayani lebihss
+                              </div>
+                              <div
+                                class="w-full flex flex-row justify-between relative"
+                              >
+                                <div class="text-[10px] mt-1 text-gray-400">
+                                  ERA JAKARTA
+                                </div>
+                                <div class="relative hidden">
+                                  <img
+                                    class="w-6 h-6 object-contain"
+                                    src="./src/images/agent/era-property.png"
+                                  />
+                                </div>
+                              </div>
+
+                              <div></div>
+
+                              <div class="mt-1 flex justify-between items-end">
+                                <div>
+                                  <label
+                                    for="star-agent-utama"
+                                    class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                  >
+                                    <div>
+                                      <label
+                                        for="star-agent-utama"
+                                        class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                      >
+                                        <svg
+                                          class="w-4 h-4 text-yellow-300"
+                                          aria-hidden="true"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="currentColor"
+                                          viewBox="0 0 22 20"
+                                        >
+                                          <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                          ></path>
+                                        </svg>
+                                        <svg
+                                          class="w-4 h-4 text-yellow-300"
+                                          aria-hidden="true"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="currentColor"
+                                          viewBox="0 0 22 20"
+                                        >
+                                          <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                          ></path>
+                                        </svg>
+                                        <svg
+                                          class="w-4 h-4 text-gray-300"
+                                          aria-hidden="true"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          fill="currentColor"
+                                          viewBox="0 0 22 20"
+                                        >
+                                          <path
+                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                          ></path>
+                                        </svg>
+                                      </label>
+                                    </div>
+                                  </label>
+                                </div>
+                                <div class="mr-2 -mt-3">
+                                  <img
+                                    class="w-5 h-7 object-contain"
+                                    src="./src/images/agent/era2.png"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div></div>
+                        </div>
                       </div>
 
                       <!-- Konten Tab Enam Pasang -->
@@ -47628,7 +47969,453 @@
                         role="tabpanel"
                         aria-labelledby="detail-pasang-tujuh-tab"
                       >
-                        tujuh
+                        <div
+                          class="h-[70.5vh] overflow-y-auto hide-scrollbar text-gray-700"
+                        >
+                          <form>
+                            <h6 class="text-lg font-instagram_bold mt-3 mb-3">
+                              Detail Rumah
+                            </h6>
+                            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
+                              <!-- Koordinat -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="koordinat"
+                                  >
+                                    Koordinat
+                                  </label>
+                                  <input
+                                    readonly
+                                    disabled
+                                    type="text"
+                                    id="koordinat"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Jenis Properti -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="jenis-properti"
+                                  >
+                                    Jenis Properti
+                                  </label>
+                                  <select
+                                    id="jenis-properti"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  >
+                                    <option value="rumah-baru">
+                                      Rumah Baru
+                                    </option>
+                                    <option value="rumah-seken">
+                                      Rumah Seken
+                                    </option>
+                                    <option value="apartemen-baru">
+                                      Apartemen Baru
+                                    </option>
+                                    <option value="apartemen-seken">
+                                      Apartemen Seken
+                                    </option>
+                                    <option value="ruko">Ruko</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <!-- Judul -->
+                              <div class="w-full col-span-2">
+                                <div class="relative w-full">
+                                  <label class="block text-sm mb-2" for="judul">
+                                    Judul
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="judul"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Deskripsi -->
+                              <div class="col-span-2">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="deskripsi"
+                                  >
+                                    Deskripsi
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="deskripsi"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Deskripsi 2 -->
+                              <div class="col-span-2">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="deskripsi2"
+                                  >
+                                    Deskripsi 2
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="deskripsi2"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Alamat 1 -->
+                              <div class="col-span-2">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="alamat1"
+                                  >
+                                    Alamat 1
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="alamat1"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Alamat 2 -->
+                              <div class="col-span-2">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="alamat2"
+                                  >
+                                    Alamat 2
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="alamat2"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Kelurahan -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="kelurahan"
+                                  >
+                                    Kelurahan
+                                  </label>
+                                  <input
+                                    readonly
+                                    disabled
+                                    type="text"
+                                    id="kelurahan"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Kecamatan -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="kecamatan"
+                                  >
+                                    Kecamatan
+                                  </label>
+                                  <input
+                                    readonly
+                                    disabled
+                                    type="text"
+                                    id="kecamatan"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Luas Tanah m2 -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="luas-tanah"
+                                  >
+                                    Luas Tanah m²
+                                  </label>
+                                  <input
+                                    type="number"
+                                    id="luas-tanah"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Luas Bangunan m2 -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="luas-bangunan"
+                                  >
+                                    Luas Bangunan m²
+                                  </label>
+                                  <input
+                                    type="number"
+                                    id="luas-bangunan"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Jumlah Kamar Tidur Utama -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="kamar-tidur-utama"
+                                  >
+                                    Jumlah Kamar Tidur Utama
+                                  </label>
+                                  <input
+                                    type="number"
+                                    id="kamar-tidur-utama"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Jumlah Kamar Tidur Tambahan -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="kamar-tidur-tambahan"
+                                  >
+                                    Jumlah Kamar Tidur Tambahan
+                                  </label>
+                                  <input
+                                    type="number"
+                                    id="kamar-tidur-tambahan"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Jenis Surat -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="jenis-surat"
+                                  >
+                                    Jenis Surat
+                                  </label>
+                                  <select
+                                    id="jenis-surat"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  >
+                                    <option value="shm">SHM</option>
+                                    <option value="shgb">SHGB</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <!-- Penjual -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="jenis-properti"
+                                  >
+                                    Penjual
+                                  </label>
+                                  <select
+                                    id="jenis-properti"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  >
+                                    <option value="pemilik-langsung">
+                                      Pemilik Langsung
+                                    </option>
+                                    <option value="agen">Agen</option>
+                                    <option value="pengembang">
+                                      Pengembang
+                                    </option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <!--  -->
+                            </div>
+
+                            <h6 class="text-lg font-instagram_bold my-6">
+                              Tampak Rumah
+                            </h6>
+
+                            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
+                              <div
+                                class="w-ful col-span-2 bg-white p-3 rounded shadow"
+                              >
+                                <div class="relative w-full">
+                                  <!-- Upload Gambar -->
+                                  <div class="grid grid-cols-1 gap-y-3 gap-x-4">
+                                    <!-- Gambar 1 -->
+
+                                    <div class="relative">
+                                      <input
+                                        type="file"
+                                        class="cursor-pointer relative block opacity-0 w-full h-full p-20 z-50"
+                                      />
+                                      <div
+                                        class="text-center p-10 absolute top-0 right-0 left-0 m-auto text-gray-700"
+                                      >
+                                        <h4>
+                                          Seret berkas di mana saja untuk
+                                          mengunggah
+                                          <br />atau
+                                        </h4>
+                                        <p class="">Pilih Berkas</p>
+                                      </div>
+                                    </div>
+
+                                    <!--  -->
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Harga Listrik -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="harga-listrik"
+                                  >
+                                    Listrik
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="harga-listrik"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Arah Bangunan -->
+                              <div class="w-full">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-sm mb-2"
+                                    for="arah-bangunan"
+                                  >
+                                    Arah Bangunan
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="arah-bangunan"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <h6 class="text-lg font-instagram_bold my-6">
+                              Tambahan
+                            </h6>
+                            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
+                              <!-- Carport -->
+                              <div class="w-full">
+                                <div class="flex items-center mb-2">
+                                  <input
+                                    id="carport"
+                                    type="checkbox"
+                                    value=""
+                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                  />
+                                  <label
+                                    for="carport"
+                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    >Carport</label
+                                  >
+                                </div>
+                              </div>
+
+                              <!-- Swimming Pool -->
+                              <div class="w-full">
+                                <div class="flex items-center mb-2">
+                                  <input
+                                    id="swimming-pool"
+                                    type="checkbox"
+                                    value=""
+                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                  />
+                                  <label
+                                    for="swimming-pool"
+                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    >Swimming Pool</label
+                                  >
+                                </div>
+                              </div>
+
+                              <!-- IMB -->
+                              <div class="w-full">
+                                <div class="flex items-center mb-2">
+                                  <input
+                                    id="imb"
+                                    type="checkbox"
+                                    value=""
+                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                  />
+                                  <label
+                                    for="imb"
+                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    >IMB</label
+                                  >
+                                </div>
+                              </div>
+
+                              <!-- Gate Cluster -->
+                              <div class="w-full">
+                                <div class="flex items-center">
+                                  <input
+                                    id="gate-cluster"
+                                    type="checkbox"
+                                    value=""
+                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                                  />
+                                  <label
+                                    for="gate-cluster"
+                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    >Gate Cluster</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+
+                            <div
+                              class="flex justify-center col-span-2 pt-3 pb-5"
+                            >
+                              <button
+                                type="button"
+                                class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                              >
+                                Simpan
+                              </button>
+                            </div>
+
+                            <!--  -->
+                          </form>
+                        </div>
                       </div>
                       <!--  -->
                     </div>
@@ -47644,8 +48431,7 @@
 
           <!-- End Main Konten Menu -->
         </div>
-
-        <!-- End Konten Card Three -->
+        <!-- End Konten Utama -->
       </div>
       <!-- End Section Three Main -->
     </div>
