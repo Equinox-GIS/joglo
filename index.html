@@ -90,7 +90,10 @@
         <!-- Start Dropdown Menu Keluar -->
         <div class="flex hidden akun-login-soaraja">
           <!-- data-dropdown-toggle="DropdownMenuKeluar" -->
-          <div class="flex cursor-pointer items-center">
+          <div
+            onclick="showCardAgent(this)"
+            class="flex cursor-pointer items-center"
+          >
             <span class="sr-only">Open user menu</span>
 
             <span class="text-sm font-medium text-gray-700 mr-2"
@@ -2702,7 +2705,7 @@
                               <button
                                 id="dropdown-button-pencarian-pertama"
                                 class="inline-flex justify-between items-center pl-1 w-40 h-8 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-0"
-                                >
+                              >
                                 <span id="selected-item" class="pl-2"
                                   >Terbaru</span
                                 >
@@ -13977,27 +13980,32 @@
                 <div
                   class="w-full flex justify-between border-b border-gray-300"
                 >
-                  <div
+                  <!--    <div
                     class="font-instagram_bold text-2xl px-3 py-2 judulStory w-80"
-                  >
+                    >
                     Registrasi
-                  </div>
+                  </div> -->
 
-                  <!-- Stories -->
-                  <div
-                    class="w-full grid justify-items-end items-center relative mr-1"
-                  >
-                    <div class="inline-flex">
-                      <div
-                        onclick="closeTab()"
-                        class="menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 border-blue-600 flex justify-center items-center stories_back"
+                    <div
+                      class="font-instagram_bold text-2xl px-3 py-2 judulStory w-80"
                       >
-                        <div class="w-5 h-5 flex justify-center items-center">
+                      Registrasi
+                    </div>
+                    <!--  -->
+
+                    <div class="flex col justify-center py-1 mt-1">
+                      <div
+                        onclick="CloseTabPengaturan()"
+                        class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                      >
+                        <div
+                          class="w-5 h-5 mt-0.5 mr-0.5 flex justify-center items-center relative"
+                        >
                           <img src="./src/images/back.png" alt="" />
                         </div>
                       </div>
                     </div>
-                  </div>
+
                 </div>
 
                 <!--  Registrasi -->
@@ -14040,7 +14048,7 @@
                               <input
                                 type="text"
                                 id="email-input"
-                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
                               />
                             </div>
                           </div>
@@ -14056,7 +14064,7 @@
                                 <input
                                   id="password-input1"
                                   type="password"
-                                  class="password-input border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full pr-10"
+                                  class="password-input border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
                                 />
                                 <span
                                   class="toggle-password absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 cursor-pointer"
@@ -14162,7 +14170,7 @@
                                 <input
                                   type="text"
                                   id="email-input"
-                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                  class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
                                 />
                               </div>
                             </div>
@@ -14177,7 +14185,7 @@
                                 <input
                                   type="text"
                                   id="email-input"
-                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                  class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
                                 />
                               </div>
                             </div>
@@ -14193,7 +14201,7 @@
                                   <input
                                     id="username-input"
                                     type="text"
-                                    class="username-input border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full pr-10"
+                                    class="username-input border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full pr-10"
                                   />
                                   <span
                                     class="validation-icon absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
@@ -14224,7 +14232,7 @@
                                   <input
                                     id="password-input1"
                                     type="password"
-                                    class="password-input border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full pr-10"
+                                    class="password-input border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full pr-10"
                                   />
                                   <span
                                     class="toggle-password absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 cursor-pointer"
@@ -14288,7 +14296,7 @@
                                 <input
                                   type="text"
                                   id="email-input"
-                                  class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                  class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
                                 />
                               </div>
                             </div>
@@ -34052,13 +34060,13 @@
                                 aria-controls="detail-statistik-empat"
                                 aria-selected="false"
                               >
-                                Stories
+                                Storiessssss
                               </button>
                             </li>
                             <!--  -->
 
                             <!-- Menu Tab Tiga Statistik -->
-                            <li class="hidden" role="presentation">
+                            <li class="" role="presentation">
                               <button
                                 class="inline-block px-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
                                 id="detail-statistik-tiga-tab"
@@ -34068,9 +34076,26 @@
                                 aria-controls="detail-statistik-tiga"
                                 aria-selected="false"
                               >
-                                Analitik
+                                Statistik
                               </button>
                             </li>
+
+                            <!-- Menu Tab Lima Statistik -->
+                            <li class="" role="presentation">
+                              <button
+                                class="inline-block px-4 pb-1 pt-2 border-b-2 rounded-t-lg hover:text-gray-700 hover:border-gray-300"
+                                id="detail-statistik-lima-tab"
+                                data-tabs-target="#detail-statistik-lima"
+                                type="button"
+                                role="tab"
+                                aria-controls="detail-statistik-lima"
+                                aria-selected="false"
+                              >
+                                Membership
+                              </button>
+                            </li>
+
+                            <!--  -->
                           </ul>
                         </div>
                         <!--  -->
@@ -35665,6 +35690,7 @@
 
                                   <div class="w-full flex justify-center mt-3">
                                     <button
+                                      onclick="showPengaturan(this, event)"
                                       type="button"
                                       class="h-4 p-3 text-xs font-medium text-center inline-flex items-center text-gray-700 border border-gray-700 bg-white hover:bg-slate-200 rounded-md mr-4"
                                     >
@@ -41308,6 +41334,84 @@
                         aria-labelledby="detail-statistik-tiga-tab"
                       >
                         <!-- Hide -->
+                        <!-- Card Judul -->
+                        <div
+                          class="grid grid-row-3 pb-5 px-5 pt-4 gap-4 mode-card-kedua bg-white cursor-pointer rounded-lg shadow w-full"
+                        >
+                          <div class="w-full grid grid-cols-3">
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-instagram_bold text-lg"
+                              >
+                                7 Unit
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Listing Aktiff
+                              </div>
+                            </div>
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-instagram_bold text-lg"
+                              >
+                                30 Unit
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Terjual Bulan ini
+                              </div>
+                            </div>
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-instagram_bold text-lg"
+                              >
+                                33 Unit
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Total Terjual
+                              </div>
+                            </div>
+                          </div>
+                          <div class="w-full grid grid-cols-3">
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-instagram_bold text-lg"
+                              >
+                                Rp 758.000.000
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Potensi Penjualan
+                              </div>
+                            </div>
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-instagram_bold text-lg"
+                              >
+                                Rp 66.000.000.000
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Penjualan Bulan ini
+                              </div>
+                            </div>
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-instagram_bold text-lg"
+                              >
+                                Rp 30.000.000.000
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Total Penjualan
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="hidden px-3 py-2.5"
+                        id="detail-statistik-lima"
+                        role="tabpanel"
+                        aria-labelledby="detail-statistik-lima-tab"
+                      >
+                        Testt
                       </div>
 
                       <div
@@ -42088,7 +42192,7 @@
                             alt="Soaraja Icon"
                           />
                           <div class="text-gray-500 text-sm mt-3">
-                            Send private photos and messages to a friend
+                           Kirim foto dan bertukar pesan disini
                           </div>
                         </div>
                       </div>
@@ -45442,9 +45546,9 @@
                   class="w-full flex justify-between border-b border-gray-300"
                 >
                   <div
-                    class="font-instagram_bold text-2xl px-3 py-2 judulStory"
+                    class="font-instagram_bold text-2xl px-3 py-2 judulStory w-80"
                   >
-                    Postingan
+                    Postingan Listing
                   </div>
 
                   <!-- Stories -->
@@ -45464,478 +45568,411 @@
                   </div>
                 </div>
                 <!--  -->
-                <div class="px-4 pt-2">
-                  <div
-                    class="flex flex-row items-stretch justify-between border-b border-gray-200"
-                  >
-                    <!-- Menu Tab Pasang -->
 
-                    <div class="border-b border-gray-200">
-                      <!-- Tab Menu Pasang -->
-                      <ul
-                        class="flex flex-wrap -mb-px text-sm font-medium text-center pr-4"
-                        id="DetailsPostingan"
-                        data-tabs-toggle="#DetailsPostinganContent"
-                        role="tablist"
-                      >
-                        <!-- Menu Tab Satu Pasang -->
+                <div
+                  class="h-[76vh] overflow-y-auto hide-scrollbar text-gray-700 px-4 py-2"
+                >
+                  <form>
+                    <h6 class="text-lg font-instagram_bold mt-3">
+                      Detail Rumahz
+                    </h6>
+                    <div class="grid grid-cols-2 gap-y-3 gap-x-4">
+                      <!-- Upload Gambar -->
 
-                        <!-- Menu Tab Tujuh Pasang -->
-                        <li class="" role="presentation">
-                          <button
-                            class="inline-block pr-4 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
-                            id="detail-pasang-tujuh-tab"
-                            data-tabs-target="#detail-pasang-tujuh"
-                            type="button"
-                            role="tab"
-                            aria-controls="detail-pasang-tujuh"
-                            aria-selected="false"
-                          >
-                            Listing
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                    <!--  -->
-                  </div>
-                </div>
-
-                <!-- Konten Card Details pasang -->
-                <div class="w-full h-full card-disukai-detail">
-                  <div class="flex flex-col h-full">
-                    <!-- Tabs Pasang -->
-
-                    <div id="DetailsPostinganContent" class="">
-                      <!-- Konten Tab Tujuh Pasang -->
                       <div
-                        class="hidden px-4 py-2"
-                        id="detail-pasang-tujuh"
-                        role="tabpanel"
-                        aria-labelledby="detail-pasang-tujuh-tab"
+                        class="w-full h-[46.5vh] mt-6 bg-white flex justify-center items-center rounded shadow"
                       >
-                        <div
-                          class="h-[70.5vh] overflow-y-auto hide-scrollbar text-gray-700"
-                        >
-                          <form>
-                            <h6 class="text-lg font-instagram_bold mt-3">
-                              Detail Rumah
-                            </h6>
-                            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
-                              <!-- Upload Gambar -->
+                        <!-- Upload Gambar -->
+                        <!-- Gambar 1 -->
+                        <img
+                          class="w-20 h-20 object-contain"
+                          src="./src/images/image-gallery.png"
+                        />
 
-                              <div
-                                class="w-full h-[47vh] mt-6 bg-white flex justify-center items-center rounded shadow"
+                        <!--  -->
+                      </div>
+
+                      <!-- Koordinat -->
+                      <div class="w-full h-full flex flex-col">
+                        <div class="w-full mb-4">
+                          <div class="relative w-full">
+                            <label class="block text-sm mb-1" for="koordinat">
+                              Koordinatzz
+                            </label>
+                            <input
+                              readonly
+                              disabled
+                              type="text"
+                              id="koordinat"
+                              class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                          <!-- Kelurahan -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label class="block text-sm mb-1" for="kelurahan">
+                                Kelurahan
+                              </label>
+                              <input
+                                readonly
+                                disabled
+                                type="text"
+                                id="kelurahan"
+                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Kecamatan -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label class="block text-sm mb-1" for="kecamatan">
+                                Kecamatan
+                              </label>
+                              <input
+                                readonly
+                                disabled
+                                type="text"
+                                id="kecamatan"
+                                class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Luas Tanah m2 -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label
+                                class="block text-sm mb-1"
+                                for="luas-tanah"
                               >
-                                <!-- Upload Gambar -->
-                                <!-- Gambar 1 -->
-                                <img
-                                  class="w-20 h-20 object-contain"
-                                  src="./src/images/image-gallery.png"
-                                />
-
-                                <!--  -->
-                              </div>
-
-                              <!-- Koordinat -->
-                              <div class="w-full h-full flex flex-col">
-                                <div class="w-full mb-4">
-                                  <div class="relative w-full">
-                                    <label
-                                      class="block text-sm mb-1"
-                                      for="koordinat"
-                                    >
-                                      Koordinatzz
-                                    </label>
-                                    <input
-                                      readonly
-                                      disabled
-                                      type="text"
-                                      id="koordinat"
-                                      class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                    />
-                                  </div>
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-4">
-                                  <!-- Kelurahan -->
-                                  <div class="w-full">
-                                    <div class="relative w-full">
-                                      <label
-                                        class="block text-sm mb-1"
-                                        for="kelurahan"
-                                      >
-                                        Kelurahan
-                                      </label>
-                                      <input
-                                        readonly
-                                        disabled
-                                        type="text"
-                                        id="kelurahan"
-                                        class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- Kecamatan -->
-                                  <div class="w-full">
-                                    <div class="relative w-full">
-                                      <label
-                                        class="block text-sm mb-1"
-                                        for="kecamatan"
-                                      >
-                                        Kecamatan
-                                      </label>
-                                      <input
-                                        readonly
-                                        disabled
-                                        type="text"
-                                        id="kecamatan"
-                                        class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- Luas Tanah m2 -->
-                                  <div class="w-full">
-                                    <div class="relative w-full">
-                                      <label
-                                        class="block text-sm mb-1"
-                                        for="luas-tanah"
-                                      >
-                                        Luas Tanah m²
-                                      </label>
-                                      <input
-                                        type="number"
-                                        id="luas-tanah"
-                                        class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- Luas Bangunan m2 -->
-                                  <div class="w-full">
-                                    <div class="relative w-full">
-                                      <label
-                                        class="block text-sm mb-1"
-                                        for="luas-bangunan"
-                                      >
-                                        Luas Bangunan m²
-                                      </label>
-                                      <input
-                                        type="number"
-                                        id="luas-bangunan"
-                                        class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- Jumlah Kamar Tidur Utama -->
-                                  <div class="w-full">
-                                    <div class="relative w-full">
-                                      <label
-                                        class="block text-sm mb-1"
-                                        for="kamar-tidur-utama"
-                                      >
-                                        Kamar Tidur Utama
-                                      </label>
-                                      <input
-                                        type="number"
-                                        id="kamar-tidur-utama"
-                                        class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- Jumlah Kamar Tidur Tambahan -->
-                                  <div class="w-full">
-                                    <div class="relative w-full">
-                                      <label
-                                        class="block text-sm mb-1"
-                                        for="kamar-tidur-tambahan"
-                                      >
-                                        Kamar Tidur Tambahan
-                                      </label>
-                                      <input
-                                        type="number"
-                                        id="kamar-tidur-tambahan"
-                                        class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!-- Penjual -->
-                                  <div class="w-full">
-                                    <div class="relative w-full">
-                                      <label
-                                        class="block text-sm mb-1"
-                                        for="jenis-properti"
-                                      >
-                                        Penjual
-                                      </label>
-                                      <select
-                                        id="jenis-properti"
-                                        class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                      >
-                                        <option value="pemilik-langsung">
-                                          Pemilik Langsung
-                                        </option>
-                                        <option value="agen">Agen</option>
-                                        <option value="pengembang">
-                                          Pengembang
-                                        </option>
-                                      </select>
-                                    </div>
-                                  </div>
-
-                                  <!-- Jenis Surat -->
-                                  <div class="w-full">
-                                    <div class="relative w-full">
-                                      <label
-                                        class="block text-sm mb-1"
-                                        for="jenis-surat"
-                                      >
-                                        Jenis Surat
-                                      </label>
-                                      <select
-                                        id="jenis-surat"
-                                        class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                      >
-                                        <option value="shm">SHM</option>
-                                        <option value="shgb">SHGB</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <!-- Judul -->
-                              <div class="w-full col-span-2">
-                                <div class="relative w-full">
-                                  <label class="block text-sm mb-2" for="judul">
-                                    Judul
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="judul"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Alamat 1 -->
-                              <div class="col-span-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="alamat1"
-                                  >
-                                    Alamat
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="alamat1"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Deskripsi -->
-                              <div class="col-span-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="deskripsi_postingan"
-                                  >
-                                    Deskripsi
-                                  </label>
-                                  <textarea
-                                    name="deskripsi_postingan"
-                                    id="deskripsi_postingan"
-                                    class="block p-2.5 h-[14vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
-                                    required=""
-                                    rows="9"
-                                  ></textarea>
-                                </div>
-                              </div>
-
-                              <!--  -->
+                                Luas Tanah m²
+                              </label>
+                              <input
+                                type="number"
+                                id="luas-tanah"
+                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                              />
                             </div>
+                          </div>
 
-                            <h6 class="text-lg font-instagram_bold my-6">
-                              Tambahan
-                            </h6>
-                            <div class="grid grid-cols-3 gap-y-1 gap-x-4">
-                              <!-- Carport -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="carport"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="carport"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Carport</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- Swimming Pool -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="swimming-pool"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="swimming-pool"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Swimming Pool</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- Swimming Pool -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="swimming-pool"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="swimming-pool"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Swimming Pool</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- IMB -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="imb"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="imb"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >IMB</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- Gate Cluster -->
-                              <div class="w-full">
-                                <div class="flex items-center">
-                                  <input
-                                    id="gate-cluster"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="gate-cluster"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Gate Cluster</label
-                                  >
-                                </div>
-                              </div>
-                              <!-- Gate Cluster -->
-                              <div class="w-full">
-                                <div class="flex items-center">
-                                  <input
-                                    id="gate-cluster"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="gate-cluster"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Gate Cluster</label
-                                  >
-                                </div>
-                              </div>
-                              <!-- IMB -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="imb"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="imb"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >IMB</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- Gate Cluster -->
-                              <div class="w-full">
-                                <div class="flex items-center">
-                                  <input
-                                    id="gate-cluster"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="gate-cluster"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Gate Cluster</label
-                                  >
-                                </div>
-                              </div>
-                              <!-- Gate Cluster -->
-                              <div class="w-full">
-                                <div class="flex items-center">
-                                  <input
-                                    id="gate-cluster"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="gate-cluster"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Gate Cluster</label
-                                  >
-                                </div>
-                              </div>
-                            </div>
-
-                            <div
-                              class="flex justify-center col-span-2 pt-3 pb-5"
-                            >
-                              <button
-                                type="button"
-                                class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                          <!-- Luas Bangunan m2 -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label
+                                class="block text-sm mb-1"
+                                for="luas-bangunan"
                               >
-                                Simpan
-                              </button>
+                                Luas Bangunan m²
+                              </label>
+                              <input
+                                type="number"
+                                id="luas-bangunan"
+                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                              />
                             </div>
+                          </div>
 
-                            <!--  -->
-                          </form>
+                          <!-- Jumlah Kamar Tidur Utama -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label
+                                class="block text-sm mb-1"
+                                for="kamar-tidur-utama"
+                              >
+                                Kamar Tidur Utama
+                              </label>
+                              <input
+                                type="number"
+                                id="kamar-tidur-utama"
+                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Jumlah Kamar Tidur Tambahan -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label
+                                class="block text-sm mb-1"
+                                for="kamar-tidur-tambahan"
+                              >
+                                Kamar Tidur Tambahan
+                              </label>
+                              <input
+                                type="number"
+                                id="kamar-tidur-tambahan"
+                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Penjual -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label
+                                class="block text-sm mb-1"
+                                for="jenis-properti"
+                              >
+                                Penjual
+                              </label>
+                              <select
+                                id="jenis-properti"
+                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                              >
+                                <option value="pemilik-langsung">
+                                  Pemilik Langsung
+                                </option>
+                                <option value="agen">Agen</option>
+                                <option value="pengembang">Pengembang</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <!-- Jenis Surat -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label
+                                class="block text-sm mb-1"
+                                for="jenis-surat"
+                              >
+                                Jenis Surat
+                              </label>
+                              <select
+                                id="jenis-surat"
+                                class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                              >
+                                <option value="shm">SHM</option>
+                                <option value="shgb">SHGB</option>
+                              </select>
+                            </div>
+                          </div>
                         </div>
                       </div>
+
+                      <!--  -->
+
+                      <!-- Judul -->
+                      <div class="w-full">
+                        <div class="relative w-full">
+                          <label class="block text-sm mb-2" for="judul">
+                            Judul
+                          </label>
+                          <textarea
+                            name="judul"
+                            id="judul"
+                            class="block p-2.5 h-[9vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                            required=""
+                            rows="9"
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <!-- Alamat 1 -->
+                      <div class="w-full">
+                        <div class="relative w-full">
+                          <label class="block text-sm mb-2" for="alamat1">
+                            Alamat
+                          </label>
+                          <textarea
+                            name="alamat1"
+                            id="alamat1"
+                            class="block p-2.5 h-[9vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                            required=""
+                            rows="9"
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <!-- Deskripsi -->
+                      <div class="col-span-2">
+                        <div class="relative w-full">
+                          <label
+                            class="block text-sm mb-2"
+                            for="deskripsi_postingan"
+                          >
+                            Deskripsi
+                          </label>
+                          <textarea
+                            name="deskripsi_postingan"
+                            id="deskripsi_postingan"
+                            class="block p-2.5 h-[14vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                            required=""
+                            rows="9"
+                          ></textarea>
+                        </div>
+                      </div>
+
                       <!--  -->
                     </div>
 
+                    <h6 class="text-lg font-instagram_bold my-6">Tambahan</h6>
+                    <div class="grid grid-cols-3 gap-y-1 gap-x-4">
+                      <!-- Carport -->
+                      <div class="w-full">
+                        <div class="flex items-center mb-2">
+                          <input
+                            id="carport"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                          />
+                          <label
+                            for="carport"
+                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                            >Carport</label
+                          >
+                        </div>
+                      </div>
+
+                      <!-- Swimming Pool -->
+                      <div class="w-full">
+                        <div class="flex items-center mb-2">
+                          <input
+                            id="swimming-pool"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                          />
+                          <label
+                            for="swimming-pool"
+                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                            >Swimming Pool</label
+                          >
+                        </div>
+                      </div>
+
+                      <!-- Swimming Pool -->
+                      <div class="w-full">
+                        <div class="flex items-center mb-2">
+                          <input
+                            id="swimming-pool"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                          />
+                          <label
+                            for="swimming-pool"
+                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                            >Swimming Pool</label
+                          >
+                        </div>
+                      </div>
+
+                      <!-- IMB -->
+                      <div class="w-full">
+                        <div class="flex items-center mb-2">
+                          <input
+                            id="imb"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                          />
+                          <label
+                            for="imb"
+                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                            >IMB</label
+                          >
+                        </div>
+                      </div>
+
+                      <!-- Gate Cluster -->
+                      <div class="w-full">
+                        <div class="flex items-center">
+                          <input
+                            id="gate-cluster"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                          />
+                          <label
+                            for="gate-cluster"
+                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                            >Gate Cluster</label
+                          >
+                        </div>
+                      </div>
+                      <!-- Gate Cluster -->
+                      <div class="w-full">
+                        <div class="flex items-center">
+                          <input
+                            id="gate-cluster"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                          />
+                          <label
+                            for="gate-cluster"
+                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                            >Gate Cluster</label
+                          >
+                        </div>
+                      </div>
+                      <!-- IMB -->
+                      <div class="w-full">
+                        <div class="flex items-center mb-2">
+                          <input
+                            id="imb"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                          />
+                          <label
+                            for="imb"
+                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                            >IMB</label
+                          >
+                        </div>
+                      </div>
+
+                      <!-- Gate Cluster -->
+                      <div class="w-full">
+                        <div class="flex items-center">
+                          <input
+                            id="gate-cluster"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                          />
+                          <label
+                            for="gate-cluster"
+                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                            >Gate Cluster</label
+                          >
+                        </div>
+                      </div>
+                      <!-- Gate Cluster -->
+                      <div class="w-full">
+                        <div class="flex items-center">
+                          <input
+                            id="gate-cluster"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
+                          />
+                          <label
+                            for="gate-cluster"
+                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                            >Gate Cluster</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex justify-center col-span-2 pt-3 pb-5">
+                      <button
+                        type="button"
+                        class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                      >
+                        Simpan
+                      </button>
+                    </div>
+
                     <!--  -->
-                  </div>
+                  </form>
                 </div>
 
                 <!--  -->
@@ -45997,15 +46034,15 @@
                       >
                         <!-- Menu Tab Satu Pasang -->
 
-                        <!-- Menu Tab Tujuh Pasang -->
+                        <!-- Menu Tab Enam Pasang -->
                         <li class="" role="presentation">
                           <button
-                            class="inline-block pr-4 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
-                            id="detail-pasang-tujuh-tab"
-                            data-tabs-target="#detail-pasang-tujuh"
+                            class="inline-block px-3.5 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
+                            id="detail-pasang-enam-tab"
+                            data-tabs-target="#detail-pasang-enam"
                             type="button"
                             role="tab"
-                            aria-controls="detail-pasang-tujuh"
+                            aria-controls="detail-pasang-enam"
                             aria-selected="false"
                           >
                             Listing
@@ -46028,7 +46065,7 @@
                         </li>
 
                         <!-- Menu Tab Empat Pasang -->
-                        <li class="" role="presentation">
+                        <li class="hidden" role="presentation">
                           <button
                             class="inline-block px-3.5 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
                             id="detail-pasang-empat-tab"
@@ -46054,21 +46091,6 @@
                             aria-selected="false"
                           >
                             Baris Agen
-                          </button>
-                        </li>
-
-                        <!-- Menu Tab Enam Pasang -->
-                        <li class="" role="presentation">
-                          <button
-                            class="inline-block px-3.5 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
-                            id="detail-pasang-enam-tab"
-                            data-tabs-target="#detail-pasang-enam"
-                            type="button"
-                            role="tab"
-                            aria-controls="detail-pasang-enam"
-                            aria-selected="false"
-                          >
-                            Analitik
                           </button>
                         </li>
                       </ul>
@@ -46280,127 +46302,269 @@
                         role="tabpanel"
                         aria-labelledby="detail-pasang-lima-tab"
                       >
-                        <!-- konten Sarpras pasang -->
-                        <div class="grid grid-cols-2 gap-2">
-                          <!-- Card Agent 1 -->
-                          <div
-                            data-active-tab="5"
-                            onclick="showCardInfoDetail(this)"
-                            class="cursor-pointer py-2 px-1 grid grid-cols-[90px,1fr] items-center bg-yellow-50 border-2 border-yellow-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                          >
-                            <div class="flex flex-col items-center">
-                              <div
-                                class="bg-gradient-to-tr from-yellow-400 to-purple-600 p-[0.15rem] rounded-full w-16 h-16"
+                        <div class="grid grid-cols-1 gap-y-3">
+                          <!-- konten Sarpras pasang -->
+                          <div class="grid grid-cols-2 gap-2">
+                            <!-- Card Agent 1 -->
+                            <div
+                              data-active-tab="5"
+                              onclick="showCardInfoDetail(this)"
+                              class="cursor-pointer py-2 px-1 grid grid-cols-[90px,1fr] items-center bg-yellow-50 border-2 border-yellow-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
                               >
-                                <!--  -->
+                              <div class="flex flex-col items-center">
                                 <div
-                                  class="block bg-white p-0.5 rounded-full transform transition"
+                                  class="bg-gradient-to-tr from-yellow-400 to-purple-600 p-[0.15rem] rounded-full w-16 h-16"
                                 >
-                                  <img
-                                    class="w-full h-full rounded-full"
-                                    src="/src/images/model/model7.jpg"
-                                    alt="model"
-                                  />
-                                </div>
-                                <!--  -->
-                              </div>
-                            </div>
-
-                            <div class="flex flex-col justify-center ml-2">
-                              <!--  -->
-                              <div class="inline-flex w-full">
-                                <div class="font-semibold mr-1">
-                                  Wulandary Agustiop
-                                </div>
-                                <div class="flex">
+                                  <!--  -->
                                   <div
-                                    class="w-5 h-5 mt-0.5 ml-0.5 flex justify-center items-center relative"
+                                    class="block bg-white p-0.5 rounded-full transform transition"
                                   >
-                                    <img src="/src/images/verif.png" alt="" />
+                                    <img
+                                      class="w-full h-full rounded-full"
+                                      src="/src/images/model/model7.jpg"
+                                      alt="model"
+                                    />
+                                  </div>
+                                  <!--  -->
+                                </div>
+                              </div>
+
+                              <div class="flex flex-col justify-center ml-2">
+                                <!--  -->
+                                <div class="inline-flex w-full">
+                                  <div class="font-semibold mr-1">
+                                    Wulandary Agustiopiu
+                                  </div>
+                                  <div class="flex">
+                                    <div
+                                      class="w-5 h-5 mt-0.5 ml-0.5 flex justify-center items-center relative"
+                                    >
+                                      <img src="/src/images/verif.png" alt="" />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--  -->
+                                <div class="text-xs h-8 text-gray-700">
+                                  Agen terpercaya wilayah Pondok Indah sejak
+                                  1981. Telah melayani lebihss
+                                </div>
+                                <div
+                                  class="w-full flex flex-row justify-between relative"
+                                >
+                                  <div class="text-[10px] mt-1 text-gray-400">
+                                    ERA JAKARTA
+                                  </div>
+                                  <div class="relative hidden">
+                                    <img
+                                      class="w-6 h-6 object-contain"
+                                      src="./src/images/agent/era-property.png"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div></div>
+
+                                <div
+                                  class="mt-1 flex justify-between items-end"
+                                >
+                                  <div>
+                                    <label
+                                      for="star-agent-utama"
+                                      class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                    >
+                                      <div>
+                                        <label
+                                          for="star-agent-utama"
+                                          class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                        >
+                                          <svg
+                                            class="w-4 h-4 text-yellow-300"
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            viewBox="0 0 22 20"
+                                          >
+                                            <path
+                                              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                            ></path>
+                                          </svg>
+                                          <svg
+                                            class="w-4 h-4 text-yellow-300"
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            viewBox="0 0 22 20"
+                                          >
+                                            <path
+                                              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                            ></path>
+                                          </svg>
+                                          <svg
+                                            class="w-4 h-4 text-gray-300"
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            viewBox="0 0 22 20"
+                                          >
+                                            <path
+                                              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                            ></path>
+                                          </svg>
+                                        </label>
+                                      </div>
+                                    </label>
+                                  </div>
+                                  <div class="mr-2 -mt-3">
+                                    <img
+                                      class="w-5 h-7 object-contain"
+                                      src="./src/images/agent/era2.png"
+                                    />
                                   </div>
                                 </div>
                               </div>
+                            </div>
 
-                              <!--  -->
-                              <div class="text-xs h-8 text-gray-700">
-                                Agen terpercaya wilayah Pondok Indah sejak 1981.
-                                Telah melayani lebihss
-                              </div>
-                              <div
-                                class="w-full flex flex-row justify-between relative"
-                              >
-                                <div class="text-[10px] mt-1 text-gray-400">
-                                  ERA JAKARTA
-                                </div>
-                                <div class="relative hidden">
-                                  <img
-                                    class="w-6 h-6 object-contain"
-                                    src="./src/images/agent/era-property.png"
-                                  />
-                                </div>
-                              </div>
+      
+                          </div>
+                          <!--  -->
 
-                              <div></div>
-
-                              <div class="mt-1 flex justify-between items-end">
-                                <div>
-                                  <label
-                                    for="star-agent-utama"
-                                    class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                          <!-- konten Sarpras pasang -->
+                          <div class="grid grid-cols-2 gap-2">
+                            <!-- Card Agent 1 -->
+                            <div
+                              data-active-tab="5"
+                              onclick="showCardInfoDetail(this)"
+                              class="cursor-pointer py-2 px-1 grid grid-cols-[90px,1fr] items-center bg-yellow-50 border-2 border-yellow-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                            >
+                              <div class="flex flex-col items-center">
+                                <div
+                                  class="bg-gradient-to-tr from-yellow-400 to-purple-600 p-[0.15rem] rounded-full w-16 h-16"
+                                >
+                                  <!--  -->
+                                  <div
+                                    class="block bg-white p-0.5 rounded-full transform transition"
                                   >
-                                    <div>
-                                      <label
-                                        for="star-agent-utama"
-                                        class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
-                                      >
-                                        <svg
-                                          class="w-4 h-4 text-yellow-300"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          fill="currentColor"
-                                          viewBox="0 0 22 20"
-                                        >
-                                          <path
-                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                          ></path>
-                                        </svg>
-                                        <svg
-                                          class="w-4 h-4 text-yellow-300"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          fill="currentColor"
-                                          viewBox="0 0 22 20"
-                                        >
-                                          <path
-                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                          ></path>
-                                        </svg>
-                                        <svg
-                                          class="w-4 h-4 text-gray-300"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          fill="currentColor"
-                                          viewBox="0 0 22 20"
-                                        >
-                                          <path
-                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                          ></path>
-                                        </svg>
-                                      </label>
-                                    </div>
-                                  </label>
+                                    <img
+                                      class="w-full h-full rounded-full"
+                                      src="/src/images/model/model7.jpg"
+                                      alt="model"
+                                    />
+                                  </div>
+                                  <!--  -->
                                 </div>
-                                <div class="mr-2 -mt-3">
-                                  <img
-                                    class="w-5 h-7 object-contain"
-                                    src="./src/images/agent/era2.png"
-                                  />
+                              </div>
+
+                              <div class="flex flex-col justify-center ml-2">
+                                <!--  -->
+                                <div class="inline-flex w-full">
+                                  <div class="font-semibold mr-1">
+                                    Wulandary Agustiopiu
+                                  </div>
+                                  <div class="flex">
+                                    <div
+                                      class="w-5 h-5 mt-0.5 ml-0.5 flex justify-center items-center relative"
+                                    >
+                                      <img src="/src/images/verif.png" alt="" />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--  -->
+                                <div class="text-xs h-8 text-gray-700">
+                                  Agen terpercaya wilayah Pondok Indah sejak
+                                  1981. Telah melayani lebihss
+                                </div>
+                                <div
+                                  class="w-full flex flex-row justify-between relative"
+                                >
+                                  <div class="text-[10px] mt-1 text-gray-400">
+                                    ERA JAKARTA
+                                  </div>
+                                  <div class="relative hidden">
+                                    <img
+                                      class="w-6 h-6 object-contain"
+                                      src="./src/images/agent/era-property.png"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div></div>
+
+                                <div
+                                  class="mt-1 flex justify-between items-end"
+                                >
+                                  <div>
+                                    <label
+                                      for="star-agent-utama"
+                                      class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                    >
+                                      <div>
+                                        <label
+                                          for="star-agent-utama"
+                                          class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                        >
+                                          <svg
+                                            class="w-4 h-4 text-yellow-300"
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            viewBox="0 0 22 20"
+                                          >
+                                            <path
+                                              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                            ></path>
+                                          </svg>
+                                          <svg
+                                            class="w-4 h-4 text-yellow-300"
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            viewBox="0 0 22 20"
+                                          >
+                                            <path
+                                              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                            ></path>
+                                          </svg>
+                                          <svg
+                                            class="w-4 h-4 text-gray-300"
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="currentColor"
+                                            viewBox="0 0 22 20"
+                                          >
+                                            <path
+                                              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                            ></path>
+                                          </svg>
+                                        </label>
+                                      </div>
+                                    </label>
+                                  </div>
+                                  <div class="mr-2 -mt-3">
+                                    <img
+                                      class="w-5 h-7 object-contain"
+                                      src="./src/images/agent/era2.png"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div
+                              class="w-full h-full flex items-center justify-start"
+                            >
+                              <div class="flex flex-col text-sm text-gray-700">
+                                <div class="text-left cursor-pointer">
+                                  Top Ads1
+                                </div>
+                                <div class="text-left cursor-pointer">
+                                  Classified Ads
                                 </div>
                               </div>
                             </div>
                           </div>
-
-                          <div></div>
+                          <!--  -->
                         </div>
                       </div>
 
@@ -46651,7 +46815,7 @@
 
                                   <!-- Card Judul -->
                                   <div
-                                    class="grid grid-row-3 pb-5 px-5 pt-4 gap-4 mode-card-kedua bg-white cursor-pointer rounded-lg shadow w-full"
+                                    class="grid grid-row-3 pb-5 px-5 pt-4 gap-4 mode-card-kedua bg-white cursor-pointer rounded-lg shadow w-full hidden"
                                   >
                                     <div class="w-full grid grid-cols-3">
                                       <div class="w-full flex flex-col">
@@ -46897,97 +47061,21 @@
                                           </div>
                                         </div>
                                         <!--  -->
+
                                         <div
-                                          class="w-full h-full grid grid-rows-4"
+                                          class="flex flex-col text-sm px-2 text-black"
                                         >
-                                          <!-- <div class="w-full h-full items-center"> -->
-
-                                          <div
-                                            class="w-full flex justify-center row-span-2 my-6"
-                                          >
-                                            <div
-                                              class="flex flex-col justify-center"
-                                            >
-                                              <div
-                                                class="w-full flex justify-center"
-                                              >
-                                                <img
-                                                  class="w-7 h-7"
-                                                  src="/src/images/up-arrow-listing2.png"
-                                                  alt=""
-                                                />
-                                              </div>
-                                              <div
-                                                class="text-gray-700 text-xs flex justify-center mt-0.5"
-                                              >
-                                                Sundul
-                                              </div>
-                                            </div>
+                                          <div class="cursor-pointer">
+                                            Top Ads
                                           </div>
-
-                                          <div class="flex flex-col row-span-2">
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchTerjualTersedia"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleTerjualTersedia()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextTerjualTersedia"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Terjual</span
-                                                >
-                                              </div>
-                                            </div>
-                                            <!--  -->
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchActiveInactive"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleActiveInactive()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextActiveInactive"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Inactive</span
-                                                >
-                                              </div>
-                                            </div>
+                                          <div class="cursor-pointer py-2">
+                                            Classified Ads
                                           </div>
-
-                                          <!--  -->
-                                          <!-- </div> -->
+                                          <div class="cursor-pointer">
+                                            Sundul
+                                          </div>
                                         </div>
+
                                         <!--  -->
                                       </div>
                                     </div>
@@ -47174,96 +47262,19 @@
                                         </div>
                                         <!--  -->
                                         <div
-                                          class="w-full h-full grid grid-rows-4"
+                                          class="flex flex-col text-sm px-2 text-black"
                                         >
-                                          <!-- <div class="w-full h-full items-center"> -->
-
-                                          <div
-                                            class="w-full flex justify-center row-span-2 my-6"
-                                          >
-                                            <div
-                                              class="flex flex-col justify-center"
-                                            >
-                                              <div
-                                                class="w-full flex justify-center"
-                                              >
-                                                <img
-                                                  class="w-7 h-7"
-                                                  src="/src/images/up-arrow-listing2.png"
-                                                  alt=""
-                                                />
-                                              </div>
-                                              <div
-                                                class="text-gray-700 text-xs flex justify-center mt-0.5"
-                                              >
-                                                Sundul
-                                              </div>
-                                            </div>
+                                          <div class="cursor-pointer">
+                                            Top Ads
                                           </div>
-
-                                          <div class="flex flex-col row-span-2">
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchTerjualTersedia"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleTerjualTersedia()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextTerjualTersedia"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Terjual</span
-                                                >
-                                              </div>
-                                            </div>
-                                            <!--  -->
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchActiveInactive"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleActiveInactive()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextActiveInactive"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Inactive</span
-                                                >
-                                              </div>
-                                            </div>
+                                          <div class="cursor-pointer py-2">
+                                            Classified Ads
                                           </div>
-
-                                          <!--  -->
-                                          <!-- </div> -->
+                                          <div class="cursor-pointer">
+                                            Sundul
+                                          </div>
                                         </div>
+
                                         <!--  -->
                                       </div>
                                     </div>
@@ -47450,96 +47461,19 @@
                                         </div>
                                         <!--  -->
                                         <div
-                                          class="w-full h-full grid grid-rows-4"
+                                          class="flex flex-col text-sm px-2 text-black"
                                         >
-                                          <!-- <div class="w-full h-full items-center"> -->
-
-                                          <div
-                                            class="w-full flex justify-center row-span-2 my-6"
-                                          >
-                                            <div
-                                              class="flex flex-col justify-center"
-                                            >
-                                              <div
-                                                class="w-full flex justify-center"
-                                              >
-                                                <img
-                                                  class="w-7 h-7"
-                                                  src="/src/images/up-arrow-listing2.png"
-                                                  alt=""
-                                                />
-                                              </div>
-                                              <div
-                                                class="text-gray-700 text-xs flex justify-center mt-0.5"
-                                              >
-                                                Sundul
-                                              </div>
-                                            </div>
+                                          <div class="cursor-pointer">
+                                            Top Ads
                                           </div>
-
-                                          <div class="flex flex-col row-span-2">
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchTerjualTersedia"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleTerjualTersedia()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextTerjualTersedia"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Terjual</span
-                                                >
-                                              </div>
-                                            </div>
-                                            <!--  -->
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchActiveInactive"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleActiveInactive()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextActiveInactive"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Inactive</span
-                                                >
-                                              </div>
-                                            </div>
+                                          <div class="cursor-pointer py-2">
+                                            Classified Ads
                                           </div>
-
-                                          <!--  -->
-                                          <!-- </div> -->
+                                          <div class="cursor-pointer">
+                                            Sundul
+                                          </div>
                                         </div>
+
                                         <!--  -->
                                       </div>
                                     </div>
@@ -47726,96 +47660,19 @@
                                         </div>
                                         <!--  -->
                                         <div
-                                          class="w-full h-full grid grid-rows-4"
+                                          class="flex flex-col text-sm px-2 text-black"
                                         >
-                                          <!-- <div class="w-full h-full items-center"> -->
-
-                                          <div
-                                            class="w-full flex justify-center row-span-2 my-6"
-                                          >
-                                            <div
-                                              class="flex flex-col justify-center"
-                                            >
-                                              <div
-                                                class="w-full flex justify-center"
-                                              >
-                                                <img
-                                                  class="w-7 h-7"
-                                                  src="/src/images/up-arrow-listing2.png"
-                                                  alt=""
-                                                />
-                                              </div>
-                                              <div
-                                                class="text-gray-700 text-xs flex justify-center mt-0.5"
-                                              >
-                                                Sundul
-                                              </div>
-                                            </div>
+                                          <div class="cursor-pointer">
+                                            Top Ads
                                           </div>
-
-                                          <div class="flex flex-col row-span-2">
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchTerjualTersedia"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleTerjualTersedia()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextTerjualTersedia"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Terjual</span
-                                                >
-                                              </div>
-                                            </div>
-                                            <!--  -->
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchActiveInactive"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleActiveInactive()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextActiveInactive"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Inactive</span
-                                                >
-                                              </div>
-                                            </div>
+                                          <div class="cursor-pointer py-2">
+                                            Classified Ads
                                           </div>
-
-                                          <!--  -->
-                                          <!-- </div> -->
+                                          <div class="cursor-pointer">
+                                            Sundul
+                                          </div>
                                         </div>
+
                                         <!--  -->
                                       </div>
                                     </div>
@@ -48002,96 +47859,19 @@
                                         </div>
                                         <!--  -->
                                         <div
-                                          class="w-full h-full grid grid-rows-4"
+                                          class="flex flex-col text-sm px-2 text-black"
                                         >
-                                          <!-- <div class="w-full h-full items-center"> -->
-
-                                          <div
-                                            class="w-full flex justify-center row-span-2 my-6"
-                                          >
-                                            <div
-                                              class="flex flex-col justify-center"
-                                            >
-                                              <div
-                                                class="w-full flex justify-center"
-                                              >
-                                                <img
-                                                  class="w-7 h-7"
-                                                  src="/src/images/up-arrow-listing2.png"
-                                                  alt=""
-                                                />
-                                              </div>
-                                              <div
-                                                class="text-gray-700 text-xs flex justify-center mt-0.5"
-                                              >
-                                                Sundul
-                                              </div>
-                                            </div>
+                                          <div class="cursor-pointer">
+                                            Top Ads
                                           </div>
-
-                                          <div class="flex flex-col row-span-2">
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchTerjualTersedia"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleTerjualTersedia()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextTerjualTersedia"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Terjual</span
-                                                >
-                                              </div>
-                                            </div>
-                                            <!--  -->
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchActiveInactive"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleActiveInactive()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextActiveInactive"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Inactive</span
-                                                >
-                                              </div>
-                                            </div>
+                                          <div class="cursor-pointer py-2">
+                                            Classified Ads
                                           </div>
-
-                                          <!--  -->
-                                          <!-- </div> -->
+                                          <div class="cursor-pointer">
+                                            Sundul
+                                          </div>
                                         </div>
+
                                         <!--  -->
                                       </div>
                                     </div>
@@ -48099,281 +47879,7 @@
                                     <!--  -->
                                   </div>
 
-                                  <!-- Card Dummy -->
-                                  <div
-                                    class="grid grid-cols-6 h-[28vh] mode-card-kedua bg-white cursor-pointer rounded-lg shadow mt-3"
-                                  >
-                                    <div class="w-full h-full col-span-2">
-                                      <div
-                                        class="max-w-sm dark:bg-gray-800 dark:border-gray-700"
-                                        data-active-tab="1"
-                                        data-object-id="1604"
-                                        onclick="showCardInfoDetail(this)"
-                                      >
-                                        <div class="w-full h-[19vh] relative">
-                                          <div
-                                            class="slider-card-mode-ketiga mode-mini-video w-full h-full"
-                                          >
-                                            <div
-                                              class="relative h-[19vh] bg-black z-index-10"
-                                            >
-                                              <img
-                                                class="w-full h-full object-contain"
-                                                src="./src/images/Hunian/Rmh1/rumaha1.jpg"
-                                                alt=""
-                                              />
-                                              <div
-                                                class="arrow-right-custom-mini"
-                                              >
-                                                <span class="font-semibold"
-                                                  >NEW</span
-                                                >
-                                              </div>
-                                            </div>
-                                            <div
-                                              class="relative h-[19vh] bg-black z-index-10"
-                                            >
-                                              <img
-                                                class="w-full h-full object-contain"
-                                                src="./src/images/Hunian/Rmh1/rumaha2.jpg"
-                                                alt=""
-                                              />
-                                              <div
-                                                class="arrow-right-custom-mini"
-                                              >
-                                                <span class="font-semibold"
-                                                  >NEW</span
-                                                >
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div
-                                          class="flex flex-col py-1 pr-1 pl-1.5 w-full"
-                                        >
-                                          <!--  -->
-                                          <div
-                                            class="flex flex-row justify-between"
-                                          >
-                                            <div>
-                                              <div
-                                                class="inline-flex items-center"
-                                              >
-                                                <h5
-                                                  class="text-md font-bold tracking-tight text-black"
-                                                >
-                                                  Rp 11.300.000.000
-                                                </h5>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <!--  -->
-                                          <div
-                                            class="flex flex-col font-normal"
-                                          >
-                                            <div
-                                              class="flex items-center text-xs text-gray-700"
-                                            >
-                                              <span class="">LT 80 m² |</span>
-                                              <span class="">LB 276 m² |</span>
-                                              <span class="">2 KT |</span>
-                                              <span class="">5 KM</span>
-                                            </div>
-                                            <div class="text-xs text-gray-700">
-                                              Sunter, Tanjung Priok, Jakuut
-                                            </div>
-                                          </div>
-                                          <!--  -->
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div
-                                      class="col-span-4 w-full h-full flex flex-col"
-                                    >
-                                      <div class="w-full flex flex-row">
-                                        <!--  -->
-                                        <div
-                                          class="w-full flex flex-row pt-3 justify-center"
-                                        >
-                                          <div>
-                                            <img
-                                              class="w-4 h-4"
-                                              src="/src/images/show.png"
-                                              alt=""
-                                            />
-                                          </div>
-                                          <!--  -->
-                                          <div
-                                            class="ml-2 text-xs text-gray-700"
-                                          >
-                                            325
-                                            <span class="text-green-500 ml-1"
-                                              >4%</span
-                                            >
-                                          </div>
-                                          <!--  -->
-                                        </div>
-
-                                        <div
-                                          class="w-full flex flex-row justify-center py-3"
-                                        >
-                                          <div>
-                                            <img
-                                              class="w-4 h-4"
-                                              src="/src/images/people.png"
-                                              alt=""
-                                            />
-                                          </div>
-                                          <!--  -->
-                                          <div
-                                            class="ml-2 text-xs text-gray-700"
-                                          >
-                                            325
-                                            <span class="text-green-500 ml-1"
-                                              >4%</span
-                                            >
-                                          </div>
-                                          <!--  -->
-                                        </div>
-
-                                        <!--  -->
-
-                                        <div
-                                          class="w-full flex flex-row justify-center py-3"
-                                        >
-                                          <div>
-                                            <img
-                                              class="w-4 h-4"
-                                              src="/src/images/heart-off.png"
-                                              alt=""
-                                            />
-                                          </div>
-                                          <!--  -->
-                                          <div
-                                            class="ml-2 text-xs text-gray-700"
-                                          >
-                                            325
-                                            <span class="text-green-500 ml-1"
-                                              >4%</span
-                                            >
-                                          </div>
-                                          <!--  -->
-                                        </div>
-                                        <!--  -->
-                                      </div>
-                                      <!--  -->
-                                      <div
-                                        class="w-full h-full grid grid-cols-4"
-                                      >
-                                        <!--  -->
-                                        <div class="col-span-3">
-                                          <div class="h-[19vh] mt-2 pl-1">
-                                            <canvas
-                                              id="analytics-card-02"
-                                              width="800"
-                                              height="300"
-                                            ></canvas>
-                                          </div>
-                                        </div>
-                                        <!--  -->
-                                        <div
-                                          class="w-full h-full grid grid-rows-4"
-                                        >
-                                          <!-- <div class="w-full h-full items-center"> -->
-
-                                          <div
-                                            class="w-full flex justify-center row-span-2 my-6"
-                                          >
-                                            <div
-                                              class="flex flex-col justify-center"
-                                            >
-                                              <div
-                                                class="w-full flex justify-center"
-                                              >
-                                                <img
-                                                  class="w-7 h-7"
-                                                  src="/src/images/up-arrow-listing2.png"
-                                                  alt=""
-                                                />
-                                              </div>
-                                              <div
-                                                class="text-gray-700 text-xs flex justify-center mt-0.5"
-                                              >
-                                                Sundul
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <div class="flex flex-col row-span-2">
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchTerjualTersedia"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleTerjualTersedia()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextTerjualTersedia"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Terjual</span
-                                                >
-                                              </div>
-                                            </div>
-                                            <!--  -->
-                                            <div class="grid grid-cols-2">
-                                              <div
-                                                class="w-full flex justify-center items-center pl-5"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchActiveInactive"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onclick="toggleActiveInactive()"
-                                                  />
-                                                  <div
-                                                    class="w-6 h-3 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-2.5 after:w-2.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-
-                                              <div class="flex">
-                                                <span
-                                                  id="toggleTextActiveInactive"
-                                                  class="text-sm font-medium text-gray-900 dark:text-gray-300"
-                                                  >Inactive</span
-                                                >
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <!--  -->
-                                          <!-- </div> -->
-                                        </div>
-                                        <!--  -->
-                                      </div>
-                                    </div>
-
-                                    <!--  -->
-                                  </div>
+                                  <!--  -->
                                 </div>
                               </div>
                             </div>
@@ -48603,461 +48109,6 @@
                         <!--  -->
                       </div>
 
-                      <!-- Konten Tab Tujuh Pasang -->
-                      <div
-                        class="hidden px-4 py-2"
-                        id="detail-pasang-tujuh"
-                        role="tabpanel"
-                        aria-labelledby="detail-pasang-tujuh-tab"
-                      >
-                        <div
-                          class="h-[70.5vh] overflow-y-auto hide-scrollbar text-gray-700"
-                        >
-                          <form>
-                            <h6 class="text-lg font-instagram_bold mt-3 mb-3">
-                              Detail Rumah
-                            </h6>
-                            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
-                              <!-- Koordinat -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="koordinat"
-                                  >
-                                    Koordinat
-                                  </label>
-                                  <input
-                                    readonly
-                                    disabled
-                                    type="text"
-                                    id="koordinat"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Jenis Properti -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="jenis-properti"
-                                  >
-                                    Jenis Properti
-                                  </label>
-                                  <select
-                                    id="jenis-properti"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="rumah-baru">
-                                      Rumah Baru
-                                    </option>
-                                    <option value="rumah-seken">
-                                      Rumah Seken
-                                    </option>
-                                    <option value="apartemen-baru">
-                                      Apartemen Baru
-                                    </option>
-                                    <option value="apartemen-seken">
-                                      Apartemen Seken
-                                    </option>
-                                    <option value="ruko">Ruko</option>
-                                  </select>
-                                </div>
-                              </div>
-
-                              <!-- Judul -->
-                              <div class="w-full col-span-2">
-                                <div class="relative w-full">
-                                  <label class="block text-sm mb-2" for="judul">
-                                    Judul
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="judul"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Deskripsi -->
-                              <div class="col-span-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="deskripsi"
-                                  >
-                                    Deskripsi
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="deskripsi"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Deskripsi 2 -->
-                              <div class="col-span-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="deskripsi2"
-                                  >
-                                    Deskripsi 2
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="deskripsi2"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Alamat 1 -->
-                              <div class="col-span-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="alamat1"
-                                  >
-                                    Alamat 1
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="alamat1"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Alamat 2 -->
-                              <div class="col-span-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="alamat2"
-                                  >
-                                    Alamat 2
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="alamat2"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Kelurahan -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="kelurahan"
-                                  >
-                                    Kelurahan
-                                  </label>
-                                  <input
-                                    readonly
-                                    disabled
-                                    type="text"
-                                    id="kelurahan"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Kecamatan -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="kecamatan"
-                                  >
-                                    Kecamatan
-                                  </label>
-                                  <input
-                                    readonly
-                                    disabled
-                                    type="text"
-                                    id="kecamatan"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Luas Tanah m2 -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="luas-tanah"
-                                  >
-                                    Luas Tanah m²
-                                  </label>
-                                  <input
-                                    type="number"
-                                    id="luas-tanah"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Luas Bangunan m2 -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="luas-bangunan"
-                                  >
-                                    Luas Bangunan m²
-                                  </label>
-                                  <input
-                                    type="number"
-                                    id="luas-bangunan"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Jumlah Kamar Tidur Utama -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="kamar-tidur-utama"
-                                  >
-                                    Jumlah Kamar Tidur Utama
-                                  </label>
-                                  <input
-                                    type="number"
-                                    id="kamar-tidur-utama"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Jumlah Kamar Tidur Tambahan -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="kamar-tidur-tambahan"
-                                  >
-                                    Jumlah Kamar Tidur Tambahan
-                                  </label>
-                                  <input
-                                    type="number"
-                                    id="kamar-tidur-tambahan"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Jenis Surat -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="jenis-surat"
-                                  >
-                                    Jenis Surat
-                                  </label>
-                                  <select
-                                    id="jenis-surat"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="shm">SHM</option>
-                                    <option value="shgb">SHGB</option>
-                                  </select>
-                                </div>
-                              </div>
-
-                              <!-- Penjual -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="jenis-properti"
-                                  >
-                                    Penjual
-                                  </label>
-                                  <select
-                                    id="jenis-properti"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="pemilik-langsung">
-                                      Pemilik Langsung
-                                    </option>
-                                    <option value="agen">Agen</option>
-                                    <option value="pengembang">
-                                      Pengembang
-                                    </option>
-                                  </select>
-                                </div>
-                              </div>
-
-                              <!--  -->
-                            </div>
-
-                            <h6 class="text-lg font-instagram_bold my-6">
-                              Tampak Rumah
-                            </h6>
-
-                            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
-                              <div
-                                class="w-ful col-span-2 bg-white p-3 rounded shadow"
-                              >
-                                <div class="relative w-full">
-                                  <!-- Upload Gambar -->
-                                  <div class="grid grid-cols-1 gap-y-3 gap-x-4">
-                                    <!-- Gambar 1 -->
-
-                                    <div class="relative">
-                                      <input
-                                        type="file"
-                                        class="cursor-pointer relative block opacity-0 w-full h-full p-20 z-50"
-                                      />
-                                      <div
-                                        class="text-center p-10 absolute top-0 right-0 left-0 m-auto text-gray-700"
-                                      >
-                                        <h4>
-                                          Seret berkas di mana saja untuk
-                                          mengunggah
-                                          <br />atau
-                                        </h4>
-                                        <p class="">Pilih Berkas</p>
-                                      </div>
-                                    </div>
-
-                                    <!--  -->
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- Harga Listrik -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="harga-listrik"
-                                  >
-                                    Listrik
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="harga-listrik"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Arah Bangunan -->
-                              <div class="w-full">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-sm mb-2"
-                                    for="arah-bangunan"
-                                  >
-                                    Arah Bangunan
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="arah-bangunan"
-                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-
-                            <h6 class="text-lg font-instagram_bold my-6">
-                              Tambahan
-                            </h6>
-                            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
-                              <!-- Carport -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="carport"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="carport"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Carport</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- Swimming Pool -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="swimming-pool"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="swimming-pool"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Swimming Pool</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- IMB -->
-                              <div class="w-full">
-                                <div class="flex items-center mb-2">
-                                  <input
-                                    id="imb"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="imb"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >IMB</label
-                                  >
-                                </div>
-                              </div>
-
-                              <!-- Gate Cluster -->
-                              <div class="w-full">
-                                <div class="flex items-center">
-                                  <input
-                                    id="gate-cluster"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                  />
-                                  <label
-                                    for="gate-cluster"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Gate Cluster</label
-                                  >
-                                </div>
-                              </div>
-                            </div>
-
-                            <div
-                              class="flex justify-center col-span-2 pt-3 pb-5"
-                            >
-                              <button
-                                type="button"
-                                class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
-                              >
-                                Simpan
-                              </button>
-                            </div>
-
-                            <!--  -->
-                          </form>
-                        </div>
-                      </div>
                       <!--  -->
                     </div>
 
