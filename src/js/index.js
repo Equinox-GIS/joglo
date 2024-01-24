@@ -1403,6 +1403,77 @@ window.CloseTabPesan = function () {
   lastClickedPesan = null;
 };
 
+
+window.CloseTabPengaturan = function () {
+  if (lastClickedPesan) {
+
+
+
+  let elem = document.getElementById("MenuSatuContent");
+  console.log(elem);
+  if (elem) {
+    elem.classList.add("hidden");
+  }
+
+
+    let openPengaturan = document.querySelectorAll(".show-form-registrasi");
+  // Hide all elements
+  openPengaturan.forEach(function (elem) {
+    elem.classList.add("hidden");
+  });
+
+
+  // let openPengaturan = document.querySelectorAll(".card-agent-detail");
+  // // Hide all elements
+  // openPengaturan.forEach(function (elem) {
+  //   elem.classList.remove("hidden");
+  // });
+
+  // show-form-registrasi
+
+  Array.from(document.getElementsByClassName("form-profil")).forEach((elem) =>
+    elem.classList.add("hidden")
+  );
+
+  Array.from(document.getElementsByClassName("form-registrasi")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
+
+  Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
+
+    // document.getElementById("MenuEmpatTab").click();
+
+    // // Array.from(
+    // //   document.getElementsByClassName("hidden-close-tab-pesan")
+    // // ).forEach((elem) => elem.classList.remove("hidden"));
+    // //
+    // Array.from(document.getElementsByClassName("card-detail-beranda")).forEach(
+    //   (elem) => elem.classList.remove("hidden")
+    // );
+    // Array.from(document.getElementsByClassName("card-info-pencarian")).forEach(
+    //   (elem) => elem.classList.add("hidden")
+    // );
+
+    // Array.from(document.getElementsByClassName("konten-pesan")).forEach(
+    //   (elem) => elem.classList.remove("hidden")
+    // );
+    // Array.from(
+    //   document.getElementsByClassName("konten-not-found-pesan")
+    // ).forEach((elem) => elem.classList.remove("hidden"));
+    // Array.from(
+    //   document.getElementsByClassName("konten-with-found-pesan")
+    // ).forEach((elem) => elem.classList.add("hidden"));
+  } 
+  // else {
+  //   // Jika tidak ada elemen yang diklik sebelumnya, kembalikan tampilan default
+  //   showElement(".konten-not-found-pesan");
+  //   hideElement(".konten-with-found-pesan");
+  // }
+  // lastClickedPesan = null;
+};
+
 window.showCardPesantDetail = function () {
   showElement(".konten-with-found-pesan");
   hideElement(".konten-not-found-pesan");
@@ -3140,6 +3211,41 @@ window.ShowProfil = function () {
   showJudulProfil();
 
   resetAllCards();
+};
+
+// Buka Halaman Pengaturan
+
+let lastClickedShowPengaturan;
+window.showPengaturan = function (element, event) {
+  event.stopPropagation();
+
+  lastClickedShowPengaturan = element;
+
+  showJudulProfil();
+
+  let elem = document.getElementById("MenuSatuContent");
+  console.log(elem);
+  if (elem) {
+    elem.classList.remove("hidden");
+  }
+
+  let openPengaturan = document.querySelectorAll(".card-agent-detail");
+  // Hide all elements
+  openPengaturan.forEach(function (elem) {
+    elem.classList.add("hidden");
+  });
+
+  Array.from(document.getElementsByClassName("form-profil")).forEach((elem) =>
+    elem.classList.remove("hidden")
+  );
+
+  Array.from(document.getElementsByClassName("form-registrasi")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
+
+  Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 };
 
 window.MasukAkunLogin = function () {
