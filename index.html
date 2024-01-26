@@ -1701,12 +1701,12 @@
                   class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
                 >
                   <div
-                    class="w-8 h-8 flex justify-center items-center relative"
+                    class="w-9 h-9 flex justify-center items-center relative"
                   >
                     <img
                       class="menu-icon"
                       data-menu="2"
-                      src="./src/images/lighting.png"
+                      src="./src/images/megaphone.png"
                       alt=""
                     />
                   </div>
@@ -3001,6 +3001,7 @@
                               </div>
                             </div>
                           </div>
+
                           <div class="w-full h-[27vh] relative">
                             <div class="slider-card-beranda w-full h-full">
                               <div
@@ -13986,26 +13987,25 @@
                     Registrasi
                   </div> -->
 
-                    <div
-                      class="font-instagram_bold text-2xl px-3 py-2 judulStory w-80"
-                      >
-                      Registrasi
-                    </div>
-                    <!--  -->
+                  <div
+                    class="font-instagram_bold text-2xl px-3 py-2 judulStory w-80"
+                  >
+                    Registrasi
+                  </div>
+                  <!--  -->
 
-                    <div class="flex col justify-center py-1 mt-1">
+                  <div class="flex col justify-center py-1 mt-1">
+                    <div
+                      onclick="CloseTabPengaturan()"
+                      class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                    >
                       <div
-                        onclick="CloseTabPengaturan()"
-                        class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
+                        class="w-5 h-5 mt-0.5 mr-0.5 flex justify-center items-center relative"
                       >
-                        <div
-                          class="w-5 h-5 mt-0.5 mr-0.5 flex justify-center items-center relative"
-                        >
-                          <img src="./src/images/back.png" alt="" />
-                        </div>
+                        <img src="./src/images/back.png" alt="" />
                       </div>
                     </div>
-
+                  </div>
                 </div>
 
                 <!--  Registrasi -->
@@ -33984,9 +33984,7 @@
                     <div class="flex flex-col">
                       <!--  -->
                       <div class="w-full flex justify-between items-center">
-                        <div class="font-instagram_bold text-2xl">
-                          Profil Agen
-                        </div>
+                        <div class="font-instagram_bold text-2xl">Profil</div>
                         <!--  -->
 
                         <div class="flex col justify-center py-1 mt-1">
@@ -42192,7 +42190,7 @@
                             alt="Soaraja Icon"
                           />
                           <div class="text-gray-500 text-sm mt-3">
-                           Kirim foto dan bertukar pesan disini
+                            Kirim foto dan bertukar pesan disini
                           </div>
                         </div>
                       </div>
@@ -46310,7 +46308,7 @@
                               data-active-tab="5"
                               onclick="showCardInfoDetail(this)"
                               class="cursor-pointer py-2 px-1 grid grid-cols-[90px,1fr] items-center bg-yellow-50 border-2 border-yellow-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                              >
+                            >
                               <div class="flex flex-col items-center">
                                 <div
                                   class="bg-gradient-to-tr from-yellow-400 to-purple-600 p-[0.15rem] rounded-full w-16 h-16"
@@ -46424,8 +46422,6 @@
                                 </div>
                               </div>
                             </div>
-
-      
                           </div>
                           <!--  -->
 
@@ -46885,11 +46881,11 @@
 
                                   <!--  Card Benar ada functionya -->
                                   <div
-                                    class="grid grid-cols-6 h-[28vh] mode-card-kedua bg-white cursor-pointer rounded-lg shadow mt-3"
+                                    class="grid grid-cols-6 h-[28vh] mode-card-kedua bg-white rounded-lg shadow mt-3 border-red-500"
                                   >
                                     <div class="w-full h-full col-span-2">
                                       <div
-                                        class="max-w-sm dark:bg-gray-800 dark:border-gray-700"
+                                        class="max-w-sm"
                                         data-active-tab="1"
                                         data-object-id="1604"
                                         onclick="showCardInfoDetail(this)"
@@ -46973,85 +46969,87 @@
                                     </div>
 
                                     <div
-                                      class="col-span-4 w-full h-full flex flex-col"
+                                      class="col-span-4 w-full h-full grid grid-cols-6"
                                     >
-                                      <div class="w-full flex flex-row">
-                                        <!--  -->
-                                        <div
-                                          class="w-full flex flex-row pt-3 justify-center"
-                                        >
-                                          <div>
-                                            <img
-                                              class="w-4 h-4"
-                                              src="/src/images/show.png"
-                                              alt=""
-                                            />
-                                          </div>
+                                      <!-- Chip Information -->
+                                      <div class="w-full h-full col-span-4">
+                                        <div class="w-full flex flex-row">
                                           <!--  -->
                                           <div
-                                            class="ml-2 text-xs text-gray-700"
+                                            class="w-full flex flex-row pt-3 justify-center"
                                           >
-                                            325
-                                            <span class="text-green-500 ml-1"
-                                              >4%</span
+                                            <div>
+                                              <img
+                                                class="w-4 h-4"
+                                                src="/src/images/show.png"
+                                                alt=""
+                                              />
+                                            </div>
+                                            <!--  -->
+                                            <div
+                                              class="ml-2 text-xs text-gray-700"
                                             >
+                                              325
+                                              <span class="text-green-500 ml-1"
+                                                >4%</span
+                                              >
+                                            </div>
+                                            <!--  -->
+                                          </div>
+
+                                          <div
+                                            class="w-full flex flex-row justify-center py-3"
+                                          >
+                                            <div>
+                                              <img
+                                                class="w-4 h-4"
+                                                src="/src/images/people.png"
+                                                alt=""
+                                              />
+                                            </div>
+                                            <!--  -->
+                                            <div
+                                              class="ml-2 text-xs text-gray-700"
+                                            >
+                                              325
+                                              <span class="text-green-500 ml-1"
+                                                >4%</span
+                                              >
+                                            </div>
+                                            <!--  -->
+                                          </div>
+
+                                          <!--  -->
+
+                                          <div
+                                            class="w-full flex flex-row justify-center py-3"
+                                          >
+                                            <div>
+                                              <img
+                                                class="w-4 h-4"
+                                                src="/src/images/heart-off.png"
+                                                alt=""
+                                              />
+                                            </div>
+                                            <!--  -->
+                                            <div
+                                              class="ml-2 text-xs text-gray-700"
+                                            >
+                                              325
+                                              <span class="text-green-500 ml-1"
+                                                >4%</span
+                                              >
+                                            </div>
+                                            <!--  -->
                                           </div>
                                           <!--  -->
                                         </div>
 
+                                        <!--  Chart -->
                                         <div
-                                          class="w-full flex flex-row justify-center py-3"
+                                          class="w-full h-full grid grid-cols-1"
                                         >
-                                          <div>
-                                            <img
-                                              class="w-4 h-4"
-                                              src="/src/images/people.png"
-                                              alt=""
-                                            />
-                                          </div>
                                           <!--  -->
-                                          <div
-                                            class="ml-2 text-xs text-gray-700"
-                                          >
-                                            325
-                                            <span class="text-green-500 ml-1"
-                                              >4%</span
-                                            >
-                                          </div>
-                                          <!--  -->
-                                        </div>
-
-                                        <!--  -->
-
-                                        <div
-                                          class="w-full flex flex-row justify-center py-3"
-                                        >
-                                          <div>
-                                            <img
-                                              class="w-4 h-4"
-                                              src="/src/images/heart-off.png"
-                                              alt=""
-                                            />
-                                          </div>
-                                          <!--  -->
-                                          <div
-                                            class="ml-2 text-xs text-gray-700"
-                                          >
-                                            325
-                                            <span class="text-green-500 ml-1"
-                                              >4%</span
-                                            >
-                                          </div>
-                                          <!--  -->
-                                        </div>
-                                        <!--  -->
-                                      </div>
-                                      <!--  -->
-                                      <div
-                                        class="w-full h-full grid grid-cols-4"
-                                      >
-                                        <!--  -->
-                                        <div class="col-span-3">
                                           <div class="h-[21.5vh] pl-4">
                                             <canvas
                                               id="analytics-card-01"
@@ -47059,23 +47057,71 @@
                                               height="300"
                                             ></canvas>
                                           </div>
-                                        </div>
-                                        <!--  -->
+                                          <!--  -->
 
+                                          <!--  -->
+                                        </div>
+                                      </div>
+                                      <div class="w-full h-full col-span-2">
                                         <div
-                                          class="flex flex-col text-sm px-2 text-black"
+                                          class="w-full h-full flex flex-col justify-center text-black pl-5"
                                         >
-                                          <div class="cursor-pointer">
-                                            Top Ads
+                                          <!--  -->
+                                          <div
+                                            class="w-full flex items-center mt-5"
+                                          >
+                                            <!--  -->
+                                            <div
+                                              class="inline-flex items-center cursor-pointer"
+                                            >
+                                              <img
+                                                class="w-5 h-5"
+                                                src="/src/images/adpromo.png"
+                                              />
+                                              <div
+                                                class="space-y-0.5 font-medium text-left ml-1 text-xs hover-promo-listing"
+                                              >
+                                                <div>Top Ads</div>
+                                              </div>
+                                            </div>
                                           </div>
-                                          <div class="cursor-pointer py-2">
-                                            Classified Ads
+                                          <!--  -->
+                                          <div
+                                            class="w-full flex items-center py-2"
+                                          >
+                                            <!--  -->
+                                            <div
+                                              class="inline-flex items-center cursor-pointer"
+                                            >
+                                              <img
+                                                class="w-5 h-5"
+                                                src="/src/images/sign.png"
+                                              />
+                                              <div
+                                                class="space-y-0.5 font-medium text-left ml-1 text-xs hover-promo-listing"
+                                              >
+                                                <div>Classified Ads</div>
+                                              </div>
+                                            </div>
                                           </div>
-                                          <div class="cursor-pointer">
-                                            Sundul
+                                          <!--  -->
+                                          <div class="w-full flex items-center">
+                                            <!--  -->
+                                            <div
+                                              class="inline-flex items-center cursor-pointer"
+                                            >
+                                              <img
+                                                class="w-5 h-5"
+                                                src="/src/images/roundedarrow.png"
+                                              />
+                                              <div
+                                                class="space-y-0.5 font-medium text-left ml-1 text-xs hover-promo-listing"
+                                              >
+                                                <div>Sundul</div>
+                                              </div>
+                                            </div>
                                           </div>
                                         </div>
-
                                         <!--  -->
                                       </div>
                                     </div>

@@ -1403,45 +1403,39 @@ window.CloseTabPesan = function () {
   lastClickedPesan = null;
 };
 
-
 window.CloseTabPengaturan = function () {
   if (lastClickedPesan) {
-
-
-
-  let elem = document.getElementById("MenuSatuContent");
-  console.log(elem);
-  if (elem) {
-    elem.classList.add("hidden");
-  }
-
+    let elem = document.getElementById("MenuSatuContent");
+    console.log(elem);
+    if (elem) {
+      elem.classList.add("hidden");
+    }
 
     let openPengaturan = document.querySelectorAll(".show-form-registrasi");
-  // Hide all elements
-  openPengaturan.forEach(function (elem) {
-    elem.classList.add("hidden");
-  });
+    // Hide all elements
+    openPengaturan.forEach(function (elem) {
+      elem.classList.add("hidden");
+    });
 
+    // let openPengaturan = document.querySelectorAll(".card-agent-detail");
+    // // Hide all elements
+    // openPengaturan.forEach(function (elem) {
+    //   elem.classList.remove("hidden");
+    // });
 
-  // let openPengaturan = document.querySelectorAll(".card-agent-detail");
-  // // Hide all elements
-  // openPengaturan.forEach(function (elem) {
-  //   elem.classList.remove("hidden");
-  // });
+    // show-form-registrasi
 
-  // show-form-registrasi
+    Array.from(document.getElementsByClassName("form-profil")).forEach((elem) =>
+      elem.classList.add("hidden")
+    );
 
-  Array.from(document.getElementsByClassName("form-profil")).forEach((elem) =>
-    elem.classList.add("hidden")
-  );
+    Array.from(document.getElementsByClassName("form-registrasi")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
 
-  Array.from(document.getElementsByClassName("form-registrasi")).forEach(
-    (elem) => elem.classList.add("hidden")
-  );
-
-  Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
-    (elem) => elem.classList.add("hidden")
-  );
+    Array.from(document.getElementsByClassName("show-form-registrasi")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
 
     // document.getElementById("MenuEmpatTab").click();
 
@@ -1465,7 +1459,7 @@ window.CloseTabPengaturan = function () {
     // Array.from(
     //   document.getElementsByClassName("konten-with-found-pesan")
     // ).forEach((elem) => elem.classList.add("hidden"));
-  } 
+  }
   // else {
   //   // Jika tidak ada elemen yang diklik sebelumnya, kembalikan tampilan default
   //   showElement(".konten-not-found-pesan");
@@ -3375,3 +3369,19 @@ document
       closeIcon.classList.remove("hidden");
     }
   });
+
+document.querySelectorAll(".hover-promo-listing").forEach((item) => {
+  item.addEventListener("mouseenter", function () {
+    this.previousElementSibling.src =
+      "/src/images/" +
+      this.previousElementSibling.src.split("/").pop().split(".")[0] +
+      "-blue.png";
+  });
+
+  item.addEventListener("mouseleave", function () {
+    this.previousElementSibling.src =
+      "/src/images/" +
+      this.previousElementSibling.src.split("/").pop().split("-")[0] +
+      ".png";
+  });
+});
