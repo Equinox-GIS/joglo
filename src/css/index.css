@@ -1147,3 +1147,7 @@ input[type="number"] {
 .remove-scroll-textarea {
   overflow: hidden;
 }
+
+.hover-promo-listing:hover {
+  color: #007bff; /* Anggap ini adalah kode warna untuk blue-500 */
+}
