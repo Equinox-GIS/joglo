@@ -342,7 +342,7 @@ function playVideoById(videoId) {
   }
 }
 
-// Fungsi untuk menghentikan dan mereset video berdasarkan ID
+// Fungsi untuk menghentikan dan mereset video berdasarkan ID satu
 function stopAndResetVideoById(videoId) {
   var videoElement = document.getElementById(videoId);
   if (videoElement) {
@@ -3384,4 +3384,51 @@ document.querySelectorAll(".hover-promo-listing").forEach((item) => {
       this.previousElementSibling.src.split("/").pop().split("-")[0] +
       ".png";
   });
+});
+
+// Promo Top Ad
+function tabMenuListingShowTopAds() {
+  let judulTopAd = document.querySelectorAll(".");
+  judulTopAd.forEach(function (element) {
+    element.textContent = "Top Ads";
+  });
+}
+
+window.promoListingAgen = function () {
+  // tabMenuListingShowTopAds();
+
+  showElement(".showKontenPromoAgen");
+  hideElement(".hideKontenPromoAgen");
+};
+
+// Classified Ads
+function tabMenuListingShowClassifiedAds() {
+  let judulClassifiedAds = document.querySelectorAll(".judulClassifiedAds");
+  judulClassifiedAds.forEach(function (element) {
+    element.textContent = "Classified Ads";
+  });
+}
+
+window.promoListingClassifiedAds = function () {
+  // tabMenuListingShowClassifiedAds();
+
+  showElement(".showKontenPromoClassifiedAds");
+  hideElement(".hideKontenPromoClassifiedAds");
+};
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var tabButtonTiga = document.getElementById("detail-statistik-tiga-tab");
+  var tabButtonDua = document.getElementById("detail-agenprofil-dua-tab");
+
+  tabButtonDua.addEventListener("click", function () {
+    setTimeout(function () {
+      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+        $(".slider-card-mode-ketiga").slick("setPosition");
+      } else {
+        initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+      }
+    }, 100);
+  });
+
 });
