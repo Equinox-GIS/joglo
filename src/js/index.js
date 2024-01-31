@@ -351,7 +351,7 @@ function stopAndResetVideoById(videoId) {
   }
 }
 
-// Fungsi untuk mereset gaya pada semua tab dan menandai tab 'Tampak Ruang' sebagai aktif
+// Fungsi untuk mereset gaya pada semua tab dan menandai tab 'Tampak Ruang' sebagai aktif dua
 function resetTabStyles(tabsSelector, activeTabId) {
   var tabs = document.querySelectorAll(tabsSelector);
   tabs.forEach(function (tab) {
@@ -390,12 +390,13 @@ function resetTabStyles(tabsSelector, activeTabId) {
       "dark:border-gray-700",
       "dark:hover:text-gray-300"
     );
-    defaultTab.classList.add(
-      "text-blue-600",
-      "border-blue-600",
-      "dark:text-blue-500",
-      "dark:border-blue-500"
-    );
+    defaultTab.classList
+      .add
+      // "text-blue-600",
+      // "border-blue-600",
+      // "dark:text-blue-500",
+      // "dark:border-blue-500"
+      ();
     defaultTab.setAttribute("aria-selected", "true");
   }
 }
@@ -414,7 +415,7 @@ function resetActiveTabContent(contentsSelector, defaultContentId) {
   }
 }
 
-// Fungsi untuk mengaktifkan tab dan kontennya berdasarkan ID
+// Fungsi untuk mengaktifkan tab dan kontennya berdasarkan ID dua
 function setActiveTab(tabButtonId, tabContentId) {
   var activeTab = document.getElementById(tabButtonId);
   var activeContent = document.getElementById(tabContentId);
@@ -441,12 +442,13 @@ function setActiveTab(tabButtonId, tabContentId) {
       "dark:border-gray-700",
       "dark:hover:text-gray-300"
     );
-    activeTab.classList.add(
-      "text-blue-600",
-      "border-blue-600",
-      "dark:text-blue-500",
-      "dark:border-blue-500"
-    );
+    activeTab.classList
+      .add
+      // "text-blue-600",
+      // "border-blue-600",
+      // "dark:text-blue-500",
+      // "dark:border-blue-500"
+      ();
     activeTab.setAttribute("aria-selected", "true");
 
     // Menampilkan konten tab yang aktif
@@ -3416,12 +3418,10 @@ window.promoListingClassifiedAds = function () {
   hideElement(".hideKontenPromoClassifiedAds");
 };
 
-
 document.addEventListener("DOMContentLoaded", function () {
-  var tabButtonTiga = document.getElementById("detail-statistik-tiga-tab");
-  var tabButtonDua = document.getElementById("detail-agenprofil-dua-tab");
+  var tabMenuButton = document.getElementById("MenuTujuhBelasTab");
 
-  tabButtonDua.addEventListener("click", function () {
+  tabMenuButton.addEventListener("click", function () {
     setTimeout(function () {
       if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
         $(".slider-card-mode-ketiga").slick("setPosition");
@@ -3430,5 +3430,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 100);
   });
-
 });
