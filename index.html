@@ -46022,92 +46022,8 @@
                   <div class="flex flex-row items-stretch justify-between">
                     <!-- Menu Tab Pasang ori -->
 
-                    <ul
-                      class="flex flex-wrap -mb-px text-sm font-medium text-center pr-4"
-                      id="DetailPasang"
-                      data-tabs-toggle="#DetailPasangContent"
-                      role="tablist"
-                    >
-                      <!-- Menu Tab Satu Pasang -->
-
-                      <!-- Menu Tab Enam Pasang -->
-                      <li class="" role="presentation">
-                        <button
-                          class="inline-block pr-3.5 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
-                          id="detail-pasang-enam-tab"
-                          data-tabs-target="#detail-pasang-enam"
-                          type="button"
-                          role="tab"
-                          aria-controls="detail-pasang-enam"
-                          aria-selected="false"
-                        >
-                          Listing
-                        </button>
-                      </li>
-
-                      <!-- Menu Tab Lima Pasang -->
-                      <li class="" role="presentation">
-                        <button
-                          class="inline-block px-3.5 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
-                          id="detail-pasang-lima-tab"
-                          data-tabs-target="#detail-pasang-lima"
-                          type="button"
-                          role="tab"
-                          aria-controls="detail-pasang-lima"
-                          aria-selected="false"
-                        >
-                          Agen
-                        </button>
-                      </li>
-
-                      <!-- Menu Tab Tujuh Pasang -->
-                      <li class="" role="presentation">
-                        <button
-                          class="inline-block px-3.5 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
-                          id="detail-pasang-tujuh-tab"
-                          data-tabs-target="#detail-pasang-tujuh"
-                          type="button"
-                          role="tab"
-                          aria-controls="detail-pasang-tujuh"
-                          aria-selected="false"
-                        >
-                          Beli Kuota
-                        </button>
-                      </li>
-
-                      <!-- Menu Tab Empat Pasang -->
-                      <li class="hidden" role="presentation">
-                        <button
-                          class="inline-block px-3.5 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
-                          id="detail-pasang-empat-tab"
-                          data-tabs-target="#detail-pasang-empat"
-                          type="button"
-                          role="tab"
-                          aria-controls="detail-pasang-empat"
-                          aria-selected="false"
-                        >
-                          Iklan Baris
-                        </button>
-                      </li>
-
-                      <!-- Menu Tab Dua Pasang -->
-                      <li class="hidden" role="presentation">
-                        <button
-                          class="inline-block px-3.5 pb-1 pt-2 border-b rounded-t-lg hover:text-gray-700 hover:border-gray-300"
-                          id="detail-pasang-dua-tab"
-                          data-tabs-target="#detail-pasang-dua"
-                          type="button"
-                          role="tab"
-                          aria-controls="detail-pasang-dua"
-                          aria-selected="false"
-                        >
-                          Baris Agen
-                        </button>
-                      </li>
-                    </ul>
-
                     <!-- Tab Menu ori1 -->
-                    <div class="w-full border border-red-500 hidden">
+                    <div class="w-full">
                       <div class="w-full" id="menu">
                         <nav class="w-[15vw]">
                           <ul
@@ -46147,20 +46063,723 @@
                       <!--carddd1 -->
                       <div
                         id="menu-listing"
-                        class="menu-content w-full h-[71.5vh]"
+                        class="menu-content w-full h-[71.5vh] py-3"
                       >
-                        dasdas
+                        <div class="flex flex-col h-full">
+                          <!-- Mode Ke Ketiga -->
+
+                          <div
+                            class="hideKontenPromoAgen hideKontenPromoClassifiedAds w-full h-[70vh] overflow-y-auto overflow-x-hidden hide-scrollbar"
+                          >
+                            <!--  Card Benar ada functionya -->
+                            <div
+                              class="grid grid-cols-6 h-[28vh] mode-card-kedua bg-white rounded-lg shadow border-red-500 mb-3"
+                            >
+                              <div class="w-full h-full col-span-2">
+                                <div
+                                  class="max-w-sm"
+                                  data-active-tab="1"
+                                  data-object-id="1604"
+                                  onclick="showCardInfoDetail(this)"
+                                >
+                                  <div class="w-full h-[19vh] relative">
+                                    <div
+                                      class="slider-card-mode-ketiga mode-mini-video custom_rounded_analitik w-full h-full"
+                                    >
+                                      <div
+                                        class="relative h-[19vh] bg-black z-index-10"
+                                      >
+                                        <img
+                                          class="w-full h-full object-contain"
+                                          src="./src/images/Hunian/Rmh2/rumahb1.jpg"
+                                          alt=""
+                                        />
+                                        <div class="arrow-right-custom-mini">
+                                          <span class="font-semibold">NEW</span>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="relative h-[19vh] bg-black z-index-10"
+                                      >
+                                        <img
+                                          class="w-full h-full object-contain"
+                                          src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                          alt=""
+                                        />
+                                        <div class="arrow-right-custom-mini">
+                                          <span class="font-semibold">NEW</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="flex flex-col py-1 pr-1 pl-1.5 w-full"
+                                  >
+                                    <!--  -->
+                                    <div class="flex flex-row justify-between">
+                                      <div>
+                                        <div class="inline-flex items-center">
+                                          <h5
+                                            class="text-md font-bold tracking-tight text-black"
+                                          >
+                                            Rp 11.300.000.000
+                                          </h5>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="flex flex-col font-normal">
+                                      <div
+                                        class="flex items-center text-xs text-gray-700"
+                                      >
+                                        <span class="">LT 80 m² |</span>
+                                        <span class="">LB 276 m² |</span>
+                                        <span class="">2 KT |</span>
+                                        <span class="">5 KM</span>
+                                      </div>
+                                      <div class="text-xs text-gray-700">
+                                        Sunter, Tanjung Priok, Jakuut
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="col-span-4 w-full h-full grid grid-cols-6"
+                              >
+                                <!-- Chip Information -->
+                                <div class="w-full h-full col-span-4">
+                                  <div class="w-full flex flex-row">
+                                    <!--  -->
+                                    <div
+                                      class="w-full flex flex-row pt-3 justify-center"
+                                    >
+                                      <div>
+                                        <img
+                                          class="w-4 h-4"
+                                          src="/src/images/show.png"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <!--  -->
+                                      <div class="ml-2 text-xs text-gray-700">
+                                        325
+                                        <span class="text-green-500 ml-1"
+                                          >4%</span
+                                        >
+                                      </div>
+                                      <!--  -->
+                                    </div>
+
+                                    <div
+                                      class="w-full flex flex-row justify-center py-3"
+                                    >
+                                      <div>
+                                        <img
+                                          class="w-4 h-4"
+                                          src="/src/images/people.png"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <!--  -->
+                                      <div class="ml-2 text-xs text-gray-700">
+                                        325
+                                        <span class="text-green-500 ml-1"
+                                          >4%</span
+                                        >
+                                      </div>
+                                      <!--  -->
+                                    </div>
+
+                                    <!--  -->
+
+                                    <div
+                                      class="w-full flex flex-row justify-center py-3"
+                                    >
+                                      <div>
+                                        <img
+                                          class="w-4 h-4"
+                                          src="/src/images/heart-off.png"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <!--  -->
+                                      <div class="ml-2 text-xs text-gray-700">
+                                        325
+                                        <span class="text-green-500 ml-1"
+                                          >4%</span
+                                        >
+                                      </div>
+                                      <!--  -->
+                                    </div>
+                                    <!--  -->
+                                  </div>
+
+                                  <!--  Chart -->
+                                  <div class="w-full h-full grid grid-cols-1">
+                                    <!--  -->
+                                    <div class="h-[21.5vh] pl-4">
+                                      <canvas
+                                        id="analytics-card-05"
+                                        width="800"
+                                        height="300"
+                                      ></canvas>
+                                    </div>
+                                    <!--  -->
+
+                                    <!--  -->
+                                  </div>
+                                </div>
+                                <div class="w-full h-full col-span-2">
+                                  <div
+                                    class="w-full h-full flex flex-col justify-center text-black pl-4"
+                                  >
+                                    <!--  -->
+                                    <div
+                                      class="w-full flex items-center -mt-2"
+                                      onclick="promoListingAgen()"
+                                    >
+                                      <!--  -->
+                                      <div
+                                        class="inline-flex items-center cursor-pointer px-3 py-2 w-32 hover:px-3 hover:w-32 hover:bg-slate-100 hover:rounded-lg"
+                                      >
+                                        <img
+                                          class="w-5 h-5"
+                                          src="/src/images/adpromo.png"
+                                        />
+                                        <div
+                                          class="space-y-0.5 font-medium text-left ml-1 text-xs"
+                                        >
+                                          <div>Top Ads1</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                    <div
+                                      class="w-full flex items-center py-2"
+                                      onclick="promoListingClassifiedAds()"
+                                    >
+                                      <!--  -->
+                                      <div
+                                        class="inline-flex items-center cursor-pointer px-3 py-2 w-32 hover:px-3 hover:w-32 hover:bg-slate-100 hover:rounded-lg"
+                                      >
+                                        <img
+                                          class="w-5 h-5"
+                                          src="/src/images/sign.png"
+                                        />
+                                        <div
+                                          class="space-y-0.5 font-medium text-left ml-1 text-xs"
+                                        >
+                                          <div>Classified Ads</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="w-full flex items-center">
+                                      <!--  -->
+                                      <div
+                                        class="inline-flex items-center cursor-pointer px-3 py-2 w-32 hover:px-3 hover:w-32 hover:bg-slate-100 hover:rounded-lg"
+                                      >
+                                        <img
+                                          class="w-5 h-5"
+                                          src="/src/images/roundedarrow.png"
+                                        />
+                                        <div
+                                          class="space-y-0.5 font-medium text-left ml-1 text-xs"
+                                        >
+                                          <div>Sundul</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--  -->
+                                </div>
+                              </div>
+
+                              <!--  -->
+                            </div>
+                            <!--  -->
+
+                            <div
+                              class="grid grid-cols-5 h-[28vh] mode-card-kedua bg-white rounded-lg shadow border-red-500 mb-3"
+                            >
+                              <div class="w-full h-full col-span-2">
+                                <div
+                                  class="max-w-sm"
+                                  data-active-tab="1"
+                                  data-object-id="1604"
+                                  onclick="showCardInfoDetail(this)"
+                                >
+                                  <div class="w-full h-[19vh] relative">
+                                    <div
+                                      class="slider-card-mode-ketiga mode-mini-video custom_rounded_analitik w-full h-full"
+                                    >
+                                      <div
+                                        class="relative h-[19vh] bg-black z-index-10"
+                                      >
+                                        <img
+                                          class="w-full h-full object-contain"
+                                          src="./src/images/Hunian/Rmh2/rumahb1.jpg"
+                                          alt=""
+                                        />
+                                        <div class="arrow-right-custom-mini">
+                                          <span class="font-semibold">NEW</span>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="relative h-[19vh] bg-black z-index-10"
+                                      >
+                                        <img
+                                          class="w-full h-full object-contain"
+                                          src="./src/images/Hunian/Rmh2/rumahb2.jpg"
+                                          alt=""
+                                        />
+                                        <div class="arrow-right-custom-mini">
+                                          <span class="font-semibold">NEW</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="flex flex-col py-1 pr-1 pl-1.5 w-full"
+                                  >
+                                    <!--  -->
+                                    <div class="flex flex-row justify-between">
+                                      <div>
+                                        <div class="inline-flex items-center">
+                                          <h5
+                                            class="text-md font-bold tracking-tight text-black"
+                                          >
+                                            Rp 11.300.000.000
+                                          </h5>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="flex flex-col font-normal">
+                                      <div
+                                        class="flex items-center text-xs text-gray-700"
+                                      >
+                                        <span class="">LT 80 m² |</span>
+                                        <span class="">LB 276 m² |</span>
+                                        <span class="">2 KT |</span>
+                                        <span class="">5 KM</span>
+                                      </div>
+                                      <div class="text-xs text-gray-700">
+                                        Sunter, Tanjung Priok, Jakuut
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-span-2">
+                                <!-- Chip Information -->
+                                <div class="w-full h-full">
+                                  <div class="w-full flex flex-row">
+                                    <!--  -->
+                                    <div
+                                      class="w-full flex flex-row pt-3 justify-center"
+                                    >
+                                      <div>
+                                        <img
+                                          class="w-4 h-4"
+                                          src="/src/images/show.png"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <!--  -->
+                                      <div class="ml-2 text-xs text-gray-700">
+                                        325
+                                        <span class="text-green-500 ml-1"
+                                          >4%</span
+                                        >
+                                      </div>
+                                      <!--  -->
+                                    </div>
+
+                                    <div
+                                      class="w-full flex flex-row justify-center py-3"
+                                    >
+                                      <div>
+                                        <img
+                                          class="w-4 h-4"
+                                          src="/src/images/people.png"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <!--  -->
+                                      <div class="ml-2 text-xs text-gray-700">
+                                        325
+                                        <span class="text-green-500 ml-1"
+                                          >4%</span
+                                        >
+                                      </div>
+                                      <!--  -->
+                                    </div>
+
+                                    <!--  -->
+
+                                    <div
+                                      class="w-full flex flex-row justify-center py-3"
+                                    >
+                                      <div>
+                                        <img
+                                          class="w-4 h-4"
+                                          src="/src/images/heart-off.png"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <!--  -->
+                                      <div class="ml-2 text-xs text-gray-700">
+                                        325
+                                        <span class="text-green-500 ml-1"
+                                          >4%</span
+                                        >
+                                      </div>
+                                      <!--  -->
+                                    </div>
+                                    <!--  -->
+                                  </div>
+
+                                  <!--  Chart -->
+                                  <div class="w-full h-full grid grid-cols-1">
+                                    <!--  -->
+                                    <div class="h-[21.5vh] pl-4 pr-3.5">
+                                      <canvas
+                                        id="analytics-card-06"
+                                        width="800"
+                                        height="300"
+                                      ></canvas>
+                                    </div>
+                                    <!--  -->
+
+                                    <!--  -->
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="w-full h-full">
+                                <div
+                                  class="w-full h-full flex flex-col justify-center text-black"
+                                >
+                                  <!--  -->
+                                  <div
+                                    class="w-full flex items-center -mt-2"
+                                    onclick="promoListingAgen()"
+                                  >
+                                    <!--  -->
+                                    <div
+                                      class="inline-flex items-center cursor-pointer px-3 py-2 w-32 hover:px-3 hover:w-32 hover:bg-slate-100 hover:rounded-lg"
+                                    >
+                                      <img
+                                        class="w-5 h-5"
+                                        src="/src/images/adpromo.png"
+                                      />
+                                      <div
+                                        class="space-y-0.5 font-medium text-left ml-1 text-xs"
+                                      >
+                                        <div>Top Ads1</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--  -->
+                                  <div
+                                    class="w-full flex items-center py-2"
+                                    onclick="promoListingClassifiedAds()"
+                                  >
+                                    <!--  -->
+                                    <div
+                                      class="inline-flex items-center cursor-pointer px-3 py-2 w-32 hover:px-3 hover:w-32 hover:bg-slate-100 hover:rounded-lg"
+                                    >
+                                      <img
+                                        class="w-5 h-5"
+                                        src="/src/images/sign.png"
+                                      />
+                                      <div
+                                        class="space-y-0.5 font-medium text-left ml-1 text-xs"
+                                      >
+                                        <div>Classified Ads</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--  -->
+                                  <div class="w-full flex items-center">
+                                    <!--  -->
+                                    <div
+                                      class="inline-flex items-center cursor-pointer px-3 py-2 w-32 hover:px-3 hover:w-32 hover:bg-slate-100 hover:rounded-lg"
+                                    >
+                                      <img
+                                        class="w-5 h-5"
+                                        src="/src/images/roundedarrow.png"
+                                      />
+                                      <div
+                                        class="space-y-0.5 font-medium text-left ml-1 text-xs"
+                                      >
+                                        <div>Sundul</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--  -->
+                              </div>
+
+                              <!--  -->
+                            </div>
+
+                            <!--  -->
+                          </div>
+
+                          <!--  -->
+                          <!--  -->
+
+                          <div class="showKontenPromoAgen hidden">Top Ads</div>
+
+                          <div class="showKontenPromoClassifiedAds hidden">
+                            Classified Ads
+                          </div>
+
+                          <!--  -->
+                        </div>
                       </div>
 
                       <div
                         id="menu-agen"
-                        class="menu-content w-full h-[71.5vh] hidden"
+                        class="menu-content w-full h-[71.5vh] py-3 hidden"
                       >
-                        bb
+                        <div class="h-[55vh] w-full flex justify-center">
+                          <div class="full w-[26vw] flex justify-center">
+                            <div class="flex flex-col bg-white rounded-lg">
+                              <!--  -->
+                              <div
+                                class="h-[21vh] w-[26vw] flex justify-center items-center"
+                              >
+                                <div
+                                  onclick="showCardAgentDetail(this)"
+                                  class="h-[16vh] w-[23.5vw] cursor-pointer py-2 px-1 grid grid-cols-[90px,1fr] items-center bg-yellow-50 border-2 border-yellow-200 rounded-lg"
+                                >
+                                  <div class="flex flex-col items-center">
+                                    <img
+                                      class="w-16 h-16 rounded-full m-2 object-cover"
+                                      src="/src/images/model/model7.jpg"
+                                    />
+                                  </div>
+                                  <div
+                                    class="flex flex-col justify-center ml-2"
+                                  >
+                                    <!--  -->
+                                    <div class="inline-flex w-full">
+                                      <div class="font-semibold mr-1">
+                                        Amelia Lydia
+                                      </div>
+                                      <div class="flex">
+                                        <div
+                                          class="w-5 h-5 mt-0.5 ml-0.5 flex justify-center items-center relative"
+                                        >
+                                          <img
+                                            src="/src/images/verif.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!--  -->
+                                    <div class="text-xs h-8 text-gray-700">
+                                      Agen terpercaya wilayah Pondok Indah sejak
+                                      1981. Telah melayani lebihss
+                                    </div>
+                                    <div
+                                      class="w-full flex flex-row justify-between relative"
+                                    >
+                                      <div
+                                        class="text-[10px] mt-1 text-gray-400"
+                                      >
+                                        ERA JAKARTA
+                                      </div>
+                                      <div class="relative hidden">
+                                        <img
+                                          class="w-6 h-6 object-contain"
+                                          src="./src/images/agent/era-property.png"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <div></div>
+
+                                    <div
+                                      class="mt-1 flex justify-between items-end"
+                                    >
+                                      <div>
+                                        <label
+                                          for="star-agent-utama"
+                                          class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                        >
+                                          <div>
+                                            <label
+                                              for="star-agent-utama"
+                                              class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                            >
+                                              <svg
+                                                class="w-4 h-4 text-yellow-300"
+                                                aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                viewBox="0 0 22 20"
+                                              >
+                                                <path
+                                                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                ></path>
+                                              </svg>
+                                              <svg
+                                                class="w-4 h-4 text-yellow-300"
+                                                aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                viewBox="0 0 22 20"
+                                              >
+                                                <path
+                                                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                ></path>
+                                              </svg>
+                                              <svg
+                                                class="w-4 h-4 text-gray-300"
+                                                aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                viewBox="0 0 22 20"
+                                              >
+                                                <path
+                                                  d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                ></path>
+                                              </svg>
+                                            </label>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="mr-2 -mt-3">
+                                        <img
+                                          class="w-5 h-7 object-contain"
+                                          src="./src/images/agent/era2.png"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--  -->
+                              <div
+                                class="w-full grid grid-cols-3 place-items-center px-3 mb-3"
+                              >
+                                <div class="flex items-center">
+                                  <img
+                                    class="w-4 h-4"
+                                    src="/src/images/show.png"
+                                    alt=""
+                                  />
+                                  <div class="ml-2 text-xs text-gray-700">
+                                    325
+                                    <span class="text-green-500 ml-1">4%</span>
+                                  </div>
+                                </div>
+                                <div class="flex items-center">
+                                  <img
+                                    class="w-4 h-4"
+                                    src="/src/images/people.png"
+                                    alt=""
+                                  />
+                                  <div class="ml-2 text-xs text-gray-700">
+                                    325
+                                    <span class="text-green-500 ml-1">4%</span>
+                                  </div>
+                                </div>
+                                <div class="flex items-center">
+                                  <img
+                                    class="w-4 h-4"
+                                    src="/src/images/heart-off.png"
+                                    alt=""
+                                  />
+                                  <div class="ml-2 text-xs text-gray-700">
+                                    325
+                                    <span class="text-green-500 ml-1">4%</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--  Chart -->
+                              <div class="grid grid-cols-1 px-5">
+                                <!--  -->
+                                <div class="h-[21.5vh]">
+                                  <canvas
+                                    id="analytics-card-13"
+                                    width="800"
+                                    height="300"
+                                  ></canvas>
+                                </div>
+                                <!--  -->
+
+                                <!--  -->
+                              </div>
+                              <!--  -->
+                              <div class="w-full flex justify-center mt-4">
+                                <div class="w-[23vw]">
+                                  <div class="grid grid-cols-7 gap-2">
+                                    <div
+                                      class="col-span-2 flex justify-center items-center cursor-pointer px-3 py-2 hover:bg-slate-100 hover:rounded-lg"
+                                    >
+                                      <img
+                                        class="w-5 h-5"
+                                        src="/src/images/adpromo.png"
+                                      />
+                                      <div
+                                        class="space-y-0.5 font-medium ml-1 text-xs"
+                                      >
+                                        <div>Top Ads</div>
+                                      </div>
+                                    </div>
+                                    <!--  -->
+                                    <div
+                                      class="col-span-3 flex justify-center items-center cursor-pointer px-3 py-2 hover:bg-slate-100 hover:rounded-lg"
+                                    >
+                                      <img
+                                        class="w-5 h-5"
+                                        src="/src/images/sign.png"
+                                      />
+                                      <div
+                                        class="space-y-0.5 font-medium ml-1 text-xs"
+                                      >
+                                        <div>Classified Ads</div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="col-span-2 flex justify-center items-center cursor-pointer px-3 py-2 hover:bg-slate-100 hover:rounded-lg"
+                                    >
+                                      <img
+                                        class="w-5 h-5"
+                                        src="/src/images/roundedarrow.png"
+                                      />
+                                      <div
+                                        class="space-y-0.5 font-medium ml-1 text-xs"
+                                      >
+                                        <div>Sundul</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--  -->
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div
                         id="menu-beli"
-                        class="menu-content w-full h-[71.5vh] hidden"
+                        class="menu-content w-full h-[71.5vh] py-3 hidden"
                       >
                         aa
                       </div>
@@ -48303,237 +48922,6 @@
                           </div>
 
                           <!-- cardddd12 -->
-                          <div class="h-[55vh] w-full flex justify-center mt-2">
-                            <div class="full w-[26vw] flex justify-center">
-                              <div class="flex flex-col bg-white rounded-lg">
-                                <!--  -->
-                                <div
-                                  class="h-[21vh] w-[26vw] flex justify-center items-center"
-                                >
-                                  <div
-                                    onclick="showCardAgentDetail(this)"
-                                    class="h-[16vh] w-[23.5vw] cursor-pointer py-2 px-1 grid grid-cols-[90px,1fr] items-center bg-yellow-50 border-2 border-yellow-200 rounded-lg"
-                                  >
-                                    <div class="flex flex-col items-center">
-                                      <img
-                                        class="w-16 h-16 rounded-full m-2 object-cover"
-                                        src="/src/images/model/model7.jpg"
-                                      />
-                                    </div>
-                                    <div
-                                      class="flex flex-col justify-center ml-2"
-                                    >
-                                      <!--  -->
-                                      <div class="inline-flex w-full">
-                                        <div class="font-semibold mr-1">
-                                          Amelia Lydia
-                                        </div>
-                                        <div class="flex">
-                                          <div
-                                            class="w-5 h-5 mt-0.5 ml-0.5 flex justify-center items-center relative"
-                                          >
-                                            <img
-                                              src="/src/images/verif.png"
-                                              alt=""
-                                            />
-                                          </div>
-                                        </div>
-                                      </div>
-
-                                      <!--  -->
-                                      <div class="text-xs h-8 text-gray-700">
-                                        Agen terpercaya wilayah Pondok Indah
-                                        sejak 1981. Telah melayani lebihss
-                                      </div>
-                                      <div
-                                        class="w-full flex flex-row justify-between relative"
-                                      >
-                                        <div
-                                          class="text-[10px] mt-1 text-gray-400"
-                                        >
-                                          ERA JAKARTA
-                                        </div>
-                                        <div class="relative hidden">
-                                          <img
-                                            class="w-6 h-6 object-contain"
-                                            src="./src/images/agent/era-property.png"
-                                          />
-                                        </div>
-                                      </div>
-
-                                      <div></div>
-
-                                      <div
-                                        class="mt-1 flex justify-between items-end"
-                                      >
-                                        <div>
-                                          <label
-                                            for="star-agent-utama"
-                                            class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
-                                          >
-                                            <div>
-                                              <label
-                                                for="star-agent-utama"
-                                                class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
-                                              >
-                                                <svg
-                                                  class="w-4 h-4 text-yellow-300"
-                                                  aria-hidden="true"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                  fill="currentColor"
-                                                  viewBox="0 0 22 20"
-                                                >
-                                                  <path
-                                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                                  ></path>
-                                                </svg>
-                                                <svg
-                                                  class="w-4 h-4 text-yellow-300"
-                                                  aria-hidden="true"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                  fill="currentColor"
-                                                  viewBox="0 0 22 20"
-                                                >
-                                                  <path
-                                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                                  ></path>
-                                                </svg>
-                                                <svg
-                                                  class="w-4 h-4 text-gray-300"
-                                                  aria-hidden="true"
-                                                  xmlns="http://www.w3.org/2000/svg"
-                                                  fill="currentColor"
-                                                  viewBox="0 0 22 20"
-                                                >
-                                                  <path
-                                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
-                                                  ></path>
-                                                </svg>
-                                              </label>
-                                            </div>
-                                          </label>
-                                        </div>
-                                        <div class="mr-2 -mt-3">
-                                          <img
-                                            class="w-5 h-7 object-contain"
-                                            src="./src/images/agent/era2.png"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!--  -->
-                                <div
-                                  class="w-full grid grid-cols-3 place-items-center px-3 mb-3"
-                                >
-                                  <div class="flex items-center">
-                                    <img
-                                      class="w-4 h-4"
-                                      src="/src/images/show.png"
-                                      alt=""
-                                    />
-                                    <div class="ml-2 text-xs text-gray-700">
-                                      325
-                                      <span class="text-green-500 ml-1"
-                                        >4%</span
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="flex items-center">
-                                    <img
-                                      class="w-4 h-4"
-                                      src="/src/images/people.png"
-                                      alt=""
-                                    />
-                                    <div class="ml-2 text-xs text-gray-700">
-                                      325
-                                      <span class="text-green-500 ml-1"
-                                        >4%</span
-                                      >
-                                    </div>
-                                  </div>
-                                  <div class="flex items-center">
-                                    <img
-                                      class="w-4 h-4"
-                                      src="/src/images/heart-off.png"
-                                      alt=""
-                                    />
-                                    <div class="ml-2 text-xs text-gray-700">
-                                      325
-                                      <span class="text-green-500 ml-1"
-                                        >4%</span
-                                      >
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!--  Chart -->
-                                <div class="grid grid-cols-1 px-5">
-                                  <!--  -->
-                                  <div class="h-[21.5vh]">
-                                    <canvas
-                                      id="analytics-card-13"
-                                      width="800"
-                                      height="300"
-                                    ></canvas>
-                                  </div>
-                                  <!--  -->
-
-                                  <!--  -->
-                                </div>
-                                <!--  -->
-                                <div class="w-full flex justify-center mt-4">
-                                  <div class="w-[23vw]">
-                                    <div class="grid grid-cols-3 gap-2">
-                                      <div
-                                        class="flex justify-center items-center cursor-pointer px-3 py-1.5 hover:bg-slate-100 hover:rounded-lg"
-                                      >
-                                        <img
-                                          class="w-5 h-5"
-                                          src="/src/images/adpromo.png"
-                                        />
-                                        <div
-                                          class="space-y-0.5 font-medium ml-1 text-xs"
-                                        >
-                                          <div>Top Ads5</div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        class="flex justify-center items-center cursor-pointer px-3 py-1.5 hover:bg-slate-100 hover:rounded-lg"
-                                      >
-                                        <img
-                                          class="w-5 h-5"
-                                          src="/src/images/sign.png"
-                                        />
-                                        <div
-                                          class="space-y-0.5 font-medium ml-1 text-xs"
-                                        >
-                                          <div>Classified</div>
-                                        </div>
-                                      </div>
-                                      <div
-                                        class="flex justify-center items-center cursor-pointer px-3 py-1.5 hover:bg-slate-100 hover:rounded-lg"
-                                      >
-                                        <img
-                                          class="w-5 h-5"
-                                          src="/src/images/roundedarrow.png"
-                                        />
-                                        <div
-                                          class="space-y-0.5 font-medium ml-1 text-xs"
-                                        >
-                                          <div>Sundul</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!--  -->
-                              </div>
-                            </div>
-                          </div>
 
                           <!--  -->
 
@@ -48782,7 +49170,7 @@
                                               <div
                                                 class="space-y-0.5 font-medium text-left ml-1 text-xs"
                                               >
-                                                <div>Top Ads1</div>
+                                                <div>Top Ads6</div>
                                               </div>
                                             </div>
                                           </div>
@@ -49494,6 +49882,7 @@
           scales: {
             y: {
               beginAtZero: true,
+              position: "right",
               grid: {
                 drawBorder: false,
               },
