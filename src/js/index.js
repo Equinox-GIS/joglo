@@ -342,7 +342,7 @@ function playVideoById(videoId) {
   }
 }
 
-// Fungsi untuk menghentikan dan mereset video berdasarkan ID
+// Fungsi untuk menghentikan dan mereset video berdasarkan ID satu
 function stopAndResetVideoById(videoId) {
   var videoElement = document.getElementById(videoId);
   if (videoElement) {
@@ -351,7 +351,7 @@ function stopAndResetVideoById(videoId) {
   }
 }
 
-// Fungsi untuk mereset gaya pada semua tab dan menandai tab 'Tampak Ruang' sebagai aktif
+// Fungsi untuk mereset gaya pada semua tab dan menandai tab 'Tampak Ruang' sebagai aktif dua
 function resetTabStyles(tabsSelector, activeTabId) {
   var tabs = document.querySelectorAll(tabsSelector);
   tabs.forEach(function (tab) {
@@ -390,12 +390,13 @@ function resetTabStyles(tabsSelector, activeTabId) {
       "dark:border-gray-700",
       "dark:hover:text-gray-300"
     );
-    defaultTab.classList.add(
-      "text-blue-600",
-      "border-blue-600",
-      "dark:text-blue-500",
-      "dark:border-blue-500"
-    );
+    defaultTab.classList
+      .add
+      // "text-blue-600",
+      // "border-blue-600",
+      // "dark:text-blue-500",
+      // "dark:border-blue-500"
+      ();
     defaultTab.setAttribute("aria-selected", "true");
   }
 }
@@ -414,7 +415,7 @@ function resetActiveTabContent(contentsSelector, defaultContentId) {
   }
 }
 
-// Fungsi untuk mengaktifkan tab dan kontennya berdasarkan ID
+// Fungsi untuk mengaktifkan tab dan kontennya berdasarkan ID dua
 function setActiveTab(tabButtonId, tabContentId) {
   var activeTab = document.getElementById(tabButtonId);
   var activeContent = document.getElementById(tabContentId);
@@ -441,12 +442,13 @@ function setActiveTab(tabButtonId, tabContentId) {
       "dark:border-gray-700",
       "dark:hover:text-gray-300"
     );
-    activeTab.classList.add(
-      "text-blue-600",
-      "border-blue-600",
-      "dark:text-blue-500",
-      "dark:border-blue-500"
-    );
+    activeTab.classList
+      .add
+      // "text-blue-600",
+      // "border-blue-600",
+      // "dark:text-blue-500",
+      // "dark:border-blue-500"
+      ();
     activeTab.setAttribute("aria-selected", "true");
 
     // Menampilkan konten tab yang aktif
@@ -3383,5 +3385,49 @@ document.querySelectorAll(".hover-promo-listing").forEach((item) => {
       "/src/images/" +
       this.previousElementSibling.src.split("/").pop().split("-")[0] +
       ".png";
+  });
+});
+
+// Promo Top Ad
+function tabMenuListingShowTopAds() {
+  let judulTopAd = document.querySelectorAll(".");
+  judulTopAd.forEach(function (element) {
+    element.textContent = "Top Ads";
+  });
+}
+
+window.promoListingAgen = function () {
+  // tabMenuListingShowTopAds();
+
+  showElement(".showKontenPromoAgen");
+  hideElement(".hideKontenPromoAgen");
+};
+
+// Classified Ads
+function tabMenuListingShowClassifiedAds() {
+  let judulClassifiedAds = document.querySelectorAll(".judulClassifiedAds");
+  judulClassifiedAds.forEach(function (element) {
+    element.textContent = "Classified Ads";
+  });
+}
+
+window.promoListingClassifiedAds = function () {
+  // tabMenuListingShowClassifiedAds();
+
+  showElement(".showKontenPromoClassifiedAds");
+  hideElement(".hideKontenPromoClassifiedAds");
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  var tabMenuButton = document.getElementById("MenuTujuhBelasTab");
+
+  tabMenuButton.addEventListener("click", function () {
+    setTimeout(function () {
+      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+        $(".slider-card-mode-ketiga").slick("setPosition");
+      } else {
+        initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+      }
+    }, 100);
   });
 });
