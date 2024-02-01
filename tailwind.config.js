@@ -11,11 +11,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        lobster: ['"Lobster"'],
-        // roboto: ['"Roboto"'],
-        instagram_reguler: ["Font Instagram reguler"],
-        instagram_bold: ["Font Instagram bold"],
-        instagram_medium: ["Font Instagram medium"],
+        sf_pro_reguler: ["Font SF-Pro reguler"],
+        sf_pro_bold: ["Font SF-Pro bold"],
+        sf_pro_medium: ["Font SF-Pro medium"],
       },
     },
   },

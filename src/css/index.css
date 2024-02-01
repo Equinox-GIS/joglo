@@ -4,7 +4,7 @@
 
 /*Reguler*/
 @font-face {
-  font-family: "Font Instagram reguler";
+  font-family: "Font SF-Pro reguler";
   src: url("../font/3/SF-Pro-Text-Regular.otf") format("opentype");
   /*  font-weight: 400;*/
   font-style: normal;
@@ -12,7 +12,7 @@
 
 /*Bold3*/
 @font-face {
-  font-family: "Font Instagram bold";
+  font-family: "Font SF-Pro bold";
   src: url("../font/3/SF-Pro-Display-Heavy.otf") format("opentype");
   /*  font-weight: 600;*/
   font-style: normal;
@@ -20,7 +20,7 @@
 
 /*Medium3*/
 @font-face {
-  font-family: "Font Instagram medium";
+  font-family: "Font SF-Pro medium";
   src: url("../font/3/SF-Pro-Display-Bold.otf") format("opentype");
   /*  font-weight: 600;*/
   font-style: normal;
