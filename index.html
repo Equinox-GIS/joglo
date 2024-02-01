@@ -2884,27 +2884,28 @@
                           data-object-id="1604"
                           onclick="showCardInfoDetail(this)"
                         >
-                          <div
-                            class="py-1 px-2 h-[7vh]"
-                            style="user-select: none"
-                          >
+                          <div class="py-1 px-2 h-[7vh] border border-red-500">
                             <div
-                              class="flex items-center justify-beetwen w-full h-full"
+                              class="w-full h-full grid grid-cols-[1fr,40px]"
                             >
-                              <div class="flex flex-row w-full">
-                                <div class="">
+                              <div class="w-full grid grid-cols-[33px,1fr]">
+                                <div class="w-full">
                                   <img
                                     class="w-8 h-8 rounded-full"
                                     src="./src/images/model/model11.jpg"
                                   />
                                 </div>
-                                <div class="flex flex-col ml-2">
+                                <div class="w-full flex flex-col ml-2">
                                   <div class="inline-flex">
                                     <div
                                       class="text-sm font-semibold text-gray-700 cursor-pointer"
                                       onclick="showCardAgent(this)"
                                     >
-                                      Budiman Alisys
+                                      <div class="w-[16vw]">
+                                        <div class="truncate">
+                                          12345678910111213141516171819202121
+                                        </div>
+                                      </div>
                                     </div>
                                     <div
                                       class="flex items-center justify-center ml-1"
@@ -45991,6 +45992,19 @@
                   <div
                     class="w-full grid justify-items-end items-center relative mr-1"
                   >
+                  <!-- Promo - Tab Listing -->
+                      <div class="inline-flex">
+                      <div
+                        onclick="btnBackPromoListing()"
+                        class="menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 border-blue-600 flex justify-center items-center hidden promo_listing_back"
+                      >
+                        <div class="w-5 h-5 flex justify-center items-center">
+                          <img src="./src/images/back.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
+
+                  <!-- Stories -->
                     <div class="inline-flex">
                       <div
                         onclick="closeTab()"
@@ -46059,8 +46073,102 @@
                           >
                             <!--  Card Benar ada functionya -->
                             <div
-                              class="grid grid-cols-5 h-[30.5vh] mode-card-kedua bg-white rounded-lg shadow border-red-500 mb-3"
+                              class="grid grid-cols-5 h-[35.5vh] mode-card-kedua bg-white rounded-lg shadow border-red-500 mb-3"
                             >
+                              <div
+                                class="col-span-4 h-[5vh] border border-red-500 grid grid-cols-4"
+                              >
+                                <div
+                                  class="col-start-2 col-span-3 w-full border border-blue-500 grid grid-cols-3"
+                                >
+                                  <div
+                                    class="pt-1 w-full flex flex-row justify-end items-center"
+                                  >
+                                    <div
+                                      class="ml-1 text-xs text-black flex items-center"
+                                    >
+                                      ID 78AC66
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="col-span-2 w-full h-full flex items-center"
+                                  >
+                                    <div class="w-full flex flex-row mb-0.5">
+                                      <!--  -->
+                                      <div
+                                        class="pt-1 w-full flex flex-row justify-center items-center"
+                                      >
+                                        <div>
+                                          <img
+                                            class="w-4 h-4"
+                                            src="/src/images/show.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                        <!--  -->
+                                        <div
+                                          class="ml-1 text-xs text-black flex items-center"
+                                        >
+                                          325
+                                          <div
+                                            class="inline-flex text-red-500 font-bold ml-1"
+                                          >
+                                            <span class="ml-0.5">-4%</span>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div
+                                        class="pt-1 w-full flex flex-row justify-center items-center"
+                                      >
+                                        <div>
+                                          <img
+                                            class="w-4 h-4"
+                                            src="/src/images/people.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                        <!--  -->
+                                        <div
+                                          class="ml-1 text-xs text-black flex items-center"
+                                        >
+                                          325
+                                          <div
+                                            class="inline-flex text-red-500 font-bold ml-1"
+                                          >
+                                            <span class="ml-0.5">-4%</span>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div
+                                        class="pt-1 w-full flex flex-row justify-center items-center"
+                                      >
+                                        <div>
+                                          <img
+                                            class="w-3.5 h-3.5"
+                                            src="/src/images/heart-off.png"
+                                            alt=""
+                                          />
+                                        </div>
+                                        <!--  -->
+                                        <div
+                                          class="ml-1 text-xs text-black flex items-center"
+                                        >
+                                          325
+                                          <div
+                                            class="inline-flex text-blue-500 font-bold ml-1"
+                                          >
+                                            <span class="ml-0.5">-4%</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!--  -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
                               <div class="w-full h-full col-span-2">
                                 <div
                                   class="max-w-sm"
@@ -46070,7 +46178,7 @@
                                 >
                                   <div class="w-full h-[21.5vh] relative">
                                     <div
-                                      class="slider-card-mode-ketiga mode-mini-video custom_rounded_analitik w-full h-full"
+                                      class="slider-card-mode-ketiga mode-mini-video w-full h-full"
                                     >
                                       <div
                                         class="relative h-[21.5vh] bg-black z-index-10"
@@ -46135,79 +46243,6 @@
                               <div class="col-span-2">
                                 <!-- Chip Information -->
                                 <div class="w-full h-full">
-                                  <div class="w-full flex flex-row mb-0.5">
-                                    <!--  -->
-                                    <div
-                                      class="w-full flex flex-row pt-3 justify-center items-center"
-                                    >
-                                      <div>
-                                        <img
-                                          class="w-4 h-4"
-                                          src="/src/images/show.png"
-                                          alt=""
-                                        />
-                                      </div>
-                                      <!--  -->
-                                      <div
-                                        class="ml-1 text-xs text-black flex items-center"
-                                      >
-                                        325
-                                        <div
-                                          class="inline-flex text-red-500 font-bold ml-1"
-                                        >
-                                          <span class="ml-0.5">-4%</span>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div
-                                      class="w-full flex flex-row pt-3 justify-center items-center"
-                                    >
-                                      <div>
-                                        <img
-                                          class="w-4 h-4"
-                                          src="/src/images/people.png"
-                                          alt=""
-                                        />
-                                      </div>
-                                      <!--  -->
-                                      <div
-                                        class="ml-1 text-xs text-black flex items-center"
-                                      >
-                                        325
-                                        <div
-                                          class="inline-flex text-red-500 font-bold ml-1"
-                                        >
-                                          <span class="ml-0.5">-4%</span>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div
-                                      class="w-full flex flex-row pt-3 justify-center items-center"
-                                    >
-                                      <div>
-                                        <img
-                                          class="w-4 h-4"
-                                          src="/src/images/heart-off.png"
-                                          alt=""
-                                        />
-                                      </div>
-                                      <!--  -->
-                                      <div
-                                        class="ml-1 text-xs text-black flex items-center"
-                                      >
-                                        325
-                                        <div
-                                          class="inline-flex text-blue-500 font-bold ml-1"
-                                        >
-                                          <span class="ml-0.5">-4%</span>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!--  -->
-                                  </div>
-
                                   <!--  Chart -->
                                   <div class="w-full h-full grid grid-cols-1">
                                     <!--  -->
@@ -46299,7 +46334,11 @@
                           <!--  -->
                           <!--  -->
 
-                          <div class="showKontenPromoAgen hidden">Top Ads</div>
+                          <div class="showKontenPromoAgen w-full flex hidden">
+                            <div class="w-full border border-red-500">Top Adsasa1</div>
+                            <div class="w-full border border-blue-500"></div>
+
+                          </div>
 
                           <div class="showKontenPromoClassifiedAds hidden">
                             Classified Ads
