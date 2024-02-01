@@ -1491,6 +1491,26 @@ window.showCardAgent = function (element) {
   }
 };
 
+// Tombol Menu Kembali Promo, tab Listing
+window.btnBackPromoListing = function (element) {
+
+
+    Array.from(document.getElementsByClassName("showKontenPromoAgen")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+        Array.from(document.getElementsByClassName("promo_listing_back")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+
+        Array.from(document.getElementsByClassName("hideKontenPromoAgen")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+};
+
+
 // TambahStories
 // let lastClickedTambahStories;
 // window.showCardTambahStories = function (element) {
@@ -1671,6 +1691,7 @@ window.showCardInfoDetail = function (param) {
       element.classList.remove("hidden");
     });
   }
+
 
   switch (activeTab) {
     case "1":
@@ -3396,8 +3417,18 @@ function tabMenuListingShowTopAds() {
   });
 }
 
+  function BackTabPromoListing() {
+    // remove hidden
+    var BtnBackStories = document.querySelectorAll(".promo_listing_back");
+    BtnBackStories.forEach(function (element) {
+      element.classList.remove("hidden");
+    });
+  }
+
 window.promoListingAgen = function () {
   // tabMenuListingShowTopAds();
+
+BackTabPromoListing();
 
   showElement(".showKontenPromoAgen");
   hideElement(".hideKontenPromoAgen");
