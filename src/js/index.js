@@ -3447,10 +3447,14 @@ function tabMenuListingShowClassifiedAds() {
 }
 
 window.promoListingClassifiedAds = function () {
-  // tabMenuListingShowClassifiedAds();
 BackTabPromoListing();
+  showElement(".showKontenPromoClassifiedAds");
+  hideElement(".hideKontenPromoClassifiedAds");
+};
 
 
+window.promoListingSundulAds = function () {
+BackTabPromoListing();
   showElement(".showKontenPromoClassifiedAds");
   hideElement(".hideKontenPromoClassifiedAds");
 };
