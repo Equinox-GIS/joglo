@@ -1499,6 +1499,11 @@ window.btnBackPromoListing = function (element) {
       (elem) => elem.classList.add("hidden")
     );
 
+        Array.from(document.getElementsByClassName("showKontenPromoClassifiedAds")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+
         Array.from(document.getElementsByClassName("promo_listing_back")).forEach(
       (elem) => elem.classList.add("hidden")
     );
@@ -3426,7 +3431,6 @@ function tabMenuListingShowTopAds() {
   }
 
 window.promoListingAgen = function () {
-  // tabMenuListingShowTopAds();
 
 BackTabPromoListing();
 
@@ -3444,6 +3448,8 @@ function tabMenuListingShowClassifiedAds() {
 
 window.promoListingClassifiedAds = function () {
   // tabMenuListingShowClassifiedAds();
+BackTabPromoListing();
+
 
   showElement(".showKontenPromoClassifiedAds");
   hideElement(".hideKontenPromoClassifiedAds");
