@@ -46073,7 +46073,9 @@
                             <div
                               class="grid grid-cols-5 h-[35.5vh] mode-card-kedua bg-white rounded-lg shadow mb-3"
                             >
-                              <div class="col-span-4 h-[5vh] grid grid-cols-4 -mt-2">
+                              <div
+                                class="col-span-4 h-[5vh] grid grid-cols-4 -mt-2"
+                              >
                                 <!--  -->
                                 <div
                                   class="pt-6 w-full flex flex-row justify-start items-center"
@@ -46129,9 +46131,9 @@
                                       >
                                         325
                                         <div
-                                          class="inline-flex text-red-500 font-bold ml-1"
+                                          class="inline-flex text-blue-500 font-bold ml-1"
                                         >
-                                          <span class="ml-0.5">-4%</span>
+                                          <span class="ml-0.5">+4%</span>
                                         </div>
                                       </div>
                                     </div>
@@ -46240,7 +46242,7 @@
                                   <!--  Chart -->
                                   <div class="w-full h-full grid grid-cols-1">
                                     <!--  -->
-                                    <div class="h-[23.5vh] pl-1 pr-3.5">
+                                    <div class="h-[23.5vh] px-3.5">
                                       <canvas
                                         id="analytics-card-06"
                                         width="800"
@@ -46256,11 +46258,11 @@
 
                               <div class="w-full h-full">
                                 <div
-                                  class="w-full h-full flex flex-col text-black"
+                                  class="w-full h-full flex flex-col justify-center text-black"
                                 >
                                   <!--  -->
                                   <div
-                                    class="w-full flex items-center -mt-1"
+                                    class="w-full flex items-center -mt-9"
                                     onclick="promoListingAgen()"
                                   >
                                     <!--  -->
@@ -49587,7 +49589,7 @@
       // Define Chart.js default settings
       Chart.defaults.font.family = '"Inter", sans-serif';
       Chart.defaults.font.weight = "500";
-      Chart.defaults.color = "rgb(148, 163, 184)";
+      Chart.defaults.color = "black";
       Chart.defaults.scale.grid.color = "rgb(241, 245, 249)";
       Chart.defaults.plugins.tooltip.titleColor = "rgb(30, 41, 59)";
       Chart.defaults.plugins.tooltip.bodyColor = "rgb(30, 41, 59)";
@@ -49678,10 +49680,17 @@
           },
         ],
         options: {
-          layout: {
-            padding: 1,
-          },
           scales: {
+            x: {
+              display: false, // Menyembunyikan seluruh sumbu X termasuk tanggal
+              grid: {
+                display: false, // Opsional, karena menyembunyikan seluruh sumbu akan menyembunyikan grid juga
+              },
+              ticks: {
+                display: false, // Opsional, sama seperti di atas
+              },
+            },
+            // Konfigurasi untuk sumbu Y tetap sama
             y: {
               beginAtZero: true,
               position: "right",
@@ -49692,32 +49701,15 @@
                 callback: (value) => formatThousands(value),
               },
             },
-            x: {
-              type: "time",
-              time: {
-                parser: "MM-DD-YYYY",
-                unit: "month",
-                displayFormats: {
-                  month: "MMM YY",
-                },
-              },
-              grid: {
-                display: false,
-                drawBorder: false,
-              },
-              ticks: {
-                autoSkipPadding: 48,
-                maxRotation: 0,
-              },
-            },
           },
+          // Pastikan konfigurasi lainnya tetap tidak berubah
           plugins: {
             legend: {
               display: false,
             },
             tooltip: {
               callbacks: {
-                title: () => false, // Disable tooltip title
+                title: () => false,
                 label: (context) => formatThousands(context.parsed.y),
               },
             },

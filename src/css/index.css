@@ -774,7 +774,7 @@
 }
 
 .active_btn_peta {
-  @apply bg-[#69B3E7] text-white;
+  @apply bg-[#0394F7] text-white;
 }
 
 .active_btn_tag {
