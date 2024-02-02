@@ -2237,6 +2237,11 @@
                 <div
                   class="h-[76vh] overflow-y-auto overflow-x-hidden hide-scrollbar story-galeri-off"
                 >
+                  <!--  -->
+                  <!-- hrapan -->
+
+                  <!--  -->
+
                   <div class="px-3">
                     <!--  -->
                     <div class="flex justify-center">
@@ -2884,27 +2889,25 @@
                           data-object-id="1604"
                           onclick="showCardInfoDetail(this)"
                         >
-                          <div class="py-1 px-2 h-[7vh] border border-red-500">
+                          <div class="py-1 px-2 h-[7vh]">
                             <div
                               class="w-full h-full grid grid-cols-[1fr,40px]"
                             >
                               <div class="w-full grid grid-cols-[33px,1fr]">
                                 <div class="w-full">
                                   <img
-                                    class="w-8 h-8 rounded-full"
+                                    class="w-8 h-8 rounded-full mt-1"
                                     src="./src/images/model/model11.jpg"
                                   />
                                 </div>
                                 <div class="w-full flex flex-col ml-2">
-                                  <div class="inline-flex">
+                                  <div class="inline-flex mt-0.5">
                                     <div
-                                      class="text-sm font-semibold text-gray-700 cursor-pointer"
+                                      class="text-sm font-semibold text-black cursor-pointer"
                                       onclick="showCardAgent(this)"
                                     >
-                                      <div class="w-[16vw]">
-                                        <div class="truncate">
-                                          12345678910111213141516171819202121
-                                        </div>
+                                      <div class="">
+                                        Gunawan Budi Ardiva Budiman
                                       </div>
                                     </div>
                                     <div
@@ -2994,7 +2997,7 @@
                               </div>
                               <div class="w-full flex justify-end relative">
                                 <img
-                                  class="w-8 h-8 object-contain -mr-1"
+                                  class="w-8 h-8 object-contain -mr-1 mt-1"
                                   src="./src/images/agent/era2.png"
                                 />
                               </div>
@@ -41327,7 +41330,7 @@
                         <!-- Hide -->
                         <!-- Card Judul -->
                         <div
-                          class="grid grid-row-3 pb-5 px-5 pt-4 gap-4 mode-card-kedua bg-white cursor-pointer rounded-lg shadow w-full"
+                          class="grid grid-row-3 pb-5 px-5 pt-4 gap-4 mode-card-kedua bg-white cursor-pointer rounded-lg shadow w-full mb-3"
                         >
                           <div class="w-full grid grid-cols-3">
                             <div class="w-full flex flex-col">
@@ -41391,6 +41394,74 @@
                               <div class="w-full flex text-sm ml-1">
                                 Total Penjualan
                               </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Card Judul -->
+                        <div
+                          class="grid grid-row-3 pb-5 px-5 pt-4 gap-4 mode-card-kedua bg-white cursor-pointer rounded-lg shadow w-full"
+                        >
+                          <div class="w-full grid grid-cols-3">
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                              >
+                                7
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Promo Aktiff
+                              </div>
+                            </div>
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                              >
+                                13
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Total Promo
+                              </div>
+                            </div>
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                              >
+                                200
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Klik Bulan Ini
+                              </div>
+                            </div>
+                          </div>
+                          <div class="w-full grid grid-cols-3">
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                              >
+                                3000
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Total Klik
+                              </div>
+                            </div>
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                              >
+                                20 Jam
+                              </div>
+                              <div class="w-full flex text-sm ml-1">
+                                Stories
+                              </div>
+                            </div>
+                            <div class="w-full flex flex-col">
+                              <div
+                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                              >
+                                x
+                              </div>
+                              <div class="w-full flex text-sm ml-1">x</div>
                             </div>
                           </div>
                         </div>
@@ -45992,8 +46063,8 @@
                   <div
                     class="w-full grid justify-items-end items-center relative mr-1"
                   >
-                  <!-- Promo - Tab Listing -->
-                      <div class="inline-flex">
+                    <!-- Promo - Tab Listing -->
+                    <div class="inline-flex">
                       <div
                         onclick="btnBackPromoListing()"
                         class="menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 border-blue-600 flex justify-center items-center hidden promo_listing_back"
@@ -46004,7 +46075,7 @@
                       </div>
                     </div>
 
-                  <!-- Stories -->
+                    <!-- Stories -->
                     <div class="inline-flex">
                       <div
                         onclick="closeTab()"
@@ -46073,98 +46144,96 @@
                           >
                             <!--  Card Benar ada functionya -->
                             <div
-                              class="grid grid-cols-5 h-[35.5vh] mode-card-kedua bg-white rounded-lg shadow border-red-500 mb-3"
+                              class="grid grid-cols-5 h-[35.5vh] mode-card-kedua bg-white rounded-lg shadow mb-3"
                             >
                               <div
-                                class="col-span-4 h-[5vh] border border-red-500 grid grid-cols-4"
+                                class="col-span-4 h-[5vh] grid grid-cols-4 -mt-2"
                               >
+                                <!--  -->
                                 <div
-                                  class="col-start-2 col-span-3 w-full border border-blue-500 grid grid-cols-3"
+                                  class="pt-6 w-full flex flex-row justify-start items-center"
                                 >
                                   <div
-                                    class="pt-1 w-full flex flex-row justify-end items-center"
+                                    class="ml-1 text-xs text-black flex items-center"
                                   >
-                                    <div
-                                      class="ml-1 text-xs text-black flex items-center"
-                                    >
-                                      ID 78AC66
-                                    </div>
+                                    ID 78AC66
                                   </div>
-                                  <div
-                                    class="col-span-2 w-full h-full flex items-center"
-                                  >
-                                    <div class="w-full flex flex-row mb-0.5">
+                                </div>
+
+                                <div
+                                  class="col-end-5 col-span-2 w-full h-full flex items-center"
+                                >
+                                  <div class="w-full flex flex-row mb-0.5">
+                                    <!--  -->
+                                    <div
+                                      class="pt-6 w-full flex flex-row justify-center items-center"
+                                    >
+                                      <div>
+                                        <img
+                                          class="w-4 h-4"
+                                          src="/src/images/show.png"
+                                          alt=""
+                                        />
+                                      </div>
                                       <!--  -->
                                       <div
-                                        class="pt-1 w-full flex flex-row justify-center items-center"
+                                        class="ml-1 text-xs text-black flex items-center"
                                       >
-                                        <div>
-                                          <img
-                                            class="w-4 h-4"
-                                            src="/src/images/show.png"
-                                            alt=""
-                                          />
-                                        </div>
-                                        <!--  -->
+                                        325
                                         <div
-                                          class="ml-1 text-xs text-black flex items-center"
+                                          class="inline-flex text-red-500 font-bold ml-1"
                                         >
-                                          325
-                                          <div
-                                            class="inline-flex text-red-500 font-bold ml-1"
-                                          >
-                                            <span class="ml-0.5">-4%</span>
-                                          </div>
+                                          <span class="ml-0.5">-4%</span>
                                         </div>
                                       </div>
+                                    </div>
 
+                                    <div
+                                      class="pt-6 w-full flex flex-row justify-center items-center"
+                                    >
+                                      <div>
+                                        <img
+                                          class="w-4 h-4"
+                                          src="/src/images/people.png"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <!--  -->
                                       <div
-                                        class="pt-1 w-full flex flex-row justify-center items-center"
+                                        class="ml-1 text-xs text-black flex items-center"
                                       >
-                                        <div>
-                                          <img
-                                            class="w-4 h-4"
-                                            src="/src/images/people.png"
-                                            alt=""
-                                          />
-                                        </div>
-                                        <!--  -->
+                                        325
                                         <div
-                                          class="ml-1 text-xs text-black flex items-center"
+                                          class="inline-flex text-blue-500 font-bold ml-1"
                                         >
-                                          325
-                                          <div
-                                            class="inline-flex text-red-500 font-bold ml-1"
-                                          >
-                                            <span class="ml-0.5">-4%</span>
-                                          </div>
+                                          <span class="ml-0.5">+4%</span>
                                         </div>
                                       </div>
+                                    </div>
 
+                                    <div
+                                      class="pt-6 w-full flex flex-row justify-center items-center"
+                                    >
+                                      <div>
+                                        <img
+                                          class="w-3.5 h-3.5"
+                                          src="/src/images/heart-off.png"
+                                          alt=""
+                                        />
+                                      </div>
+                                      <!--  -->
                                       <div
-                                        class="pt-1 w-full flex flex-row justify-center items-center"
+                                        class="ml-1 mr-10 text-xs text-black flex items-center"
                                       >
-                                        <div>
-                                          <img
-                                            class="w-3.5 h-3.5"
-                                            src="/src/images/heart-off.png"
-                                            alt=""
-                                          />
-                                        </div>
-                                        <!--  -->
-                                        <div
-                                          class="ml-1 text-xs text-black flex items-center"
-                                        >
-                                          325
-                                          <div
+                                        325
+                                        <!--  <div
                                             class="inline-flex text-blue-500 font-bold ml-1"
                                           >
                                             <span class="ml-0.5">-4%</span>
-                                          </div>
-                                        </div>
+                                          </div> -->
                                       </div>
-                                      <!--  -->
                                     </div>
+                                    <!--  -->
                                   </div>
                                 </div>
                               </div>
@@ -46246,7 +46315,7 @@
                                   <!--  Chart -->
                                   <div class="w-full h-full grid grid-cols-1">
                                     <!--  -->
-                                    <div class="h-[23.5vh] pl-4 pr-3.5">
+                                    <div class="h-[23.5vh] px-3.5">
                                       <canvas
                                         id="analytics-card-06"
                                         width="800"
@@ -46266,7 +46335,7 @@
                                 >
                                   <!--  -->
                                   <div
-                                    class="w-full flex items-center -mt-6"
+                                    class="w-full flex items-center -mt-9"
                                     onclick="promoListingAgen()"
                                   >
                                     <!--  -->
@@ -46334,14 +46403,367 @@
                           <!--  -->
                           <!--  -->
 
-                          <div class="showKontenPromoAgen w-full flex hidden">
-                            <div class="w-full border border-red-500">Top Adsasa1</div>
-                            <div class="w-full border border-blue-500"></div>
+                          <div
+                            class="showKontenPromoAgen h-[76vh] hidden overflow-y-auto hide-scrollbar p-3 text-sm grid grid-cols-1 gap-y-5"
+                          >
+                            <div
+                              class="col-span-2 border grid grid-cols-3 w-full"
+                            >
+                              <div class="col-start-1">
+                                <div
+                                  class="h-full flex justify-start items-center text-lg font-sf_pro_bold"
+                                >
+                                  Radius
+                                </div>
+                              </div>
+                              <div
+                                class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                              >
+                                <div class="w-[12vw] h-full flex justify-end">
+                                  <select
+                                    id="jenis-surat"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-[6vw] h-[5vh]"
+                                  >
+                                    <option value="5">5 km</option>
+                                    <option value="10">10 km</option>
+                                    <option value="15">15 km</option>
+                                    <option value="30">30 km</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
 
+                            <!-- Radio -->
+
+                            <div
+                              class="col-span-2 border grid grid-cols-3 w-full"
+                            >
+                              <div
+                                class="col-span-2 mb-2 font-sf_pro_bold text-black text-lg"
+                              >
+                                Anggaran
+                              </div>
+
+                              <div class="col-start-1">
+                                <input
+                                  id="default-radio-11"
+                                  type="radio"
+                                  value=""
+                                  name="default-radio"
+                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                />
+                                <label
+                                  for="default-radio-11"
+                                  class="ms-2 text-sm text-black"
+                                  >Periode</label
+                                >
+                              </div>
+                              <div
+                                class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                              >
+                                <div class="w-full h-full">
+                                  <!--  -->
+
+                                  <div class="grid grid-rows-3 gap-y-3">
+                                    <div>
+                                      <input
+                                        type="checkbox"
+                                        id="plan-daily"
+                                        value=""
+                                        class="hidden peer"
+                                        required=""
+                                      />
+                                      <label
+                                        for="plan-daily"
+                                        class="inline-flex items-center justify-between w-[12vw] p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                      >
+                                        Rp 10.000 / hari
+                                      </label>
+                                    </div>
+
+                                    <div>
+                                      <input
+                                        type="checkbox"
+                                        id="plan-weekly"
+                                        value=""
+                                        class="hidden peer"
+                                      />
+                                      <label
+                                        for="plan-weekly"
+                                        class="inline-flex items-center justify-between w-[12vw] p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                      >
+                                        Rp 50.000 / minggu
+                                      </label>
+                                    </div>
+
+                                    <div>
+                                      <input
+                                        type="checkbox"
+                                        id="plan-monthly"
+                                        value=""
+                                        class="hidden peer"
+                                      />
+                                      <label
+                                        for="plan-monthly"
+                                        class="inline-flex items-center justify-between w-[12vw] p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                      >
+                                        Rp 100.000 / bulan
+                                      </label>
+                                    </div>
+                                  </div>
+
+                                  <!--  -->
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Anggaran Anda -->
+                            <div
+                              class="col-span-2 border grid grid-cols-3 w-full"
+                            >
+                              <div class="col-start-1">
+                                <div
+                                  class="h-full flex justify-start items-center"
+                                >
+                                  <input
+                                    id="default-radio-11"
+                                    type="radio"
+                                    value=""
+                                    name="default-radio"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                  />
+                                  <label
+                                    for="default-radio-11"
+                                    class="ms-2 text-sm text-black"
+                                  >
+                                    Nominal</label
+                                  >
+                                </div>
+                              </div>
+                              <div
+                                class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                              >
+                                <div class="inline-flex">
+                                  <div
+                                    class="flex items-center text-xs font-medium text-black"
+                                  >
+                                    Rp
+                                  </div>
+
+                                  <input
+                                    id="minInput"
+                                    type="number"
+                                    class="block w-[11vw] ml-1.5 p-0 text-xs text-black bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                    style="
+                                      border: none;
+                                      border-bottom: 1px solid;
+                                    "
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--  -->
+                            <!--  -->
+
+                            <div
+                              class="w-full col-span-3 grid grid-cols-6 border border-red-500"
+                            >
+                              <div
+                                class="col-start-2 col-span-4 border border-red-500 flex justify-center items-center"
+                              >
+                                Pembayaran akan dipotong dari saldo kuota promo
+                              </div>
+                              <div
+                                class="col-start-2 col-span-4 border border-red-500 flex justify-center items-center"
+                              >
+                                <button
+                                  id="btnTerapkan"
+                                  type="button"
+                                  class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                                >
+                                  Proses
+                                </button>
+                              </div>
+                            </div>
+
+                            <!--  -->
+
+                            <!--  -->
                           </div>
 
-                          <div class="showKontenPromoClassifiedAds hidden">
-                            Classified Ads
+                          <div
+                            class="showKontenPromoClassifiedAds h-[76vh] overflow-y-auto hidden hide-scrollbar p-3 text-sm grid grid-cols-1 gap-y-5"
+                          >
+                            <!-- Radio -->
+                            <div
+                              class="col-span-3 border grid grid-cols-3 w-full"
+                            >
+                              <div
+                                class="col-span-3 border border-red-500 flex flex-col h-[5vh]"
+                              >
+                                <div>Jumlah karakter maksimal</div>
+                              </div>
+
+                              <div
+                                class="col-start-2 col-span-2 grid grid-cols-1 w-full -mt-15"
+                              >
+                                <div class="w-full h-full">
+                                  <!--  -->
+
+                                  <div class="grid grid-rows-3 gap-y-3">
+                                    <div>
+                                      <input
+                                        type="checkbox"
+                                        id="plan-daily"
+                                        value=""
+                                        class="hidden peer"
+                                        required=""
+                                      />
+
+                                      <div class="w-full flex flex-col"></div>
+                                      <label
+                                        for="plan-daily"
+                                        class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                      >
+                                        <div class="mb-1.5">70 karakter</div>
+                                        <div>Rp 10.000 / hari</div>
+                                      </label>
+                                    </div>
+
+                                    <div>
+                                      <input
+                                        type="checkbox"
+                                        id="plan-daily"
+                                        value=""
+                                        class="hidden peer"
+                                        required=""
+                                      />
+
+                                      <div class="w-full flex flex-col"></div>
+                                      <label
+                                        for="plan-daily"
+                                        class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                      >
+                                        <div class="mb-1.5">100 karakter</div>
+                                        <div>Rp 100.000 / hari</div>
+                                      </label>
+                                    </div>
+
+                                    <div>
+                                      <input
+                                        type="checkbox"
+                                        id="plan-daily"
+                                        value=""
+                                        class="hidden peer"
+                                        required=""
+                                      />
+
+                                      <div class="w-full flex flex-col"></div>
+                                      <label
+                                        for="plan-daily"
+                                        class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                      >
+                                        <div class="mb-1.5">150 karakter</div>
+                                        <div>Rp 150.000 / hari</div>
+                                      </label>
+                                    </div>
+                                  </div>
+
+                                  <!--  -->
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--  -->
+                            <div
+                              class="col-span-2 border grid grid-cols-3 w-full"
+                            >
+                              <div class="col-start-1">
+                                <div
+                                  class="h-full flex justify-start items-start text-sm"
+                                >
+                                  Jumlah hari tayang
+                                </div>
+                              </div>
+                              <div
+                                class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                              >
+                                <div class="w-[12vw] h-full flex justify-end">
+                                  <select
+                                    id="jenis-surat"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-[6vw] h-[5vh]"
+                                  >
+                                    <option value="5">3 hari</option>
+                                    <option value="5">7 hari</option>
+                                    <option value="5">30 hari</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--  -->
+                            <div
+                              class="col-span-2 border grid grid-cols-3 w-full"
+                            >
+                              <div class="col-start-1">
+                                <div
+                                  class="h-full flex justify-start items-start text-sm"
+                                >
+                                  Jumlah pembayaran
+                                </div>
+                              </div>
+                              <div
+                                class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                              >
+                                <div class="inline-flex">
+                                  <div
+                                    class="flex items-center text-xs font-medium text-black"
+                                  >
+                                    Rp
+                                  </div>
+
+                                  <input
+                                    id="minInput"
+                                    type="number"
+                                    class="block w-[11vw] ml-1.5 p-0 text-xs text-black bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                    style="
+                                      border: none;
+                                      border-bottom: 1px solid;
+                                    "
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--  -->
+
+                            <div
+                              class="w-full col-span-3 grid grid-cols-6 border border-red-500"
+                            >
+                              <div
+                                class="col-start-2 col-span-4 border border-red-500 flex justify-center items-center"
+                              >
+                                Pembayaran akan dipotong dari saldo kuota promo
+                              </div>
+                              <div
+                                class="col-start-2 col-span-4 border border-red-500 flex justify-center items-center"
+                              >
+                                <button
+                                  id="btnTerapkan"
+                                  type="button"
+                                  class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                                >
+                                  Proses
+                                </button>
+                              </div>
+                            </div>
+
+                            <!--  -->
+
+                            <!--  -->
                           </div>
 
                           <!--  -->
@@ -48997,7 +49419,10 @@
                                             </div>
                                           </div>
                                           <!--  -->
-                                          <div class="w-full flex items-center">
+                                          <div
+                                            onclick="promoListingSundulAds()"
+                                            class="w-full flex items-center"
+                                          >
                                             <!--  -->
                                             <div
                                               class="inline-flex items-center cursor-pointer px-3 py-2 w-32 hover:px-3 hover:w-32 hover:bg-slate-100 hover:rounded-lg"
@@ -49587,7 +50012,7 @@
       // Define Chart.js default settings
       Chart.defaults.font.family = '"Inter", sans-serif';
       Chart.defaults.font.weight = "500";
-      Chart.defaults.color = "rgb(148, 163, 184)";
+      Chart.defaults.color = "black";
       Chart.defaults.scale.grid.color = "rgb(241, 245, 249)";
       Chart.defaults.plugins.tooltip.titleColor = "rgb(30, 41, 59)";
       Chart.defaults.plugins.tooltip.bodyColor = "rgb(30, 41, 59)";
@@ -49678,10 +50103,17 @@
           },
         ],
         options: {
-          layout: {
-            padding: 1,
-          },
           scales: {
+            x: {
+              display: false, // Menyembunyikan seluruh sumbu X termasuk tanggal
+              grid: {
+                display: false, // Opsional, karena menyembunyikan seluruh sumbu akan menyembunyikan grid juga
+              },
+              ticks: {
+                display: false, // Opsional, sama seperti di atas
+              },
+            },
+            // Konfigurasi untuk sumbu Y tetap sama
             y: {
               beginAtZero: true,
               position: "right",
@@ -49692,32 +50124,15 @@
                 callback: (value) => formatThousands(value),
               },
             },
-            x: {
-              type: "time",
-              time: {
-                parser: "MM-DD-YYYY",
-                unit: "month",
-                displayFormats: {
-                  month: "MMM YY",
-                },
-              },
-              grid: {
-                display: false,
-                drawBorder: false,
-              },
-              ticks: {
-                autoSkipPadding: 48,
-                maxRotation: 0,
-              },
-            },
           },
+          // Pastikan konfigurasi lainnya tetap tidak berubah
           plugins: {
             legend: {
               display: false,
             },
             tooltip: {
               callbacks: {
-                title: () => false, // Disable tooltip title
+                title: () => false,
                 label: (context) => formatThousands(context.parsed.y),
               },
             },
