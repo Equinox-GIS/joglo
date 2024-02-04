@@ -1493,28 +1493,34 @@ window.showCardAgent = function (element) {
 
 // Tombol Menu Kembali Promo, tab Listing
 window.btnBackPromoListing = function (element) {
+  Array.from(document.getElementsByClassName("showKontenPromoAgen")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
+  Array.from(
+    document.getElementsByClassName("showKontenPromoClassifiedAds")
+  ).forEach((elem) => elem.classList.add("hidden"));
 
-    Array.from(document.getElementsByClassName("showKontenPromoAgen")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenPromoSundulAds")
+  ).forEach((elem) => elem.classList.add("hidden"));
 
-        Array.from(document.getElementsByClassName("showKontenPromoClassifiedAds")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("promo_listing_back")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
+  Array.from(document.getElementsByClassName("hideKontenPromoAgen")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-        Array.from(document.getElementsByClassName("promo_listing_back")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  // Reset judul tab menu listing ke default
+  let judulTabPromoListing = document.querySelectorAll(".judulTabPromoListing");
+  judulTabPromoListing.forEach(function (element) {
+    element.textContent = "";
+  });
 
-
-        Array.from(document.getElementsByClassName("hideKontenPromoAgen")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
+  //
 };
-
 
 // TambahStories
 // let lastClickedTambahStories;
@@ -1696,7 +1702,6 @@ window.showCardInfoDetail = function (param) {
       element.classList.remove("hidden");
     });
   }
-
 
   switch (activeTab) {
     case "1":
@@ -3415,24 +3420,41 @@ document.querySelectorAll(".hover-promo-listing").forEach((item) => {
 });
 
 // Promo Top Ad
-function tabMenuListingShowTopAds() {
-  let judulTopAd = document.querySelectorAll(".");
+function judultabMenuListingShowTopAds() {
+  let judulTopAd = document.querySelectorAll(".judulTabPromoListing");
   judulTopAd.forEach(function (element) {
-    element.textContent = "Top Ads";
+    element.textContent = "- Top Ads";
   });
 }
 
-  function BackTabPromoListing() {
-    // remove hidden
-    var BtnBackStories = document.querySelectorAll(".promo_listing_back");
-    BtnBackStories.forEach(function (element) {
-      element.classList.remove("hidden");
-    });
-  }
+// Classified Ads
+function judultabMenuListingShowClassifiedAds() {
+  let judulClassifiedAds = document.querySelectorAll(".judulTabPromoListing");
+  judulClassifiedAds.forEach(function (element) {
+    element.textContent = "- Classified Ads";
+  });
+}
+
+// Sundul
+function judultabMenuListingShowSundulAds() {
+  let judulSundulAds = document.querySelectorAll(".judulTabPromoListing");
+  judulSundulAds.forEach(function (element) {
+    element.textContent = "- Sundul Ads";
+  });
+}
+
+function BackTabPromoListing() {
+  // remove hidden
+  var BtnBackStories = document.querySelectorAll(".promo_listing_back");
+  BtnBackStories.forEach(function (element) {
+    element.classList.remove("hidden");
+  });
+}
 
 window.promoListingAgen = function () {
+  judultabMenuListingShowTopAds();
 
-BackTabPromoListing();
+  BackTabPromoListing();
 
   showElement(".showKontenPromoAgen");
   hideElement(".hideKontenPromoAgen");
@@ -3447,16 +3469,18 @@ function tabMenuListingShowClassifiedAds() {
 }
 
 window.promoListingClassifiedAds = function () {
-BackTabPromoListing();
+  judultabMenuListingShowClassifiedAds();
+  BackTabPromoListing();
   showElement(".showKontenPromoClassifiedAds");
   hideElement(".hideKontenPromoClassifiedAds");
 };
 
-
+// Sundul
 window.promoListingSundulAds = function () {
-BackTabPromoListing();
-  showElement(".showKontenPromoClassifiedAds");
-  hideElement(".hideKontenPromoClassifiedAds");
+  judultabMenuListingShowSundulAds();
+  BackTabPromoListing();
+  showElement(".showKontenPromoSundulAds");
+  hideElement(".hideKontenPromoAgen");
 };
 
 document.addEventListener("DOMContentLoaded", function () {
