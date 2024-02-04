@@ -3195,6 +3195,19 @@ window.toggleTerjualTersedia = function () {
   }
 };
 
+window.toggleAgenStatus = function () {
+  var checkBox = document.getElementById("toggleSwitchAgen");
+  var text = document.getElementById("toggleTextAgen");
+
+  if (checkBox.checked) {
+    text.textContent = "Agen";
+  } else {
+    text.textContent = "Bukan Agen";
+  }
+};
+
+
+
 window.ShowRegistrasi = function () {
   Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
     (elem) => elem.classList.add("hidden")
