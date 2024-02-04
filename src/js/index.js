@@ -3496,3 +3496,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100);
   });
 });
+
+
+// menu promo listing
+
+ window.checkOnlyThis = function (id) {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][name="plan-daily"]');
+    checkboxes.forEach((checkbox) => {
+      if (checkbox.id !== id) {
+        checkbox.checked = false;
+      }
+    });
+  }
