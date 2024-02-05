@@ -3521,3 +3521,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+
+  window.DetailProfilListing = function (element) {
+  event.stopPropagation();
+
+    Array.from(
+      document.getElementsByClassName("HideProfilListing")
+    ).forEach((elem) => elem.classList.add("hidden"));
+
+        Array.from(
+      document.getElementsByClassName("ShowProfilListing")
+    ).forEach((elem) => elem.classList.remove("hidden"));
+
+};
