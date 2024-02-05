@@ -3535,3 +3535,13 @@ document.addEventListener("DOMContentLoaded", function () {
     ).forEach((elem) => elem.classList.remove("hidden"));
 
 };
+
+window.profilListingAgen = function () {
+  console.log("oke")
+//   judultabMenuListingShowTopAds();
+
+//   BackTabPromoListing();
+
+//   showElement(".showKontenPromoAgen");
+//   hideElement(".hideKontenPromoAgen");
+};

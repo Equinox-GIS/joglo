@@ -1701,12 +1701,12 @@
                   class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
                 >
                   <div
-                    class="w-9 h-9 flex justify-center items-center relative"
+                    class="w-6 h-6 flex justify-center items-center relative"
                   >
                     <img
                       class="menu-icon"
                       data-menu="2"
-                      src="./src/images/megaphone.png"
+                      src="./src/images/trend.png"
                       alt=""
                     />
                   </div>
@@ -3265,21 +3265,9 @@
                             style="user-select: none"
                           >
                             <div
-                              class="w-full text-gray-500 text-xs flex justify-between border border-red-500"
+                              class="w-full text-gray-500 text-xs flex justify-between"
                             >
-                              <div class="inline-flex">
-                                <img
-                                  class="w-4 h-4"
-                                  src="/src/images/show.png"
-                                  alt=""
-                                />
-
-                                <div
-                                  class="ml-1 text-xs text-black flex items-center"
-                                >
-                                  325
-                                </div>
-                              </div>
+                              <div class="inline-flex"></div>
                               <div>ID 78AC66</div>
                             </div>
                             <div class="flex flex-row justify-between -mt-1">
@@ -31567,26 +31555,14 @@
                           class="w-full h-[67.5vh] grid grid-cols-[271px,1fr] gap-2 mt-5"
                         >
                           <div class="flex flex-col">
-                            <div class="bg-white rounded-lg shadow-xl h-[43vh]">
+                            <div
+                              class="bg-white rounded-lg shadow-xl h-[42.5vh]"
+                            >
                               <div class="">
                                 <!--  -->
                                 <div
                                   class="grid grid-cols-[90px,1fr] h-full w-full mx-auto mt-2 mb-1"
                                 >
-                                  <div
-                                    class="col-span-2 w-full flex justify-end"
-                                  >
-                                    <div
-                                      onclick="DetailProfilListing()"
-                                      class="mr-3"
-                                    >
-                                      <img
-                                        class="w-4 h-4 object-contain"
-                                        src="./src/images/three_dot.png"
-                                      />
-                                    </div>
-                                  </div>
-
                                   <div
                                     class="w-full h-full flex flex-col justify-center items-center"
                                   >
@@ -31700,7 +31676,33 @@
                                     </div>
                                   </div>
 
-                                  <div class="mt-3">
+                                  <div class="inline-flex mt-1 hidden">
+                                    <div class="inline-flex items-center">
+                                      <img
+                                        class="w-5 h-5"
+                                        src="/src/images/show.png"
+                                        alt=""
+                                      />
+
+                                      <div
+                                        class="ml-1 text-xs text-black flex items-center"
+                                      >
+                                        25
+                                      </div>
+                                    </div>
+
+                                    <div
+                                      onclick="DetailProfilListing()"
+                                      class="ml-2"
+                                    >
+                                      <img
+                                        class="w-7 h-7 object-contain"
+                                        src="./src/images/megaphone.png"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="mt-2">
                                     <div class="text-sm text-gray-500">
                                       Kuningan, Jakarta Selatan
                                     </div>
@@ -31739,7 +31741,7 @@
                                     <button
                                       onclick="showPengaturan(this, event)"
                                       type="button"
-                                      class="h-4 p-3 text-xs font-medium text-center inline-flex items-center text-white bg-[#0394F7] hover:bg-[#1877F2] rounded-md mr-4"
+                                      class="h-4 p-3 text-xs font-medium text-center inline-flex items-center text-white bg-[#0394F7] hover:bg-[#1877F2] rounded-md"
                                     >
                                       Edit Profil
                                     </button>
@@ -31748,15 +31750,24 @@
                                       data-pesan="Mochtar Riady"
                                       onclick="showMessage(this)"
                                       type="button"
+                                      class="h-4 p-3 text-xs font-medium text-center inline-flex items-center text-white bg-[#0394F7] hover:bg-[#1877F2] rounded-md mx-2"
+                                    >
+                                      Kirim Pesann
+                                    </button>
+
+                                    <button
+                                      data-pesan="Mochtar Riady"
+                                      onclick="showMessage(this)"
+                                      type="button"
                                       class="h-4 p-3 text-xs font-medium text-center inline-flex items-center text-white bg-[#0394F7] hover:bg-[#1877F2] rounded-md"
                                     >
-                                      Kirim Pesannn
+                                      Iklan
                                     </button>
 
                                     <!--  -->
                                   </div>
 
-                                  <div class="w-full flex justify-between mt-2">
+                                  <div class="w-full flex justify-center mt-2">
                                     <div>
                                       <button
                                         type="button"
@@ -31765,12 +31776,12 @@
                                         Upgrade Membership
                                       </button>
                                     </div>
+                                  </div>
 
-                                    <div
-                                      class="inline-flex items-center mt-1.5"
-                                    >
+                                  <div class="w-full flex justify-start mt-2">
+                                    <div class="inline-flex items-center">
                                       <img
-                                        class="w-4 h-4"
+                                        class="w-5 h-5"
                                         src="/src/images/show.png"
                                         alt=""
                                       />
@@ -31953,7 +31964,7 @@
                             <!--  -->
                             <div
                               class="w-full flex items-center"
-                              onclick="promoListingAgen()"
+                              onclick="profilListingAgen()"
                             >
                               <!--  -->
                               <div
@@ -32403,17 +32414,15 @@
                                           </div>
                                           <!--  -->
                                           <div
-                                            class="w-full flex items-end justify-end mt-5 -mt-1 mr-2"
+                                            class="w-full flex items-end justify-end -mt-1 mr-2"
                                           >
-                                            <div
-                                              onclick="DetailProfilListing()"
-                                              class="mr-1"
+                                            <button
+                                              onclick="DetailProfilListing(this)"
+                                              type="button"
+                                              class="h-4 p-3 text-xs font-medium text-center inline-flex items-center text-white bg-[#0394F7] hover:bg-[#1877F2] rounded-md"
                                             >
-                                              <img
-                                                class="w-4 h-4 object-contain"
-                                                src="./src/images/three_dot.png"
-                                              />
-                                            </div>
+                                              Iklan
+                                            </button>
                                           </div>
                                           <!--  -->
                                         </div>
@@ -36608,80 +36617,91 @@
                         </div>
 
                         <!-- Card Judul -->
-                        <div class="grid grid-cols-2 gap-3">
-                          <div
-                            class="grid grid-row-3 pb-5 px-5 pt-4 gap-4 mode-card-kedua bg-white rounded-lg shadow w-full"
-                          >
-                            <div class="w-full grid grid-cols-2">
-                              <div class="w-full flex flex-col">
-                                <div
-                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                                >
-                                  7
+                        <div class="flex flex-row">
+                          <div class="basis-1/2 flex flex-col">
+                            <div
+                              class="h-[20vh] bg-white rounded-lg shadow w-full p-3"
+                            >
+                              <div class="w-full flex flex-row mb-3">
+                                <div class="w-full flex flex-col">
+                                  <div
+                                    class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                  >
+                                    7
+                                  </div>
+                                  <div class="w-full flex text-sm ml-1">
+                                    Promo Aktiff
+                                  </div>
                                 </div>
-                                <div class="w-full flex text-sm ml-1">
-                                  Promo Aktiff
+                                <div class="w-full flex flex-col">
+                                  <div
+                                    class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                  >
+                                    13
+                                  </div>
+                                  <div class="w-full flex text-sm ml-1">
+                                    Total Promo
+                                  </div>
                                 </div>
                               </div>
-                              <div class="w-full flex flex-col">
-                                <div
-                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                                >
-                                  13
+                              <!--  -->
+                              <div class="w-full flex flex-row">
+                                <div class="w-full flex flex-col">
+                                  <div
+                                    class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                  >
+                                    200
+                                  </div>
+                                  <div class="w-full flex text-sm ml-1">
+                                    Klik Bulan Ini
+                                  </div>
                                 </div>
-                                <div class="w-full flex text-sm ml-1">
-                                  Total Promo
+                                <div class="w-full flex flex-col">
+                                  <div
+                                    class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                  >
+                                    3000
+                                  </div>
+                                  <div class="w-full flex text-sm ml-1">
+                                    Total Klik
+                                  </div>
                                 </div>
                               </div>
                             </div>
 
-                            <div class="w-full grid grid-cols-2">
-                              <div class="w-full flex flex-col">
-                                <div
-                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                                >
-                                  200
+                            <div
+                              class="h-[27vh] bg-white rounded-lg shadow w-full mt-2 p-3 border border-red-500"
+                            >
+                              <div class="w-full flex flex-row mb-3">
+                                <div class="w-full flex flex-col">
+                                  <div
+                                    class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                  >
+                                    20 Jam
+                                  </div>
+                                  <div class="w-full flex text-sm ml-1">
+                                    Stories
+                                  </div>
                                 </div>
-                                <div class="w-full flex text-sm ml-1">
-                                  Klik Bulan Ini
+                                <div class="w-full flex flex-col">
+                                  <div
+                                    class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                  >
+                                    13
+                                  </div>
+                                  <div class="w-full flex text-sm ml-1">
+                                    Total Promo
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="w-full flex flex-col">
-                                <div
-                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                                >
-                                  3000
-                                </div>
-                                <div class="w-full flex text-sm ml-1">
-                                  Total Klik
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="w-full grid grid-cols-2">
-                              <div class="w-full flex flex-col">
-                                <div
-                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                                >
-                                  20 Jam
-                                </div>
-                                <div class="w-full flex text-sm ml-1">
-                                  Stories
-                                </div>
-                              </div>
-                              <div class="w-full flex flex-col">
-                                <div
-                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                                >
-                                  x
-                                </div>
-                                <div class="w-full flex text-sm ml-1">x</div>
                               </div>
                             </div>
 
                             <!--  -->
                           </div>
-                          <div class="w-full bg-white rounded-lg shadow px-3">
+
+                          <div
+                            class="basis-1/2 bg-white rounded-lg shadow px-3 h-[48vh] ml-2"
+                          >
                             <canvas id="pendapatanChart"></canvas>
                           </div>
                         </div>
