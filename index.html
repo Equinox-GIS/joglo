@@ -41555,70 +41555,81 @@
                         </div>
 
                         <!-- Card Judul -->
-                        <div
-                          class="grid grid-row-3 pb-5 px-5 pt-4 gap-4 mode-card-kedua bg-white cursor-pointer rounded-lg shadow w-full"
-                        >
-                          <div class="w-full grid grid-cols-3">
-                            <div class="w-full flex flex-col">
-                              <div
-                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                              >
-                                7
+                        <div class="grid grid-cols-2 gap-3">
+                          <div
+                            class="grid grid-row-3 pb-5 px-5 pt-4 gap-4 mode-card-kedua bg-white rounded-lg shadow w-full"
+                          >
+                            <div class="w-full grid grid-cols-2">
+                              <div class="w-full flex flex-col">
+                                <div
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                >
+                                  7
+                                </div>
+                                <div class="w-full flex text-sm ml-1">
+                                  Promo Aktiff
+                                </div>
                               </div>
-                              <div class="w-full flex text-sm ml-1">
-                                Promo Aktiff
-                              </div>
-                            </div>
-                            <div class="w-full flex flex-col">
-                              <div
-                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                              >
-                                13
-                              </div>
-                              <div class="w-full flex text-sm ml-1">
-                                Total Promo
-                              </div>
-                            </div>
-                            <div class="w-full flex flex-col">
-                              <div
-                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                              >
-                                200
-                              </div>
-                              <div class="w-full flex text-sm ml-1">
-                                Klik Bulan Ini
+                              <div class="w-full flex flex-col">
+                                <div
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                >
+                                  13
+                                </div>
+                                <div class="w-full flex text-sm ml-1">
+                                  Total Promo
+                                </div>
                               </div>
                             </div>
+
+                            <div class="w-full grid grid-cols-2">
+                              <div class="w-full flex flex-col">
+                                <div
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                >
+                                  200
+                                </div>
+                                <div class="w-full flex text-sm ml-1">
+                                  Klik Bulan Ini
+                                </div>
+                              </div>
+                              <div class="w-full flex flex-col">
+                                <div
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                >
+                                  3000
+                                </div>
+                                <div class="w-full flex text-sm ml-1">
+                                  Total Klik
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="w-full grid grid-cols-2">
+                              <div class="w-full flex flex-col">
+                                <div
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                >
+                                  20 Jam
+                                </div>
+                                <div class="w-full flex text-sm ml-1">
+                                  Stories
+                                </div>
+                              </div>
+                              <div class="w-full flex flex-col">
+                                <div
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                >
+                                  x
+                                </div>
+                                <div class="w-full flex text-sm ml-1">x</div>
+                              </div>
+                            </div>
+
+                            <!--  -->
                           </div>
-                          <div class="w-full grid grid-cols-3">
-                            <div class="w-full flex flex-col">
-                              <div
-                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                              >
-                                3000
-                              </div>
-                              <div class="w-full flex text-sm ml-1">
-                                Total Klik
-                              </div>
-                            </div>
-                            <div class="w-full flex flex-col">
-                              <div
-                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                              >
-                                20 Jam
-                              </div>
-                              <div class="w-full flex text-sm ml-1">
-                                Stories
-                              </div>
-                            </div>
-                            <div class="w-full flex flex-col">
-                              <div
-                                class="w-full flex ml-1 font-sf_pro_bold text-lg"
-                              >
-                                x
-                              </div>
-                              <div class="w-full flex text-sm ml-1">x</div>
-                            </div>
+                          <div class="w-full bg-white rounded-lg shadow px-3">
+                            <canvas id="pendapatanChart"></canvas>
                           </div>
                         </div>
                       </div>
@@ -47221,9 +47232,99 @@
                       </div>
                       <div
                         id="menu-beli"
-                        class="menu-content w-full h-[71.5vh] py-3 hidden"
+                        class="w-full h-[76.5vh] py-7 border border-red-500"
                       >
-                        aa
+                        <div class="flex flex-row">
+                          <div class="basis-3/6 flex flex-col">
+                            <div
+                              class="border border-red-500 inline-flex items-center justify-between mb-5"
+                            >
+                              <div class="text-black font-semibold">Kuota</div>
+                              <div class>
+                                <input
+                                  type="radio"
+                                  name="plan"
+                                  id="plan-daily-70"
+                                  value="daily-70"
+                                  class="hidden peer"
+                                  required=""
+                                />
+                                <label
+                                  for="plan-daily-70"
+                                  class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                >
+                                  <div class="font-semibold">170,000</div>
+                                </label>
+                              </div>
+                            </div>
+
+                            <div
+                              class="border border-red-500 inline-flex items-center justify-between mb-5"
+                            >
+                              <div class="text-black font-semibold">
+                                Beli Kuota
+                              </div>
+                              <div class>
+                                <input
+                                  type="radio"
+                                  name="plan"
+                                  id="plan-daily-70"
+                                  value="daily-70"
+                                  class="hidden peer"
+                                  required=""
+                                />
+                                <label
+                                  for="plan-daily-70"
+                                  class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                >
+                                  <div class="font-semibold">1,000,000</div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="w-full flex flex-row border border-blue-500 mb-5"
+                        >
+                          <div class="basis-2/12 font-semibold">Pembayaran</div>
+                          <div class="basis-5/12 flex flex-col ml-10">
+                            <div
+                              class="max-w-lg mx-auto my-0 p-6 bg-white shadow-lg rounded-lg"
+                            >
+                              <!-- BRI -->
+                              <div
+                                class="flex items-center mb-4 p-4 bg-blue-700 shadow rounded-lg"
+                              >
+                                <div class="flex-grow">
+                                  <p class="font-semibold text-white">
+                                    BANK BCA
+                                  </p>
+                                  <p class="text-white">1234 5678 9101 1121</p>
+                                  <p class="text-white text-sm">
+                                    Atas Nama Soaraja Properti
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div
+                                class="flex items-center mb-4 p-4 bg-orange-400 shadow rounded-lg"
+                              >
+                                <div class="flex-grow">
+                                  <p class="font-semibold text-white">
+                                    BANK BNI
+                                  </p>
+                                  <p class="text-white">1234 5678 9101 1121</p>
+                                  <p class="text-white text-sm">
+                                    Atas Nama Soaraja Properti
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--  -->
                       </div>
                     </div>
                     <!--  -->
@@ -51205,6 +51306,60 @@
           const target = defaultActiveMenu.getAttribute("data-target");
           document.querySelector(target).classList.remove("hidden");
         }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById("pendapatanChart").getContext("2d");
+        let gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "rgba(255, 99, 132, 0.5)");
+        gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+
+        const salesChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: ["Januari", "Februari", "Maret", "April", "Mei"],
+            datasets: [
+              {
+                data: [12, 19, 3, 5, 2, 3], // Contoh data penjualan rumah
+                backgroundColor: gradient,
+                borderColor: "rgba(255, 99, 132, 1)",
+                borderWidth: 3,
+                pointBackgroundColor: "rgba(255, 99, 132, 1)",
+                pointBorderColor: "#ffffff",
+                pointHoverBackgroundColor: "#ffffff",
+                pointHoverBorderColor: "rgba(255, 99, 132, 1)",
+                tension: 0.4,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false, // Menyembunyikan label dataset
+              },
+              title: {
+                display: true,
+                text: "Grafik Penjualan Rumah Per Bulan",
+                font: {
+                  size: 20,
+                },
+              },
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  callback: function (value, index, values) {
+                    return value + " unit"; // Menambahkan unit penjualan
+                  },
+                },
+              },
+            },
+          },
+        });
       });
     </script>
   </body>
