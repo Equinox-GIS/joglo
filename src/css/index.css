@@ -772,7 +772,7 @@
 .active_btn_search {
   @apply bg-blue-500 text-white;
 }
-
+/**/
 .active_btn_peta {
   @apply bg-[#0394F7] text-white;
 }
