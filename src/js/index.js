@@ -321,6 +321,36 @@ window.addEventListener(
   )
 );
 
+// Ads Reach
+const dropdownButtonDisukai2 = document.getElementById(
+  "dropdown-ads-reach-button"
+);
+const dropdownMenuDisukai2 = document.getElementById("dropdown-ads-reach-menu");
+const arrowIconDisukai2 = document.getElementById(
+  "dropdown-ads-reach-arrow-icon"
+);
+const selectedItemDisukai2 = document.getElementById(
+  "dropdown-ads-reach-selected-item"
+);
+let isDropdownDisukaiOpen2 = false;
+
+dropdownButtonDisukai2.addEventListener("click", () => {
+  isDropdownDisukaiOpen2 = toggleDropdown(
+    dropdownMenuDisukai2,
+    arrowIconDisukai2,
+    isDropdownDisukaiOpen2
+  );
+});
+dropdownMenuDisukai2.addEventListener(
+  "click",
+  selectDropdownItem(
+    selectedItemDisukai2,
+    dropdownMenuDisukai2,
+    arrowIconDisukai2,
+    isDropdownDisukaiOpen2
+  )
+);
+
 // ------------End Drodpdown------------------
 
 // Fungsi Play dan Pause Video Menu Beranda, Favorit
@@ -3206,8 +3236,6 @@ window.toggleAgenStatus = function () {
   }
 };
 
-
-
 window.ShowRegistrasi = function () {
   Array.from(document.getElementsByClassName("hidden-form-registrasi")).forEach(
     (elem) => elem.classList.add("hidden")
@@ -3510,171 +3538,156 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // menu promo listing
 
- window.checkOnlyThis = function (id) {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"][name="plan-daily"]');
-    checkboxes.forEach((checkbox) => {
-      if (checkbox.id !== id) {
-        checkbox.checked = false;
-      }
-    });
-  }
-
-
-  window.DetailProfilListing = function (element) {
-  event.stopPropagation();
-
-    Array.from(
-      document.getElementsByClassName("HideProfilListing")
-    ).forEach((elem) => elem.classList.add("hidden"));
-
-        Array.from(
-      document.getElementsByClassName("ShowProfilListing")
-    ).forEach((elem) => elem.classList.remove("hidden"));
-
+window.checkOnlyThis = function (id) {
+  const checkboxes = document.querySelectorAll(
+    'input[type="checkbox"][name="plan-daily"]'
+  );
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.id !== id) {
+      checkbox.checked = false;
+    }
+  });
 };
 
-  window.DetailProfilBiodata = function (element) {
+window.DetailProfilListing = function (element) {
   event.stopPropagation();
 
-    Array.from(
-      document.getElementsByClassName("HideProfilBiodata")
-    ).forEach((elem) => elem.classList.add("hidden"));
+  Array.from(document.getElementsByClassName("HideProfilListing")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-        Array.from(
-      document.getElementsByClassName("ShowProfilBiodata")
-    ).forEach((elem) => elem.classList.remove("hidden"));
-
+  Array.from(document.getElementsByClassName("ShowProfilListing")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 };
 
+window.DetailProfilBiodata = function (element) {
+  event.stopPropagation();
+
+  Array.from(document.getElementsByClassName("HideProfilBiodata")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
+
+  Array.from(document.getElementsByClassName("ShowProfilBiodata")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
+};
 
 window.profilListingAgen = function () {
   // BackTabPromoListing();
-   Array.from(document.getElementsByClassName("showKontenProfilListingTopAds")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenProfilListingTopAds")
+  ).forEach((elem) => elem.classList.remove("hidden"));
 
-       Array.from(document.getElementsByClassName("showKontenProfilListingClassifiedAds")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenProfilListingClassifiedAds")
+  ).forEach((elem) => elem.classList.add("hidden"));
 
-           Array.from(document.getElementsByClassName("showKontenProfilListingSundul")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenProfilListingSundul")
+  ).forEach((elem) => elem.classList.add("hidden"));
 
-    Array.from(document.getElementsByClassName("hideKontenPromoAgen")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("hideKontenPromoAgen")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-     Array.from(document.getElementsByClassName("ShowProfilListing")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("ShowProfilListing")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 };
-
 
 window.profilListingClassified = function () {
   // BackTabPromoListing();
-   Array.from(document.getElementsByClassName("showKontenProfilListingTopAds")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenProfilListingTopAds")
+  ).forEach((elem) => elem.classList.add("hidden"));
 
-       Array.from(document.getElementsByClassName("showKontenProfilListingClassifiedAds")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenProfilListingClassifiedAds")
+  ).forEach((elem) => elem.classList.remove("hidden"));
 
-           Array.from(document.getElementsByClassName("showKontenProfilListingSundul")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenProfilListingSundul")
+  ).forEach((elem) => elem.classList.add("hidden"));
 
-    Array.from(document.getElementsByClassName("hideKontenPromoAgen")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("hideKontenPromoAgen")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-     Array.from(document.getElementsByClassName("ShowProfilListing")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("ShowProfilListing")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 };
 
 window.profilListingSundul = function () {
   // BackTabPromoListing();
-   Array.from(document.getElementsByClassName("showKontenProfilListingTopAds")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenProfilListingTopAds")
+  ).forEach((elem) => elem.classList.add("hidden"));
 
-       Array.from(document.getElementsByClassName("showKontenProfilListingClassifiedAds")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenProfilListingClassifiedAds")
+  ).forEach((elem) => elem.classList.add("hidden"));
 
-           Array.from(document.getElementsByClassName("showKontenProfilListingSundul")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenProfilListingSundul")
+  ).forEach((elem) => elem.classList.remove("hidden"));
 
-    Array.from(document.getElementsByClassName("hideKontenPromoAgen")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("hideKontenPromoAgen")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-     Array.from(document.getElementsByClassName("ShowProfilListing")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("ShowProfilListing")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 };
-
-
 
 window.biodataListingAgen = function () {
   // BackTabPromoListing();
-   Array.from(document.getElementsByClassName("ShowProfilBiodata")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("ShowProfilBiodata")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
+  Array.from(
+    document.getElementsByClassName("showKontenBiodataListingClassifiedAds")
+  ).forEach((elem) => elem.classList.add("hidden"));
 
-   Array.from(document.getElementsByClassName("showKontenBiodataListingClassifiedAds")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
-
-
-       Array.from(document.getElementsByClassName("showKontenBiodataListingTopAds")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenBiodataListingTopAds")
+  ).forEach((elem) => elem.classList.remove("hidden"));
 };
 
 window.biodataListingAgenTopAds = function () {
   // BackTabPromoListing();
-   Array.from(document.getElementsByClassName("ShowProfilBiodata")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("ShowProfilBiodata")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
+  Array.from(
+    document.getElementsByClassName("showKontenBiodataListingClassifiedAds")
+  ).forEach((elem) => elem.classList.add("hidden"));
 
-   Array.from(document.getElementsByClassName("showKontenBiodataListingClassifiedAds")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
-
-
-       Array.from(document.getElementsByClassName("showKontenBiodataListingTopAds")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenBiodataListingTopAds")
+  ).forEach((elem) => elem.classList.remove("hidden"));
 };
-
 
 window.biodataListingAgenClassifiedAds = function () {
   // BackTabPromoListing();
-   Array.from(document.getElementsByClassName("ShowProfilBiodata")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("ShowProfilBiodata")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
+  Array.from(
+    document.getElementsByClassName("showKontenBiodataListingClassifiedAds")
+  ).forEach((elem) => elem.classList.remove("hidden"));
 
-   Array.from(document.getElementsByClassName("showKontenBiodataListingClassifiedAds")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
-
-       Array.from(document.getElementsByClassName("showKontenBiodataListingTopAds")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(
+    document.getElementsByClassName("showKontenBiodataListingTopAds")
+  ).forEach((elem) => elem.classList.add("hidden"));
 };
-
-
 
 // window.biodataListingClassified = function () {
 //   // BackTabPromoListing();
@@ -3698,5 +3711,3 @@ window.biodataListingAgenClassifiedAds = function () {
 //       (elem) => elem.classList.add("hidden")
 //     );
 // };
-
-
