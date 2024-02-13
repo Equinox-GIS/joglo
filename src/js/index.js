@@ -903,6 +903,26 @@ function getSliderDefaultOptions() {
   };
 }
 
+function getSliderAdsReach() {
+  return {
+    dots: true,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();" style="margin-left: -9px;">
+                  <div class="img-wrapper-ads">
+                    <img style="margin-right: 1px;" class="custom-img-slick-ads" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();" style="margin-right: -10px;">
+                  <div class="img-wrapper-ads">
+                    <img style="margin-left: 1px;" class="custom-img-slick-ads" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+  };
+}
+
 function getSliderStoryGaleri() {
   return {
     slidesToShow: 9,
@@ -2356,6 +2376,9 @@ document.addEventListener("DOMContentLoaded", function () {
         teksBerjalan();
         break;
       case "MenuEmpatTab":
+        cardModePesan();
+        cardModePesanDua();
+
         initSlickPasang();
 
         closeTab();
@@ -3132,13 +3155,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   tabButtonTiga.addEventListener("click", function () {
-    setTimeout(function () {
-      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
-        $(".slider-card-mode-ketiga").slick("setPosition");
-      } else {
-        initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
-      }
-    }, 100);
+    cardModePesanDua();
+    // setTimeout(function () {
+    //   if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+    //     $(".slider-card-mode-ketiga").slick("setPosition");
+    //   } else {
+    //     initSlick(".slider-card-mode-ketiga", getSliderAdsReach());
+    //   }
+    // }, 100);
   });
 
   // tabButton.addEventListener("click", function () {
@@ -3182,6 +3206,16 @@ function cardModePesan() {
       $(".slider-card-mode-pesan").slick("setPosition");
     } else {
       initSlick(".slider-card-mode-pesan", getSliderDefaultOptionsPesan());
+    }
+  }, 100);
+}
+
+function cardModePesanDua() {
+  setTimeout(function () {
+    if ($(".slider-card-mode-pesan-dua").hasClass("slick-initialized")) {
+      $(".slider-card-mode-pesan-dua").slick("setPosition");
+    } else {
+      initSlick(".slider-card-mode-pesan-dua", getSliderAdsReach());
     }
   }, 100);
 }

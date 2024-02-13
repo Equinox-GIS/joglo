@@ -596,12 +596,25 @@
   height: 1.4vh !important;
 }
 
+.custom-img-slick-ads {
+  width: 0.8vh !important;
+  height: 0.9vh !important;
+}
+
 .custom-img-slick-pesan {
   width: 1.2vh !important;
   height: 1.4vh !important;
 }
 
 .slick-prev {
+  left: -6px !important;
+}
+
+.slick-next-ads {
+  right: -5px !important;
+}
+
+.slick-prev-ads {
   left: -6px !important;
 }
 
@@ -618,6 +631,14 @@
 }
 
 .img-wrapper-pesan {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 3.5px;
+  background-color: rgb(241 245 249);
+  opacity: 0.9;
+}
+
+.img-wrapper-ads {
   display: inline-block;
   border-radius: 50%;
   padding: 3.5px;
