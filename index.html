@@ -2235,10 +2235,12 @@
 
                 <!--  Konten Card Info -->
                 <div
-                  class="h-[76vh] overflow-y-auto overflow-x-hidden hide-scrollbar story-galeri-off"
+                  class="h-[76vh] overflow-y-auto overflow-x-hidden hide-scrollbar story-galeri-off px-3"
                 >
                   <!--  -->
                   <!-- hrapan -->
+
+                  <!--  -->
 
                   <!--  -->
 
@@ -32402,71 +32404,248 @@
                         role="tabpanel"
                         aria-labelledby="detail-agenprofil-dua-tab"
                       >
-                        <div
-                          class="ShowProfilListing h-[60vh] border w-full flex items-center justify-center hidden"
-                        >
-                          <div class="flex flex-col justify-center text-black">
-                            <!--  -->
+ <div
+                          class="ShowProfilListing h-[70.5vh] w-full flex items-center justify-center hidden"
+                          >
+                          <!--  -->
+                          <div
+                            class="h-full w-full flex flex-row"
+                          >
                             <div
-                              class="w-full flex items-center"
-                              onclick="profilListingAgen()"
+                              class="basis-3/12 h-full border border-black flex justify-center items-start"
                             >
-                              <!--  -->
-                              <div
-                                class="inline-flex items-center cursor-pointer px-0 py-2 w-32"
-                              >
-                                <img
-                                  class="w-5 h-5"
-                                  src="/src/images/adpromo.png"
-                                />
+                              <div class="grid grid-rows-2 gap-y-5">
+                                <!--  -->
                                 <div
-                                  class="space-y-0.5 font-medium text-left ml-1 text-xs"
+                                  id="btn-konten-classified-ads"
+                                  class="w-full h-[5vh] flex justify-center items-center "
                                 >
-                                  <div>Top Ads199</div>
+                                  <div
+                                    class="text-gray-500 cursor-pointer text-sm"
+                                  >
+                                    Classified Ads
+                                  </div>
+                                </div>
+
+                                <div
+                                  id="btn-konten-top-ads"
+                                  class="w-full h-[5vh] flex justify-center items-center "
+                                >
+                                  <div
+                                    class="text-gray-500 cursor-pointer text-sm"
+                                  >
+                                    Top Ads
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                            <!--  -->
                             <div
-                              class="w-full flex items-center py-2"
-                              onclick="profilListingClassified()"
+                              class="basis-9/12 w-full flex flex-col justify-center"
                             >
-                              <!--  -->
+                              <!-- Classified Ads -->
                               <div
-                                class="inline-flex items-center cursor-pointer px-0 py-2 w-32"
+                                class="h-[76vh] overflow-y-auto hide-scrollbar px-3 text-sm grid grid-cols-1 gap-y-5 konten-classified-ads hidden"
                               >
-                                <img
-                                  class="w-5 h-5"
-                                  src="/src/images/sign.png"
-                                />
+                                <!-- Radio -->
                                 <div
-                                  class="space-y-0.5 font-medium text-left ml-1 text-xs"
+                                  class="col-span-3 grid grid-cols-3 w-full"
                                 >
-                                  <div>Classified Ads</div>
+                                  <div
+                                    class="col-span-3  flex flex-col h-[5vh]"
+                                  >
+                                    <div>Jumlah karakter maksimals</div>
+                                  </div>
+
+                                  <div
+                                    class="col-start-2 col-span-2 grid grid-cols-1 w-full -mt-15"
+                                  >
+                                    <div class="w-full h-full">
+                                      <!--  -->
+
+                                      <div class="grid grid-rows-3 gap-y-3">
+                                        <div>
+                                          <input
+                                            type="radio"
+                                            name="plan"
+                                            id="plan-daily-70"
+                                            value="daily-70"
+                                            class="hidden peer"
+                                            required=""
+                                          />
+                                          <label
+                                            for="plan-daily-70"
+                                            class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                          >
+                                            <div class="mb-1.5">
+                                              70 karakter
+                                            </div>
+                                            <div>Rp 10.000 / hari</div>
+                                          </label>
+                                        </div>
+
+                                        <div>
+                                          <input
+                                            type="radio"
+                                            name="plan"
+                                            id="plan-daily-100"
+                                            value="daily-100"
+                                            class="hidden peer"
+                                            required=""
+                                          />
+                                          <label
+                                            for="plan-daily-100"
+                                            class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                          >
+                                            <div class="mb-1.5">
+                                              100 karakter
+                                            </div>
+                                            <div>Rp 100.000 / hari</div>
+                                          </label>
+                                        </div>
+
+                                        <div>
+                                          <input
+                                            type="radio"
+                                            name="plan"
+                                            id="plan-daily-150"
+                                            value="daily-150"
+                                            class="hidden peer"
+                                            required=""
+                                          />
+                                          <label
+                                            for="plan-daily-150"
+                                            class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                          >
+                                            <div class="mb-1.5">
+                                              150 karakter
+                                            </div>
+                                            <div>Rp 150.000 / hari</div>
+                                          </label>
+                                        </div>
+                                      </div>
+
+                                      <!--  -->
+                                    </div>
+                                  </div>
                                 </div>
+                                <!--  -->
+
+                                <div class="col-span-2">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-sm mb-2"
+                                      for="deskripsi_postingan"
+                                    >
+                                      Teks Classified Ads
+                                    </label>
+                                    <textarea
+                                      name="deskripsi_postingan"
+                                      id="deskripsi_postingan"
+                                      class="block p-2.5 h-[14vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                                      required=""
+                                      rows="9"
+                                    ></textarea>
+                                  </div>
+                                </div>
+
+                                <!--  -->
+                                <div
+                                  class="col-span-2 border grid grid-cols-3 w-full"
+                                >
+                                  <div class="col-start-1">
+                                    <div
+                                      class="h-full flex justify-start items-start text-sm"
+                                    >
+                                      Jumlah hari tayang
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                                  >
+                                    <div
+                                      class="w-[12vw] h-full flex justify-end"
+                                    >
+                                      <select
+                                        id="jenis-surat"
+                                        class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-[6vw] h-[5vh]"
+                                      >
+                                        <option value="5">3 hari</option>
+                                        <option value="5">7 hari</option>
+                                        <option value="5">30 hari</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--  -->
+
+                                <!--  -->
+                                <div
+                                  class="col-span-2 border grid grid-cols-3 w-full"
+                                >
+                                  <div class="col-start-1">
+                                    <div
+                                      class="h-full flex justify-start items-start text-sm"
+                                    >
+                                      Jumlah pembayaran
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                                  >
+                                    <div class="inline-flex">
+                                      <div
+                                        class="flex items-center text-xs font-medium text-black"
+                                      >
+                                        Rp
+                                      </div>
+
+                                      <input
+                                        id="minInput"
+                                        type="number"
+                                        class="block w-[11vw] ml-1.5 p-0 text-xs text-black bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                        style="
+                                          border: none;
+                                          border-bottom: 1px solid;
+                                        "
+                                        required=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--  -->
+
+                                <div
+                                  class="w-full col-span-3 grid grid-cols-6 "
+                                >
+                                  <div
+                                    class="col-start-2 col-span-4  flex justify-center items-center"
+                                  >
+                                    Pembayaran akan dipotong dari saldo kuota
+                                    promo
+                                  </div>
+                                  <div
+                                    class="col-start-2 col-span-4  flex justify-center items-center"
+                                  >
+                                    <button
+                                      id="btnTerapkan"
+                                      type="button"
+                                      class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                                    >
+                                      Proses
+                                    </button>
+                                  </div>
+                                </div>
+
+                                <!--  -->
+
+                                <!--  -->
                               </div>
-                            </div>
-                            <!--  -->
-                            <div
-                              onclick="profilListingSundul()"
-                              class="w-full flex items-center"
-                            >
                               <!--  -->
-                              <div
-                                class="inline-flex items-center cursor-pointer px-0 py-2 w-32"
-                              >
-                                <img
-                                  class="w-5 h-5"
-                                  src="/src/images/map2.png"
-                                />
-                                <div
-                                  class="space-y-0.5 font-medium text-left ml-1 text-xs"
-                                >
-                                  <div>Pin Up</div>
-                                </div>
-                              </div>
                             </div>
                           </div>
+
+                          <!--  -->
                         </div>
                         <!--  -->
                         <div class="h-full flex flex-col HideProfilListing">
@@ -48454,6 +48633,47 @@
           },
         });
       });
+    </script>
+
+    <script>
+      // Ambil semua input radio dalam sebuah array
+      const radioButtons = document.querySelectorAll('input[name="plan"]');
+
+      // Loop melalui setiap input radio
+      radioButtons.forEach(function (radioButton) {
+        // Tambahkan event listener untuk setiap input radio
+        radioButton.addEventListener("change", function () {
+          // Ambil nilai yang dipilih
+          const selectedValue = this.value;
+
+          // Sembunyikan semua elemen dengan kelas menuPertamaAds, menuKeduaAds, dan menuKetigaAds
+          document
+            .querySelectorAll(".menuPertamaAds, .menuKeduaAds, .menuKetigaAds")
+            .forEach(function (menu) {
+              menu.classList.add("hidden");
+            });
+
+          // Tampilkan elemen yang sesuai dengan pilihan yang dipilih
+          document
+            .querySelector(
+              ".menu" + selectedValue.charAt(selectedValue.length - 1) + "Ads"
+            )
+            .classList.remove("hidden");
+        });
+      });
+    </script>
+
+    <script>
+      document
+        .getElementById("btn-konten-classified-ads")
+        .addEventListener("click", function () {
+          // // Menampilkan konten Classified Ads
+          document
+            .querySelector(".konten-classified-ads")
+            .classList.remove("hidden");
+          // Menyembunyikan konten Top Ads (jika sedang ditampilkan)
+          // document.querySelector('.btn-konten-top-ads').classList.add('hidden');
+        });
     </script>
   </body>
 </html>
