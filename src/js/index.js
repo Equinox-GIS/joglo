@@ -923,7 +923,6 @@ function getSliderAdsReach() {
   };
 }
 
-
 function getSliderStoryGaleri() {
   return {
     slidesToShow: 9,
