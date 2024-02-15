@@ -2240,11 +2240,514 @@
                   <!--  -->
                   <!-- hrapan -->
 
-                  <!--  -->
+                  <div
+                    class="ShowProfilListing h-[70.5vh] w-full flex items-center justify-center"
+                  >
+                    <!--  -->
+                    <div class="h-full w-full flex flex-row">
+                      <div
+                        class="basis-3/12 h-full border border-black flex justify-center items-start"
+                      >
+                        <div class="grid grid-rows-2 gap-y-5 mt-3.5">
+                          <!--  -->
+                          <div
+                            id="btn-konten-classified-ads"
+                            class="w-full h-full flex justify-center items-center"
+                          >
+                            <div class="text-black cursor-pointer text-sm">
+                              Classified Ads
+                            </div>
+                          </div>
+
+                          <div
+                            id="btn-konten-top-ads"
+                            class="w-full h-full flex justify-center items-center"
+                          >
+                            <div class="text-black cursor-pointer text-sm">
+                              Top Ads
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="basis-9/12 w-full flex flex-col justify-center"
+                      >
+                        <!-- Classified Ads -->
+                        <div
+                          class="h-[76vh] overflow-y-auto hide-scrollbar px-3 pt-3.5 grid grid-cols-1 gap-y-5 konten-classified-ads"
+                        >
+                          <!-- Radio -->
+                          <div class="col-span-3 grid grid-cols-3 w-full">
+                            <div class="col-span-3 flex flex-col h-[5vh]">
+                              <div>Pilih Paket</div>
+                            </div>
+
+                            <div
+                              class="col-span-3 grid grid-cols-3 gap-5 w-full items-center text-sm"
+                            >
+                              <div class="karakter-tujuh-puluh-input">
+                                <input
+                                  type="radio"
+                                  name="plan"
+                                  id="plan-daily-70"
+                                  value="daily-70"
+                                  class="hidden peer"
+                                  required=""
+                                />
+                                <label
+                                  for="plan-daily-70"
+                                  class="flex flex-col items-center justify-between w-[11vw] p-2 text-black bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                >
+                                  <div class="mb-1.5">70 karakter</div>
+                                  <div>Rp 10.000 / hari</div>
+                                </label>
+                              </div>
+
+                              <div class="karakter-seratus-input">
+                                <input
+                                  type="radio"
+                                  name="plan"
+                                  id="plan-daily-100"
+                                  value="daily-100"
+                                  class="hidden peer"
+                                  required=""
+                                />
+                                <label
+                                  for="plan-daily-100"
+                                  class="flex flex-col items-center justify-between w-[11vw] p-2 text-black bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                >
+                                  <div class="mb-1.5">100 karakter</div>
+                                  <div>Rp 100.000 / hari</div>
+                                </label>
+                              </div>
+
+                              <div class="karakter-seratus-lima-puluh-input">
+                                <input
+                                  type="radio"
+                                  name="plan"
+                                  id="plan-daily-150"
+                                  value="daily-150"
+                                  class="hidden peer"
+                                  required=""
+                                />
+                                <label
+                                  for="plan-daily-150"
+                                  class="flex flex-col items-center justify-between w-[11vw] p-2 text-black bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                >
+                                  <div class="mb-1.5">150 karakter</div>
+                                  <div>Rp 150.000 / hari</div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+
+                          <div class="col-span-2 flex flex-col">
+                            <div class="relative w-full">
+                              <label
+                                class="block text-sm mb-2"
+                                for="deskripsi_postingan"
+                              >
+                                Teks
+                              </label>
+                              <textarea
+                                name="deskripsi_postingan"
+                                id="deskripsi_postingan"
+                                class="block p-2.5 h-[14vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                                required=""
+                                rows="9"
+                              ></textarea>
+                            </div>
+
+                            <div class="w-full flex justify-start mt-2">
+                              <div class="inline-flex">
+                                <div class="text-xs text-black">
+                                  Jumlah karakter
+                                  <span class="hasil_pilih_radio_classified_ads"
+                                    >0/0</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                          <div class="col-span-2 flex flex-col">
+                            <div class="relative w-full">
+                              <label
+                                class="block text-sm mb-2"
+                                for="deskripsi_postingan"
+                              >
+                                Jumlah Hari Tayang
+                              </label>
+                            </div>
+
+                            <div class="w-full flex mt-2">
+                              <div class="w-[32vh] h-[30vh]">
+                                <div class="py-2 px-1 bg-white rounded-t">
+                                  <div
+                                    class="flex items-center justify-between pt-1 overflow-x-auto"
+                                  >
+                                    <table class="w-full">
+                                      <thead>
+                                        <tr>
+                                          <th class="w-[14.28%]">
+                                            <div
+                                              class="w-full flex justify-center"
+                                            >
+                                              <p
+                                                class="text-xs font-medium text-center text-gray-800"
+                                              >
+                                                S
+                                              </p>
+                                            </div>
+                                          </th>
+                                          <th class="w-[14.28%]">
+                                            <div
+                                              class="w-full flex justify-center"
+                                            >
+                                              <p
+                                                class="text-xs font-medium text-center text-gray-800"
+                                              >
+                                                S
+                                              </p>
+                                            </div>
+                                          </th>
+                                          <th class="w-[14.28%]">
+                                            <div
+                                              class="w-full flex justify-center"
+                                            >
+                                              <p
+                                                class="text-xs font-medium text-center text-gray-800"
+                                              >
+                                                R
+                                              </p>
+                                            </div>
+                                          </th>
+                                          <th class="w-[14.28%]">
+                                            <div
+                                              class="w-full flex justify-center"
+                                            >
+                                              <p
+                                                class="text-xs font-medium text-center text-gray-800"
+                                              >
+                                                K
+                                              </p>
+                                            </div>
+                                          </th>
+                                          <th class="w-[14.28%]">
+                                            <div
+                                              class="w-full flex justify-center"
+                                            >
+                                              <p
+                                                class="text-xs font-medium text-center text-gray-800"
+                                              >
+                                                J
+                                              </p>
+                                            </div>
+                                          </th>
+                                          <th class="w-[14.28%]">
+                                            <div
+                                              class="w-full flex justify-center"
+                                            >
+                                              <p
+                                                class="text-xs font-medium text-center text-gray-800"
+                                              >
+                                                S
+                                              </p>
+                                            </div>
+                                          </th>
+                                          <th class="w-[14.28%]">
+                                            <div
+                                              class="w-full flex justify-center"
+                                            >
+                                              <p
+                                                class="text-xs font-medium text-center text-gray-800"
+                                              >
+                                                M
+                                              </p>
+                                            </div>
+                                          </th>
+                                        </tr>
+                                      </thead>
+                                      <tbody id="calendar-custom">
+                                        <!-- Calendar rows will be generated here -->
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+
+                          <!--  -->
+                          <!--   <div
+                            class="col-span-2 border grid grid-cols-3 w-full"
+                            >
+                            <div class="col-start-1">
+                              <div
+                                class="h-full flex justify-start items-start text-sm"
+                              >
+                                Jumlah pembayaran
+                              </div>
+                            </div>
+                            <div
+                              class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                            >
+                              <div class="inline-flex">
+                                <div
+                                  class="flex items-center text-xs font-medium text-black"
+                                >
+                                  Rp
+                                </div>
+
+                                <input
+                                  id="minInput"
+                                  type="number"
+                                  class="block w-[11vw] ml-1.5 p-0 text-xs text-black bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                  style="border: none; border-bottom: 1px solid"
+                                  required=""
+                                />
+                              </div>
+                            </div>
+                          </div> -->
+
+                          <!--  -->
+
+                          <!--   <div class="w-full col-span-3 grid grid-cols-6">
+                            <div
+                              class="col-start-2 col-span-4 flex justify-center items-center"
+                            >
+                              Pembayaran akan dipotong dari saldo kuota promo
+                            </div>
+                            <div
+                              class="col-start-2 col-span-4 flex justify-center items-center"
+                            >
+                              <button
+                                id="btnTerapkan"
+                                type="button"
+                                class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                              >
+                                Proses
+                              </button>
+                            </div>
+                          </div> -->
+
+                          <!--  -->
+
+                          <!--  -->
+                        </div>
+
+                        <!-- top Ads -->
+                        <div
+                          class="h-[76vh] overflow-y-auto hide-scrollbar px-3 text-sm grid grid-cols-1 gap-y-5 konten-top-ads hidden"
+                        >
+                          <div
+                            class="h-[70vh] overflow-y-auto hide-scrollbar p-3 text-sm grid grid-cols-1 gap-y-5 border border-green-500"
+                          >
+                            <div
+                              class="col-span-2 border grid grid-cols-3 w-full"
+                            >
+                              <div class="col-start-1">
+                                <div
+                                  class="h-full flex justify-start items-center text-lg font-sf_pro_bold"
+                                >
+                                  Radius
+                                </div>
+                              </div>
+                              <div
+                                class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                              >
+                                <div class="w-[12vw] h-full flex justify-end">
+                                  <select
+                                    id="jenis-surat"
+                                    class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-[6vw] h-[5vh]"
+                                  >
+                                    <option value="5">5 km</option>
+                                    <option value="10">10 km</option>
+                                    <option value="15">15 km</option>
+                                    <option value="30">30 km</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Radio -->
+
+                            <div
+                              class="col-span-2 border grid grid-cols-3 w-full"
+                            >
+                              <div
+                                class="col-span-2 mb-2 font-sf_pro_bold text-black text-lg"
+                              >
+                                Anggaran
+                              </div>
+
+                              <div class="col-start-1">
+                                <input
+                                  id="default-radio-11"
+                                  type="radio"
+                                  value=""
+                                  name="default-radio"
+                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="default-radio-11"
+                                  class="ms-2 text-sm text-black"
+                                  >Periode</label
+                                >
+                              </div>
+                              <div
+                                class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                              >
+                                <div class="w-full h-full">
+                                  <!--  -->
+
+                                  <div class="grid grid-rows-3 gap-y-3">
+                                    <div>
+                                      <input
+                                        type="radio"
+                                        id="plan-daily"
+                                        name="plan-duration"
+                                        value="daily"
+                                        class="hidden peer"
+                                        required=""
+                                      />
+                                      <label
+                                        for="plan-daily"
+                                        class="inline-flex items-center justify-between w-[12vw] p-5 text-black bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                      >
+                                        Rp 10.000 / hari
+                                      </label>
+                                    </div>
+
+                                    <div>
+                                      <input
+                                        type="radio"
+                                        id="plan-weekly"
+                                        name="plan-duration"
+                                        value="weekly"
+                                        class="hidden peer"
+                                      />
+                                      <label
+                                        for="plan-weekly"
+                                        class="inline-flex items-center justify-between w-[12vw] p-5 text-black bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                      >
+                                        Rp 50.000 / minggu
+                                      </label>
+                                    </div>
+
+                                    <div>
+                                      <input
+                                        type="radio"
+                                        id="plan-monthly"
+                                        name="plan-duration"
+                                        value="monthly"
+                                        class="hidden peer"
+                                      />
+                                      <label
+                                        for="plan-monthly"
+                                        class="inline-flex items-center justify-between w-[12vw] p-5 text-black bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                                      >
+                                        Rp 100.000 / bulan
+                                      </label>
+                                    </div>
+                                  </div>
+
+                                  <!--  -->
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Anggaran Anda -->
+                            <div
+                              class="col-span-2 border grid grid-cols-3 w-full"
+                            >
+                              <div class="col-start-1">
+                                <div
+                                  class="h-full flex justify-start items-center"
+                                >
+                                  <input
+                                    id="default-radio-11"
+                                    type="radio"
+                                    value=""
+                                    name="default-radio"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label
+                                    for="default-radio-11"
+                                    class="ms-2 text-sm text-black"
+                                  >
+                                    Nominal</label
+                                  >
+                                </div>
+                              </div>
+                              <div
+                                class="col-start-2 col-span-2 grid grid-cols-1 w-full"
+                              >
+                                <div class="inline-flex">
+                                  <div
+                                    class="flex items-center text-xs font-medium text-black"
+                                  >
+                                    Rp
+                                  </div>
+
+                                  <input
+                                    id="minInput"
+                                    type="number"
+                                    class="block w-[11vw] ml-1.5 p-0 text-xs text-black bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                    style="
+                                      border: none;
+                                      border-bottom: 1px solid;
+                                    "
+                                    required=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--  -->
+                            <!--  -->
+
+                            <div
+                              class="w-full col-span-3 grid grid-cols-6 border border-red-500"
+                            >
+                              <div
+                                class="col-start-2 col-span-4 border border-red-500 flex justify-center items-center"
+                              >
+                                Pembayaran akan dipotong dari saldo kuota promo
+                              </div>
+                              <div
+                                class="col-start-2 col-span-4 border border-red-500 flex justify-center items-center"
+                              >
+                                <button
+                                  id="btnTerapkan"
+                                  type="button"
+                                  class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                                >
+                                  Proses
+                                </button>
+                              </div>
+                            </div>
+
+                            <!--  -->
+
+                            <!--  -->
+                          </div>
+                        </div>
+                        <!--  -->
+                      </div>
+                    </div>
+
+                    <!--  -->
+                  </div>
 
                   <!--  -->
 
-                  <div class="px-3">
+                  <!--  -->
+
+                  <div class="px-3 hidden">
                     <!--  -->
                     <div class="flex justify-center">
                       <div class="w-[44vw]">
@@ -2880,7 +3383,7 @@
                   </div>
 
                   <!-- Mode Pertama -->
-                  <div class="h-full px-3 mode-card-pertama">
+                  <div class="h-full px-3 mode-card-pertama hidden">
                     <div class="grid grid-cols-2 gap-2">
                       <!-- Card Beranda 1 -->
                       <div class="w-full konten-dijual">
@@ -32404,249 +32907,8 @@
                         role="tabpanel"
                         aria-labelledby="detail-agenprofil-dua-tab"
                       >
- <div
-                          class="ShowProfilListing h-[70.5vh] w-full flex items-center justify-center hidden"
-                          >
-                          <!--  -->
-                          <div
-                            class="h-full w-full flex flex-row"
-                          >
-                            <div
-                              class="basis-3/12 h-full border border-black flex justify-center items-start"
-                            >
-                              <div class="grid grid-rows-2 gap-y-5">
-                                <!--  -->
-                                <div
-                                  id="btn-konten-classified-ads"
-                                  class="w-full h-[5vh] flex justify-center items-center "
-                                >
-                                  <div
-                                    class="text-gray-500 cursor-pointer text-sm"
-                                  >
-                                    Classified Ads
-                                  </div>
-                                </div>
+                        <!-- ShowProfilListing h-[70.5vh] w-full flex items-center justify-center hidden -->
 
-                                <div
-                                  id="btn-konten-top-ads"
-                                  class="w-full h-[5vh] flex justify-center items-center "
-                                >
-                                  <div
-                                    class="text-gray-500 cursor-pointer text-sm"
-                                  >
-                                    Top Ads
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              class="basis-9/12 w-full flex flex-col justify-center"
-                            >
-                              <!-- Classified Ads -->
-                              <div
-                                class="h-[76vh] overflow-y-auto hide-scrollbar px-3 text-sm grid grid-cols-1 gap-y-5 konten-classified-ads hidden"
-                              >
-                                <!-- Radio -->
-                                <div
-                                  class="col-span-3 grid grid-cols-3 w-full"
-                                >
-                                  <div
-                                    class="col-span-3  flex flex-col h-[5vh]"
-                                  >
-                                    <div>Jumlah karakter maksimals</div>
-                                  </div>
-
-                                  <div
-                                    class="col-start-2 col-span-2 grid grid-cols-1 w-full -mt-15"
-                                  >
-                                    <div class="w-full h-full">
-                                      <!--  -->
-
-                                      <div class="grid grid-rows-3 gap-y-3">
-                                        <div>
-                                          <input
-                                            type="radio"
-                                            name="plan"
-                                            id="plan-daily-70"
-                                            value="daily-70"
-                                            class="hidden peer"
-                                            required=""
-                                          />
-                                          <label
-                                            for="plan-daily-70"
-                                            class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-                                          >
-                                            <div class="mb-1.5">
-                                              70 karakter
-                                            </div>
-                                            <div>Rp 10.000 / hari</div>
-                                          </label>
-                                        </div>
-
-                                        <div>
-                                          <input
-                                            type="radio"
-                                            name="plan"
-                                            id="plan-daily-100"
-                                            value="daily-100"
-                                            class="hidden peer"
-                                            required=""
-                                          />
-                                          <label
-                                            for="plan-daily-100"
-                                            class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-                                          >
-                                            <div class="mb-1.5">
-                                              100 karakter
-                                            </div>
-                                            <div>Rp 100.000 / hari</div>
-                                          </label>
-                                        </div>
-
-                                        <div>
-                                          <input
-                                            type="radio"
-                                            name="plan"
-                                            id="plan-daily-150"
-                                            value="daily-150"
-                                            class="hidden peer"
-                                            required=""
-                                          />
-                                          <label
-                                            for="plan-daily-150"
-                                            class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-                                          >
-                                            <div class="mb-1.5">
-                                              150 karakter
-                                            </div>
-                                            <div>Rp 150.000 / hari</div>
-                                          </label>
-                                        </div>
-                                      </div>
-
-                                      <!--  -->
-                                    </div>
-                                  </div>
-                                </div>
-                                <!--  -->
-
-                                <div class="col-span-2">
-                                  <div class="relative w-full">
-                                    <label
-                                      class="block text-sm mb-2"
-                                      for="deskripsi_postingan"
-                                    >
-                                      Teks Classified Ads
-                                    </label>
-                                    <textarea
-                                      name="deskripsi_postingan"
-                                      id="deskripsi_postingan"
-                                      class="block p-2.5 h-[14vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
-                                      required=""
-                                      rows="9"
-                                    ></textarea>
-                                  </div>
-                                </div>
-
-                                <!--  -->
-                                <div
-                                  class="col-span-2 border grid grid-cols-3 w-full"
-                                >
-                                  <div class="col-start-1">
-                                    <div
-                                      class="h-full flex justify-start items-start text-sm"
-                                    >
-                                      Jumlah hari tayang
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="col-start-2 col-span-2 grid grid-cols-1 w-full"
-                                  >
-                                    <div
-                                      class="w-[12vw] h-full flex justify-end"
-                                    >
-                                      <select
-                                        id="jenis-surat"
-                                        class="border-0 px-2 py-2 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-[6vw] h-[5vh]"
-                                      >
-                                        <option value="5">3 hari</option>
-                                        <option value="5">7 hari</option>
-                                        <option value="5">30 hari</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!--  -->
-
-                                <!--  -->
-                                <div
-                                  class="col-span-2 border grid grid-cols-3 w-full"
-                                >
-                                  <div class="col-start-1">
-                                    <div
-                                      class="h-full flex justify-start items-start text-sm"
-                                    >
-                                      Jumlah pembayaran
-                                    </div>
-                                  </div>
-                                  <div
-                                    class="col-start-2 col-span-2 grid grid-cols-1 w-full"
-                                  >
-                                    <div class="inline-flex">
-                                      <div
-                                        class="flex items-center text-xs font-medium text-black"
-                                      >
-                                        Rp
-                                      </div>
-
-                                      <input
-                                        id="minInput"
-                                        type="number"
-                                        class="block w-[11vw] ml-1.5 p-0 text-xs text-black bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
-                                        style="
-                                          border: none;
-                                          border-bottom: 1px solid;
-                                        "
-                                        required=""
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!--  -->
-
-                                <div
-                                  class="w-full col-span-3 grid grid-cols-6 "
-                                >
-                                  <div
-                                    class="col-start-2 col-span-4  flex justify-center items-center"
-                                  >
-                                    Pembayaran akan dipotong dari saldo kuota
-                                    promo
-                                  </div>
-                                  <div
-                                    class="col-start-2 col-span-4  flex justify-center items-center"
-                                  >
-                                    <button
-                                      id="btnTerapkan"
-                                      type="button"
-                                      class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
-                                    >
-                                      Proses
-                                    </button>
-                                  </div>
-                                </div>
-
-                                <!--  -->
-
-                                <!--  -->
-                              </div>
-                              <!--  -->
-                            </div>
-                          </div>
-
-                          <!--  -->
-                        </div>
                         <!--  -->
                         <div class="h-full flex flex-col HideProfilListing">
                           <!--  Card DetailAgen card-info-detailagen -->
@@ -44146,7 +44408,7 @@
                               <div
                                 class="col-span-3 border border-red-500 flex flex-col h-[5vh]"
                               >
-                                <div>Jumlah karakter maksimals</div>
+                                <div>Jumlah karakter maksimalss</div>
                               </div>
 
                               <div
@@ -47589,6 +47851,8 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+
     <script>
       // Helper function to display thousands in K format
       const formatThousands = (value) =>
@@ -48663,17 +48927,189 @@
       });
     </script>
 
+    <!-- querySelector for class and getElementById btn -->
     <script>
+      // Fungsi untuk menampilkan konten dan mengatur warna teks tombol
+      function showContent(btn, contentClass) {
+        // Menghapus kelas font-bold dari semua tombol
+        document
+          .getElementById("btn-konten-classified-ads")
+          .classList.remove("font-bold");
+        document
+          .getElementById("btn-konten-top-ads")
+          .classList.remove("font-bold");
+        // Menambahkan kelas font-bold ke tombol yang diklik
+        btn.classList.add("font-bold");
+
+        // Mengubah warna teks tombol yang diklik menjadi hitam (black)
+        btn.querySelector(".text-gray-500").classList.remove("text-gray-500");
+        btn.querySelector(".text-sm").classList.add("text-black");
+
+        // Mengembalikan warna teks tombol yang tidak diklik ke semula
+        const otherBtn =
+          btn === document.getElementById("btn-konten-classified-ads")
+            ? document.getElementById("btn-konten-top-ads")
+            : document.getElementById("btn-konten-classified-ads");
+        otherBtn.querySelector(".text-black").classList.remove("text-black");
+        otherBtn.querySelector(".text-sm").classList.add("text-gray-500");
+
+        // Menampilkan konten yang sesuai dan menyembunyikan konten lainnya
+        document
+          .querySelector(".konten-classified-ads")
+          .classList.toggle("hidden", contentClass !== "konten-classified-ads");
+        document
+          .querySelector(".konten-top-ads")
+          .classList.toggle("hidden", contentClass !== "konten-top-ads");
+      }
+
+      // Menambahkan event listener untuk tombol Classified Ads
       document
         .getElementById("btn-konten-classified-ads")
         .addEventListener("click", function () {
-          // // Menampilkan konten Classified Ads
-          document
-            .querySelector(".konten-classified-ads")
-            .classList.remove("hidden");
-          // Menyembunyikan konten Top Ads (jika sedang ditampilkan)
-          // document.querySelector('.btn-konten-top-ads').classList.add('hidden');
+          showContent(this, "konten-classified-ads");
         });
+
+      // Menambahkan event listener untuk tombol Top Ads
+      document
+        .getElementById("btn-konten-top-ads")
+        .addEventListener("click", function () {
+          showContent(this, "konten-top-ads");
+        });
+    </script>
+
+    <!-- pilih paket classified ads -->
+
+    <script>
+      // Mendapatkan elemen-elemen yang diperlukan
+      const karakterTujuhPuluh = document.querySelector(
+        ".karakter-tujuh-puluh-input input[type=radio]"
+      );
+      const karakterSeratus = document.querySelector(
+        ".karakter-seratus-input input[type=radio]"
+      );
+      const karakterSeratusLimaPuluh = document.querySelector(
+        ".karakter-seratus-lima-puluh-input input[type=radio]"
+      );
+      const hasilPilih = document.querySelector(
+        ".hasil_pilih_radio_classified_ads"
+      );
+
+      // Membuat objek untuk menyimpan nilai maksimum karakter dari setiap pilihan
+      const maksimumKarakter = {
+        "plan-daily-70": 70,
+        "plan-daily-100": 100,
+        "plan-daily-150": 150,
+      };
+
+      // Fungsi untuk menampilkan jumlah karakter yang dipilih
+      function updateJumlahKarakter(event) {
+        const id = event.target.id;
+        const maksKarakter = maksimumKarakter[id];
+        hasilPilih.textContent = `0/${maksKarakter}`;
+      }
+
+      // Menambahkan event listener untuk setiap tombol pilihan
+      karakterTujuhPuluh.addEventListener("click", updateJumlahKarakter);
+      karakterSeratus.addEventListener("click", updateJumlahKarakter);
+      karakterSeratusLimaPuluh.addEventListener("click", updateJumlahKarakter);
+    </script>
+
+    <script>
+      const calendar = document.getElementById("calendar-custom");
+
+      function createCalendar() {
+        const today = new Date();
+        const currentMonth = today.getMonth();
+        const currentYear = today.getFullYear();
+        const daysInMonth = new Date(
+          currentYear,
+          currentMonth + 1,
+          0
+        ).getDate();
+
+        let calendarHTML = "";
+
+        let date = 1;
+        for (let i = 0; i < 6; i++) {
+          calendarHTML += "<tr>";
+          for (let j = 0; j < 7; j++) {
+            if (i === 0 && j < new Date(currentYear, currentMonth).getDay()) {
+              calendarHTML += "<td></td>";
+            } else if (date > daysInMonth) {
+              break;
+            } else {
+              calendarHTML += `
+                        <td class="pt-1">
+                            <div class="px-1 py-1 cursor-pointer flex w-full justify-center">
+                                <p class="text-xs text-black font-medium">${date}</p>
+                            </div>
+                        </td>
+                    `;
+              date++;
+            }
+          }
+          calendarHTML += "</tr>";
+          if (date > daysInMonth) {
+            break;
+          }
+        }
+
+        calendar.innerHTML = calendarHTML;
+
+        const calendarCells = calendar.querySelectorAll(".cursor-pointer");
+
+        let startDate = null;
+        let endDate = null;
+        let isMouseDown = false;
+
+        calendarCells.forEach((cell) => {
+          cell.addEventListener("mousedown", () => {
+            isMouseDown = true;
+            selectDate(cell);
+          });
+
+          cell.addEventListener("mouseenter", () => {
+            if (isMouseDown) {
+              selectDate(cell);
+            }
+          });
+
+          cell.addEventListener("mouseup", () => {
+            isMouseDown = false;
+          });
+        });
+
+        function selectDate(cell) {
+          const selectedDate = new Date(
+            `${currentYear}-${currentMonth + 1}-${cell.textContent}`
+          );
+          if (!startDate || (startDate && endDate)) {
+            startDate = selectedDate;
+            endDate = null;
+          } else if (selectedDate > startDate) {
+            endDate = selectedDate;
+          } else {
+            endDate = startDate;
+            startDate = selectedDate;
+          }
+          updateRange();
+        }
+
+        function updateRange() {
+          calendarCells.forEach((cell) => {
+            const date = new Date(
+              `${currentYear}-${currentMonth + 1}-${cell.textContent}`
+            );
+            if (startDate && endDate && date >= startDate && date <= endDate) {
+              cell.classList.add("bg-blue-200");
+            } else {
+              cell.classList.remove("bg-blue-200");
+            }
+          });
+        }
+      }
+
+      createCalendar();
     </script>
   </body>
 </html>
