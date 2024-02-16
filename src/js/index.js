@@ -394,7 +394,7 @@ function resetTabStyles(tabsSelector, activeTabId) {
     );
     // Menambahkan kelas gaya untuk tab tidak aktif
     tab.classList.add(
-      "hover:text-gray-700",
+      "hover:text-black",
       "hover:border-gray-300",
       "dark:border-transparent",
       "text-gray-500",
@@ -411,7 +411,7 @@ function resetTabStyles(tabsSelector, activeTabId) {
   var defaultTab = document.getElementById(activeTabId);
   if (defaultTab) {
     defaultTab.classList.remove(
-      "hover:text-gray-700",
+      "hover:text-black",
       "hover:border-gray-300",
       "dark:border-transparent",
       "text-gray-500",
@@ -463,7 +463,7 @@ function setActiveTab(tabButtonId, tabContentId) {
 
     // Mengatur gaya dan atribut 'aria-selected' untuk tab aktif
     activeTab.classList.remove(
-      "hover:text-gray-700",
+      "hover:text-black",
       "hover:border-gray-300",
       "dark:border-transparent",
       "text-gray-500",
@@ -904,13 +904,14 @@ function getSliderDefaultOptions() {
 }
 
 function getSliderAdsReach() {
-  return {
+  // Ambil konfigurasi default
+  var sliderConfig = {
     dots: true,
     infinite: false,
     arrows: true,
     pauseOnHover: false,
     swipe: false,
-    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();" style="margin-left: -9px;">
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();" style="margin-left: -9px; margin-bottom:4px;">
                   <div class="img-wrapper-ads">
                     <img style="margin-right: 1px;" class="custom-img-slick-ads" src="${prevArrowImg}" alt="Previous">
                   </div>
@@ -921,6 +922,13 @@ function getSliderAdsReach() {
                   </div>
                 </button>`,
   };
+
+  // Setelah slider dimuat, tambahkan kelas kustom pada dots slick slider
+  $(document).ready(function () {
+    $(".slick-dots").addClass("custom-slick-dots-ads");
+  });
+
+  return sliderConfig;
 }
 
 function getSliderStoryGaleri() {
@@ -3585,8 +3593,17 @@ window.checkOnlyThis = function (id) {
   });
 };
 
+function showJudulListingIklan() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Iklan";
+  });
+}
+
 window.DetailProfilListing = function (element) {
   event.stopPropagation();
+
+  showJudulListingIklan();
 
   Array.from(document.getElementsByClassName("HideProfilListing")).forEach(
     (elem) => elem.classList.add("hidden")

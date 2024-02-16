@@ -644,6 +644,7 @@
   padding: 3.5px;
   background-color: rgb(241 245 249);
   opacity: 0.9;
+  margin-bottom: 5px;
 }
 
 .custom-img-slick {
@@ -658,6 +659,10 @@
 
 .slick-dots li button:before {
   font-size: 6px !important;
+}
+
+.custom-slick-dots-ads li button:before {
+  font-size: 5px !important;
 }
 
 @keyframes marquee {
