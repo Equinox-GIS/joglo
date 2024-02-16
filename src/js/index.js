@@ -394,7 +394,7 @@ function resetTabStyles(tabsSelector, activeTabId) {
     );
     // Menambahkan kelas gaya untuk tab tidak aktif
     tab.classList.add(
-      "hover:text-gray-700",
+      "hover:text-black",
       "hover:border-gray-300",
       "dark:border-transparent",
       "text-gray-500",
@@ -411,7 +411,7 @@ function resetTabStyles(tabsSelector, activeTabId) {
   var defaultTab = document.getElementById(activeTabId);
   if (defaultTab) {
     defaultTab.classList.remove(
-      "hover:text-gray-700",
+      "hover:text-black",
       "hover:border-gray-300",
       "dark:border-transparent",
       "text-gray-500",
@@ -463,7 +463,7 @@ function setActiveTab(tabButtonId, tabContentId) {
 
     // Mengatur gaya dan atribut 'aria-selected' untuk tab aktif
     activeTab.classList.remove(
-      "hover:text-gray-700",
+      "hover:text-black",
       "hover:border-gray-300",
       "dark:border-transparent",
       "text-gray-500",
@@ -903,7 +903,6 @@ function getSliderDefaultOptions() {
   };
 }
 
-
 function getSliderAdsReach() {
   // Ambil konfigurasi default
   var sliderConfig = {
@@ -921,17 +920,16 @@ function getSliderAdsReach() {
                   <div class="img-wrapper-ads">
                     <img style="margin-left: 1px;" class="custom-img-slick-ads" src="${nextArrowImg}" alt="Next">
                   </div>
-                </button>`
+                </button>`,
   };
 
   // Setelah slider dimuat, tambahkan kelas kustom pada dots slick slider
-  $(document).ready(function(){
-    $('.slick-dots').addClass('custom-slick-dots-ads');
+  $(document).ready(function () {
+    $(".slick-dots").addClass("custom-slick-dots-ads");
   });
 
   return sliderConfig;
 }
-
 
 function getSliderStoryGaleri() {
   return {
@@ -3601,7 +3599,6 @@ function showJudulListingIklan() {
     element.textContent = "Iklan";
   });
 }
-
 
 window.DetailProfilListing = function (element) {
   event.stopPropagation();
