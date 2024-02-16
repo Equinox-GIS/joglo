@@ -873,7 +873,7 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                     <div class="flex flex-col">
                                       <div class="inline-flex">
                                         <div
-                                          class="text-xs font-semibold text-gray-700 cursor-pointer"
+                                          class="text-xs font-semibold text-black cursor-pointer"
                                           onclick="showCardAgent(this)"
                                         >
                                           Budiman Alisysiaa
@@ -1031,13 +1031,13 @@ map.on("click", "layer-peta-soaraja", (e) => {
                                 </div>
                                 <!--  -->
                                 <div class="flex flex-col -mt-1 font-normal" style="margin-top: -0.3rem;">
-                                  <div class="flex items-center text-[11px] text-gray-700">
+                                  <div class="flex items-center text-[11px] text-black">
                                     <span class="mr-2">LT 80 m² |</span>
                                     <span class="mr-2">LB 276 m² |</span>
                                     <span class="mr-2">2 KT |</span>
                                     <span class="mr-2">5 KM</span>
                                   </div>
-                                  <div class="text-xs text-gray-700" style="margin-top: -0.2rem;">
+                                  <div class="text-xs text-black" style="margin-top: -0.2rem;">
                                     Sunter, Tanjung Priok, keduacard
                                   </div>
                                 </div>
