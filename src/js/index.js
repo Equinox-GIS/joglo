@@ -903,14 +903,16 @@ function getSliderDefaultOptions() {
   };
 }
 
+
 function getSliderAdsReach() {
-  return {
+  // Ambil konfigurasi default
+  var sliderConfig = {
     dots: true,
     infinite: false,
     arrows: true,
     pauseOnHover: false,
     swipe: false,
-    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();" style="margin-left: -9px;">
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();" style="margin-left: -9px; margin-bottom:4px;">
                   <div class="img-wrapper-ads">
                     <img style="margin-right: 1px;" class="custom-img-slick-ads" src="${prevArrowImg}" alt="Previous">
                   </div>
@@ -919,9 +921,17 @@ function getSliderAdsReach() {
                   <div class="img-wrapper-ads">
                     <img style="margin-left: 1px;" class="custom-img-slick-ads" src="${nextArrowImg}" alt="Next">
                   </div>
-                </button>`,
+                </button>`
   };
+
+  // Setelah slider dimuat, tambahkan kelas kustom pada dots slick slider
+  $(document).ready(function(){
+    $('.slick-dots').addClass('custom-slick-dots-ads');
+  });
+
+  return sliderConfig;
 }
+
 
 function getSliderStoryGaleri() {
   return {
