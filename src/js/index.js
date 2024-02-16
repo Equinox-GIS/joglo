@@ -3595,8 +3595,18 @@ window.checkOnlyThis = function (id) {
   });
 };
 
+function showJudulListingIklan() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Iklan";
+  });
+}
+
+
 window.DetailProfilListing = function (element) {
   event.stopPropagation();
+
+  showJudulListingIklan();
 
   Array.from(document.getElementsByClassName("HideProfilListing")).forEach(
     (elem) => elem.classList.add("hidden")
