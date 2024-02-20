@@ -951,6 +951,35 @@ function getSliderStoryGaleri() {
   };
 }
 
+
+function getSliderStories() {
+  // Ambil konfigurasi default
+  var sliderConfig = {
+    dots: false,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();" style="margin-left: -9px; margin-bottom:4px;">
+                  <div class="img-wrapper-ads">
+                    <img style="margin-right: 1px;" class="custom-img-slick-ads" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();" style="margin-right: -10px;">
+                  <div class="img-wrapper-ads">
+                    <img style="margin-left: 1px;" class="custom-img-slick-ads" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+  };
+
+  // Setelah slider dimuat, tambahkan kelas kustom pada dots slick slider
+  $(document).ready(function () {
+    $(".slick-dots").addClass("custom-slick-dots-ads");
+  });
+
+  return sliderConfig;
+}
+
 // Example of initializing the slider and setting up the wheel event handler
 $(document).ready(function () {
   var slider = $(".slider-story-galeri");
@@ -971,6 +1000,9 @@ $(document).ready(function () {
     }
   });
 });
+
+
+
 
 function getSliderVideo() {
   return {
@@ -1120,17 +1152,17 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
-function initSlickStoryGaleri() {
-  $(".slider-story-galeri")
-    .on("init", function () {
-      setTimeout(function () {
-        moveDotsToCustomContainer();
-        addClickHandlerToDots();
-        disableClickHandlerToDots();
-      }, 0);
-    })
-    .slick(getSliderStoryGaleri());
-}
+// function initSlickStoryGaleri() {
+//   $(".slider-story-galeri")
+//     .on("init", function () {
+//       setTimeout(function () {
+//         moveDotsToCustomContainer();
+//         addClickHandlerToDots();
+//         disableClickHandlerToDots();
+//       }, 0);
+//     })
+//     .slick(getSliderStoryGaleri());
+// }
 
 function initSlickVideo() {
   $(".slider-menu-video")
@@ -3762,3 +3794,52 @@ window.biodataListingAgenClassifiedAds = function () {
 //       (elem) => elem.classList.add("hidden")
 //     );
 // };
+
+
+window.CloseStoriesSatu = function () {
+
+
+$(document).ready(function () {
+  var slider = $(".slider-card-stories-persegi");
+  var sliderConfig = getSliderStories();
+  slider.slick(sliderConfig);
+});
+
+
+    Array.from(document.getElementsByClassName("StoriesGaleri1")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+    Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+        Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+
+}
+
+window.CloseStoriesDua = function () {
+
+  $(document).ready(function () {
+  var slider = $(".slider-card-stories-persegi");
+  var sliderConfig = getSliderStories();
+  slider.slick(sliderConfig);
+});
+
+    Array.from(document.getElementsByClassName("StoriesGaleri2")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+    Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+        Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+
+}

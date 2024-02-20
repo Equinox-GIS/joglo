@@ -835,8 +835,14 @@
 
 .slider-card-beranda video {
   width: 100%;
-  height: 29vh !important;
+  height: 62vh !important;
 }
+
+.slider-card-stories video {
+  width: 100%;
+  height: 62vh !important;
+}
+
 
 /*.slider-favorit video {
   width: 100%;
@@ -1178,14 +1184,13 @@ input[type="number"] {
   color: #007bff; /* Anggap ini adalah kode warna untuk blue-500 */
 }
 
+.radio-label {
+  @apply flex flex-col items-center justify-between p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700;
+  width: 12rem; /* Adjust width as needed */
+}
 
-    .radio-label {
-        @apply flex flex-col items-center justify-between p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700;
-        width: 12rem; /* Adjust width as needed */
-    }
-
-    input[name="plan"]:checked ~ .menuPertamaAds,
-    input[name="plan"]:checked ~ .menuKeduaAds,
-    input[name="plan"]:checked ~ .menuKetigaAds {
-        display: block;
-    }
+input[name="plan"]:checked ~ .menuPertamaAds,
+input[name="plan"]:checked ~ .menuKeduaAds,
+input[name="plan"]:checked ~ .menuKetigaAds {
+  display: block;
+}
