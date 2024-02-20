@@ -3349,7 +3349,7 @@
                     <div class="w-full h-[62.4vh] grid grid-cols-4 relative">
                       <div
                         class="absolute self-center flex item-populer justify-between w-full"
-                        >
+                      >
                         <div
                           class="bg-gray-100 h-[3.6vh] w-[1.8vw] rounded-full shadow ml-5 z-10"
                         >
@@ -3371,17 +3371,13 @@
                       <!--  -->
                       <div class="col-span-2 w-full h-full bg-[#807a78]">
                         <div class="w-[24vw] h-[63vh] absolute">
-
                           <div class="absolute top-3 left-3">
-                            
-                                <img
-                                  class="w-8 h-8 object-contain"
-                                  src="./src/images/close-simbol2.png"
-                                  alt=""
-                                />
+                            <img
+                              class="w-8 h-8 object-contain"
+                              src="./src/images/close-simbol2.png"
+                              alt=""
+                            />
                           </div>
-
-
 
                           <div
                             class="slider-card-stories-persegi w-full h-full z-index-10"
@@ -42061,40 +42057,37 @@
                 <!-- Form Posting Listing -->
                 <div
                   class="h-[76vh] overflow-y-auto hide-scrollbar text-black px-4 py-2"
-                  >
+                >
                   <form>
                     <h6 class="text-lg font-sf_pro_bold mt-3">Detail Rumahz</h6>
                     <div class="grid grid-cols-2 gap-y-3 gap-x-4">
                       <!-- Upload Gambar -->
 
- <div
-                        class="w-full h-[46.5vh] mt-6 bg-white flex justify-center rounded shadow p-2"
+                      <input
+                        id="fileElem"
+                        type="file"
+                        class="hidden"
+                        multiple
+                        accept="image/*"
+                      />
+                      <div
+                        id="drop-area"
+                        class="w-full h-[34.5vh] mt-6 bg-white rounded shadow p-2 flex justify-center items-center"
+                      >
+                        <label
+                          for="fileElem"
+                          class="cursor-pointer flex flex-col justify-center"
                         >
-                        <!-- Upload Gambar -->
-                        <!-- Gambar 1 -->
-                        <img
-                          class="w-20 h-20 object-contain hidden"
-                          src="./src/images/image-gallery.png"
-                        />
+                          <img
+                            class="w-20 h-20 object-contain hide_gambar_upload"
+                            src="./src/images/image-gallery.png"
+                          />
+                        </label>
 
-                        <div class="w-full border border-red-500 grid grid-cols-3 gap-2">
-                          <div class="w-[7vw] border h-[10vh]">adsa</div>
-                          <div class="w-[7vw] border h-[10vh]">adsa</div>
-                          <div class="w-[7vw] border h-[10vh]">adsa</div>
-
-                          <div class="w-[7vw] border h-[10vh]">adsa</div>
-                          <div class="w-[7vw] border h-[10vh]">adsa</div>
-                          <div class="w-[7vw] border h-[10vh]">adsa</div>
-
-
-                                    <div class="w-[7vw] border h-[10vh]">adsa</div>
-                          <div class="w-[7vw] border h-[10vh]">adsa</div>
-                          <div class="w-[7vw] border h-[10vh]">adsa</div>
-
-
-
-
-                        </div>
+                        <div
+                          id="preview-container"
+                          class="grid grid-cols-3 gap-1 add_wfull_upload ml-1"
+                        ></div>
 
                         <!--  -->
                       </div>
@@ -42117,8 +42110,6 @@
                         </div>
 
                         <div class="grid grid-cols-2 gap-4">
-                
-
                           <!-- Luas Tanah m2 -->
                           <div class="w-full">
                             <div class="relative w-full">
@@ -42153,13 +42144,10 @@
                             </div>
                           </div>
 
-                                                    <!-- Harga -->
+                          <!-- Harga -->
                           <div class="w-full">
                             <div class="relative w-full">
-                              <label
-                                class="block text-sm mb-1"
-                                for="harga"
-                              >
+                              <label class="block text-sm mb-1" for="harga">
                                 Harga
                               </label>
                               <input
@@ -42268,7 +42256,7 @@
 
                       <div class="col-span-2">
                         <div class="flex flex-row">
-                             <!-- Kelurahan -->
+                          <!-- Kelurahan -->
                           <div class="w-full">
                             <div class="relative w-full">
                               <label class="block text-sm mb-1" for="kelurahan">
@@ -42300,7 +42288,7 @@
                             </div>
                           </div>
 
-                                  <!-- Kota -->
+                          <!-- Kota -->
                           <div class="w-full">
                             <div class="relative w-full">
                               <label class="block text-sm mb-1" for="kecamatan">
@@ -42315,13 +42303,7 @@
                               />
                             </div>
                           </div>
-
                         </div>
-
-                
-
-                   
-                        
                       </div>
 
                       <!-- Judul -->
@@ -47717,6 +47699,93 @@
       }
 
       createCalendar();
+    </script>
+
+    <script type="text/javascript">
+      const dropArea = document.getElementById("drop-area");
+      const fileElem = document.getElementById("fileElem");
+      const previewContainer = document.getElementById("preview-container");
+
+      // Prevent default drag behaviors
+      ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+      });
+
+      // Highlight drop area when a file is dragged over it
+      ["dragenter", "dragover"].forEach((eventName) => {
+        dropArea.addEventListener(eventName, highlight, false);
+      });
+
+      ["dragleave", "drop"].forEach((eventName) => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+      });
+
+      // Handle dropped files
+      dropArea.addEventListener("drop", handleDrop, false);
+
+      function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+
+      function highlight() {
+        dropArea.classList.add("border-blue-500");
+      }
+
+      function unhighlight() {
+        dropArea.classList.remove("border-blue-500");
+      }
+
+      function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+
+        handleFiles(files);
+        hideUploadImage();
+      }
+
+      function handleFiles(files) {
+        [...files].forEach(previewFile);
+      }
+
+      function previewFile(file) {
+        const reader = new FileReader();
+
+        reader.onloadend = function () {
+          const img = document.createElement("img");
+          img.src = reader.result;
+          img.classList.add("w-full", "h-auto", "object-fit");
+
+          const div = document.createElement("div");
+          div.classList.add(
+            "border",
+            "border-gray-200",
+            "rounded",
+            "overflow-hidden",
+            "w-[7vw]",
+            "h-[10vh]"
+          );
+          div.appendChild(img);
+
+          previewContainer.appendChild(div);
+        };
+
+        reader.readAsDataURL(file);
+      }
+
+      // Handling file input change event
+      fileElem.addEventListener("change", function () {
+        handleFiles(this.files);
+        hideUploadImage();
+      });
+
+      function hideUploadImage() {
+        const uploadImage = document.querySelector(".hide_gambar_upload");
+        uploadImage.classList.add("hidden");
+
+        const upload_wfull = document.querySelector(".add_wfull_upload");
+        upload_wfull.classList.add("w-full");
+      }
     </script>
   </body>
 </html>
