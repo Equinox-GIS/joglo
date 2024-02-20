@@ -3349,7 +3349,7 @@
                     <div class="w-full h-[62.4vh] grid grid-cols-4 relative">
                       <div
                         class="absolute self-center flex item-populer justify-between w-full"
-                      >
+                        >
                         <div
                           class="bg-gray-100 h-[3.6vh] w-[1.8vw] rounded-full shadow ml-5 z-10"
                         >
@@ -3370,7 +3370,19 @@
                       </div>
                       <!--  -->
                       <div class="col-span-2 w-full h-full bg-[#807a78]">
-                        <div class="w-[24vw] h-[63vh]">
+                        <div class="w-[24vw] h-[63vh] absolute">
+
+                          <div class="absolute top-3 left-3">
+                            
+                                <img
+                                  class="w-8 h-8 object-contain"
+                                  src="./src/images/close-simbol2.png"
+                                  alt=""
+                                />
+                          </div>
+
+
+
                           <div
                             class="slider-card-stories-persegi w-full h-full z-index-10"
                           >
@@ -42046,29 +42058,49 @@
                 </div>
                 <!--  -->
 
+                <!-- Form Posting Listing -->
                 <div
                   class="h-[76vh] overflow-y-auto hide-scrollbar text-black px-4 py-2"
-                >
+                  >
                   <form>
                     <h6 class="text-lg font-sf_pro_bold mt-3">Detail Rumahz</h6>
                     <div class="grid grid-cols-2 gap-y-3 gap-x-4">
                       <!-- Upload Gambar -->
 
-                      <div
-                        class="w-full h-[46.5vh] mt-6 bg-white flex justify-center items-center rounded shadow"
-                      >
+ <div
+                        class="w-full h-[46.5vh] mt-6 bg-white flex justify-center rounded shadow p-2"
+                        >
                         <!-- Upload Gambar -->
                         <!-- Gambar 1 -->
                         <img
-                          class="w-20 h-20 object-contain"
+                          class="w-20 h-20 object-contain hidden"
                           src="./src/images/image-gallery.png"
                         />
+
+                        <div class="w-full border border-red-500 grid grid-cols-3 gap-2">
+                          <div class="w-[7vw] border h-[10vh]">adsa</div>
+                          <div class="w-[7vw] border h-[10vh]">adsa</div>
+                          <div class="w-[7vw] border h-[10vh]">adsa</div>
+
+                          <div class="w-[7vw] border h-[10vh]">adsa</div>
+                          <div class="w-[7vw] border h-[10vh]">adsa</div>
+                          <div class="w-[7vw] border h-[10vh]">adsa</div>
+
+
+                                    <div class="w-[7vw] border h-[10vh]">adsa</div>
+                          <div class="w-[7vw] border h-[10vh]">adsa</div>
+                          <div class="w-[7vw] border h-[10vh]">adsa</div>
+
+
+
+
+                        </div>
 
                         <!--  -->
                       </div>
 
                       <!-- Koordinat -->
-                      <div class="w-full h-full flex flex-col">
+                      <div class="w-full h-full flex flex-col mt-5">
                         <div class="w-full mb-4">
                           <div class="relative w-full">
                             <label class="block text-sm mb-1" for="koordinat">
@@ -42079,43 +42111,13 @@
                               disabled
                               type="text"
                               id="koordinat"
-                              class="border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
                             />
                           </div>
                         </div>
 
                         <div class="grid grid-cols-2 gap-4">
-                          <!-- Kelurahan -->
-                          <div class="w-full">
-                            <div class="relative w-full">
-                              <label class="block text-sm mb-1" for="kelurahan">
-                                Kelurahan
-                              </label>
-                              <input
-                                readonly
-                                disabled
-                                type="text"
-                                id="kelurahan"
-                                class="border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                              />
-                            </div>
-                          </div>
-
-                          <!-- Kecamatan -->
-                          <div class="w-full">
-                            <div class="relative w-full">
-                              <label class="block text-sm mb-1" for="kecamatan">
-                                Kecamatan
-                              </label>
-                              <input
-                                readonly
-                                disabled
-                                type="text"
-                                id="kecamatan"
-                                class="border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                              />
-                            </div>
-                          </div>
+                
 
                           <!-- Luas Tanah m2 -->
                           <div class="w-full">
@@ -42129,7 +42131,7 @@
                               <input
                                 type="number"
                                 id="luas-tanah"
-                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                               />
                             </div>
                           </div>
@@ -42146,7 +42148,41 @@
                               <input
                                 type="number"
                                 id="luas-bangunan"
-                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                              />
+                            </div>
+                          </div>
+
+                                                    <!-- Harga -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label
+                                class="block text-sm mb-1"
+                                for="harga"
+                              >
+                                Harga
+                              </label>
+                              <input
+                                type="number"
+                                id="harga"
+                                class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Tahun dibangun -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label
+                                class="block text-sm mb-1"
+                                for="tahun-dibangun"
+                              >
+                                Tahun dibangun
+                              </label>
+                              <input
+                                type="number"
+                                id="tahun-dibangun"
+                                class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                               />
                             </div>
                           </div>
@@ -42163,7 +42199,7 @@
                               <input
                                 type="number"
                                 id="kamar-tidur-utama"
-                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
                               />
                             </div>
                           </div>
@@ -42180,7 +42216,7 @@
                               <input
                                 type="number"
                                 id="kamar-tidur-tambahan"
-                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
                               />
                             </div>
                           </div>
@@ -42196,7 +42232,7 @@
                               </label>
                               <select
                                 id="jenis-properti"
-                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
                               >
                                 <option value="pemilik-langsung">
                                   Pemilik Langsung
@@ -42218,7 +42254,7 @@
                               </label>
                               <select
                                 id="jenis-surat"
-                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
                               >
                                 <option value="shm">SHM</option>
                                 <option value="shgb">SHGB</option>
@@ -42229,6 +42265,64 @@
                       </div>
 
                       <!--  -->
+
+                      <div class="col-span-2">
+                        <div class="flex flex-row">
+                             <!-- Kelurahan -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label class="block text-sm mb-1" for="kelurahan">
+                                Kelurahan
+                              </label>
+                              <input
+                                readonly
+                                disabled
+                                type="text"
+                                id="kelurahan"
+                                class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                              />
+                            </div>
+                          </div>
+
+                          <!-- Kecamatan -->
+                          <div class="w-full px-5">
+                            <div class="relative w-full">
+                              <label class="block text-sm mb-1" for="kecamatan">
+                                Kecamatan
+                              </label>
+                              <input
+                                readonly
+                                disabled
+                                type="text"
+                                id="kecamatan"
+                                class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                              />
+                            </div>
+                          </div>
+
+                                  <!-- Kota -->
+                          <div class="w-full">
+                            <div class="relative w-full">
+                              <label class="block text-sm mb-1" for="kecamatan">
+                                Kota
+                              </label>
+                              <input
+                                readonly
+                                disabled
+                                type="text"
+                                id="kecamatan"
+                                class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                              />
+                            </div>
+                          </div>
+
+                        </div>
+
+                
+
+                   
+                        
+                      </div>
 
                       <!-- Judul -->
                       <div class="w-full">
