@@ -838,6 +838,12 @@
   height: 62vh !important;
 }
 
+.slider-card-stories video {
+  width: 100%;
+  height: 62vh !important;
+}
+
+
 /*.slider-favorit video {
   width: 100%;
   height: 29vh !important;
