@@ -3345,15 +3345,17 @@
                   <!-- Mode Pertama -->
                   <div
                     class="h-full w-full grid grid-cols-1 StoriesGaleri1 hidden"
-                    >
+                  >
                     <!-- Stories Pertama -->
-                    <div class="w-full h-[62.4vh] grid grid-cols-4 relative stories_pertama">
+                    <div
+                      class="w-full h-[62.4vh] grid grid-cols-4 relative stories_pertama"
+                    >
                       <div
                         class="absolute self-center flex item-populer justify-between w-full"
-                        >
+                      >
                         <div class="ml-5 z-10">
                           <svg
-                           onclick="storiesPrevious()"
+                            onclick="storiesPrevious()"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -3371,7 +3373,7 @@
 
                         <div class="mr-5 z-10">
                           <svg
-                           onclick="storiesNext()"
+                            onclick="storiesNext()"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -3426,7 +3428,7 @@
 
                       <div
                         class="col-span-2 w-full h-full flex flex-col px-3 pt-3"
-                        >
+                      >
                         <!--  -->
                         <!--  -->
                         <div class="w-full flex justify-between">
@@ -3622,13 +3624,15 @@
                     </div>
 
                     <!-- Stories Kedua -->
-                    <div class="w-full h-[62.4vh] grid grid-cols-4 relative stories_kedua">
+                    <div
+                      class="w-full h-[62.4vh] grid grid-cols-4 relative stories_kedua"
+                    >
                       <div
                         class="absolute self-center flex item-populer justify-between w-full"
-                        >
+                      >
                         <div class="ml-5 z-10">
                           <svg
-                          onclick="storiesPrevious()"
+                            onclick="storiesPrevious()"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -3646,8 +3650,7 @@
 
                         <div class="mr-5 z-10">
                           <svg
-                           onclick="storiesNext()"
-
+                            onclick="storiesNext()"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -3702,7 +3705,7 @@
 
                       <div
                         class="col-span-2 w-full h-full flex flex-col px-3 pt-3"
-                        >
+                      >
                         <!--  -->
                         <!--  -->
                         <div class="w-full flex justify-between">
@@ -3899,8 +3902,6 @@
                       </div>
                       <!--  -->
                     </div>
-
-
                   </div>
 
                   <!-- Utama 1.4 -->
@@ -11587,14 +11588,23 @@
                               <div
                                 class="inline-flex items-center justify-start"
                               >
+                                <!-- Button Kirim Pesan -->
                                 <button
                                   data-pesan="Mochtar Riady"
                                   onclick="showMessage(this)"
                                   type="button"
-                                  class="h-4 p-3 ml-2 text-xs font-medium text-center inline-flex items-center text-black border border-gray-700 bg-gray-100 hover:bg-slate-200 rounded-md"
+                                  class="h-6 w-40 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
                                 >
                                   Kirim Pesan
                                 </button>
+
+                                <!-- Terjual -->
+
+                                <div
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                >
+                                  Terjual
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -11633,7 +11643,7 @@
                       <div class="flex justify-between w-full py-2">
                         <div class="text-md font-bold flex items-center">
                           Rumahs Impian Strategis Dijual! Segera Miliki Hunian
-                          Eksklusif di Lokasi Prime!
+                          Eksklusif di Lokasi Prime!!!
                         </div>
                       </div>
 
@@ -11822,12 +11832,22 @@
                                 <div class="slider-card-info-detail">
                                   <!--  -->
                                   <div class="video-wrapper">
-                                    <div class="h-[62.5vh] flex items-center">
+                                    <div
+                                      class="h-[62.5vh] flex items-center relative"
+                                    >
                                       <img
                                         class="w-full h-full object-contain"
                                         src="./src/images/Hunian/Rmh1/rumaha1.jpg"
                                         alt=""
                                       />
+                                      <div
+                                        class="absolute w-full flex justify-center"
+                                      >
+                                        <img
+                                          class="w-[15vw] h-full"
+                                          src="./src/images/sold.png"
+                                        />
+                                      </div>
                                     </div>
                                   </div>
                                   <!--  -->
