@@ -3860,6 +3860,18 @@ window.CloseAllStories = function () {
         Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
       (elem) => elem.classList.remove("hidden")
     );
+}
 
+window.storiesNext = function () {
+
+ document.querySelector('.stories_pertama').classList.add('hidden');
+    document.querySelector('.stories_kedua').classList.remove('hidden');
+
+}
+
+window.storiesPrevious = function () {
+
+document.querySelector('.stories_kedua').classList.add('hidden');
+    document.querySelector('.stories_pertama').classList.remove('hidden');
 
 }
