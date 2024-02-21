@@ -3840,6 +3840,38 @@ window.CloseStoriesDua = function () {
         Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
       (elem) => elem.classList.add("hidden")
     );
+}
 
+
+window.CloseAllStories = function () {
+
+    Array.from(document.getElementsByClassName("StoriesGaleri1")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+    Array.from(document.getElementsByClassName("StoriesGaleri2")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+    Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+        Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+}
+
+window.storiesNext = function () {
+
+ document.querySelector('.stories_pertama').classList.add('hidden');
+    document.querySelector('.stories_kedua').classList.remove('hidden');
+
+}
+
+window.storiesPrevious = function () {
+
+document.querySelector('.stories_kedua').classList.add('hidden');
+    document.querySelector('.stories_pertama').classList.remove('hidden');
 
 }
