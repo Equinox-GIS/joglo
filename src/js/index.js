@@ -3840,6 +3840,26 @@ window.CloseStoriesDua = function () {
         Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
       (elem) => elem.classList.add("hidden")
     );
+}
+
+
+window.CloseAllStories = function () {
+
+    Array.from(document.getElementsByClassName("StoriesGaleri1")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+    Array.from(document.getElementsByClassName("StoriesGaleri2")).forEach(
+      (elem) => elem.classList.add("hidden")
+    );
+
+    Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
+
+        Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
+      (elem) => elem.classList.remove("hidden")
+    );
 
 
 }
