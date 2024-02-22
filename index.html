@@ -41938,24 +41938,24 @@
                       />
                       <div
                         id="drop-area"
-                        class="w-full h-[30.2vh] mt-6 bg-white rounded shadow flex position_gambar_upload justify-start items-start"
-                      >
+                        class="w-full h-[30.2vh] mt-6 bg-white rounded shadow flex position_gambar_upload justify-center items-center"
+                        >
                         <label
                           for="fileElem"
                           class="cursor-pointer flex flex-col justify-center"
                         >
-                          <!--      <div class="hide_gambar_upload">
+                               <div class="hide_gambar_upload">
                             <img
                               class="w-20 h-20 object-contain"
                               src="./src/images/image-gallery.png"
                             />
                             <div class="text-xs text-black">Drag and Drop</div>
-                          </div> -->
+                          </div>
                         </label>
 
                         <div
                           id="preview-container"
-                          class="grid grid-cols-3 place-items-center add_wfull_upload"
+                          class="grid grid-cols-3 add_wfull_upload"
                         ></div>
 
                         <!--       <div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
@@ -47624,14 +47624,14 @@
         dropArea.classList.remove(HIGHLIGHT_CLASS);
       }
 
-      // Handle dropped files
-      function handleDrop(e) {
-        const dt = e.dataTransfer;
-        const files = dt.files;
+// Handle dropped files
+function handleDrop(e) {
+  const dt = e.dataTransfer;
+  const files = dt.files;
 
-        handleFiles(files);
-        hideUploadImage();
-      }
+  handleFiles(files);
+  hideUploadImage();
+}
 
       // Handle files
       function handleFiles(files) {
@@ -47653,7 +47653,7 @@
             "border-gray-200",
             "rounded",
             "overflow-hidden",
-            "w-[8vw]",
+            "w-[7.9vw]",
             "h-[10vh]",
             "relative"
           );
@@ -47742,6 +47742,11 @@
 
         const uploadWfull = document.querySelector(`.${UPLOAD_WFULL_CLASS}`);
         uploadWfull.classList.add("w-full");
+
+
+  dropArea.classList.remove("justify-center", "items-center");
+  dropArea.classList.add("justify-start", "items-start");
+
       }
     </script>
   </body>
