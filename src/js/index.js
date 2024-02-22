@@ -3875,3 +3875,52 @@ document.querySelector('.stories_kedua').classList.add('hidden');
     document.querySelector('.stories_pertama').classList.remove('hidden');
 
 }
+
+
+// Edit Posting
+
+
+function EditPostingListing() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Edit Listing";
+  });
+}
+
+
+window.EditPostingListingAgen = function (element) {
+  event.stopPropagation();
+
+    Array.from(
+    document.getElementsByClassName("btnEditListingg")
+  ).forEach((elem) => elem.classList.remove("hidden"));
+
+
+  EditPostingListing();
+
+  var MenuDelapanBelasTab = document.getElementById("MenuDelapanBelasTab");
+  if (MenuDelapanBelasTab) {
+    MenuDelapanBelasTab.click();
+  } else {
+    console.error("MenuDelapanBelasTab not found");
+  }
+};
+
+
+window.closeEditPostingListing = function () {
+
+  event.stopPropagation();
+
+    Array.from(
+    document.getElementsByClassName("btnBackEditListingg")
+  ).forEach((elem) => elem.classList.add("hidden"));
+
+  var MenuEmpatTab = document.getElementById("MenuEmpatTab");
+  if (MenuEmpatTab) {
+    MenuEmpatTab.click();
+    showJudulGaleri();
+  } else {
+    console.error("MenuEmpatTab not found");
+  }
+
+};
