@@ -3799,11 +3799,11 @@ window.biodataListingAgenClassifiedAds = function () {
 window.CloseStoriesSatu = function () {
 
 
-$(document).ready(function () {
-  var slider = $(".slider-card-stories-persegi");
-  var sliderConfig = getSliderStories();
-  slider.slick(sliderConfig);
-});
+    $(document).ready(function () {
+      var slider = $(".slider-card-stories-persegi");
+      var sliderConfig = getSliderStories();
+      slider.slick(sliderConfig);
+    });
 
 
     Array.from(document.getElementsByClassName("StoriesGaleri1")).forEach(
@@ -3894,6 +3894,10 @@ window.EditPostingListingAgen = function (element) {
     Array.from(
     document.getElementsByClassName("btnEditListingg")
   ).forEach((elem) => elem.classList.remove("hidden"));
+
+       Array.from(
+    document.getElementsByClassName("RemoveClassformEditListingg")
+  ).forEach((elem) => elem.classList.remove("formEditListingg"));
 
 
   EditPostingListing();
