@@ -951,7 +951,6 @@ function getSliderStoryGaleri() {
   };
 }
 
-
 function getSliderStories() {
   // Ambil konfigurasi default
   var sliderConfig = {
@@ -1000,9 +999,6 @@ $(document).ready(function () {
     }
   });
 });
-
-
-
 
 function getSliderVideo() {
   return {
@@ -3795,90 +3791,137 @@ window.biodataListingAgenClassifiedAds = function () {
 //     );
 // };
 
+var sliderInitialized = false;
 
 window.CloseStoriesSatu = function () {
+  if (!sliderInitialized) {
+    initializeSlider();
+    sliderInitialized = true;
+  }
 
+  Array.from(document.getElementsByClassName("StoriesGaleri1")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-    $(document).ready(function () {
-      var slider = $(".slider-card-stories-persegi");
-      var sliderConfig = getSliderStories();
-      slider.slick(sliderConfig);
-    });
+  Array.from(document.getElementsByClassName("StoriesGaleri2")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
+  Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-    Array.from(document.getElementsByClassName("StoriesGaleri1")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
-    Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
-
-        Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
-
-
-}
+  Array.from(
+    document.getElementsByClassName("StoriesGaleriKomponenHidden")
+  ).forEach((elem) => elem.classList.add("hidden"));
+};
 
 window.CloseStoriesDua = function () {
+  if (!sliderInitialized) {
+    initializeSlider();
+    sliderInitialized = true;
+  }
 
+  Array.from(document.getElementsByClassName("StoriesGaleri2")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
+
+  Array.from(document.getElementsByClassName("StoriesGaleri1")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
+
+  Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
+
+  Array.from(
+    document.getElementsByClassName("StoriesGaleriKomponenHidden")
+  ).forEach((elem) => elem.classList.add("hidden"));
+
+  //
+  $(".slider-card-stories-persegi").slick("refresh");
+};
+
+function initializeSlider() {
   $(document).ready(function () {
-  var slider = $(".slider-card-stories-persegi");
-  var sliderConfig = getSliderStories();
-  slider.slick(sliderConfig);
-});
-
-    Array.from(document.getElementsByClassName("StoriesGaleri2")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
-    Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
-
-        Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+    var slider = $(".slider-card-stories-persegi");
+    var sliderConfig = getSliderStories();
+    slider.slick(sliderConfig);
+  });
 }
 
+// window.CloseStoriesSatu = function () {
+
+//     $(document).ready(function () {
+//       var slider = $(".slider-card-stories-persegi");
+//       var sliderConfig = getSliderStories();
+//       slider.slick(sliderConfig);
+//     });
+
+//     Array.from(document.getElementsByClassName("StoriesGaleri1")).forEach(
+//       (elem) => elem.classList.remove("hidden")
+//     );
+
+//     Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
+//       (elem) => elem.classList.add("hidden")
+//     );
+
+//         Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
+//       (elem) => elem.classList.add("hidden")
+//     );
+
+// }
+
+// window.CloseStoriesDua = function () {
+
+//   $(document).ready(function () {
+//   var slider = $(".slider-card-stories-persegi");
+//   var sliderConfig = getSliderStories();
+//   slider.slick(sliderConfig);
+// });
+
+//     Array.from(document.getElementsByClassName("StoriesGaleri2")).forEach(
+//       (elem) => elem.classList.remove("hidden")
+//     );
+
+//     Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
+//       (elem) => elem.classList.add("hidden")
+//     );
+
+//         Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
+//       (elem) => elem.classList.add("hidden")
+//     );
+// }
 
 window.CloseAllStories = function () {
+  Array.from(document.getElementsByClassName("StoriesGaleri1")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-    Array.from(document.getElementsByClassName("StoriesGaleri1")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("StoriesGaleri2")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
-    Array.from(document.getElementsByClassName("StoriesGaleri2")).forEach(
-      (elem) => elem.classList.add("hidden")
-    );
+  Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-    Array.from(document.getElementsByClassName("StoriesGaleriHidden")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-
-        Array.from(document.getElementsByClassName("StoriesGaleriKomponenHidden")).forEach(
-      (elem) => elem.classList.remove("hidden")
-    );
-}
+  Array.from(
+    document.getElementsByClassName("StoriesGaleriKomponenHidden")
+  ).forEach((elem) => elem.classList.remove("hidden"));
+};
 
 window.storiesNext = function () {
-
- document.querySelector('.stories_pertama').classList.add('hidden');
-    document.querySelector('.stories_kedua').classList.remove('hidden');
-
-}
+  document.querySelector(".stories_pertama").classList.add("hidden");
+  document.querySelector(".stories_kedua").classList.remove("hidden");
+};
 
 window.storiesPrevious = function () {
-
-document.querySelector('.stories_kedua').classList.add('hidden');
-    document.querySelector('.stories_pertama').classList.remove('hidden');
-
-}
-
+  document.querySelector(".stories_kedua").classList.add("hidden");
+  document.querySelector(".stories_pertama").classList.remove("hidden");
+};
 
 // Edit Posting
-
 
 function EditPostingListing() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
@@ -3887,18 +3930,20 @@ function EditPostingListing() {
   });
 }
 
-
 window.EditPostingListingAgen = function (element) {
   event.stopPropagation();
 
-    Array.from(
-    document.getElementsByClassName("btnEditListingg")
-  ).forEach((elem) => elem.classList.remove("hidden"));
+  Array.from(document.getElementsByClassName("btnBackEditListingg")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-       Array.from(
+  Array.from(document.getElementsByClassName("btnEditListingg")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
+
+  Array.from(
     document.getElementsByClassName("RemoveClassformEditListingg")
   ).forEach((elem) => elem.classList.remove("formEditListingg"));
-
 
   EditPostingListing();
 
@@ -3910,14 +3955,12 @@ window.EditPostingListingAgen = function (element) {
   }
 };
 
-
 window.closeEditPostingListing = function () {
-
   event.stopPropagation();
 
-    Array.from(
-    document.getElementsByClassName("btnBackEditListingg")
-  ).forEach((elem) => elem.classList.add("hidden"));
+  Array.from(document.getElementsByClassName("btnBackEditListingg")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
 
   var MenuEmpatTab = document.getElementById("MenuEmpatTab");
   if (MenuEmpatTab) {
@@ -3926,5 +3969,85 @@ window.closeEditPostingListing = function () {
   } else {
     console.error("MenuEmpatTab not found");
   }
-
 };
+
+// Data Dummy
+
+document.addEventListener("DOMContentLoaded", function () {
+  var dataDummy = {
+    tahun_dibangun_new: "2000",
+    jenis_surat_new: "SHM - Sertifikat Hak Milik",
+    kamar_tidur_tambahan_new: "2",
+    kamar_tidur_utama_new: "3",
+    luas_bangunan_new: "150",
+    luas_tanah_new: "300",
+    kecamatan_new: "Cilandak ",
+    kelurahan_new: "Cilandak Barat",
+    kota_new_beda: "Jakarta",
+    koordinat_new: "-6.282301, 106.794109",
+    harga_new: "2.500.000.000",
+    judul_new:
+      "Dijual Rumah Lokasi Bagus Dekat Tol Cibubur di Jalan Kraggan sangat cocok sekali untuk keluarga baru",
+    deskripsi_postingan_new: `Rumah ini sangat asri, karena berada di lingkungan yang aman dan nyaman serta di dalamnya terdapat fasilitas berupa dapur,, dan lain-lain. Bangunan rumah masih kokoh sehingga Anda tidak perlu melakukan renovasi dalam waktu dekat.
+
+Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perkantoran, sekolah, rumah sakit, pusat kuliner, dan lain-lain.
+
+10 menit ke tol cibuburrr
+10 menit ke mall juncion
+10 menit ke RS mitra keluarga
+5 menit ke pasar tradisional kranggan
+Dekat sekolah negeri dan swasta
+Dekat minimarket
+Akses dua mobil
+Lingkungan aman nyaman dan bebas banjir
+
+Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perkantoran, sekolah, rumah sakit, pusat kuliner, dan lain-lain.
+
+
+  `,
+  };
+
+  var deskripsiBangunan = document.getElementById("deskripsi_postingan_new");
+  deskripsiBangunan.value = dataDummy.deskripsi_postingan_new;
+
+  var judulBangunan = document.getElementById("judul_new");
+  judulBangunan.value = dataDummy.judul_new;
+
+  var hargaBangunan = document.getElementById("harga_new");
+  hargaBangunan.value = dataDummy.harga_new;
+
+  var koordinatBangunan = document.getElementById("koordinat_new");
+  koordinatBangunan.value = dataDummy.koordinat_new;
+
+  var kelurahanBangunan = document.getElementById("kelurahan_new");
+  kelurahanBangunan.value = dataDummy.kelurahan_new;
+
+  var kecamatanBangunan = document.getElementById("kecamatan_new");
+  kecamatanBangunan.value = dataDummy.kecamatan_new;
+
+  var kotaBangunan = document.getElementById("kota_new_beda");
+  kotaBangunan.value = dataDummy.kota_new_beda;
+
+  var kamarUtamaBangunan = document.getElementById("kamar_tidur_utama_new");
+  kamarUtamaBangunan.value = dataDummy.kamar_tidur_utama_new;
+
+  var kamarTambahanBangunan = document.getElementById(
+    "kamar_tidur_tambahan_new"
+  );
+  kamarTambahanBangunan.value = dataDummy.kamar_tidur_tambahan_new;
+
+  var luastanahBangunan = document.getElementById("luas_tanah_new");
+  luastanahBangunan.value = dataDummy.luas_tanah_new;
+
+  var luasBangunan = document.getElementById("luas_bangunan_new");
+  luasBangunan.value = dataDummy.luas_bangunan_new;
+
+  var kamartidurutama = document.getElementById("kamar_tidur_utama_new");
+  kamartidurutama.value = dataDummy.kamar_tidur_utama_new;
+
+  var kamartidurtambahan = document.getElementById("kamar_tidur_tambahan_new");
+  kamartidurtambahan.value = dataDummy.kamar_tidur_tambahan_new;
+
+  var tahunBangunan = document.getElementById("tahun_dibangun_new");
+  tahunBangunan.value = dataDummy.tahun_dibangun_new;
+});
