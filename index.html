@@ -2296,7 +2296,7 @@
 
                               <!-- Mode1 - 6 -->
                               <div
-                                data-active-tab="6"
+                                data-active-tab="stories1"
                                 onclick="CloseStoriesSatu(this)"
                                 class="relative flex flex-col items-center cursor-pointer"
                               >
@@ -2315,7 +2315,7 @@
 
                               <!-- Mode1 - 77 -->
                               <div
-                                data-active-tab="6"
+                                data-active-tab="stories2"
                                 onclick="CloseStoriesDua(this)"
                                 class="relative flex flex-col items-center cursor-pointer"
                               >
@@ -41857,13 +41857,13 @@
                         <div class="relative w-full">
                           <label
                             class="block text-xs mb-1"
-                            for="deskripsi_postingan"
+                            for="deskripsi_postingan_new"
                           >
-                            Deskripsi (maks. 600 karakter)
+                            Deskripsi (maks. 750 karakter)
                           </label>
                           <textarea
-                            name="deskripsi_postingan"
-                            id="deskripsi_postingan"
+                            name="deskripsi_postingan_new"
+                            id="deskripsi_postingan_new"
                             class="block p-2.5 h-[51.8vh] remove-scroll-textarea resize-none w-full text-xs text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                             required=""
                             rows="9"
@@ -41926,12 +41926,12 @@
                         <!-- Judul -->
 
                         <div class="relative w-full mb-3.5">
-                          <label class="block text-xs mb-1" for="judul">
+                          <label class="block text-xs mb-1" for="judul_new">
                             Judul (maks 100 karakter)
                           </label>
                           <textarea
-                            name="judul"
-                            id="judul"
+                            name="judul_new"
+                            id="judul_new"
                             class="block p-2.5 h-[9vh] remove-scroll-textarea resize-none w-full text-xs text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                             required=""
                             rows="9"
@@ -41940,68 +41940,68 @@
 
                         <!-- Harga -->
                         <div class="relative w-full mb-3.5">
-                          <label class="block text-xs mb-1" for="harga">
+                          <label class="block text-xs mb-1" for="harga_new">
                             Harga (Rp)
                           </label>
                           <input
-                            type="number"
-                            id="harga"
+                            type="text"
+                            id="harga_new"
                             class="border-0 px-2 py-1.5 text-black bg-white rounded text-xs focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                           />
                         </div>
 
                         <!-- Koordinat -->
                         <div class="relative w-full mb-3.5">
-                          <label class="block text-xs mb-1" for="koordinat">
+                          <label class="block text-xs mb-1" for="koordinat_new">
                             Koordinatzz
                           </label>
                           <input
                             readonly
                             disabled
                             type="text"
-                            id="koordinat"
+                            id="koordinat_new"
                             class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded text-xs focus:outline-none focus:ring-0 w-full"
                           />
                         </div>
 
                         <!-- Kelurahan -->
                         <div class="relative w-full mb-3.5">
-                          <label class="block text-xs mb-1" for="kelurahan">
+                          <label class="block text-xs mb-1" for="kelurahan_new">
                             Kelurahan
                           </label>
                           <input
                             readonly
                             disabled
                             type="text"
-                            id="kelurahan"
+                            id="kelurahan_new"
                             class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded text-xs focus:outline-none focus:ring-0 w-full"
                           />
                         </div>
 
                         <!-- Kecamatan -->
                         <div class="relative w-full mb-3.5">
-                          <label class="block text-xs mb-1" for="kecamatan">
+                          <label class="block text-xs mb-1" for="kecamatan_new">
                             Kecamatan
                           </label>
                           <input
                             readonly
                             disabled
                             type="text"
-                            id="kecamatan"
+                            id="kecamatan_new"
                             class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded text-xs focus:outline-none focus:ring-0 w-full"
                           />
                         </div>
 
                         <!-- Kota -->
                         <div class="relative w-full">
-                          <label class="block text-xs mb-1" for="kecamatan">
+                          <label class="block text-xs mb-1" for="kota_new_beda">
                             Kota
                           </label>
                           <input
                             readonly
                             disabled
                             type="text"
-                            id="kecamatan"
+                            id="kota_new_beda"
                             class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded text-xs focus:outline-none focus:ring-0 w-full"
                           />
                         </div>
@@ -42036,13 +42036,13 @@
                               <div class="relative w-full">
                                 <label
                                   class="block text-xs mb-1"
-                                  for="luas-tanah"
+                                  for="luas_tanah_new"
                                 >
                                   Luas Tanah (m²)
                                 </label>
                                 <input
-                                  type="number"
-                                  id="luas-tanah"
+                                  type="text"
+                                  id="luas_tanah_new"
                                   class="border-0 px-2 py-1.5 text-black bg-white rounded text-xs focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                 />
                               </div>
@@ -42053,13 +42053,13 @@
                               <div class="relative w-full">
                                 <label
                                   class="block text-xs mb-1"
-                                  for="luas-bangunan"
+                                  for="luas_bangunan_new"
                                 >
                                   Luas Bangunan (m²)
                                 </label>
                                 <input
                                   type="number"
-                                  id="luas-bangunan"
+                                  id="luas_bangunan_new"
                                   class="border-0 px-2 py-1.5 text-black bg-white rounded text-xs focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                 />
                               </div>
@@ -42072,13 +42072,13 @@
                               <div class="relative w-full">
                                 <label
                                   class="block text-xs mb-1"
-                                  for="kamar-tidur-utama"
+                                  for="kamar_tidur_utama_new"
                                 >
                                   Kamar Tidur Utamaaa
                                 </label>
                                 <input
                                   type="number"
-                                  id="kamar-tidur-utama"
+                                  id="kamar_tidur_utama_new"
                                   class="border-0 px-2 py-1.5 text-black bg-white rounded text-xs focus:outline-none focus:ring-0 w-full"
                                 />
                               </div>
@@ -42089,13 +42089,13 @@
                               <div class="relative w-full">
                                 <label
                                   class="block text-xs mb-1"
-                                  for="kamar-tidur-tambahan"
+                                  for="kamar_tidur_tambahan_new"
                                 >
                                   Kamar Tidur Tambahan
                                 </label>
                                 <input
                                   type="number"
-                                  id="kamar-tidur-tambahan"
+                                  id="kamar_tidur_tambahan_new"
                                   class="border-0 px-2 py-1.5 text-black bg-white rounded text-xs focus:outline-none focus:ring-0 w-full"
                                 />
                               </div>
@@ -42108,12 +42108,12 @@
                               <div class="relative w-full">
                                 <label
                                   class="block text-xs mb-1"
-                                  for="jenis-surat"
+                                  for="jenis-surat_new"
                                 >
                                   Jenis Surat
                                 </label>
                                 <select
-                                  id="jenis-surat"
+                                  id="jenis-surat_new"
                                   class="border-0 px-2 py-1.5 text-black bg-white rounded text-xs focus:outline-none focus:ring-0 w-full"
                                 >
                                   <option value="shm">SHM</option>
@@ -42127,13 +42127,13 @@
                               <div class="relative w-full">
                                 <label
                                   class="block text-xs mb-1"
-                                  for="tahun-dibangun"
+                                  for="tahun_dibangun_new"
                                 >
                                   Tahun Dibangun
                                 </label>
                                 <input
                                   type="number"
-                                  id="tahun-dibangun"
+                                  id="tahun_dibangun_new"
                                   class="border-0 px-2 py-1.5 text-black bg-white rounded text-xs focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                 />
                               </div>
@@ -42146,17 +42146,17 @@
 
                       <div class="col-span-2">
                         <div class="grid grid-cols-3 gap-y-1 gap-x-4 pt-2">
-                          <!-- Carport -->
+                          <!-- IMB -->
                           <div class="w-full">
                             <div class="flex items-center mb-1">
                               <input
-                                id="carport"
+                                id="imb"
                                 type="checkbox"
                                 value=""
                                 class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
                               />
                               <label
-                                for="carport"
+                                for="imb"
                                 class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
                                 >IMB</label
                               >
@@ -42180,116 +42180,119 @@
                             </div>
                           </div>
 
-                          <!-- Swimming Pool -->
+                          <!-- Taman -->
                           <div class="w-full">
                             <div class="flex items-center mb-1">
                               <input
-                                id="swimming-pool"
+                                id="taman"
                                 type="checkbox"
                                 value=""
                                 class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
                               />
                               <label
-                                for="swimming-pool"
+                                for="taman"
                                 class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
                                 >Taman</label
                               >
                             </div>
                           </div>
 
-                          <!-- IMB -->
+                          <!-- One Gate System -->
                           <div class="w-full">
                             <div class="flex items-center mb-1">
                               <input
-                                id="imb"
+                                id="one-gate-system"
                                 type="checkbox"
                                 value=""
                                 class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
                               />
                               <label
-                                for="imb"
+                                for="one-gate-system"
                                 class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
                                 >One Gate System</label
                               >
                             </div>
                           </div>
 
-                          <!-- Gate Cluster -->
+                          <!-- Canopy -->
                           <div class="w-full">
                             <div class="flex items-center">
                               <input
-                                id="gate-cluster"
+                                id="canopy"
                                 type="checkbox"
                                 value=""
                                 class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
                               />
                               <label
-                                for="gate-cluster"
+                                for="canopy"
                                 class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
                                 >Canopy</label
                               >
                             </div>
                           </div>
-                          <!-- Gate Cluster -->
+
+                          <!-- Swimming Pool -->
                           <div class="w-full">
                             <div class="flex items-center">
                               <input
-                                id="gate-cluster"
+                                id="swimming-pool-2"
                                 type="checkbox"
                                 value=""
                                 class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
                               />
                               <label
-                                for="gate-cluster"
+                                for="swimming-pool-2"
                                 class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
                                 >Swimming Pool</label
                               >
                             </div>
                           </div>
-                          <!-- IMB -->
+
+                          <!-- AC -->
                           <div class="w-full">
                             <div class="flex items-center mb-1">
                               <input
-                                id="imb"
+                                id="ac"
                                 type="checkbox"
                                 value=""
                                 class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
                               />
                               <label
-                                for="imb"
+                                for="ac"
                                 class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
                                 >AC</label
                               >
                             </div>
                           </div>
 
-                          <!-- Gate Cluster -->
+                          <!-- Rooftop -->
                           <div class="w-full">
                             <div class="flex items-center">
                               <input
-                                id="gate-cluster"
+                                id="rooftop"
                                 type="checkbox"
                                 value=""
                                 class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
                               />
                               <label
-                                for="gate-cluster"
+                                for="rooftop"
                                 class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
                                 >Rooftop</label
                               >
                             </div>
                           </div>
-                          <!-- Gate Cluster -->
+
+                          <!-- Carport -->
                           <div class="w-full">
                             <div class="flex items-center">
                               <input
-                                id="gate-cluster"
+                                id="carport"
                                 type="checkbox"
                                 value=""
                                 class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
                               />
                               <label
-                                for="gate-cluster"
+                                for="carport"
                                 class="ml-2 text-xs cursor-pointer font-medium text-gray-900"
                                 >Carport</label
                               >
