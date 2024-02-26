@@ -11034,6 +11034,7 @@
                                 aria-labelledby="detail-pengaturan-satu-tab"
                               >
                                 <!-- Profil bner-->
+
                                 <div class="h-[70.5vh] form-profil px-0">
                                   <!--  -->
 
@@ -11059,7 +11060,7 @@
                                                 type="file"
                                                 class="file-input hidden"
                                                 accept="image/*"
-                                                onchange="previewFile(this);"
+                                                onchange="previewFilePengaturan(this);"
                                               />
                                               <img
                                                 id="preview-img-avatar"
@@ -41874,7 +41875,7 @@
                                   src="./src/images/image-gallery.png"
                                 />
                                 <div class="text-sm text-black">
-                                  Drag and Drop
+                                  Drag and Drop pro
                                 </div>
                               </div>
                             </label>
@@ -47636,8 +47637,9 @@
       }
     </script>
 
-    <script>
-      function previewFile(input) {
+
+                               <script>
+      function previewFilePengaturan(input) {
         var file = input.files[0];
         if (file) {
           var reader = new FileReader();
@@ -47651,18 +47653,19 @@
         }
       }
 
-      function deleteImage() {
-        // Prevents the link from being followed
-        event.preventDefault();
-        // Set the preview image back to the default one
-        document.getElementById("preview-img-avatar").src =
-          "/src/images/model/model11.jpg";
-        // Optionally, clear the file input
-        document.getElementById("file-upload-avatarr").value = "";
-        // Hide the delete icon using Tailwind's utility class
-        document.getElementById("delete-icon").classList.add("hidden");
-        document.getElementById("delete-icon").classList.remove("flex");
-      }
+      // function deleteImage() {
+      //   // Prevents the link from being followed
+      //   event.preventDefault();
+      //   // Set the preview image back to the default one
+      //   document.getElementById("preview-img-avatar").src =
+      //     "/src/images/model/model11.jpg";
+      //   // Optionally, clear the file input
+      //   document.getElementById("file-upload-avatarr").value = "";
+      //   // Hide the delete icon using Tailwind's utility class
+      //   document.getElementById("delete-icon").classList.add("hidden");
+      //   document.getElementById("delete-icon").classList.remove("flex");
+      // }
     </script>
+
   </body>
 </html>
