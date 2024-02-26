@@ -3295,6 +3295,17 @@ window.toggleTerjualTersedia = function () {
   }
 };
 
+window.toggleAgenNonAgen = function () {
+  var checkBox = document.getElementById("toggleSwitchAgenNonAgen");
+  var text = document.getElementById("toggleTextAgenNonaGEN");
+
+  if (checkBox.checked == true) {
+    text.innerHTML = "Agen";
+  } else {
+    text.innerHTML = "Non Agen";
+  }
+};
+
 window.toggleAgenStatus = function () {
   var checkBox = document.getElementById("toggleSwitchAgen");
   var text = document.getElementById("toggleTextAgen");
