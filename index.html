@@ -11064,7 +11064,7 @@
                                               />
                                               <img
                                                 id="preview-img-avatar"
-                                                src="/src/images/model/model5.jpg"
+                                                src="/src/images/model/model6.png"
                                                 alt=""
                                                 class="w-full h-full bg-white rounded-full object-cover relative"
                                               />
@@ -11079,11 +11079,12 @@
                                             </label>
                                           </div>
                                           <!-- username -->
+
                                           <div
-                                            class="relative w-full mb-2.5 mt-7"
+                                            class="relative w-full mb-2 mt-7"
                                           >
                                             <label
-                                              class="block text-sm mb-1"
+                                              class="block text-xs font-bold mb-1"
                                               for="username"
                                             >
                                               Username
@@ -11091,14 +11092,14 @@
                                             <input
                                               type="text"
                                               id="username"
-                                              class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                              class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                             />
                                           </div>
 
                                           <!-- nama profil -->
-                                          <div class="relative w-full mb-2.5">
+                                          <div class="relative w-full mb-2">
                                             <label
-                                              class="block text-sm mb-1"
+                                              class="block text-xs font-bold mb-1"
                                               for="nama profil"
                                             >
                                               Nama Profil (maks 20 karakter)
@@ -11106,14 +11107,14 @@
                                             <input
                                               type="text"
                                               id="nama profil"
-                                              class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm focus:outline-none focus:ring-0 w-full"
+                                              class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                             />
                                           </div>
 
                                           <!-- Deskripsi singkat -->
-                                          <div class="relative w-full mb-2.5">
+                                          <div class="relative w-full mb-2">
                                             <label
-                                              class="block text-sm mb-1"
+                                              class="block text-xs font-bold mb-1"
                                               for="deskripsi_singkat_postingannn"
                                             >
                                               Deskripsi Singkat (maks 70
@@ -11122,28 +11123,26 @@
                                             <textarea
                                               name="deskripsi_singkat_postingannn"
                                               id="deskripsi_singkat_postingannn"
-                                              class="block py-1 px-2 h-[7vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                              class="block py-1.5 px-2 h-[7vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                                               required=""
                                               rows="9"
                                             ></textarea>
                                           </div>
 
                                           <!-- Status -->
-                                          <div class="relative w-full mb-2.5">
+                                          <div class="relative w-full mb-2">
                                             <label
-                                              class="block text-sm mb-1"
+                                              class="block text-xs font-bold mb-1"
                                               for="Status"
+                                              >Status</label
                                             >
-                                              Status
-                                            </label>
                                             <div
-                                              class="w-full grid grid-cols-[90px,50px,100px]"
+                                              class="w-full grid grid-cols-[90px,50px,100px] justify-start"
                                             >
                                               <div
                                                 class="w-full flex items-center"
                                               >
-                                                <span
-                                                  class="text-sm font-medium text-gray-900"
+                                                <span class="text-sm text-black"
                                                   >Non Agen</span
                                                 >
                                               </div>
@@ -11167,83 +11166,78 @@
                                               <div
                                                 class="w-full flex items-center"
                                               >
-                                                <span
-                                                  class="text-sm font-medium text-gray-900"
+                                                <span class="text-sm text-black"
                                                   >Agen</span
                                                 >
                                               </div>
                                             </div>
                                           </div>
 
-                                          <!-- afiliasi -->
-                                          <div class="relative w-full mb-2.5">
+                                          <div class="relative w-full mb-2">
                                             <div
-                                              class="grid grid-cols-[1fr,90px]"
+                                              class="grid grid-cols-[1fr,80px]"
                                             >
                                               <div class="w-full">
                                                 <label
-                                                  class="block text-sm mb-1"
+                                                  class="block text-xs font-bold mb-1"
                                                   for="afiliasi"
                                                 >
                                                   Afiliasi
                                                 </label>
 
-                                                <input
-                                                  type="text"
+                                                <textarea
+                                                  name="afiliasi"
                                                   id="afiliasi"
-                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded text-sm focus:outline-none focus:ring-0 w-full"
-                                                />
+                                                  class="block py-1.5 px-2 h-[7vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                                  required=""
+                                                  rows="9"
+                                                ></textarea>
                                               </div>
 
-                                              <div
-                                                class="w-full flex flex-col border"
-                                              >
-                                                <label
-                                                  class="block text-sm mb-1"
+                                              <div class="w-full flex flex-col">
+                                                <div
+                                                  class="ml-2.5 w-full h-full flex items-center justify-start"
                                                 >
-                                                  Foto
-                                                </label>
+                                                  <label
+                                                    class="block text-xs font-bold mb-1"
+                                                  >
+                                                    Logo
+                                                  </label>
+                                                </div>
 
                                                 <div
-                                                  class="w-full border border-red-500"
+                                                  id="uploadContainer"
+                                                  class="w-[4.6vw] h-[7vh] flex items-center justify-end border border-gray-200 ml-2.5 rounded-lg bg-white p-1.5"
                                                 >
+                                                  <!-- Upload Button Container -->
                                                   <div
-                                                    class="w-[15vh] h-[7vh] flex items-center justify-center"
+                                                    id="imageDefaultPreview"
+                                                    class="w-full h-full relative cursor-pointer"
                                                   >
-                                                    <div
-                                                      id="uploadContainer"
-                                                      class=""
-                                                    >
-                                                      <label
-                                                        for="uploadPreviewAfiliasi"
-                                                        class="cursor-pointer"
-                                                      >
-                                                        <img
-                                                          class="h-full w-full object-contain"
-                                                          src="/src/images/gallery.png"
-                                                          alt=""
-                                                        />
-                                                      </label>
-                                                      <input
-                                                        id="uploadPreviewAfiliasi"
-                                                        type="file"
-                                                        class="hidden"
-                                                        accept="image/*"
-                                                      />
-                                                    </div>
+                                                    <img
+                                                      class="h-full w-full object-contain"
+                                                      src="/src/images/landscape.png"
+                                                      alt=""
+                                                    />
+                                                    <!-- Hidden File Input -->
+                                                    <input
+                                                      type="file"
+                                                      id="fileUpload"
+                                                      class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                                                    />
+                                                  </div>
 
-                                                    <!-- Image Preview -->
-                                                    <div
-                                                      id="imagePreviewContainer"
-                                                      class="w-[15vh] h-[7vh] flex items-start justify-center hidden"
-                                                    >
-                                                      <img
-                                                        id="imagePreview"
-                                                        class="object-contain w-[5vw] h-full"
-                                                        src=""
-                                                        alt="Preview Gambar"
-                                                      />
-                                                    </div>
+                                                  <!-- Image Preview Container -->
+                                                  <div
+                                                    id="imagePreviewContainer"
+                                                    class="hidden w-[4.6vw] h-[7vh] flex justify-start"
+                                                  >
+                                                    <img
+                                                      id="imagePreview"
+                                                      class="h-full w-full object-contain"
+                                                      src=""
+                                                      alt="Image preview"
+                                                    />
                                                   </div>
                                                 </div>
                                               </div>
@@ -11251,9 +11245,9 @@
                                           </div>
 
                                           <!-- Spesialisasi Asset -->
-                                          <div class="relative w-full mb-2.5">
+                                          <div class="relative w-full mb-2">
                                             <label
-                                              class="block text-sm mb-0.5"
+                                              class="block text-xs font-bold mb-1"
                                               for="speliasi-aset"
                                             >
                                               Spesialisasi Area
@@ -11266,37 +11260,37 @@
                                               rows="9"
                                             ></textarea>
                                           </div>
+
+                                          <!--  -->
                                         </div>
 
                                         <!-- a -->
                                         <div class="flex flex-col">
-                                          <!-- Deskripsi -->
-                                          <div class="relative w-full">
+                                          <!-- Deskripsi Panjang -->
+                                          <div class="relative w-full mb-2">
                                             <label
-                                              class="block text-sm mb-1"
+                                              class="block text-xs font-bold mb-1"
                                               for="deskripsi_postingannn"
                                             >
-                                              Deskripsi Panjang (maks. 750
-                                              karakter)
+                                              Deskripsi (maks. 750 karakter)
                                             </label>
                                             <textarea
                                               name="deskripsi_postingannn"
                                               id="deskripsi_postingannn"
-                                              class="block p-2.5 h-[65.6vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                              class="block px-2 h-[61.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                                               required=""
                                               rows="9"
                                             ></textarea>
                                           </div>
 
-                                          <!-- spesialisasi asset -->
-
                                           <div
-                                            class="w-full flex flex-col text-sm mt-1.5"
+                                            class="relative w-full mb-2 flex flex-col"
                                           >
-                                            <div class="">
-                                              Spesialisasi Aset
+                                            <div
+                                              class="block text-xs font-bold mb-1"
+                                            >
+                                              Tipe Aset
                                             </div>
-
                                             <div
                                               class="w-full grid grid-cols-2"
                                             >
@@ -11343,7 +11337,7 @@
                                                 <label
                                                   for="carport3"
                                                   class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                  >Apt. Baru</label
+                                                  >Apartemen Baru</label
                                                 >
                                               </div>
 
@@ -11358,7 +11352,7 @@
                                                 <label
                                                   for="carport1"
                                                   class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                  >Apt. Seken</label
+                                                  >Apartemen Seken</label
                                                 >
                                               </div>
 
@@ -11373,7 +11367,21 @@
                                                 <label
                                                   for="carport2"
                                                   class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                  >Ruko</label
+                                                  >Ruko Baru</label
+                                                >
+                                              </div>
+
+                                              <div class="flex items-center">
+                                                <input
+                                                  id="carport2"
+                                                  type="checkbox"
+                                                  value=""
+                                                  class="w-3.5 h-3.5 text-blue-600 bg-white border-gray-300 rounded focus:ring-0"
+                                                />
+                                                <label
+                                                  for="carport2"
+                                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                  >Ruko Seken</label
                                                 >
                                               </div>
 
@@ -42041,7 +42049,7 @@
                         <div class="w-full flex flex-col mt-[4.2vh]">
                           <div class="relative w-full mb-2 flex flex-col">
                             <div class="block text-xs font-bold mb-1">
-                              Tipe Asset
+                              Tipe Aset
                             </div>
                             <div class="grid grid-cols-3">
                               <div class="flex items-center">
@@ -47870,25 +47878,38 @@
 
     <script>
       document
-        .getElementById("uploadPreviewAfiliasi")
+        .getElementById("fileUpload")
         .addEventListener("change", function (event) {
           const file = event.target.files[0];
           if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
+              // Containers
               const previewContainer = document.getElementById(
                 "imagePreviewContainer"
               );
+              const previewDefault = document.getElementById(
+                "imageDefaultPreview"
+              );
               const previewImage = document.getElementById("imagePreview");
-              previewImage.src = e.target.result;
-              previewContainer.classList.remove("hidden"); // Menampilkan preview
 
-              const uploadContainer =
-                document.getElementById("uploadContainer");
-              uploadContainer.classList.add("hidden"); // Menyembunyikan elemen upload
+              // Update and show preview image
+              previewImage.src = e.target.result;
+              previewContainer.classList.remove("hidden");
+
+              // Hide the default preview on new image load
+              previewDefault.classList.add("hidden");
             };
             reader.readAsDataURL(file);
           }
+        });
+
+      // Optional: Add click event listener to the previewContainer to allow changing the image again
+      document
+        .getElementById("imagePreviewContainer")
+        .addEventListener("click", function () {
+          // Trigger the file upload dialog
+          document.getElementById("fileUpload").click();
         });
     </script>
   </body>
