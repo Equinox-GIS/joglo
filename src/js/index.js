@@ -3994,7 +3994,7 @@ document.addEventListener("DOMContentLoaded", function () {
     luas_tanah_new: "300",
     kecamatan_new: "Cilandak ",
     kelurahan_new: "Cilandak Barat",
-    kota_new_beda: "Jakarta",
+    kota_new_beda: "Jakarta Selatan",
     koordinat_new: "-6.282301, 106.794109",
     harga_new: "2.500.000.000",
     judul_new:

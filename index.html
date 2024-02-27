@@ -11177,17 +11177,16 @@
 
                                           <!-- afiliasi -->
                                           <div class="relative w-full mb-2.5">
-
                                             <div
-                                              class="grid grid-cols-[1fr,135px]"
-                                              >
+                                              class="grid grid-cols-[1fr,90px]"
+                                            >
                                               <div class="w-full">
-                                                                                              <label
-                                              class="block text-sm mb-1"
-                                              for="afiliasi"
-                                              >
-                                              Afiliasi
-                                            </label>
+                                                <label
+                                                  class="block text-sm mb-1"
+                                                  for="afiliasi"
+                                                >
+                                                  Afiliasi
+                                                </label>
 
                                                 <input
                                                   type="text"
@@ -11196,72 +11195,58 @@
                                                 />
                                               </div>
 
-                                              <div class="w-full flex flex-col">
-                                                
-                                                                                            <label
-                                              class="block text-sm mb-1"
+                                              <div
+                                                class="w-full flex flex-col border"
                                               >
-                                              Foto
-                                            </label>
+                                                <label
+                                                  class="block text-sm mb-1"
+                                                >
+                                                  Foto
+                                                </label>
 
                                                 <div
-                                                class="w-full flex items-center justify-center"
-                                                >
-                                                <div
-                                                  class="w-[15vh] h-[7vh] flex items-center justify-center ml-2"
+                                                  class="w-full border border-red-500"
                                                 >
                                                   <div
-                                                    id="uploadContainer"
-                                                    class="rounded-md border border-gray-300 bg-gray-50 p-1.5 h-full flex flex-col items-center justify-center"
+                                                    class="w-[15vh] h-[7vh] flex items-center justify-center"
                                                   >
-                                                    <label
-                                                      for="uploadPreviewAfiliasi"
-                                                      class="flex flex-col items-center gap-1 cursor-pointer"
+                                                    <div
+                                                      id="uploadContainer"
+                                                      class=""
                                                     >
-                                                      <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-[3vh] w-[3vw] fill-white stroke-gray-500"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor"
-                                                        stroke-width="2"
+                                                      <label
+                                                        for="uploadPreviewAfiliasi"
+                                                        class="cursor-pointer"
                                                       >
-                                                        <path
-                                                          stroke-linecap="round"
-                                                          stroke-linejoin="round"
-                                                          d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                                        <img
+                                                          class="h-full w-full object-contain"
+                                                          src="/src/images/gallery.png"
+                                                          alt=""
                                                         />
-                                                      </svg>
-                                                      <span
-                                                        class="text-xs text-gray-600 font-medium"
-                                                        >Upload Gambar</span
-                                                      >
-                                                    </label>
-                                                    <input
-                                                      id="uploadPreviewAfiliasi"
-                                                      type="file"
-                                                      class="hidden"
-                                                      accept="image/*"
-                                                    />
-                                                  </div>
+                                                      </label>
+                                                      <input
+                                                        id="uploadPreviewAfiliasi"
+                                                        type="file"
+                                                        class="hidden"
+                                                        accept="image/*"
+                                                      />
+                                                    </div>
 
-                                                  <!-- Image Preview -->
-                                                  <div
-                                                    id="imagePreviewContainer"
-                                                    class="w-[15vh] h-[7vh] flex items-start justify-center hidden"
-                                                  >
-                                                    <img
-                                                      id="imagePreview"
-                                                      class="object-contain w-[5vw] h-full"
-                                                      src=""
-                                                      alt="Preview Gambar"
-                                                    />
+                                                    <!-- Image Preview -->
+                                                    <div
+                                                      id="imagePreviewContainer"
+                                                      class="w-[15vh] h-[7vh] flex items-start justify-center hidden"
+                                                    >
+                                                      <img
+                                                        id="imagePreview"
+                                                        class="object-contain w-[5vw] h-full"
+                                                        src=""
+                                                        alt="Preview Gambar"
+                                                      />
+                                                    </div>
                                                   </div>
                                                 </div>
                                               </div>
-
-                                              </div>
-
-                                          
                                             </div>
                                           </div>
 
@@ -11391,8 +11376,6 @@
                                                   >Ruko</label
                                                 >
                                               </div>
-
-                                    
 
                                               <!--  -->
                                             </div>
@@ -42008,8 +41991,8 @@
                           <div class="block text-xs font-bold mb-1">
                             Penjual
                           </div>
-                          <div class="flex flex-row">
-                            <div class="flex items-center mr-4">
+                          <div class="w-full grid grid-cols-3">
+                            <div class="flex items-center">
                               <input
                                 id="penjual-agen"
                                 type="radio"
@@ -42023,7 +42006,7 @@
                                 >Agen</label
                               >
                             </div>
-                            <div class="flex items-center mr-4">
+                            <div class="flex items-center">
                               <input
                                 id="penjual-pemilik"
                                 type="radio"
@@ -42034,7 +42017,7 @@
                               <label
                                 for="penjual-pemilik"
                                 class="ms-2 text-sm text-black"
-                                >Pemilik Langsung</label
+                                >Pemilik</label
                               >
                             </div>
                             <div class="flex items-center">
@@ -42055,12 +42038,12 @@
                         </div>
                         <!-- Deskripsi bangunan -->
 
-                        <div class="w-full flex flex-col mt-[4.5vh]">
+                        <div class="w-full flex flex-col mt-[4.2vh]">
                           <div class="relative w-full mb-2 flex flex-col">
                             <div class="block text-xs font-bold mb-1">
                               Tipe Asset
                             </div>
-                            <div class="flex flex-row">
+                            <div class="grid grid-cols-3">
                               <div class="flex items-center">
                                 <input
                                   id="default-radio-11"
@@ -42072,12 +42055,10 @@
                                 <label
                                   for="default-radio-11"
                                   class="ms-2 text-sm text-black"
+                                  >Rumah Baru</label
                                 >
-                                  Rumah Baru
-                                </label>
                               </div>
-
-                              <div class="flex items-center ml-4">
+                              <div class="flex items-center">
                                 <input
                                   id="default-radio-12"
                                   type="radio"
@@ -42088,10 +42069,10 @@
                                 <label
                                   for="default-radio-12"
                                   class="ms-2 text-sm text-black"
+                                  >Rumah Seken</label
                                 >
-                                  Rumah Seken
-                                </label>
                               </div>
+                              <div></div>
                             </div>
                           </div>
 
@@ -42170,14 +42151,31 @@
                           </div>
 
                           <div class="w-full flex flex-row mb-2">
-                            <!-- Jenis Surat -->
+                            <!-- Tahun dibangun -->
                             <div class="basis-6/12">
+                              <div class="relative w-full">
+                                <label
+                                  class="block text-xs font-bold mb-1"
+                                  for="tahun_dibangun_new"
+                                >
+                                  Tahun Dibangun
+                                </label>
+                                <input
+                                  type="number"
+                                  id="tahun_dibangun_new"
+                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                />
+                              </div>
+                            </div>
+
+                            <!-- Jenis Surat -->
+                            <div class="basis-6/12 ml-3">
                               <div class="relative w-full">
                                 <div class="block text-xs font-bold mb-1">
                                   Jenis Surat
                                 </div>
-                                <div class="flex flex-row">
-                                  <div class="flex items-center mr-4">
+                                <div class="grid grid-cols-2">
+                                  <div class="flex items-center">
                                     <input
                                       id="jenis-surat-shm"
                                       type="radio"
@@ -42209,22 +42207,7 @@
                               </div>
                             </div>
 
-                            <!-- Tahun dibangun -->
-                            <div class="basis-6/12 ml-3">
-                              <div class="relative w-full">
-                                <label
-                                  class="block text-xs font-bold mb-1"
-                                  for="tahun_dibangun_new"
-                                >
-                                  Tahun Dibangun
-                                </label>
-                                <input
-                                  type="number"
-                                  id="tahun_dibangun_new"
-                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                />
-                              </div>
-                            </div>
+                            <!--  -->
                           </div>
                         </div>
                       </div>
