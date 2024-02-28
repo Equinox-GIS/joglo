@@ -1998,6 +1998,8 @@ window.showCardInfoDetail = function (param) {
       //   initSlick(".slider-pasang", getSliderDefaultOptions());
       // }
 
+      showJudulProfilDataAgen();
+
       break;
 
     // case "6":
@@ -3554,6 +3556,13 @@ function showJudulGaleri() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
     element.textContent = "Galeri";
+  });
+}
+
+function showJudulProfilDataAgen() {
+  var judulProfilDataAgen = document.querySelectorAll(".judulStory");
+  judulProfilDataAgen.forEach(function (element) {
+    element.textContent = "Profil";
   });
 }
 
