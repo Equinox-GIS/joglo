@@ -4154,7 +4154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nama_profil_pengaturan: "Syarif Hidayat",
     username_pengaturan: "syariff_091",
     deskripsi_singkat_pengaturan:
-      "Dijual Rumah Lokasi Bagus Dekat Tol Cibubur di Jalan Kraggan sangat co",
+      "Agen berpengalam selama 30 tahun",
     deskripsi_postingannn_pengaturan: `Dijual Rumah Lokasi Bagus Dekat Tol Cibubur di Jalan Kraggan sangatRumah ini sangat asri, karena berada di lingkungan yang aman dan nyaman serta di dalamnya terdapat fasilitas berupa dapur,, dan lain-lain. Bangunan rumah masih kokoh sehingga Anda tidak perlu melakukan renovasi dalam waktu dekat.
 
 Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perkantoran, sekolah, rumah sakit, pusat kuliner, dan lain-lain.
