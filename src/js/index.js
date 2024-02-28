@@ -1998,6 +1998,8 @@ window.showCardInfoDetail = function (param) {
       //   initSlick(".slider-pasang", getSliderDefaultOptions());
       // }
 
+      showJudulProfilDataAgen();
+
       break;
 
     // case "6":
@@ -3297,14 +3299,89 @@ window.toggleTerjualTersedia = function () {
 
 window.toggleAgenNonAgen = function () {
   var checkBox = document.getElementById("toggleSwitchAgenNonAgen");
-  var text = document.getElementById("toggleTextAgenNonaGEN");
+  var tipeAsetPengaturan = document.querySelector(
+    ".tipe-aset-pengaturan-disable"
+  );
+  var afiliasiPengaturan = document.getElementById("afiliasi_pengaturan");
+  var speliasiAsetPengaturan = document.getElementById(
+    "speliasi_aset_pengaturan"
+  );
+  var uploadContainer = document.getElementById("uploadContainer");
+  var fileUpload = document.getElementById("fileUpload");
 
-  if (checkBox.checked == true) {
-    text.innerHTML = "Agen";
-  } else {
-    text.innerHTML = "Non Agen";
+  // Toggling the disabled attribute based on checkbox state
+  var isDisabled = !checkBox.checked; // True if NOT checked (Non Agen), False if checked (Agen)
+
+  // Applying the disabled state and background color to checkboxes within tipeAsetPengaturan
+  tipeAsetPengaturan
+    .querySelectorAll('input[type="checkbox"]')
+    .forEach(function (input) {
+      input.disabled = isDisabled;
+      toggleBackgroundColor(input, isDisabled);
+    });
+
+  // For afiliasiPengaturan (assuming it's an input, textarea, or select)
+  if (afiliasiPengaturan) {
+    afiliasiPengaturan.disabled = isDisabled;
+    toggleBackgroundColor(afiliasiPengaturan, isDisabled);
+  }
+
+  // For speliasiAsetPengaturan (assuming it's a textarea)
+  if (speliasiAsetPengaturan) {
+    speliasiAsetPengaturan.disabled = isDisabled;
+    toggleBackgroundColor(speliasiAsetPengaturan, isDisabled);
+  }
+
+  // Applying the disabled state and visual changes to uploadContainer and fileUpload
+  if (uploadContainer) {
+    // Disable/enable the container
+    if (isDisabled) {
+      uploadContainer.classList.add("opacity-50"); // Adjust opacity to visually indicate disabled state
+      uploadContainer.classList.add("pointer-events-none"); // Disable pointer events
+      uploadContainer.classList.remove("bg-white"); // Remove white background
+      uploadContainer.classList.add("bg-gray-200"); // Add gray background
+    } else {
+      uploadContainer.classList.remove("opacity-50");
+      uploadContainer.classList.remove("pointer-events-none");
+      uploadContainer.classList.remove("bg-gray-200"); // Remove gray background
+      uploadContainer.classList.add("bg-white"); // Add white background
+    }
+
+    // Disable/enable the file input
+    if (fileUpload) {
+      fileUpload.disabled = isDisabled;
+      // Update the type to "file" if enabled, otherwise keep it as "text"
+      fileUpload.type = isDisabled ? "text" : "file";
+      // Optionally change the cursor style for fileUpload
+      fileUpload.classList.remove("cursor-pointer");
+      fileUpload.classList.add("cursor-default");
+      // Optionally change the background color for fileUpload too
+      toggleBackgroundColor(fileUpload, isDisabled);
+    }
   }
 };
+
+function toggleBackgroundColor(element, isDisabled) {
+  // Check if the element is a checkbox to apply specific class for disabled state
+  if (element.type === "checkbox") {
+    if (isDisabled) {
+      element.classList.remove("bg-white");
+      element.classList.add("bg-gray-200");
+    } else {
+      element.classList.remove("bg-gray-200");
+      element.classList.add("bg-white");
+    }
+  } else {
+    // Apply for non-checkbox elements
+    if (isDisabled) {
+      element.classList.remove("bg-white");
+      element.classList.add("bg-gray-200");
+    } else {
+      element.classList.remove("bg-gray-200");
+      element.classList.add("bg-white");
+    }
+  }
+}
 
 window.toggleAgenStatus = function () {
   var checkBox = document.getElementById("toggleSwitchAgen");
@@ -3479,6 +3556,13 @@ function showJudulGaleri() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
     element.textContent = "Galeri";
+  });
+}
+
+function showJudulProfilDataAgen() {
+  var judulProfilDataAgen = document.querySelectorAll(".judulStory");
+  judulProfilDataAgen.forEach(function (element) {
+    element.textContent = "Profil";
   });
 }
 
@@ -4062,3 +4146,263 @@ Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat pe
   var tahunBangunan = document.getElementById("tahun_dibangun_new");
   tahunBangunan.value = dataDummy.tahun_dibangun_new;
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var dataDummyPengaturan = {
+    // speliasi_aset_pengaturan: "Kelapa Gading",
+    // afiliasi_pengaturan: "Era Jaya",
+    nama_profil_pengaturan: "Syarif Hidayat",
+    username_pengaturan: "syariff_091",
+    deskripsi_singkat_pengaturan:
+      "Dijual Rumah Lokasi Bagus Dekat Tol Cibubur di Jalan Kraggan sangat co",
+    deskripsi_postingannn_pengaturan: `Dijual Rumah Lokasi Bagus Dekat Tol Cibubur di Jalan Kraggan sangatRumah ini sangat asri, karena berada di lingkungan yang aman dan nyaman serta di dalamnya terdapat fasilitas berupa dapur,, dan lain-lain. Bangunan rumah masih kokoh sehingga Anda tidak perlu melakukan renovasi dalam waktu dekat.
+
+Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perkantoran, sekolah, rumah sakit, pusat kuliner, dan lain-lain.
+
+10 menit ke tol cibuburrr
+10 menit ke mall juncion
+10 menit ke RS mitra keluarga
+5 menit ke pasar tradisional kranggan
+Dekat sekolah negeri dan swasta
+Dekat minimarket
+Akses dua mobil
+Lingkungan aman nyaman dan bebas banjir
+
+Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perka`,
+  };
+
+  // let speliasiAsetPengaturan = document.getElementById(
+  //   "speliasi_aset_pengaturan"
+  // );
+  // speliasiAsetPengaturan.value = dataDummyPengaturan.speliasi_aset_pengaturan;
+
+  // let afiliasiPengaturan = document.getElementById("afiliasi_pengaturan");
+  // afiliasiPengaturan.value = dataDummyPengaturan.afiliasi_pengaturan;
+
+  let namaProfilPengaturan = document.getElementById("nama_profil_pengaturan");
+  namaProfilPengaturan.value = dataDummyPengaturan.nama_profil_pengaturan;
+
+  let usernamePengaturan = document.getElementById("username_pengaturan");
+  usernamePengaturan.value = dataDummyPengaturan.username_pengaturan;
+
+  let deskripsiSingkatPengaturan = document.getElementById(
+    "deskripsi_singkat_pengaturan"
+  );
+  deskripsiSingkatPengaturan.value =
+    dataDummyPengaturan.deskripsi_singkat_pengaturan;
+
+  let deskripsiPostinganPengaturan = document.getElementById(
+    "deskripsi_postingannn_pengaturan"
+  );
+  deskripsiPostinganPengaturan.value =
+    dataDummyPengaturan.deskripsi_postingannn_pengaturan;
+});
+
+// Upload Gambar Postingan Listing
+// Constants
+const dropArea = document.getElementById("drop-area");
+const fileElem = document.getElementById("fileElem");
+const previewContainer = document.getElementById("preview-container");
+const HIDE_CLASS = "hidden";
+const UPLOAD_WFULL_CLASS = "add_wfull_upload";
+const HIGHLIGHT_CLASS = "border-blue-500";
+
+// Prevent default drag behaviors
+["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
+  dropArea.addEventListener(eventName, preventDefaults, false);
+});
+
+// Highlight drop area when a file is dragged over it
+["dragenter", "dragover"].forEach((eventName) => {
+  dropArea.addEventListener(eventName, highlight, false);
+});
+
+["dragleave", "drop"].forEach((eventName) => {
+  dropArea.addEventListener(eventName, unhighlight, false);
+});
+
+// Handle dropped files
+dropArea.addEventListener("drop", handleDrop, false);
+
+// Prevent default behavior
+function preventDefaults(e) {
+  e.preventDefault();
+  e.stopPropagation();
+}
+
+// Highlight drop area
+function highlight() {
+  dropArea.classList.add(HIGHLIGHT_CLASS);
+}
+
+// Unhighlight drop area
+function unhighlight() {
+  dropArea.classList.remove(HIGHLIGHT_CLASS);
+}
+
+// Handle dropped files
+function handleDrop(e) {
+  const dt = e.dataTransfer;
+  const files = dt.files;
+
+  handleFiles(files);
+  hideUploadImage();
+}
+
+// Handle files
+function handleFiles(files) {
+  [...files].forEach(previewFile);
+}
+
+// Preview file
+function previewFile(file) {
+  const reader = new FileReader();
+
+  reader.onloadend = function () {
+    const img = document.createElement("img");
+    img.src = reader.result;
+    img.classList.add("w-full", "h-auto", "object-fit");
+
+    const div = document.createElement("div");
+    div.classList.add(
+      "border",
+      "border-gray-200",
+      "overflow-hidden",
+      "w-[7.9vw]",
+      "h-[10.1vh]",
+      "flex",
+      "items-center",
+      "relative"
+    );
+    div.appendChild(img);
+
+    // Tambahkan elemen-elemen di dalam div
+    const actionsDiv = document.createElement("div");
+    actionsDiv.classList.add(
+      "absolute",
+      "bottom-0",
+      "right-0",
+      "inline-flex",
+      "bg-white",
+      "p-1"
+    );
+
+    const syncIcon = document.createElement("img");
+    syncIcon.classList.add("w-3", "h-3", "cursor-pointer", "object-contain");
+    syncIcon.src = "./src/images/sync.png";
+
+    const deleteIcon = document.createElement("img");
+    deleteIcon.classList.add(
+      "w-3",
+      "h-3",
+      "cursor-pointer",
+      "object-contain",
+      "ml-1.5"
+    );
+    deleteIcon.src = "./src/images/delete.png";
+
+    // Menambahkan event listener untuk merotasi gambar saat ikon sinkronisasi diklik
+    syncIcon.addEventListener("click", function () {
+      rotateImage(img);
+    });
+
+    deleteIcon.addEventListener("click", function () {
+      div.remove(); // Hapus elemen gambar saat tombol delete diklik
+    });
+
+    actionsDiv.appendChild(syncIcon);
+    actionsDiv.appendChild(deleteIcon);
+
+    div.appendChild(actionsDiv);
+
+    previewContainer.appendChild(div);
+  };
+
+  reader.readAsDataURL(file);
+}
+
+// Fungsi untuk merotasi gambar 90 derajat
+function rotateImage(image) {
+  let currentRotation = parseInt(image.getAttribute("data-rotation")) || 0;
+  currentRotation += 90; // Rotasi 90 derajat
+
+  if (currentRotation >= 360) {
+    currentRotation = 0;
+  }
+
+  image.style.transform = `rotate(${currentRotation}deg)`;
+  image.setAttribute("data-rotation", currentRotation);
+}
+
+// Handle file input change event
+fileElem.addEventListener("change", function () {
+  handleFiles(this.files);
+  hideUploadImage();
+});
+
+// Hide upload image
+function hideUploadImage() {
+  const uploadImage = document.querySelector(".hide_gambar_upload");
+  uploadImage.classList.add(HIDE_CLASS);
+
+  // const imagePosition = document.querySelector(".position_gambar_upload");
+  // uploadImage.classList.remove("justify-center items-center");
+
+  // const imageChangePosition = document.querySelector(".position_gambar_upload");
+  // uploadImage.classList.add("justify-start items-start");
+
+  const uploadWfull = document.querySelector(`.${UPLOAD_WFULL_CLASS}`);
+  uploadWfull.classList.add("w-full");
+
+  dropArea.classList.remove("justify-center", "items-center");
+  dropArea.classList.add("justify-start", "items-start");
+}
+
+window.previewFilePengaturan = function (input) {
+  var file = input.files[0];
+  if (file) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      document.getElementById("preview-img-avatar").src = e.target.result;
+      // Show the delete icon using Tailwind's utility class
+      document.getElementById("delete-icon").classList.remove("hidden");
+      document.getElementById("delete-icon").classList.add("flex");
+    };
+    reader.readAsDataURL(file);
+  }
+};
+
+// PREVIEW IMAGE EDIT PENGATURAN
+
+document
+  .getElementById("fileUpload")
+  .addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        // Containers
+        const previewContainer = document.getElementById(
+          "imagePreviewContainer"
+        );
+        const previewDefault = document.getElementById("imageDefaultPreview");
+        const previewImage = document.getElementById("imagePreview");
+
+        // Update and show preview image
+        previewImage.src = e.target.result;
+        previewContainer.classList.remove("hidden");
+
+        // Hide the default preview on new image load
+        previewDefault.classList.add("hidden");
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+// Optional: Add click event listener to the previewContainer to allow changing the image again
+document
+  .getElementById("imagePreviewContainer")
+  .addEventListener("click", function () {
+    // Trigger the file upload dialog
+    document.getElementById("fileUpload").click();
+  });
