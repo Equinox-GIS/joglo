@@ -843,7 +843,6 @@
   height: 62vh !important;
 }
 
-
 /*.slider-favorit video {
   width: 100%;
   height: 29vh !important;
@@ -1194,7 +1193,6 @@ input[name="plan"]:checked ~ .menuKeduaAds,
 input[name="plan"]:checked ~ .menuKetigaAds {
   display: block;
 }
-
 
 .formEditListingg {
   @apply mt-[7.5vh];
