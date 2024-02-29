@@ -1758,6 +1758,7 @@ window.showCardAgentDetail = function () {
 //
 window.showCardInfoDetail = function (param) {
   let activeTab;
+  // let targetSelector;
 
   // Check if param is an element or a string
   if (typeof param === "string" || param instanceof String) {
@@ -1843,6 +1844,17 @@ window.showCardInfoDetail = function (param) {
       // activatePulsingDot();
 
       //
+      // targetSelector = "#menu_detail_pertama";
+
+      // if (targetSelector) {
+      //   activateMenuDua(targetSelector);
+      //   console.log(activateMenuDua());
+      //   document.querySelector(targetSelector).classList.add("font-bold");
+      // }
+      activateMenuDua("#menu_detail_pertama");
+      // tambahkan font-bold
+      document.querySelector("#menu_detail_pertama").classList.add("font-bold");
+
       break;
 
     case "2":
@@ -2063,6 +2075,12 @@ window.showCardInfoDetail = function (param) {
 
       break;
   }
+
+  // if (targetSelector) {
+  //   activateMenuDua(targetSelector);
+  //   console.log(activateMenuDua());
+  //   document.querySelector(targetSelector).classList.add("font-bold");
+  // }
 };
 
 function resetAllCards() {
@@ -4446,3 +4464,39 @@ document
     // Trigger the file upload dialog
     document.getElementById("fileUpload").click();
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+  function activateMenuDua(target) {
+    document
+      .querySelectorAll(".menu_pengaturaan_detail div")
+      .forEach((item) => {
+        item.classList.remove("font-bold");
+      });
+    document.querySelectorAll(".menu-content-detaill").forEach((content) => {
+      content.classList.add("hidden");
+    });
+    document.querySelector(target).classList.remove("hidden");
+  }
+
+  function addMenuEventListener(menuItem) {
+    menuItem.addEventListener("click", function (event) {
+      event.preventDefault();
+      const target = this.getAttribute("data-target");
+      activateMenuDua(target);
+      this.classList.add("font-bold");
+    });
+  }
+
+  document
+    .querySelectorAll(".menu_pengaturaan_detail > div")
+    .forEach(addMenuEventListener);
+
+  const defaultActiveMenu = document.querySelector(
+    ".btn_default_tab_menu_pengaturan_dua"
+  );
+  if (defaultActiveMenu) {
+    const target = defaultActiveMenu.getAttribute("data-target");
+    activateMenuDua(target);
+    defaultActiveMenu.classList.add("font-bold");
+  }
+});
