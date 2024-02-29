@@ -3214,6 +3214,47 @@ document.addEventListener("DOMContentLoaded", function () {
   // });
 });
 
+// copy
+
+$(document).ready(function () {
+  $("#btn3-profil-pengaturan").on("click", function () {});
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var tabButtonDua = document.getElementById("btn3-profil-pengaturan");
+
+  tabButtonDua.addEventListener("click", function () {
+    setTimeout(function () {
+      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+        $(".slider-card-mode-ketiga").slick("setPosition");
+      } else {
+        initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+      }
+    }, 100);
+  });
+});
+
+//
+
+$(document).ready(function () {
+  $("#btn4-profil-pengaturan").on("click", function () {});
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var tabButtonTiga = document.getElementById("btn4-profil-pengaturan");
+
+  tabButtonTiga.addEventListener("click", function () {
+    cardModePesanDua();
+    setTimeout(function () {
+      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+        $(".slider-card-mode-ketiga").slick("setPosition");
+      } else {
+        initSlick(".slider-card-mode-ketiga", getSliderAdsReach());
+      }
+    }, 100);
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   var tabButtonTiga = document.getElementById("detail-pasang-enam-tab");
 
@@ -4153,8 +4194,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // afiliasi_pengaturan: "Era Jaya",
     nama_profil_pengaturan: "Syarif Hidayat",
     username_pengaturan: "syariff_091",
-    deskripsi_singkat_pengaturan:
-      "Agen berpengalam selama 30 tahun",
+    deskripsi_singkat_pengaturan: "Agen berpengalam selama 30 tahun",
     deskripsi_postingannn_pengaturan: `Dijual Rumah Lokasi Bagus Dekat Tol Cibubur di Jalan Kraggan sangatRumah ini sangat asri, karena berada di lingkungan yang aman dan nyaman serta di dalamnya terdapat fasilitas berupa dapur,, dan lain-lain. Bangunan rumah masih kokoh sehingga Anda tidak perlu melakukan renovasi dalam waktu dekat.
 
 Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perkantoran, sekolah, rumah sakit, pusat kuliner, dan lain-lain.
