@@ -4256,6 +4256,73 @@ Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat pe
     dataDummyPengaturan.deskripsi_postingannn_pengaturan;
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var dataDummyPengaturannnn = {
+    listing_new: "ID 78AC61",
+    koordinatt_new: "-6.282301, 106.794109",
+    kelurahannn_new: "Cilandak Barat",
+    kecamatan_newwww: "Cilandak ",
+    kotaaa_new_beda: "Jakarta Selatan",
+    url_videoo: "https://www.youtube.com/watch?v=3vG5X6WV0ZM",
+    deskripsi_storiess_new: `Rumah ini sangat asri, karena berada di lingkungan yang aman dan nyaman serta di dalamnya terdapat fasilitas berupa dapur,, dan lain-lain. Bangunan rumah masih kokoh sehingga Anda tidak perlu melakukan renovasi dalam waktu dekat.
+
+Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perkantoran, sekolah, rumah sakit, pusat kuliner, dan lain-lain.
+
+10 menit ke tol cibuburrr
+10 menit ke mall juncion
+10 menit ke RS mitra keluarga
+5 menit ke pasar tradisional kranggan
+Dekat sekolah negeri dan swasta
+Dekat minimarket
+Akses dua mobil
+Lingkungan aman nyaman dan bebas banjir
+Dekat sekolah negeri dan swasta
+Dekat minimarket
+Akses dua mobil
+Lingkungan aman nyaman dan bebas ba
+`,
+    lb_pengaturann: "150",
+    lt_pengaturann: "300",
+    kt_utama_pengaturann: "3",
+    kt_tambahan_pengaturann: "2",
+  };
+
+  let listingNew = document.getElementById("listing_new");
+  listingNew.value = dataDummyPengaturannnn.listing_new;
+
+  let koordinattNew = document.getElementById("koordinatt_new");
+  koordinattNew.value = dataDummyPengaturannnn.koordinatt_new;
+
+  let kelurahannnNew = document.getElementById("kelurahannn_new");
+  kelurahannnNew.value = dataDummyPengaturannnn.kelurahannn_new;
+
+  let kecamatannnNew = document.getElementById("kecamatan_newwww");
+  kecamatannnNew.value = dataDummyPengaturannnn.kecamatan_newwww;
+
+  let kotaNewBeda = document.getElementById("kotaaa_new_beda");
+  kotaNewBeda.value = dataDummyPengaturannnn.kotaaa_new_beda;
+
+  let urlVideoo = document.getElementById("url_videoo");
+  urlVideoo.value = dataDummyPengaturannnn.url_videoo;
+
+  let deskripsiStoriessNew = document.getElementById("deskripsi_storiess_new");
+  deskripsiStoriessNew.value = dataDummyPengaturannnn.deskripsi_storiess_new;
+
+  let lbPengaturann = document.getElementById("lb_pengaturann");
+  lbPengaturann.value = dataDummyPengaturannnn.lb_pengaturann;
+
+  let ltPengaturann = document.getElementById("lt_pengaturann");
+  ltPengaturann.value = dataDummyPengaturannnn.lt_pengaturann;
+
+  let ktUtamaPengaturann = document.getElementById("kt_utama_pengaturann");
+  ktUtamaPengaturann.value = dataDummyPengaturannnn.kt_utama_pengaturann;
+
+  let ktTambahanPengaturann = document.getElementById(
+    "kt_tambahan_pengaturann"
+  );
+  ktTambahanPengaturann.value = dataDummyPengaturannnn.kt_tambahan_pengaturann;
+});
+
 // Upload Gambar Postingan Listing
 // Constants
 const dropArea = document.getElementById("drop-area");
