@@ -11565,7 +11565,7 @@
                 >
                   <!-- Login  -->
                   <div
-                    class="h-[60vh] w-[25vw] flex justify-center items-center p-5 rounded-xl form-login-with-google"
+                    class="h-[60vh] w-[25vw] flex justify-center items-center p-5 rounded-xl form-login-with-google bg-white rounded-lg"
                   >
                     <div class="w-full">
                       <div class="my-5">
@@ -11599,7 +11599,7 @@
                               <input
                                 type="text"
                                 id="email-input1"
-                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                class="border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
                               />
                             </div>
                           </div>
@@ -11615,7 +11615,7 @@
                                 <input
                                   id="password-input1"
                                   type="password"
-                                  class="password-input border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  class="password-input border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
                                 />
                                 <span
                                   class="toggle-password absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 cursor-pointer"
@@ -11687,7 +11687,7 @@
                     class="h-[76.5vh] flex justify-center items-center overflow-y-hidden overflow-x-hidden hide-scrollbar form-registration hidden"
                   >
                     <div
-                      class="h-[60vh] w-[25vw] flex justify-center items-center p-5 rounded-xl"
+                      class="h-[69vh] w-[25vw] flex justify-center items-center p-5 rounded-xl bg-white rounded-lg"
                     >
                       <div class="w-full">
                         <div class="my-5">
@@ -11721,7 +11721,7 @@
                                 <input
                                   type="text"
                                   id="email-input2"
-                                  class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  class="border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
                                 />
                               </div>
                             </div>
@@ -11736,7 +11736,7 @@
                                 <input
                                   type="text"
                                   id="email-input3"
-                                  class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  class="border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
                                 />
                               </div>
                             </div>
@@ -11752,7 +11752,7 @@
                                   <input
                                     id="username-input"
                                     type="text"
-                                    class="username-input border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full pr-10"
+                                    class="username-input border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full pr-10"
                                   />
                                   <span
                                     class="validation-icon absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
@@ -11783,7 +11783,7 @@
                                   <input
                                     id="password-input1"
                                     type="password"
-                                    class="password-input border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full pr-10"
+                                    class="password-input border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full pr-10"
                                   />
                                   <span
                                     class="toggle-password absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 cursor-pointer"
@@ -11820,7 +11820,7 @@
                     class="h-[76.5vh] flex justify-center items-center overflow-y-hidden overflow-x-hidden hide-scrollbar form-lupa-password hidden"
                   >
                     <div
-                      class="h-[76.5vh] w-[25vw] flex justify-center items-center p-5 rounded-xl"
+                      class="h-[56.5vh] w-[25vw] flex justify-center items-center p-5 rounded-xl bg-white rounded-lg"
                     >
                       <div class="w-full">
                         <div class="w-full flex justify-center">
@@ -11847,7 +11847,7 @@
                                 <input
                                   type="text"
                                   id="email-input4"
-                                  class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
+                                  class="border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm focus:outline-none focus:ring-0 w-full"
                                 />
                               </div>
                             </div>
@@ -11874,7 +11874,415 @@
                     <!--  -->
 
                     <!-- MenuPengaturanxxxx -->
-                    <div class="h-full flex flex-col">
+
+                    <div class="w-full">
+                      <div class="w-full my-[1.5vh]">
+                        <div
+                          id=""
+                          class="w-[32vw] flex flex-row menu_pengaturaan"
+                        >
+                          <div
+                            id=""
+                            class="btn_default_tab_menu_pengaturan pr-4 pb-1 pt-1 text-sm text-black cursor-pointer"
+                            data-target="#user_pengaturan"
+                          >
+                            Profil
+                          </div>
+                          <div
+                            class="px-4 pb-1 pt-1 text-sm text-black cursor-pointer"
+                            data-target="#pengaturan_user_notifikasi"
+                          >
+                            Notifikasi
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Content untuk menu Biodata -->
+                      <div
+                        id="user_pengaturan"
+                        class="menu-content-profil-pengaturans w-full h-[73.5vh]"
+                      >
+                        <div class="h-[70.5vh] form-profil px-0">
+                          <!--  -->
+
+                          <div
+                            class="bg-transparent rounded-lg h-[70.5vh] overflow-y-auto overflow-x-hidden hide-scrollbar"
+                          >
+                            <form class="mt-2.5" action="#">
+                              <div class="grid grid-cols-2 gap-y-3 gap-x-3">
+                                <!-- b -->
+                                <div>
+                                  <!-- Avatarr -->
+                                  <div
+                                    class="relative flex flex-col items-center mt-7 mb-5"
+                                  >
+                                    <label
+                                      for="file-upload-avatarr"
+                                      class="w-24 h-24 p-[0.15rem] bg-white rounded-full flex justify-center items-center cursor-pointer relative group"
+                                    >
+                                      <input
+                                        id="file-upload-avatarr"
+                                        type="file"
+                                        class="file-input hidden"
+                                        accept="image/*"
+                                        onchange="previewFilePengaturan(this);"
+                                      />
+                                      <img
+                                        id="preview-img-avatar"
+                                        src="/src/images/model/model6.png"
+                                        alt=""
+                                        class="w-full h-full bg-white rounded-full object-cover relative"
+                                      />
+                                      <!-- Hover Effect Div -->
+                                      <!-- <div class="w-full h-full group-hover:bg-white opacity-75 rounded-full absolute flex justify-center items-center cursor-pointer transition duration-500">
+                                              <img class="w-12 h-12 hidden group-hover:block" src="/src/images/model/model5.jpg" alt="">
+                                            </div> -->
+                                      <!-- Delete Image Icon initially hidden -->
+                                      <!--      <div id="delete-icon" class="p-0.5 rounded-full shadow border bg-white absolute bottom-1 right-0 hidden">
+                                              <img src="/src/images/delete.png" alt="Delete Image" class="w-4 h-4 cursor-pointer" onclick="deleteImage()">
+                                            </div> -->
+                                    </label>
+                                  </div>
+                                  <!-- username -->
+
+                                  <div class="relative w-full mb-2 mt-7">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="username_pengaturan"
+                                    >
+                                      Username
+                                    </label>
+                                    <input
+                                      disabled
+                                      readonly
+                                      type="text"
+                                      id="username_pengaturan"
+                                      class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                    />
+                                  </div>
+
+                                  <!-- nama profil -->
+                                  <div class="relative w-full mb-2">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="nama_profil_pengaturan"
+                                    >
+                                      Nama Profil (maks 20 karakter)
+                                    </label>
+                                    <input
+                                      type="text"
+                                      id="nama_profil_pengaturan"
+                                      class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                    />
+                                  </div>
+
+                                  <!-- Deskripsi singkat -->
+                                  <div class="relative w-full mb-2">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="deskripsi_singkat_pengaturan"
+                                    >
+                                      Deskripsi Singkat (maks 70 karakter)
+                                    </label>
+                                    <textarea
+                                      name="deskripsi_singkat_pengaturan"
+                                      id="deskripsi_singkat_pengaturan"
+                                      class="block py-1.5 px-2 h-[7vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                      required=""
+                                      rows="9"
+                                    ></textarea>
+                                  </div>
+
+                                  <!-- Status -->
+                                  <div class="relative w-full mb-2 mt-[3vh]">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="Status"
+                                      >Status</label
+                                    >
+                                    <div
+                                      class="w-full grid grid-cols-[80px,43px,90px] justify-start"
+                                    >
+                                      <div class="w-full flex items-center">
+                                        <span class="text-sm text-black"
+                                          >Non Agen</span
+                                        >
+                                      </div>
+                                      <div class="w-full flex items-center">
+                                        <label
+                                          class="relative inline-flex cursor-pointer w-full"
+                                        >
+                                          <input
+                                            type="checkbox"
+                                            id="toggleSwitchAgenNonAgen"
+                                            value=""
+                                            class="sr-only peer"
+                                            onchange="toggleAgenNonAgen();"
+                                          />
+                                          <div
+                                            class="w-7 h-4 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] -after:start-[0.5px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3.5 after:w-3.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                                          ></div>
+                                        </label>
+                                      </div>
+                                      <div class="w-full flex items-center">
+                                        <span class="text-sm text-black"
+                                          >Agen</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="relative w-full mb-2 mt-[3vh]">
+                                    <div class="grid grid-cols-[1fr,80px]">
+                                      <div class="w-full">
+                                        <label
+                                          class="block text-xs font-bold mb-1"
+                                          for="afiliasi_pengaturan"
+                                        >
+                                          Afiliasi
+                                        </label>
+
+                                        <textarea
+                                          disabled
+                                          name="afiliasi"
+                                          id="afiliasi_pengaturan"
+                                          class="block py-1.5 px-2 h-[7vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                          required=""
+                                          rows="9"
+                                        ></textarea>
+                                      </div>
+
+                                      <div class="w-full flex flex-col">
+                                        <div
+                                          class="ml-2.5 w-full h-full flex items-center justify-start"
+                                        >
+                                          <label
+                                            class="block text-xs font-bold mb-1"
+                                          >
+                                            Logos
+                                          </label>
+                                        </div>
+
+                                        <div
+                                          id="uploadContainer"
+                                          class="w-[4.6vw] h-[7vh] flex items-center justify-end border border-gray-200 ml-2.5 rounded-lg bg-gray-200 p-1.5"
+                                        >
+                                          <!-- Upload Button Container -->
+                                          <div
+                                            id="imageDefaultPreview"
+                                            class="w-full h-full relative cursor-default"
+                                          >
+                                            <img
+                                              class="h-full w-full object-contain"
+                                              src="/src/images/landscape.png"
+                                              alt=""
+                                            />
+                                            <!-- Hidden File Input -->
+                                            <input
+                                              disabled
+                                              type="text"
+                                              id="fileUpload"
+                                              class="absolute inset-0 w-full h-full opacity-0 cursor-default"
+                                            />
+                                          </div>
+
+                                          <!-- Image Preview Container -->
+                                          <div
+                                            id="imagePreviewContainer"
+                                            class="hidden w-[4.6vw] h-[7vh] flex justify-start p-1.5"
+                                          >
+                                            <img
+                                              id="imagePreview"
+                                              class="h-full w-full object-contain"
+                                              src=""
+                                              alt="Image preview"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Spesialisasi Asset -->
+                                  <div class="relative w-full mb-2">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="speliasi_aset_pengaturan"
+                                    >
+                                      Spesialisasi Area
+                                    </label>
+                                    <textarea
+                                      disabled
+                                      name="speliasi-aset"
+                                      id="speliasi_aset_pengaturan"
+                                      class="block py-1 px-2 h-[8vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                      required=""
+                                      rows="9"
+                                    ></textarea>
+                                  </div>
+
+                                  <!--  -->
+                                </div>
+
+                                <!-- a -->
+                                <div class="flex flex-col">
+                                  <!-- Deskripsi Panjang -->
+                                  <div class="relative w-full mb-2">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="deskripsi_postingannn_pengaturan"
+                                    >
+                                      Deskripsi Panjang (maks. 750 karakter)
+                                    </label>
+                                    <textarea
+                                      name="deskripsi_postingannn"
+                                      id="deskripsi_postingannn_pengaturan"
+                                      class="block px-2 h-[65.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                      required=""
+                                      rows="9"
+                                    ></textarea>
+                                  </div>
+
+                                  <div
+                                    class="relative w-full mb-2 flex flex-col"
+                                  >
+                                    <div class="block text-xs font-bold">
+                                      Spesialisasi Aset
+                                    </div>
+                                    <div
+                                      class="w-full grid grid-cols-2 tipe-aset-pengaturan-disable mt-0.5"
+                                    >
+                                      <!--  -->
+                                      <div class="flex items-center mb-0.5">
+                                        <input
+                                          disabled
+                                          id="rumhabaru1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                        />
+                                        <label
+                                          for="rumhabaru1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Rumah Baru</label
+                                        >
+                                      </div>
+
+                                      <!--  -->
+                                      <div class="flex items-center">
+                                        <input
+                                          disabled
+                                          id="rumahseken1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                        />
+                                        <label
+                                          for="rumahseken1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Rumah Seken</label
+                                        >
+                                      </div>
+
+                                      <!--  -->
+                                      <div class="flex items-center">
+                                        <input
+                                          disabled
+                                          id="apt2"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                        />
+                                        <label
+                                          for="apt2"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Apartemen Baru</label
+                                        >
+                                      </div>
+
+                                      <!--  -->
+                                      <div class="flex items-center">
+                                        <input
+                                          disabled
+                                          id="apt1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                        />
+                                        <label
+                                          for="apt1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Apartemen Seken</label
+                                        >
+                                      </div>
+
+                                      <!--  -->
+                                      <div class="flex items-center">
+                                        <input
+                                          disabled
+                                          id="rukobaru"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                        />
+                                        <label
+                                          for="rukobaru"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Ruko Baru</label
+                                        >
+                                      </div>
+
+                                      <div class="flex items-center">
+                                        <input
+                                          disabled
+                                          id="rumahseken22"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                        />
+                                        <label
+                                          for="rumahseken22"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Ruko Seken</label
+                                        >
+                                      </div>
+
+                                      <!--  -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="px-5 mt-3 mb-7 flex w-full">
+                                <div class="w-full flex justify-center">
+                                  <button
+                                    type="button"
+                                    class="text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+                                  >
+                                    Simpan
+                                  </button>
+                                </div>
+                              </div>
+
+                              <!--  -->
+                            </form>
+                          </div>
+
+                          <!--  -->
+                        </div>
+                      </div>
+
+                      <!-- Content untuk menu Statistik -->
+                      <div
+                        id="pengaturan_user_notifikasi"
+                        class="menu-content-profil-pengaturans w-full h-[73.5vh] hidden"
+                      >
+                        <!--  -->
+                        <div class="w-full flex justify-start">Notifikasi</div>
+                      </div>
+                    </div>
+
+                    <div class="h-full flex flex-col hidden">
                       <!--  Card Favorit -->
                       <div class="flex flex-col">
                         <!-- Judul Favorit -->
@@ -11944,397 +12352,6 @@
                                 aria-labelledby="detail-pengaturan-satu-tab"
                               >
                                 <!-- Profil bner-->
-
-                                <div class="h-[70.5vh] form-profil px-0">
-                                  <!--  -->
-
-                                  <div
-                                    class="bg-transparent rounded-lg h-[70.5vh] overflow-y-auto overflow-x-hidden hide-scrollbar"
-                                  >
-                                    <form class="mt-2.5" action="#">
-                                      <div
-                                        class="grid grid-cols-2 gap-y-3 gap-x-3"
-                                      >
-                                        <!-- b -->
-                                        <div>
-                                          <!-- Avatarr -->
-                                          <div
-                                            class="relative flex flex-col items-center mt-7 mb-5"
-                                          >
-                                            <label
-                                              for="file-upload-avatarr"
-                                              class="w-24 h-24 p-[0.15rem] bg-white rounded-full flex justify-center items-center cursor-pointer relative group"
-                                            >
-                                              <input
-                                                id="file-upload-avatarr"
-                                                type="file"
-                                                class="file-input hidden"
-                                                accept="image/*"
-                                                onchange="previewFilePengaturan(this);"
-                                              />
-                                              <img
-                                                id="preview-img-avatar"
-                                                src="/src/images/model/model6.png"
-                                                alt=""
-                                                class="w-full h-full bg-white rounded-full object-cover relative"
-                                              />
-                                              <!-- Hover Effect Div -->
-                                              <!-- <div class="w-full h-full group-hover:bg-white opacity-75 rounded-full absolute flex justify-center items-center cursor-pointer transition duration-500">
-                                              <img class="w-12 h-12 hidden group-hover:block" src="/src/images/model/model5.jpg" alt="">
-                                            </div> -->
-                                              <!-- Delete Image Icon initially hidden -->
-                                              <!--      <div id="delete-icon" class="p-0.5 rounded-full shadow border bg-white absolute bottom-1 right-0 hidden">
-                                              <img src="/src/images/delete.png" alt="Delete Image" class="w-4 h-4 cursor-pointer" onclick="deleteImage()">
-                                            </div> -->
-                                            </label>
-                                          </div>
-                                          <!-- username -->
-
-                                          <div
-                                            class="relative w-full mb-2 mt-7"
-                                          >
-                                            <label
-                                              class="block text-xs font-bold mb-1"
-                                              for="username_pengaturan"
-                                            >
-                                              Username
-                                            </label>
-                                            <input
-                                              disabled
-                                              readonly
-                                              type="text"
-                                              id="username_pengaturan"
-                                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                            />
-                                          </div>
-
-                                          <!-- nama profil -->
-                                          <div class="relative w-full mb-2">
-                                            <label
-                                              class="block text-xs font-bold mb-1"
-                                              for="nama_profil_pengaturan"
-                                            >
-                                              Nama Profil (maks 20 karakter)
-                                            </label>
-                                            <input
-                                              type="text"
-                                              id="nama_profil_pengaturan"
-                                              class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                            />
-                                          </div>
-
-                                          <!-- Deskripsi singkat -->
-                                          <div class="relative w-full mb-2">
-                                            <label
-                                              class="block text-xs font-bold mb-1"
-                                              for="deskripsi_singkat_pengaturan"
-                                            >
-                                              Deskripsi Singkat (maks 70
-                                              karakter)
-                                            </label>
-                                            <textarea
-                                              name="deskripsi_singkat_pengaturan"
-                                              id="deskripsi_singkat_pengaturan"
-                                              class="block py-1.5 px-2 h-[7vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
-                                              required=""
-                                              rows="9"
-                                            ></textarea>
-                                          </div>
-
-                                          <!-- Status -->
-                                          <div
-                                            class="relative w-full mb-2 mt-[3vh]"
-                                          >
-                                            <label
-                                              class="block text-xs font-bold mb-1"
-                                              for="Status"
-                                              >Status</label
-                                            >
-                                            <div
-                                              class="w-full grid grid-cols-[80px,43px,90px] justify-start"
-                                            >
-                                              <div
-                                                class="w-full flex items-center"
-                                              >
-                                                <span class="text-sm text-black"
-                                                  >Non Agen</span
-                                                >
-                                              </div>
-                                              <div
-                                                class="w-full flex items-center"
-                                              >
-                                                <label
-                                                  class="relative inline-flex cursor-pointer w-full"
-                                                >
-                                                  <input
-                                                    type="checkbox"
-                                                    id="toggleSwitchAgenNonAgen"
-                                                    value=""
-                                                    class="sr-only peer"
-                                                    onchange="toggleAgenNonAgen();"
-                                                  />
-                                                  <div
-                                                    class="w-7 h-4 bg-gray-200 peer-focus:outline-none peer-focus:ring-0 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] -after:start-[0.5px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3.5 after:w-3.5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-                                                  ></div>
-                                                </label>
-                                              </div>
-                                              <div
-                                                class="w-full flex items-center"
-                                              >
-                                                <span class="text-sm text-black"
-                                                  >Agen</span
-                                                >
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <div
-                                            class="relative w-full mb-2 mt-[3vh]"
-                                          >
-                                            <div
-                                              class="grid grid-cols-[1fr,80px]"
-                                            >
-                                              <div class="w-full">
-                                                <label
-                                                  class="block text-xs font-bold mb-1"
-                                                  for="afiliasi_pengaturan"
-                                                >
-                                                  Afiliasi
-                                                </label>
-
-                                                <textarea
-                                                  disabled
-                                                  name="afiliasi"
-                                                  id="afiliasi_pengaturan"
-                                                  class="block py-1.5 px-2 h-[7vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
-                                                  required=""
-                                                  rows="9"
-                                                ></textarea>
-                                              </div>
-
-                                              <div class="w-full flex flex-col">
-                                                <div
-                                                  class="ml-2.5 w-full h-full flex items-center justify-start"
-                                                >
-                                                  <label
-                                                    class="block text-xs font-bold mb-1"
-                                                  >
-                                                    Logos
-                                                  </label>
-                                                </div>
-
-                                                <div
-                                                  id="uploadContainer"
-                                                  class="w-[4.6vw] h-[7vh] flex items-center justify-end border border-gray-200 ml-2.5 rounded-lg bg-gray-200 p-1.5"
-                                                >
-                                                  <!-- Upload Button Container -->
-                                                  <div
-                                                    id="imageDefaultPreview"
-                                                    class="w-full h-full relative cursor-default"
-                                                  >
-                                                    <img
-                                                      class="h-full w-full object-contain"
-                                                      src="/src/images/landscape.png"
-                                                      alt=""
-                                                    />
-                                                    <!-- Hidden File Input -->
-                                                    <input
-                                                      disabled
-                                                      type="text"
-                                                      id="fileUpload"
-                                                      class="absolute inset-0 w-full h-full opacity-0 cursor-default"
-                                                    />
-                                                  </div>
-
-                                                  <!-- Image Preview Container -->
-                                                  <div
-                                                    id="imagePreviewContainer"
-                                                    class="hidden w-[4.6vw] h-[7vh] flex justify-start p-1.5"
-                                                  >
-                                                    <img
-                                                      id="imagePreview"
-                                                      class="h-full w-full object-contain"
-                                                      src=""
-                                                      alt="Image preview"
-                                                    />
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <!-- Spesialisasi Asset -->
-                                          <div class="relative w-full mb-2">
-                                            <label
-                                              class="block text-xs font-bold mb-1"
-                                              for="speliasi_aset_pengaturan"
-                                            >
-                                              Spesialisasi Area
-                                            </label>
-                                            <textarea
-                                              disabled
-                                              name="speliasi-aset"
-                                              id="speliasi_aset_pengaturan"
-                                              class="block py-1 px-2 h-[8vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
-                                              required=""
-                                              rows="9"
-                                            ></textarea>
-                                          </div>
-
-                                          <!--  -->
-                                        </div>
-
-                                        <!-- a -->
-                                        <div class="flex flex-col">
-                                          <!-- Deskripsi Panjang -->
-                                          <div class="relative w-full mb-2">
-                                            <label
-                                              class="block text-xs font-bold mb-1"
-                                              for="deskripsi_postingannn_pengaturan"
-                                            >
-                                              Deskripsi Panjang (maks. 750
-                                              karakter)
-                                            </label>
-                                            <textarea
-                                              name="deskripsi_postingannn"
-                                              id="deskripsi_postingannn_pengaturan"
-                                              class="block px-2 h-[65.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
-                                              required=""
-                                              rows="9"
-                                            ></textarea>
-                                          </div>
-
-                                          <div
-                                            class="relative w-full mb-2 flex flex-col"
-                                          >
-                                            <div
-                                              class="block text-xs font-bold"
-                                            >
-                                              Spesialisasi Aset
-                                            </div>
-                                            <div
-                                              class="w-full grid grid-cols-2 tipe-aset-pengaturan-disable mt-0.5"
-                                            >
-                                              <!--  -->
-                                              <div
-                                                class="flex items-center mb-0.5"
-                                              >
-                                                <input
-                                                  disabled
-                                                  id="rumhabaru1"
-                                                  type="checkbox"
-                                                  value=""
-                                                  class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
-                                                />
-                                                <label
-                                                  for="rumhabaru1"
-                                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                  >Rumah Baru</label
-                                                >
-                                              </div>
-
-                                              <!--  -->
-                                              <div class="flex items-center">
-                                                <input
-                                                  disabled
-                                                  id="rumahseken1"
-                                                  type="checkbox"
-                                                  value=""
-                                                  class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
-                                                />
-                                                <label
-                                                  for="rumahseken1"
-                                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                  >Rumah Seken</label
-                                                >
-                                              </div>
-
-                                              <!--  -->
-                                              <div class="flex items-center">
-                                                <input
-                                                  disabled
-                                                  id="apt2"
-                                                  type="checkbox"
-                                                  value=""
-                                                  class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
-                                                />
-                                                <label
-                                                  for="apt2"
-                                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                  >Apartemen Baru</label
-                                                >
-                                              </div>
-
-                                              <!--  -->
-                                              <div class="flex items-center">
-                                                <input
-                                                  disabled
-                                                  id="apt1"
-                                                  type="checkbox"
-                                                  value=""
-                                                  class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
-                                                />
-                                                <label
-                                                  for="apt1"
-                                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                  >Apartemen Seken</label
-                                                >
-                                              </div>
-
-                                              <!--  -->
-                                              <div class="flex items-center">
-                                                <input
-                                                  disabled
-                                                  id="rukobaru"
-                                                  type="checkbox"
-                                                  value=""
-                                                  class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
-                                                />
-                                                <label
-                                                  for="rukobaru"
-                                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                  >Ruko Baru</label
-                                                >
-                                              </div>
-
-                                              <div class="flex items-center">
-                                                <input
-                                                  disabled
-                                                  id="rumahseken22"
-                                                  type="checkbox"
-                                                  value=""
-                                                  class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
-                                                />
-                                                <label
-                                                  for="rumahseken22"
-                                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                  >Ruko Seken</label
-                                                >
-                                              </div>
-
-                                              <!--  -->
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-
-                                      <div class="px-5 mt-3 mb-7 flex w-full">
-                                        <div class="w-full flex justify-center">
-                                          <button
-                                            type="button"
-                                            class="text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
-                                          >
-                                            Simpan
-                                          </button>
-                                        </div>
-                                      </div>
-
-                                      <!--  -->
-                                    </form>
-                                  </div>
-
-                                  <!--  -->
-                                </div>
                               </div>
 
                               <!-- Konten Tab Tiga Pasang -->
@@ -12373,12 +12390,14 @@
                 class="flex flex-col w-full h-full card-detail-beranda hidden"
               >
                 <!-- neww1 -->
-                <div class="h-[83vh] px-3">
+                <div class="h-[83vh]">
                   <!-- neww2 -->
                   <!-- Judul Card Detail Beranda -->
                   <div class="h-[17.5vh]">
                     <div class="flex flex-col">
-                      <div class="w-full h-[3.5rem] grid grid-cols-[48px,1fr]">
+                      <div
+                        class="w-full h-[3.5rem] grid grid-cols-[48px,1fr] px-3 border-b border-gray-300"
+                      >
                         <div
                           class="w-full h-full flex items-center justify-start"
                         >
@@ -12530,7 +12549,7 @@
                         </div>
                       </div>
 
-                      <div class="flex justify-between w-full py-2">
+                      <div class="flex justify-between w-full py-2 px-3">
                         <div class="text-md font-bold flex items-center">
                           Rumahs Impian Strategis Dijual! Segera Miliki Hunian
                           Eksklusif di Lokasi Prime!!!
@@ -12561,8 +12580,50 @@
                       </div>
                     </div>
 
-                    <!-- Menu Tab -->
-                    <div class="border-b border-gray-200">
+                    <!-- MenuTabDetailNew -->
+                    <div class="w-full my-[1.5vh] px-3">
+                      <div
+                        id=""
+                        class="w-[32vw] flex flex-row menu_pengaturaan_detail"
+                      >
+                        <div
+                          id=""
+                          class="btn_default_tab_menu_pengaturan_dua pr-4 pb-1 pt-1 text-sm text-black cursor-pointer"
+                          data-target="#menu_detail_pertama"
+                        >
+                          Foto
+                        </div>
+                        <div
+                          class="px-4 pb-1 pt-1 text-sm text-black cursor-pointer"
+                          data-target="#menu_detail_kedua"
+                        >
+                          Detail
+                        </div>
+                        <div
+                          class="px-4 pb-1 pt-1 text-sm text-black cursor-pointer"
+                          data-target="#menu_detail_ketiga"
+                        >
+                          Metriks
+                        </div>
+
+                        <div
+                          class="px-4 pb-1 pt-1 text-sm text-black cursor-pointer"
+                          data-target="#menu_detail_keempat"
+                        >
+                          Harga
+                        </div>
+
+                        <div
+                          class="px-4 pb-1 pt-1 text-sm text-black cursor-pointer"
+                          data-target="#menu_detail_lima"
+                        >
+                          Simulasi KPR
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- MenuTabDetailOld -->
+                    <div class="border-b border-gray-200 hidden">
                       <ul
                         class="flex flex-wrap -mb-px text-sm font-medium text-center pr-4"
                         id="DetailBeranda"
@@ -12697,7 +12758,1470 @@
                     </div>
                   </div>
 
-                  <div class="w-full h-[62.5vh] mt-2.5 overflow-hidden">
+                  <!-- KontenTabDetailNew -->
+                  <div class="w-full flex flex-col px-3">
+                    <!-- Content untuk menu Biodata -->
+                    <div
+                      id="menu_detail_pertama"
+                      class="menu-content-detaill w-full h-[66vh]"
+                    >
+                      <!-- KontenTabDetailNew1 -->
+                      <div
+                        class="flex flex-col justify-center flex-grow h-full bg-gray-100"
+                      >
+                        <!--  -->
+
+                        <div class="relative">
+                          <div class="slider-card-info-detail">
+                            <!--  -->
+                            <div class="video-wrapper">
+                              <div
+                                class="h-[62.5vh] flex items-center relative"
+                              >
+                                <img
+                                  class="w-full h-full object-contain"
+                                  src="./src/images/Hunian/Rmh1/rumaha1.jpg"
+                                  alt=""
+                                />
+                                <div
+                                  class="absolute w-full flex justify-center"
+                                >
+                                  <img
+                                    class="w-[15vw] h-full"
+                                    src="./src/images/sold.png"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <!--  -->
+                            <!--  -->
+                            <div class="video-wrapper">
+                              <div class="h-[62.5vh] flex items-center">
+                                <img
+                                  class="w-full h-full object-contain"
+                                  src="./src/images/Hunian/Rmh2/rumahb1.jpg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                            <!--  -->
+                            <div class="video-wrapper">
+                              <div class="h-[62.5vh] flex items-center">
+                                <img
+                                  class="w-full h-full object-contain"
+                                  src="./src/images/Hunian/Rmh3/rumahc1.jpg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                            <!--  -->
+                            <!-- ig -->
+                            <div class="video-wrapper">
+                              <div class="w-full !h-[62.5vh]">
+                                <img
+                                  class="w-full h-full object-contain"
+                                  src="./src/images/Hunian/fotoig1.jpg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                            <!-- ig -->
+                            <div class="video-wrapper">
+                              <div class="w-full !h-[62.5vh]">
+                                <img
+                                  class="w-full h-full object-contain"
+                                  src="./src/images/Hunian/fotoig2.jpg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                            <!-- ig -->
+                            <div class="video-wrapper">
+                              <div class="w-full !h-[62.5vh]">
+                                <img
+                                  class="w-full h-full object-contain"
+                                  src="./src/images/Hunian/fotoig3.jpg"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+
+                            <!--  -->
+                          </div>
+                        </div>
+
+                        <!--  -->
+                      </div>
+                    </div>
+
+                    <!-- Content untuk menu Statistik -->
+                    <div
+                      id="menu_detail_kedua"
+                      class="menu-content-detaill w-full h-[73.5vh] pt-6 hidden"
+                    >
+                      <div
+                        class="h-[61vh] overflow-y-auto hide-scrollbar rounded-lg"
+                      >
+                        <div
+                          class="col-span-2 w-full bg-gray-100 rounded-lg h-[38.5vh] px-5 flex flex-col bg-white rounded-lg py-3 mb-2"
+                        >
+                          <div
+                            class="w-full text-lg col-span-2 font-sf_pro_bold mb-3"
+                          >
+                            Lokasi
+                          </div>
+
+                          <!--  -->
+                          <div class="flex flex-row mb-2 text-sm">
+                            <div class="w-full basis-1/5 font-semibold">
+                              Kode Sub Zona
+                            </div>
+                            <div class="w-full basis-4/5">
+                              <div class="">HK</div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                          <div class="flex flex-row mb-2 text-sm">
+                            <div class="w-full basis-1/5 font-semibold">
+                              Sub Zona
+                            </div>
+                            <div class="w-full basis-4/5">
+                              <div class="">Pertahanan dan Keamanan</div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                          <div class="flex flex-row mb-2 text-sm">
+                            <div class="w-full basis-1/5 font-semibold">
+                              Zona
+                            </div>
+                            <div class="w-full basis-4/5">
+                              <div class="">Pertahanan dan Keamanan</div>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="flex flex-row mb-2">
+                            <div class="w-full basis-1/5 font-semibold text-sm">
+                              Koordinattt
+                            </div>
+                            <div class="w-full basis-4/5 text-sm">
+                              <a
+                                href="https://www.google.com/maps/search/-6.167524106481267,106.83083574853504"
+                                target="blank_"
+                                class="cursor-pointer text-[#69B3E7]"
+                                >-6.167524106481267, 106.83083574853504</a
+                              >
+                            </div>
+                          </div>
+
+                          <div class="flex flex-row mb-2 text-sm">
+                            <div class="w-full basis-1/5 font-semibold">
+                              Alamat
+                            </div>
+                            <div class="w-full basis-4/5">
+                              <div class="">
+                                Jl. Epicentrum Sel. No.Kav. 22, RT.2/RW.5
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                          <!--  -->
+                          <!--  -->
+                          <div class="flex flex-row mb-2 text-sm">
+                            <div class="w-full basis-1/5 font-semibold">
+                              Kelurahan
+                            </div>
+                            <div class="w-full basis-4/5">
+                              <div class="">Pondok Indah</div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                          <div class="flex flex-row mb-2 text-sm">
+                            <div class="w-full basis-1/5 font-semibold">
+                              Kelurahan
+                            </div>
+                            <div class="w-full basis-4/5">
+                              <div class="">Kebayoran Baru</div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                          <div class="flex flex-row mb-2 text-sm">
+                            <div class="w-full basis-1/5 font-semibold">
+                              Kota
+                            </div>
+                            <div class="w-full basis-4/5">
+                              <div class="">Jakarta Selatan</div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                        </div>
+                        <!--  -->
+                        <div class="grid grid-cols-2 gap-2">
+                          <!-- Card Beranda 1 -->
+                          <!--  -->
+
+                          <div
+                            class="w-full bg-gray-100 rounded-lg h-[63vh] px-5 py-3 flex flex-col bg-white rounded-lg"
+                          >
+                            <!--  -->
+
+                            <div class="w-full text-lg font-sf_pro_bold mb-3">
+                              Detail Spesifikasi
+                            </div>
+
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div
+                                class="w-full basis-5/12 font-semibold text-sm"
+                              >
+                                Tipe Properti
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">
+                                Rumah Baru
+                              </div>
+                            </div>
+                            <!--  -->
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Tahun Dibangun
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">2023</div>
+                            </div>
+
+                            <!--  -->
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Surat
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">
+                                <div class="w-full flex flex-col">
+                                  <div
+                                    class="w-full flex flex-row items-center"
+                                  >
+                                    <div class="flex items-center">
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 16 12"
+                                      >
+                                        <path
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M1 5.917 5.724 10.5 15 1.5"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-2">SHM</div>
+                                  </div>
+                                  <div
+                                    class="w-full flex flex-row items-center"
+                                  >
+                                    <div class="flex items-center">
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 16 12"
+                                      >
+                                        <path
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M1 5.917 5.724 10.5 15 1.5"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-2">IMB</div>
+                                  </div>
+                                  <div
+                                    class="w-full flex flex-row items-center"
+                                  >
+                                    <div class="flex items-center">
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 16 12"
+                                      >
+                                        <path
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M1 5.917 5.724 10.5 15 1.5"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-2">PBB</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--  -->
+                            <div class="flex flex-row mb-2 mt-2">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Luas Tanah
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">100 m²</div>
+                            </div>
+                            <!--  -->
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Luas Bangunan
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">130 m²</div>
+                            </div>
+
+                            <!--  -->
+                            <!--  -->
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Kamar Tidur
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">2 + 1</div>
+                            </div>
+
+                            <!--  -->
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Kamar Mandi
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">1 + 1</div>
+                            </div>
+
+                            <!--  -->
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Listrik
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">
+                                2200 Watt
+                              </div>
+                            </div>
+
+                            <!--  -->
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Air
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">PAM</div>
+                            </div>
+
+                            <!--  -->
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Arah Bangunan
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">
+                                Barat Lauts
+                              </div>
+                            </div>
+
+                            <!--  -->
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Garasi
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">2</div>
+                            </div>
+
+                            <!--  -->
+                            <div class="flex flex-row mb-2 text-sm">
+                              <div class="w-full basis-5/12 font-semibold">
+                                Lantai
+                              </div>
+                              <div class="w-full basis-6/12 ml-0.5">2</div>
+                            </div>
+
+                            <!--  -->
+                          </div>
+
+                          <!-- Card Beranda 1 -->
+                          <div
+                            class="w-full bg-gray-100 rounded-lg h-[63vh] px-5 py-3 flex flex-col bg-white rounded-lg"
+                          >
+                            <!--  -->
+                            <!--        <div class="flex flex-row mb-2 text-sm">
+                                        <div class="w-full basis-1/3 font-semibold">
+                                          Fasilitasss
+                                        </div>
+                                        <div class="w-full basis-2/3">
+                                          <div class="flex flex-row"></div>
+                                        </div>
+                                      </div> -->
+
+                            <div class="w-full text-lg font-sf_pro_bold mb-3">
+                              Fasilitas
+                            </div>
+
+                            <!--  -->
+                            <div class="flex flex-row mb-2">
+                              <div class="w-full basis-3/3 flex flex-row">
+                                <div class="w-full flex flex-col text-sm">
+                                  <div
+                                    class="w-full flex flex-row items-center mb-2"
+                                  >
+                                    <div class="flex items-center">
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 16 12"
+                                      >
+                                        <path
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M1 5.917 5.724 10.5 15 1.5"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-2">Carport 2 mobilss</div>
+                                  </div>
+                                  <!--  -->
+                                  <div
+                                    class="w-full flex flex-row items-center mb-2"
+                                  >
+                                    <div class="flex items-center">
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 16 12"
+                                      >
+                                        <path
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M1 5.917 5.724 10.5 15 1.5"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-2">Swimming pool</div>
+                                  </div>
+                                  <!--  -->
+                                  <div
+                                    class="w-full flex flex-row items-center mb-2"
+                                  >
+                                    <div class="flex items-center">
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 16 12"
+                                      >
+                                        <path
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M1 5.917 5.724 10.5 15 1.5"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-2">Gated cluster</div>
+                                  </div>
+                                  <!--  -->
+                                  <div
+                                    class="w-full flex flex-row items-center mb-2"
+                                  >
+                                    <div class="flex items-center">
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 16 12"
+                                      >
+                                        <path
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M1 5.917 5.724 10.5 15 1.5"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-2">Carport 2 mobilss</div>
+                                  </div>
+                                  <!--  -->
+                                  <div
+                                    class="w-full flex flex-row items-center mb-2"
+                                  >
+                                    <div class="flex items-center">
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 16 12"
+                                      >
+                                        <path
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M1 5.917 5.724 10.5 15 1.5"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-2">Swimming pool</div>
+                                  </div>
+                                  <!--  -->
+                                  <div
+                                    class="w-full flex flex-row items-center mb-2"
+                                  >
+                                    <div class="flex items-center">
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 16 12"
+                                      >
+                                        <path
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M1 5.917 5.724 10.5 15 1.5"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-2">Gated cluster</div>
+                                  </div>
+                                  <!--  -->
+                                  <!--  -->
+                                  <div
+                                    class="w-full flex flex-row items-center mb-2"
+                                  >
+                                    <div class="flex items-center">
+                                      <svg
+                                        class="w-3.5 h-3.5 text-gray-800 dark:text-white"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 16 12"
+                                      >
+                                        <path
+                                          stroke="currentColor"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M1 5.917 5.724 10.5 15 1.5"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                    <div class="ml-2">Gated cluster</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--  -->
+
+                            <!--  -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Content untuk menu Statistik -->
+                    <div
+                      id="menu_detail_ketiga"
+                      class="menu-content-detaill w-full h-[73.5vh] pt-6 hidden"
+                    >
+                      <div class="h-[61vh] overflow-y-auto hide-scrollbar">
+                        <div class="grid grid-cols-2 gap-2">
+                          <!-- Livability Indexsss1 -->
+                          <div
+                            class="w-full bg-gray-100 rounded-lg h-full px-5 pt-3 pb-3 flex flex-col bg-white rounded-lg"
+                          >
+                            <!--  -->
+                            <div
+                              class="w-full text-lg text-center font-sf_pro_bold mt-1 mb-3"
+                            >
+                              Livability Indexsss
+                            </div>
+                            <!--  -->
+                            <div
+                              class="h-[25vh] flex items-center justify-center"
+                            >
+                              <div class="radarChart mt-6 -ml-6"></div>
+                            </div>
+
+                            <div
+                              class="flex flex-row text-2xl my-1 justify-center"
+                              style="padding: 0.5rem 0 0"
+                            >
+                              <div class="font-bold">4.7</div>
+                              <div class="">&nbsp;/&nbsp;</div>
+                              <div class="">5</div>
+                            </div>
+
+                            <div
+                              style="padding: 0 0 0.5rem 0"
+                              class="flex flex-row text-sm my-1 justify-center"
+                            >
+                              <div class="font-bold">Kategori Tinggi</div>
+                            </div>
+
+                            <div class="w-full h-full mb-0.5">
+                              <div class="flex flex-col text-sm">
+                                <div class="">
+                                  1. Tingkat Konektivitas Pejalan Kaki Sedang
+                                </div>
+                                <div class="">
+                                  2. Ruang Terbuka dan Publik Terjangkau Sangat
+                                  Baik
+                                </div>
+                                <div class="">
+                                  3. Fasilitas Komunitas Terjangkau Sangat Baik
+                                </div>
+                                <div class="">
+                                  4. Aktivitas Budaya Perkotaan Sedang
+                                </div>
+                                <div class="">
+                                  5. Tempat untuk Bekerja Tersedia Sangat Baik
+                                </div>
+                                <div class="">
+                                  6. Pelayanan Kesehatan Terjangkau Sangat Baik
+                                </div>
+                                <div class="">
+                                  7. Fasilitas Pendidikan Kurang Terjangkau
+                                </div>
+                                <div class="">
+                                  8. Terjangkau sangat dekat dengan transportasi
+                                  publik
+                                </div>
+                                <div class="">
+                                  9. Tingkat Campuran Guna Lahan Sangat Rendah
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--Investment Indekssssss HIdden-->
+                          <div
+                            class="w-full bg-gray-100 rounded-lg h-full px-5 pt-3 pb-3 flex flex-col hidden"
+                          >
+                            <!--  -->
+                            <div class="w-full h-full">
+                              <!--         <div
+                                      class="w-full text-base text-center font-bold mb-3"
+                                    >
+                                      Urban Indekssss
+                                    </div> -->
+
+                              <div
+                                class="w-full text-sm text-center font-bold mb-5"
+                              >
+                                Kategori Urban Core - Skyscraper
+                              </div>
+                              <!--  -->
+
+                              <ul class="list-disc list-inside">
+                                <ol
+                                  class="ps-3 list-decimal list-outside text-sm"
+                                >
+                                  <li>
+                                    Urban Index (UI) Non-Permukiman Bangunan
+                                    Diatas 25 Lantai
+                                  </li>
+                                  <li>Sangat Dekat Terhadap Jalan Arteri</li>
+                                  <li>Dekat Terhadap Mall</li>
+                                  <li>Dekat Terhadap Titik Transit</li>
+                                </ol>
+                              </ul>
+
+                              <!--  -->
+                            </div>
+
+                            <!--  -->
+
+                            <!--  -->
+                          </div>
+                          <!--  -->
+
+                          <!--Investment Indekssssss2-->
+                          <div
+                            class="w-full bg-gray-100 rounded-lg h-full px-5 pt-3 pb-3 flex flex-col bg-white rounded-lg"
+                          >
+                            <!--  -->
+
+                            <div
+                              class="w-full text-lg text-center font-sf_pro_bold mt-1 mb-3"
+                            >
+                              Investment Indekssssss
+                            </div>
+                            <!--  -->
+                            <div
+                              class="h-[25vh] flex items-center justify-center"
+                            >
+                              <div class="radarChartDua mt-6 -ml-6"></div>
+                            </div>
+
+                            <div
+                              class="flex flex-row text-2xl my-1 justify-center"
+                              style="padding: 0.5rem 0 0"
+                            >
+                              <div class="font-bold">4.7</div>
+                              <div class="">&nbsp;/&nbsp;</div>
+                              <div class="">5</div>
+                            </div>
+
+                            <div
+                              style="padding: 0 0 0.5rem 0"
+                              class="flex flex-row text-sm my-1 justify-center"
+                            >
+                              <div class="font-bold">Kategori Tinggi</div>
+                            </div>
+
+                            <div class="w-full h-full mb-0.5">
+                              <div class="flex flex-col text-sm">
+                                <div class="">
+                                  1. Tingkat Konektivitas Pejalan Kaki Sedang
+                                </div>
+                                <div class="">
+                                  2. Ruang Terbuka dan Publik Terjangkau Sangat
+                                  Baik
+                                </div>
+                                <div class="">
+                                  3. Fasilitas Komunitas Terjangkau Sangat Baik
+                                </div>
+                                <div class="">
+                                  4. Aktivitas Budaya Perkotaan Sedang
+                                </div>
+                                <div class="">
+                                  5. Tempat untuk Bekerja Tersedia Sangat Baik
+                                </div>
+                                <div class="">
+                                  6. Pelayanan Kesehatan Terjangkau Sangat Baik
+                                </div>
+                                <div class="">
+                                  7. Fasilitas Pendidikan Kurang Terjangkau
+                                </div>
+                                <div class="">
+                                  8. Terjangkau sangat dekat dengan transportasi
+                                  publik
+                                </div>
+                                <div class="">
+                                  9. Tingkat Campuran Guna Lahan Sangat Rendah
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Content untuk menu Statistik -->
+                    <div
+                      id="menu_detail_keempat"
+                      class="menu-content-detaill w-full h-[73.5vh] pt-6 hidden"
+                    >
+                      <!--  -->
+                      <div class="h-[61vh] overflow-y-auto hide-scrollbar">
+                        <div class="grid grid-cols-2 gap-2">
+                          <!-- Card Beranda 1 -->
+
+                          <div
+                            class="col-start-1 w-full bg-gray-100 rounded-lg h-full px-5 py-3 flex flex-col bg-white rounded-lg"
+                          >
+                            <!--  -->
+                            <div class="flex flex-row">
+                              <div
+                                class="w-full basis-5/5 text-left flex flex-col"
+                              >
+                                <div class="text-sm font-sf_pro_bold">
+                                  Penawaran
+                                </div>
+
+                                <div class="font-semibold text-lg">
+                                  Rp. 215.000.000
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--  -->
+                          </div>
+
+                          <!--  -->
+                          <div class="col-span-2 grid grid-cols-2 gap-2">
+                            <div class="bg-gray-100 h-full rounded-lg">
+                              <div
+                                class="w-full bg-gray-100 rounded-lg h-[56vh] px-5 py-3 flex flex-col text-sm bg-white rounded-lg"
+                              >
+                                <div
+                                  class="w-full text-lg font-sf_pro_bold mb-2"
+                                >
+                                  Valuasi aset fisik
+                                </div>
+
+                                <!--  -->
+
+                                <!--              <div class="flex flex-row mb-3">
+                                      <div
+                                        class="w-full basis-5/5 font-semibold text-base"
+                                      >
+                                        Perkiraan harga berdasarkan aset fisik
+                                      </div>
+                                    </div> -->
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-2">
+                                  <div class="w-full text-sm">
+                                    Luas Tanahs (m²)22
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="120"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-2">
+                                  <div class="w-full text-sm">
+                                    Perkiraan NJOP (Rp/m²)
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="2.000.000"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-2">
+                                  <div class="w-full text-sm">
+                                    Angka Pengali NJOP
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="2.5"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-5">
+                                  <div class="w-full text-sm font-semibold">
+                                    Nilai Tanah (Rp)
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="600.000"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-2">
+                                  <div class="w-full text-sm">
+                                    Luas Bangunan (m²)
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="80"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-2">
+                                  <div class="w-full text-sm">
+                                    Harga Bangunan (Rp/m²)
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="3.000.000"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-2">
+                                  <div class="w-full text-sm">
+                                    Usia Bangunan (tahun)
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="5"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-2">
+                                  <div class="w-full text-sm">
+                                    Depresiasi Bangunan (%)
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="10"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-2">
+                                  <div class="w-full text-sm">
+                                    Luas Tanah (m²)22
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="2.000.000"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-5">
+                                  <div class="w-full text-sm font-semibold">
+                                    Nilai Bangunan (Rp)
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="216.000.000"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                  </div>
+                                </div>
+
+                                <!-- new1 -->
+                                <div class="flex flex-row mb-2">
+                                  <div class="w-full text-sm font-semibold">
+                                    Perkiraan Nilai Aset (Rp)
+                                  </div>
+                                  <div>
+                                    <input
+                                      type="text"
+                                      class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                      placeholder="800.000.000"
+                                      style="
+                                        border: none;
+                                        border-bottom: 1px solid;
+                                        text-align: right;
+                                      "
+                                      oninput="formatNumber(this)"
+                                      required=""
+                                    />
+                                    <div
+                                      style="
+                                        border-bottom: 1px solid;
+                                        margin-top: 0.5vh;
+                                      "
+                                    ></div>
+                                  </div>
+                                </div>
+
+                                <!--  -->
+                              </div>
+                            </div>
+
+                            <div
+                              class="w-full bg-gray-100 rounded-lg h-[56vh] px-5 py-3 text-sm bg-white rounded-lg"
+                            >
+                              <div class="w-full text-lg font-sf_pro_bold mb-2">
+                                Prediksi AI
+                              </div>
+
+                              <!--  -->
+                              <div class="flex flex-row"></div>
+
+                              <!--  -->
+                            </div>
+                          </div>
+                          <!--  -->
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Content untuk menu Statistik -->
+                    <div
+                      id="menu_detail_lima"
+                      class="menu-content-detaill w-full h-[73.5vh] pt-6 hidden"
+                    >
+                      <div class="grid grid-cols-2 gap-2">
+                        <!--  -->
+
+                        <!-- Card Beranda 1 -->
+                        <div
+                          class="w-full bg-gray-100 rounded-lg h-[61vh] bg-white rounded-lg px-5 py-3 flex flex-col text-sm"
+                        >
+                          <div class="w-full text-lg font-sf_pro_bold mb-2">
+                            Asumsi
+                          </div>
+
+                          <!--  -->
+                          <!--   <div class="flex flex-row mb-1">
+                                          <div class="w-full text-sm">Harga Properti</div>
+                                          <div>
+                                            <input
+                                              type="text"
+                                              class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                              placeholder="300.000.000"
+                                              style="
+                                                border: none;
+                                                border-bottom: 1px solid;
+                                                text-align: right;
+                                              "
+                                              oninput="formatNumber(this)"
+                                              required=""
+                                            />
+                                          </div>
+                                        </div> -->
+
+                          <!--  -->
+
+                          <!--                                       <div class="flex flex-row mb-3">
+                                        <div
+                                          class="w-full basis-5/5 font-semibold text-base"
+                                        >
+                                          Asumsi
+                                        </div>
+                                      </div> -->
+
+                          <!--  -->
+
+                          <div class="flex flex-row mb-2">
+                            <div class="w-full text-sm">Harga Properti</div>
+                            <div>
+                              <input
+                                type="text"
+                                class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                placeholder="300.000.000"
+                                style="
+                                  border: none;
+                                  border-bottom: 1px solid;
+                                  text-align: right;
+                                "
+                                oninput="formatNumber(this)"
+                                required=""
+                              />
+                            </div>
+                          </div>
+
+                          <!--  -->
+
+                          <!--  -->
+                          <div class="mb-7">
+                            <!--  -->
+
+                            <div class="flex flex-row mb-2">
+                              <div class="w-full text-sm">Uang Muka</div>
+                              <div>
+                                <input
+                                  type="text"
+                                  class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                  placeholder="30.000.000"
+                                  style="
+                                    border: none;
+                                    border-bottom: 1px solid;
+                                    text-align: right;
+                                  "
+                                  oninput="formatNumber(this)"
+                                  required=""
+                                />
+                              </div>
+                            </div>
+
+                            <!--  -->
+                            <div class="w-full my-1">
+                              <input
+                                type="range"
+                                class="w-full"
+                                id="ControlRangeBeranda"
+                                min="0.5"
+                                max="3"
+                                step="0.5"
+                                style="height: 4px"
+                                value="1.5"
+                              />
+                            </div>
+                            <!--  -->
+                            <div
+                              class="flex justify-between text-xs w-full mt-1"
+                            >
+                              <div class="">10%</div>
+                              <div class="">50%</div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                          <div class="mb-7">
+                            <div class="flex flex-row mb-3">
+                              <div class="w-full text-sm">Suku Bunga (%)</div>
+                              <div>
+                                <input
+                                  type="text"
+                                  class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                  placeholder="14"
+                                  style="
+                                    border: none;
+                                    border-bottom: 1px solid;
+                                    text-align: right;
+                                  "
+                                  oninput="formatNumber(this)"
+                                  required=""
+                                />
+                              </div>
+                            </div>
+                            <div class="w-full my-1">
+                              <input
+                                type="range"
+                                class="w-full"
+                                id="ControlRangeBeranda"
+                                min="0.5"
+                                max="3"
+                                step="0.5"
+                                style="height: 4px"
+                                value="1.5"
+                              />
+                            </div>
+                            <!--  -->
+                            <div
+                              class="flex justify-between text-xs w-full mt-1"
+                            >
+                              <div class="">1%</div>
+                              <div class="">50%</div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                          <div class="mb-7">
+                            <div class="flex flex-row mb-3">
+                              <div class="w-full">Tenor (tahun)</div>
+                              <div>
+                                <input
+                                  type="text"
+                                  class="hapus_style_kalkulator block w-full p-0 text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                  placeholder="15"
+                                  style="
+                                    border: none;
+                                    border-bottom: 1px solid;
+                                    text-align: right;
+                                  "
+                                  oninput="formatNumber(this)"
+                                  required=""
+                                />
+                              </div>
+                            </div>
+                            <div class="w-full my-1">
+                              <input
+                                type="range"
+                                class="w-full"
+                                id="ControlRangeBeranda"
+                                min="0.5"
+                                max="3"
+                                step="0.5"
+                                style="height: 4px"
+                                value="1.5"
+                              />
+                            </div>
+                            <!--  -->
+                            <div
+                              class="flex justify-between text-xs w-full mt-1"
+                            >
+                              <div class="">5</div>
+                              <div class="">20</div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                        </div>
+                        <!-- Card Beranda 1 -->
+                        <div
+                          class="w-full bg-gray-100 rounded-lg h-[61vh] bg-white rounded-lg px-5 py-3 flex flex-col text-sm"
+                        >
+                          <div class="w-full text-lg font-sf_pro_bold mb-2">
+                            Perhitungan
+                          </div>
+
+                          <!--  -->
+
+                          <!--       <div class="flex flex-row mb-2">
+                                        <div
+                                          class="w-full basis-5/5 font-semibold text-base"
+                                        >
+                                          Perhitungan
+                                        </div>
+                                      </div> -->
+
+                          <!--  -->
+
+                          <!-- new1 -->
+                          <div class="flex flex-row mb-2">
+                            <div class="w-full font-semibold text-sm">
+                              Angsuran (estimasi suku bunga 14%)
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="flex flex-row mb-3">
+                            <div class="w-full text-sm">
+                              Bunga Pinjaman (Rp)
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                placeholder="2.000.000"
+                                style="
+                                  border: none;
+                                  border-bottom: 1px solid;
+                                  text-align: right;
+                                "
+                                oninput="formatNumber(this)"
+                                required=""
+                              />
+                            </div>
+                          </div>
+
+                          <!--  -->
+                          <!-- new1 -->
+                          <div class="flex flex-row mb-2 mt-2">
+                            <div class="w-full font-semibold text-sm">
+                              Estimasi Pembayaran Pertama
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="flex flex-row mb-2">
+                            <div class="w-full text-sm">Uang Muka</div>
+                            <div>
+                              <input
+                                type="text"
+                                class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                placeholder="30.000.000"
+                                style="
+                                  border: none;
+                                  border-bottom: 1px solid;
+                                  text-align: right;
+                                "
+                                oninput="formatNumber(this)"
+                                required=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="flex flex-row mb-2">
+                            <div class="w-full text-sm">Angsuran Pertama</div>
+                            <div>
+                              <input
+                                type="text"
+                                class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                placeholder="80.000.000"
+                                style="
+                                  border: none;
+                                  border-bottom: 1px solid;
+                                  text-align: right;
+                                "
+                                oninput="formatNumber(this)"
+                                required=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="flex flex-row mb-2">
+                            <div class="w-full text-sm">
+                              Estimasi Biaya Lainnya
+                            </div>
+                            <div>
+                              <input
+                                type="text"
+                                class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                placeholder="10.000.000"
+                                style="
+                                  border: none;
+                                  border-bottom: 1px solid;
+                                  text-align: right;
+                                "
+                                oninput="formatNumber(this)"
+                                required=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="flex flex-row mb-2">
+                            <div class="w-full text-sm">Total</div>
+                            <div>
+                              <input
+                                type="text"
+                                class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                placeholder="220.000.000"
+                                style="
+                                  border: none;
+                                  border-bottom: 1px solid;
+                                  text-align: right;
+                                "
+                                oninput="formatNumber(this)"
+                                required=""
+                              />
+                              <div
+                                style="
+                                  border-bottom: 1px solid;
+                                  margin-top: 0.5vh;
+                                "
+                              ></div>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <!-- new1 -->
+                          <div class="flex flex-row mb-2 mt-2">
+                            <div class="w-full font-semibold text-sm">
+                              Detil Pinjaman
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="flex flex-row mb-2">
+                            <div class="w-full text-sm">Pinjaman Pokok</div>
+                            <div>
+                              <input
+                                type="text"
+                                class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                placeholder="245.000.000"
+                                style="
+                                  border: none;
+                                  border-bottom: 1px solid;
+                                  text-align: right;
+                                "
+                                oninput="formatNumber(this)"
+                                required=""
+                              />
+                            </div>
+                          </div>
+
+                          <div class="flex flex-row mb-2">
+                            <div class="w-full">Estimasi Bunga Pinjaman</div>
+                            <div>
+                              <input
+                                type="text"
+                                class="hapus_style_kalkulator block w-full p-0 text-sm text-gray-900 bg-transparent focus:outline-none focus:ring-0 focus:border-gray-300"
+                                placeholder="500.000.000"
+                                style="
+                                  border: none;
+                                  border-bottom: 1px solid;
+                                  text-align: right;
+                                "
+                                oninput="formatNumber(this)"
+                                required=""
+                              />
+                            </div>
+                          </div>
+                          <!--  -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- KontenTabDetailOld -->
+                  <div class="w-full h-[62.5vh] mt-2.5 overflow-hidden hidden">
                     <!-- Konten Card Detail Beranda -->
                     <div class="w-full h-full card-disukai-detail">
                       <div class="flex flex-col w-full h-full">
@@ -12711,94 +14235,6 @@
                           >
                             <!--  -->
                             <!-- new3 -->
-
-                            <!-- Container Induk -->
-                            <div
-                              class="flex flex-col justify-center flex-grow h-full bg-gray-100"
-                            >
-                              <!--  -->
-
-                              <div class="relative">
-                                <div class="slider-card-info-detail">
-                                  <!--  -->
-                                  <div class="video-wrapper">
-                                    <div
-                                      class="h-[62.5vh] flex items-center relative"
-                                    >
-                                      <img
-                                        class="w-full h-full object-contain"
-                                        src="./src/images/Hunian/Rmh1/rumaha1.jpg"
-                                        alt=""
-                                      />
-                                      <div
-                                        class="absolute w-full flex justify-center"
-                                      >
-                                        <img
-                                          class="w-[15vw] h-full"
-                                          src="./src/images/sold.png"
-                                        />
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <!--  -->
-                                  <!--  -->
-                                  <div class="video-wrapper">
-                                    <div class="h-[62.5vh] flex items-center">
-                                      <img
-                                        class="w-full h-full object-contain"
-                                        src="./src/images/Hunian/Rmh2/rumahb1.jpg"
-                                        alt=""
-                                      />
-                                    </div>
-                                  </div>
-                                  <!--  -->
-                                  <div class="video-wrapper">
-                                    <div class="h-[62.5vh] flex items-center">
-                                      <img
-                                        class="w-full h-full object-contain"
-                                        src="./src/images/Hunian/Rmh3/rumahc1.jpg"
-                                        alt=""
-                                      />
-                                    </div>
-                                  </div>
-                                  <!--  -->
-                                  <!-- ig -->
-                                  <div class="video-wrapper">
-                                    <div class="w-full !h-[62.5vh]">
-                                      <img
-                                        class="w-full h-full object-contain"
-                                        src="./src/images/Hunian/fotoig1.jpg"
-                                        alt=""
-                                      />
-                                    </div>
-                                  </div>
-                                  <!-- ig -->
-                                  <div class="video-wrapper">
-                                    <div class="w-full !h-[62.5vh]">
-                                      <img
-                                        class="w-full h-full object-contain"
-                                        src="./src/images/Hunian/fotoig2.jpg"
-                                        alt=""
-                                      />
-                                    </div>
-                                  </div>
-                                  <!-- ig -->
-                                  <div class="video-wrapper">
-                                    <div class="w-full !h-[62.5vh]">
-                                      <img
-                                        class="w-full h-full object-contain"
-                                        src="./src/images/Hunian/fotoig3.jpg"
-                                        alt=""
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <!--  -->
-                                </div>
-                              </div>
-
-                              <!--  -->
-                            </div>
                           </div>
 
                           <!-- Konten Tab Dua Beranda -->
@@ -47869,5 +49305,45 @@
         }
       });
     </script>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        function activateMenu(target) {
+          document.querySelectorAll(".menu_pengaturaan div").forEach((item) => {
+            item.classList.remove("font-bold");
+          });
+          document
+            .querySelectorAll(".menu-content-profil-pengaturans")
+            .forEach((content) => {
+              content.classList.add("hidden");
+            });
+          document.querySelector(target).classList.remove("hidden");
+        }
+
+        function addMenuEventListener(menuItem) {
+          menuItem.addEventListener("click", function (event) {
+            event.preventDefault();
+            const target = this.getAttribute("data-target");
+            activateMenu(target);
+            this.classList.add("font-bold");
+          });
+        }
+
+        document
+          .querySelectorAll(".menu_pengaturaan > div")
+          .forEach(addMenuEventListener);
+
+        const defaultActiveMenu = document.querySelector(
+          ".btn_default_tab_menu_pengaturan"
+        );
+        if (defaultActiveMenu) {
+          const target = defaultActiveMenu.getAttribute("data-target");
+          activateMenu(target);
+          defaultActiveMenu.classList.add("font-bold");
+        }
+      });
+    </script>
+
+    <script type="text/javascript"></script>
   </body>
 </html>
