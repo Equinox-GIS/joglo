@@ -11687,7 +11687,7 @@
                     class="h-[76.5vh] flex justify-center items-center overflow-y-hidden overflow-x-hidden hide-scrollbar form-registration hidden"
                   >
                     <div
-                      class="h-[69vh] w-[25vw] flex justify-center items-center p-5 rounded-xl bg-white rounded-lg"
+                      class="h-[60vh] w-[25vw] flex justify-center items-center p-5 rounded-xl bg-white rounded-lg"
                     >
                       <div class="w-full">
                         <div class="my-5">
@@ -11731,7 +11731,7 @@
                                 <label
                                   for="email-input3"
                                   class="block mb-2 text-sm font-medium text-gray-900"
-                                  >Nama Lengkapa</label
+                                  >Nama Profil</label
                                 >
                                 <input
                                   type="text"
@@ -11741,7 +11741,7 @@
                               </div>
                             </div>
 
-                            <div class="flex flex-col space-y-3 mb-3">
+                            <div class="flex flex-col space-y-3 mb-3 hidden">
                               <div>
                                 <label
                                   for="username-input"
@@ -11820,24 +11820,24 @@
                     class="h-[76.5vh] flex justify-center items-center overflow-y-hidden overflow-x-hidden hide-scrollbar form-lupa-password hidden"
                   >
                     <div
-                      class="h-[56.5vh] w-[25vw] flex justify-center items-center p-5 rounded-xl bg-white rounded-lg"
+                      class="h-[60vh] w-[25vw] flex justify-center items-center p-5 rounded-xl bg-white rounded-lg"
                     >
                       <div class="w-full">
                         <div class="w-full flex justify-center">
                           <img
-                            class="w-28 h-28 object-contain"
+                            class="w-14 h-14 object-contain"
                             src="./src/images/padlock.png"
                           />
                         </div>
 
-                        <p class="text-center text-sm text-black mt-5">
+                        <p class="text-center text-sm text-black mt-10">
                           Masukkan nomor ponsel atau email dan kami akan
                           kirimkan tautan ke akun anda.
                         </p>
 
                         <form action="" class="my-3">
                           <div class="flex flex-col">
-                            <div class="flex flex-col space-y-3 mb-3 mt-2">
+                            <div class="flex flex-col space-y-3 mb-3 mt-5">
                               <div>
                                 <label
                                   for="email-input4"
@@ -20740,7 +20740,7 @@
 
                         <div class="py-2">
                           <div
-                            class="h-[70.5vh] overflow-y-auto hide-scrollbar text-black"
+                            class="h-[74.5vh] overflow-y-auto hide-scrollbar text-black"
                           >
                             <!-- OLD -->
                             <form class="hidden">
@@ -20795,7 +20795,7 @@
                                       class="block text-sm mb-2"
                                       for="deskrip_stories_postingann"
                                     >
-                                      Deskripsi (maks. 300 karakter)
+                                      Deskripsi (maks. 700 karakter)
                                     </label>
                                     <textarea
                                       id="deskrip_stories_postingann"
@@ -20831,7 +20831,7 @@
                                       class="block text-xs font-bold mb-1"
                                       for="listing_new"
                                     >
-                                      Listing
+                                      Listing ID
                                     </label>
                                     <input
                                       readonly=""
@@ -20857,6 +20857,89 @@
                                       id="koordinatt_new"
                                       class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                                     />
+                                  </div>
+
+                                  <!-- harga -->
+                                  <div class="relative w-full mb-2">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="harga_new"
+                                    >
+                                      Harga
+                                    </label>
+                                    <input
+                                      readonly=""
+                                      disabled=""
+                                      type="text"
+                                      id="harga_new"
+                                      class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                    />
+                                  </div>
+
+                                  <div class="w-full grid grid-cols-2 gap-x-2">
+                                    <div class="relative w-full mb-2">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="lb_pengaturann"
+                                      >
+                                        Luas Bangunan (m²)
+                                      </label>
+                                      <input
+                                        readonly=""
+                                        disabled=""
+                                        type="text"
+                                        id="lb_pengaturann"
+                                        class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      />
+                                    </div>
+                                    <div class="relative w-full mb-2">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="lt_pengaturann"
+                                      >
+                                        Luas Tanahh (m²)
+                                      </label>
+                                      <input
+                                        readonly=""
+                                        disabled=""
+                                        type="text"
+                                        id="lt_pengaturann"
+                                        class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="w-full grid grid-cols-2 gap-x-2">
+                                    <div class="relative w-full mb-2">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="kt_utama_pengaturann"
+                                      >
+                                        Kamar Tidur Utama
+                                      </label>
+                                      <input
+                                        readonly=""
+                                        disabled=""
+                                        type="text"
+                                        id="kt_utama_pengaturann"
+                                        class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      />
+                                    </div>
+                                    <div class="relative w-full mb-2">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="kt_tambahan_pengaturann"
+                                      >
+                                        Kamar Tidur Tambahan
+                                      </label>
+                                      <input
+                                        readonly=""
+                                        disabled=""
+                                        type="text"
+                                        id="kt_tambahan_pengaturann"
+                                        class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      />
+                                    </div>
                                   </div>
 
                                   <!-- kelurahannn -->
@@ -20938,7 +21021,7 @@
                                     <textarea
                                       name="deskripsi_storiess_new"
                                       id="deskripsi_storiess_new"
-                                      class="block px-2 h-[29vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                      class="block px-2 h-[54vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                                       required=""
                                       rows="9"
                                     ></textarea>
