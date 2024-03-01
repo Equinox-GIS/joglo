@@ -4256,6 +4256,39 @@ Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat pe
     dataDummyPengaturan.deskripsi_postingannn_pengaturan;
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var dataDummyPengaturannnn = {
+    listing_new: "Kelapa Gading",
+    koordinatt_new: "-6.282301, 106.794109",
+    kelurahannn_new: "Cilandak Barat",
+    kecamatan_newwww: "Cilandak ",
+    kotaaa_new_beda: "Jakarta Selatan",
+    url_videoo: "https://www.youtube.com/watch?v=3vG5X6WV0ZM",
+    deskripsi_storiess_new: `Rumah ini sangat asri, karena berada di lingkungan yang aman dan nyaman serta di dalamnya terdapat fasilitas berupa dapur,, dan lain-lain. Bangunan rumah masih kokoh sehingga Anda tidak perlu melakukan renovasi dalam waktu dekat.`,
+  };
+
+  let listingNew = document.getElementById("listing_new");
+  listingNew.value = dataDummyPengaturannnn.listing_new;
+
+  let koordinattNew = document.getElementById("koordinatt_new");
+  koordinattNew.value = dataDummyPengaturannnn.koordinatt_new;
+
+  let kelurahannnNew = document.getElementById("kelurahannn_new");
+  kelurahannnNew.value = dataDummyPengaturannnn.kelurahannn_new;
+
+  let kecamatannnNew = document.getElementById("kecamatan_newwww");
+  kecamatannnNew.value = dataDummyPengaturannnn.kecamatan_newwww;
+
+  let kotaNewBeda = document.getElementById("kotaaa_new_beda");
+  kotaNewBeda.value = dataDummyPengaturannnn.kotaaa_new_beda;
+
+  let urlVideoo = document.getElementById("url_videoo");
+  urlVideoo.value = dataDummyPengaturannnn.url_videoo;
+
+  let deskripsiStoriessNew = document.getElementById("deskripsi_storiess_new");
+  deskripsiStoriessNew.value = dataDummyPengaturannnn.deskripsi_storiess_new;
+});
+
 // Upload Gambar Postingan Listing
 // Constants
 const dropArea = document.getElementById("drop-area");
