@@ -4282,7 +4282,7 @@
                                   class="text-sm -mt-1 font-semibold text-black cursor-pointer"
                                   onclick="showCardAgent(this)"
                                 >
-                                  Steven R
+                                  Steven R23
                                 </div>
                                 <div
                                   class="flex items-center justify-center ml-1 -mt-1.5"
@@ -4369,9 +4369,22 @@
                           <!--  -->
                         </div>
                         <!--  -->
-                        <div class="text-gray-500 text-sm pt-2 pb-2.5">
-                          1 jam yang lalu
+
+                        <div
+                          class="text-gray-500 text-sm pt-2 pb-2.5 w-full grid grid-cols-2"
+                        >
+                          <div class="">1 jam yang lalu</div>
+
+                          <div class="w-full flex justify-end">
+                            <img
+                              onclick="EditStoriesPosting()"
+                              class="-mr-1 w-5 h-5 cursor-pointer"
+                              src="/src/images/threedots.png"
+                              alt=""
+                            />
+                          </div>
                         </div>
+
                         <!--  -->
 
                         <div class="inline-flex justify-start w-full pb-2.5">
@@ -8446,7 +8459,7 @@
                   <!--  -->
                 </div>
 
-                <div class="story-galeri-on">
+                <div class="story-galeri-on hidden">
                   <!--  -->
                   <div
                     class="h-[76.4vh] overflow-y-auto overflow-x-hidden hide-scrollbar bg-white"
@@ -8883,7 +8896,7 @@
                 </div>
 
                 <!-- Tujuh -->
-                <div class="story-galeri-on-tujuh">
+                <div class="story-galeri-on-tujuh hidden">
                   <!--  -->
                   <div
                     class="h-[76.4vh] overflow-y-auto overflow-x-hidden hide-scrollbar bg-white"
@@ -10957,7 +10970,7 @@
                 </div>
 
                 <!-- Delapan -->
-                <div class="story-galeri-on-delapan">
+                <div class="story-galeri-on-delapan hidden">
                   <!--  -->
                   <!--  Konten Card buatFavorti -->
                   <div
@@ -11238,7 +11251,7 @@
                 </div>
 
                 <!-- Sembilan -->
-                <div class="story-galeri-on-sembilan">
+                <div class="story-galeri-on-sembilan hidden">
                   <!--  -->
                   <!--  Konten Card buatFavorti -->
                   <div
@@ -11518,7 +11531,7 @@
                   <!--  -->
                 </div>
 
-                <div class="story-add-form">
+                <div class="story-add-form hidden">
                   <div class="h-[76.5vh] px-3 grid grid-cols-1">
                     <div>Tambah Stories</div>
                   </div>
@@ -20154,23 +20167,29 @@
                 <!-- Judul Favorit -->
                 <div class="">
                   <div
-                    class="w-full flex justify-between items-center border-b border-gray-300 px-3"
+                    class="w-full flex justify-between border-b border-gray-300 px-3 py-2"
                   >
-                    <div class="font-sf_pro_bold text-2xl judulStory">
+                    <div class="font-sf_pro_bold text-2xl judulStory w-80">
                       Postingan
                     </div>
-                    <!--  -->
 
-                    <div class="flex col justify-center py-1 mt-1">
-                      <div
-                        onclick="closeDetailAgent()"
-                        class="flex justify-center items-center flex-col menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500"
-                      >
+                    <!-- Stories -->
+                    <div
+                      class="w-full grid justify-items-end items-center relative"
+                    >
+                      <div class="inline-flex">
+                        <!--  -->
+
                         <div
-                          class="w-5 h-5 mt-0.5 mr-0.5 flex justify-center items-center relative"
+                          onclick="closeDetailAgent()"
+                          class="menus w-9 h-9 cursor-pointer hover:bg-slate-200 hover:rounded-full text-blue-600 hover:text-blue-600 border-blue-600 flex justify-center items-center hidden btnBackEditStoriesPosting"
                         >
-                          <img src="./src/images/back.png" alt="" />
+                          <div class="w-5 h-5 flex justify-center items-center">
+                            <img src="./src/images/back.png" alt="" />
+                          </div>
                         </div>
+
+                        <!--  -->
                       </div>
                     </div>
                   </div>
@@ -20738,7 +20757,7 @@
                       >
                         <!--  -->
 
-                        <div class="py-2">
+                        <div class="">
                           <div
                             class="h-[74.5vh] overflow-y-auto hide-scrollbar text-black"
                           >
@@ -20821,7 +20840,24 @@
 
                             <!-- NEW -->
 
-                            <form class=" ">
+                            <div class="w-full flex flex-col justify-end">
+                              <div
+                                class="inline-flex items-end justify-end pt-2 pb-2 btnDeleteStoriess hidden"
+                              >
+                                <div class="">
+                                  <button
+                                    type="button"
+                                    class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                                  >
+                                    Hapus
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <form
+                              class="formEditListingg RemoveClassformEditListingg"
+                            >
                               <div class="grid grid-cols-2 gap-y-1 gap-x-3">
                                 <!-- b -->
                                 <div>
@@ -20865,7 +20901,7 @@
                                       class="block text-xs font-bold mb-1"
                                       for="harga_new"
                                     >
-                                      Harga
+                                      Harga (Rp)
                                     </label>
                                     <input
                                       readonly=""
@@ -20915,7 +20951,7 @@
                                         class="block text-xs font-bold mb-1"
                                         for="kt_utama_pengaturann"
                                       >
-                                        Kamar Tidur Utama
+                                        Kamar Tidur
                                       </label>
                                       <input
                                         readonly=""
@@ -20930,7 +20966,7 @@
                                         class="block text-xs font-bold mb-1"
                                         for="kt_tambahan_pengaturann"
                                       >
-                                        Kamar Tidur Tambahan
+                                        Kamar Mandi
                                       </label>
                                       <input
                                         readonly=""
@@ -33573,7 +33609,7 @@
 
                       <!-- tab_new_1_profilpengaturan -->
 
-                      <div class="w-full px-3">
+                      <div class="w-full px-3 HideProfilListing">
                         <div class="w-full my-[1.5vh]">
                           <div
                             id="tab-menu-profil"
@@ -34103,19 +34139,19 @@
 
                           <!-- Card Judul -->
                           <div class="flex flex-row">
-                            <div class="basis-1/2 flex flex-col h-[46vh]">
+                            <div class="basis-1/2 flex flex-col h-[47vh]">
                               <div
-                                class="h-[20vh] bg-white rounded-lg shadow w-full p-3"
+                                class="h-[10vh] bg-white rounded-lg shadow w-full py-2 px-4 hidden"
                               >
-                                <div class="w-full flex flex-row mb-3">
+                                <div class="w-full flex flex-row">
                                   <div class="w-full flex flex-col">
                                     <div
                                       class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                     >
-                                      7
+                                      8
                                     </div>
                                     <div class="w-full flex text-sm ml-1">
-                                      Promo Aktiff
+                                      Stories Active
                                     </div>
                                   </div>
                                   <div class="w-full flex flex-col">
@@ -34125,12 +34161,39 @@
                                       13
                                     </div>
                                     <div class="w-full flex text-sm ml-1">
-                                      Total Promo
+                                      Total Stories
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="h-[22.5vh] bg-white rounded-lg shadow w-full pb-2 pt-5 px-4 mb-2"
+                              >
+                                <div class="w-full flex flex-row">
+                                  <div class="w-full flex flex-col">
+                                    <div
+                                      class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                    >
+                                      7
+                                    </div>
+                                    <div class="w-full flex text-sm ml-1">
+                                      Running Text Active
+                                    </div>
+                                  </div>
+                                  <div class="w-full flex flex-col">
+                                    <div
+                                      class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                    >
+                                      23
+                                    </div>
+                                    <div class="w-full flex text-sm ml-1">
+                                      Total Running Text
                                     </div>
                                   </div>
                                 </div>
                                 <!--  -->
-                                <div class="w-full flex flex-row">
+                                <div class="w-full flex flex-row mt-1.5">
                                   <div class="w-full flex flex-col">
                                     <div
                                       class="w-full flex ml-1 font-sf_pro_bold text-lg"
@@ -34155,27 +34218,50 @@
                               </div>
 
                               <div
-                                class="h-[27vh] bg-white rounded-lg shadow w-full mt-2 p-3"
+                                class="h-[22.5vh] bg-white rounded-lg shadow w-full py-2 px-4"
                               >
-                                <div class="w-full flex flex-row mb-3">
+                                <div class="w-full flex flex-row">
                                   <div class="w-full flex flex-col">
                                     <div
                                       class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                     >
-                                      20 Jam
+                                      4
                                     </div>
                                     <div class="w-full flex text-sm ml-1">
-                                      Stories
+                                      Top Ads
                                     </div>
                                   </div>
                                   <div class="w-full flex flex-col">
                                     <div
                                       class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                     >
-                                      13
+                                      137
                                     </div>
                                     <div class="w-full flex text-sm ml-1">
-                                      Total Promo
+                                      Total Top Ads
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--  -->
+                                <div class="w-full flex flex-row mt-1.5">
+                                  <div class="w-full flex flex-col">
+                                    <div
+                                      class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                    >
+                                      167
+                                    </div>
+                                    <div class="w-full flex text-sm ml-1">
+                                      Klik Bulan Ini
+                                    </div>
+                                  </div>
+                                  <div class="w-full flex flex-col">
+                                    <div
+                                      class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                    >
+                                      3455
+                                    </div>
+                                    <div class="w-full flex text-sm ml-1">
+                                      Total Klik
                                     </div>
                                   </div>
                                 </div>
@@ -34185,9 +34271,23 @@
                             </div>
 
                             <div
-                              class="basis-1/2 bg-white rounded-lg shadow px-3 h-[46vh] ml-2"
+                              class="basis-1/2 ml-2 grid grid-cols-1 gap-y-1"
                             >
-                              <canvas id="pendapatanChart"></canvas>
+                              <div class="bg-white rounded-lg px-3 h-[22.5vh]">
+                                <canvas
+                                  width="700"
+                                  height="310"
+                                  id="pengunjungChart"
+                                ></canvas>
+                              </div>
+
+                              <div class="bg-white rounded-lg px-3 h-[22.5vh]">
+                                <canvas
+                                  width="700"
+                                  height="330"
+                                  id="pendapatanChart"
+                                ></canvas>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -36751,14 +36851,14 @@
                       <!--  -->
 
                       <div
-                        class="ShowProfilListing h-[76.5vh] w-full flex items-center justify-center hidden"
+                        class="ShowProfilListing h-[76.5vh] w-full flex items-center justify-center px-3 hidden"
                       >
                         <!--  -->
-                        <div class="h-full w-full flex flex-row">
+                        <div class="h-full w-full flex flex-row mt-4">
                           <div
                             class="basis-3/12 h-full flex justify-start items-start mt-2"
                           >
-                            <div class="grid grid-rows-2 gap-y-5">
+                            <div class="grid grid-rows-2 gap-y-2">
                               <!--  -->
                               <div
                                 id="btn-konten-classified-ads"
@@ -36777,6 +36877,15 @@
                                   Top Ads
                                 </div>
                               </div>
+
+                              <div
+                                id="btn-konten-pin-up"
+                                class="w-full h-full flex justify-start items-center"
+                              >
+                                <div class="text-black cursor-pointer text-sm">
+                                  Pin Up
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div
@@ -36789,13 +36898,13 @@
                               <!-- Radio -->
                               <div class="col-span-3 flex flex-col w-full">
                                 <div
-                                  class="w-full flex flex-col h-[2.5vh] text-sm mb-6"
+                                  class="w-full flex flex-col h-[2.5vh] text-sm mb-4"
                                 >
                                   <div>Pilih salah satu paket</div>
                                 </div>
 
                                 <div
-                                  class="grid grid-cols-3 gap-5 w-full items-center text-sm mb-6"
+                                  class="grid grid-cols-3 gap-5 w-full items-center text-sm mb-4"
                                 >
                                   <div class="karakter-tujuh-puluh-input">
                                     <input
@@ -36862,7 +36971,7 @@
 
                                 <!--  -->
 
-                                <div class="w-full flex flex-col mb-6">
+                                <div class="w-full flex flex-col mb-4">
                                   <div class="relative w-full">
                                     <label
                                       class="block text-sm mb-1"
@@ -36907,12 +37016,12 @@
                                     <!--  -->
                                     <div class="col-span-3 w-full flex mt-2.5">
                                       <div
-                                        class="py-2 px-1 bg-white rounded-t-lg rounded-b-lg w-full !w-[28.5vh] !h-[28vh]"
+                                        class="py-2 px-1 bg-white rounded-t-lg rounded-b-lg w-full !w-[31.5vh] !h-[32.5vh]"
                                       >
                                         <!--  -->
 
                                         <div
-                                          class="px-2.5 pb-2.5 flex items-center justify-between"
+                                          class="px-2.5 pb-7 flex items-center justify-between"
                                         >
                                           <span
                                             tabindex="0"
@@ -37457,7 +37566,7 @@
                                         <!--  -->
                                         <div class="mt-6">
                                           Pembayaran akan dipotong dari saldo
-                                          kuota promo.
+                                          kuota promo7
                                         </div>
                                       </div>
 
@@ -37490,13 +37599,13 @@
                               <!-- Radio -->
                               <div class="col-span-3 flex flex-col w-full">
                                 <div
-                                  class="w-full flex flex-col h-[2.5vh] text-sm mb-6"
+                                  class="w-full flex flex-col h-[2.5vh] text-sm mb-4"
                                 >
                                   <div>Pilih salah satu paketz</div>
                                 </div>
 
                                 <div
-                                  class="grid grid-cols-3 gap-5 w-full items-center text-sm mb-6"
+                                  class="grid grid-cols-3 gap-5 w-full items-center text-sm mb-4"
                                 >
                                   <div class="karakter-tujuh-puluh-input">
                                     <input
@@ -38120,7 +38229,7 @@
                                         <!--  -->
                                         <div class="mt-6">
                                           Pembayaran akan dipotong dari saldo
-                                          kuota promo.
+                                          kuota promo8
                                         </div>
                                       </div>
 
@@ -38143,6 +38252,23 @@
 
                               <!--  -->
 
+                              <!--  -->
+                            </div>
+                            <!--  -->
+
+                            <!--  -->
+                            <!-- top Ads -->
+                            <div
+                              class="h-[76vh] overflow-y-auto hide-scrollbar px-3 grid grid-cols-1 gap-y-3 konten-pin-up hidden"
+                            >
+                              <!-- Radio -->
+                              <div class="col-span-3 flex flex-col w-full">
+                                <div
+                                  class="w-full flex flex-col h-[2.5vh] text-sm mb-4"
+                                >
+                                  <div>Pilih salah satu pin up</div>
+                                </div>
+                              </div>
                               <!--  -->
                             </div>
                             <!--  -->
@@ -39777,7 +39903,7 @@
                             <div
                               class="col-start-2 col-span-4 flex justify-center items-center"
                             >
-                              Pembayaran akan dipotong dari saldo kuota promo
+                              Pembayaran akan dipotong dari saldo kuota promo5
                             </div>
                             <div
                               class="col-start-2 col-span-4 flex justify-center items-center"
@@ -39964,7 +40090,7 @@
                             <div
                               class="col-start-2 col-span-4 flex justify-center items-center"
                             >
-                              Pembayaran akan dipotong dari saldo kuota promo
+                              Pembayaran akan dipotong dari saldo kuota promo1
                             </div>
                             <div
                               class="col-start-2 col-span-4 flex justify-center items-center"
@@ -40165,7 +40291,7 @@
                             <div
                               class="col-start-2 col-span-4 flex justify-center items-center"
                             >
-                              Pembayaran akan dipotong dari saldo kuota promo
+                              Pembayaran akan dipotong dari saldo kuota promo2
                             </div>
                             <div
                               class="col-start-2 col-span-4 flex justify-center items-center"
@@ -40351,7 +40477,7 @@
                             <div
                               class="col-start-2 col-span-4 flex justify-center items-center"
                             >
-                              Pembayaran akan dipotong dari saldo kuota promo
+                              Pembayaran akan dipotong dari saldo kuota promo3
                             </div>
                             <div
                               class="col-start-2 col-span-4 flex justify-center items-center"
@@ -40385,7 +40511,7 @@
                                 sundul
                               </div>
                               <div>
-                                Pembayaran akan dipotong dari saldo kuota promo
+                                Pembayaran akan dipotong dari saldo kuota promo4
                               </div>
                               <div class="w-full flex justify-center mt-1.5">
                                 <button
@@ -44553,17 +44679,15 @@
               <div class="flex flex-col card-info-favorit">
                 <!-- Judul Favorit -->
                 <div
-                  class="w-full flex justify-between border-b border-gray-300"
+                  class="w-full flex justify-between border-b border-gray-300 px-3 py-2"
                 >
-                  <div
-                    class="font-sf_pro_bold text-2xl px-3 py-2 judulStory w-80"
-                  >
+                  <div class="font-sf_pro_bold text-2xl judulStory w-80">
                     Postingan Listing
                   </div>
 
                   <!-- Stories -->
                   <div
-                    class="w-full grid justify-items-end items-center relative mr-1"
+                    class="w-full grid justify-items-end items-center relative"
                   >
                     <div class="inline-flex">
                       <div
@@ -44860,7 +44984,7 @@
                                   class="block text-xs font-bold mb-1"
                                   for="kamar_tidur_utama_new"
                                 >
-                                  Kamar Tidur Utamaaa
+                                  Kamar Tidur
                                 </label>
                                 <input
                                   type="number"
@@ -44877,7 +45001,7 @@
                                   class="block text-xs font-bold mb-1"
                                   for="kamar_tidur_tambahan_new"
                                 >
-                                  Kamar Tidur Tambahan
+                                  Kamar Mandi
                                 </label>
                                 <input
                                   type="number"
@@ -44912,7 +45036,7 @@
                                 <div class="block text-xs font-bold mb-1">
                                   Jenis Surat
                                 </div>
-                                <div class="grid grid-cols-2">
+                                <div class="grid grid-cols-2 w-full h-[2rem]">
                                   <div class="flex items-center">
                                     <input
                                       id="jenis-surat-shm"
@@ -45214,7 +45338,7 @@
                               <label
                                 for="olahraga1"
                                 class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Olahraga</label
+                                >Ruang Olahraga</label
                               >
                             </div>
 
@@ -49253,7 +49377,7 @@
             labels: ["Januari", "Februari", "Maret", "April", "Mei"],
             datasets: [
               {
-                data: [12, 19, 3, 5, 2, 3], // Contoh data penjualan rumah
+                data: [20, 30, 50, 70, 99], // Contoh data penjualan rumah
                 backgroundColor: gradient,
                 borderColor: "rgba(255, 99, 132, 1)",
                 borderWidth: 3,
@@ -49273,9 +49397,9 @@
               },
               title: {
                 display: true,
-                text: "Grafik Penjualan Rumah Per Bulan",
+                text: "Grafik Penjualan",
                 font: {
-                  size: 20,
+                  size: 17,
                 },
               },
             },
@@ -49283,8 +49407,65 @@
               y: {
                 beginAtZero: true,
                 ticks: {
+                  stepSize: 25, // Atur langkah interval sumbu y
+
                   callback: function (value, index, values) {
                     return value + " unit"; // Menambahkan unit penjualan
+                  },
+                },
+              },
+            },
+          },
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById("pengunjungChart").getContext("2d");
+        let gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "rgba(54, 162, 235, 0.5)");
+        gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+
+        const visitorsChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: ["Januari", "Februari", "Maret", "April", "Mei"],
+            datasets: [
+              {
+                data: [99, 245, 499, 800, 1000], // Contoh data pengunjung
+                backgroundColor: gradient,
+                borderColor: "rgba(54, 162, 235, 1)",
+                borderWidth: 3,
+                pointBackgroundColor: "rgba(54, 162, 235, 1)",
+                pointBorderColor: "#ffffff",
+                pointHoverBackgroundColor: "#ffffff",
+                pointHoverBorderColor: "rgba(54, 162, 235, 1)",
+                tension: 0.4,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false, // Menyembunyikan label dataset
+              },
+              title: {
+                display: true,
+                text: "Grafik Pengunjung",
+                font: {
+                  size: 17,
+                },
+              },
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  stepSize: 250, // Atur langkah interval sumbu y
+                  callback: function (value, index, values) {
+                    return value + " orang"; // Menambahkan unit pengunjung
                   },
                 },
               },
@@ -49333,6 +49514,9 @@
         document
           .getElementById("btn-konten-top-ads")
           .classList.remove("font-bold");
+        document
+          .getElementById("btn-konten-pin-up")
+          .classList.remove("font-bold"); // Tombol baru
 
         // Menambahkan kelas font-bold ke tombol yang diklik
         btn.classList.add("font-bold");
@@ -49341,11 +49525,15 @@
         btn.querySelector(".text-sm").classList.add("text-black");
 
         // Mengembalikan warna teks tombol yang tidak diklik ke semula
-        const otherBtn =
-          btn === document.getElementById("btn-konten-classified-ads")
-            ? document.getElementById("btn-konten-top-ads")
-            : document.getElementById("btn-konten-classified-ads");
-        otherBtn.querySelector(".text-sm").classList.remove("text-black");
+        const otherBtns = [
+          document.getElementById("btn-konten-classified-ads"),
+          document.getElementById("btn-konten-top-ads"),
+          document.getElementById("btn-konten-pin-up"), // Tombol baru
+        ].filter((b) => b !== btn);
+
+        otherBtns.forEach((b) => {
+          b.querySelector(".text-sm").classList.remove("text-black");
+        });
 
         // Menampilkan konten yang sesuai dan menyembunyikan konten lainnya
         document
@@ -49354,6 +49542,9 @@
         document
           .querySelector(".konten-top-ads")
           .classList.toggle("hidden", contentClass !== "konten-top-ads");
+        document
+          .querySelector(".konten-pin-up")
+          .classList.toggle("hidden", contentClass !== "konten-pin-up"); // Konten baru
       }
 
       // Panggil fungsi showContent saat halaman dimuat
@@ -49362,6 +49553,7 @@
           "btn-konten-classified-ads"
         );
         const topAdsBtn = document.getElementById("btn-konten-top-ads");
+        const pinUpBtn = document.getElementById("btn-konten-pin-up"); // Tombol baru
 
         // Tambahkan kelas font-bold pada tombol Classified Ads secara default
         classifiedAdsBtn.classList.add("font-bold");
@@ -49377,6 +49569,11 @@
         // Tambahkan event listener untuk tombol Top Ads
         topAdsBtn.addEventListener("click", function () {
           showContent(this, "konten-top-ads");
+        });
+
+        // Tambahkan event listener untuk tombol Pin Up
+        pinUpBtn.addEventListener("click", function () {
+          showContent(this, "konten-pin-up"); // Fungsi baru untuk konten baru
         });
       });
     </script>

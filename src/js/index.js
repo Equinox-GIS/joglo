@@ -3783,6 +3783,8 @@ function showJudulListingIklan() {
 }
 
 window.DetailProfilListing = function (element) {
+  console.log("oke");
+
   event.stopPropagation();
 
   showJudulListingIklan();
@@ -4106,6 +4108,47 @@ window.EditPostingListingAgen = function (element) {
     MenuDelapanBelasTab.click();
   } else {
     console.error("MenuDelapanBelasTab not found");
+  }
+};
+
+function BtnEditStoriesPosting() {
+  var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
+  judulRegistrasiPanelLogin.forEach(function (element) {
+    element.textContent = "Edit Stories";
+  });
+}
+
+window.EditStoriesPosting = function (element) {
+  event.stopPropagation();
+
+  BtnEditStoriesPosting();
+
+  Array.from(
+    document.getElementsByClassName("btnBackEditStoriesPosting")
+  ).forEach((elem) => elem.classList.remove("hidden"));
+
+  Array.from(document.getElementsByClassName("btnDeleteStoriess")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
+
+  Array.from(
+    document.getElementsByClassName("RemoveClassformEditListingg")
+  ).forEach((elem) => elem.classList.remove("formEditListingg"));
+
+  Array.from(document.getElementsByClassName("story-galeri-off")).forEach(
+    (elem) => elem.classList.add("hidden")
+  );
+
+  // showPostingStories();
+
+  var menuDuaTab = document.getElementById("MenuDuaTab");
+  var MenuStories = document.getElementById("detail-pasang-tiga-tab");
+  if (menuDuaTab) {
+    MenuDuaTab.click();
+    MenuStories.click();
+    BtnEditStoriesPosting();
+  } else {
+    console.error("MenuDuaTab not found");
   }
 };
 
