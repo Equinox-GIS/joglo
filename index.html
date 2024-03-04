@@ -34139,19 +34139,19 @@
 
                           <!-- Card Judul -->
                           <div class="flex flex-row">
-                            <div class="basis-1/2 flex flex-col h-[46vh]">
+                            <div class="basis-1/2 flex flex-col h-[47vh]">
                               <div
-                                class="h-[20vh] bg-white rounded-lg shadow w-full p-3"
+                                class="h-[10vh] bg-white rounded-lg shadow w-full py-2 px-4 hidden"
                               >
-                                <div class="w-full flex flex-row mb-3">
+                                <div class="w-full flex flex-row">
                                   <div class="w-full flex flex-col">
                                     <div
                                       class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                     >
-                                      7
+                                      8
                                     </div>
                                     <div class="w-full flex text-sm ml-1">
-                                      Promo Aktiff
+                                      Stories Active
                                     </div>
                                   </div>
                                   <div class="w-full flex flex-col">
@@ -34161,12 +34161,39 @@
                                       13
                                     </div>
                                     <div class="w-full flex text-sm ml-1">
-                                      Total Promo
+                                      Total Stories
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="h-[22.5vh] bg-white rounded-lg shadow w-full pb-2 pt-5 px-4 mb-2"
+                              >
+                                <div class="w-full flex flex-row">
+                                  <div class="w-full flex flex-col">
+                                    <div
+                                      class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                    >
+                                      7
+                                    </div>
+                                    <div class="w-full flex text-sm ml-1">
+                                      Running Text Active
+                                    </div>
+                                  </div>
+                                  <div class="w-full flex flex-col">
+                                    <div
+                                      class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                    >
+                                      23
+                                    </div>
+                                    <div class="w-full flex text-sm ml-1">
+                                      Total Running Text
                                     </div>
                                   </div>
                                 </div>
                                 <!--  -->
-                                <div class="w-full flex flex-row">
+                                <div class="w-full flex flex-row mt-1.5">
                                   <div class="w-full flex flex-col">
                                     <div
                                       class="w-full flex ml-1 font-sf_pro_bold text-lg"
@@ -34191,27 +34218,50 @@
                               </div>
 
                               <div
-                                class="h-[27vh] bg-white rounded-lg shadow w-full mt-2 p-3"
+                                class="h-[22.5vh] bg-white rounded-lg shadow w-full py-2 px-4"
                               >
-                                <div class="w-full flex flex-row mb-3">
+                                <div class="w-full flex flex-row">
                                   <div class="w-full flex flex-col">
                                     <div
                                       class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                     >
-                                      20 Jam
+                                      4
                                     </div>
                                     <div class="w-full flex text-sm ml-1">
-                                      Stories
+                                      Top Ads
                                     </div>
                                   </div>
                                   <div class="w-full flex flex-col">
                                     <div
                                       class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                     >
-                                      13
+                                      137
                                     </div>
                                     <div class="w-full flex text-sm ml-1">
-                                      Total Promo
+                                      Total Top Ads
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--  -->
+                                <div class="w-full flex flex-row mt-1.5">
+                                  <div class="w-full flex flex-col">
+                                    <div
+                                      class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                    >
+                                      167
+                                    </div>
+                                    <div class="w-full flex text-sm ml-1">
+                                      Klik Bulan Ini
+                                    </div>
+                                  </div>
+                                  <div class="w-full flex flex-col">
+                                    <div
+                                      class="w-full flex ml-1 font-sf_pro_bold text-lg"
+                                    >
+                                      3455
+                                    </div>
+                                    <div class="w-full flex text-sm ml-1">
+                                      Total Klik
                                     </div>
                                   </div>
                                 </div>
@@ -34221,9 +34271,23 @@
                             </div>
 
                             <div
-                              class="basis-1/2 bg-white rounded-lg shadow px-3 h-[46vh] ml-2"
+                              class="basis-1/2 ml-2 grid grid-cols-1 gap-y-1"
                             >
-                              <canvas id="pendapatanChart"></canvas>
+                              <div class="bg-white rounded-lg px-3 h-[22.5vh]">
+                                <canvas
+                                  width="700"
+                                  height="310"
+                                  id="pengunjungChart"
+                                ></canvas>
+                              </div>
+
+                              <div class="bg-white rounded-lg px-3 h-[22.5vh]">
+                                <canvas
+                                  width="700"
+                                  height="330"
+                                  id="pendapatanChart"
+                                ></canvas>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -49313,7 +49377,7 @@
             labels: ["Januari", "Februari", "Maret", "April", "Mei"],
             datasets: [
               {
-                data: [12, 19, 3, 5, 2, 3], // Contoh data penjualan rumah
+                data: [20, 30, 50, 70, 99], // Contoh data penjualan rumah
                 backgroundColor: gradient,
                 borderColor: "rgba(255, 99, 132, 1)",
                 borderWidth: 3,
@@ -49333,9 +49397,9 @@
               },
               title: {
                 display: true,
-                text: "Grafik Penjualan Rumah Per Bulan",
+                text: "Grafik Penjualan",
                 font: {
-                  size: 20,
+                  size: 17,
                 },
               },
             },
@@ -49343,8 +49407,65 @@
               y: {
                 beginAtZero: true,
                 ticks: {
+                  stepSize: 25, // Atur langkah interval sumbu y
+
                   callback: function (value, index, values) {
                     return value + " unit"; // Menambahkan unit penjualan
+                  },
+                },
+              },
+            },
+          },
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById("pengunjungChart").getContext("2d");
+        let gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "rgba(54, 162, 235, 0.5)");
+        gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+
+        const visitorsChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: ["Januari", "Februari", "Maret", "April", "Mei"],
+            datasets: [
+              {
+                data: [99, 245, 499, 800, 1000], // Contoh data pengunjung
+                backgroundColor: gradient,
+                borderColor: "rgba(54, 162, 235, 1)",
+                borderWidth: 3,
+                pointBackgroundColor: "rgba(54, 162, 235, 1)",
+                pointBorderColor: "#ffffff",
+                pointHoverBackgroundColor: "#ffffff",
+                pointHoverBorderColor: "rgba(54, 162, 235, 1)",
+                tension: 0.4,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false, // Menyembunyikan label dataset
+              },
+              title: {
+                display: true,
+                text: "Grafik Pengunjung",
+                font: {
+                  size: 17,
+                },
+              },
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  stepSize: 250, // Atur langkah interval sumbu y
+                  callback: function (value, index, values) {
+                    return value + " orang"; // Menambahkan unit pengunjung
                   },
                 },
               },
