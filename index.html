@@ -49374,7 +49374,7 @@
         const salesChart = new Chart(ctx, {
           type: "line",
           data: {
-            labels: ["Januari", "Februari", "Maret", "April", "Mei"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "Mei"],
             datasets: [
               {
                 data: [20, 30, 50, 70, 99], // Contoh data penjualan rumah
@@ -49389,7 +49389,8 @@
               },
             ],
           },
-          options: {
+
+                    options: {
             responsive: true,
             plugins: {
               legend: {
@@ -49405,13 +49406,25 @@
             },
             scales: {
               y: {
+                display: true,
                 beginAtZero: true,
-                ticks: {
+    ticks: {
                   stepSize: 25, // Atur langkah interval sumbu y
 
                   callback: function (value, index, values) {
-                    return value + " unit"; // Menambahkan unit penjualan
+                    return value; // Menambahkan unit penjualan
                   },
+                },
+                title: {
+                  display: true,
+                  text: "Unit",
+                },
+              },
+              x: {
+                display: true,
+                title: {
+                  display: true,
+                  text: "Bulan",
                 },
               },
             },
@@ -49430,7 +49443,7 @@
         const visitorsChart = new Chart(ctx, {
           type: "line",
           data: {
-            labels: ["Januari", "Februari", "Maret", "April", "Mei"],
+            labels: ["Jan", "Feb", "Mar", "Apr", "Mei"],
             datasets: [
               {
                 data: [99, 245, 499, 800, 1000], // Contoh data pengunjung
@@ -49461,12 +49474,25 @@
             },
             scales: {
               y: {
+                display: true,
                 beginAtZero: true,
                 ticks: {
                   stepSize: 250, // Atur langkah interval sumbu y
+
                   callback: function (value, index, values) {
-                    return value + " orang"; // Menambahkan unit pengunjung
+                    return value; // Menambahkan unit pengunjung
                   },
+                },
+                title: {
+                  display: true,
+                  text: "Orang",
+                },
+              },
+              x: {
+                display: true,
+                title: {
+                  display: true,
+                  text: "Bulan",
                 },
               },
             },
