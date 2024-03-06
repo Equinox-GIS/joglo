@@ -619,10 +619,8 @@ const popup = new mapboxgl.Popup({
 
 let activeObjectId = null;
 
-// Define the size and custom style for the pulsing dot
-const size = 200;
+const size = 250;
 
-// Non-Pulsing Dot
 const nopulsingDot = {
   width: size,
   height: size,
@@ -634,27 +632,51 @@ const nopulsingDot = {
     this.context = canvas.getContext("2d");
   },
   render: function () {
-    const radius = (size / 2) * 0.45;
+    const width = size * 2.2; // Mengatur lebar kotak
+    const height = size * 0.8; // Mengatur tinggi kotak
+    const triangleHeight = size * 0.2; // Tinggi segitiga
+    const triangleWidth = size * 0.5; // Lebar segitiga
+
     const context = this.context;
 
     context.clearRect(0, 0, this.width, this.height);
-    context.beginPath();
-    context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+
+    // Animasi pulsasi
+    context.globalAlpha = 0.7 + Math.cos(new Date() / 100) * 0.2;
+
+    // Gambar kotak
     context.fillStyle = "red";
+    context.fillRect(
+      (this.width - width) / 2,
+      (this.height - height) / 2,
+      width,
+      height
+    );
     context.strokeStyle = "white";
-    context.lineWidth = 16;
+    context.strokeRect(
+      (this.width - width) / 2,
+      (this.height - height) / 2,
+      width,
+      height
+    );
 
-    // shadow
-    context.shadowColor = "black";
-    context.shadowBlur = 10;
-    context.shadowOffsetX = 5;
-    context.shadowOffsetY = 5;
-
+    // Gambar segitiga di bawah kotak
+    context.beginPath();
+    context.moveTo(
+      this.width / 2 - triangleWidth / 2,
+      (this.height + height) / 2
+    );
+    context.lineTo(this.width / 2, (this.height + height + triangleHeight) / 2);
+    context.lineTo(
+      this.width / 2 + triangleWidth / 2,
+      (this.height + height) / 2
+    );
+    context.closePath();
+    context.fillStyle = "red";
     context.fill();
-    context.stroke();
 
-    // Reset shadow effects to avoid affecting other elements
-    context.shadowColor = "transparent";
+    // Reset globalAlpha to default
+    context.globalAlpha = 1;
 
     this.data = context.getImageData(0, 0, this.width, this.height).data;
     return true;
@@ -716,7 +738,7 @@ const pulsingDot = {
 
 // Function to add the layer with the pulsing dot
 const IzinGalian = () => {
-  map.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
+  // map.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
   map.addImage("nopulsing-dot", nopulsingDot, { pixelRatio: 2 });
 
   map.addSource("layer-peta-soaraja", {
@@ -737,13 +759,13 @@ const IzinGalian = () => {
       ],
       "icon-allow-overlap": true,
       "icon-size": 0.25,
+      // Tambahkan properti untuk menampilkan teks di dalam kotak
       "text-field": ["get", "sumber_data"],
-      "text-offset": [1, 0],
-      "text-anchor": "left",
-      "text-size": 12,
+      "text-offset": [0, 0], // Jangan ubah offset jika teks akan ditampilkan di dalam kotak
+      "text-anchor": "center", // Anchor teks ke tengah kotak
     },
     paint: {
-      "text-color": "#374151",
+      "text-color": "#ffffff", // Warna teks putih
     },
     filter: ["==", "kategori", "Rumah Dijual"],
   });

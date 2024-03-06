@@ -3971,14 +3971,12 @@ window.CloseStoriesSatu = function () {
     document.getElementsByClassName("StoriesGaleriKomponenHidden")
   ).forEach((elem) => elem.classList.add("hidden"));
 
-
-    var storyGaleriOff = document.querySelector(".story-galeri-off");
+  var storyGaleriOff = document.querySelector(".story-galeri-off");
   if (storyGaleriOff) {
     storyGaleriOff.style.overflowY = "hidden"; // Mengubah overflow-y menjadi hidden
     storyGaleriOff.style.overflowX = "hidden"; // Mengubah overflow-x menjadi hidden
     storyGaleriOff.style.height = "77vh"; // Mengatur ketinggian
   }
-
 };
 
 window.CloseStoriesDua = function () {
@@ -4006,13 +4004,12 @@ window.CloseStoriesDua = function () {
   //
   $(".slider-card-stories-persegi").slick("refresh");
 
-      var storyGaleriOff = document.querySelector(".story-galeri-off");
+  var storyGaleriOff = document.querySelector(".story-galeri-off");
   if (storyGaleriOff) {
     storyGaleriOff.style.overflowY = "hidden"; // Mengubah overflow-y menjadi hidden
     storyGaleriOff.style.overflowX = "hidden"; // Mengubah overflow-x menjadi hidden
     storyGaleriOff.style.height = "77vh"; // Mengatur ketinggian
   }
-
 };
 
 function initializeSlider() {
@@ -4089,8 +4086,6 @@ window.CloseAllStories = function () {
     storyGaleriOff.style.overflowX = "hidden"; // Mengubah overflow-x menjadi hidden
     storyGaleriOff.style.height = "77vh"; // Mengatur ketinggian
   }
-
-
 };
 
 window.storiesNext = function () {
