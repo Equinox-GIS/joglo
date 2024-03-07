@@ -619,11 +619,11 @@ const popup = new mapboxgl.Popup({
 
 let activeObjectId = null;
 
-const size = 250;
+const size = 90; // Ukuran dasar, bisa disesuaikan untuk responsivitas
 
 const nopulsingDot = {
   width: size,
-  height: size,
+  height: size, // Tinggi disesuaikan untuk memuat segitiga
   data: new Uint8Array(size * size * 4),
   onAdd: function () {
     const canvas = document.createElement("canvas");
@@ -631,57 +631,70 @@ const nopulsingDot = {
     canvas.height = this.height;
     this.context = canvas.getContext("2d");
   },
-  render: function () {
-    const width = size * 2.2; // Mengatur lebar kotak
-    const height = size * 0.8; // Mengatur tinggi kotak
-    const triangleHeight = size * 0.2; // Tinggi segitiga
-    const triangleWidth = size * 0.5; // Lebar segitiga
-
+  render: function (text) {
+    // Teks harus diberikan saat pemanggilan fungsi
     const context = this.context;
-
     context.clearRect(0, 0, this.width, this.height);
 
-    // Animasi pulsasi
-    context.globalAlpha = 0.7 + Math.cos(new Date() / 100) * 0.2;
+    // Ukuran dan posisi untuk kotak
+    const kotakHeight = size * 0.4; // Tinggi kotak tetap
+    const kotakWidth = context.measureText(text).width + size * 0.2; // Lebar kotak sesuai dengan panjang teks
 
-    // Gambar kotak
-    context.fillStyle = "red";
-    context.fillRect(
-      (this.width - width) / 2,
-      (this.height - height) / 2,
-      width,
-      height
-    );
-    context.strokeStyle = "white";
-    context.strokeRect(
-      (this.width - width) / 2,
-      (this.height - height) / 2,
-      width,
-      height
-    );
+    const startX = (this.width - kotakWidth) / 2;
+    const startY = (this.height - kotakHeight) / 2; // Posisi Y disesuaikan ke tengah
 
-    // Gambar segitiga di bawah kotak
-    context.beginPath();
-    context.moveTo(
-      this.width / 2 - triangleWidth / 2,
-      (this.height + height) / 2
-    );
-    context.lineTo(this.width / 2, (this.height + height + triangleHeight) / 2);
-    context.lineTo(
-      this.width / 2 + triangleWidth / 2,
-      (this.height + height) / 2
-    );
-    context.closePath();
+    // Menggambar kotak dengan sudut bulat
     context.fillStyle = "red";
+    context.roundRect(startX, startY, kotakWidth, kotakHeight, size * 0.17);
     context.fill();
 
-    // Reset globalAlpha to default
-    context.globalAlpha = 1;
+    // Menggambar segitiga dengan orientasi yang benar
+    const segitigaHeight = size * 0.15; // Tinggi segitiga
+    const segitigaWidth = size * 0.2; // Lebar segitiga
+    context.beginPath();
+    context.moveTo(this.width / 2, startY + kotakHeight + segitigaHeight); // Puncak segitiga mengarah ke bawah
+    context.lineTo(this.width / 2 - segitigaWidth / 2, startY + kotakHeight); // Basis kiri segitiga
+    context.lineTo(this.width / 2 + segitigaWidth / 2, startY + kotakHeight); // Basis kanan segitiga
+    context.closePath();
+    context.fill();
 
+    // Jika teks diberikan, menyesuaikan dan menampilkan teks
+    if (text) {
+      const fontSize = size * 0.2; // Ukuran font dinamis berdasarkan ukuran kotak
+      context.font = `${fontSize}px Arial`;
+      context.fillStyle = "white";
+      context.textAlign = "center";
+      context.textBaseline = "middle";
+      // Menentukan posisi tengah teks
+      const textX = this.width / 2;
+      const textY = this.height / 2; // Posisi Y disesuaikan ke tengah
+      context.fillText(text, textX, textY);
+    }
+
+    // Memperbarui data
     this.data = context.getImageData(0, 0, this.width, this.height).data;
-    return true;
   },
 };
+
+// Fungsi tambahan untuk menggambar kotak dengan sudut bulat
+CanvasRenderingContext2D.prototype.roundRect = function (
+  x,
+  y,
+  width,
+  height,
+  radius
+) {
+  this.beginPath();
+  this.moveTo(x + radius, y);
+  this.arcTo(x + width, y, x + width, y + height, radius);
+  this.arcTo(x + width, y + height, x, y + height, radius);
+  this.arcTo(x, y + height, x, y, radius);
+  this.arcTo(x, y, x + width, y, radius);
+  this.closePath();
+};
+
+nopulsingDot.onAdd();
+nopulsingDot.render();
 
 const pulsingDot = {
   width: size,
@@ -751,14 +764,9 @@ const IzinGalian = () => {
     type: "symbol",
     source: "layer-peta-soaraja",
     layout: {
-      "icon-image": [
-        "case",
-        ["==", ["get", "OBJECTID"], activeObjectId],
-        "pulsing-dot",
-        "nopulsing-dot",
-      ],
-      "icon-allow-overlap": true,
-      "icon-size": 0.25,
+      "icon-image": "nopulsing-dot", // Menggunakan gambar "popup" untuk semua fitur
+      "icon-allow-overlap": false,
+      "icon-size": 1.1, // Ubah ukuran ikon popup sesuai kebutuhan
       // Tambahkan properti untuk menampilkan teks di dalam kotak
       "text-field": ["get", "sumber_data"],
       "text-offset": [0, 0], // Jangan ubah offset jika teks akan ditampilkan di dalam kotak
@@ -768,15 +776,6 @@ const IzinGalian = () => {
       "text-color": "#ffffff", // Warna teks putih
     },
     filter: ["==", "kategori", "Rumah Dijual"],
-  });
-
-  // Cursor interactivity for layer-peta-soaraja
-  map.on("mouseenter", "layer-peta-soaraja", () => {
-    map.getCanvas().style.cursor = "pointer";
-  });
-
-  map.on("mouseleave", "layer-peta-soaraja", () => {
-    map.getCanvas().style.cursor = "";
   });
 };
 // Ensure this is called after the map loads
