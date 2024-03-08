@@ -619,7 +619,7 @@ const popup = new mapboxgl.Popup({
 
 let activeObjectId = null;
 
-const size = 90; // Ukuran dasar, bisa disesuaikan untuk responsivitas
+const size = 60; // Ukuran dasar, bisa disesuaikan untuk responsivitas
 
 const nopulsingDot = {
   width: size,
@@ -631,20 +631,20 @@ const nopulsingDot = {
     canvas.height = this.height;
     this.context = canvas.getContext("2d");
   },
-  render: function (text) {
+  render: function (textLength) {
     // Teks harus diberikan saat pemanggilan fungsi
     const context = this.context;
     context.clearRect(0, 0, this.width, this.height);
 
     // Ukuran dan posisi untuk kotak
     const kotakHeight = size * 0.4; // Tinggi kotak tetap
-    const kotakWidth = context.measureText(text).width + size * 0.2; // Lebar kotak sesuai dengan panjang teks
+    const kotakWidth = textLength * 10 + size * 0.2; // Lebar kotak sesuai dengan panjang teks
 
     const startX = (this.width - kotakWidth) / 2;
     const startY = (this.height - kotakHeight) / 2; // Posisi Y disesuaikan ke tengah
 
     // Menggambar kotak dengan sudut bulat
-    context.fillStyle = "red";
+    context.fillStyle = "rgb(224, 36, 36)";
     context.roundRect(startX, startY, kotakWidth, kotakHeight, size * 0.17);
     context.fill();
 
@@ -659,16 +659,16 @@ const nopulsingDot = {
     context.fill();
 
     // Jika teks diberikan, menyesuaikan dan menampilkan teks
-    if (text) {
-      const fontSize = size * 0.2; // Ukuran font dinamis berdasarkan ukuran kotak
-      context.font = `${fontSize}px Arial`;
+    if (textLength) {
+      const fontSize = size * 0.15; // Ukuran font dinamis berdasarkan ukuran kotak
+      context.font = `${fontSize}px Arial`; // Mengubah ukuran teks menjadi lebih kecil
       context.fillStyle = "white";
       context.textAlign = "center";
       context.textBaseline = "middle";
       // Menentukan posisi tengah teks
       const textX = this.width / 2;
       const textY = this.height / 2; // Posisi Y disesuaikan ke tengah
-      context.fillText(text, textX, textY);
+      context.fillText(textLength, textX, textY);
     }
 
     // Memperbarui data
@@ -694,7 +694,7 @@ CanvasRenderingContext2D.prototype.roundRect = function (
 };
 
 nopulsingDot.onAdd();
-nopulsingDot.render();
+nopulsingDot.render(10); // Misalnya, panjang teks adalah 10 karakter
 
 const pulsingDot = {
   width: size,
@@ -754,29 +754,46 @@ const IzinGalian = () => {
   // map.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
   map.addImage("nopulsing-dot", nopulsingDot, { pixelRatio: 2 });
 
-  map.addSource("layer-peta-soaraja", {
-    type: "geojson",
-    data: "data-dumy.geojson", // Pastikan ini adalah jalur yang benar
-  });
+  // Mengambil data geojson dari file data-dumy.geojson
+  fetch("data-dumy.geojson")
+    .then((response) => response.json())
+    .then((data) => {
+      // Menghitung jumlah kata untuk setiap fitur
+      data.features.forEach((feature, index) => {
+        const sumberData = feature.properties.sumber_data;
+        const jumlahKarakter = sumberData.length;
+        console.log(`(${index}) ${jumlahKarakter} + ${sumberData}`);
+        // Memanggil fungsi render nopulsingDot dengan panjang teks sebagai argumen
+        nopulsingDot.render(jumlahKarakter);
+      });
 
-  map.addLayer({
-    id: "layer-peta-soaraja",
-    type: "symbol",
-    source: "layer-peta-soaraja",
-    layout: {
-      "icon-image": "nopulsing-dot", // Menggunakan gambar "popup" untuk semua fitur
-      "icon-allow-overlap": false,
-      "icon-size": 1.1, // Ubah ukuran ikon popup sesuai kebutuhan
-      // Tambahkan properti untuk menampilkan teks di dalam kotak
-      "text-field": ["get", "sumber_data"],
-      "text-offset": [0, 0], // Jangan ubah offset jika teks akan ditampilkan di dalam kotak
-      "text-anchor": "center", // Anchor teks ke tengah kotak
-    },
-    paint: {
-      "text-color": "#ffffff", // Warna teks putih
-    },
-    filter: ["==", "kategori", "Rumah Dijual"],
-  });
+      // Menambahkan data yang telah diperbarui sebagai sumber pada peta
+      map.addSource("layer-peta-soaraja", {
+        type: "geojson",
+        data: data,
+      });
+
+      // Menambahkan layer pada peta
+      map.addLayer({
+        id: "layer-peta-soaraja",
+        type: "symbol",
+        source: "layer-peta-soaraja",
+        layout: {
+          "icon-image": "nopulsing-dot", // Menggunakan gambar "popup" untuk semua fitur
+          "icon-allow-overlap": false,
+          "icon-size": 1.1, // Ubah ukuran ikon popup sesuai kebutuhan
+          // Tambahkan properti untuk menampilkan teks di dalam kotak
+          "text-field": ["get", "sumber_data"],
+          "text-offset": [0, 0], // Jangan ubah offset jika teks akan ditampilkan di dalam kotak
+          "text-anchor": "center", // Anchor teks ke tengah kotak
+          "text-size": 11, // Ukuran teks
+        },
+        paint: {
+          "text-color": "#ffffff", // Warna teks putih
+        },
+        filter: ["==", "kategori", "Rumah Dijual"],
+      });
+    });
 };
 // Ensure this is called after the map loads
 map.on("style.load", () => {
