@@ -1197,3 +1197,14 @@ input[name="plan"]:checked ~ .menuKetigaAds {
 .formEditListingg {
   @apply mt-[7.5vh];
 }
+
+.mapboxgl-popup-content,
+.custom-popup-content-peta-soaraja {
+  background-color: rgb(224 36 36) !important;
+  /* border-radius: 9999px !important; */
+}
+
+.mapboxgl-popup-tip,
+.custom-popup-tip-peta-soaraja {
+  border-top-color: rgb(224 36 36) !important;
+}
