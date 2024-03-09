@@ -619,165 +619,56 @@ const popup = new mapboxgl.Popup({
 
 let activeObjectId = null;
 
-const size = 90; // Ukuran dasar, bisa disesuaikan untuk responsivitas
+//
 
-const nopulsingDot = {
-  width: size,
-  height: size, // Tinggi disesuaikan untuk memuat segitiga
-  data: new Uint8Array(size * size * 4),
-  onAdd: function () {
-    const canvas = document.createElement("canvas");
-    canvas.width = this.width;
-    canvas.height = this.height;
-    this.context = canvas.getContext("2d");
-  },
-  render: function (text) {
-    // Teks harus diberikan saat pemanggilan fungsi
-    const context = this.context;
-    context.clearRect(0, 0, this.width, this.height);
-
-    // Ukuran dan posisi untuk kotak
-    const kotakHeight = size * 0.4; // Tinggi kotak tetap
-    const kotakWidth = context.measureText(text).width + size * 0.2; // Lebar kotak sesuai dengan panjang teks
-
-    const startX = (this.width - kotakWidth) / 2;
-    const startY = (this.height - kotakHeight) / 2; // Posisi Y disesuaikan ke tengah
-
-    // Menggambar kotak dengan sudut bulat
-    context.fillStyle = "red";
-    context.roundRect(startX, startY, kotakWidth, kotakHeight, size * 0.17);
-    context.fill();
-
-    // Menggambar segitiga dengan orientasi yang benar
-    const segitigaHeight = size * 0.15; // Tinggi segitiga
-    const segitigaWidth = size * 0.2; // Lebar segitiga
-    context.beginPath();
-    context.moveTo(this.width / 2, startY + kotakHeight + segitigaHeight); // Puncak segitiga mengarah ke bawah
-    context.lineTo(this.width / 2 - segitigaWidth / 2, startY + kotakHeight); // Basis kiri segitiga
-    context.lineTo(this.width / 2 + segitigaWidth / 2, startY + kotakHeight); // Basis kanan segitiga
-    context.closePath();
-    context.fill();
-
-    // Jika teks diberikan, menyesuaikan dan menampilkan teks
-    if (text) {
-      const fontSize = size * 0.2; // Ukuran font dinamis berdasarkan ukuran kotak
-      context.font = `${fontSize}px Arial`;
-      context.fillStyle = "white";
-      context.textAlign = "center";
-      context.textBaseline = "middle";
-      // Menentukan posisi tengah teks
-      const textX = this.width / 2;
-      const textY = this.height / 2; // Posisi Y disesuaikan ke tengah
-      context.fillText(text, textX, textY);
-    }
-
-    // Memperbarui data
-    this.data = context.getImageData(0, 0, this.width, this.height).data;
-  },
-};
-
-// Fungsi tambahan untuk menggambar kotak dengan sudut bulat
-CanvasRenderingContext2D.prototype.roundRect = function (
-  x,
-  y,
-  width,
-  height,
-  radius
-) {
-  this.beginPath();
-  this.moveTo(x + radius, y);
-  this.arcTo(x + width, y, x + width, y + height, radius);
-  this.arcTo(x + width, y + height, x, y + height, radius);
-  this.arcTo(x, y + height, x, y, radius);
-  this.arcTo(x, y, x + width, y, radius);
-  this.closePath();
-};
-
-nopulsingDot.onAdd();
-nopulsingDot.render();
-
-const pulsingDot = {
-  width: size,
-  height: size,
-  data: new Uint8Array(size * size * 4),
-
-  onAdd: function () {
-    const canvas = document.createElement("canvas");
-    canvas.width = this.width;
-    canvas.height = this.height;
-    this.context = canvas.getContext("2d");
-  },
-
-  render: function () {
-    const isActive = activeObjectId !== null;
-    const duration = 1000;
-    const t = (performance.now() % duration) / duration;
-
-    const radius = (size / 2) * 0.45;
-    const outerRadius = (size / 2) * 0.7 * t + radius;
-    const context = this.context;
-
-    context.clearRect(0, 0, this.width, this.height);
-
-    // Bagian untuk outer circle
-    context.beginPath();
-    context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
-    if (activeObjectId) {
-      context.fillStyle = `rgba(229,55,55, ${1 - t})`;
-      context.fill();
-    }
-
-    // Bagian untuk inner circle
-    context.beginPath();
-    context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
-    context.fillStyle = "rgba(229,55,55, 1)";
-    context.strokeStyle = "white";
-    context.lineWidth = 16;
-
-    // shadow
-    context.shadowColor = "black";
-    context.shadowBlur = 10;
-    context.shadowOffsetX = 5;
-    context.shadowOffsetY = 5;
-
-    context.fill();
-    context.stroke();
-
-    this.data = context.getImageData(0, 0, this.width, this.height).data;
-    map.triggerRepaint();
-    return true;
-  },
-};
-
-// Function to add the layer with the pulsing dot
 const IzinGalian = () => {
-  // map.addImage("pulsing-dot", pulsingDot, { pixelRatio: 2 });
-  map.addImage("nopulsing-dot", nopulsingDot, { pixelRatio: 2 });
+  fetch("data-dumy.geojson")
+    .then((response) => response.json())
+    .then((data) => {
+      map.addSource("layer-peta-soaraja", {
+        type: "geojson",
+        data: data,
+      });
 
-  map.addSource("layer-peta-soaraja", {
-    type: "geojson",
-    data: "data-dumy.geojson", // Pastikan ini adalah jalur yang benar
-  });
+      map.addLayer({
+        id: "layer-peta-soaraja",
+        type: "symbol",
+        source: "layer-peta-soaraja",
+        layout: {
+          "icon-allow-overlap": true,
+          "icon-size": 1.1,
+        },
+        filter: ["==", "kategori", "Rumah Dijual"],
+      });
 
-  map.addLayer({
-    id: "layer-peta-soaraja",
-    type: "symbol",
-    source: "layer-peta-soaraja",
-    layout: {
-      "icon-image": "nopulsing-dot", // Menggunakan gambar "popup" untuk semua fitur
-      "icon-allow-overlap": false,
-      "icon-size": 1.1, // Ubah ukuran ikon popup sesuai kebutuhan
-      // Tambahkan properti untuk menampilkan teks di dalam kotak
-      "text-field": ["get", "sumber_data"],
-      "text-offset": [0, 0], // Jangan ubah offset jika teks akan ditampilkan di dalam kotak
-      "text-anchor": "center", // Anchor teks ke tengah kotak
-    },
-    paint: {
-      "text-color": "#ffffff", // Warna teks putih
-    },
-    filter: ["==", "kategori", "Rumah Dijual"],
-  });
+      // Iterasi setiap fitur untuk menampilkan Popup
+      data.features.forEach((feature) => {
+        const coordinates = feature.geometry.coordinates;
+        const sumberData = feature.properties.sumber_data;
+
+        // Membuat dan menambahkan Popup baru untuk setiap fitur
+        new mapboxgl.Popup({
+          closeButton: false,
+          closeOnClick: false,
+        })
+          .setLngLat(coordinates)
+          .setHTML(
+            `<div class="custom-popup-content-peta-soaraja p-2 bg-red-600 text-white rounded-full"><p class="text-white">${sumberData}</p></div>`
+          )
+
+          .addTo(map);
+      });
+    });
 };
+
+//
+
+map.on("load", () => {
+  IzinGalian();
+});
+
+//
+
 // Ensure this is called after the map loads
 map.on("style.load", () => {
   IzinGalian();
@@ -853,7 +744,6 @@ map.on("click", "layer-peta-soaraja", (e) => {
   const clickedObjectId = e.features[0].properties.OBJECTID;
   if (activeObjectId !== clickedObjectId) {
     activeObjectId = clickedObjectId;
-    console.log(activeObjectId);
     map.setLayoutProperty("layer-peta-soaraja", "icon-image", [
       "case",
       ["==", ["get", "OBJECTID"], activeObjectId],
