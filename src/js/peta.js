@@ -653,7 +653,7 @@ const IzinGalian = () => {
         })
           .setLngLat(coordinates)
           .setHTML(
-            `<div class="custom-popup-content-peta-soaraja p-2 bg-red-600 text-white rounded-full"><p class="text-white">${sumberData}</p></div>`
+            `<div class="custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2 py-1.5 bg-red-600 text-white rounded-full text-[10px] mt-0.5"><p class="text-white">${sumberData}</p></div>`
           )
 
           .addTo(map);
