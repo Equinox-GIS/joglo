@@ -1204,7 +1204,15 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   /* border-radius: 9999px !important; */
 }
 
+.mapboxgl-popup-tip {
+  border: 5px solid transparent !important;
+  height: 0;
+  width: 0;
+  z-index: 1;
+}
+
 .mapboxgl-popup-tip,
 .custom-popup-tip-peta-soaraja {
   border-top-color: rgb(224 36 36) !important;
+  /* margin-top: 5px; */
 }
