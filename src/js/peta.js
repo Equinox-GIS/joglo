@@ -642,6 +642,7 @@ const IzinGalian = () => {
       });
 
       // Iterasi setiap fitur untuk menampilkan Popup
+      //
       data.features.forEach((feature) => {
         const coordinates = feature.geometry.coordinates;
         const sumberData = feature.properties.sumber_data;
