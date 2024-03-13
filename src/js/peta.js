@@ -9,6 +9,7 @@ import Video1 from "../video/Video1.mp4";
 import era from "../images/agent/era-property.png";
 import verif from "../images/verif.png";
 import model from "../images/model/model11.jpg";
+import newbadge from "../images/newbadge2.png";
 
 function getSliderDefaultOptions() {
   return {
@@ -657,10 +658,22 @@ const IzinGalian = () => {
         // Memeriksa kategori fitur
         if (feature.properties.kategori === "Ibadah") {
           // Jika kategori adalah "Ibadah", tampilkan teks
-          popupContent = `<div class="relative custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2.5 py-1.5 mt-[0.140rem] bg-red-600 text-white rounded-full text-[10px]"><p class="text-white">${sumberData}</p>  <div style="top:-1.2vh; right:-2.3vh; font-size: 7px;" class="absolute w-[1.9vw] h-[2vh] flex justify-center items-center px-0.5 py-1 mt-[0.140rem] bg-white border-2 border-red-500 text-red-500 rounded-full">NEW</div></div>`;
+          popupContent = `<div class="relative custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2.5 py-1.5 mt-[0.140rem] bg-red-600 text-white rounded-full text-[10px]"><p class="text-white">${sumberData}</p>
+
+          <div style="top:-0.8vh; right:-1.5vh; font-size: 7px;" class="absolute flex justify-center items-center rounded-full">
+
+<img
+                                      class="w-4 h-4 object-contain"
+                                      src="${newbadge}"
+                                    />
+
+
+          </div>
+
+                                          </div>`;
         } else if (feature.properties.kategori === "Belanja") {
           // Jika kategori adalah "Belanja", tampilkan bulatan tanpa teks
-          popupContent = ` <div style="position:absolute; border:2.3px solid white; top:-0.9vh; left:-0.3vh; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" class="custom-popup-content-peta-soaraja-bulat flex justify-center items-center bg-red-600 text-white rounded-full text-[7px]border-white"></div>`;
+          popupContent = ` <div style="position:absolute; border:2px solid white; top:-0.8vh; left:-0.1vh; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" class="custom-popup-content-peta-soaraja-bulat flex justify-center items-center bg-red-600 text-white rounded-full text-[7px]border-white"></div>`;
         }
 
         // Membuat dan menambahkan Popup baru untuk setiap fitur

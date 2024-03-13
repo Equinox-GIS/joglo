@@ -1202,6 +1202,7 @@ input[name="plan"]:checked ~ .menuKetigaAds {
 .custom-popup-content-peta-soaraja {
   background-color: rgb(224 36 36) !important;
   /* border-radius: 9999px !important; */
+  top: -0.1vh;
 }
 
 .custom-popup-content-peta-soaraja-bulat {
@@ -1211,7 +1212,7 @@ input[name="plan"]:checked ~ .menuKetigaAds {
 }
 
 .mapboxgl-popup-tip {
-  border: 5px solid transparent !important;
+  border: 3px solid transparent !important;
   height: 0;
   width: 0;
   z-index: 1;

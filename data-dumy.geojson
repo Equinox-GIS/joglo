@@ -69,6 +69,72 @@
 
     {
       "type": "Feature",
+      "id": 1611,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82323640992199, -6.207741340903282]
+      },
+      "properties": {
+        "OBJECTID": 1611,
+        "kategori": "Ibadah",
+        "sumber_data": "124"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1612,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82549862934214, -6.208349293655467]
+      },
+      "properties": {
+        "OBJECTID": 1612,
+        "kategori": "Ibadah",
+        "sumber_data": "454"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1630,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82851499700146, -6.208935923243965]
+      },
+      "properties": {
+        "OBJECTID": 1630,
+        "kategori": "Ibadah",
+        "sumber_data": "887"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1631,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82780689385666, -6.208039986742449]
+      },
+      "properties": {
+        "OBJECTID": 1631,
+        "kategori": "Ibadah",
+        "sumber_data": "878"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1632,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.82464188737609, -6.207272039956784]
+      },
+      "properties": {
+        "OBJECTID": 1632,
+        "kategori": "Ibadah",
+        "sumber_data": "434"
+      }
+    },
+
+    {
+      "type": "Feature",
       "id": 1607,
       "geometry": {
         "type": "Point",
@@ -157,7 +223,7 @@
       "properties": {
         "OBJECTID": 1644,
         "kategori": "Belanja",
-        "sumber_data": "Belanja 5"
+        "sumber_data": "Toko 1"
       }
     }
   ]
