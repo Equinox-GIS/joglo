@@ -660,7 +660,7 @@ const IzinGalian = () => {
           // Jika kategori adalah "Ibadah", tampilkan teks
           popupContent = `<div class="relative custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2.5 py-1.5 mt-[0.140rem] bg-red-600 text-white rounded-full text-[10px]"><p class="text-white">${sumberData}</p>
 
-          <div style="top:-0.8vh; right:-1.5vh; font-size: 7px;" class="absolute flex justify-center items-center rounded-full">
+          <div style="top:-0.8vh; right:-1vh; font-size: 7px;" class="absolute flex justify-center items-center rounded-full">
 
 <img
                                       class="w-4 h-4 object-contain"

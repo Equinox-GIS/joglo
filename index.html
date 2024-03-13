@@ -36779,101 +36779,148 @@
                           id="menu-kuota"
                           class="menu-content-profil-pengaturan w-full h-[73.5vh] hidden"
                         >
+                          <!-- PuasaDay3 -->
+
                           <div class="w-full h-[76.5vh] py-3">
-                            <div class="flex flex-row">
-                              <div class="basis-3/6 flex flex-col">
-                                <div
-                                  class="inline-flex items-center justify-between mb-5"
-                                >
-                                  <div class="text-black font-semibold">
-                                    Kuota
-                                  </div>
-                                  <div class>
-                                    <input
-                                      type="radio"
-                                      name="plan"
-                                      id="plan-daily-70"
-                                      value="daily-70"
-                                      class="hidden peer"
-                                      required=""
-                                    />
-                                    <label
-                                      for="plan-daily-70"
-                                      class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-                                    >
-                                      <div class="font-semibold">170,000</div>
-                                    </label>
-                                  </div>
-                                </div>
-
-                                <div
-                                  class="inline-flex items-center justify-between mb-5"
-                                >
-                                  <div class="text-black font-semibold">
-                                    Beli Kuota
-                                  </div>
-                                  <div class>
-                                    <input
-                                      type="radio"
-                                      name="plan"
-                                      id="plan-daily-70"
-                                      value="daily-70"
-                                      class="hidden peer"
-                                      required=""
-                                    />
-                                    <label
-                                      for="plan-daily-70"
-                                      class="flex flex-col items-center justify-between w-[12vw] p-2 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
-                                    >
-                                      <div class="font-semibold">1,000,000</div>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="w-full flex flex-row mb-5">
-                              <div class="basis-2/12 font-semibold">
-                                Pembayaran
-                              </div>
-                              <div class="basis-5/12 flex flex-col ml-10">
-                                <div
-                                  class="max-w-lg mx-auto my-0 p-6 bg-white shadow-lg rounded-lg"
-                                >
-                                  <!-- BRI -->
-                                  <div
-                                    class="flex items-center mb-4 p-4 bg-blue-700 shadow rounded-lg"
+                            <div class="grid grid-cols-2 gap-y-1 gap-x-3">
+                              <!-- b -->
+                              <div>
+                                <!-- saldo -->
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="saldo_new"
                                   >
-                                    <div class="flex-grow">
-                                      <p class="font-semibold text-white">
-                                        BANK BCA
-                                      </p>
-                                      <p class="text-white">
-                                        1234 5678 9101 1121
-                                      </p>
-                                      <p class="text-white text-sm">
-                                        Atas Nama Soaraja Properti
-                                      </p>
+                                    Saldo (Rp)
+                                  </label>
+                                  <input
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="saldo_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                  />
+                                </div>
+
+                                <!-- topup -->
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="topup_new"
+                                  >
+                                    Top Up
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="topup_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+
+                                <!-- Pembayaran -->
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="pembayaran_new"
+                                  >
+                                    Pembayaran
+                                  </label>
+
+                                  <!-- border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full -->
+                                  <select
+                                    id="pembayaran_new"
+                                    class="border px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  >
+                                    <option value="bca">BCA</option>
+                                    <option value="mandiri">Mandiri</option>
+                                    <option value="cimb">CIMB</option>
+                                  </select>
+                                </div>
+
+                                <!--  -->
+                                <div class="w-full flex justify-center mt-5">
+                                  <button
+                                    type="button"
+                                    data-modal-target="default-modal"
+                                    data-modal-toggle="default-modal"
+                                    class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+                                  >
+                                    Proses
+                                  </button>
+                                </div>
+
+                                <div
+                                  id="default-modal"
+                                  tabindex="-1"
+                                  aria-hidden="true"
+                                  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                                >
+                                  <div
+                                    class="relative p-4 w-full max-w-2xl max-h-full"
+                                  >
+                                    <!-- Modal content -->
+                                    <div
+                                      class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                                    >
+                                      <!-- Modal header -->
+                                      <div
+                                        class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+                                      >
+                                        <h3
+                                          class="text-xl font-semibold text-gray-900 dark:text-white"
+                                        >
+                                          Pembayaran
+                                        </h3>
+                                        <button
+                                          type="button"
+                                          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                          data-modal-hide="default-modal"
+                                        >
+                                          <svg
+                                            class="w-3 h-3"
+                                            aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 14 14"
+                                          >
+                                            <path
+                                              stroke="currentColor"
+                                              stroke-linecap="round"
+                                              stroke-linejoin="round"
+                                              stroke-width="2"
+                                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                                            />
+                                          </svg>
+                                          <span class="sr-only"
+                                            >Close modal</span
+                                          >
+                                        </button>
+                                      </div>
+                                      <!-- Modal body -->
+                                      <div class="p-4 md:p-5 space-y-4">
+                                        <div class="w-full flex flex-col">
+                                          <div
+                                            class="flex justify-center text-xl font-bold"
+                                          >
+                                            Rp. 500.000
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
-
-                                  <div
-                                    class="flex items-center mb-4 p-4 bg-orange-400 shadow rounded-lg"
-                                  >
-                                    <div class="flex-grow">
-                                      <p class="font-semibold text-white">
-                                        BANK BNI
-                                      </p>
-                                      <p class="text-white">
-                                        1234 5678 9101 1121
-                                      </p>
-                                      <p class="text-white text-sm">
-                                        Atas Nama Soaraja Properti
-                                      </p>
-                                    </div>
-                                  </div>
                                 </div>
                               </div>
+
+                              <!-- a -->
+                              <div></div>
+
+                              <!--            <div class="col-span-2 w-full flex justify-center mt-5">
+
+                                <button type="button" class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+                                Simpan
+                              </button>
+
+                              </div> -->
                             </div>
 
                             <!--  -->
@@ -49433,7 +49480,8 @@
                 display: true,
                 text: "Grafik Penjualan",
                 font: {
-                  size: 17,
+                  size: 13,
+                  weight: "bold",
                 },
               },
             },
@@ -49451,6 +49499,10 @@
                 title: {
                   display: true,
                   text: "Unit",
+                  font: {
+                    size: 13,
+                    weight: "bold",
+                  },
                 },
               },
               x: {
@@ -49458,6 +49510,10 @@
                 title: {
                   display: true,
                   text: "Bulan",
+                  font: {
+                    size: 12,
+                    weight: "bold",
+                  },
                 },
               },
             },
@@ -49501,7 +49557,8 @@
                 display: true,
                 text: "Grafik Pengunjung",
                 font: {
-                  size: 17,
+                  size: 13,
+                  weight: "bold",
                 },
               },
             },
@@ -49519,6 +49576,10 @@
                 title: {
                   display: true,
                   text: "Orang",
+                  font: {
+                    size: 13,
+                    weight: "bold",
+                  },
                 },
               },
               x: {
@@ -49526,6 +49587,10 @@
                 title: {
                   display: true,
                   text: "Bulan",
+                  font: {
+                    size: 12,
+                    weight: "bold",
+                  },
                 },
               },
             },
