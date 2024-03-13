@@ -638,7 +638,12 @@ const IzinGalian = () => {
           "icon-allow-overlap": true,
           "icon-size": 1.1,
         },
-        filter: ["==", "kategori", "Rumah Dijual"],
+        // Gunakan operator 'any' untuk menampilkan fitur dengan kategori "Ibadah" atau "Belanja"
+        filter: [
+          "any",
+          ["==", "kategori", "Ibadah"],
+          ["==", "kategori", "Belanja"],
+        ],
       });
 
       // Iterasi setiap fitur untuk menampilkan Popup
@@ -647,16 +652,24 @@ const IzinGalian = () => {
         const coordinates = feature.geometry.coordinates;
         const sumberData = feature.properties.sumber_data;
 
+        let popupContent;
+
+        // Memeriksa kategori fitur
+        if (feature.properties.kategori === "Ibadah") {
+          // Jika kategori adalah "Ibadah", tampilkan teks
+          popupContent = `<div class="relative custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2.5 py-1.5 mt-[0.140rem] bg-red-600 text-white rounded-full text-[10px]"><p class="text-white">${sumberData}</p>  <div style="top:-1.2vh; right:-2.3vh; font-size: 7px;" class="absolute w-[1.9vw] h-[2vh] flex justify-center items-center px-0.5 py-1 mt-[0.140rem] bg-white border-2 border-red-500 text-red-500 rounded-full">NEW</div></div>`;
+        } else if (feature.properties.kategori === "Belanja") {
+          // Jika kategori adalah "Belanja", tampilkan bulatan tanpa teks
+          popupContent = ` <div style="position:absolute; border:2.3px solid white; top:-0.9vh; left:-0.3vh; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" class="custom-popup-content-peta-soaraja-bulat flex justify-center items-center bg-red-600 text-white rounded-full text-[7px]border-white"></div>`;
+        }
+
         // Membuat dan menambahkan Popup baru untuk setiap fitur
         new mapboxgl.Popup({
           closeButton: false,
           closeOnClick: false,
         })
           .setLngLat(coordinates)
-          .setHTML(
-            `<div class="custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2 py-1.5 bg-red-600 text-white rounded-full text-[10px] mt-0.5"><p class="text-white">${sumberData}</p></div>`
-          )
-
+          .setHTML(popupContent)
           .addTo(map);
       });
     });
@@ -678,15 +691,15 @@ map.on("style.load", () => {
   updateMapForCategory();
 });
 
-let activeCategories = ["Rumah Dijual"]; // Mulai dengan "Rumah Dijual" sebagai default
+let activeCategories = ["Ibadah"]; // Mulai dengan "Ibadah" sebagai default
 
 // Fungsi untuk memperbarui peta berdasarkan kategori
 function updateMapForCategory() {
-  let filter = ["any", ["==", "kategori", "Rumah Dijual"]]; // Selalu tampilkan "Rumah Dijual"
+  let filter = ["any", ["==", "kategori", "Ibadah"]]; // Selalu tampilkan "Ibadah"
 
   // Tambahkan kategori aktif lainnya ke filter
   activeCategories.forEach((category) => {
-    if (category !== "Rumah Dijual") {
+    if (category !== "Ibadah") {
       filter.push(["==", "kategori", category]);
     }
   });
@@ -701,8 +714,8 @@ buttons.forEach((button) => {
   button.addEventListener("click", function () {
     const category = this.innerText.trim();
 
-    // Jika kategori bukan "Rumah Dijual", atur ulang kategori aktif
-    if (category !== "Rumah Dijual") {
+    // Jika kategori bukan "Ibadah", atur ulang kategori aktif
+    if (category !== "Ibadah") {
       // Cek apakah kategori ini sudah aktif
       const categoryIndex = activeCategories.indexOf(category);
       if (categoryIndex > -1) {
@@ -711,9 +724,9 @@ buttons.forEach((button) => {
         this.classList.remove("active_btn_peta");
       } else {
         // Jika belum aktif, tambahkan kategori ke daftar aktif
-        // Hapus kelas aktif dari semua tombol kecuali "Rumah Dijual" dan tambahkan ke tombol ini
+        // Hapus kelas aktif dari semua tombol kecuali "Ibadah" dan tambahkan ke tombol ini
         buttons.forEach((btn) => {
-          if (btn.innerText.trim() !== "Rumah Dijual") {
+          if (btn.innerText.trim() !== "Ibadah") {
             btn.classList.remove("active_btn_peta");
           }
         });
@@ -727,7 +740,7 @@ buttons.forEach((button) => {
   });
 });
 
-// Aktifkan tombol default ("Rumah Dijual")
+// Aktifkan tombol default ("Ibadah")
 const defaultButton = document.getElementById("chip-rumah-dijual");
 defaultButton.classList.add("active_btn_peta");
 
