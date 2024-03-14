@@ -657,20 +657,24 @@ const IzinGalian = () => {
 
         // Memeriksa kategori fitur
         if (feature.properties.kategori === "Ibadah") {
-          // Jika kategori adalah "Ibadah", tampilkan teks
-          popupContent = `<div class="relative custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2.5 py-1.5 mt-[0.140rem] bg-red-600 text-white rounded-full text-[10px]"><p class="text-white">${sumberData}</p>
+          const sumberData = feature.properties.sumber_data;
+          const countValidasi = feature.properties.sumber_data; // Mengambil nilai count validasi
 
-          <div style="top:-0.8vh; right:-1vh; font-size: 7px;" class="absolute flex justify-center items-center rounded-full">
+          let newBadgeCondition = "";
 
-<img
-                                      class="w-4 h-4 object-contain"
-                                      src="${newbadge}"
-                                    />
+          // Buat validasi jika count validasi lebih dari 800, maka tampilkan badge baru
+          if (countValidasi > 800) {
+            newBadgeCondition = `<img class="w-4 h-4 object-contain" src="${newbadge}" />`;
+          }
 
-
-          </div>
-
-                                          </div>`;
+          // Menyusun popupContent dengan kondisi newBadgeCondition
+          popupContent = `
+          <div class="relative custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2.5 py-1.5 mt-[0.140rem] bg-red-600 text-white rounded-full text-[10px]">
+            <p class="text-white">${sumberData}</p>
+            <div style="top:-0.8vh; right:-1vh; font-size: 7px;" class="absolute flex justify-center items-center rounded-full">
+              ${newBadgeCondition}
+            </div>
+          </div>`;
         } else if (feature.properties.kategori === "Belanja") {
           // Jika kategori adalah "Belanja", tampilkan bulatan tanpa teks
           popupContent = ` <div style="position:absolute; border:2px solid white; top:-0.8vh; left:-0.1vh; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" class="custom-popup-content-peta-soaraja-bulat flex justify-center items-center bg-red-600 text-white rounded-full text-[7px]border-white"></div>`;
