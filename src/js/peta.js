@@ -9,6 +9,7 @@ import Video1 from "../video/Video1.mp4";
 import era from "../images/agent/era-property.png";
 import verif from "../images/verif.png";
 import model from "../images/model/model11.jpg";
+import newbadge from "../images/starnew.png";
 
 function getSliderDefaultOptions() {
   return {
@@ -638,7 +639,12 @@ const IzinGalian = () => {
           "icon-allow-overlap": true,
           "icon-size": 1.1,
         },
-        filter: ["==", "kategori", "Rumah Dijual"],
+        // Gunakan operator 'any' untuk menampilkan fitur dengan kategori "Ibadah" atau "Belanja"
+        filter: [
+          "any",
+          ["==", "kategori", "Ibadah"],
+          ["==", "kategori", "Belanja"],
+        ],
       });
 
       // Iterasi setiap fitur untuk menampilkan Popup
@@ -647,16 +653,40 @@ const IzinGalian = () => {
         const coordinates = feature.geometry.coordinates;
         const sumberData = feature.properties.sumber_data;
 
+        let popupContent;
+
+        // Memeriksa kategori fitur
+        if (feature.properties.kategori === "Ibadah") {
+          const sumberData = feature.properties.sumber_data;
+          const countValidasi = feature.properties.sumber_data; // Mengambil nilai count validasi
+
+          let newBadgeCondition = "";
+
+          // Buat validasi jika count validasi lebih dari 800, maka tampilkan badge baru
+          if (countValidasi > 800) {
+            newBadgeCondition = `<img class="w-4 h-4 object-contain" src="${newbadge}" />`;
+          }
+
+          // Menyusun popupContent dengan kondisi newBadgeCondition
+          popupContent = `
+          <div class="relative custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2.5 py-1.5 mt-[0.140rem] bg-red-600 text-white rounded-full text-[10px]">
+            <p class="text-white">${sumberData}</p>
+            <div style="top:-0.8vh; right:-1vh; font-size: 7px;" class="absolute flex justify-center items-center rounded-full">
+              ${newBadgeCondition}
+            </div>
+          </div>`;
+        } else if (feature.properties.kategori === "Belanja") {
+          // Jika kategori adalah "Belanja", tampilkan bulatan tanpa teks
+          popupContent = ` <div style="position:absolute; border:2px solid white; top:-0.8vh; left:-0.1vh; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" class="custom-popup-content-peta-soaraja-bulat flex justify-center items-center bg-red-600 text-white rounded-full text-[7px]border-white"></div>`;
+        }
+
         // Membuat dan menambahkan Popup baru untuk setiap fitur
         new mapboxgl.Popup({
           closeButton: false,
           closeOnClick: false,
         })
           .setLngLat(coordinates)
-          .setHTML(
-            `<div class="custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2 py-1.5 bg-red-600 text-white rounded-full text-[10px] mt-0.5"><p class="text-white">${sumberData}</p></div>`
-          )
-
+          .setHTML(popupContent)
           .addTo(map);
       });
     });
@@ -678,15 +708,15 @@ map.on("style.load", () => {
   updateMapForCategory();
 });
 
-let activeCategories = ["Rumah Dijual"]; // Mulai dengan "Rumah Dijual" sebagai default
+let activeCategories = ["Ibadah"]; // Mulai dengan "Ibadah" sebagai default
 
 // Fungsi untuk memperbarui peta berdasarkan kategori
 function updateMapForCategory() {
-  let filter = ["any", ["==", "kategori", "Rumah Dijual"]]; // Selalu tampilkan "Rumah Dijual"
+  let filter = ["any", ["==", "kategori", "Ibadah"]]; // Selalu tampilkan "Ibadah"
 
   // Tambahkan kategori aktif lainnya ke filter
   activeCategories.forEach((category) => {
-    if (category !== "Rumah Dijual") {
+    if (category !== "Ibadah") {
       filter.push(["==", "kategori", category]);
     }
   });
@@ -701,8 +731,8 @@ buttons.forEach((button) => {
   button.addEventListener("click", function () {
     const category = this.innerText.trim();
 
-    // Jika kategori bukan "Rumah Dijual", atur ulang kategori aktif
-    if (category !== "Rumah Dijual") {
+    // Jika kategori bukan "Ibadah", atur ulang kategori aktif
+    if (category !== "Ibadah") {
       // Cek apakah kategori ini sudah aktif
       const categoryIndex = activeCategories.indexOf(category);
       if (categoryIndex > -1) {
@@ -711,9 +741,9 @@ buttons.forEach((button) => {
         this.classList.remove("active_btn_peta");
       } else {
         // Jika belum aktif, tambahkan kategori ke daftar aktif
-        // Hapus kelas aktif dari semua tombol kecuali "Rumah Dijual" dan tambahkan ke tombol ini
+        // Hapus kelas aktif dari semua tombol kecuali "Ibadah" dan tambahkan ke tombol ini
         buttons.forEach((btn) => {
-          if (btn.innerText.trim() !== "Rumah Dijual") {
+          if (btn.innerText.trim() !== "Ibadah") {
             btn.classList.remove("active_btn_peta");
           }
         });
@@ -727,7 +757,7 @@ buttons.forEach((button) => {
   });
 });
 
-// Aktifkan tombol default ("Rumah Dijual")
+// Aktifkan tombol default ("Ibadah")
 const defaultButton = document.getElementById("chip-rumah-dijual");
 defaultButton.classList.add("active_btn_peta");
 
