@@ -12303,7 +12303,7 @@
                                 <div class="w-full flex justify-center">
                                   <button
                                     type="button"
-                                    class="text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+                                    class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
                                   >
                                     Simpan
                                   </button>
@@ -36779,152 +36779,227 @@
                           id="menu-kuota"
                           class="menu-content-profil-pengaturan w-full h-[73.5vh] hidden"
                         >
-                          <!-- PuasaDay3 -->
+                          <!-- PuasaDay4 -->
 
-                          <div class="w-full h-[76.5vh] py-3">
-                            <div class="grid grid-cols-2 gap-y-1 gap-x-3">
-                              <!-- b -->
-                              <div>
-                                <!-- saldo -->
-                                <div class="relative w-full mb-2">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="saldo_new"
-                                  >
-                                    Saldo (Rp)
-                                  </label>
-                                  <input
-                                    readonly=""
-                                    disabled=""
-                                    type="text"
-                                    id="saldo_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                  />
-                                </div>
+                  <div class="h-[76.5vh] py-3">
+                    <div class="grid grid-cols-2 gap-y-1 gap-x-3">
+                      <!-- b -->
+                      <div class="w-full flex flex-row">
+                        <div class="basis-2/12"></div>
 
-                                <!-- topup -->
-                                <div class="relative w-full mb-2">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="topup_new"
-                                  >
-                                    Top Up
-                                  </label>
-                                  <input
-                                    type="text"
-                                    id="topup_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-
-                                <!-- Pembayaran -->
-                                <div class="relative w-full mb-2">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="pembayaran_new"
-                                  >
-                                    Pembayaran
-                                  </label>
-
-                                  <!-- border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full -->
-                                  <select
-                                    id="pembayaran_new"
-                                    class="border px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="bca">BCA</option>
-                                    <option value="mandiri">Mandiri</option>
-                                    <option value="cimb">CIMB</option>
-                                  </select>
-                                </div>
-
-                                <!--  -->
-                                <div class="w-full flex justify-center mt-5">
-                                  <button
-                                    type="button"
-                                    data-modal-target="default-modal"
-                                    data-modal-toggle="default-modal"
-                                    class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
-                                  >
-                                    Proses
-                                  </button>
-                                </div>
-
-                                <div
-                                  id="default-modal"
-                                  tabindex="-1"
-                                  aria-hidden="true"
-                                  class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
-                                >
-                                  <div
-                                    class="relative p-4 w-full max-w-2xl max-h-full"
-                                  >
-                                    <!-- Modal content -->
-                                    <div
-                                      class="relative bg-white rounded-lg shadow dark:bg-gray-700"
-                                    >
-                                      <!-- Modal header -->
-                                      <div
-                                        class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
-                                      >
-                                        <h3
-                                          class="text-xl font-semibold text-gray-900 dark:text-white"
-                                        >
-                                          Pembayaran
-                                        </h3>
-                                        <button
-                                          type="button"
-                                          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                          data-modal-hide="default-modal"
-                                        >
-                                          <svg
-                                            class="w-3 h-3"
-                                            aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 14 14"
-                                          >
-                                            <path
-                                              stroke="currentColor"
-                                              stroke-linecap="round"
-                                              stroke-linejoin="round"
-                                              stroke-width="2"
-                                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                                            />
-                                          </svg>
-                                          <span class="sr-only"
-                                            >Close modal</span
-                                          >
-                                        </button>
-                                      </div>
-                                      <!-- Modal body -->
-                                      <div class="p-4 md:p-5 space-y-4">
-                                        <div class="w-full flex flex-col">
-                                          <div
-                                            class="flex justify-center text-xl font-bold"
-                                          >
-                                            Rp. 500.000
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <!-- a -->
-                              <div></div>
-
-                              <!--            <div class="col-span-2 w-full flex justify-center mt-5">
-
-                                <button type="button" class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
-                                Simpan
-                              </button>
-
-                              </div> -->
-                            </div>
-
-                            <!--  -->
+                        <div class="basis-8/12">
+                          <!-- saldo -->
+                          <div class="relative w-full mb-2 mt-10">
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="saldo_new"
+                            >
+                              Saldo (Rp)
+                            </label>
+                            <input
+                              readonly=""
+                              disabled=""
+                              type="text"
+                              id="saldo_new"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan text-right"
+                            />
                           </div>
+
+                          <!-- topup -->
+                          <div class="relative w-full mb-2">
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="topup_new"
+                            >
+                              Top Up (Rp)
+                            </label>
+                            <input
+                              type="text"
+                              id="topup_new"
+                              class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                            />
+                          </div>
+
+                          <!-- Pembayaran -->
+                          <div class="relative w-full mb-2">
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="pembayaran_new"
+                            >
+                              Bank
+                            </label>
+
+                            <!-- border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full -->
+                            <select
+                              id="pembayaran_new"
+                              class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-sm"
+                            >
+                              <option value="bca">BCA</option>
+                              <option value="mandiri">Mandiri</option>
+                              <option value="cimb">CIMB</option>
+                            </select>
+                          </div>
+
+                          <!--  -->
+                          <div class="w-full flex justify-center mt-9">
+                            <button
+                              type="button"
+                              class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                            >
+                              Proses
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="basis-2/12"></div>
+
+                        <!--  -->
+                        <!--  -->
+                      </div>
+
+                      <!-- a -->
+                      <div
+                        class="h-[52.5vh] w-full flex flex-col justify-start px-5 pb-5 rounded-xl"
+                      >
+                        <div class="text-base text-center font-semibold mb-4">
+                          Konfirmasi Pembayaran
+                        </div>
+
+                        <!-- nominall -->
+                        <div class="relative w-full mb-2">
+                          <label
+                            class="block text-xs font-bold mb-1"
+                            for="nominall_new"
+                          >
+                            Nominal (Rp)
+                          </label>
+                          <input
+                            readonly=""
+                            disabled=""
+                            type="text"
+                            id="nominall_new"
+                            class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan text-right"
+                          />
+                        </div>
+
+                        <!-- Pembayarann -->
+                        <div class="relative w-full mb-2">
+                          <label
+                            class="block text-xs font-bold mb-1"
+                            for="Pembayarann_new"
+                          >
+                            Pembayaran (Rp)
+                          </label>
+                          <input
+                            readonly=""
+                            disabled=""
+                            type="text"
+                            id="Pembayarann_new"
+                            class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan text-right"
+                          />
+                        </div>
+
+                        <!-- virtualaccount -->
+                        <div class="relative w-full mb-2">
+                          <label
+                            class="block text-xs font-bold mb-1"
+                            for="virtualaccount_new"
+                          >
+                            Virtual Account
+                          </label>
+
+                          <div class="px-0 pt-1 pb-2 w-full grid grid-cols-1">
+                            <div class="text-base text-gray-500">
+                              <p class="tracking-wide">1235 8878 8989 3243</p>
+                            </div>
+                        
+                          </div>
+                        </div>
+
+                        <!--                         <div class="grid grid-cols-2 mt-5">
+                          <div class="text-xs font-semibold">Harga</div>
+                          <div class="text-right text-xs">300.000</div>
+                        </div>
+
+                        <div class="grid grid-cols-2 mt-5">
+                          <div class="text-xs font-semibold">Pembayaran</div>
+                          <div class="text-right text-xs">BCA</div>
+                        </div>
+
+                        <div class="grid grid-cols-2 mt-5">
+                          <div class="col-span-2 text-xs font-semibold mb-1">
+                            VIRTUAL ACCOUNT NUMBER
+                          </div>
+                          <div class="text-xs text-gray-500">
+                            <p class="tracking-wide">4324234242343242</p>
+                          </div>
+                          <div class="flex justify-end">
+                            <img
+                              class="w-3.5 h-3.5 object-contain cursor-pointer"
+                              src="./src/images/copy.png"
+                              alt=""
+                            />
+                          </div>
+                        </div> -->
+
+                        <!--  -->
+
+                        <div
+                          class="text-xs mt-2"
+                        
+                        >
+
+                          <h2 id="accordion-flush-heading-1">
+
+                            <div
+                              class="flex items-center justify-between w-full pt-0 pb-2 font-medium gap-3"
+                           
+                            >
+                              <span class="font-semibold"
+                                >Instruksi Pembayaran</span
+                              >
+                        
+                            </div>
+                          </h2>
+                          <div
+                          >
+                            <div class="pt-0 pb-5">
+                              <div
+                                class="payment-instructions mb-2 text-gray-500"
+                              >
+                                <ol class="payment-steps list-decimal ml-5">
+                                  <li>
+                                    Pastikan saldo Anda cukup untuk melakukan
+                                    top up.
+                                  </li>
+                                  <li>
+                                    Transfer ke rekening BCA dengan nomor
+                                    <span class="account-number"
+                                      >1234567890</span
+                                    >.
+                                  </li>
+                                  <li>
+                                    Setelah transfer, simpan bukti transfer
+                                    sebagai referensi.
+                                  </li>
+                                  <li>
+                                    Konfirmasi pembayaran dengan mengunggah
+                                    bukti transfer di aplikasi kami.
+                                  </li>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!--  -->
+                      </div>
+                    </div>
+
+                    <!--  -->
+                  </div>
+
+
                         </div>
                       </div>
 
@@ -45431,7 +45506,7 @@
                     <div class="flex justify-center col-span-2 pt-5 pb-6">
                       <button
                         type="button"
-                        class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+                        class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
                       >
                         Simpan
                       </button>

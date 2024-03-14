@@ -9,7 +9,7 @@ import Video1 from "../video/Video1.mp4";
 import era from "../images/agent/era-property.png";
 import verif from "../images/verif.png";
 import model from "../images/model/model11.jpg";
-import newbadge from "../images/newbadge2.png";
+import newbadge from "../images/starnew.png";
 
 function getSliderDefaultOptions() {
   return {

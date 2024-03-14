@@ -4272,6 +4272,10 @@ Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat pe
 
 document.addEventListener("DOMContentLoaded", function () {
   var dataDummyPengaturan = {
+    saldo_new: "500.000",
+    topup_new: "1.000.000",
+    nominall_new: "1.000.000",
+    Pembayarann_new: "1.100.000",
     // speliasi_aset_pengaturan: "Kelapa Gading",
     // afiliasi_pengaturan: "Era Jaya",
     nama_profil_pengaturan: "Syarif Hidayat",
@@ -4292,6 +4296,18 @@ Lingkungan aman nyaman dan bebas banjir
 
 Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perka`,
   };
+
+  let saldoNew = document.getElementById("saldo_new");
+  saldoNew.value = dataDummyPengaturan.saldo_new;
+
+  let topupNew = document.getElementById("topup_new");
+  topupNew.value = dataDummyPengaturan.topup_new;
+
+  let nominallNew = document.getElementById("nominall_new");
+  nominallNew.value = dataDummyPengaturan.nominall_new;
+
+  let PembayarannNew = document.getElementById("Pembayarann_new");
+  PembayarannNew.value = dataDummyPengaturan.Pembayarann_new;
 
   // let speliasiAsetPengaturan = document.getElementById(
   //   "speliasi_aset_pengaturan"
@@ -4316,6 +4332,7 @@ Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat pe
   let deskripsiPostinganPengaturan = document.getElementById(
     "deskripsi_postingannn_pengaturan"
   );
+
   deskripsiPostinganPengaturan.value =
     dataDummyPengaturan.deskripsi_postingannn_pengaturan;
 });
