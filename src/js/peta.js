@@ -648,16 +648,15 @@ const IzinGalian = () => {
       });
 
       // Iterasi setiap fitur untuk menampilkan Popup
-      //
       data.features.forEach((feature) => {
         const coordinates = feature.geometry.coordinates;
         const sumberData = feature.properties.sumber_data;
 
-        let popupContent;
+        let popupContent1 = ""; // Inisialisasi popupContent1 sebagai string kosong
+        let popupContent2 = ""; // Inisialisasi popupContent2 sebagai string kosong
 
         // Memeriksa kategori fitur
         if (feature.properties.kategori === "Ibadah") {
-          const sumberData = feature.properties.sumber_data;
           const countValidasi = feature.properties.sumber_data; // Mengambil nilai count validasi
 
           let newBadgeCondition = "";
@@ -667,27 +666,71 @@ const IzinGalian = () => {
             newBadgeCondition = `<img class="w-4 h-4 object-contain" src="${newbadge}" />`;
           }
 
-          // Menyusun popupContent dengan kondisi newBadgeCondition
-          popupContent = `
-          <div class="relative custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2.5 py-1.5 mt-[0.140rem] bg-red-600 text-white rounded-full text-[10px]">
-            <p class="text-white">${sumberData}</p>
-            <div style="top:-0.8vh; right:-1vh; font-size: 7px;" class="absolute flex justify-center items-center rounded-full">
-              ${newBadgeCondition}
-            </div>
-          </div>`;
-        } else if (feature.properties.kategori === "Belanja") {
-          // Jika kategori adalah "Belanja", tampilkan bulatan tanpa teks
-          popupContent = ` <div style="position:absolute; border:2px solid white; top:-0.8vh; left:-0.1vh; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" class="custom-popup-content-peta-soaraja-bulat flex justify-center items-center bg-red-600 text-white rounded-full text-[7px]border-white"></div>`;
+          // Menyusun popupContent1 dengan kondisi newBadgeCondition untuk kategori "Ibadah"
+          popupContent1 = `
+            <div class="relative custom-popup-content-peta-soaraja w-[1.8vw] h-[2vh] flex justify-center items-center px-2.5 py-1.5 mt-[0.140rem] bg-red-600 text-white rounded-full text-[10px]">
+                <p class="text-white">${sumberData}</p>
+                <div style="top:-0.8vh; right:-1vh; font-size: 7px;" class="absolute flex justify-center items-center rounded-full">
+                    ${newBadgeCondition}
+                </div>
+            </div>`;
+        }
+
+        // Memeriksa kategori fitur
+        if (feature.properties.kategori === "Belanja") {
+          // Konten untuk popupContent2
+          popupContent2 = `
+            <div class="parent-of-popup-content2">
+                <div style="position:absolute; border:2px solid white; top:-0.8vh; left:-0.1vh; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);" class="custom-popup-content-peta-soaraja-bulat flex justify-center items-center bg-red-600 text-white rounded-full text-[7px]border-white"></div>
+            </div>`;
+
+          // Mendapatkan semua elemen parent-of-popup-content2
+          const parentElements = document.querySelectorAll(
+            ".parent-of-popup-content2"
+          );
+
+          // Iterasi melalui setiap elemen parent
+          parentElements.forEach((parentElement) => {
+            // Mendapatkan elemen parent dari elemen saat ini
+            const parentNode = parentElement.parentNode.parentNode;
+
+            // Memeriksa apakah elemen parent ditemukan
+            if (parentNode) {
+              // Mencari elemen dengan kelas "mapboxgl-popup-tip" dalam elemen parent
+              const mapboxglPopupTip = parentNode.querySelector(
+                ".mapboxgl-popup-tip"
+              );
+
+              // Memeriksa apakah elemen dengan kelas "mapboxgl-popup-tip" ditemukan
+              if (mapboxglPopupTip) {
+                mapboxglPopupTip.remove();
+              }
+            } else {
+              console.log("Elemen parent tidak ditemukan untuk elemen ini.");
+            }
+          });
         }
 
         // Membuat dan menambahkan Popup baru untuk setiap fitur
-        new mapboxgl.Popup({
-          closeButton: false,
-          closeOnClick: false,
-        })
-          .setLngLat(coordinates)
-          .setHTML(popupContent)
-          .addTo(map);
+        if (popupContent1 !== "") {
+          new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false,
+          })
+            .setLngLat(coordinates)
+            .setHTML(popupContent1)
+            .addTo(map);
+        }
+
+        if (popupContent2 !== "") {
+          new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false,
+          })
+            .setLngLat(coordinates)
+            .setHTML(popupContent2)
+            .addTo(map);
+        }
       });
     });
 };
