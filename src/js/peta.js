@@ -703,14 +703,7 @@ const IzinGalian = () => {
 
               // Memeriksa apakah elemen dengan kelas "mapboxgl-popup-tip" ditemukan
               if (mapboxglPopupTip) {
-                console.log(
-                  "Elemen dengan kelas 'mapboxgl-popup-tip' ditemukan:",
-                  mapboxglPopupTip.remove()
-                );
-              } else {
-                console.log(
-                  "Elemen dengan kelas 'mapboxgl-popup-tip' tidak ditemukan dalam elemen parent ini."
-                );
+                mapboxglPopupTip.remove();
               }
             } else {
               console.log("Elemen parent tidak ditemukan untuk elemen ini.");
