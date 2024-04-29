@@ -26,6 +26,14 @@
   font-style: normal;
 }
 
+/*Medium3*/
+@font-face {
+  font-family: "Font Recoleta";
+  src: url("../font/Recoleta-Bold.ttf") format("opentype");
+  /*  font-weight: 600;*/
+  font-style: normal;
+}
+
 /* Mengatur Button Slider Card Info */
 .slider-thumbnails {
   margin-left: -15px;
