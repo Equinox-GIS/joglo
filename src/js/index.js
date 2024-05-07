@@ -3000,6 +3000,51 @@ window.ShowDetailPesanDua = function () {
   }
 };
 
+window.ShowCoBroking = function () {
+  var defaultPesan = document.querySelector(".default_pesan_dua");
+  var detail = document.querySelector(".halaman_co_broking");
+  var coDetail = document.querySelector(".halaman_co_broking_detail");
+
+  // Hapus kelas 'hidden' dari detail
+  detail.classList.remove("hidden");
+
+  // Tambahkan kelas 'hidden' pada defaultPesan
+  defaultPesan.classList.add("hidden");
+
+  // Tambahkan kelas 'hidden' pada coDetail
+  coDetail.classList.add("hidden");
+};
+
+window.ShowCoBrokingDetail = function () {
+  var defaultPesan = document.querySelector(".default_pesan_dua");
+  var detail = document.querySelector(".halaman_co_broking");
+  var coDetail = document.querySelector(".halaman_co_broking_detail");
+
+  // Hapus kelas 'hidden' dari detail
+  detail.classList.add("hidden");
+
+  // Tambahkan kelas 'hidden' pada defaultPesan
+  defaultPesan.classList.add("hidden");
+
+  // Tambahkan kelas 'hidden' pada coDetail
+  coDetail.classList.remove("hidden");
+};
+
+window.CloseCoBrokingDetail = function () {
+  var defaultPesan = document.querySelector(".default_pesan_dua");
+  var detail = document.querySelector(".halaman_co_broking");
+  var coDetail = document.querySelector(".halaman_co_broking_detail");
+
+  // Hapus kelas 'hidden' dari detail
+  detail.classList.add("hidden");
+
+  // Tambahkan kelas 'hidden' pada defaultPesan
+  defaultPesan.classList.remove("hidden");
+
+  // Tambahkan kelas 'hidden' pada coDetail
+  coDetail.classList.add("hidden");
+};
+
 // Nama orang pindah ke profil agen
 window.ShowDetailProfilAgen = function () {
   let MenuEmpatTab = document.getElementById("MenuEmpatTab");

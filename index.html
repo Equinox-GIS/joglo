@@ -1539,7 +1539,7 @@
                 class="flex col justify-center py-1"
                 data-tooltip-target="menu-beranda"
                 data-tooltip-placement="right"
-                >
+              >
                 <div
                   id="MenuSatuTab"
                   data-tabs-target="#MenuSatuContent"
@@ -1562,12 +1562,11 @@
                   </div>
                 </div>
               </div>
-              
               <div
                 id="menu-beranda"
                 role="tooltip"
                 class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-                >
+              >
                 Galeri
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
@@ -1577,7 +1576,7 @@
                 class="flex col justify-center py-1 hidden"
                 data-tooltip-target="menu-wishes"
                 data-tooltip-placement="right"
-                >
+              >
                 <div
                   id="MenuDelapanTab"
                   data-tabs-target="#MenuDelapanContent"
@@ -1603,7 +1602,7 @@
                 id="menu-wishes"
                 role="tooltip"
                 class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-                >
+              >
                 Video
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
@@ -1793,7 +1792,7 @@
                 class="flex col justify-center py-2"
                 data-tooltip-target="menu-pesan"
                 data-tooltip-placement="right"
-              >
+                >
                 <div
                   id="MenuTujuhTab"
                   data-tabs-target="#MenuTujuhContent"
@@ -1825,10 +1824,53 @@
                 id="menu-pesan"
                 role="tooltip"
                 class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
-              >
+                >
                 Pesan
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
+
+                  <!-- Menu 16 Pesan -->
+              <div
+                class="flex col justify-center py-2"
+                data-tooltip-target="menu-cobroking"
+                data-tooltip-placement="right"
+                >
+                <div
+                  id="MenuEnamBelasTab"
+                  data-tabs-target="#MenuEnamBelasContent"
+                  type="button"
+                  role="tab"
+                  aria-controls="MenuEnamBelasContent"
+                  aria-selected="false"
+                  class="flex justify-center items-center flex-col menus w-11 h-11 cursor-pointer hover:bg-slate-200 hover:rounded-lg"
+                >
+                  <div
+                    class="w-7 h-7 flex justify-center items-center relative"
+                  >
+                    <img
+                      class="menu-icon"
+                      data-menu="0"
+                      src="./src/images/workgroup.png"
+                      alt=""
+                    />
+
+                    <div
+                      class="absolute inline-flex items-center justify-center px-1 min-w-[18px] h-[21px] text-[11px] font-bold text-white bg-red-600 border border-white rounded-full -top-[0.45rem] -right-[0.7rem]"
+                    >
+                      283
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                id="menu-cobroking"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                Co Broking
+                <div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+
 
               <!-- Menu 9 Solusi Keuangan -->
               <div
@@ -36153,7 +36195,6 @@
                           <!-- PuasaDay4 -->
 
                           <div class="h-[76.5vh] py-3">
-
                             <div class="grid grid-cols-2 gap-y-1 gap-x-3">
                               <!-- b -->
                               <div class="w-full flex flex-row">
@@ -36161,29 +36202,51 @@
 
                                 <div class="basis-8/12">
                                   <!-- saldo -->
-                                  <div class="relative w-full mb-3.5 mt-10">
-                                    <label class="block text-xs font-bold mb-2" for="saldo_new">
+                                  <div class="relative w-full mb-2 mt-10">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="saldo_new"
+                                    >
                                       Saldo (Rp)
                                     </label>
-                                    <input readonly="" disabled="" type="text" id="saldo_new" class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan text-right">
+                                    <input
+                                      readonly=""
+                                      disabled=""
+                                      type="text"
+                                      id="saldo_new"
+                                      class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan text-right"
+                                    />
                                   </div>
 
                                   <!-- topup -->
-                                  <div class="relative w-full mb-3.5">
-                                    <label class="block text-xs font-bold mb-2" for="topup_new">
+                                  <div class="relative w-full mb-2">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="topup_new"
+                                    >
                                       Top Up (Rp)
                                     </label>
-                                    <input type="text" id="topup_new" class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right">
+                                    <input
+                                      type="text"
+                                      id="topup_new"
+                                      class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                    />
                                   </div>
 
                                   <!-- Pembayaran -->
-                                  <div class="relative w-full mb-3.5">
-                                    <label class="block text-xs font-bold mb-2" for="pembayaran_new">
+                                  <div class="relative w-full mb-2">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="pembayaran_new"
+                                    >
                                       Bank
                                     </label>
 
                                     <!-- border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full -->
-                                    <select id="pembayaran_new" class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-sm">
+                                    <select
+                                      id="pembayaran_new"
+                                      class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-sm"
+                                    >
                                       <option value="bca">BCA</option>
                                       <option value="mandiri">Mandiri</option>
                                       <option value="cimb">CIMB</option>
@@ -36192,7 +36255,10 @@
 
                                   <!--  -->
                                   <div class="w-full flex justify-center mt-9">
-                                    <button type="button" class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3">
+                                    <button
+                                      type="button"
+                                      class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                                    >
                                       Proses
                                     </button>
                                   </div>
@@ -36205,34 +36271,61 @@
                               </div>
 
                               <!-- a -->
-                              <div class="h-[52.5vh] w-full flex flex-col justify-start px-5 pb-5 rounded-xl">
-                                <div class="text-base text-center font-semibold mb-4">
+                              <div
+                                class="h-[52.5vh] w-full flex flex-col justify-start px-5 pb-5 rounded-xl"
+                              >
+                                <div
+                                  class="text-base text-center font-semibold mb-4"
+                                >
                                   Notifikasi Pembayaran
                                 </div>
 
                                 <!-- nominall -->
-                                <div class="relative w-full mb-3.5">
-                                  <label class="block text-xs font-bold mb-2" for="nominall_new">
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="nominall_new"
+                                  >
                                     Nominal (Rp)
                                   </label>
-                                  <input readonly="" disabled="" type="text" id="nominall_new" class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan text-right">
+                                  <input
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="nominall_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan text-right"
+                                  />
                                 </div>
 
                                 <!-- Pembayarann -->
-                                <div class="relative w-full mb-3.5">
-                                  <label class="block text-xs font-bold mb-2" for="Pembayarann_new">
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="Pembayarann_new"
+                                  >
                                     Pembayaran (Rp)
                                   </label>
-                                  <input readonly="" disabled="" type="text" id="Pembayarann_new" class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan text-right">
+                                  <input
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="Pembayarann_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan text-right"
+                                  />
                                 </div>
 
                                 <!-- virtualaccount -->
-                                <div class="relative w-full mb-3.5">
-                                  <label class="block text-xs font-bold mb-2" for="virtualaccount_new">
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="virtualaccount_new"
+                                  >
                                     Virtual Account
                                   </label>
 
-                                  <div class="px-0 pt-1 pb-2 w-full grid grid-cols-1">
+                                  <div
+                                    class="px-0 pt-1 pb-2 w-full grid grid-cols-1"
+                                  >
                                     <div class="text-base text-gray-500">
                                       <p class="tracking-wide">
                                         1235 8878 8989 3243
@@ -36271,14 +36364,22 @@
 
                                 <div class="text-xs mt-2">
                                   <h2 id="accordion-flush-heading-1">
-                                    <div class="flex items-center justify-between w-full pt-0 pb-2 font-medium gap-3">
-                                      <span class="font-semibold">Instruksi Pembayaran</span>
+                                    <div
+                                      class="flex items-center justify-between w-full pt-0 pb-2 font-medium gap-3"
+                                    >
+                                      <span class="font-semibold"
+                                        >Instruksi Pembayaran</span
+                                      >
                                     </div>
                                   </h2>
                                   <div>
                                     <div class="pt-0 pb-5">
-                                      <div class="payment-instructions mb-2 text-gray-500">
-                                        <ol class="payment-steps list-decimal ml-5">
+                                      <div
+                                        class="payment-instructions mb-2 text-gray-500"
+                                      >
+                                        <ol
+                                          class="payment-steps list-decimal ml-5"
+                                        >
                                           <li>
                                             Pastikan saldo Anda cukup untuk
                                             melakukan top up.
@@ -36286,7 +36387,9 @@
                                           <li>
                                             Transfer ke rekening BCA dengan
                                             nomor
-                                            <span class="account-number">1234567890</span>.
+                                            <span class="account-number"
+                                              >1234567890</span
+                                            >.
                                           </li>
                                           <li>
                                             Setelah transfer, simpan bukti
@@ -40580,13 +40683,7 @@
             role="tabpanel"
             aria-labelledby="MenuTujuhTab"
           >
-            <!-- Testv -->
-            <!--            <div class="">
-              <div
-                class="rounded overflow-x-hidden overflow-y-hidden grid grid-cols-[210px,1fr] h-[82.5vh] "
-                >
-              </div>
-            </div> -->
+            <!-- Konten Tujuh -->
 
             <div class="flex flex-col w-full h-full">
               <!-- <div>asdsa</div> -->
@@ -40604,6 +40701,34 @@
                     <div class="h-full border-r border-gray-300">
                       <ul class="overflow-auto h-[35rem]">
                         <li>
+                          <a
+                            class="mt-2 flex items-center px-3 py-1 transition duration-150 ease-in-out cursor-pointer hover:bg-gray-100 focus:outline-none hover:bg-slate-200"
+                            onclick="ShowCoBroking()"
+                          >
+                            <div
+                              class="w-10 h-10 flex justify-center items-center relative"
+                            >
+                              <img
+                                class="object-cover w-7 h-7"
+                                src="./src/images/workgroup.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="py-2">
+                              <div class="flex justify-between">
+                                <div
+                                  class="flex flex-row w-full justify-between items-center"
+                                >
+                                  <div>
+                                    <span class="block ml-3 text-black text-sm"
+                                      >Co-Broking</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+
                           <a
                             onclick="ShowDetailPesanDua()"
                             class="menu-pesan-area flex items-center px-3 py-1 transition duration-150 ease-in-out cursor-pointer hover:bg-gray-100 focus:outline-none hover:bg-slate-200"
@@ -40635,6 +40760,7 @@
                               >
                             </div>
                           </a>
+
                           <a
                             onclick="ShowDetailPesanDua()"
                             class="bg-aktif-pesan menu-pesan-area flex items-center px-3 py-1 transition duration-150 ease-in-out cursor-pointer hover:bg-gray-100 focus:outline-none hover:bg-slate-200"
@@ -40795,6 +40921,8 @@
                             Kirim foto dan bertukar pesan disini
                           </div>
                         </div>
+
+                        <!--  -->
                       </div>
                       <!-- pesanmodekedua -->
                       <div class="hidden lg:col-span-2 default_pesan_dua_aktif">
@@ -41051,12 +41179,227 @@
                           </div>
                         </div>
                       </div>
+
+                      <div
+                        class="hidden w-full h-[76.5vh] flex flex-col halaman_co_broking p-3"
+                      >
+                        <!--  -->
+
+                        <!--  -->
+                        <form class="w-full mb-3">
+                          <label
+                            for="default-search"
+                            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                            >Search</label
+                          >
+                          <div class="relative">
+                            <div
+                              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                            >
+                              <svg
+                                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                                />
+                              </svg>
+                            </div>
+                            <input
+                              type="search"
+                              id="default-search"
+                              class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="Pencarian Thread"
+                              required
+                            />
+                            <button
+                              type="submit"
+                              class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            >
+                              Posting
+                            </button>
+                          </div>
+                        </form>
+
+                        <!--  -->
+                        <div class="w-full flex flex-col mb-3">
+                          <!--  -->
+                          <div
+                            class="w-full mb-2"
+                            onclick="ShowCoBrokingDetail()"
+                          >
+                            <a
+                              href="#"
+                              class="block w-full p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800"
+                            >
+                              <h5
+                                class="mb-2 text-lg font-bold tracking-tight text-black"
+                              >
+                                Lingkungan
+                              </h5>
+                              <div class="text-xs text-black">
+                                Here are the biggest enterprise technology
+                                acquisitions of 2021 so far, in reverse
+                                chronological order.
+                              </div>
+                            </a>
+                          </div>
+
+                          <!--  -->
+                          <div class="w-full mb-2">
+                            <a
+                              href="#"
+                              class="block w-full p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800"
+                            >
+                              <h5
+                                class="mb-2 text-lg font-bold tracking-tight text-black"
+                              >
+                                Otomotif
+                              </h5>
+                              <div class="text-xs text-black">
+                                Here are the biggest enterprise technology
+                                acquisitions of 2021 so far, in reverse
+                                chronological order.
+                              </div>
+                            </a>
+                          </div>
+
+                          <!--  -->
+                        </div>
+
+                        <!--  -->
+                      </div>
+
+                      <div
+                        class="hidden w-full h-[76.5vh] flex flex-col halaman_co_broking_detail p-3"
+                      >
+                        <!--  -->
+
+                        <!-- Judul -->
+                        <div class="flex items-center justify-between mb-3">
+                          <div
+                            class="text-lg font-bold tracking-tight text-black"
+                          >
+                            &nbsp;
+                          </div>
+                          <div
+                            class="cursor-pointer"
+                            onclick="CloseCoBrokingDetail()"
+                          >
+                            <img
+                              class="w-6 h-6 object-contain"
+                              src="./src/images/close-simbol.png"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+
+                        <!-- Konten -->
+
+                        <div class="w-full flex flex-col mb-3">
+                          <!--  -->
+                          <div class="w-full mb-2">
+                            <a
+                              href="#"
+                              class="block w-full p-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800"
+                            >
+                              <h5
+                                class="mb-2 text-lg font-bold tracking-tight text-black"
+                              >
+                                Lingkungan
+                              </h5>
+                              <div class="text-xs text-black">
+                                Here are the biggest enterprise technology
+                                acquisitions of 2021 so far, in reverse
+                                chronological order. Here are the biggest
+                                enterprise technology acquisitions of 2021 so
+                                far, in reverse chronological order.Here are the
+                                biggest enterprise technology acquisitions of
+                                2021 so far, in reverse chronological order.Here
+                                are the biggest enterprise technology
+                                acquisitions of 2021 so far, in reverse
+                                chronological order.
+                              </div>
+                            </a>
+                          </div>
+
+                          <!--  -->
+                        </div>
+
+                        <!--  -->
+                      </div>
+
+                      <!--  -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+                    <!-- Konten Menu Tujuh -->
+          <div
+            class="hidden h-full"
+            id="MenuEnamBelasContent"
+            role="tabpanel"
+            aria-labelledby="EnamBelasTab"
+          >
+
+<!-- EnamBelass -->
+
+            <div class="h-full flex flex-col">
+              <!--  Card Favorit -->
+              <div class="flex flex-col card-info-favorit">
+                <!-- Judul Favorit -->
+                <div
+                  class="w-full flex justify-between border-b border-gray-300 px-3 py-2"
+                >
+                  <div class="font-sf_pro_bold text-2xl judulStory w-80">
+                    Co Broking
+                  </div>
+                </div>
+                <!--  -->
+
+                <!-- Form Posting Listing -->
+                <div
+                  class="h-[74vh] overflow-y-auto hide-scrollbar text-black px-4 "
+                >
+               
+                  <form class="mt-5 h-full w-full border border-blue-500">
+                    <div class="w-full h-full grid grid-cols-2 gap-y-1 gap-x-3">
+
+                      <!-- pertama -->
+                      <div class="w-full h-full border border-red-500">
+                        Pertama
+                      </div>
+
+                      <!-- kedua -->
+                      <div class="w-full h-full border border-red-500">Kedua</div>
+
+
+  
+                    </div>
+
+
+                    <!--  -->
+                  </form>
+                </div>
+
+                <!--  -->
+              </div>
+            </div>
+
+
+
+          </div>
+
 
           <!-- Konten Delapan Tujuh -->
           <div
