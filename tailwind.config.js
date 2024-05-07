@@ -16,6 +16,8 @@ module.exports = {
         sf_pro_bold: ["Font SF-Pro bold"],
         sf_pro_medium: ["Font SF-Pro medium"],
         recoleta: ["Font Recoleta"],
+        grajon: ["Font Grajon"],
+        grajon_bold: ["Font Grajon Bold"],
       },
     },
   },

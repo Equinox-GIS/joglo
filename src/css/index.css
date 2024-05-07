@@ -34,6 +34,21 @@
   font-style: normal;
 }
 
+/*font new*/
+@font-face {
+  font-family: "Font Grajon";
+  src: url("../font/Granjon Roman.otf") format("opentype");
+  /*  font-weight: 600;*/
+  font-style: normal;
+}
+/*font new2*/
+@font-face {
+  font-family: "Font Grajon Bold";
+  src: url("../font/Granjon Roman Bold.otf") format("opentype");
+  /*  font-weight: 600;*/
+  font-style: normal;
+}
+
 /* Mengatur Button Slider Card Info */
 .slider-thumbnails {
   margin-left: -15px;
