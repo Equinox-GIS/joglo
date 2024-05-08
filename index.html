@@ -20389,425 +20389,646 @@
                                 <div
                                   class="h-[70.5vh] overflow-y-auto hide-scrollbar text-black"
                                 >
-                                  <form>
-                                    <h6 class="text-lg font-sf_pro_bold mt-3">
-                                      Detail Rumah
-                                    </h6>
+                                  <form class="mt-[1rem]">
                                     <div
-                                      class="grid grid-cols-2 gap-y-3 gap-x-4"
+                                      class="grid grid-cols-2 gap-y-1 gap-x-3"
                                     >
-                                      <!-- Upload Gambar -->
+                                      <!-- b -->
+                                      <div>
+                                        <!-- Judul -->
 
-                                      <div
-                                        class="w-full h-[47vh] mt-6 bg-white flex justify-center items-center rounded shadow"
-                                      >
-                                        <!-- Upload Gambar -->
-                                        <!-- Gambar 1 -->
-                                        <img
-                                          class="w-20 h-20 object-contain"
-                                          src="./src/images/image-gallery.png"
-                                        />
-
-                                        <!--  -->
-                                      </div>
-
-                                      <!-- Koordinat -->
-                                      <div class="w-full h-full flex flex-col">
-                                        <div class="w-full mb-4">
-                                          <div class="relative w-full">
-                                            <label
-                                              class="block text-sm mb-1"
-                                              for="koordinat"
-                                            >
-                                              Koordinatzz
-                                            </label>
-                                            <input
-                                              readonly
-                                              disabled
-                                              type="text"
-                                              id="koordinat"
-                                              class="border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                            />
-                                          </div>
-                                        </div>
-
-                                        <div class="grid grid-cols-2 gap-4">
-                                          <!-- Kelurahan -->
-                                          <div class="w-full">
-                                            <div class="relative w-full">
-                                              <label
-                                                class="block text-sm mb-1"
-                                                for="kelurahan"
-                                              >
-                                                Kelurahan
-                                              </label>
-                                              <input
-                                                readonly
-                                                disabled
-                                                type="text"
-                                                id="kelurahan"
-                                                class="border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                              />
-                                            </div>
-                                          </div>
-
-                                          <!-- Kecamatan -->
-                                          <div class="w-full">
-                                            <div class="relative w-full">
-                                              <label
-                                                class="block text-sm mb-1"
-                                                for="kecamatan"
-                                              >
-                                                Kecamatan
-                                              </label>
-                                              <input
-                                                readonly
-                                                disabled
-                                                type="text"
-                                                id="kecamatan"
-                                                class="border-0 px-2 py-2 text-black bg-gray-200 rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                              />
-                                            </div>
-                                          </div>
-
-                                          <!-- Luas Tanah m2 -->
-                                          <div class="w-full">
-                                            <div class="relative w-full">
-                                              <label
-                                                class="block text-sm mb-1"
-                                                for="luas-tanah"
-                                              >
-                                                Luas Tanah m²
-                                              </label>
-                                              <input
-                                                type="number"
-                                                id="luas-tanah"
-                                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                              />
-                                            </div>
-                                          </div>
-
-                                          <!-- Luas Bangunan m2 -->
-                                          <div class="w-full">
-                                            <div class="relative w-full">
-                                              <label
-                                                class="block text-sm mb-1"
-                                                for="luas-bangunan"
-                                              >
-                                                Luas Bangunan m²
-                                              </label>
-                                              <input
-                                                type="number"
-                                                id="luas-bangunan"
-                                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                              />
-                                            </div>
-                                          </div>
-
-                                          <!-- Jumlah Kamar Tidur Utama -->
-                                          <div class="w-full">
-                                            <div class="relative w-full">
-                                              <label
-                                                class="block text-sm mb-1"
-                                                for="kamar-tidur-utama"
-                                              >
-                                                Kamar Tidur Utama
-                                              </label>
-                                              <input
-                                                type="number"
-                                                id="kamar-tidur-utama"
-                                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                              />
-                                            </div>
-                                          </div>
-
-                                          <!-- Jumlah Kamar Tidur Tambahan -->
-                                          <div class="w-full">
-                                            <div class="relative w-full">
-                                              <label
-                                                class="block text-sm mb-1"
-                                                for="kamar-tidur-tambahan"
-                                              >
-                                                Kamar Tidur Tambahan
-                                              </label>
-                                              <input
-                                                type="number"
-                                                id="kamar-tidur-tambahan"
-                                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                              />
-                                            </div>
-                                          </div>
-
-                                          <!-- Penjual -->
-                                          <div class="w-full">
-                                            <div class="relative w-full">
-                                              <label
-                                                class="block text-sm mb-1"
-                                                for="jenis-properti"
-                                              >
-                                                Penjual
-                                              </label>
-                                              <select
-                                                id="jenis-properti"
-                                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                              >
-                                                <option
-                                                  value="pemilik-langsung"
-                                                >
-                                                  Pemilik Langsung
-                                                </option>
-                                                <option value="agen">
-                                                  Agen
-                                                </option>
-                                                <option value="pengembang">
-                                                  Pengembang
-                                                </option>
-                                              </select>
-                                            </div>
-                                          </div>
-
-                                          <!-- Jenis Surat -->
-                                          <div class="w-full">
-                                            <div class="relative w-full">
-                                              <label
-                                                class="block text-sm mb-1"
-                                                for="jenis-surat"
-                                              >
-                                                Jenis Surat
-                                              </label>
-                                              <select
-                                                id="jenis-surat"
-                                                class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                              >
-                                                <option value="shm">SHM</option>
-                                                <option value="shgb">
-                                                  SHGB
-                                                </option>
-                                              </select>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-
-                                      <!-- Judul -->
-                                      <div class="w-full col-span-2">
-                                        <div class="relative w-full">
+                                        <div class="relative w-full mb-2">
                                           <label
-                                            class="block text-sm mb-2"
-                                            for="judul"
+                                            class="block text-xs font-bold mb-1"
+                                            for="judul_new"
                                           >
-                                            Judul
-                                          </label>
-                                          <input
-                                            type="text"
-                                            id="judul"
-                                            class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                          />
-                                        </div>
-                                      </div>
-
-                                      <!-- Alamat 1 -->
-                                      <div class="col-span-2">
-                                        <div class="relative w-full">
-                                          <label
-                                            class="block text-sm mb-2"
-                                            for="alamat1"
-                                          >
-                                            Alamat
-                                          </label>
-                                          <input
-                                            type="text"
-                                            id="alamat1"
-                                            class="border-0 px-2 py-2 text-black bg-white rounded text-sm shadow focus:outline-none focus:ring-0 w-full"
-                                          />
-                                        </div>
-                                      </div>
-
-                                      <!-- Deskripsi -->
-                                      <div class="col-span-2">
-                                        <div class="relative w-full">
-                                          <label
-                                            class="block text-sm mb-2"
-                                            for="deskripsi_postingan"
-                                          >
-                                            Deskripsi
+                                            Judul (maks 100 karakter)
                                           </label>
                                           <textarea
-                                            name="deskripsi_postingan"
-                                            id="deskripsi_postingan"
-                                            class="block p-2.5 h-[14vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 shadow"
+                                            name="judul_new"
+                                            id="judul_new"
+                                            class="block p-2 h-[13.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                                             required=""
                                             rows="9"
                                           ></textarea>
                                         </div>
+
+                                        <!-- Harga -->
+                                        <div class="relative w-full mb-2">
+                                          <label
+                                            class="block text-xs font-bold mb-1"
+                                            for="harga_new"
+                                          >
+                                            Harga (Rp)
+                                          </label>
+                                          <input
+                                            type="text"
+                                            id="harga_new"
+                                            class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                          />
+                                        </div>
+
+                                        <!-- Koordinat -->
+                                        <div class="relative w-full mb-2">
+                                          <label
+                                            class="block text-xs font-bold mb-1"
+                                            for="koordinat_new"
+                                          >
+                                            Koordinat
+                                          </label>
+                                          <input
+                                            readonly=""
+                                            disabled=""
+                                            type="text"
+                                            id="koordinat_new"
+                                            class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                          />
+                                        </div>
+
+                                        <!-- Kelurahan -->
+                                        <div class="relative w-full mb-2">
+                                          <label
+                                            class="block text-xs font-bold mb-1"
+                                            for="kelurahan_new"
+                                          >
+                                            Kelurahan
+                                          </label>
+                                          <input
+                                            readonly=""
+                                            disabled=""
+                                            type="text"
+                                            id="kelurahan_new"
+                                            class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                          />
+                                        </div>
+
+                                        <!-- Kecamatan -->
+                                        <div class="relative w-full mb-2">
+                                          <label
+                                            class="block text-xs font-bold mb-1"
+                                            for="kecamatan_new"
+                                          >
+                                            Kecamatan
+                                          </label>
+                                          <input
+                                            readonly=""
+                                            disabled=""
+                                            type="text"
+                                            id="kecamatan_new"
+                                            class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                          />
+                                        </div>
+
+                                        <!-- Kota -->
+                                        <div class="relative w-full mb-2">
+                                          <label
+                                            class="block text-xs font-bold mb-1"
+                                            for="kota_new_beda"
+                                          >
+                                            Kota
+                                          </label>
+                                          <input
+                                            readonly=""
+                                            disabled=""
+                                            type="text"
+                                            id="kota_new_beda"
+                                            class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                          />
+                                        </div>
+
+                                        <div class="relative w-full mb-2">
+                                          <div
+                                            class="block text-xs font-bold mb-1"
+                                          >
+                                            Penjual
+                                          </div>
+                                          <div class="w-full grid grid-cols-3">
+                                            <div class="flex items-center">
+                                              <input
+                                                id="penjual-agen"
+                                                type="radio"
+                                                value="agen"
+                                                name="jenis-penjual"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="penjual-agen"
+                                                class="ms-2 text-sm text-black"
+                                                >Agen</label
+                                              >
+                                            </div>
+                                            <div class="flex items-center">
+                                              <input
+                                                id="penjual-pemilik"
+                                                type="radio"
+                                                value="pemilik-langsung"
+                                                name="jenis-penjual"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="penjual-pemilik"
+                                                class="ms-2 text-sm text-black"
+                                                >Pemilik</label
+                                              >
+                                            </div>
+                                            <div class="flex items-center">
+                                              <input
+                                                id="penjual-pengembang"
+                                                type="radio"
+                                                value="pengembang"
+                                                name="jenis-penjual"
+                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="penjual-pengembang"
+                                                class="ms-2 text-sm text-black"
+                                                >Pengembang</label
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- Deskripsi bangunan -->
+
+                                        <div
+                                          class="w-full flex flex-col mt-[4.2vh]"
+                                        >
+                                          <div
+                                            class="relative w-full mb-2 flex flex-col"
+                                          >
+                                            <div
+                                              class="block text-xs font-bold mb-1"
+                                            >
+                                              Tipe Aset
+                                            </div>
+                                            <div class="grid grid-cols-3">
+                                              <div class="flex items-center">
+                                                <input
+                                                  id="default-radio-11"
+                                                  type="radio"
+                                                  value=""
+                                                  name="default-radio"
+                                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                                />
+                                                <label
+                                                  for="default-radio-11"
+                                                  class="ms-2 text-sm text-black"
+                                                  >Rumah Baru</label
+                                                >
+                                              </div>
+                                              <div class="flex items-center">
+                                                <input
+                                                  id="default-radio-12"
+                                                  type="radio"
+                                                  value=""
+                                                  name="default-radio"
+                                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                                />
+                                                <label
+                                                  for="default-radio-12"
+                                                  class="ms-2 text-sm text-black"
+                                                  >Rumah Seken</label
+                                                >
+                                              </div>
+                                              <div></div>
+                                            </div>
+                                          </div>
+
+                                          <!-- Penjual -->
+
+                                          <div class="flex flex-row mb-2">
+                                            <!-- Luas Tanah m2 -->
+                                            <div class="basis-6/12">
+                                              <div class="relative w-full">
+                                                <label
+                                                  class="block text-xs font-bold mb-1"
+                                                  for="luas_tanah_new"
+                                                >
+                                                  Luas Tanahh (m²)
+                                                </label>
+                                                <input
+                                                  type="text"
+                                                  id="luas_tanah_new"
+                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                                />
+                                              </div>
+                                            </div>
+
+                                            <!-- Luas Bangunan m2 -->
+                                            <div class="basis-6/12 ml-3">
+                                              <div class="relative w-full">
+                                                <label
+                                                  class="block text-xs font-bold mb-1"
+                                                  for="luas_bangunan_new"
+                                                >
+                                                  Luas Bangunan (m²)
+                                                </label>
+                                                <input
+                                                  type="number"
+                                                  id="luas_bangunan_new"
+                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="flex flex-row mb-2">
+                                            <!-- Jumlah Kamar Tidur Utama -->
+                                            <div class="basis-6/12">
+                                              <div class="relative w-full">
+                                                <label
+                                                  class="block text-xs font-bold mb-1"
+                                                  for="kamar_tidur_utama_new"
+                                                >
+                                                  Kamar Tidur
+                                                </label>
+                                                <input
+                                                  type="number"
+                                                  id="kamar_tidur_utama_new"
+                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                                />
+                                              </div>
+                                            </div>
+
+                                            <!-- Jumlah Kamar Tidur Tambahan -->
+                                            <div class="basis-6/12 ml-3">
+                                              <div class="relative w-full">
+                                                <label
+                                                  class="block text-xs font-bold mb-1"
+                                                  for="kamar_tidur_tambahan_new"
+                                                >
+                                                  Kamar Mandi
+                                                </label>
+                                                <input
+                                                  type="number"
+                                                  id="kamar_tidur_tambahan_new"
+                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div
+                                            class="w-full flex flex-row mb-2"
+                                          >
+                                            <!-- Tahun dibangun -->
+                                            <div class="basis-6/12">
+                                              <div class="relative w-full">
+                                                <label
+                                                  class="block text-xs font-bold mb-1"
+                                                  for="tahun_dibangun_new"
+                                                >
+                                                  Tahun Dibangun
+                                                </label>
+                                                <input
+                                                  type="number"
+                                                  id="tahun_dibangun_new"
+                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                                />
+                                              </div>
+                                            </div>
+
+                                            <!-- Jenis Surat -->
+                                            <div class="basis-6/12 ml-3">
+                                              <div class="relative w-full">
+                                                <div
+                                                  class="block text-xs font-bold mb-1"
+                                                >
+                                                  Jenis Surat
+                                                </div>
+                                                <div
+                                                  class="grid grid-cols-2 w-full h-[2rem]"
+                                                >
+                                                  <div
+                                                    class="flex items-center"
+                                                  >
+                                                    <input
+                                                      id="jenis-surat-shm"
+                                                      type="radio"
+                                                      value="shm"
+                                                      name="jenis-surat"
+                                                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                                    />
+                                                    <label
+                                                      for="jenis-surat-shm"
+                                                      class="ms-2 text-sm text-black"
+                                                      >SHM</label
+                                                    >
+                                                  </div>
+                                                  <div
+                                                    class="flex items-center"
+                                                  >
+                                                    <input
+                                                      id="jenis-surat-shgb"
+                                                      type="radio"
+                                                      value="shgb"
+                                                      name="jenis-surat"
+                                                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                                    />
+                                                    <label
+                                                      for="jenis-surat-shgb"
+                                                      class="ms-2 text-sm text-black"
+                                                      >SHGB</label
+                                                    >
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <!--  -->
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <!-- a -->
+                                      <div class="flex flex-col">
+                                        <!-- Deskripsi -->
+                                        <div class="relative w-full mb-2">
+                                          <label
+                                            class="block text-xs font-bold mb-1"
+                                            for="deskripsi_postingan_new"
+                                          >
+                                            Deskripsi (maks. 750 karakter)
+                                          </label>
+                                          <textarea
+                                            name="deskripsi_postingan_new"
+                                            id="deskripsi_postingan_new"
+                                            class="block px-2 h-[63vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                            required=""
+                                            rows="9"
+                                          ></textarea>
+                                        </div>
+
+                                        <!-- upload -->
+
+                                        <div
+                                          class="relative w-full mb-2 mt-3 flex flex-col"
+                                        >
+                                          <!-- <div class="block text-xs font-bold mb-1">Foto</div> -->
+                                          <div class="w-full">
+                                            <input
+                                              id="fileElem"
+                                              type="file"
+                                              class="hidden"
+                                              multiple=""
+                                              accept="image/*"
+                                            />
+                                            <div
+                                              id="drop-area"
+                                              class="w-full h-[30.3vh] bg-white rounded-lg flex position_gambar_upload justify-center items-center"
+                                            >
+                                              <label
+                                                for="fileElem"
+                                                class="cursor-pointer flex flex-col justify-center"
+                                              >
+                                                <div
+                                                  class="hide_gambar_upload w-full flex flex-col justify-center"
+                                                >
+                                                  <div
+                                                    class="w-full flex justify-center"
+                                                  >
+                                                    <img
+                                                      class="w-20 h-20 object-contain"
+                                                      src="./src/images/landscape.png"
+                                                    />
+                                                  </div>
+                                                  <div
+                                                    class="text-sm text-black"
+                                                  >
+                                                    Drag and Dropp
+                                                  </div>
+                                                </div>
+                                              </label>
+
+                                              <div
+                                                id="preview-container"
+                                                class="grid grid-cols-3 add_wfull_upload"
+                                              ></div>
+
+                                              <!--<div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
+                                  <img class="w-full h-auto object-fit" src="./src/images/Hunian/x/rumaha1.jpg">
+                                </div>
+                                <div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
+                                  <img class="w-full h-auto object-fit" src="./src/images/Hunian/x/rumaha1.jpg">
+                                </div>
+
+                                <div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
+                                  <img class="w-full h-auto object-fit" src="./src/images/Hunian/x/rumaha1.jpg">
+                                </div> -->
+                                              <!--  -->
+
+                                              <!--  -->
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <!--  -->
                                       </div>
 
                                       <!--  -->
+
+                                      <div class="col-span-2">
+                                        <div
+                                          class="w-full flex flex-col text-sm mt-1.5"
+                                        >
+                                          <div
+                                            class="block text-xs font-bold mb-1"
+                                          >
+                                            Tambahan
+                                          </div>
+
+                                          <div class="w-full grid grid-cols-4">
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="imb1"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="imb1"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >IMB</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="imb22"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="imb22"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >CCTV</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="taman1"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="taman1"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >Taman</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="ogs1"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="ogs1"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >One Gate System</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="canopy1"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="canopy1"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >Canopy</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="pool1"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="pool1"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >Swimming Pool</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="ac1"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="ac1"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >AC</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="rooftop1"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="rooftop1"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >Rooftop</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="carport123"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="carport123"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >Carport</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="ibadah1"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="ibadah1"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >Ruang Ibadah</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="clubhouse1"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="clubhouse1"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >Clubhouse</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                            <div class="flex items-center mb-1">
+                                              <input
+                                                id="olahraga1"
+                                                type="checkbox"
+                                                value=""
+                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                              />
+                                              <label
+                                                for="olahraga1"
+                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                                >Ruang Olahraga</label
+                                              >
+                                            </div>
+
+                                            <!--  -->
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
 
-                                    <h6 class="text-lg font-sf_pro_bold my-6">
-                                      Tambahan
-                                    </h6>
                                     <div
-                                      class="grid grid-cols-3 gap-y-1 gap-x-4"
-                                    >
-                                      <!-- Carport -->
-                                      <div class="w-full">
-                                        <div class="flex items-center mb-2">
-                                          <input
-                                            id="carport"
-                                            type="checkbox"
-                                            value=""
-                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                          />
-                                          <label
-                                            for="carport"
-                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                            >Carport</label
-                                          >
-                                        </div>
-                                      </div>
-
-                                      <!-- Swimming Pool -->
-                                      <div class="w-full">
-                                        <div class="flex items-center mb-2">
-                                          <input
-                                            id="swimming-pool"
-                                            type="checkbox"
-                                            value=""
-                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                          />
-                                          <label
-                                            for="swimming-pool"
-                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                            >Swimming Pool</label
-                                          >
-                                        </div>
-                                      </div>
-
-                                      <!-- Swimming Pool -->
-                                      <div class="w-full">
-                                        <div class="flex items-center mb-2">
-                                          <input
-                                            id="swimming-pool"
-                                            type="checkbox"
-                                            value=""
-                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                          />
-                                          <label
-                                            for="swimming-pool"
-                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                            >Swimming Pool</label
-                                          >
-                                        </div>
-                                      </div>
-
-                                      <!-- IMB -->
-                                      <div class="w-full">
-                                        <div class="flex items-center mb-2">
-                                          <input
-                                            id="imb"
-                                            type="checkbox"
-                                            value=""
-                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                          />
-                                          <label
-                                            for="imb"
-                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                            >IMB</label
-                                          >
-                                        </div>
-                                      </div>
-
-                                      <!-- Gate Cluster -->
-                                      <div class="w-full">
-                                        <div class="flex items-center">
-                                          <input
-                                            id="gate-cluster1"
-                                            type="checkbox"
-                                            value=""
-                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                          />
-                                          <label
-                                            for="gate-cluster1"
-                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                            >Gate Cluster</label
-                                          >
-                                        </div>
-                                      </div>
-                                      <!-- Gate Cluster -->
-                                      <div class="w-full">
-                                        <div class="flex items-center">
-                                          <input
-                                            id="gate-cluster2"
-                                            type="checkbox"
-                                            value=""
-                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                          />
-                                          <label
-                                            for="gate-cluster2"
-                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                            >Gate Cluster</label
-                                          >
-                                        </div>
-                                      </div>
-                                      <!-- IMB -->
-                                      <div class="w-full">
-                                        <div class="flex items-center mb-2">
-                                          <input
-                                            id="imb"
-                                            type="checkbox"
-                                            value=""
-                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                          />
-                                          <label
-                                            for="imb"
-                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                            >IMB</label
-                                          >
-                                        </div>
-                                      </div>
-
-                                      <!-- Gate Cluster -->
-                                      <div class="w-full">
-                                        <div class="flex items-center">
-                                          <input
-                                            id="gate-cluster3"
-                                            type="checkbox"
-                                            value=""
-                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                          />
-                                          <label
-                                            for="gate-cluster3"
-                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                            >Gate Cluster</label
-                                          >
-                                        </div>
-                                      </div>
-                                      <!-- Gate Cluster -->
-                                      <div class="w-full">
-                                        <div class="flex items-center">
-                                          <input
-                                            id="gate-cluster4"
-                                            type="checkbox"
-                                            value=""
-                                            class="w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-0 hapus_focus_checkbox"
-                                          />
-                                          <label
-                                            for="gate-cluster4"
-                                            class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                            >Gate Cluster</label
-                                          >
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div
-                                      class="flex justify-center col-span-2 pt-3 pb-5"
+                                      class="flex justify-center col-span-2 pt-5 pb-6"
                                     >
                                       <button
                                         type="button"
-                                        class="text-white bg-[#0394F7] hover:bg-[#1877F2] focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xs px-4 py-2 text-center"
+                                        class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
                                       >
                                         Simpan
                                       </button>
@@ -40704,7 +40925,7 @@
                       <ul class="overflow-auto h-[35rem]">
                         <li>
                           <a
-                            class="mt-2 flex items-center px-3 py-1 transition duration-150 ease-in-out cursor-pointer hover:bg-gray-100 focus:outline-none hover:bg-slate-200"
+                            class="flex items-center px-3 py-1 transition duration-150 ease-in-out cursor-pointer hover:bg-gray-100 focus:outline-none hover:bg-slate-200"
                             onclick="ShowCoBroking()"
                           >
                             <div
@@ -40939,7 +41160,7 @@
                               <div class="chat-message">
                                 <div class="flex items-end">
                                   <div
-                                    class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start"
+                                    class="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-2 items-start"
                                   >
                                     <div>
                                       <span
@@ -40959,7 +41180,7 @@
                               <div class="chat-message">
                                 <div class="flex items-end justify-end">
                                   <div
-                                    class="flex flex-col space-y-2 text-xs max-w-sm mx-2 order-1 items-end"
+                                    class="flex flex-col space-y-2 text-sm max-w-sm mx-2 order-1 items-end"
                                   >
                                     <div>
                                       <span
@@ -40984,7 +41205,7 @@
                               <div class="chat-message">
                                 <div class="flex items-end">
                                   <div
-                                    class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start"
+                                    class="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-2 items-start"
                                   >
                                     <div>
                                       <span
@@ -41004,7 +41225,7 @@
                               <div class="chat-message">
                                 <div class="flex items-end justify-end">
                                   <div
-                                    class="flex flex-col space-y-2 text-xs max-w-sm mx-2 order-1 items-end"
+                                    class="flex flex-col space-y-2 text-sm max-w-sm mx-2 order-1 items-end"
                                   >
                                     <div>
                                       <span
@@ -41029,7 +41250,7 @@
                               <div class="chat-message">
                                 <div class="flex items-end">
                                   <div
-                                    class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start"
+                                    class="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-2 items-start"
                                   >
                                     <div>
                                       <span
@@ -41370,444 +41591,98 @@
 
                 <!-- Form Posting Listing -->
                 <div class="h-full w-full text-black">
-                  <div class="w-full h-screen grid grid-cols-2 gap-y-1 gap-x-3">
+                  <div class="w-full h-screen grid grid-cols-[40%,60%]">
                     <!-- pertama -->
                     <div
-                      class="w-full h-[76vh] overflow-y-auto scrollbar flex flex-col p-3"
+                      class="w-full h-[76vh] overflow-y-auto scrollbar flex flex-col"
                     >
                       <!--  -->
 
-                      <div class="w-full flex flex-col mb-3">
+                      <div class="w-full flex flex-col">
                         <!--  -->
-                        <div class="w-full mb-2">
-                          <a
-                            href="#"
-                            class="block w-full px-3 pt-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800"
+                        <div class="w-full">
+                          <div
+                            class="block w-full bg-transparent px-2.5 pt-2.5 pb-4 hover:bg-slate-200 cursor-pointer btn_konten_a"
                           >
-                            <h5
-                              class="mb-2 text-lg font-bold tracking-tight text-black"
-                            >
-                              GOLANG MICROSERVICE
-                            </h5>
-                            <div class="text-xs text-black">
-                              <p class="truncate">
-                                <span class="font-bold">Teuku :</span>
-                                izin meminta bagi yang ada referensi untuk
-                                golang microservice
-                              </p>
+                            <div class="inline-flex items-center">
+                              <img
+                                class="w-8 h-8 mr-2 rounded-full"
+                                src="./src/images/model/model11.jpg"
+                                alt="Jese image"
+                              />
+                              <h5
+                                class="text-sm tracking-tight text-black truncate"
+                              >
+                                Ismail Zulfikar
+                              </h5>
                             </div>
 
-                            <div class="w-full inline-flex pt-2 pb-3.5">
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M7.556 8.5h8m-8 3.5H12m7.111-7H4.89a.896.896 0 0 0-.629.256.868.868 0 0 0-.26.619v9.25c0 .232.094.455.26.619A.896.896 0 0 0 4.89 16H9l3 4 3-4h4.111a.896.896 0 0 0 .629-.256.868.868 0 0 0 .26-.619v-9.25a.868.868 0 0 0-.26-.619.896.896 0 0 0-.63-.256Z"
-                                  />
-                                </svg>
+                            <div class="flex flex-col">
+                              <div
+                                class="text-sm font-bold tracking-tight text-black truncate"
+                              >
+                                Rumah Cicilan KPR
                               </div>
 
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z"
-                                  />
-                                </svg>
+                              <div class="text-xs text-black pt-0.5 pb-1">
+                                <p class="line-clamp-2">
+                                  izin meminta bagi yang ada referensi untuk
+                                  golang yang microservice izin meminta bagi
+                                  yang ada referensi untuk golang microservice
+                                </p>
                               </div>
 
-                              <div class="mr-2 w-8 h-4 text-xs text-gray-600">
-                                3 jam
+                              <div class="w-full">
+                                <img
+                                  class="w-4 h-4 mt-0.5 object-contain cursor-pointer"
+                                  src="./src/images/bookmark.png"
+                                />
                               </div>
                             </div>
-                          </a>
+                          </div>
                         </div>
 
                         <!--  -->
-                      </div>
-
-                      <!--  -->
-
-                      <div class="w-full flex flex-col mb-3">
-                        <!--  -->
-                        <div class="w-full mb-2">
-                          <a
-                            href="#"
-                            class="block w-full px-3 pt-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800"
+                        <div class="w-full">
+                          <div
+                            class="block w-full bg-transparent px-2.5 pt-2.5 pb-4 hover:bg-slate-200 cursor-pointer btn_konten_b"
                           >
-                            <h5
-                              class="mb-2 text-lg font-bold tracking-tight text-black"
-                            >
-                              GOLANG MICROSERVICE
-                            </h5>
-                            <div class="text-xs text-black">
-                              <p class="truncate">
-                                <span class="font-bold">Teuku :</span>
-                                izin meminta bagi yang ada referensi untuk
-                                golang microservice
-                              </p>
+                            <div class="inline-flex items-center">
+                              <img
+                                class="w-8 h-8 mr-2 rounded-full"
+                                src="./src/images/model/model11.jpg"
+                                alt="Jese image"
+                              />
+                              <h5
+                                class="text-sm tracking-tight text-black truncate"
+                              >
+                                Tegar Kurnia
+                              </h5>
                             </div>
 
-                            <div class="w-full inline-flex pt-2 pb-3.5">
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M7.556 8.5h8m-8 3.5H12m7.111-7H4.89a.896.896 0 0 0-.629.256.868.868 0 0 0-.26.619v9.25c0 .232.094.455.26.619A.896.896 0 0 0 4.89 16H9l3 4 3-4h4.111a.896.896 0 0 0 .629-.256.868.868 0 0 0 .26-.619v-9.25a.868.868 0 0 0-.26-.619.896.896 0 0 0-.63-.256Z"
-                                  />
-                                </svg>
+                            <div class="flex flex-col">
+                              <div
+                                class="text-sm font-bold tracking-tight text-black truncate"
+                              >
+                                Penjualan Rumah 2024
                               </div>
 
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z"
-                                  />
-                                </svg>
+                              <div class="text-xs text-black pt-0.5 pb-1">
+                                <p class="line-clamp-2">
+                                  izin meminta bagi yang ada referensi untuk
+                                  golang yang microservice izin meminta bagi
+                                  yang ada referensi untuk golang microservice
+                                </p>
                               </div>
 
-                              <div class="mr-2 w-8 h-4 text-xs text-gray-600">
-                                3 jam
+                              <div class="w-full">
+                                <img
+                                  class="w-4 h-4 mt-0.5 object-contain cursor-pointer"
+                                  src="./src/images/bookmark.png"
+                                />
                               </div>
                             </div>
-                          </a>
-                        </div>
-
-                        <!--  -->
-                      </div>
-
-                      <!--  -->
-
-                      <div class="w-full flex flex-col mb-3">
-                        <!--  -->
-                        <div class="w-full mb-2">
-                          <a
-                            href="#"
-                            class="block w-full px-3 pt-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800"
-                          >
-                            <h5
-                              class="mb-2 text-lg font-bold tracking-tight text-black"
-                            >
-                              GOLANG MICROSERVICE
-                            </h5>
-                            <div class="text-xs text-black">
-                              <p class="truncate">
-                                <span class="font-bold">Teuku :</span>
-                                izin meminta bagi yang ada referensi untuk
-                                golang microservice
-                              </p>
-                            </div>
-
-                            <div class="w-full inline-flex pt-2 pb-3.5">
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M7.556 8.5h8m-8 3.5H12m7.111-7H4.89a.896.896 0 0 0-.629.256.868.868 0 0 0-.26.619v9.25c0 .232.094.455.26.619A.896.896 0 0 0 4.89 16H9l3 4 3-4h4.111a.896.896 0 0 0 .629-.256.868.868 0 0 0 .26-.619v-9.25a.868.868 0 0 0-.26-.619.896.896 0 0 0-.63-.256Z"
-                                  />
-                                </svg>
-                              </div>
-
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z"
-                                  />
-                                </svg>
-                              </div>
-
-                              <div class="mr-2 w-8 h-4 text-xs text-gray-600">
-                                3 jam
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <!--  -->
-                      </div>
-
-                      <!--  -->
-
-                      <div class="w-full flex flex-col mb-3">
-                        <!--  -->
-                        <div class="w-full mb-2">
-                          <a
-                            href="#"
-                            class="block w-full px-3 pt-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800"
-                          >
-                            <h5
-                              class="mb-2 text-lg font-bold tracking-tight text-black"
-                            >
-                              GOLANG MICROSERVICE
-                            </h5>
-                            <div class="text-xs text-black">
-                              <p class="truncate">
-                                <span class="font-bold">Teuku :</span>
-                                izin meminta bagi yang ada referensi untuk
-                                golang microservice
-                              </p>
-                            </div>
-
-                            <div class="w-full inline-flex pt-2 pb-3.5">
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M7.556 8.5h8m-8 3.5H12m7.111-7H4.89a.896.896 0 0 0-.629.256.868.868 0 0 0-.26.619v9.25c0 .232.094.455.26.619A.896.896 0 0 0 4.89 16H9l3 4 3-4h4.111a.896.896 0 0 0 .629-.256.868.868 0 0 0 .26-.619v-9.25a.868.868 0 0 0-.26-.619.896.896 0 0 0-.63-.256Z"
-                                  />
-                                </svg>
-                              </div>
-
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z"
-                                  />
-                                </svg>
-                              </div>
-
-                              <div class="mr-2 w-8 h-4 text-xs text-gray-600">
-                                3 jam
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <!--  -->
-                      </div>
-
-                      <!--  -->
-
-                      <div class="w-full flex flex-col mb-3">
-                        <!--  -->
-                        <div class="w-full mb-2">
-                          <a
-                            href="#"
-                            class="block w-full px-3 pt-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800"
-                          >
-                            <h5
-                              class="mb-2 text-lg font-bold tracking-tight text-black"
-                            >
-                              GOLANG MICROSERVICE
-                            </h5>
-                            <div class="text-xs text-black">
-                              <p class="truncate">
-                                <span class="font-bold">Teuku :</span>
-                                izin meminta bagi yang ada referensi untuk
-                                golang microservice
-                              </p>
-                            </div>
-
-                            <div class="w-full inline-flex pt-2 pb-3.5">
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M7.556 8.5h8m-8 3.5H12m7.111-7H4.89a.896.896 0 0 0-.629.256.868.868 0 0 0-.26.619v9.25c0 .232.094.455.26.619A.896.896 0 0 0 4.89 16H9l3 4 3-4h4.111a.896.896 0 0 0 .629-.256.868.868 0 0 0 .26-.619v-9.25a.868.868 0 0 0-.26-.619.896.896 0 0 0-.63-.256Z"
-                                  />
-                                </svg>
-                              </div>
-
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z"
-                                  />
-                                </svg>
-                              </div>
-
-                              <div class="mr-2 w-8 h-4 text-xs text-gray-600">
-                                3 jam
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-
-                        <!--  -->
-                      </div>
-
-                      <!--  -->
-
-                      <div class="w-full flex flex-col mb-3">
-                        <!--  -->
-                        <div class="w-full mb-2">
-                          <a
-                            href="#"
-                            class="block w-full px-3 pt-3 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800"
-                          >
-                            <h5
-                              class="mb-2 text-lg font-bold tracking-tight text-black"
-                            >
-                              GOLANG MICROSERVICE
-                            </h5>
-                            <div class="text-xs text-black">
-                              <p class="truncate">
-                                <span class="font-bold">Teuku :</span>
-                                izin meminta bagi yang ada referensi untuk
-                                golang microservice
-                              </p>
-                            </div>
-
-                            <div class="w-full inline-flex pt-2 pb-3.5">
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M7.556 8.5h8m-8 3.5H12m7.111-7H4.89a.896.896 0 0 0-.629.256.868.868 0 0 0-.26.619v9.25c0 .232.094.455.26.619A.896.896 0 0 0 4.89 16H9l3 4 3-4h4.111a.896.896 0 0 0 .629-.256.868.868 0 0 0 .26-.619v-9.25a.868.868 0 0 0-.26-.619.896.896 0 0 0-.63-.256Z"
-                                  />
-                                </svg>
-                              </div>
-
-                              <div class="mr-2 w-4 h-4">
-                                <svg
-                                  class="w-5 h-5 text-gray-800 dark:text-white"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="m17 21-5-4-5 4V3.889a.92.92 0 0 1 .244-.629.808.808 0 0 1 .59-.26h8.333a.81.81 0 0 1 .589.26.92.92 0 0 1 .244.63V21Z"
-                                  />
-                                </svg>
-                              </div>
-
-                              <div class="mr-2 w-8 h-4 text-xs text-gray-600">
-                                3 jam
-                              </div>
-                            </div>
-                          </a>
+                          </div>
                         </div>
 
                         <!--  -->
@@ -41818,215 +41693,108 @@
 
                     <!-- kedua -->
                     <div
-                      class="w-full h-[76vh] overflow-y-auto scrollbar flex flex-col p-3"
+                      class="w-full h-[76vh] overflow-y-auto scrollbar p-1.5 bg-white"
                     >
-                      <div class="text-xl font-bold">GOLANG MICROSERVICE</div>
-
-                      <!-- Chatt -->
-
-                      <div class="flex flex-col">
-                        <!--  -->
-
-                        <div class="flex items-start gap-2.5 mt-3">
-                          <img
-                            class="w-8 h-8 rounded-full"
-                            src="./src/images/model/model11.jpg"
-                            alt="Jese image"
-                          />
-                          <div
-                            class="flex flex-col w-full max-w-[320px] leading-1.5 border-gray-200 bg-gray-200 p-3 rounded-e-xl rounded-es-xl"
-                          >
-                            <div
-                              class="flex items-center space-x-2 rtl:space-x-reverse"
+                      <div class="w-full h-full flex flex-col konten_a">
+                        <div class="w-full py-1.5">
+                          <div class="flex justify-end">
+                            <button
+                              type="button"
+                              class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
                             >
-                              <span
-                                class="text-sm font-semibold text-gray-900 dark:text-white"
-                                >Bonnie Green</span
-                              >
-                              <span
-                                class="text-sm font-normal text-gray-500 dark:text-gray-400"
-                                >11:46</span
-                              >
-                            </div>
-                            <p
-                              class="text-sm font-normal py-2.5 text-gray-900 dark:text-white"
-                            >
-                              That's awesome. I think our users will really
-                              appreciate the improvements.
-                            </p>
-                            <span
-                              class="text-sm font-normal text-gray-500 dark:text-gray-400"
-                              >Dibaca</span
-                            >
+                              Posting
+                            </button>
                           </div>
                         </div>
 
-                        <!--  -->
+                        <div class="text-md font-bold">Rumah Cicilan KPR</div>
 
-                        <!-- Seperator -->
-                        <!-- <div class="border-b w-full mb-6">&nbsp;</div> -->
-                        <div class="flex items-center justify-center mt-3">
-    <div class="border-b flex-grow"></div>
-    <div class="mx-2 text-xs text-gray-500">08 Mei 2024</div>
-    <div class="border-b flex-grow"></div>
-</div>
+                        <!-- Chatt -->
 
+                        <div class="flex flex-col">
+                          <!--  -->
 
-
-                        <!--  -->
-
-                        <div class="flex items-start gap-2.5 my-3">
-                          <img
-                            class="w-8 h-8 rounded-full"
-                            src="./src/images/model/model11.jpg"
-                            alt="Jese image"
-                          />
-                          <div
-                            class="flex flex-col w-full max-w-[320px] leading-1.5 border-gray-200 bg-gray-200 p-3 rounded-e-xl rounded-es-xl"
-                          >
+                          <div class="flex items-start gap-2.5 mb-1.5">
                             <div
-                              class="flex items-center space-x-2 rtl:space-x-reverse"
+                              class="flex flex-col w-full w-full leading-1.5 border-gray-200 p-1.5 rounded-e-xl rounded-es-xl"
                             >
-                              <span
-                                class="text-sm font-semibold text-gray-900 dark:text-white"
-                                >Bonnie Green</span
+                              <p
+                                class="text-sm font-normal text-justify py-0.5 indent-10 text-gray-900 dark:text-white"
                               >
-                              <span
-                                class="text-sm font-normal text-gray-500 dark:text-gray-400"
-                                >11:46</span
-                              >
+                                Orang yang sentimental menganggap setiap benda
+                                sebagai potongan berharga dari cerita hidupnya.
+                                Barang-barang yang mereka simpan bukan hanya
+                                sekadar barang, melainkan wujud penghargaan
+                                terhadap nilai-nilai emosional yang melekat pada
+                                kenangan Orang yang sentimental menganggap
+                                setiap benda sebagai potongan berharga dari
+                                cerita hidupnya. Barang-barang yang mereka
+                                simpan bukan hanya sekadar barang, melainkan
+                                wujud penghargaan terhadap nilai-nilai emosional
+                                yang melekat pada kenangan
+                              </p>
                             </div>
-                            <p
-                              class="text-sm font-normal py-2.5 text-gray-900 dark:text-white"
-                            >
-                              That's awesome. I think our users will really
-                              appreciate the improvements.
-                            </p>
-                            <span
-                              class="text-sm font-normal text-gray-500 dark:text-gray-400"
-                              >Terkirim</span
-                            >
                           </div>
+
+                          <!--  -->
+
+                          <!--  -->
+                        </div>
+                      </div>
+
+                      <div class="w-full h-full flex flex-col konten_b hidden">
+                        <div class="text-md font-bold mt-2">
+                          Penjualan Rumah 2024
                         </div>
 
-                        <!--  -->
+                        <!-- Chatt -->
 
+                        <div class="flex flex-col">
+                          <!--  -->
 
-                        <!--  -->
-
-                        <div class="flex items-start gap-2.5 my-3">
-                          <img
-                            class="w-8 h-8 rounded-full"
-                            src="./src/images/model/model11.jpg"
-                            alt="Jese image"
-                          />
-                          <div
-                            class="flex flex-col w-full max-w-[320px] leading-1.5 border-gray-200 bg-gray-200 p-3 rounded-e-xl rounded-es-xl"
-                          >
+                          <div class="flex items-start gap-2.5 mb-1.5">
                             <div
-                              class="flex items-center space-x-2 rtl:space-x-reverse"
+                              class="flex flex-col w-full w-full leading-1.5 border-gray-200 p-1.5 rounded-e-xl rounded-es-xl"
+                            >
+                              <p
+                                class="text-sm font-normal text-justify py-0.5 indent-10 text-gray-900 dark:text-white"
                               >
-                              <span
-                                class="text-sm font-semibold text-gray-900 dark:text-white"
-                                >Bonnie Green</span
-                              >
-                              <span
-                                class="text-sm font-normal text-gray-500 dark:text-gray-400"
-                                >11:46</span
-                              >
+                                Di tahun 2024, fenomena penjualan rumah
+                                menunjukkan dinamika yang sangat menarik, dipicu
+                                oleh perubahan besar dalam preferensi pembeli
+                                dan kondisi ekonomi global. Pertumbuhan ekonomi
+                                yang stabil di beberapa kawasan telah mendorong
+                                peningkatan daya beli masyarakat, sementara di
+                                wilayah lain, kondisi ekonomi yang kurang
+                                menguntungkan telah menekan harga pasar. Pembeli
+                                rumah kini semakin cenderung mencari properti
+                                yang tidak hanya berfungsi sebagai tempat
+                                tinggal, tetapi juga sebagai investasi jangka
+                                panjang yang menguntungkan. Teknologi terbaru
+                                telah merevolusi cara properti dipasarkan dan
+                                dijual. Platform digital menjadi alat utama
+                                dalam pencarian rumah, memberikan pembeli
+                                kemampuan untuk melihat properti secara virtual,
+                                yang sangat membantu dalam proses pengambilan
+                                keputusan. Kehadiran fitur ini terutama
+                                signifikan mengingat pandemi global yang
+                                sebelumnya membatasi pergerakan fisik. Di sisi
+                                lain, tren keberlanjutan juga mulai berperan
+                                dalam industri real estate. Pembeli semakin
+                                sadar lingkungan, mencari rumah yang efisien
+                                energi dan ramah lingkungan, mempengaruhi desain
+                                dan bahan yang digunakan dalam konstruksi rumah.
+                                Hal ini tidak hanya mengurangi jejak karbon
+                                tetapi juga menjanjikan pengurangan biaya
+                                utilitas jangka panjang.
+                              </p>
                             </div>
-                        <div class="flex items-start my-2.5 bg-gray-50 dark:bg-gray-600 rounded-xl p-2">
-            <div class="me-2">
-               <span class="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white pb-2">
-                  <svg fill="none" aria-hidden="true" class="w-5 h-5 flex-shrink-0" viewBox="0 0 20 21">
-                     <g clip-path="url(#clip0_3173_1381)">
-                        <path fill="#E2E5E7" d="M5.024.5c-.688 0-1.25.563-1.25 1.25v17.5c0 .688.562 1.25 1.25 1.25h12.5c.687 0 1.25-.563 1.25-1.25V5.5l-5-5h-8.75z"></path>
-                        <path fill="#B0B7BD" d="M15.024 5.5h3.75l-5-5v3.75c0 .688.562 1.25 1.25 1.25z"></path>
-                        <path fill="#CAD1D8" d="M18.774 9.25l-3.75-3.75h3.75v3.75z"></path>
-                        <path fill="#F15642" d="M16.274 16.75a.627.627 0 01-.625.625H1.899a.627.627 0 01-.625-.625V10.5c0-.344.281-.625.625-.625h13.75c.344 0 .625.281.625.625v6.25z"></path>
-                        <path fill="#fff" d="M3.998 12.342c0-.165.13-.345.34-.345h1.154c.65 0 1.235.435 1.235 1.269 0 .79-.585 1.23-1.235 1.23h-.834v.66c0 .22-.14.344-.32.344a.337.337 0 01-.34-.344v-2.814zm.66.284v1.245h.834c.335 0 .6-.295.6-.605 0-.35-.265-.64-.6-.64h-.834zM7.706 15.5c-.165 0-.345-.09-.345-.31v-2.838c0-.18.18-.31.345-.31H8.85c2.284 0 2.234 3.458.045 3.458h-1.19zm.315-2.848v2.239h.83c1.349 0 1.409-2.24 0-2.24h-.83zM11.894 13.486h1.274c.18 0 .36.18.36.355 0 .165-.18.3-.36.3h-1.274v1.049c0 .175-.124.31-.3.31-.22 0-.354-.135-.354-.31v-2.839c0-.18.135-.31.355-.31h1.754c.22 0 .35.13.35.31 0 .16-.13.34-.35.34h-1.455v.795z"></path>
-                        <path fill="#CAD1D8" d="M15.649 17.375H3.774V18h11.875a.627.627 0 00.625-.625v-.625a.627.627 0 01-.625.625z"></path>
-                     </g>
-                     <defs>
-                        <clipPath id="clip0_3173_1381">
-                           <path fill="#fff" d="M0 0h20v20H0z" transform="translate(0 .5)"></path>
-                        </clipPath>
-                     </defs>
-                  </svg>
-                  Flowbite Terms &amp; Conditions
-               </span>
-               <span class="flex text-xs font-normal text-gray-500 dark:text-gray-400 gap-2">
-                  12 Pages 
-                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="self-center" width="3" height="4" viewBox="0 0 3 4" fill="none">
-                     <circle cx="1.5" cy="2" r="1.5" fill="#6B7280"></circle>
-                  </svg>
-                  18 MB 
-                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="self-center" width="3" height="4" viewBox="0 0 3 4" fill="none">
-                     <circle cx="1.5" cy="2" r="1.5" fill="#6B7280"></circle>
-                  </svg>
-                  PDF
-               </span>
-            </div>
-            <div class="inline-flex self-center items-center">
-               <button class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-600" type="button">
-                  <svg class="w-4 h-4 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                     <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"></path>
-                     <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
-                  </svg>
-               </button>
-            </div>
-         </div>
-                            <span
-                              class="text-sm font-normal text-gray-500 dark:text-gray-400"
-                              >Terkirim</span
-                            >
                           </div>
+
+                          <!--  -->
+
+                          <!--  -->
                         </div>
-
-                        <!--  -->
-
-
-                        <!--  -->
-
-                        <div class="flex items-start gap-2.5 my-3">
-                          <img
-                            class="w-8 h-8 rounded-full"
-                            src="./src/images/model/model11.jpg"
-                            alt="Jese image"
-                          />
-                          <div
-                            class="flex flex-col w-full max-w-[320px] leading-1.5 border-gray-200 bg-gray-200 p-3 rounded-e-xl rounded-es-xl"
-                          >
-                            <div
-                              class="flex items-center space-x-2 rtl:space-x-reverse"
-                            >
-                              <span
-                                class="text-sm font-semibold text-gray-900 dark:text-white"
-                                >Bonnie Green</span
-                              >
-                              <span
-                                class="text-sm font-normal text-gray-500 dark:text-gray-400"
-                                >11:46</span
-                              >
-                            </div>
-                            <p
-                              class="text-sm font-normal py-2.5 text-gray-900 dark:text-white"
-                            >
-                              That's awesome. I think our users will really
-                              appreciate the improvements.
-                            </p>
-                            <span
-                              class="text-sm font-normal text-gray-500 dark:text-gray-400"
-                              >Terkirim</span
-                            >
-                          </div>
-                        </div>
-
-                        <!--  -->
-
-
-
-
                       </div>
                     </div>
                   </div>

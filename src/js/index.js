@@ -4693,3 +4693,25 @@ document.addEventListener("DOMContentLoaded", function () {
     defaultActiveMenu.classList.add("font-bold");
   }
 });
+
+
+
+
+// co broking
+
+document.addEventListener('DOMContentLoaded', function() {
+  const btnKontenA = document.querySelector('.btn_konten_a');
+  const btnKontenB = document.querySelector('.btn_konten_b');
+  const kontenA = document.querySelector('.konten_a');
+  const kontenB = document.querySelector('.konten_b');
+
+  btnKontenA.addEventListener('click', function() {
+    kontenA.classList.remove('hidden');
+    kontenB.classList.add('hidden');
+  });
+
+  btnKontenB.addEventListener('click', function() {
+    kontenA.classList.add('hidden');
+    kontenB.classList.remove('hidden');
+  });
+});
