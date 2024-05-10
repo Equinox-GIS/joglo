@@ -22,6 +22,6 @@ jobs:
           script: |
             cd /var/www/html/joglo
             git pull origin layout
-            echo $PATH
+            export PATH="$PATH:/root/.nvm/versions/node/v20.13.1/bin"
             chmod +x automation_build_path.sh
             ./automation_build_path.sh
