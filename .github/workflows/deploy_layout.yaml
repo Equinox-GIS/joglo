@@ -23,7 +23,7 @@ jobs:
             cd /var/www/html/joglo
             git pull origin layout
             source ~/.bashrc
-            /root/.nvm/versions/node/v20.13.1/bin/npm install
-            /root/.nvm/versions/node/v20.13.1/bin/npm run build
+            /usr/local/bin/npm install
+            /usr/local/bin/npm run build
             chmod +x automation_build_path.sh
             ./automation_build_path.sh
