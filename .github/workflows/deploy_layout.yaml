@@ -13,17 +13,16 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Deploy Using ssh
-        uses: fifsky/ssh-action@master
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
-          user: ${{ secrets.SSH_USERNAME }}
+          username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          command: |
+          script: |
             cd /var/www/html/joglo
             git pull origin layout
-            export NVM_DIR=~/.nvm
-            source ~/.nvm/nvm.sh
+            source ~/.bashrc
             npm install
             npm run build
             chmod +x automation_build_path.sh
