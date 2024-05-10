@@ -1,9 +1,9 @@
-name: cd-branch-production
+name: cd-branch-layout
 
 on:
   push:
     branches:
-      - main
+      - layout
 
 jobs:
   deploy:
@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /var/www/html/dev/joglo
+            cd /var/www/html/joglo
             git pull origin main
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
