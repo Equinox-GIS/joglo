@@ -1,9 +1,9 @@
-name: cd-branch-production
+name: cd-branch-mockup
 
 on:
   push:
     branches:
-      - main
+      - mockup
 
 jobs:
   deploy:
@@ -20,9 +20,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /var/www/html/dev/joglo
-            git pull origin main
-            export NVM_DIR=~/.nvm
-            source ~/.nvm/nvm.sh
-            chmod +x automation_build_path.sh
-            ./automation_build_path.sh
+            cd /var/www/html/mockup_joglo/joglo
+            git pull origin mockup
+            export PATH="$PATH:/root/.nvm/versions/node/v20.13.1/bin"
+            echo $PATH
+            npm install
+            npm run build
