@@ -12,9 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Add directory to PATH
-        run: echo "/root/.nvm/versions/node/v20.13.1/bin" >> $GITHUB_PATH
-
       - name: Deploy Using ssh
         uses: appleboy/ssh-action@master
         with:
@@ -23,6 +20,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
+            export NVM_DIR=/root/.nvm
+            source /root/.nvm/nvm.sh
+            npm --help
             cd /var/www/html/joglo
             git pull origin layout
             npm install
