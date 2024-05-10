@@ -20,8 +20,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            export NVM_DIR=/root/.nvm
-            source /root/.nvm/nvm.sh
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             npm --help
             cd /var/www/html/joglo
             git pull origin layout
