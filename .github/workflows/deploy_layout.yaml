@@ -21,7 +21,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /var/www/html/joglo
-            git pull origin main
+            git pull origin layout
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
             chmod +x automation_build_path.sh
