@@ -22,8 +22,11 @@ jobs:
           script: |
             cd /var/www/html/joglo
             git pull origin layout
-            source ~/.bashrc
-            /usr/local/bin/npm install
-            /usr/local/bin/npm run build
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+            node --version
+            npm --version
+
             chmod +x automation_build_path.sh
             ./automation_build_path.sh
