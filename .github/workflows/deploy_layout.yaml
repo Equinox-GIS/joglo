@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
+      - name: Node Js
+        uses: actions/setup-node@v1
+
       - name: Deploy Using ssh
         uses: appleboy/ssh-action@master
         with:
@@ -22,10 +25,6 @@ jobs:
           script: |
             cd /var/www/html/joglo
             git pull origin layout
-            export NVM_DIR=~/.nvm
-            source ~/.nvm/nvm.sh
-            ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/node" "/usr/local/bin/node"
-            ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npm"
             npm install
             npm run build
             chmod +x automation_build_path.sh
