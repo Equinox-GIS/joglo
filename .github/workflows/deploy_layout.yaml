@@ -24,5 +24,7 @@ jobs:
             git pull origin layout
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
+            npm install
+            npm run build
             chmod +x automation_build_path.sh
             ./automation_build_path.sh
