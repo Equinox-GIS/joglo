@@ -1658,7 +1658,7 @@ window.showPostingStories = function (element) {
 function showJudulPostinganListing() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
-    element.textContent = "Postingan Listing";
+    element.textContent = "Listing";
   });
 }
 
@@ -1677,6 +1677,14 @@ window.showPostingListing = function (element) {
   } else {
     console.error("MenuDuaTab not found");
   }
+  // 
+
+    Array.from(
+    document.getElementsByClassName("btnBackEditStoriesPosting")
+  ).forEach((elem) => elem.classList.remove("hidden"));
+
+
+  // 
 };
 
 window.closeDetailAgent = function () {
