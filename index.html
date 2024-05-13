@@ -697,7 +697,7 @@
           </div>
 
           <!-- Button Cicilan Calculator -->
-          <div class="flex items-center px-1">
+          <div class="flex items-center px-1 hidden">
             <div class="grid grid-cols-1 relative">
               <div class="text-left">
                 <button
@@ -911,7 +911,7 @@
           </div>
 
           <!-- Button Penjual -->
-          <div class="flex items-center px-1">
+          <div class="flex items-center px-1 hidden">
             <div class="grid grid-cols-1 relative">
               <div class="text-left">
                 <button
@@ -1003,7 +1003,7 @@
           </div>
 
           <!-- Button Jenis Properti -->
-          <div class="flex items-center px-1">
+          <div class="flex items-center px-1 hidden">
             <div class="grid grid-cols-1 relative">
               <div class="text-left">
                 <button
@@ -1123,7 +1123,7 @@
           </div>
 
           <!-- Button Jenis Surat -->
-          <div class="flex items-center px-1">
+          <div class="flex items-center px-1 hidden">
             <div class="grid grid-cols-1 relative">
               <div class="text-left">
                 <button
@@ -1484,7 +1484,7 @@
           </div>
 
           <!-- Search Button -->
-          <div class="px-1">
+          <div class="px-1 hidden">
             <button
               id="btnTerapkan"
               type="button"
@@ -1493,7 +1493,7 @@
               Terapkan
             </button>
           </div>
-          <div class="pl-1">
+          <div class="pl-1 hidden">
             <button
               id="btnSearch"
               type="button"
@@ -1504,7 +1504,7 @@
           </div>
           <!--  -->
           <div
-            class="flex justify-center items-center flex-col w-11 h-11 cursor-pointer border-gray-100"
+            class="flex justify-center items-center flex-col w-11 h-11 cursor-pointer border-gray-100 hidden"
           >
             <div class="w-7 h-7 flex justify-center items-center relative">
               <!-- btnSaveInstagram -->
@@ -1835,7 +1835,7 @@
 
               <!-- Menu 16 Pesan -->
               <div
-                class="flex col justify-center py-2"
+                class="flex col justify-center py-2 hidden"
                 data-tooltip-target="menu-cobroking"
                 data-tooltip-placement="right"
               >
@@ -2236,18 +2236,11 @@
 
           <!-- Konten Menu Satu -->
 
-          <!--           <div
+          <div
             class="h-full w-full hiddenSearchRunning"
             id="MenuSatuContent"
             role="tabpanel"
             aria-labelledby="MenuSatuTab"
-          > -->
-
-          <div
-            class="hidden h-full"
-            id="MenuTujuhContent"
-            role="tabpanel"
-            aria-labelledby="MenuTujuhTab"
           >
             <!--  -->
 
@@ -34133,7 +34126,7 @@
 
                               <!--  Konten Card buatFavorti -->
                               <div
-                                class="h-[64.5vh] overflow-y-auto hide-scrollbar"
+                                class="h-[59.5vh] overflow-y-auto hide-scrollbar"
                               >
                                 <!-- Mode Pertamaz -->
                                 <div class="h-full mode-card-pertama">
@@ -34328,7 +34321,7 @@
                                             <div class="inline-flex">
                                               <img
                                                 class="w-4 h-4"
-                                                src="/src/images/show.png"
+                                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/show.png"
                                                 alt=""
                                               />
 
@@ -34419,7 +34412,597 @@
                                                 <img
                                                   onclick="EditPostingListingAgen()"
                                                   class="w-5 h-5 mb-0.5 mr-1.5 cursor-pointer"
-                                                  src="/src/images/threedots.png"
+                                                  src="https://www.joglopro.com/bucket/soaraja/image/joglopro/threedots.png"
+                                                  alt=""
+                                                />
+                                              </div>
+
+                                              <div>
+                                                <button
+                                                  onclick="DetailProfilListing(this)"
+                                                  type="button"
+                                                  class="h-4 p-3 text-xs font-medium text-center inline-flex items-center text-white bg-[#0394F7] hover:bg-[#1877F2] rounded-md"
+                                                >
+                                                  Iklan
+                                                </button>
+                                              </div>
+                                            </div>
+                                            <!--  -->
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                                                        <!-- Card Beranda 1 -->
+                                    <div class="w-full konten-dijual">
+                                      <div
+                                        class="flex flex-col bg-white rounded-lg"
+                                        data-card-map="1534"
+                                        data-active-tab="1"
+                                        data-object-id="1604"
+                                        onclick="showCardInfoDetail(this)"
+                                      >
+                                        <div class="py-1 px-2 h-[7vh]">
+                                          <div
+                                            class="w-full h-full grid grid-cols-[1fr,40px]"
+                                          >
+                                            <div
+                                              class="w-full grid grid-cols-[33px,1fr]"
+                                            >
+                                              <div class="w-full">
+                                                <img
+                                                  class="w-8 h-8 rounded-full mt-1"
+                                                  src="https://www.joglopro.com/bucket/soaraja/image/joglopro/model/model11.jpg"
+                                                />
+                                              </div>
+                                              <div
+                                                class="w-full flex flex-col ml-2"
+                                              >
+                                                <div class="inline-flex mt-0.5">
+                                                  <div
+                                                    class="text-sm font-semibold text-black cursor-pointer"
+                                                    onclick="showCardAgent(this)"
+                                                  >
+                                                    <div class="">
+                                                      Gunawan Budi Ardiva G
+                                                    </div>
+                                                  </div>
+                                                  <div
+                                                    class="flex items-center justify-center ml-1"
+                                                  >
+                                                    <div
+                                                      class="w-4 h-4 flex justify-center items-center relative"
+                                                    >
+                                                      <img
+                                                        src="/src/images/verif.png"
+                                                        alt=""
+                                                      />
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="">
+                                                  <label
+                                                    for="star-agent-utama"
+                                                    class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                                  >
+                                                    <div>
+                                                      <label
+                                                        for="star-agent-utama"
+                                                        class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                                      >
+                                                        <svg
+                                                          class="w-3 h-3 text-yellow-300"
+                                                          aria-hidden="true"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          viewBox="0 0 22 20"
+                                                        >
+                                                          <path
+                                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                          ></path>
+                                                        </svg>
+                                                        <svg
+                                                          class="w-3 h-3 text-yellow-300"
+                                                          aria-hidden="true"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          viewBox="0 0 22 20"
+                                                        >
+                                                          <path
+                                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                          ></path>
+                                                        </svg>
+                                                        <svg
+                                                          class="w-3 h-3 text-yellow-300"
+                                                          aria-hidden="true"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          viewBox="0 0 22 20"
+                                                        >
+                                                          <path
+                                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                          ></path>
+                                                        </svg>
+                                                        <svg
+                                                          class="w-3 h-3 text-gray-300"
+                                                          aria-hidden="true"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          viewBox="0 0 22 20"
+                                                        >
+                                                          <path
+                                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                          ></path>
+                                                        </svg>
+                                                        <svg
+                                                          class="w-2.5 h-2.5 text-gray-300 hidden"
+                                                          aria-hidden="true"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          viewBox="0 0 22 20"
+                                                        >
+                                                          <path
+                                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                          ></path>
+                                                        </svg>
+                                                      </label>
+                                                    </div>
+                                                  </label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div
+                                              class="w-full flex justify-end relative"
+                                            >
+                                              <img
+                                                class="w-8 h-8 object-contain -mr-1 mt-1"
+                                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/agent/era2.png"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="w-full h-[27vh] relative">
+                                          <div
+                                            class="slider-card-mode-ketiga w-full h-full"
+                                          >
+                                            <div
+                                              class="relative h-[27vh] bg-black z-index-10"
+                                            >
+                                              <img
+                                                class="w-full h-full object-contain"
+                                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/Rmh2/rumahb1.jpg"
+                                                alt=""
+                                              />
+                                              <div class="arrow-right-custom">
+                                                <span class="font-semibold"
+                                                  >NEW</span
+                                                >
+                                              </div>
+                                            </div>
+                                            <!--  -->
+                                            <div
+                                              class="relative h-[27vh] bg-black z-index-10"
+                                            >
+                                              <img
+                                                class="w-full h-full object-contain"
+                                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/Rmh2/rumahb1.jpg"
+                                                alt=""
+                                              />
+                                              <div class="arrow-right-custom">
+                                                <span class="font-semibold"
+                                                  >NEW</span
+                                                >
+                                              </div>
+                                            </div>
+                                            <!--  -->
+                                          </div>
+                                        </div>
+                                        <div
+                                          class="px-2 pt-[0.3rem] h-[11.3vh]"
+                                          style="user-select: none"
+                                        >
+                                          <div
+                                            class="w-full text-black text-xs flex justify-between"
+                                          >
+                                            <div class="inline-flex">
+                                              <img
+                                                class="w-4 h-4"
+                                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/show.png"
+                                                alt=""
+                                              />
+
+                                              <div
+                                                class="ml-1 text-xs text-black flex items-center"
+                                              >
+                                                25
+                                              </div>
+                                            </div>
+                                            <div>ID 78AC66</div>
+                                          </div>
+                                          <div
+                                            class="flex flex-row justify-between -mt-1"
+                                          >
+                                            <div>
+                                              <a href="#">
+                                                <div
+                                                  class="inline-flex items-center w-full"
+                                                >
+                                                  <h5
+                                                    class="text-lg font-bold tracking-tight text-black"
+                                                  >
+                                                    Rp 11.300.000.000
+                                                  </h5>
+
+                                                  <div
+                                                    class="flex flex-row items-center justify-center"
+                                                  >
+                                                    <div
+                                                      class="flex items-center ml-2"
+                                                    >
+                                                      <img
+                                                        class="w-5 h-5 object-cover"
+                                                        src="https://www.joglopro.com/bucket/soaraja/image/joglopro/heart-on.png"
+                                                        alt=""
+                                                      />
+                                                      <div class="text-sm ml-1">
+                                                        11
+                                                      </div>
+                                                    </div>
+
+                                                    <img
+                                                      class="w-3.5 h-3.5 object-cover ml-2"
+                                                      src="https://www.joglopro.com/bucket/soaraja/image/joglopro/share.png"
+                                                      alt=""
+                                                    />
+
+                                                    <img
+                                                      class="w-5 h-5 object-cover ml-3"
+                                                      src="https://www.joglopro.com/bucket/soaraja/image/joglopro/badge3d.svg"
+                                                      alt=""
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </a>
+                                            </div>
+                                          </div>
+                                          <div
+                                            class="grid grid-cols-[1fr,74px]"
+                                          >
+                                            <div
+                                              class="flex flex-col font-normal"
+                                            >
+                                              <div
+                                                class="flex items-center text-xs text-black"
+                                              >
+                                                <span class="mr-1"
+                                                  >LT 80 m² |</span
+                                                >
+                                                <span class="mr-1"
+                                                  >LB 276 m² |</span
+                                                >
+                                                <span class="mr-1">2 KT |</span>
+                                                <span class="mr-1">5 KM</span>
+                                              </div>
+                                              <div class="text-xs text-black">
+                                                Sunter, Tanjung Priok, Jakarta
+                                                Utaraaa
+                                              </div>
+                                            </div>
+                                            <!--  -->
+                                            <div
+                                              class="w-full flex items-end justify-end -mt-1 mr-2 inline-flex"
+                                            >
+                                              <div
+                                                class="flex justify-end items-end relative h-full"
+                                              >
+                                                <img
+                                                  onclick="EditPostingListingAgen()"
+                                                  class="w-5 h-5 mb-0.5 mr-1.5 cursor-pointer"
+                                                  src="https://www.joglopro.com/bucket/soaraja/image/joglopro/threedots.png"
+                                                  alt=""
+                                                />
+                                              </div>
+
+                                              <div>
+                                                <button
+                                                  onclick="DetailProfilListing(this)"
+                                                  type="button"
+                                                  class="h-4 p-3 text-xs font-medium text-center inline-flex items-center text-white bg-[#0394F7] hover:bg-[#1877F2] rounded-md"
+                                                >
+                                                  Iklan
+                                                </button>
+                                              </div>
+                                            </div>
+                                            <!--  -->
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                                                        <!-- Card Beranda 1 -->
+                                    <div class="w-full konten-dijual">
+                                      <div
+                                        class="flex flex-col bg-white rounded-lg"
+                                        data-card-map="1534"
+                                        data-active-tab="1"
+                                        data-object-id="1604"
+                                        onclick="showCardInfoDetail(this)"
+                                      >
+                                        <div class="py-1 px-2 h-[7vh]">
+                                          <div
+                                            class="w-full h-full grid grid-cols-[1fr,40px]"
+                                          >
+                                            <div
+                                              class="w-full grid grid-cols-[33px,1fr]"
+                                            >
+                                              <div class="w-full">
+                                                <img
+                                                  class="w-8 h-8 rounded-full mt-1"
+                                                  src="https://www.joglopro.com/bucket/soaraja/image/joglopro/model/model11.jpg"
+                                                />
+                                              </div>
+                                              <div
+                                                class="w-full flex flex-col ml-2"
+                                              >
+                                                <div class="inline-flex mt-0.5">
+                                                  <div
+                                                    class="text-sm font-semibold text-black cursor-pointer"
+                                                    onclick="showCardAgent(this)"
+                                                  >
+                                                    <div class="">
+                                                      Gunawan Budi Ardiva K
+                                                    </div>
+                                                  </div>
+                                                  <div
+                                                    class="flex items-center justify-center ml-1"
+                                                  >
+                                                    <div
+                                                      class="w-4 h-4 flex justify-center items-center relative"
+                                                    >
+                                                      <img
+                                                        src="/src/images/verif.png"
+                                                        alt=""
+                                                      />
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="">
+                                                  <label
+                                                    for="star-agent-utama"
+                                                    class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                                  >
+                                                    <div>
+                                                      <label
+                                                        for="star-agent-utama"
+                                                        class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
+                                                      >
+                                                        <svg
+                                                          class="w-3 h-3 text-yellow-300"
+                                                          aria-hidden="true"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          viewBox="0 0 22 20"
+                                                        >
+                                                          <path
+                                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                          ></path>
+                                                        </svg>
+                                                        <svg
+                                                          class="w-3 h-3 text-yellow-300"
+                                                          aria-hidden="true"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          viewBox="0 0 22 20"
+                                                        >
+                                                          <path
+                                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                          ></path>
+                                                        </svg>
+                                                        <svg
+                                                          class="w-3 h-3 text-yellow-300"
+                                                          aria-hidden="true"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          viewBox="0 0 22 20"
+                                                        >
+                                                          <path
+                                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                          ></path>
+                                                        </svg>
+                                                        <svg
+                                                          class="w-3 h-3 text-gray-300"
+                                                          aria-hidden="true"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          viewBox="0 0 22 20"
+                                                        >
+                                                          <path
+                                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                          ></path>
+                                                        </svg>
+                                                        <svg
+                                                          class="w-2.5 h-2.5 text-gray-300 hidden"
+                                                          aria-hidden="true"
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          viewBox="0 0 22 20"
+                                                        >
+                                                          <path
+                                                            d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                                          ></path>
+                                                        </svg>
+                                                      </label>
+                                                    </div>
+                                                  </label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div
+                                              class="w-full flex justify-end relative"
+                                            >
+                                              <img
+                                                class="w-8 h-8 object-contain -mr-1 mt-1"
+                                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/agent/era2.png"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="w-full h-[27vh] relative flex items-center">
+                                          <div
+                                            class="slider-card-mode-ketiga w-full h-full"
+                                          >
+
+                                            <div
+                                                class="absolute w-full flex justify-center"
+                                                >
+                                                <img
+                                                  class="w-[10vw] h-full"
+                                                  src="https://www.joglopro.com/bucket/soaraja/image/joglopro/sold.png"
+                                                />
+                                              </div>
+
+                                            <div
+                                              class="relative h-[27vh] bg-black z-index-10 "
+                                            >
+                                              <img
+                                                class="w-full h-full object-contain"
+                                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/Rmh2/rumahb1.jpg"
+                                                alt=""
+                                              />
+
+
+
+
+                                              <div class="arrow-right-custom">
+                                                <span class="font-semibold"
+                                                  >NEW</span
+                                                >
+                                              </div>
+                                            </div>
+                                            <!--  -->
+                                            <div
+                                              class="relative h-[27vh] bg-black z-index-10"
+                                              >
+                                              <img
+                                                class="w-full h-full object-contain"
+                                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/Rmh2/rumahb1.jpg"
+                                                alt=""
+                                              />
+                                              <div class="arrow-right-custom">
+                                                <span class="font-semibold"
+                                                  >NEW</span
+                                                >
+                                              </div>
+                                            </div>
+                                            <!--  -->
+                                          </div>
+                                        </div>
+                                        <div
+                                          class="px-2 pt-[0.3rem] h-[11.3vh]"
+                                          style="user-select: none"
+                                        >
+                                          <div
+                                            class="w-full text-black text-xs flex justify-between"
+                                          >
+                                            <div class="inline-flex">
+                                              <img
+                                                class="w-4 h-4"
+                                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/show.png"
+                                                alt=""
+                                              />
+
+                                              <div
+                                                class="ml-1 text-xs text-black flex items-center"
+                                              >
+                                                25
+                                              </div>
+                                            </div>
+                                            <div>ID 78AC66</div>
+                                          </div>
+                                          <div
+                                            class="flex flex-row justify-between -mt-1"
+                                          >
+                                            <div>
+                                              <a href="#">
+                                                <div
+                                                  class="inline-flex items-center w-full"
+                                                >
+                                                  <h5
+                                                    class="text-lg font-bold tracking-tight text-black"
+                                                  >
+                                                    Rp 11.300.000.000
+                                                  </h5>
+
+                                                  <div
+                                                    class="flex flex-row items-center justify-center"
+                                                  >
+                                                    <div
+                                                      class="flex items-center ml-2"
+                                                    >
+                                                      <img
+                                                        class="w-5 h-5 object-cover"
+                                                        src="https://www.joglopro.com/bucket/soaraja/image/joglopro/heart-on.png"
+                                                        alt=""
+                                                      />
+                                                      <div class="text-sm ml-1">
+                                                        11
+                                                      </div>
+                                                    </div>
+
+                                                    <img
+                                                      class="w-3.5 h-3.5 object-cover ml-2"
+                                                      src="https://www.joglopro.com/bucket/soaraja/image/joglopro/share.png"
+                                                      alt=""
+                                                    />
+
+                                                    <img
+                                                      class="w-5 h-5 object-cover ml-3"
+                                                      src="https://www.joglopro.com/bucket/soaraja/image/joglopro/badge3d.svg"
+                                                      alt=""
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </a>
+                                            </div>
+                                          </div>
+                                          <div
+                                            class="grid grid-cols-[1fr,74px]"
+                                          >
+                                            <div
+                                              class="flex flex-col font-normal"
+                                            >
+                                              <div
+                                                class="flex items-center text-xs text-black"
+                                              >
+                                                <span class="mr-1"
+                                                  >LT 80 m² |</span
+                                                >
+                                                <span class="mr-1"
+                                                  >LB 276 m² |</span
+                                                >
+                                                <span class="mr-1">2 KT |</span>
+                                                <span class="mr-1">5 KM</span>
+                                              </div>
+                                              <div class="text-xs text-black">
+                                                Sunter, Tanjung Priok, Jakarta
+                                                Utaraaa
+                                              </div>
+                                            </div>
+                                            <!--  -->
+                                            <div
+                                              class="w-full flex items-end justify-end -mt-1 mr-2 inline-flex"
+                                            >
+                                              <div
+                                                class="flex justify-end items-end relative h-full"
+                                              >
+                                                <img
+                                                  onclick="EditPostingListingAgen()"
+                                                  class="w-5 h-5 mb-0.5 mr-1.5 cursor-pointer"
+                                                  src="https://www.joglopro.com/bucket/soaraja/image/joglopro/threedots.png"
                                                   alt=""
                                                 />
                                               </div>
@@ -40961,18 +41544,11 @@
           </div>
 
           <!-- Konten Menu Tujuh -->
-          <!--           <div
+          <div
             class="hidden h-full"
             id="MenuTujuhContent"
             role="tabpanel"
             aria-labelledby="MenuTujuhTab"
-          > -->
-
-          <div
-            class="h-full w-full hiddenSearchRunning"
-            id="MenuSatuContent"
-            role="tabpanel"
-            aria-labelledby="MenuSatuTab"
           >
             <!-- Konten Tujuh -->
 
@@ -41812,7 +42388,7 @@
                           <!--  -->
 
                           <div
-                            class="w-full bg-white px-2.5 pt-2.5 pb-2.5 cursor-pointer mb-3 rounded-lg hover:shadow-xl"
+                            class="w-[34.9vw] bg-white px-2.5 pt-2.5 pb-2.5 cursor-pointer mb-3 rounded-lg hover:shadow-xl"
                             onclick="ShowCoBrokingDetail()"
                           >
                             <div class="w-full inline-flex items-center">
@@ -41861,7 +42437,201 @@
                                 >
                                   <!-- SVG default di bawah ini akan dimuat pertama kali -->
                                   <svg
-                                    class="w-3.5 h-3.5 text-yellow-300"
+                                    class="w-5 h-5 text-gray-300"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 22 20"
+                                  >
+                                    <path
+                                      d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="w-[34.9vw] bg-white px-2.5 pt-2.5 pb-2.5 cursor-pointer mb-3 rounded-lg hover:shadow-xl"
+                            onclick="ShowCoBrokingDetail()"
+                          >
+                            <div class="w-full inline-flex items-center">
+                              <img
+                                class="w-6 h-6 mr-2 rounded-full"
+                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/model/model4.jpg"
+                                alt="Jese image"
+                              />
+                              <div class="w-full flex justify-between">
+                                <div class="">
+                                  <h5
+                                    class="text-sm tracking-tight text-black truncate"
+                                  >
+                                    Putri
+                                  </h5>
+                                </div>
+                                <div class="text-xs text-gray-500">
+                                  12/05/2024
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                              <div
+                                class="text-md font-bold tracking-tight text-black truncate"
+                              >
+                                Harga rumah murah didaerah Tebet
+                              </div>
+
+                              <div class="text-sm text-black pt-0.5 pb-2">
+                                <p class="line-clamp-2">
+                                  izin meminta bagi yang ada referensi untuk
+                                  golang yang microservice izin meminta bagi
+                                  yang ada referensi untuk golang microservice
+                                  izin meminta bagi yang ada referensi untuk
+                                  golang yang microservice izin meminta bagi
+                                  yang ada referensi untuk golang microservice
+                                </p>
+                              </div>
+
+                              <div class="w-full">
+                                <div
+                                  class="star_pesan_thread"
+                                  onclick="MenyukaiPesanThread(this)"
+                                >
+                                  <!-- SVG default di bawah ini akan dimuat pertama kali -->
+                                  <svg
+                                    class="w-5 h-5 text-gray-300"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 22 20"
+                                  >
+                                    <path
+                                      d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="w-[34.9vw] bg-white px-2.5 pt-2.5 pb-2.5 cursor-pointer mb-3 rounded-lg hover:shadow-xl"
+                            onclick="ShowCoBrokingDetail()"
+                          >
+                            <div class="w-full inline-flex items-center">
+                              <img
+                                class="w-6 h-6 mr-2 rounded-full"
+                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/model/model10.jpg"
+                                alt="Jese image"
+                              />
+                              <div class="w-full flex justify-between">
+                                <div class="">
+                                  <h5
+                                    class="text-sm tracking-tight text-black truncate"
+                                  >
+                                    Rizki
+                                  </h5>
+                                </div>
+                                <div class="text-xs text-gray-500">
+                                  11/05/2024
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                              <div
+                                class="text-md font-bold tracking-tight text-black truncate"
+                              >
+                                Untuk apartemen di Sudirman: Dapatkan Apartemen
+                                dengan Harga Ekonomis di Sudirman!
+                              </div>
+
+                              <div class="text-sm text-black pt-0.5 pb-2">
+                                <p class="line-clamp-2">
+                                  izin meminta bagi yang ada referensi untuk
+                                  golang yang microservice izin meminta bagi
+                                  yang ada referensi untuk golang microservice
+                                  izin meminta bagi yang ada referensi untuk
+                                  golang yang microservice izin meminta bagi
+                                  yang ada referensi untuk golang microservice
+                                </p>
+                              </div>
+
+                              <div class="w-full">
+                                <div
+                                  class="star_pesan_thread"
+                                  onclick="MenyukaiPesanThread(this)"
+                                >
+                                  <!-- SVG default di bawah ini akan dimuat pertama kali -->
+                                  <svg
+                                    class="w-5 h-5 text-gray-300"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor"
+                                    viewBox="0 0 22 20"
+                                  >
+                                    <path
+                                      d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+                                    ></path>
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="w-[34.9vw] bg-white px-2.5 pt-2.5 pb-2.5 cursor-pointer mb-3 rounded-lg hover:shadow-xl"
+                            onclick="ShowCoBrokingDetail()"
+                          >
+                            <div class="w-full inline-flex items-center">
+                              <img
+                                class="w-6 h-6 mr-2 rounded-full"
+                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/model/model9.jpg"
+                                alt="Jese image"
+                              />
+                              <div class="w-full flex justify-between">
+                                <div class="">
+                                  <h5
+                                    class="text-sm tracking-tight text-black truncate"
+                                  >
+                                    Willy
+                                  </h5>
+                                </div>
+                                <div class="text-xs text-gray-500">
+                                  10/05/2024
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="flex flex-col">
+                              <div
+                                class="text-md font-bold tracking-tight text-black truncate"
+                              >
+                                Untuk rumah di Tebet: Temukan Rumah dengan Harga
+                                Terjangkau di Tebet!
+                              </div>
+
+                              <div class="text-sm text-black pt-0.5 pb-2">
+                                <p class="line-clamp-2">
+                                  izin meminta bagi yang ada referensi untuk
+                                  golang yang microservice izin meminta bagi
+                                  yang ada referensi untuk golang microservice
+                                  izin meminta bagi yang ada referensi untuk
+                                  golang yang microservice izin meminta bagi
+                                  yang ada referensi untuk golang microservice
+                                </p>
+                              </div>
+
+                              <div class="w-full">
+                                <div
+                                  class="star_pesan_thread"
+                                  onclick="MenyukaiPesanThread(this)"
+                                >
+                                  <!-- SVG default di bawah ini akan dimuat pertama kali -->
+                                  <svg
+                                    class="w-5 h-5 text-gray-300"
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor"
@@ -45354,7 +46124,7 @@
                 <!-- Form Posting Listing -->
                 <div
                   class="h-[76vh] overflow-y-auto hide-scrollbar text-black px-4"
-                >
+                  >
                   <div class="w-full flex flex-col justify-end">
                     <div
                       class="inline-flex items-end justify-end pt-4 pb-2 btnEditListingg hidden"
@@ -45365,6 +46135,15 @@
                           class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
                         >
                           Tandai terjual
+                        </button>
+                      </div>
+
+                                  <div class="ml-3">
+                        <button
+                          type="button"
+                          class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                        >
+                         terjual
                         </button>
                       </div>
 
@@ -45391,7 +46170,7 @@
                             class="block text-xs font-bold mb-1"
                             for="harga_new"
                           >
-                            Harga (Rp)
+                            Harga (Rpp)
                           </label>
                           <input
                             type="text"
@@ -45519,10 +46298,10 @@
                         </div>
                         <!-- Deskripsi bangunan -->
 
-                        <div class="w-full flex flex-col mt-[2vh]">
+                        <div class="w-full flex flex-col mt-1">
                           <div class="relative w-full mb-2 flex flex-col">
                             <div class="block text-xs font-bold mb-1">
-                              Tipe Asett
+                              Tipe Aset
                             </div>
                             <div class="grid grid-cols-3">
                               <div class="flex items-center">
@@ -45633,7 +46412,7 @@
 
                           <div class="flex flex-row mb-2">
                             <!-- Jumlah Kamar Tidur Utama -->
-                            <div class="basis-6/12">
+                            <div class="basis-3/12">
                               <div class="relative w-full">
                                 <label
                                   class="block text-xs font-bold mb-1"
@@ -45649,6 +46428,25 @@
                               </div>
                             </div>
 
+                            <div class="basis-3/12 ml-2">
+                              <div class="relative w-full">
+                                <label
+                                  class="block text-xs font-bold mb-1"
+                                  for="listrik_utama_new"
+                                >
+                                  Air
+                                </label>
+                                <select
+                                  id=""
+                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                >
+                                  <option value="#" selected>Pilih</option>
+                                  <option value="PAM">PAM</option>
+                                  <option value="Sumur">Sumur</option>
+                                </select>
+                              </div>
+                            </div>
+
                             <!-- Jumlah Kamar Tidur Tambahan -->
                             <div class="basis-6/12 ml-3">
                               <div class="relative w-full">
@@ -45656,13 +46454,20 @@
                                   class="block text-xs font-bold mb-1"
                                   for="air_tambahan_new"
                                 >
-                                  Air
+                                  Arah Bangunan
                                 </label>
-                                <input
-                                  type="number"
-                                  id="air_tambahan_new"
+                                <select
+                                  id=""
                                   class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                />
+                                >
+                                  <option value="#" selected>Pilih</option>
+                                  <option value="Utara">Utara</option>
+                                  <option value="Selatan">Selatan</option>
+
+                                  <option value="Barat">Barat</option>
+
+                                  <option value="Timur">Timur</option>
+                                </select>
                               </div>
                             </div>
                           </div>
@@ -45737,7 +46542,7 @@
                             class="block text-xs font-bold mb-1"
                             for="deskripsi_postingan_new"
                           >
-                            Deskripsi (maks. 750 karakter)
+                            Deskripsi (maks. 500 karakter)
                           </label>
                           <textarea
                             name="deskripsi_postingan_new"
@@ -45813,101 +46618,11 @@
                       <div class="col-span-2">
                         <div class="w-full flex flex-col text-sm mt-1.5">
                           <div class="block text-xs font-bold mb-1">
-                            Tambahan
+                            Fasilitas
                           </div>
 
                           <div class="w-full grid grid-cols-4">
-                            <!--  -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="imb1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="imb1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >IMB</label
-                              >
-                            </div>
-
-                            <!--  -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="imb22"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="imb22"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >CCTV</label
-                              >
-                            </div>
-
-                            <!--  -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="taman1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="taman1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Taman</label
-                              >
-                            </div>
-
-                            <!--  -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="ogs1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="ogs1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >One Gate System</label
-                              >
-                            </div>
-
-                            <!--  -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="canopy1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="canopy1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Canopy</label
-                              >
-                            </div>
-
-                            <!--  -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="pool1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="pool1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Swimming Pool</label
-                              >
-                            </div>
-
-                            <!--  -->
+                            <!-- AC -->
                             <div class="flex items-center mb-1">
                               <input
                                 id="ac1"
@@ -45922,22 +46637,22 @@
                               >
                             </div>
 
-                            <!--  -->
+                            <!-- Canopy -->
                             <div class="flex items-center mb-1">
                               <input
-                                id="rooftop1"
+                                id="canopy1"
                                 type="checkbox"
                                 value=""
                                 class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
                               />
                               <label
-                                for="rooftop1"
+                                for="canopy1"
                                 class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Rooftop</label
+                                >Canopy</label
                               >
                             </div>
 
-                            <!--  -->
+                            <!-- Carport -->
                             <div class="flex items-center mb-1">
                               <input
                                 id="carport123"
@@ -45952,22 +46667,22 @@
                               >
                             </div>
 
-                            <!--  -->
+                            <!-- CCTV -->
                             <div class="flex items-center mb-1">
                               <input
-                                id="ibadah1"
+                                id="imb22"
                                 type="checkbox"
                                 value=""
                                 class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
                               />
                               <label
-                                for="ibadah1"
+                                for="imb22"
                                 class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Ruang Ibadah</label
+                                >CCTV</label
                               >
                             </div>
 
-                            <!--  -->
+                            <!-- Clubhouse -->
                             <div class="flex items-center mb-1">
                               <input
                                 id="clubhouse1"
@@ -45982,7 +46697,52 @@
                               >
                             </div>
 
-                            <!--  -->
+                            <!-- One Gate System -->
+                            <div class="flex items-center mb-1">
+                              <input
+                                id="ogs1"
+                                type="checkbox"
+                                value=""
+                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                              />
+                              <label
+                                for="ogs1"
+                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                >One Gate System</label
+                              >
+                            </div>
+
+                            <!-- Rooftop -->
+                            <div class="flex items-center mb-1">
+                              <input
+                                id="rooftop1"
+                                type="checkbox"
+                                value=""
+                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                              />
+                              <label
+                                for="rooftop1"
+                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                >Rooftop</label
+                              >
+                            </div>
+
+                            <!-- Ruang Ibadah -->
+                            <div class="flex items-center mb-1">
+                              <input
+                                id="ibadah1"
+                                type="checkbox"
+                                value=""
+                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                              />
+                              <label
+                                for="ibadah1"
+                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                >Ruang Ibadah</label
+                              >
+                            </div>
+
+                            <!-- Ruang Olahraga -->
                             <div class="flex items-center mb-1">
                               <input
                                 id="olahraga1"
@@ -45997,7 +46757,35 @@
                               >
                             </div>
 
-                            <!--  -->
+                            <!-- Swimming Pool -->
+                            <div class="flex items-center mb-1">
+                              <input
+                                id="pool1"
+                                type="checkbox"
+                                value=""
+                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                              />
+                              <label
+                                for="pool1"
+                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                >Swimming Pool</label
+                              >
+                            </div>
+
+                            <!-- Taman -->
+                            <div class="flex items-center mb-1">
+                              <input
+                                id="taman1"
+                                type="checkbox"
+                                value=""
+                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                              />
+                              <label
+                                for="taman1"
+                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                >Taman</label
+                              >
+                            </div>
                           </div>
                         </div>
                       </div>
