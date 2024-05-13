@@ -1249,8 +1249,8 @@ input[name="plan"]:checked ~ .menuKetigaAds {
 
 /* Breakpoint */
 
-/* sm breakpoint: 640px */
-@media (min-width: 640px) {
+/* sm breakpoint: 640px to 767px */
+@media (min-width: 640px) and (max-width: 767px) {
   .deskripsi_postingan_new {
     @apply h-[50.5vh];
   }
@@ -1260,8 +1260,8 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   }
 }
 
-/* md breakpoint: 768px */
-@media (min-width: 768px) {
+/* md breakpoint: 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
   .deskripsi_postingan_new {
     @apply h-[50.5vh];
   }
@@ -1271,8 +1271,8 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   }
 }
 
-/* lg breakpoint: 1024px */
-@media (min-width: 1024px) {
+/* lg breakpoint: 1024px to 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
   .deskripsi_postingan_new {
     @apply h-[50.5vh];
   }
@@ -1282,8 +1282,8 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   }
 }
 
-/* xl breakpoint: 1280px */
-@media (min-width: 1280px) {
+/* xl breakpoint: 1280px to 1535px */
+@media (min-width: 1280px) and (max-width: 1535px) {
   .deskripsi_postingan_new {
     @apply h-[50.5vh];
   }
@@ -1293,10 +1293,10 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   }
 }
 
-/* xxl breakpoint: 1536px */
+/* 2xl breakpoint: 1536px */
 @media (min-width: 1536px) {
   .deskripsi_postingan_new {
-    @apply h-[34.5vh];
+    @apply h-[51.5vh];
   }
 
   .position_gambar_upload {
