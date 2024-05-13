@@ -779,9 +779,9 @@
               <div class="text-left">
                 <button
                   id="btnKamar"
-                  class="inline-flex justify-center items-center pl-1 w-20 h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-white text-black placeholder-gray-700"
+                  class="inline-flex justify-center items-center pl-1 w-[7rem] h-8 text-xs font-medium rounded-[5px] shadow-sm focus:outline-none focus:ring-0 bg-white text-black placeholder-gray-700"
                 >
-                  <span class="pl-2">Spek</span>
+                  <span class="pl-2">Spesifikasi</span>
 
                   <svg
                     id="arrow-icon-kamar"
@@ -1679,7 +1679,7 @@
                 role="tooltip"
                 class="absolute z-10 invisible inline-block px-2 py-1 text-sm font-medium text-black bg-white rounded-lg shadow-sm opacity-0 tooltip"
               >
-                Posting
+                Listing Baru
                 <div class="tooltip-arrow" data-popper-arrow></div>
               </div>
 
@@ -2771,7 +2771,7 @@
                           </div>
 
                           <!-- Dropdown Filter -->
-                          <div class="flex items-center">
+                          <div class="flex items-center hidden">
                             <div class="relative inline-block text-left">
                               <button
                                 id="dropdown-button-pencarian"
@@ -20382,475 +20382,499 @@
                       >
                         <!-- ingfo -->
 
-                        <!--  -->
-                        <div class="px-0 pt-2">
-                          <div
-                            class="flex flex-row items-stretch justify-between border-b border-gray-200"
-                          >
-                            <!-- Menu Tab Pasang -->
-
-                            <div class="border-b border-gray-200">
-                              <!-- Tab Menu Pasang -->
-                              <ul
-                                class="flex flex-wrap -mb-px text-sm font-medium text-center pr-4"
-                                id="DetailsPostinganAgen"
-                                data-tabs-toggle="#DetailsPostinganAgenContent"
-                                role="tablist"
-                              >
-                                <!-- Menu Tab Satu Pasang -->
-
-                                <!-- Menu Tab Tujuh Pasang -->
-                                <li class="" role="presentation">
-                                  <button
-                                    class="inline-block pr-4 pb-1 pt-2 border-b rounded-t-lg hover:text-black hover:border-gray-300"
-                                    id="detail-postingan-agen-tujuh-tab"
-                                    data-tabs-target="#detail-postingan-agen-tujuh"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="detail-postingan-agen-tujuh"
-                                    aria-selected="false"
-                                  >
-                                    Listing
-                                  </button>
-                                </li>
-                              </ul>
-                            </div>
-                            <!--  -->
-                          </div>
-                        </div>
-
-                        <!-- Konten Card Details pasang -->
-                        <div class="w-full h-full card-disukai-detail">
-                          <div class="flex flex-col h-full">
-                            <!-- Tabs Pasang -->
-
-                            <div id="DetailsPostinganAgenContent" class="">
-                              <!-- Konten Tab Tujuh Pasang -->
-                              <div
-                                class="hidden px-0 py-2"
-                                id="detail-postingan-agen-tujuh"
-                                role="tabpanel"
-                                aria-labelledby="detail-postingan-agen-tujuh-tab"
-                              >
-                                <div
-                                  class="h-[70.5vh] overflow-y-auto hide-scrollbar text-black"
+                        <!-- Form Posting Listing -->
+                        <div
+                          class="h-[76vh] overflow-y-auto hide-scrollbar text-black"
+                        >
+                          <div class="w-full flex flex-col justify-end">
+                            <div
+                              class="inline-flex items-end justify-end pt-4 pb-2 btnEditListingg hidden"
+                            >
+                              <div class="">
+                                <button
+                                  type="button"
+                                  class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
                                 >
-                                  <form class="mt-[1rem]">
-                                    <div
-                                      class="grid grid-cols-2 gap-y-1 gap-x-3"
-                                    >
-                                      <!-- b -->
-                                      <div>
-                                        <!-- Judul -->
+                                  Terjual
+                                </button>
+                              </div>
 
-                                        <div class="relative w-full mb-2">
-                                          <label
-                                            class="block text-xs font-bold mb-1"
-                                            for="judul_new"
-                                          >
-                                            Judul (maks 100 karakter)
-                                          </label>
-                                          <textarea
-                                            name="judul_new"
-                                            id="judul_new"
-                                            class="block p-2 h-[13.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
-                                            required=""
-                                            rows="9"
-                                          ></textarea>
-                                        </div>
+                              <div class="ml-3">
+                                <button
+                                  type="button"
+                                  class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                                >
+                                  Non Aktif
+                                </button>
+                              </div>
 
-                                        <!-- Harga -->
-                                        <div class="relative w-full mb-2">
-                                          <label
-                                            class="block text-xs font-bold mb-1"
-                                            for="harga_new"
-                                          >
-                                            Harga (Rp)
-                                          </label>
-                                          <input
-                                            type="text"
-                                            id="harga_new"
-                                            class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                          />
-                                        </div>
+                              <div class="ml-3">
+                                <button
+                                  type="button"
+                                  class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                                >
+                                  Hapus
+                                </button>
+                              </div>
+                            </div>
+                          </div>
 
-                                        <!-- Koordinat -->
-                                        <div class="relative w-full mb-2">
-                                          <label
-                                            class="block text-xs font-bold mb-1"
-                                            for="koordinat_new"
-                                          >
-                                            Koordinat
-                                          </label>
-                                          <input
-                                            readonly=""
-                                            disabled=""
-                                            type="text"
-                                            id="koordinat_new"
-                                            class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                          />
-                                        </div>
+                          <form
+                            class="formEditListingg RemoveClassformEditListingg"
+                          >
+                            <div class="grid grid-cols-2 gap-y-1 gap-x-3">
+                              <!-- b -->
+                              <div>
+                                <!-- Judul -->
 
-                                        <!-- Kelurahan -->
-                                        <div class="relative w-full mb-2">
-                                          <label
-                                            class="block text-xs font-bold mb-1"
-                                            for="kelurahan_new"
-                                          >
-                                            Kelurahan
-                                          </label>
-                                          <input
-                                            readonly=""
-                                            disabled=""
-                                            type="text"
-                                            id="kelurahan_new"
-                                            class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                          />
-                                        </div>
+                                <!-- Tipe Asset -->
 
-                                        <!-- Kecamatan -->
-                                        <div class="relative w-full mb-2">
-                                          <label
-                                            class="block text-xs font-bold mb-1"
-                                            for="kecamatan_new"
-                                          >
-                                            Kecamatan
-                                          </label>
-                                          <input
-                                            readonly=""
-                                            disabled=""
-                                            type="text"
-                                            id="kecamatan_new"
-                                            class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                          />
-                                        </div>
+                                <div class="relative w-full mb-2 flex flex-col">
+                                  <div class="block text-xs font-bold mb-1.5">
+                                    Tipe Aset
+                                  </div>
+                                  <div class="grid grid-cols-3">
+                                    <div class="flex items-center">
+                                      <input
+                                        id="new_default-radio-11"
+                                        type="radio"
+                                        value=""
+                                        name="default-radio"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                      />
+                                      <label
+                                        for="default-radio-11"
+                                        class="ms-2 text-sm text-black"
+                                        >Rumah Baru</label
+                                      >
+                                    </div>
+                                    <div class="flex items-center">
+                                      <input
+                                        id="new_default-radio-12"
+                                        type="radio"
+                                        value=""
+                                        name="default-radio"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                      />
+                                      <label
+                                        for="default-radio-12"
+                                        class="ms-2 text-sm text-black"
+                                        >Rumah Seken</label
+                                      >
+                                    </div>
+                                    <div></div>
+                                  </div>
+                                </div>
 
-                                        <!-- Kota -->
-                                        <div class="relative w-full mb-2">
-                                          <label
-                                            class="block text-xs font-bold mb-1"
-                                            for="kota_new_beda"
-                                          >
-                                            Kota
-                                          </label>
-                                          <input
-                                            readonly=""
-                                            disabled=""
-                                            type="text"
-                                            id="kota_new_beda"
-                                            class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                          />
-                                        </div>
+                                <!-- Harga -->
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="harga_new"
+                                  >
+                                    Harga (Rpp)
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="new_harga_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                  />
+                                </div>
 
-                                        <div class="relative w-full mb-2">
-                                          <div
-                                            class="block text-xs font-bold mb-1"
-                                          >
-                                            Penjual
-                                          </div>
-                                          <div class="w-full grid grid-cols-3">
-                                            <div class="flex items-center">
-                                              <input
-                                                id="penjual-agen"
-                                                type="radio"
-                                                value="agen"
-                                                name="jenis-penjual"
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="penjual-agen"
-                                                class="ms-2 text-sm text-black"
-                                                >Agen</label
-                                              >
-                                            </div>
-                                            <div class="flex items-center">
-                                              <input
-                                                id="penjual-pemilik"
-                                                type="radio"
-                                                value="pemilik-langsung"
-                                                name="jenis-penjual"
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="penjual-pemilik"
-                                                class="ms-2 text-sm text-black"
-                                                >Pemilik</label
-                                              >
-                                            </div>
-                                            <div class="flex items-center">
-                                              <input
-                                                id="penjual-pengembang"
-                                                type="radio"
-                                                value="pengembang"
-                                                name="jenis-penjual"
-                                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="penjual-pengembang"
-                                                class="ms-2 text-sm text-black"
-                                                >Pengembang</label
-                                              >
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <!-- Deskripsi bangunan -->
+                                <!-- Koordinat -->
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="koordinat_new"
+                                  >
+                                    Koordinat
+                                  </label>
+                                  <input
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_koordinat_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
 
-                                        <div
-                                          class="w-full flex flex-col mt-[4.2vh]"
+                                <!-- Kelurahan -->
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="kelurahan_new"
+                                  >
+                                    Kelurahan
+                                  </label>
+                                  <input
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_kelurahan_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+
+                                <!-- Kecamatan -->
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="kecamatan_new"
+                                  >
+                                    Kecamatan
+                                  </label>
+                                  <input
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_kecamatan_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+
+                                <!-- Kota -->
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="kota_new_beda"
+                                  >
+                                    Kota
+                                  </label>
+                                  <input
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_kota_new_beda"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+
+                                <div class="relative w-full mb-2 mt-3">
+                                  <div class="block text-xs font-bold my-1">
+                                    Penjual
+                                  </div>
+                                  <div class="w-full grid grid-cols-3">
+                                    <div class="flex items-center">
+                                      <input
+                                        id="new_penjual-agen"
+                                        type="radio"
+                                        value="agen"
+                                        name="jenis-penjual"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                      />
+                                      <label
+                                        for="penjual-agen"
+                                        class="ms-2 text-sm text-black"
+                                        >Agen</label
+                                      >
+                                    </div>
+                                    <div class="flex items-center">
+                                      <input
+                                        id="new_penjual-pemilik"
+                                        type="radio"
+                                        value="pemilik-langsung"
+                                        name="jenis-penjual"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                      />
+                                      <label
+                                        for="penjual-pemilik"
+                                        class="ms-2 text-sm text-black"
+                                        >Pemilik</label
+                                      >
+                                    </div>
+                                    <div class="flex items-center">
+                                      <input
+                                        id="new_penjual-pengembang"
+                                        type="radio"
+                                        value="pengembang"
+                                        name="jenis-penjual"
+                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                      />
+                                      <label
+                                        for="penjual-pengembang"
+                                        class="ms-2 text-sm text-black"
+                                        >Pengembang</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Deskripsi bangunan -->
+
+                                <div class="w-full flex flex-col mt-2.5">
+                                  <!-- Penjual -->
+
+                                  <div class="flex flex-row mb-2">
+                                    <!-- Luas Tanah m2 -->
+                                    <div class="basis-6/12">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-xs font-bold mb-1"
+                                          for="luas_tanah_new"
                                         >
-                                          <div
-                                            class="relative w-full mb-2 flex flex-col"
-                                          >
-                                            <div
-                                              class="block text-xs font-bold mb-1"
+                                          Luas Tanah (m²)
+                                        </label>
+                                        <input
+                                          type="number"
+                                          id="new_luas_tanah_new"
+                                          class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- Luas Bangunan m2 -->
+                                    <div class="basis-6/12 ml-3">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-xs font-bold mb-1"
+                                          for="luas_bangunan_new"
+                                        >
+                                          Luas Bangunan (m²)
+                                        </label>
+                                        <input
+                                          type="number"
+                                          id="new_luas_bangunan_new"
+                                          class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="flex flex-row mb-2">
+                                    <!-- Jumlah Kamar Tidur Utama -->
+                                    <div class="basis-6/12">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-xs font-bold mb-1"
+                                          for="kamar_tidur_utama_new"
+                                        >
+                                          Kamar Tidur
+                                        </label>
+                                        <input
+                                          type="number"
+                                          id="new_kamar_tidur_utama_new"
+                                          class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- Jumlah Kamar Tidur Tambahan -->
+                                    <div class="basis-6/12 ml-3">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-xs font-bold mb-1"
+                                          for="kamar_tidur_tambahan_new"
+                                        >
+                                          Kamar Mandi
+                                        </label>
+                                        <input
+                                          type="number"
+                                          id="new_kamar_tidur_tambahan_new"
+                                          class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="flex flex-row mb-2">
+                                    <!-- Jumlah Kamar Tidur Utama -->
+                                    <div class="basis-5/12">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-xs font-bold mb-1"
+                                          for="listrik_utama_new"
+                                        >
+                                          Listrik
+                                        </label>
+                                        <input
+                                          type="number"
+                                          id="new_listrik_utama_new"
+                                          class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <div class="basis-6/12 ml-2">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-xs font-bold mb-1"
+                                          for="listrik_utama_new"
+                                        >
+                                          Air
+                                        </label>
+                                        <select
+                                          id="new_"
+                                          class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                        >
+                                          <option value="#" selected>
+                                            Pilih
+                                          </option>
+                                          <option value="PAM">PAM</option>
+                                          <option value="Sumur">Sumur</option>
+                                        </select>
+                                      </div>
+                                    </div>
+
+                                    <!-- Jumlah Kamar Tidur Tambahan -->
+                                    <div class="basis-6/12 ml-3">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-xs font-bold mb-1"
+                                          for="air_tambahan_new"
+                                        >
+                                          Arah Bangunan
+                                        </label>
+                                        <select
+                                          id="new_"
+                                          class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                        >
+                                          <option value="#" selected>
+                                            Pilih
+                                          </option>
+                                          <option value="Utara">Utara</option>
+                                          <option value="Selatan">
+                                            Selatan
+                                          </option>
+
+                                          <option value="Barat">Barat</option>
+
+                                          <option value="Timur">Timur</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="w-full flex flex-row mb-2">
+                                    <!-- Tahun dibangun -->
+                                    <div class="basis-6/12">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-xs font-bold mb-1"
+                                          for="tahun_dibangun_new"
+                                        >
+                                          Tahun Dibangun
+                                        </label>
+                                        <input
+                                          type="number"
+                                          id="new_tahun_dibangun_new"
+                                          class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- Jenis Surat -->
+                                    <div class="basis-6/12 ml-3">
+                                      <div class="relative w-full">
+                                        <div
+                                          class="block text-xs font-bold mb-1"
+                                        >
+                                          Jenis Surat
+                                        </div>
+                                        <div
+                                          class="grid grid-cols-2 w-full h-[2rem]"
+                                        >
+                                          <div class="flex items-center">
+                                            <input
+                                              id="new_jenis-surat-shm"
+                                              type="radio"
+                                              value="shm"
+                                              name="jenis-surat"
+                                              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                            />
+                                            <label
+                                              for="jenis-surat-shm"
+                                              class="ms-2 text-sm text-black"
+                                              >SHM</label
                                             >
-                                              Tipe Aset
-                                            </div>
-                                            <div class="grid grid-cols-3">
-                                              <div class="flex items-center">
-                                                <input
-                                                  id="default-radio-11"
-                                                  type="radio"
-                                                  value=""
-                                                  name="default-radio"
-                                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                                />
-                                                <label
-                                                  for="default-radio-11"
-                                                  class="ms-2 text-sm text-black"
-                                                  >Rumah Baru</label
-                                                >
-                                              </div>
-                                              <div class="flex items-center">
-                                                <input
-                                                  id="default-radio-12"
-                                                  type="radio"
-                                                  value=""
-                                                  name="default-radio"
-                                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                                />
-                                                <label
-                                                  for="default-radio-12"
-                                                  class="ms-2 text-sm text-black"
-                                                  >Rumah Seken</label
-                                                >
-                                              </div>
-                                              <div></div>
-                                            </div>
                                           </div>
-
-                                          <!-- Penjual -->
-
-                                          <div class="flex flex-row mb-2">
-                                            <!-- Luas Tanah m2 -->
-                                            <div class="basis-6/12">
-                                              <div class="relative w-full">
-                                                <label
-                                                  class="block text-xs font-bold mb-1"
-                                                  for="luas_tanah_new"
-                                                >
-                                                  Luas Tanah (m²)
-                                                </label>
-                                                <input
-                                                  type="text"
-                                                  id="luas_tanah_new"
-                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                                />
-                                              </div>
-                                            </div>
-
-                                            <!-- Luas Bangunan m2 -->
-                                            <div class="basis-6/12 ml-3">
-                                              <div class="relative w-full">
-                                                <label
-                                                  class="block text-xs font-bold mb-1"
-                                                  for="luas_bangunan_new"
-                                                >
-                                                  Luas Bangunan (m²)
-                                                </label>
-                                                <input
-                                                  type="number"
-                                                  id="luas_bangunan_new"
-                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                                />
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <div class="flex flex-row mb-2">
-                                            <!-- Jumlah Kamar Tidur Utama -->
-                                            <div class="basis-6/12">
-                                              <div class="relative w-full">
-                                                <label
-                                                  class="block text-xs font-bold mb-1"
-                                                  for="kamar_tidur_utama_new"
-                                                >
-                                                  Kamar Tidur
-                                                </label>
-                                                <input
-                                                  type="number"
-                                                  id="kamar_tidur_utama_new"
-                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                                />
-                                              </div>
-                                            </div>
-
-                                            <!-- Jumlah Kamar Tidur Tambahan -->
-                                            <div class="basis-6/12 ml-3">
-                                              <div class="relative w-full">
-                                                <label
-                                                  class="block text-xs font-bold mb-1"
-                                                  for="kamar_tidur_tambahan_new"
-                                                >
-                                                  Kamar Mandi
-                                                </label>
-                                                <input
-                                                  type="number"
-                                                  id="kamar_tidur_tambahan_new"
-                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                                />
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          <div
-                                            class="w-full flex flex-row mb-2"
-                                          >
-                                            <!-- Tahun dibangun -->
-                                            <div class="basis-6/12">
-                                              <div class="relative w-full">
-                                                <label
-                                                  class="block text-xs font-bold mb-1"
-                                                  for="tahun_dibangun_new"
-                                                >
-                                                  Tahun Dibangun
-                                                </label>
-                                                <input
-                                                  type="number"
-                                                  id="tahun_dibangun_new"
-                                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                                />
-                                              </div>
-                                            </div>
-
-                                            <!-- Jenis Surat -->
-                                            <div class="basis-6/12 ml-3">
-                                              <div class="relative w-full">
-                                                <div
-                                                  class="block text-xs font-bold mb-1"
-                                                >
-                                                  Jenis Surat
-                                                </div>
-                                                <div
-                                                  class="grid grid-cols-2 w-full h-[2rem]"
-                                                >
-                                                  <div
-                                                    class="flex items-center"
-                                                  >
-                                                    <input
-                                                      id="jenis-surat-shm"
-                                                      type="radio"
-                                                      value="shm"
-                                                      name="jenis-surat"
-                                                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                                    />
-                                                    <label
-                                                      for="jenis-surat-shm"
-                                                      class="ms-2 text-sm text-black"
-                                                      >SHM</label
-                                                    >
-                                                  </div>
-                                                  <div
-                                                    class="flex items-center"
-                                                  >
-                                                    <input
-                                                      id="jenis-surat-shgb"
-                                                      type="radio"
-                                                      value="shgb"
-                                                      name="jenis-surat"
-                                                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                                    />
-                                                    <label
-                                                      for="jenis-surat-shgb"
-                                                      class="ms-2 text-sm text-black"
-                                                      >SHGB</label
-                                                    >
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-
-                                            <!--  -->
+                                          <div class="flex items-center">
+                                            <input
+                                              id="new_jenis-surat-shgb"
+                                              type="radio"
+                                              value="shgb"
+                                              name="jenis-surat"
+                                              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                            />
+                                            <label
+                                              for="jenis-surat-shgb"
+                                              class="ms-2 text-sm text-black"
+                                              >SHGB</label
+                                            >
                                           </div>
                                         </div>
                                       </div>
+                                    </div>
 
-                                      <!-- a -->
-                                      <div class="flex flex-col">
-                                        <!-- Deskripsi -->
-                                        <div class="relative w-full mb-2">
-                                          <label
-                                            class="block text-xs font-bold mb-1"
-                                            for="deskripsi_postingan_new"
-                                          >
-                                            Deskripsi (maks. 750 karakter)
-                                          </label>
-                                          <textarea
-                                            name="deskripsi_postingan_new"
-                                            id="deskripsi_postingan_new"
-                                            class="block px-2 h-[63vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
-                                            required=""
-                                            rows="9"
-                                          ></textarea>
-                                        </div>
+                                    <!--  -->
+                                  </div>
+                                </div>
+                              </div>
 
-                                        <!-- upload -->
+                              <!-- a -->
+                              <div class="flex flex-col">
+                                <!-- Deskripsi -->
+                                <div class="relative w-full mb-1.5">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="deskripsi_postingan_new"
+                                  >
+                                    Deskripsi (maks. 500 karakter)
+                                  </label>
+                                  <textarea
+                                    name="deskripsi_postingan_new"
+                                    id="new_deskripsi_postingan_new"
+                                    class="block px-4 h-[50.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                    required=""
+                                    rows="9"
+                                  ></textarea>
+                                </div>
 
+                                <!-- upload -->
+
+                                <div
+                                  class="relative w-full mb-2 mt-0.5 flex flex-col"
+                                >
+                                  <div class="block text-xs font-bold mb-1">
+                                    Foto
+                                  </div>
+                                  <div class="w-full">
+                                    <input
+                                      id="new_fileElem"
+                                      type="file"
+                                      class="hidden"
+                                      multiple=""
+                                      accept="image/*"
+                                    />
+                                    <div
+                                      id="new_drop-area"
+                                      class="w-full h-[30.3vh] bg-white rounded-lg flex position_gambar_upload justify-center items-center"
+                                    >
+                                      <label
+                                        for="fileElem"
+                                        class="cursor-pointer flex flex-col justify-center"
+                                      >
                                         <div
-                                          class="relative w-full mb-2 mt-3 flex flex-col"
+                                          class="hide_gambar_upload w-full flex flex-col justify-center"
                                         >
-                                          <!-- <div class="block text-xs font-bold mb-1">Foto</div> -->
-                                          <div class="w-full">
-                                            <input
-                                              id="fileElem"
-                                              type="file"
-                                              class="hidden"
-                                              multiple=""
-                                              accept="image/*"
+                                          <div
+                                            class="w-full flex justify-center"
+                                          >
+                                            <img
+                                              class="w-20 h-20 object-contain"
+                                              src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
                                             />
-                                            <div
-                                              id="drop-area"
-                                              class="w-full h-[30.3vh] bg-white rounded-lg flex position_gambar_upload justify-center items-center"
-                                            >
-                                              <label
-                                                for="fileElem"
-                                                class="cursor-pointer flex flex-col justify-center"
-                                              >
-                                                <div
-                                                  class="hide_gambar_upload w-full flex flex-col justify-center"
-                                                >
-                                                  <div
-                                                    class="w-full flex justify-center"
-                                                  >
-                                                    <img
-                                                      class="w-20 h-20 object-contain"
-                                                      src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
-                                                    />
-                                                  </div>
-                                                  <div
-                                                    class="text-sm text-black"
-                                                  >
-                                                    Drag and Drop
-                                                  </div>
-                                                </div>
-                                              </label>
+                                          </div>
+                                          <div class="text-xs text-gray-500">
+                                            Drop foto di sini
+                                          </div>
+                                        </div>
+                                      </label>
 
-                                              <div
-                                                id="preview-container"
-                                                class="grid grid-cols-3 add_wfull_upload"
-                                              ></div>
+                                      <div
+                                        id="new_preview-container"
+                                        class="grid grid-cols-3 add_wfull_upload"
+                                      ></div>
 
-                                              <!--<div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
+                                      <!--<div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
                                   <img class="w-full h-auto object-fit" src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/x/rumaha1.jpg">
                                 </div>
                                 <div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
@@ -20860,235 +20884,217 @@
                                 <div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
                                   <img class="w-full h-auto object-fit" src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/x/rumaha1.jpg">
                                 </div> -->
-                                              <!--  -->
-
-                                              <!--  -->
-                                            </div>
-                                          </div>
-                                        </div>
-
-                                        <!--  -->
-                                      </div>
-
                                       <!--  -->
 
-                                      <div class="col-span-2">
-                                        <div
-                                          class="w-full flex flex-col text-sm mt-1.5"
+                                      <!--  -->
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!--  -->
+                              </div>
+
+                              <!--  -->
+
+                              <div class="col-span-2">
+                                <div
+                                  class="w-full flex flex-col text-sm mt-1.5"
+                                >
+                                  <div class="block text-xs font-bold mb-1">
+                                    Fasilitas
+                                  </div>
+
+                                  <div class="w-full grid grid-cols-4">
+                                    <div class="w-full grid grid-rows-3">
+                                      <!-- AC -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_ac1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="ac1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >AC</label
                                         >
-                                          <div
-                                            class="block text-xs font-bold mb-1"
-                                          >
-                                            Tambahan
-                                          </div>
+                                      </div>
 
-                                          <div class="w-full grid grid-cols-4">
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="imb1"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="imb1"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >IMB</label
-                                              >
-                                            </div>
+                                      <!-- Canopy -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_canopy1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="canopy1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Canopy</label
+                                        >
+                                      </div>
 
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="imb22"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="imb22"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >CCTV</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="taman1"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="taman1"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >Taman</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="ogs1"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="ogs1"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >One Gate System</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="canopy1"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="canopy1"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >Canopy</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="pool1"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="pool1"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >Swimming Pool</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="ac1"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="ac1"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >AC</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="rooftop1"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="rooftop1"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >Rooftop</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="carport123"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="carport123"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >Carport</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="ibadah1"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="ibadah1"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >Ruang Ibadah</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="clubhouse1"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="clubhouse1"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >Clubhouse</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                            <div class="flex items-center mb-1">
-                                              <input
-                                                id="olahraga1"
-                                                type="checkbox"
-                                                value=""
-                                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                              />
-                                              <label
-                                                for="olahraga1"
-                                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                                >Ruang Olahraga</label
-                                              >
-                                            </div>
-
-                                            <!--  -->
-                                          </div>
-                                        </div>
+                                      <!-- Carport -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_carport123"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="carport123"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Carport</label
+                                        >
                                       </div>
                                     </div>
 
-                                    <div
-                                      class="flex justify-center col-span-2 pt-5 pb-6"
-                                    >
-                                      <button
-                                        type="button"
-                                        class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
-                                      >
-                                        Simpan
-                                      </button>
+                                    <div class="w-full grid grid-rows-3">
+                                      <!-- CCTV -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_imb22"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="imb22"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >CCTV</label
+                                        >
+                                      </div>
+
+                                      <!-- Clubhouse -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_clubhouse1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="clubhouse1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Clubhouse</label
+                                        >
+                                      </div>
+
+                                      <!-- One Gate System -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_ogs1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="ogs1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >One Gate System</label
+                                        >
+                                      </div>
                                     </div>
 
-                                    <!--  -->
-                                  </form>
+                                    <div class="w-full grid grid-rows-3">
+                                      <!-- Rooftop -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_rooftop1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="rooftop1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Rooftop</label
+                                        >
+                                      </div>
+
+                                      <!-- Ruang Ibadah -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_ibadah1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="ibadah1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Ruang Ibadah</label
+                                        >
+                                      </div>
+
+                                      <!-- Ruang Olahraga -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_olahraga1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="olahraga1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Ruang Olahraga</label
+                                        >
+                                      </div>
+                                    </div>
+
+                                    <div class="w-full grid grid-rows-3">
+                                      <!-- Swimming Pool -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_pool1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="pool1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Swimming Pool</label
+                                        >
+                                      </div>
+
+                                      <!-- Taman -->
+                                      <div class="flex items-center mb-1">
+                                        <input
+                                          id="new_taman1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                        />
+                                        <label
+                                          for="taman1"
+                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          >Taman</label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                              <!--  -->
+                            </div>
+
+                            <div
+                              class="flex justify-center col-span-2 pt-5 pb-6"
+                            >
+                              <button
+                                type="button"
+                                class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                              >
+                                Simpan
+                              </button>
                             </div>
 
                             <!--  -->
-                          </div>
+                          </form>
                         </div>
                         <!--  -->
                       </div>
@@ -34139,7 +34145,7 @@
                                     >
                                       <img
                                         onclick="showPostingListing()"
-                                        class="w-16 h-16 object-contain cursor-pointer"
+                                        class="w-12 h-12 object-contain cursor-pointer"
                                         src="https://www.joglopro.com/bucket/soaraja/image/joglopro/plus.png"
                                         alt="tambah listing agent"
                                       />
@@ -34433,7 +34439,7 @@
                                       </div>
                                     </div>
 
-                                                                        <!-- Card Beranda 1 -->
+                                    <!-- Card Beranda 1 -->
                                     <div class="w-full konten-dijual">
                                       <div
                                         class="flex flex-col bg-white rounded-lg"
@@ -34721,7 +34727,7 @@
                                       </div>
                                     </div>
 
-                                                                        <!-- Card Beranda 1 -->
+                                    <!-- Card Beranda 1 -->
                                     <div class="w-full konten-dijual">
                                       <div
                                         class="flex flex-col bg-white rounded-lg"
@@ -34851,31 +34857,29 @@
                                           </div>
                                         </div>
 
-                                        <div class="w-full h-[27vh] relative flex items-center">
+                                        <div
+                                          class="w-full h-[27vh] relative flex items-center"
+                                        >
                                           <div
                                             class="slider-card-mode-ketiga w-full h-full"
                                           >
+                                            <div
+                                              class="absolute w-full flex justify-center"
+                                            >
+                                              <img
+                                                class="w-[10vw] h-full"
+                                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/sold.png"
+                                              />
+                                            </div>
 
                                             <div
-                                                class="absolute w-full flex justify-center"
-                                                >
-                                                <img
-                                                  class="w-[10vw] h-full"
-                                                  src="https://www.joglopro.com/bucket/soaraja/image/joglopro/sold.png"
-                                                />
-                                              </div>
-
-                                            <div
-                                              class="relative h-[27vh] bg-black z-index-10 "
+                                              class="relative h-[27vh] bg-black z-index-10"
                                             >
                                               <img
                                                 class="w-full h-full object-contain"
                                                 src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/Rmh2/rumahb1.jpg"
                                                 alt=""
                                               />
-
-
-
 
                                               <div class="arrow-right-custom">
                                                 <span class="font-semibold"
@@ -34886,7 +34890,7 @@
                                             <!--  -->
                                             <div
                                               class="relative h-[27vh] bg-black z-index-10"
-                                              >
+                                            >
                                               <img
                                                 class="w-full h-full object-contain"
                                                 src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/Rmh2/rumahb1.jpg"
@@ -41569,7 +41573,7 @@
                       <ul class="overflow-y-auto scrollbar h-[35rem]">
                         <li>
                           <a
-                            class="menu-pesan-area flex items-center px-3 py-1 transition duration-150 ease-in-out cursor-pointer hover:bg-gray-100 focus:outline-none hover:bg-slate-200"
+                            class="menu-pesan-area flex items-center px-3 py-2.5 transition duration-150 ease-in-out cursor-pointer hover:bg-gray-100 focus:outline-none hover:bg-slate-200"
                             onclick="ShowCoBroking()"
                           >
                             <div
@@ -46081,7 +46085,7 @@
                   class="w-full flex justify-between border-b border-gray-300 px-3 py-2"
                 >
                   <div class="font-sf_pro_bold text-2xl judulStory w-80">
-                    Postingan Listing
+                    Listing Baru
                   </div>
 
                   <!-- Stories -->
@@ -46124,7 +46128,7 @@
                 <!-- Form Posting Listing -->
                 <div
                   class="h-[76vh] overflow-y-auto hide-scrollbar text-black px-4"
-                  >
+                >
                   <div class="w-full flex flex-col justify-end">
                     <div
                       class="inline-flex items-end justify-end pt-4 pb-2 btnEditListingg hidden"
@@ -46134,16 +46138,16 @@
                           type="button"
                           class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
                         >
-                          Tandai terjual
+                          Terjual
                         </button>
                       </div>
 
-                                  <div class="ml-3">
+                      <div class="ml-3">
                         <button
                           type="button"
                           class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
                         >
-                         terjual
+                          Non Aktif
                         </button>
                       </div>
 
@@ -46163,6 +46167,45 @@
                       <!-- b -->
                       <div>
                         <!-- Judul -->
+
+                        <!-- Tipe Asset -->
+
+                        <div class="relative w-full mb-2 flex flex-col">
+                          <div class="block text-xs font-bold mb-1.5">
+                            Tipe Aset
+                          </div>
+                          <div class="grid grid-cols-3">
+                            <div class="flex items-center">
+                              <input
+                                id="default-radio-11"
+                                type="radio"
+                                value=""
+                                name="default-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                              />
+                              <label
+                                for="default-radio-11"
+                                class="ms-2 text-sm text-black"
+                                >Rumah Baru</label
+                              >
+                            </div>
+                            <div class="flex items-center">
+                              <input
+                                id="default-radio-12"
+                                type="radio"
+                                value=""
+                                name="default-radio"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                              />
+                              <label
+                                for="default-radio-12"
+                                class="ms-2 text-sm text-black"
+                                >Rumah Seken</label
+                              >
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
 
                         <!-- Harga -->
                         <div class="relative w-full mb-2">
@@ -46247,7 +46290,7 @@
                           />
                         </div>
 
-                        <div class="relative w-full mb-2 mt-1.5">
+                        <div class="relative w-full mb-2 mt-3">
                           <div class="block text-xs font-bold my-1">
                             Penjual
                           </div>
@@ -46298,44 +46341,7 @@
                         </div>
                         <!-- Deskripsi bangunan -->
 
-                        <div class="w-full flex flex-col mt-1">
-                          <div class="relative w-full mb-2 flex flex-col">
-                            <div class="block text-xs font-bold mb-1">
-                              Tipe Aset
-                            </div>
-                            <div class="grid grid-cols-3">
-                              <div class="flex items-center">
-                                <input
-                                  id="default-radio-11"
-                                  type="radio"
-                                  value=""
-                                  name="default-radio"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                />
-                                <label
-                                  for="default-radio-11"
-                                  class="ms-2 text-sm text-black"
-                                  >Rumah Baru</label
-                                >
-                              </div>
-                              <div class="flex items-center">
-                                <input
-                                  id="default-radio-12"
-                                  type="radio"
-                                  value=""
-                                  name="default-radio"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                />
-                                <label
-                                  for="default-radio-12"
-                                  class="ms-2 text-sm text-black"
-                                  >Rumah Seken</label
-                                >
-                              </div>
-                              <div></div>
-                            </div>
-                          </div>
-
+                        <div class="w-full flex flex-col mt-2.5">
                           <!-- Penjual -->
 
                           <div class="flex flex-row mb-2">
@@ -46349,7 +46355,7 @@
                                   Luas Tanah (m²)
                                 </label>
                                 <input
-                                  type="text"
+                                  type="number"
                                   id="luas_tanah_new"
                                   class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                 />
@@ -46412,7 +46418,7 @@
 
                           <div class="flex flex-row mb-2">
                             <!-- Jumlah Kamar Tidur Utama -->
-                            <div class="basis-3/12">
+                            <div class="basis-5/12">
                               <div class="relative w-full">
                                 <label
                                   class="block text-xs font-bold mb-1"
@@ -46428,7 +46434,7 @@
                               </div>
                             </div>
 
-                            <div class="basis-3/12 ml-2">
+                            <div class="basis-6/12 ml-2">
                               <div class="relative w-full">
                                 <label
                                   class="block text-xs font-bold mb-1"
@@ -46547,7 +46553,7 @@
                           <textarea
                             name="deskripsi_postingan_new"
                             id="deskripsi_postingan_new"
-                            class="block px-2 h-[50.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                            class="block px-4 remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 deskripsi_postingan_new"
                             required=""
                             rows="9"
                           ></textarea>
@@ -46567,7 +46573,7 @@
                             />
                             <div
                               id="drop-area"
-                              class="w-full h-[30.3vh] bg-white rounded-lg flex position_gambar_upload justify-center items-center"
+                              class="w-full bg-white rounded-lg flex position_gambar_upload justify-center items-center"
                             >
                               <label
                                 for="fileElem"
@@ -46582,8 +46588,8 @@
                                       src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
                                     />
                                   </div>
-                                  <div class="text-sm text-black">
-                                    Drag and Drop
+                                  <div class="text-xs text-gray-500">
+                                    Drop foto di sini
                                   </div>
                                 </div>
                               </label>
@@ -46622,169 +46628,177 @@
                           </div>
 
                           <div class="w-full grid grid-cols-4">
-                            <!-- AC -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="ac1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="ac1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >AC</label
-                              >
+                            <div class="w-full grid grid-rows-3">
+                              <!-- AC -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="ac1"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="ac1"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >AC</label
+                                >
+                              </div>
+
+                              <!-- Canopy -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="canopy1"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="canopy1"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >Canopy</label
+                                >
+                              </div>
+
+                              <!-- Carport -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="carport123"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="carport123"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >Carport</label
+                                >
+                              </div>
                             </div>
 
-                            <!-- Canopy -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="canopy1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="canopy1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Canopy</label
-                              >
+                            <div class="w-full grid grid-rows-3">
+                              <!-- CCTV -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="imb22"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="imb22"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >CCTV</label
+                                >
+                              </div>
+
+                              <!-- Clubhouse -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="clubhouse1"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="clubhouse1"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >Clubhouse</label
+                                >
+                              </div>
+
+                              <!-- One Gate System -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="ogs1"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="ogs1"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >One Gate System</label
+                                >
+                              </div>
                             </div>
 
-                            <!-- Carport -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="carport123"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="carport123"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Carport</label
-                              >
+                            <div class="w-full grid grid-rows-3">
+                              <!-- Rooftop -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="rooftop1"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="rooftop1"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >Rooftop</label
+                                >
+                              </div>
+
+                              <!-- Ruang Ibadah -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="ibadah1"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="ibadah1"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >Ruang Ibadah</label
+                                >
+                              </div>
+
+                              <!-- Ruang Olahraga -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="olahraga1"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="olahraga1"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >Ruang Olahraga</label
+                                >
+                              </div>
                             </div>
 
-                            <!-- CCTV -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="imb22"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="imb22"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >CCTV</label
-                              >
-                            </div>
+                            <div class="w-full grid grid-rows-3">
+                              <!-- Swimming Pool -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="pool1"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="pool1"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >Swimming Pool</label
+                                >
+                              </div>
 
-                            <!-- Clubhouse -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="clubhouse1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="clubhouse1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Clubhouse</label
-                              >
-                            </div>
-
-                            <!-- One Gate System -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="ogs1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="ogs1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >One Gate System</label
-                              >
-                            </div>
-
-                            <!-- Rooftop -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="rooftop1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="rooftop1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Rooftop</label
-                              >
-                            </div>
-
-                            <!-- Ruang Ibadah -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="ibadah1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="ibadah1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Ruang Ibadah</label
-                              >
-                            </div>
-
-                            <!-- Ruang Olahraga -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="olahraga1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="olahraga1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Ruang Olahraga</label
-                              >
-                            </div>
-
-                            <!-- Swimming Pool -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="pool1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="pool1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Swimming Pool</label
-                              >
-                            </div>
-
-                            <!-- Taman -->
-                            <div class="flex items-center mb-1">
-                              <input
-                                id="taman1"
-                                type="checkbox"
-                                value=""
-                                class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                              />
-                              <label
-                                for="taman1"
-                                class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                >Taman</label
-                              >
+                              <!-- Taman -->
+                              <div class="flex items-center mb-1">
+                                <input
+                                  id="taman1"
+                                  type="checkbox"
+                                  value=""
+                                  class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="taman1"
+                                  class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                  >Taman</label
+                                >
+                              </div>
                             </div>
                           </div>
                         </div>

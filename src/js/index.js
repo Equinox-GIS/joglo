@@ -4273,15 +4273,11 @@ document.addEventListener("DOMContentLoaded", function () {
       "Dijual Rumah Lokasi Bagus Dekat Tol Cibubur di Jalan Kraggan sangat cocok sekali untuk keluarga baru",
     deskripsi_postingan_new: `Rumah ini sangat asri, karena berada di lingkungan yang aman dan nyaman serta di dalamnya terdapat fasilitas berupa dapur,, dan lain-lain. Bangunan rumah masih kokoh sehingga Anda tidak perlu melakukan renovasi dalam waktu dekat.
 
-Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perkantoran, sekolah, rumah sakit, pusat kuliner, dan lain-lain.
-
 10 menit ke tol cibuburrr
 10 menit ke mall juncion
 10 menit ke RS mitra keluarga
 5 menit ke pasar tradisional kranggan
 Dekat sekolah negeri dan swasta
-Dekat minimarket
-Akses dua mobil
 Lingkungan aman nyaman dan bebas banjir
 
 Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perkantoran, sekolah, rumah sakit, pusat kuliner, dan lain-lain.

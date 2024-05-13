@@ -1246,3 +1246,60 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   border-top-color: rgb(224 36 36) !important;
   margin-top: -1px;
 }
+
+/* Breakpoint */
+
+/* sm breakpoint: 640px */
+@media (min-width: 640px) {
+  .deskripsi_postingan_new {
+    @apply h-[50.5vh];
+  }
+
+  .position_gambar_upload {
+    @apply h-[30.3vh];
+  }
+}
+
+/* md breakpoint: 768px */
+@media (min-width: 768px) {
+  .deskripsi_postingan_new {
+    @apply h-[50.5vh];
+  }
+
+  .position_gambar_upload {
+    @apply h-[30.3vh];
+  }
+}
+
+/* lg breakpoint: 1024px */
+@media (min-width: 1024px) {
+  .deskripsi_postingan_new {
+    @apply h-[50.5vh];
+  }
+
+  .position_gambar_upload {
+    @apply h-[30.3vh];
+  }
+}
+
+/* xl breakpoint: 1280px */
+@media (min-width: 1280px) {
+  .deskripsi_postingan_new {
+    @apply h-[50.5vh];
+  }
+
+  .position_gambar_upload {
+    @apply h-[30.3vh];
+  }
+}
+
+/* xxl breakpoint: 1536px */
+@media (min-width: 1536px) {
+  .deskripsi_postingan_new {
+    @apply h-[34.5vh];
+  }
+
+  .position_gambar_upload {
+    @apply h-[30.3vh];
+  }
+}
