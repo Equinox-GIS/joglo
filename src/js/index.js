@@ -4473,13 +4473,16 @@ Lingkungan aman nyaman dan bebas ba
 });
 
 // Upload Gambar Postingan Listing
+
 // Constants
 const dropArea = document.getElementById("drop-area");
 const fileElem = document.getElementById("fileElem");
 const previewContainer = document.getElementById("preview-container");
+const areaUpload = document.querySelector(".area_upload"); // Select the outer div with border
 const HIDE_CLASS = "hidden";
 const UPLOAD_WFULL_CLASS = "add_wfull_upload";
 const HIGHLIGHT_CLASS = "border-blue-500";
+const MAX_IMAGES = 9; // Maximum number of images allowed
 
 // Prevent default drag behaviors
 ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
@@ -4497,6 +4500,15 @@ const HIGHLIGHT_CLASS = "border-blue-500";
 
 // Handle dropped files
 dropArea.addEventListener("drop", handleDrop, false);
+
+// Attach click event to the border area to open file dialog
+areaUpload.addEventListener("click", () => {
+  if (!fileElem) {
+    console.error("File input element not found");
+    return;
+  }
+  fileElem.click(); // Programmatically trigger the file input
+});
 
 // Prevent default behavior
 function preventDefaults(e) {
@@ -4525,7 +4537,22 @@ function handleDrop(e) {
 
 // Handle files
 function handleFiles(files) {
-  [...files].forEach(previewFile);
+  const currentImagesCount = previewContainer.querySelectorAll("img").length;
+  const filesArray = Array.from(files);
+
+  if (currentImagesCount >= MAX_IMAGES) {
+  alert("Maksimal 9 gambar");
+    return;
+  }
+
+  const availableSlots = MAX_IMAGES - currentImagesCount;
+  const filesToLoad = filesArray.slice(0, availableSlots);
+
+  if (filesArray.length > availableSlots) {
+    alert("Maksimal 9 gambar");
+  }
+
+  filesToLoad.forEach(previewFile);
 }
 
 // Preview file
@@ -4548,7 +4575,6 @@ function previewFile(file) {
     );
     div.appendChild(img);
 
-    // Tambahkan elemen-elemen di dalam div
     const actionsDiv = document.createElement("div");
     actionsDiv.classList.add(
       "absolute",
@@ -4573,14 +4599,14 @@ function previewFile(file) {
     );
     deleteIcon.src = "./src/images/delete.png";
 
-    // Menambahkan event listener untuk merotasi gambar saat ikon sinkronisasi diklik
     syncIcon.addEventListener("click", function () {
       rotateImage(img);
     });
 
-    deleteIcon.addEventListener("click", function () {
-      div.remove(); // Hapus elemen gambar saat tombol delete diklik
-    });
+deleteIcon.addEventListener("click", function (e) {
+  div.remove(); // Remove the image element
+  e.stopPropagation(); // Stop the click event from bubbling up to parent elements
+});
 
     actionsDiv.appendChild(syncIcon);
     actionsDiv.appendChild(deleteIcon);
@@ -4593,10 +4619,10 @@ function previewFile(file) {
   reader.readAsDataURL(file);
 }
 
-// Fungsi untuk merotasi gambar 90 derajat
+// Function to rotate the image 90 degrees
 function rotateImage(image) {
   let currentRotation = parseInt(image.getAttribute("data-rotation")) || 0;
-  currentRotation += 90; // Rotasi 90 derajat
+  currentRotation += 90;
 
   if (currentRotation >= 360) {
     currentRotation = 0;
@@ -4614,9 +4640,8 @@ fileElem.addEventListener("change", function () {
 
 // Hide upload image
 function hideUploadImage() {
-  // Hide elements with the class 'hidden_foto_after_upload'
-  document.querySelectorAll('.hidden_foto_after_upload').forEach(element => {
-    element.classList.add('hidden');
+  document.querySelectorAll(".hidden_foto_after_upload").forEach((element) => {
+    element.classList.add("hidden");
   });
 
   const uploadWfull = document.querySelector(`.${UPLOAD_WFULL_CLASS}`);
@@ -4626,20 +4651,21 @@ function hideUploadImage() {
   dropArea.classList.add("justify-start", "items-start");
 }
 
-
 window.previewFilePengaturan = function (input) {
   var file = input.files[0];
   if (file) {
     var reader = new FileReader();
     reader.onload = function (e) {
       document.getElementById("preview-img-avatar").src = e.target.result;
-      // Show the delete icon using Tailwind's utility class
       document.getElementById("delete-icon").classList.remove("hidden");
       document.getElementById("delete-icon").classList.add("flex");
     };
     reader.readAsDataURL(file);
   }
 };
+
+
+
 
 // PREVIEW IMAGE EDIT PENGATURAN
 
