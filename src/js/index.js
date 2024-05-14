@@ -4535,12 +4535,10 @@ function previewFile(file) {
   reader.onloadend = function () {
     const img = document.createElement("img");
     img.src = reader.result;
-    img.classList.add("w-full", "h-auto", "object-fit");
+    img.classList.add("w-full", "h-full", "object-fill");
 
     const div = document.createElement("div");
     div.classList.add(
-      "border",
-      "border-gray-200",
       "overflow-hidden",
       "w-[7.9vw]",
       "h-[10.1vh]",
@@ -4616,14 +4614,10 @@ fileElem.addEventListener("change", function () {
 
 // Hide upload image
 function hideUploadImage() {
-  const uploadImage = document.querySelector(".hide_gambar_upload");
-  uploadImage.classList.add(HIDE_CLASS);
-
-  // const imagePosition = document.querySelector(".position_gambar_upload");
-  // uploadImage.classList.remove("justify-center items-center");
-
-  // const imageChangePosition = document.querySelector(".position_gambar_upload");
-  // uploadImage.classList.add("justify-start items-start");
+  // Hide elements with the class 'hidden_foto_after_upload'
+  document.querySelectorAll('.hidden_foto_after_upload').forEach(element => {
+    element.classList.add('hidden');
+  });
 
   const uploadWfull = document.querySelector(`.${UPLOAD_WFULL_CLASS}`);
   uploadWfull.classList.add("w-full");
@@ -4631,6 +4625,7 @@ function hideUploadImage() {
   dropArea.classList.remove("justify-center", "items-center");
   dropArea.classList.add("justify-start", "items-start");
 }
+
 
 window.previewFilePengaturan = function (input) {
   var file = input.files[0];
