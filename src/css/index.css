@@ -1285,7 +1285,7 @@ input[name="plan"]:checked ~ .menuKetigaAds {
 /* xl breakpoint: 1280px to 1535px */
 @media (min-width: 1280px) and (max-width: 1535px) {
   .deskripsi_postingan_new {
-    @apply h-[46.5vh];
+    @apply h-[53.5vh];
   }
 
   .position_gambar_upload {
@@ -1296,7 +1296,7 @@ input[name="plan"]:checked ~ .menuKetigaAds {
 /* 2xl breakpoint: 1536px */
 @media (min-width: 1536px) {
   .deskripsi_postingan_new {
-    @apply h-[51.5vh];
+    @apply h-[59.5vh];
   }
 
   .position_gambar_upload {
