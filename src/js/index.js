@@ -4474,6 +4474,50 @@ Lingkungan aman nyaman dan bebas ba
 
 // Upload Gambar Postingan Listing
 
+let images = [];
+let currentIndex = 0;
+
+function handleFiles(files) {
+  const fileList = Array.from(files);
+  images = fileList.map((file) => URL.createObjectURL(file));
+  currentIndex = 0;
+  displayImage(images[currentIndex]);
+  updateButtonStates();
+}
+
+function displayImage(imageUrl) {
+  const previewContainer = document.getElementById("preview-container");
+  previewContainer.innerHTML = `<img src="${imageUrl}" class="w-full h-64 object-cover rounded-lg shadow-md">`;
+}
+
+function updateButtonStates() {
+  document.querySelector(".next_gambar_upload").disabled =
+    currentIndex >= images.length - 1;
+  document.querySelector(".previous_gambar_upload").disabled =
+    currentIndex <= 0;
+}
+
+document.querySelector(".area_upload").addEventListener("click", () => {
+  document.getElementById("fileElem").click();
+});
+
+document.querySelector(".next_gambar_upload").addEventListener("click", () => {
+  if (currentIndex < images.length - 1) {
+    currentIndex++;
+    displayImage(images[currentIndex]);
+    updateButtonStates();
+  }
+});
+
+document
+  .querySelector(".previous_gambar_upload")
+  .addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      displayImage(images[currentIndex]);
+      updateButtonStates();
+    }
+  });
 // PREVIEW IMAGE EDIT PENGATURAN
 
 document
