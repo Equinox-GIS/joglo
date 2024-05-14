@@ -2179,11 +2179,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // jika konten sedang tertutup
       hideAllContent();
       konten.classList.remove("hidden");
-      svgArrow.classList.add("rotate-180");
+      // svgArrow.classList.add("rotate-180");
     } else {
       // jika konten sedang terbuka
       konten.classList.add("hidden");
-      svgArrow.classList.remove("rotate-180");
+      // svgArrow.classList.remove("rotate-180");
     }
   }
 
