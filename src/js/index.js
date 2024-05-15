@@ -4474,183 +4474,189 @@ Lingkungan aman nyaman dan bebas ba
 
 // Upload Gambar Postingan Listing
 
-
 document.addEventListener("DOMContentLoaded", function () {
-      const dropArea = document.getElementById("drop-area");
-      const fileElem = document.getElementById("fileElem");
-      const previewContainer = document.getElementById("preview-container");
-      const areaUpload = document.querySelector(".area_upload");
-      const HIDE_CLASS = "hidden";
-      const HIGHLIGHT_CLASS = "border-blue-500";
-      const MAX_IMAGES = 9;
-      let currentImageIndex = 0;
-      let images = [];
+  const dropArea = document.getElementById("drop-area");
+  const fileElem = document.getElementById("fileElem");
+  const previewContainer = document.getElementById("preview-container");
+  const areaUpload = document.querySelector(".area_upload");
+  const HIDE_CLASS = "hidden";
+  const HIGHLIGHT_CLASS = "border-blue-500";
+  const MAX_IMAGES = 9;
+  let currentImageIndex = 0;
+  let images = [];
 
-      ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
-        dropArea.addEventListener(eventName, preventDefaults, false);
-      });
+  ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
+    dropArea.addEventListener(eventName, preventDefaults, false);
+  });
 
-      ["dragenter", "dragover"].forEach(eventName => {
-        dropArea.addEventListener(eventName, highlight, false);
-      });
+  ["dragenter", "dragover"].forEach((eventName) => {
+    dropArea.addEventListener(eventName, highlight, false);
+  });
 
-      ["dragleave", "drop"].forEach(eventName => {
-        dropArea.addEventListener(eventName, unhighlight, false);
-      });
+  ["dragleave", "drop"].forEach((eventName) => {
+    dropArea.addEventListener(eventName, unhighlight, false);
+  });
 
-      dropArea.addEventListener("drop", handleDrop, false);
-      fileElem.addEventListener("change", function () {
-        handleFiles(this.files);
-        hideUploadImage();
-        showPreviewElements();
-      });
+  dropArea.addEventListener("drop", handleDrop, false);
+  fileElem.addEventListener("change", function () {
+    handleFiles(this.files);
+    hideUploadImage();
+    showPreviewElements();
+  });
 
-      function preventDefaults(e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
+  function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
 
-      function highlight() {
-        dropArea.classList.add(HIGHLIGHT_CLASS);
-      }
+  function highlight() {
+    dropArea.classList.add(HIGHLIGHT_CLASS);
+  }
 
-      function unhighlight() {
-        dropArea.classList.remove(HIGHLIGHT_CLASS);
-      }
+  function unhighlight() {
+    dropArea.classList.remove(HIGHLIGHT_CLASS);
+  }
 
-      function handleDrop(e) {
-        const dt = e.dataTransfer;
-        const files = dt.files;
-        handleFiles(files);
-        hideUploadImage();
-        showPreviewElements();
-      }
+  function handleDrop(e) {
+    const dt = e.dataTransfer;
+    const files = dt.files;
+    handleFiles(files);
+    hideUploadImage();
+    showPreviewElements();
+  }
 
-      function handleFiles(files) {
-        const currentImagesCount = previewContainer.querySelectorAll("img").length;
-        if (currentImagesCount + files.length > MAX_IMAGES) {
-          alert("Maximum 9 images allowed.");
-          return;
+  function handleFiles(files) {
+    const currentImagesCount = previewContainer.querySelectorAll("img").length;
+    if (currentImagesCount + files.length > MAX_IMAGES) {
+      alert("Maximum 9 images allowed.");
+      return;
+    }
+    Array.from(files).forEach((file, index) => {
+      const reader = new FileReader();
+      reader.onloadend = function () {
+        images.push(reader.result);
+        addImage(reader.result, images.length - 1);
+        if (images.length === 1) {
+          displayImage(0);
         }
-        Array.from(files).forEach((file, index) => {
-          const reader = new FileReader();
-          reader.onloadend = function () {
-            images.push(reader.result);
-            addImage(reader.result, images.length - 1);
-            if (images.length === 1) {
-              displayImage(0);
-            }
-            updateNavigationButtons();
-          };
-          reader.readAsDataURL(file);
-        });
-      }
+        updateNavigationButtons();
+      };
+      reader.readAsDataURL(file);
+    });
+  }
 
-      function addImage(src, index) {
-        const img = document.createElement("img");
-        img.src = src;
-        img.setAttribute('data-index', index);
-        img.classList.add("w-full", "h-full", "object-fill");
-        if (index !== 0) {
+  function addImage(src, index) {
+    const img = document.createElement("img");
+    img.src = src;
+    img.setAttribute("data-index", index);
+    img.classList.add("w-full", "h-full", "object-fill");
+    if (index !== 0) {
+      img.classList.add("hidden");
+    }
+    previewContainer.appendChild(img);
+  }
+
+  function displayImage(index) {
+    if (images.length > 0) {
+      const imgs = previewContainer.querySelectorAll("img");
+      imgs.forEach((img) => {
+        if (parseInt(img.getAttribute("data-index")) === index) {
+          img.classList.remove("hidden");
+        } else {
           img.classList.add("hidden");
         }
-        previewContainer.appendChild(img);
+      });
+    }
+  }
+
+  function updateNavigationButtons() {
+    const previousButton = document.querySelector(
+      ".previous_gambar_upload_listing"
+    );
+    const nextButton = document.querySelector(".next_gambar_upload_listing");
+    if (images.length > 1) {
+      previousButton.classList.remove(HIDE_CLASS);
+      nextButton.classList.remove(HIDE_CLASS);
+    } else {
+      previousButton.classList.add(HIDE_CLASS);
+      nextButton.classList.add(HIDE_CLASS);
+    }
+  }
+
+  function hideUploadImage() {
+    const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
+    hiddenElements.forEach((element) => element.classList.add(HIDE_CLASS));
+  }
+
+  function showPreviewElements() {
+    const elementsToShow = [
+      ".preview_gambar_upload",
+      ".next_gambar_upload_listing",
+      ".previous_gambar_upload_listing",
+      ".batal_gambar_upload_listing",
+    ];
+    elementsToShow.forEach((selector) => {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.classList.remove(HIDE_CLASS);
       }
+    });
+  }
 
-      function displayImage(index) {
-        if (images.length > 0) {
-          const imgs = previewContainer.querySelectorAll("img");
-          imgs.forEach(img => {
-            if (parseInt(img.getAttribute('data-index')) === index) {
-              img.classList.remove("hidden");
-            } else {
-              img.classList.add("hidden");
-            }
-          });
-        }
+  window.ResetUploadListing = function (e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    // Reset image array and index
+    images = [];
+    currentImageIndex = 0;
+
+    // Clear the preview container
+    previewContainer.innerHTML = "";
+
+    // Add hidden class to preview elements
+    const elementsToHide = [
+      ".preview_gambar_upload",
+      ".next_gambar_upload_listing",
+      ".previous_gambar_upload_listing",
+      ".batal_gambar_upload_listing",
+    ];
+    elementsToHide.forEach((selector) => {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.classList.add(HIDE_CLASS);
       }
-
-      function updateNavigationButtons() {
-        const previousButton = document.querySelector('.previous_gambar_upload_listing');
-        const nextButton = document.querySelector('.next_gambar_upload_listing');
-        if (images.length > 1) {
-          previousButton.classList.remove(HIDE_CLASS);
-          nextButton.classList.remove(HIDE_CLASS);
-        } else {
-          previousButton.classList.add(HIDE_CLASS);
-          nextButton.classList.add(HIDE_CLASS);
-        }
-      }
-
-      function hideUploadImage() {
-        const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
-        hiddenElements.forEach(element => element.classList.add(HIDE_CLASS));
-      }
-
-      function showPreviewElements() {
-        const elementsToShow = [
-          ".preview_gambar_upload",
-          ".next_gambar_upload_listing",
-          ".previous_gambar_upload_listing",
-          ".batal_gambar_upload_listing"
-        ];
-        elementsToShow.forEach(selector => {
-          const element = document.querySelector(selector);
-          if (element) {
-            element.classList.remove(HIDE_CLASS);
-          }
-        });
-      }
-
-      window.ResetUploadListing = function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        // Reset image array and index
-        images = [];
-        currentImageIndex = 0;
-
-        // Clear the preview container
-        previewContainer.innerHTML = '';
-
-        // Add hidden class to preview elements
-        const elementsToHide = [
-          ".preview_gambar_upload",
-          ".next_gambar_upload_listing",
-          ".previous_gambar_upload_listing",
-          ".batal_gambar_upload_listing"
-        ];
-        elementsToHide.forEach(selector => {
-          const element = document.querySelector(selector);
-          if (element) {
-            element.classList.add(HIDE_CLASS);
-          }
-        });
-
-        // Remove hidden class from the upload image section
-        const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
-        hiddenElements.forEach(element => element.classList.remove(HIDE_CLASS));
-      };
-
-      window.showNextImage = function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        if (images.length > 1) {
-          currentImageIndex = (currentImageIndex + 1) % images.length;
-          displayImage(currentImageIndex);
-        }
-      };
-
-      window.showPreviousImage = function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        if (images.length > 1) {
-          currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-          displayImage(currentImageIndex);
-        }
-      };
     });
 
+    // Remove hidden class from the upload image section
+    const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
+    hiddenElements.forEach((element) => element.classList.remove(HIDE_CLASS));
+  };
+
+  window.showNextImage = function (e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    if (currentImageIndex < images.length - 1) {
+      currentImageIndex++;
+      displayImage(currentImageIndex);
+    }
+  };
+
+  window.showPreviousImage = function (e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    if (currentImageIndex > 0) {
+      currentImageIndex--;
+      displayImage(currentImageIndex);
+    }
+  };
+});
 
 // PREVIEW IMAGE EDIT PENGATURAN
 
