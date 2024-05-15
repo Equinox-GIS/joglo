@@ -619,6 +619,11 @@
   height: 1.4vh !important;
 }
 
+.custom-img-slick-detail {
+  width: 2.5vh !important;
+  height: 2.5vh !important;
+}
+
 .custom-img-slick-ads {
   width: 0.8vh !important;
   height: 0.9vh !important;
@@ -1289,7 +1294,7 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   }
 
   .position_gambar_upload {
-    @apply h-[25.5vh];
+    @apply h-[25.7vh];
   }
 }
 
@@ -1300,6 +1305,6 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   }
 
   .position_gambar_upload {
-    @apply h-[28.3vh];
+    @apply h-[28.5vh];
   }
 }

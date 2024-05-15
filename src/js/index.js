@@ -1032,12 +1032,12 @@ function getSliderDetail() {
     swipe: false,
     prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
-                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
+                    <img style="margin-right: 1px;" class="custom-img-slick-detail" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
     nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
-                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
+                    <img style="margin-left: 1px;" class="custom-img-slick-detail" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,
     dotsClass: "slick-dots custom-dots-class",
@@ -4808,4 +4808,34 @@ document.addEventListener("DOMContentLoaded", function () {
     kontenA.classList.add("hidden");
     kontenB.classList.remove("hidden");
   });
+});
+
+
+
+$(document).ready(function(){
+    var $carousel = $('.slick-initialized.slick-slider.slick-dotted');
+    var $prevArrow = $('.slick-prev.slick-arrow');
+    var $nextArrow = $('.slick-next.slick-arrow');
+
+    console.log($carousel);
+
+    $carousel.slick({
+      arrows: true,
+      prevArrow: $prevArrow,
+      nextArrow: $nextArrow,
+      appendArrows: '.arrow-container'
+    });
+
+    function updateArrows(currentSlide, slideCount) {
+      $prevArrow.toggleClass('hidden', currentSlide === 0);
+      $nextArrow.toggleClass('hidden', currentSlide === slideCount - 1);
+    }
+
+    // Initial check
+    updateArrows($carousel.slick('slickCurrentSlide'), $carousel.slick('getSlick').slideCount);
+
+    // Update on slide change
+    $carousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      updateArrows(nextSlide, slick.slideCount);
+    });
 });
