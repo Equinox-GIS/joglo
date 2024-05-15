@@ -20500,7 +20500,7 @@
                             </div>
                           </div> -->
 
-                          <form class="formEditListingg">
+                          <form class="">
                             <div class="grid grid-cols-2 gap-y-1 gap-x-3">
                               <!-- b -->
                               <div>
@@ -20515,7 +20515,6 @@
                                   <div class="grid grid-cols-3">
                                     <div class="flex items-center">
                                       <input
-                                        checked
                                         id="new_default-radio-11"
                                         type="radio"
                                         value=""
@@ -20547,42 +20546,18 @@
                                 </div>
 
                                 <!-- Harga -->
-
-                                <div class="flex flex-row mb-2">
-                                  <!-- Luas Tanah m2 -->
-                                  <div class="basis-6/12">
-                                    <div class="relative w-full">
-                                      <label
-                                        class="block text-xs font-bold mb-1"
-                                        for="harga_new"
-                                      >
-                                        Harga (Rp)
-                                      </label>
-                                      <input
-                                        value="2.500.000.000"
-                                        type="text"
-                                        id="new_harga_new"
-                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                      />
-                                    </div>
-                                  </div>
-
-                                  <div class="basis-6/12 ml-3">
-                                    <div class="relative w-full">
-                                      <label
-                                        class="block text-xs font-bold mb-1"
-                                        for="tahun_dibangun_new"
-                                      >
-                                        Tahun Dibangun
-                                      </label>
-                                      <input
-                                        value="2024"
-                                        type="number"
-                                        id="new_tahun_dibangun_new"
-                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                      />
-                                    </div>
-                                  </div>
+                                <div class="relative w-full mb-2">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="new_harga_new"
+                                  >
+                                    Harga (Rp)
+                                  </label>
+                                  <input
+                                    type="text"
+                                    id="new_harga_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                  />
                                 </div>
 
                                 <!-- Koordinat -->
@@ -20594,7 +20569,6 @@
                                     Koordinat
                                   </label>
                                   <input
-                                    value="-6.282301, 106.794109"
                                     readonly=""
                                     disabled=""
                                     type="text"
@@ -20612,7 +20586,6 @@
                                     Kelurahan
                                   </label>
                                   <input
-                                    value="Cilandak Barat"
                                     readonly=""
                                     disabled=""
                                     type="text"
@@ -20630,7 +20603,6 @@
                                     Kecamatan
                                   </label>
                                   <input
-                                    value="Cilandak"
                                     readonly=""
                                     disabled=""
                                     type="text"
@@ -20648,7 +20620,6 @@
                                     Kota
                                   </label>
                                   <input
-                                    value="Jakarta Selatan"
                                     readonly=""
                                     disabled=""
                                     type="text"
@@ -20678,7 +20649,6 @@
                                     </div>
                                     <div class="flex items-center">
                                       <input
-                                        checked
                                         id="new_penjual-pemilik"
                                         type="radio"
                                         value="pemilik-langsung"
@@ -20723,7 +20693,6 @@
                                           Luas Tanah (m²)
                                         </label>
                                         <input
-                                          value="300"
                                           type="number"
                                           id="new_luas_tanah_new"
                                           class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
@@ -20741,7 +20710,6 @@
                                           Luas Bangunan (m²)
                                         </label>
                                         <input
-                                          value="150"
                                           type="number"
                                           id="new_luas_bangunan_new"
                                           class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
@@ -20761,7 +20729,6 @@
                                           Kamar Tidur
                                         </label>
                                         <input
-                                          value="2"
                                           type="number"
                                           id="new_kamar_tidur_utama_new"
                                           class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
@@ -20779,7 +20746,6 @@
                                           Kamar Mandi
                                         </label>
                                         <input
-                                          value="1"
                                           type="number"
                                           id="new_kamar_tidur_tambahan_new"
                                           class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
@@ -20796,10 +20762,9 @@
                                           class="block text-xs font-bold mb-1"
                                           for="listrik_utama_new"
                                         >
-                                          Listrik (watt)
+                                          Listrik
                                         </label>
                                         <input
-                                          value="450"
                                           type="number"
                                           id="new_listrik_utama_new"
                                           class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
@@ -20819,13 +20784,11 @@
                                           id="new_"
                                           class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                                         >
-                                          <option value="#">Pilih</option>
-                                          <option selected value="PAM">
-                                            PAM
+                                          <option value="#" selected>
+                                            Pilih
                                           </option>
-                                          <option value="Air Tanah">
-                                            Air Tanah
-                                          </option>
+                                          <option value="PAM">PAM</option>
+                                          <option value="Sumur">Sumur</option>
                                         </select>
                                       </div>
                                     </div>
@@ -20843,15 +20806,15 @@
                                           id="new_"
                                           class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                                         >
-                                          <option value="#">Pilih</option>
+                                          <option value="#" selected>
+                                            Pilih
+                                          </option>
                                           <option value="Utara">Utara</option>
                                           <option value="Selatan">
                                             Selatan
                                           </option>
 
-                                          <option selected value="Barat">
-                                            Barat
-                                          </option>
+                                          <option value="Barat">Barat</option>
 
                                           <option value="Timur">Timur</option>
                                         </select>
@@ -20859,21 +20822,37 @@
                                     </div>
                                   </div>
 
-                                  <div class="w-full flex flex-row mb-0.5">
+                                  <div class="w-full flex flex-row mb-2">
                                     <!-- Tahun dibangun -->
                                     <div class="basis-6/12">
+                                      <div class="relative w-full">
+                                        <label
+                                          class="block text-xs font-bold mb-1"
+                                          for="tahun_dibangun_new"
+                                        >
+                                          Tahun Dibangun
+                                        </label>
+                                        <input
+                                          type="number"
+                                          id="new_tahun_dibangun_new"
+                                          class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                        />
+                                      </div>
+                                    </div>
+
+                                    <!-- Jenis Surat -->
+                                    <div class="basis-6/12 ml-3">
                                       <div class="relative w-full">
                                         <div
                                           class="block text-xs font-bold mb-1"
                                         >
-                                          Kelengkapan Surat
+                                          Jenis Surat
                                         </div>
                                         <div
                                           class="grid grid-cols-2 w-full h-[2rem]"
                                         >
                                           <div class="flex items-center">
                                             <input
-                                              checked
                                               id="new_jenis-surat-shm"
                                               type="radio"
                                               value="shm"
@@ -20904,49 +20883,6 @@
                                       </div>
                                     </div>
 
-                                    <!-- Jenis Surat -->
-                                    <div class="basis-6/12 ml-3">
-                                      <div class="relative w-full">
-                                        <div
-                                          class="block text-xs font-bold mb-1"
-                                        >
-                                          &nbsp;
-                                        </div>
-                                        <div
-                                          class="grid grid-cols-2 w-full h-[2rem]"
-                                        >
-                                          <div class="flex items-center">
-                                            <input
-                                              checked
-                                              id="new_jenis-surat-imb"
-                                              type="checkbox"
-                                              class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
-                                              id="new_"
-                                            />
-                                            <label
-                                              for="jenis-surat-imb"
-                                              class="ms-2 text-sm text-black"
-                                              >IMB</label
-                                            >
-                                          </div>
-                                          <div class="flex items-center">
-                                            <input
-                                              checked
-                                              id="new_jenis-surat-pbb"
-                                              type="checkbox"
-                                              class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
-                                              id="new_"
-                                            />
-                                            <label
-                                              for="jenis-surat-pbb"
-                                              class="ms-2 text-sm text-black"
-                                              >PBB</label
-                                            >
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
                                     <!--  -->
                                   </div>
                                 </div>
@@ -20965,7 +20901,7 @@
                                   <textarea
                                     name="deskripsi_postingan_new"
                                     id="new_deskripsi_postingan_new"
-                                    class="block px-4 remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 deskripsi_postingan_new"
+                                    class="block px-4 deskripsi_postingan_new remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                                     required=""
                                     rows="9"
                                   ></textarea>
@@ -20973,22 +20909,22 @@
 
                                 <!-- upload -->
 
-                                <div
+                                <!--   <div
                                   class="relative w-full mb-2 mt-0.5 flex flex-col"
-                                >
+                                  >
                                   <div class="block text-xs font-bold mb-1">
                                     Foto (maks. 9)
                                   </div>
-                                  <div class="w-full area_upload">
+                                  <div class="w-full">
                                     <input
-                                      id="new_fileElem"
+                                      id="fileElem"
                                       type="file"
                                       class="hidden"
-                                      multiple
+                                      multiple=""
                                       accept="image/*"
                                     />
                                     <div
-                                      id="new_drop-area"
+                                      id="drop-area"
                                       class="w-full bg-white rounded-lg flex position_gambar_upload justify-center items-center"
                                     >
                                       <label
@@ -20998,138 +20934,97 @@
                                         <div
                                           class="hide_gambar_upload w-full flex flex-col justify-center"
                                         >
-                                          <div
-                                            class="w-full flex justify-center hidden_foto_after_upload"
-                                          >
-                                            <img
-                                              class="w-20 h-20 object-contain"
-                                              src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
-                                            />
-                                          </div>
-                                          <div
-                                            class="text-xs text-gray-500 hidden_foto_after_upload"
-                                          >
-                                            Drop foto di sini
-                                          </div>
+
                                         </div>
                                       </label>
+
                                       <div
-                                        class="overflow-hidden w-full h-full flex items-center justify-center relative preview_gambar_upload rounded-lg hidden"
+                                        class="overflow-hidden w-full h-full flex items-center justify-center relative preview_gambar_upload rounded-lg"
                                       >
+
                                         <div
-                                          class="w-full h-full"
-                                          id="new_preview-container"
-                                        ></div>
+                                          class="w-full grid grid-cols-2 absolute"
+                                        >
+                                          <div class="w-full">
+                                            <button
+                                              type="button"
+                                              class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 ml-7 shadow-xl next_gambar_upload"
+                                            >
+                                              <svg
+                                                class="w-4 h-4 text-gray-400"
+                                                aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <path
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                  d="m15 19-7-7 7-7"
+                                                />
+                                              </svg>
+                                            </button>
+                                          </div>
+
+                                          <div class="w-full flex justify-end">
+                                            <button
+                                              type="button"
+                                              class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 mr-7 shadow-xl previous_gambar_upload"
+                                            >
+                                              <svg
+                                                class="w-4 h-4 text-gray-400"
+                                                aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <path
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                  d="m9 5 7 7-7 7"
+                                                />
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+
+                                        <div class="top-2 right-0 absolute">
+                                          <button
+                                            type="button"
+                                            class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-0.5 text-center inline-flex items-center me-2"
+                                          >
+                                            <svg
+                                              class="w-4 h-4 text-gray-400 dark:text-white"
+                                              aria-hidden="true"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              fill="none"
+                                              viewBox="0 0 24 24"
+                                            >
+                                              <path
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M6 18 17.94 6M18 18 6.06 6"
+                                              />
+                                            </svg>
+                                          </button>
+                                        </div>
                                       </div>
+
                                     </div>
                                   </div>
-
-                                  <!-- BTN RESET -->
-                                  <div
-                                    class="w-full absolute grid grid-cols-1 top-8 right-3"
-                                  >
-                                    <div class="w-full flex justify-end">
-                                      <button
-                                        type="button"
-                                        class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center mr-0.5 batal_gambar_upload_listing hidden"
-                                        onclick="ResetUploadListing(event)"
-                                      >
-                                        <svg
-                                          class="w-3 h-3 text-gray-400 dark:text-white"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="24"
-                                          height="24"
-                                          fill="none"
-                                          viewBox="0 0 24 24"
-                                        >
-                                          <path
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M6 18 17.94 6M18 18 6.06 6"
-                                          />
-                                        </svg>
-                                      </button>
-                                    </div>
-                                  </div>
-
-                                  <!-- BTN PREVIOUS NEXT -->
-                                  <div
-                                    class="w-full grid grid-cols-2 mt-2 absolute top-1/2 transform -translate-y-1/2"
-                                  >
-                                    <div class="w-full flex justify-start">
-                                      <button
-                                        type="button"
-                                        class="text-white bg-[#f1f5f9] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 ml-4 previous_gambar_upload_listing hidden"
-                                        onclick="showPreviousImage()"
-                                      >
-                                        <svg
-                                          class="w-3.5 h-3.5 text-gray-400"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="24"
-                                          height="24"
-                                          fill="none"
-                                          viewBox="0 0 24 24"
-                                        >
-                                          <path
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="3"
-                                            d="m15 19-7-7 7-7"
-                                          />
-                                        </svg>
-                                      </button>
-                                    </div>
-
-                                    <div class="w-full flex justify-end">
-                                      <button
-                                        type="button"
-                                        class="text-white bg-[#f1f5f9] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 mr-4 next_gambar_upload_listing hidden"
-                                        onclick="showNextImage()"
-                                      >
-                                        <svg
-                                          class="w-3.5 h-3.5 text-gray-400"
-                                          aria-hidden="true"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="24"
-                                          height="24"
-                                          fill="none"
-                                          viewBox="0 0 24 24"
-                                        >
-                                          <path
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="m9 5 7 7-7 7"
-                                          />
-                                        </svg>
-                                      </button>
-                                    </div>
-                                  </div>
-
-                                  <!-- Indikator -->
-                                  <div
-                                    class="w-full absolute grid grid-cols-1 bottom-2"
-                                  >
-                                    <div
-                                      class="w-full indikator_upload_listing hidden"
-                                    >
-                                      <div
-                                        class="w-full flex flex-row justify-center"
-                                        id="new_indikator_listing"
-                                      >
-                                        <!-- <span class="flex w-1.5 h-1.5 me-1.5 bg-slate-50 rounded-full"></span> -->
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <!--  -->
-                                </div>
+                                </div> -->
 
                                 <!--  -->
                               </div>
@@ -21149,7 +21044,6 @@
                                       <!-- AC -->
                                       <div class="flex items-center mb-1">
                                         <input
-                                          checked
                                           id="new_ac1"
                                           type="checkbox"
                                           value=""
@@ -21165,7 +21059,6 @@
                                       <!-- Canopy -->
                                       <div class="flex items-center mb-1">
                                         <input
-                                          checked
                                           id="new_canopy1"
                                           type="checkbox"
                                           value=""
@@ -21181,7 +21074,6 @@
                                       <!-- Carport -->
                                       <div class="flex items-center mb-1">
                                         <input
-                                          checked
                                           id="new_carport123"
                                           type="checkbox"
                                           value=""
@@ -46922,7 +46814,7 @@
 
                         <div class="relative w-full mb-2 mt-0.5 flex flex-col">
                           <div class="block text-xs font-bold mb-1">
-                            Foto (maks. 9)
+                            Foto (maks. 99)
                           </div>
                           <div class="w-full area_upload">
                             <input
