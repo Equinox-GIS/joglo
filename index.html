@@ -20913,19 +20913,19 @@
                                   class="relative w-full mb-2 mt-0.5 flex flex-col"
                                 >
                                   <div class="block text-xs font-bold mb-1">
-                                    Foto
+                                    Foto (maks. 9)
                                   </div>
                                   <div class="w-full">
                                     <input
-                                      id="new_fileElem"
+                                      id="fileElem"
                                       type="file"
                                       class="hidden"
                                       multiple=""
                                       accept="image/*"
                                     />
                                     <div
-                                      id="new_drop-area"
-                                      class="w-full position_gambar_upload bg-white rounded-lg flex position_gambar_upload justify-center items-center"
+                                      id="drop-area"
+                                      class="w-full bg-white rounded-lg flex position_gambar_upload justify-center items-center"
                                     >
                                       <label
                                         for="fileElem"
@@ -20934,36 +20934,102 @@
                                         <div
                                           class="hide_gambar_upload w-full flex flex-col justify-center"
                                         >
-                                          <div
-                                            class="w-full flex justify-center"
-                                          >
-                                            <img
-                                              class="w-20 h-20 object-contain"
-                                              src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
-                                            />
-                                          </div>
-                                          <div class="text-xs text-gray-500">
-                                            Drop foto di sini
-                                          </div>
+                                          <!--               <div class="w-full flex justify-center hidden_foto_after_upload">
+                                    <img
+                                      class="w-20 h-20 object-contain"
+                                      src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
+                                    />
+                                  </div>
+                                  <div class="text-xs text-gray-500 hidden_foto_after_upload">
+                                    Drop foto di sini
+                                  </div> -->
                                         </div>
                                       </label>
 
                                       <div
-                                        id="new_preview-container"
-                                        class="grid grid-cols-3 add_wfull_upload"
-                                      ></div>
+                                        class="overflow-hidden w-full h-full flex items-center justify-center relative preview_gambar_upload rounded-lg"
+                                      >
+                                        <!-- Gambar Pertama -->
 
-                                      <!--<div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
-                                  <img class="w-full h-auto object-fit" src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/x/rumaha1.jpg">
-                                </div>
-                                <div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
-                                  <img class="w-full h-auto object-fit" src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/x/rumaha1.jpg">
-                                </div>
+                                        <div
+                                          class="w-full grid grid-cols-2 absolute"
+                                        >
+                                          <div class="w-full">
+                                            <button
+                                              type="button"
+                                              class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 ml-7 shadow-xl next_gambar_upload"
+                                            >
+                                              <svg
+                                                class="w-4 h-4 text-gray-400"
+                                                aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <path
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                  d="m15 19-7-7 7-7"
+                                                />
+                                              </svg>
+                                            </button>
+                                          </div>
 
-                                <div class="border border-gray-200 rounded overflow-hidden w-[9vw] h-[10vh] relative">
-                                  <img class="w-full h-auto object-fit" src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/x/rumaha1.jpg">
-                                </div> -->
-                                      <!--  -->
+                                          <div class="w-full flex justify-end">
+                                            <button
+                                              type="button"
+                                              class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 mr-7 shadow-xl previous_gambar_upload"
+                                            >
+                                              <svg
+                                                class="w-4 h-4 text-gray-400"
+                                                aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                              >
+                                                <path
+                                                  stroke="currentColor"
+                                                  stroke-linecap="round"
+                                                  stroke-linejoin="round"
+                                                  stroke-width="2"
+                                                  d="m9 5 7 7-7 7"
+                                                />
+                                              </svg>
+                                            </button>
+                                          </div>
+                                        </div>
+
+                                        <div class="top-2 right-0 absolute">
+                                          <button
+                                            type="button"
+                                            class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-0.5 text-center inline-flex items-center me-2"
+                                          >
+                                            <svg
+                                              class="w-4 h-4 text-gray-400 dark:text-white"
+                                              aria-hidden="true"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              width="24"
+                                              height="24"
+                                              fill="none"
+                                              viewBox="0 0 24 24"
+                                            >
+                                              <path
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M6 18 17.94 6M18 18 6.06 6"
+                                              />
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
 
                                       <!--  -->
                                     </div>
@@ -46570,7 +46636,7 @@
                                   class="block text-xs font-bold mb-1"
                                   for="listrik_utama_new"
                                 >
-                                  Listrik
+                                  Listrik (Watt)
                                 </label>
                                 <input
                                   value="450"
@@ -46741,7 +46807,7 @@
                             class="block text-xs font-bold mb-1"
                             for="deskripsi_postingan_new"
                           >
-                            Deskripsii (maks. 500 karakter)
+                            Deskripsi (maks. 500 karakter)
                           </label>
                           <textarea
                             name="deskripsi_postingan_new"
@@ -46756,7 +46822,7 @@
 
                         <div class="relative w-full mb-2 mt-0.5 flex flex-col">
                           <div class="block text-xs font-bold mb-1">
-                            Foto (maks. 9)
+                            Foto (maks. 99)
                           </div>
                           <div class="w-full area_upload">
                             <input
@@ -46777,44 +46843,48 @@
                                 <div
                                   class="hide_gambar_upload w-full flex flex-col justify-center"
                                 >
-                                  <!--               <div class="w-full flex justify-center hidden_foto_after_upload">
+                                  <div
+                                    class="w-full flex justify-center hidden_foto_after_upload"
+                                  >
                                     <img
                                       class="w-20 h-20 object-contain"
                                       src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
                                     />
                                   </div>
-                                  <div class="text-xs text-gray-500 hidden_foto_after_upload">
+                                  <div
+                                    class="text-xs text-gray-500 hidden_foto_after_upload"
+                                  >
                                     Drop foto di sini
-                                  </div> -->
+                                  </div>
                                 </div>
                               </label>
 
                               <div
-                                id="preview-container"
-                                class="grid grid-cols-3 add_wfull_upload"
-                              ></div>
-
-                              <div
-                                class="overflow-hidden w-full h-full flex items-center justify-center relative preview_gambar_upload rounded-lg"
+                                class="overflow-hidden w-full h-full flex items-center justify-center relative preview_gambar_upload rounded-lg hidden"
                               >
+                                <div
+                                  class="w-full h-full"
+                                  id="preview-container"
+                                ></div>
                                 <!-- Upload Gambar Disini -->
                                 <!-- Gambar Pertama -->
-                                <img
+                                <!--   <img
                                   class="w-full h-full object-fill gambar_upload_listing"
                                   src="./src/images/contoh2.jpg"
                                 />
-
+ -->
                                 <!-- Gambar Kedua -->
-                                <img
+                                <!--     <img
                                   class="w-full h-full object-contain hidden"
                                   src="./src/images/contoh1.jpg"
                                 />
-
+ -->
+                                <!-- btn next previous -->
                                 <div class="w-full grid grid-cols-2 absolute">
                                   <div class="w-full">
                                     <button
                                       type="button"
-                                      class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 ml-7 shadow-xl"
+                                      class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 ml-7 next_gambar_upload_listing hidden"
                                     >
                                       <svg
                                         class="w-4 h-4 text-gray-400"
@@ -46839,7 +46909,7 @@
                                   <div class="w-full flex justify-end">
                                     <button
                                       type="button"
-                                      class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 mr-7 shadow-xl"
+                                      class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 mr-7 previous_gambar_upload_listing hidden"
                                     >
                                       <svg
                                         class="w-4 h-4 text-gray-400"
@@ -46862,10 +46932,13 @@
                                   </div>
                                 </div>
 
-                                <div class="top-2 right-0 absolute">
+                                <!-- btn batal -->
+                                <div
+                                  class="top-2 right-0 absolute border border-blue-500"
+                                >
                                   <button
                                     type="button"
-                                    class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-0.5 text-center inline-flex items-center me-2"
+                                    class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-0.5 text-center inline-flex items-center me-2 ml-7 batal_gambar_upload_listing hidden"
                                   >
                                     <svg
                                       class="w-4 h-4 text-gray-400 dark:text-white"

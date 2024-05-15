@@ -4474,50 +4474,122 @@ Lingkungan aman nyaman dan bebas ba
 
 // Upload Gambar Postingan Listing
 
-let images = [];
-let currentIndex = 0;
-
-function handleFiles(files) {
-  const fileList = Array.from(files);
-  images = fileList.map((file) => URL.createObjectURL(file));
-  currentIndex = 0;
-  displayImage(images[currentIndex]);
-  updateButtonStates();
-}
-
-function displayImage(imageUrl) {
+document.addEventListener("DOMContentLoaded", function () {
+  const dropArea = document.getElementById("drop-area");
+  const fileElem = document.getElementById("fileElem");
   const previewContainer = document.getElementById("preview-container");
-  previewContainer.innerHTML = `<img src="${imageUrl}" class="w-full h-64 object-cover rounded-lg shadow-md">`;
-}
+  const areaUpload = document.querySelector(".area_upload");
+  const HIDE_CLASS = "hidden";
+  const UPLOAD_WFULL_CLASS = "add_wfull_upload";
+  const HIGHLIGHT_CLASS = "border-blue-500";
+  const MAX_IMAGES = 9;
 
-function updateButtonStates() {
-  document.querySelector(".next_gambar_upload").disabled =
-    currentIndex >= images.length - 1;
-  document.querySelector(".previous_gambar_upload").disabled =
-    currentIndex <= 0;
-}
+  // Event listener setup for drag and drop functionality
+  ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
+    dropArea.addEventListener(eventName, preventDefaults, false);
+  });
 
-document.querySelector(".area_upload").addEventListener("click", () => {
-  document.getElementById("fileElem").click();
-});
+  ["dragenter", "dragover"].forEach((eventName) => {
+    dropArea.addEventListener(eventName, highlight, false);
+  });
 
-document.querySelector(".next_gambar_upload").addEventListener("click", () => {
-  if (currentIndex < images.length - 1) {
-    currentIndex++;
-    displayImage(images[currentIndex]);
-    updateButtonStates();
+  ["dragleave", "drop"].forEach((eventName) => {
+    dropArea.addEventListener(eventName, unhighlight, false);
+  });
+
+  dropArea.addEventListener("drop", handleDrop, false);
+  areaUpload.addEventListener("click", () => {
+    fileElem.click();
+  });
+
+  fileElem.addEventListener("change", function () {
+    handleFiles(this.files);
+    hideUploadImage();
+  });
+
+  function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
+
+  function highlight() {
+    dropArea.classList.add(HIGHLIGHT_CLASS);
+  }
+
+  function unhighlight() {
+    dropArea.classList.remove(HIGHLIGHT_CLASS);
+  }
+
+  function handleDrop(e) {
+    const dt = e.dataTransfer;
+    const files = dt.files;
+    handleFiles(files);
+    hideUploadImage();
+  }
+
+  function handleFiles(files) {
+    const currentImagesCount = previewContainer.querySelectorAll("img").length;
+    if (currentImagesCount + files.length > MAX_IMAGES) {
+      alert("Maximum 9 images allowed.");
+      return;
+    }
+
+    Array.from(files).forEach(previewFile);
+    manageNavigationVisibility();
+  }
+
+  function previewFile(file) {
+    const reader = new FileReader();
+    reader.onloadend = function () {
+      const img = document.createElement("img");
+      img.src = reader.result;
+      img.classList.add("w-full", "h-full", "object-fill");
+
+      const div = document.createElement("div");
+      div.classList.add(
+        "overflow-hidden",
+        "w-full",
+        "h-full",
+        "flex",
+        "items-center",
+        "justify-center",
+        "relative"
+      );
+      div.appendChild(img);
+
+      previewContainer.appendChild(div);
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function hideUploadImage() {
+    const hiddenElements = document.querySelectorAll(
+      ".hidden_foto_after_upload"
+    );
+    hiddenElements.forEach((element) => element.classList.add(HIDE_CLASS));
+
+    const uploadWfull = document.querySelector(`.${UPLOAD_WFULL_CLASS}`);
+    if (uploadWfull) {
+      uploadWfull.classList.add("w-full");
+    }
+
+    dropArea.classList.remove("justify-center", "items-center");
+    dropArea.classList.add("justify-start", "items-start");
+  }
+
+  function manageNavigationVisibility() {
+    const navElements = document.querySelectorAll(
+      ".previous_gambar_upload_listing, .batal_gambar_upload_listing, .next_gambar_upload_listing"
+    );
+    console.log(navElements);
+    if (previewContainer.querySelectorAll("img").length > 0) {
+      navElements.forEach((el) => el.classList.remove(HIDE_CLASS));
+    } else {
+      navElements.forEach((el) => el.classList.add(HIDE_CLASS));
+    }
   }
 });
 
-document
-  .querySelector(".previous_gambar_upload")
-  .addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      displayImage(images[currentIndex]);
-      updateButtonStates();
-    }
-  });
 // PREVIEW IMAGE EDIT PENGATURAN
 
 document
