@@ -1666,24 +1666,49 @@ let lastClickedshowPostingListing;
 window.showPostingListing = function (element) {
   event.stopPropagation();
 
-  lastClickedshowPostingListing = element;
+  Array.from(document.getElementsByClassName("btnBackEditListingg")).forEach(
+    (elem) => elem.classList.remove("hidden")
+  );
 
-  var menuDuaTab = document.getElementById("MenuDuaTab");
-  var MenuListing = document.getElementById("detail-pasang-satu-tab");
-  if (menuDuaTab) {
-    MenuDuaTab.click();
-    MenuListing.click();
+  // Array.from(document.getElementsByClassName("btnBackEditListingg")).forEach(
+  //   (elem) => elem.classList.remove("hidden")
+  // );
+
+  // Array.from(document.getElementsByClassName("btnEditListingg")).forEach(
+  //   (elem) => elem.classList.remove("hidden")
+  // );
+
+  // Array.from(
+  //   document.getElementsByClassName("RemoveClassformEditListingg")
+  // ).forEach((elem) => elem.classList.remove("formEditListingg"));
+
+  EditPostingListing();
+
+  var MenuDelapanBelasTab = document.getElementById("MenuDelapanBelasTab");
+  if (MenuDelapanBelasTab) {
+    MenuDelapanBelasTab.click();
     showJudulPostinganListing();
   } else {
-    console.error("MenuDuaTab not found");
+    console.error("MenuDelapanBelasTab not found");
   }
-  //
 
-  Array.from(
-    document.getElementsByClassName("btnBackEditStoriesPosting")
-  ).forEach((elem) => elem.classList.remove("hidden"));
+  // event.stopPropagation();
 
-  //
+  // lastClickedshowPostingListing = element;
+
+  // var menuDuaTab = document.getElementById("MenuDuaTab");
+  // var MenuListing = document.getElementById("detail-pasang-satu-tab");
+  // if (menuDuaTab) {
+  //   MenuDuaTab.click();
+  //   MenuListing.click();
+  //   showJudulPostinganListing();
+  // } else {
+  //   console.error("MenuDuaTab not found");
+  // }
+
+  // Array.from(
+  //   document.getElementsByClassName("btnBackEditStoriesPosting")
+  // ).forEach((elem) => elem.classList.remove("hidden"));
 };
 
 window.closeDetailAgent = function () {
