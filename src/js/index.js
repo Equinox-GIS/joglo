@@ -4474,7 +4474,7 @@ Lingkungan aman nyaman dan bebas ba
 
 // Upload Gambar Postingan Listing
 
- document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
       const dropArea = document.getElementById("drop-area");
       const fileElem = document.getElementById("fileElem");
       const previewContainer = document.getElementById("preview-container");
@@ -4498,10 +4498,6 @@ Lingkungan aman nyaman dan bebas ba
       });
 
       dropArea.addEventListener("drop", handleDrop, false);
-      areaUpload.addEventListener("click", () => {
-        fileElem.click();
-      });
-
       fileElem.addEventListener("change", function () {
         handleFiles(this.files);
         hideUploadImage();
@@ -4541,6 +4537,8 @@ Lingkungan aman nyaman dan bebas ba
             images.push(reader.result);
             if (images.length === 1) {
               displayImage(0);
+            } else {
+              displayImage(currentImageIndex);
             }
           };
           reader.readAsDataURL(file);
@@ -4559,6 +4557,17 @@ Lingkungan aman nyaman dan bebas ba
           div.appendChild(img);
 
           previewContainer.appendChild(div);
+
+          // Tampilkan atau sembunyikan tombol navigasi
+          const previousButton = document.querySelector('.previous_gambar_upload_listing');
+          const nextButton = document.querySelector('.next_gambar_upload_listing');
+          if (images.length > 1) {
+            previousButton.classList.remove(HIDE_CLASS);
+            nextButton.classList.remove(HIDE_CLASS);
+          } else {
+            previousButton.classList.add(HIDE_CLASS);
+            nextButton.classList.add(HIDE_CLASS);
+          }
         }
       }
 
@@ -4583,6 +4592,8 @@ Lingkungan aman nyaman dan bebas ba
       }
 
       window.ResetUploadListing = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         
         // Reset image array and index
         images = [];
@@ -4610,20 +4621,26 @@ Lingkungan aman nyaman dan bebas ba
         hiddenElements.forEach(element => element.classList.remove(HIDE_CLASS));
       };
 
-      window.showNextImage = function() {
+      window.showNextImage = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         if (images.length > 1) {
           currentImageIndex = (currentImageIndex + 1) % images.length;
           displayImage(currentImageIndex);
         }
       };
 
-      window.showPreviousImage = function() {
+      window.showPreviousImage = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         if (images.length > 1) {
           currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
           displayImage(currentImageIndex);
         }
       };
     });
+
+
 // PREVIEW IMAGE EDIT PENGATURAN
 
 document
