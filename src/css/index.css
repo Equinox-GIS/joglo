@@ -1285,11 +1285,11 @@ input[name="plan"]:checked ~ .menuKetigaAds {
 /* xl breakpoint: 1280px to 1535px */
 @media (min-width: 1280px) and (max-width: 1535px) {
   .deskripsi_postingan_new {
-    @apply h-[54vh];
+    @apply h-[45.5vh];
   }
 
   .position_gambar_upload {
-    @apply h-[23.3vh];
+    @apply h-[25.5vh];
   }
 }
 
