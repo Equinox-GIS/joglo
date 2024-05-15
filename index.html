@@ -20909,9 +20909,9 @@
 
                                 <!-- upload -->
 
-                                <div
+                                <!--   <div
                                   class="relative w-full mb-2 mt-0.5 flex flex-col"
-                                >
+                                  >
                                   <div class="block text-xs font-bold mb-1">
                                     Foto (maks. 9)
                                   </div>
@@ -20934,22 +20934,13 @@
                                         <div
                                           class="hide_gambar_upload w-full flex flex-col justify-center"
                                         >
-                                          <!--               <div class="w-full flex justify-center hidden_foto_after_upload">
-                                    <img
-                                      class="w-20 h-20 object-contain"
-                                      src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
-                                    />
-                                  </div>
-                                  <div class="text-xs text-gray-500 hidden_foto_after_upload">
-                                    Drop foto di sini
-                                  </div> -->
+
                                         </div>
                                       </label>
 
                                       <div
                                         class="overflow-hidden w-full h-full flex items-center justify-center relative preview_gambar_upload rounded-lg"
                                       >
-                                        <!-- Gambar Pertama -->
 
                                         <div
                                           class="w-full grid grid-cols-2 absolute"
@@ -21031,10 +21022,9 @@
                                         </div>
                                       </div>
 
-                                      <!--  -->
                                     </div>
                                   </div>
-                                </div>
+                                </div> -->
 
                                 <!--  -->
                               </div>
@@ -46866,19 +46856,7 @@
                                   class="w-full h-full"
                                   id="preview-container"
                                 ></div>
-                                <!-- Upload Gambar Disini -->
-                                <!-- Gambar Pertama -->
-                                <!--   <img
-                                  class="w-full h-full object-fill gambar_upload_listing"
-                                  src="./src/images/contoh2.jpg"
-                                />
- -->
-                                <!-- Gambar Kedua -->
-                                <!--     <img
-                                  class="w-full h-full object-contain hidden"
-                                  src="./src/images/contoh1.jpg"
-                                />
- -->
+
                                 <!-- btn next previous -->
                                 <div class="w-full grid grid-cols-2 absolute">
                                   <div class="w-full">
@@ -46933,12 +46911,11 @@
                                 </div>
 
                                 <!-- btn batal -->
-                                <div
-                                  class="top-2 right-0 absolute border border-blue-500"
-                                >
+                                <div class="top-2 right-0 absolute">
                                   <button
                                     type="button"
                                     class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-0.5 text-center inline-flex items-center me-2 ml-7 batal_gambar_upload_listing hidden"
+                                    onclick="ResetUploadListing()"
                                   >
                                     <svg
                                       class="w-4 h-4 text-gray-400 dark:text-white"
@@ -46959,6 +46936,7 @@
                                     </svg>
                                   </button>
                                 </div>
+                                <!--  -->
                               </div>
 
                               <!--  -->

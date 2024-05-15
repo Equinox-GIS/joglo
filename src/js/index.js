@@ -4475,120 +4475,103 @@ Lingkungan aman nyaman dan bebas ba
 // Upload Gambar Postingan Listing
 
 document.addEventListener("DOMContentLoaded", function () {
-  const dropArea = document.getElementById("drop-area");
-  const fileElem = document.getElementById("fileElem");
-  const previewContainer = document.getElementById("preview-container");
-  const areaUpload = document.querySelector(".area_upload");
-  const HIDE_CLASS = "hidden";
-  const UPLOAD_WFULL_CLASS = "add_wfull_upload";
-  const HIGHLIGHT_CLASS = "border-blue-500";
-  const MAX_IMAGES = 9;
+      const dropArea = document.getElementById("drop-area");
+      const fileElem = document.getElementById("fileElem");
+      const previewContainer = document.getElementById("preview-container");
+      const areaUpload = document.querySelector(".area_upload");
+      const HIDE_CLASS = "hidden";
+      const HIGHLIGHT_CLASS = "border-blue-500";
+      const MAX_IMAGES = 9;
 
-  // Event listener setup for drag and drop functionality
-  ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
-    dropArea.addEventListener(eventName, preventDefaults, false);
-  });
+      ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+      });
 
-  ["dragenter", "dragover"].forEach((eventName) => {
-    dropArea.addEventListener(eventName, highlight, false);
-  });
+      ["dragenter", "dragover"].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+      });
 
-  ["dragleave", "drop"].forEach((eventName) => {
-    dropArea.addEventListener(eventName, unhighlight, false);
-  });
+      ["dragleave", "drop"].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+      });
 
-  dropArea.addEventListener("drop", handleDrop, false);
-  areaUpload.addEventListener("click", () => {
-    fileElem.click();
-  });
+      dropArea.addEventListener("drop", handleDrop, false);
+      areaUpload.addEventListener("click", () => {
+        fileElem.click();
+      });
 
-  fileElem.addEventListener("change", function () {
-    handleFiles(this.files);
-    hideUploadImage();
-  });
+      fileElem.addEventListener("change", function () {
+        handleFiles(this.files);
+        hideUploadImage();
+        showPreviewElements();
+      });
 
-  function preventDefaults(e) {
-    e.preventDefault();
-    e.stopPropagation();
-  }
+      function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
 
-  function highlight() {
-    dropArea.classList.add(HIGHLIGHT_CLASS);
-  }
+      function highlight() {
+        dropArea.classList.add(HIGHLIGHT_CLASS);
+      }
 
-  function unhighlight() {
-    dropArea.classList.remove(HIGHLIGHT_CLASS);
-  }
+      function unhighlight() {
+        dropArea.classList.remove(HIGHLIGHT_CLASS);
+      }
 
-  function handleDrop(e) {
-    const dt = e.dataTransfer;
-    const files = dt.files;
-    handleFiles(files);
-    hideUploadImage();
-  }
+      function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        handleFiles(files);
+        hideUploadImage();
+        showPreviewElements();
+      }
 
-  function handleFiles(files) {
-    const currentImagesCount = previewContainer.querySelectorAll("img").length;
-    if (currentImagesCount + files.length > MAX_IMAGES) {
-      alert("Maximum 9 images allowed.");
-      return;
-    }
+      function handleFiles(files) {
+        const currentImagesCount = previewContainer.querySelectorAll("img").length;
+        if (currentImagesCount + files.length > MAX_IMAGES) {
+          alert("Maximum 9 images allowed.");
+          return;
+        }
+        Array.from(files).forEach(previewFile);
+      }
 
-    Array.from(files).forEach(previewFile);
-    manageNavigationVisibility();
-  }
+      function previewFile(file) {
+        const reader = new FileReader();
+        reader.onloadend = function () {
+          const img = document.createElement("img");
+          img.src = reader.result;
+          img.classList.add("w-full", "h-full", "object-fill");
 
-  function previewFile(file) {
-    const reader = new FileReader();
-    reader.onloadend = function () {
-      const img = document.createElement("img");
-      img.src = reader.result;
-      img.classList.add("w-full", "h-full", "object-fill");
+          const div = document.createElement("div");
+          div.classList.add("overflow-hidden", "w-full", "h-full", "flex", "items-center", "justify-center", "relative");
+          div.appendChild(img);
 
-      const div = document.createElement("div");
-      div.classList.add(
-        "overflow-hidden",
-        "w-full",
-        "h-full",
-        "flex",
-        "items-center",
-        "justify-center",
-        "relative"
-      );
-      div.appendChild(img);
+          previewContainer.appendChild(div);
+        };
+        reader.readAsDataURL(file);
+      }
 
-      previewContainer.appendChild(div);
-    };
-    reader.readAsDataURL(file);
-  }
+      function hideUploadImage() {
+        const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
+        hiddenElements.forEach(element => element.classList.add(HIDE_CLASS));
+      }
 
-  function hideUploadImage() {
-    const hiddenElements = document.querySelectorAll(
-      ".hidden_foto_after_upload"
-    );
-    hiddenElements.forEach((element) => element.classList.add(HIDE_CLASS));
-
-    const uploadWfull = document.querySelector(`.${UPLOAD_WFULL_CLASS}`);
-    if (uploadWfull) {
-      uploadWfull.classList.add("w-full");
-    }
-
-    dropArea.classList.remove("justify-center", "items-center");
-    dropArea.classList.add("justify-start", "items-start");
-  }
-
-  function manageNavigationVisibility() {
-    const navElements = document.querySelectorAll(
-      ".previous_gambar_upload_listing, .batal_gambar_upload_listing, .next_gambar_upload_listing"
-    );
-    console.log(navElements);
-    if (previewContainer.querySelectorAll("img").length > 0) {
-      navElements.forEach((el) => el.classList.remove(HIDE_CLASS));
-    } else {
-      navElements.forEach((el) => el.classList.add(HIDE_CLASS));
-    }
-  }
-});
+      function showPreviewElements() {
+        const elementsToShow = [
+          ".preview_gambar_upload",
+          ".next_gambar_upload_listing",
+          ".previous_gambar_upload_listing",
+          ".batal_gambar_upload_listing"
+        ];
+        elementsToShow.forEach(selector => {
+          const element = document.querySelector(selector);
+          if (element) {
+            element.classList.remove(HIDE_CLASS);
+          }
+        });
+      }
+    });
 
 // PREVIEW IMAGE EDIT PENGATURAN
 
