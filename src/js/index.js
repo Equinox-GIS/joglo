@@ -4475,195 +4475,215 @@ Lingkungan aman nyaman dan bebas ba
 // Upload Gambar Postingan Listing
 
 document.addEventListener("DOMContentLoaded", function () {
-  const dropArea = document.getElementById("drop-area");
-  const fileElem = document.getElementById("fileElem");
-  const previewContainer = document.getElementById("preview-container");
-  const areaUpload = document.querySelector(".area_upload");
-  const HIDE_CLASS = "hidden";
-  const HIGHLIGHT_CLASS = "border-blue-500";
-  const MAX_IMAGES = 9;
-  let currentImageIndex = 0;
-  let images = [];
+      const dropArea = document.getElementById("drop-area");
+      const fileElem = document.getElementById("fileElem");
+      const previewContainer = document.getElementById("preview-container");
+      const indikatorContainer = document.getElementById("indikator_listing");
+      const areaUpload = document.querySelector(".area_upload");
+      const HIDE_CLASS = "hidden";
+      const HIGHLIGHT_CLASS = "border-blue-500";
+      const MAX_IMAGES = 9;
+      let currentImageIndex = 0;
+      let images = [];
 
-  ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
-    dropArea.addEventListener(eventName, preventDefaults, false);
-  });
+      ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false);
+      });
 
-  ["dragenter", "dragover"].forEach((eventName) => {
-    dropArea.addEventListener(eventName, highlight, false);
-  });
+      ["dragenter", "dragover"].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false);
+      });
 
-  ["dragleave", "drop"].forEach((eventName) => {
-    dropArea.addEventListener(eventName, unhighlight, false);
-  });
+      ["dragleave", "drop"].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false);
+      });
 
-  dropArea.addEventListener("drop", handleDrop, false);
-  fileElem.addEventListener("change", function () {
-    handleFiles(this.files);
-    hideUploadImage();
-    showPreviewElements();
-  });
+      dropArea.addEventListener("drop", handleDrop, false);
+      fileElem.addEventListener("change", function () {
+        handleFiles(this.files);
+        hideUploadImage();
+        showPreviewElements();
+        showIndikator();
+      });
 
-  function preventDefaults(e) {
-    e.preventDefault();
-    e.stopPropagation();
-  }
+      function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
 
-  function highlight() {
-    dropArea.classList.add(HIGHLIGHT_CLASS);
-  }
+      function highlight() {
+        dropArea.classList.add(HIGHLIGHT_CLASS);
+      }
 
-  function unhighlight() {
-    dropArea.classList.remove(HIGHLIGHT_CLASS);
-  }
+      function unhighlight() {
+        dropArea.classList.remove(HIGHLIGHT_CLASS);
+      }
 
-  function handleDrop(e) {
-    const dt = e.dataTransfer;
-    const files = dt.files;
-    handleFiles(files);
-    hideUploadImage();
-    showPreviewElements();
-  }
+      function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        handleFiles(files);
+        hideUploadImage();
+        showPreviewElements();
+        showIndikator();
+      }
 
-  function handleFiles(files) {
-    const currentImagesCount = previewContainer.querySelectorAll("img").length;
-    if (currentImagesCount + files.length > MAX_IMAGES) {
-      alert("Maximum 9 images allowed.");
-      return;
-    }
-    Array.from(files).forEach((file, index) => {
-      const reader = new FileReader();
-      reader.onloadend = function () {
-        images.push(reader.result);
-        addImage(reader.result, images.length - 1);
-        if (images.length === 1) {
-          displayImage(0);
+      function handleFiles(files) {
+        const currentImagesCount = previewContainer.querySelectorAll("img").length;
+        if (currentImagesCount + files.length > MAX_IMAGES) {
+          alert("Maximum 9 images allowed.");
+          return;
         }
-        updateNavigationButtons();
-      };
-      reader.readAsDataURL(file);
-    });
-  }
+        Array.from(files).forEach((file, index) => {
+          const reader = new FileReader();
+          reader.onloadend = function () {
+            images.push(reader.result);
+            addImage(reader.result, images.length - 1);
+            if (images.length === 1) {
+              displayImage(0);
+            }
+            updateNavigationButtons();
+            updateIndikator();
+          };
+          reader.readAsDataURL(file);
+        });
+      }
 
-  function addImage(src, index) {
-    const img = document.createElement("img");
-    img.src = src;
-    img.setAttribute("data-index", index);
-    img.classList.add("w-full", "h-full", "object-fill");
-    if (index !== 0) {
-      img.classList.add("hidden");
-    }
-    previewContainer.appendChild(img);
-  }
-
-  function displayImage(index) {
-    if (images.length > 0) {
-      const imgs = previewContainer.querySelectorAll("img");
-      imgs.forEach((img) => {
-        if (parseInt(img.getAttribute("data-index")) === index) {
-          img.classList.remove("hidden");
-        } else {
+      function addImage(src, index) {
+        const img = document.createElement("img");
+        img.src = src;
+        img.setAttribute('data-index', index);
+        img.classList.add("w-full", "h-full", "object-fill");
+        if (index !== 0) {
           img.classList.add("hidden");
         }
-      });
-    }
-    updateNavigationButtons();
-  }
-
-  function updateNavigationButtons() {
-    const previousButton = document.querySelector(
-      ".previous_gambar_upload_listing"
-    );
-    const nextButton = document.querySelector(".next_gambar_upload_listing");
-    if (currentImageIndex === 0) {
-      previousButton.classList.add(HIDE_CLASS);
-    } else {
-      previousButton.classList.remove(HIDE_CLASS);
-    }
-    if (currentImageIndex === images.length - 1) {
-      nextButton.classList.add(HIDE_CLASS);
-    } else {
-      nextButton.classList.remove(HIDE_CLASS);
-    }
-  }
-
-  function hideUploadImage() {
-    const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
-    hiddenElements.forEach((element) => element.classList.add(HIDE_CLASS));
-  }
-
-  function showPreviewElements() {
-    const elementsToShow = [
-      ".preview_gambar_upload",
-      ".next_gambar_upload_listing",
-      ".previous_gambar_upload_listing",
-      ".batal_gambar_upload_listing",
-    ];
-    elementsToShow.forEach((selector) => {
-      const element = document.querySelector(selector);
-      if (element) {
-        element.classList.remove(HIDE_CLASS);
+        previewContainer.appendChild(img);
       }
-    });
-  }
 
-  window.ResetUploadListing = function (e) {
-    if (e) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-
-    // Reset image array and index
-    images = [];
-    currentImageIndex = 0;
-
-    // Clear the preview container
-    previewContainer.innerHTML = "";
-
-    // Reset file input
-    fileElem.value = "";
-
-    // Add hidden class to preview elements
-    const elementsToHide = [
-      ".preview_gambar_upload",
-      ".next_gambar_upload_listing",
-      ".previous_gambar_upload_listing",
-      ".batal_gambar_upload_listing",
-    ];
-    elementsToHide.forEach((selector) => {
-      const element = document.querySelector(selector);
-      if (element) {
-        element.classList.add(HIDE_CLASS);
+      function displayImage(index) {
+        if (images.length > 0) {
+          const imgs = previewContainer.querySelectorAll("img");
+          imgs.forEach(img => {
+            if (parseInt(img.getAttribute('data-index')) === index) {
+              img.classList.remove("hidden");
+            } else {
+              img.classList.add("hidden");
+            }
+          });
+        }
+        updateNavigationButtons();
       }
+
+      function updateNavigationButtons() {
+        const previousButton = document.querySelector('.previous_gambar_upload_listing');
+        const nextButton = document.querySelector('.next_gambar_upload_listing');
+        if (currentImageIndex === 0) {
+          previousButton.classList.add(HIDE_CLASS);
+        } else {
+          previousButton.classList.remove(HIDE_CLASS);
+        }
+        if (currentImageIndex === images.length - 1) {
+          nextButton.classList.add(HIDE_CLASS);
+        } else {
+          nextButton.classList.remove(HIDE_CLASS);
+        }
+      }
+
+      function hideUploadImage() {
+        const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
+        hiddenElements.forEach(element => element.classList.add(HIDE_CLASS));
+      }
+
+      function showPreviewElements() {
+        const elementsToShow = [
+          ".preview_gambar_upload",
+          ".next_gambar_upload_listing",
+          ".previous_gambar_upload_listing",
+          ".batal_gambar_upload_listing"
+        ];
+        elementsToShow.forEach(selector => {
+          const element = document.querySelector(selector);
+          if (element) {
+            element.classList.remove(HIDE_CLASS);
+          }
+        });
+      }
+
+      function showIndikator() {
+        const indikatorElement = document.querySelector('.indikator_upload_listing');
+        if (indikatorElement) {
+          indikatorElement.classList.remove(HIDE_CLASS);
+        }
+      }
+
+      function updateIndikator() {
+        indikatorContainer.innerHTML = '';
+        images.forEach(() => {
+          const span = document.createElement("span");
+          span.classList.add("flex", "w-1.5", "h-1.5", "me-1.5", "bg-slate-50", "rounded-full");
+          indikatorContainer.appendChild(span);
+        });
+      }
+
+      window.ResetUploadListing = function(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+
+        // Reset image array and index
+        images = [];
+        currentImageIndex = 0;
+
+        // Clear the preview container
+        previewContainer.innerHTML = '';
+        indikatorContainer.innerHTML = '';
+
+        // Reset file input
+        fileElem.value = '';
+
+        // Add hidden class to preview elements
+        const elementsToHide = [
+          ".preview_gambar_upload",
+          ".next_gambar_upload_listing",
+          ".previous_gambar_upload_listing",
+          ".batal_gambar_upload_listing",
+          ".indikator_upload_listing"
+        ];
+        elementsToHide.forEach(selector => {
+          const element = document.querySelector(selector);
+          if (element) {
+            element.classList.add(HIDE_CLASS);
+          }
+        });
+
+        // Remove hidden class from the upload image section
+        const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
+        hiddenElements.forEach(element => element.classList.remove(HIDE_CLASS));
+      };
+
+      window.showNextImage = function(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        if (currentImageIndex < images.length - 1) {
+          currentImageIndex++;
+          displayImage(currentImageIndex);
+        }
+      };
+
+      window.showPreviousImage = function(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        if (currentImageIndex > 0) {
+          currentImageIndex--;
+          displayImage(currentImageIndex);
+        }
+      };
     });
-
-    // Remove hidden class from the upload image section
-    const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
-    hiddenElements.forEach((element) => element.classList.remove(HIDE_CLASS));
-  };
-
-  window.showNextImage = function (e) {
-    if (e) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-    if (currentImageIndex < images.length - 1) {
-      currentImageIndex++;
-      displayImage(currentImageIndex);
-    }
-  };
-
-  window.showPreviousImage = function (e) {
-    if (e) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-    if (currentImageIndex > 0) {
-      currentImageIndex--;
-      displayImage(currentImageIndex);
-    }
-  };
-});
 // PREVIEW IMAGE EDIT PENGATURAN
 
 document
