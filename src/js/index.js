@@ -4474,7 +4474,7 @@ Lingkungan aman nyaman dan bebas ba
 
 // Upload Gambar Postingan Listing
 
-document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
       const dropArea = document.getElementById("drop-area");
       const fileElem = document.getElementById("fileElem");
       const previewContainer = document.getElementById("preview-container");
@@ -4482,6 +4482,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const HIDE_CLASS = "hidden";
       const HIGHLIGHT_CLASS = "border-blue-500";
       const MAX_IMAGES = 9;
+      let currentImageIndex = 0;
+      let images = [];
 
       ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
         dropArea.addEventListener(eventName, preventDefaults, false);
@@ -4533,14 +4535,23 @@ document.addEventListener("DOMContentLoaded", function () {
           alert("Maximum 9 images allowed.");
           return;
         }
-        Array.from(files).forEach(previewFile);
+        Array.from(files).forEach(file => {
+          const reader = new FileReader();
+          reader.onloadend = function () {
+            images.push(reader.result);
+            if (images.length === 1) {
+              displayImage(0);
+            }
+          };
+          reader.readAsDataURL(file);
+        });
       }
 
-      function previewFile(file) {
-        const reader = new FileReader();
-        reader.onloadend = function () {
+      function displayImage(index) {
+        if (images.length > 0) {
+          previewContainer.innerHTML = '';
           const img = document.createElement("img");
-          img.src = reader.result;
+          img.src = images[index];
           img.classList.add("w-full", "h-full", "object-fill");
 
           const div = document.createElement("div");
@@ -4548,8 +4559,7 @@ document.addEventListener("DOMContentLoaded", function () {
           div.appendChild(img);
 
           previewContainer.appendChild(div);
-        };
-        reader.readAsDataURL(file);
+        }
       }
 
       function hideUploadImage() {
@@ -4571,8 +4581,49 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       }
-    });
 
+      window.ResetUploadListing = function(e) {
+        
+        // Reset image array and index
+        images = [];
+        currentImageIndex = 0;
+
+        // Clear the preview container
+        previewContainer.innerHTML = '';
+
+        // Add hidden class to preview elements
+        const elementsToHide = [
+          ".preview_gambar_upload",
+          ".next_gambar_upload_listing",
+          ".previous_gambar_upload_listing",
+          ".batal_gambar_upload_listing"
+        ];
+        elementsToHide.forEach(selector => {
+          const element = document.querySelector(selector);
+          if (element) {
+            element.classList.add(HIDE_CLASS);
+          }
+        });
+
+        // Remove hidden class from the upload image section
+        const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
+        hiddenElements.forEach(element => element.classList.remove(HIDE_CLASS));
+      };
+
+      window.showNextImage = function() {
+        if (images.length > 1) {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          displayImage(currentImageIndex);
+        }
+      };
+
+      window.showPreviousImage = function() {
+        if (images.length > 1) {
+          currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+          displayImage(currentImageIndex);
+        }
+      };
+    });
 // PREVIEW IMAGE EDIT PENGATURAN
 
 document
