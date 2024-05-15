@@ -46825,7 +46825,7 @@
                             <div
                               id="drop-area"
                               class="w-full bg-white rounded-lg flex position_gambar_upload justify-center items-center"
-                            >
+                              >
                               <label
                                 for="fileElem"
                                 class="cursor-pointer flex flex-col justify-center"
@@ -46858,38 +46858,15 @@
                               </div>
                             </div>
                           </div>
-                          <div class="w-full grid grid-cols-3 mt-2">
-                            <div class="w-full flex justify-start">
-                              <button
-                                type="button"
-                                class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 ml-7 previous_gambar_upload_listing hidden"
-                                onclick="showPreviousImage()"
-                              >
-                                <svg
-                                  class="w-4 h-4 text-gray-400"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="24"
-                                  height="24"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="m9 5 7 7-7 7"
-                                  />
-                                </svg>
-                              </button>
-                            </div>
-                            <div class="w-full flex justify-center">
+
+                            <div class="w-full absolute grid grid-cols-1 top-8 right-3">
+
+        <div class="w-full flex justify-end">
                               <button
                                 type="button"
                                 class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 ml-7 batal_gambar_upload_listing hidden"
                                 onclick="ResetUploadListing(event)"
-                              >
+                                >
                                 <svg
                                   class="w-4 h-4 text-gray-400 dark:text-white"
                                   aria-hidden="true"
@@ -46909,6 +46886,35 @@
                                 </svg>
                               </button>
                             </div>
+                          </div>
+
+                          <div class="w-full grid grid-cols-2 mt-2 absolute top-1/2 transform -translate-y-1/2">
+                            <div class="w-full flex justify-start">
+                              <button
+                                type="button"
+                                class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 ml-7 previous_gambar_upload_listing hidden"
+                                onclick="showPreviousImage()"
+                                >
+                                <svg
+                                  class="w-4 h-4 text-gray-400"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m9 5 7 7-7 7"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+
                             <div class="w-full flex justify-end">
                               <button
                                 type="button"
