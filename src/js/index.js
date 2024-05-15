@@ -4474,6 +4474,7 @@ Lingkungan aman nyaman dan bebas ba
 
 // Upload Gambar Postingan Listing
 
+
 document.addEventListener("DOMContentLoaded", function () {
       const dropArea = document.getElementById("drop-area");
       const fileElem = document.getElementById("fileElem");
@@ -4531,43 +4532,53 @@ document.addEventListener("DOMContentLoaded", function () {
           alert("Maximum 9 images allowed.");
           return;
         }
-        Array.from(files).forEach(file => {
+        Array.from(files).forEach((file, index) => {
           const reader = new FileReader();
           reader.onloadend = function () {
             images.push(reader.result);
+            addImage(reader.result, images.length - 1);
             if (images.length === 1) {
               displayImage(0);
-            } else {
-              displayImage(currentImageIndex);
             }
+            updateNavigationButtons();
           };
           reader.readAsDataURL(file);
         });
       }
 
+      function addImage(src, index) {
+        const img = document.createElement("img");
+        img.src = src;
+        img.setAttribute('data-index', index);
+        img.classList.add("w-full", "h-full", "object-fill");
+        if (index !== 0) {
+          img.classList.add("hidden");
+        }
+        previewContainer.appendChild(img);
+      }
+
       function displayImage(index) {
         if (images.length > 0) {
-          previewContainer.innerHTML = '';
-          const img = document.createElement("img");
-          img.src = images[index];
-          img.classList.add("w-full", "h-full", "object-fill");
+          const imgs = previewContainer.querySelectorAll("img");
+          imgs.forEach(img => {
+            if (parseInt(img.getAttribute('data-index')) === index) {
+              img.classList.remove("hidden");
+            } else {
+              img.classList.add("hidden");
+            }
+          });
+        }
+      }
 
-          const div = document.createElement("div");
-          div.classList.add("overflow-hidden", "w-full", "h-full", "flex", "items-center", "justify-center", "relative");
-          div.appendChild(img);
-
-          previewContainer.appendChild(div);
-
-          // Tampilkan atau sembunyikan tombol navigasi
-          const previousButton = document.querySelector('.previous_gambar_upload_listing');
-          const nextButton = document.querySelector('.next_gambar_upload_listing');
-          if (images.length > 1) {
-            previousButton.classList.remove(HIDE_CLASS);
-            nextButton.classList.remove(HIDE_CLASS);
-          } else {
-            previousButton.classList.add(HIDE_CLASS);
-            nextButton.classList.add(HIDE_CLASS);
-          }
+      function updateNavigationButtons() {
+        const previousButton = document.querySelector('.previous_gambar_upload_listing');
+        const nextButton = document.querySelector('.next_gambar_upload_listing');
+        if (images.length > 1) {
+          previousButton.classList.remove(HIDE_CLASS);
+          nextButton.classList.remove(HIDE_CLASS);
+        } else {
+          previousButton.classList.add(HIDE_CLASS);
+          nextButton.classList.add(HIDE_CLASS);
         }
       }
 
