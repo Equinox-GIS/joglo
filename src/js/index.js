@@ -66,6 +66,20 @@ nameUserElements.forEach(function (element) {
 //   });
 // }
 
+function updateArrows(currentSlide, slideCount) {
+  if (currentSlide === 0) {
+    $(".slick-prev").hide();
+  } else {
+    $(".slick-prev").show();
+  }
+
+  if (currentSlide === slideCount - 1) {
+    $(".slick-next").hide();
+  } else {
+    $(".slick-next").show();
+  }
+}
+
 document.getElementById("luas1").innerHTML = "<100";
 document.getElementById("btn1").innerHTML = "<100";
 
@@ -1045,20 +1059,6 @@ function getSliderDetail() {
       updateArrows(currentSlide, slick.slideCount);
     },
   };
-}
-
-function updateArrows(currentSlide, slideCount) {
-  if (currentSlide === 0) {
-    $(".slick-prev").hide();
-  } else {
-    $(".slick-prev").show();
-  }
-
-  if (currentSlide === slideCount - 1) {
-    $(".slick-next").hide();
-  } else {
-    $(".slick-next").show();
-  }
 }
 
 $(document).ready(function () {
@@ -4841,36 +4841,4 @@ document.addEventListener("DOMContentLoaded", function () {
     kontenA.classList.add("hidden");
     kontenB.classList.remove("hidden");
   });
-});
-
-$(document).ready(function () {
-  var $carousel = $(".slick-initialized.slick-slider.slick-dotted");
-  var $prevArrow = $(".slick-prev.slick-arrow");
-  var $nextArrow = $(".slick-next.slick-arrow");
-
-  $carousel.slick({
-    arrows: true,
-    prevArrow: $prevArrow,
-    nextArrow: $nextArrow,
-    appendArrows: ".arrow-container",
-  });
-
-  function updateArrows(currentSlide, slideCount) {
-    $prevArrow.toggleClass("hidden", currentSlide === 0);
-    $nextArrow.toggleClass("hidden", currentSlide === slideCount - 1);
-  }
-
-  // Initial check
-  updateArrows(
-    $carousel.slick("slickCurrentSlide"),
-    $carousel.slick("getSlick").slideCount
-  );
-
-  // Update on slide change
-  $carousel.on(
-    "beforeChange",
-    function (event, slick, currentSlide, nextSlide) {
-      updateArrows(nextSlide, slick.slideCount);
-    }
-  );
 });
