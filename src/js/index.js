@@ -1063,7 +1063,7 @@ function getSliderDetail() {
 
 $(document).ready(function () {
   // Initialize slider with custom details
-  const slider = $(".slider-card-info-detail").slick(getSliderDetail());
+  initSlick(".slider-card-info-detail", getSliderDetail());
 
   // Initial state
   updateArrows(0, $(".slider-card-info-detail").slick("getSlick").slideCount);
