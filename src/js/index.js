@@ -1030,13 +1030,13 @@ function getSliderDetail() {
     arrows: true,
     pauseOnHover: false,
     swipe: false,
-    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
-                  <div class="img-wrapper">
+    prevArrow: `<button type="button" class="slick-prev" style="left:4px !important;" onclick="event.stopPropagation();">
+                  <div class="img-wrapper-detail">
                     <img style="margin-right: 1px;" class="custom-img-slick-detail" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
-    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
-                  <div class="img-wrapper">
+    nextArrow: `<button type="button" class="slick-next" style="right:5px !important;" onclick="event.stopPropagation();">
+                  <div class="img-wrapper-detail">
                     <img style="margin-left: 1px;" class="custom-img-slick-detail" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,

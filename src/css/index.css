@@ -620,8 +620,8 @@
 }
 
 .custom-img-slick-detail {
-  width: 2.5vh !important;
-  height: 2.5vh !important;
+  width: 2.2vh !important;
+  height: 2.2vh !important;
 }
 
 .custom-img-slick-ads {
@@ -656,6 +656,14 @@
   padding: 5px;
   background-color: rgb(241 245 249);
   opacity: 0.9;
+}
+
+.img-wrapper-detail {
+   display: inline-block;
+    border-radius: 50%;
+    padding: 7px;
+    background-color: rgb(241 245 249);
+    opacity: 0.9;
 }
 
 .img-wrapper-pesan {
