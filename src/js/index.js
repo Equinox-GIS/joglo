@@ -1041,8 +1041,46 @@ function getSliderDetail() {
                   </div>
                 </button>`,
     dotsClass: "slick-dots custom-dots-class",
+    onAfterChange: function (slide, index) {
+      console.log(index);
+      if (index === 4) {
+        $(".slick-next").css("pointer-events", "none");
+      } else {
+        $(".slick-next").css("pointer-events", "all");
+      }
+    },
   };
 }
+
+function updateArrows(currentSlide, slideCount) {
+  if (currentSlide === 0) {
+    $(".slick-prev").hide();
+  } else {
+    $(".slick-prev").show();
+  }
+
+  if (currentSlide === slideCount - 1) {
+    $(".slick-next").hide();
+  } else {
+    $(".slick-next").show();
+  }
+}
+
+$(document).ready(function () {
+  // Initialize slider with custom details
+  const slider = $(".slider-card-info-detail").slick(getSliderDetail());
+
+  // Initial state
+  updateArrows(0, $(".slider-card-info-detail").slick("getSlick").slideCount);
+
+  // Update arrows on slide change
+  $(".slider-card-info-detail").on(
+    "afterChange",
+    function (event, slick, currentSlide) {
+      updateArrows(currentSlide, slick.slideCount);
+    }
+  );
+});
 
 function getSliderDefaultOptionsPesan() {
   return {
@@ -4814,8 +4852,6 @@ $(document).ready(function () {
   var $carousel = $(".slick-initialized.slick-slider.slick-dotted");
   var $prevArrow = $(".slick-prev.slick-arrow");
   var $nextArrow = $(".slick-next.slick-arrow");
-
-  console.log($carousel);
 
   $carousel.slick({
     arrows: true,
