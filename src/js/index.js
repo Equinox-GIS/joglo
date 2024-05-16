@@ -1055,25 +1055,8 @@ function getSliderDetail() {
                   </div>
                 </button>`,
     dotsClass: "slick-dots custom-dots-class",
-    // onAfterChange: function (event, slick, currentSlide) {
-    //   updateArrows(currentSlide, slick.slideCount);
-    // },
   };
 }
-
-$(document).ready(function () {
-  // Initialize slider with custom details
-  // initSlick(".slider-card-info-detail", getSliderDetail());
-  // Initial state
-  // updateArrows(0, $(".slider-card-info-detail").slick("getSlick").slideCount);
-  // // Update arrows on slide change
-  // $(".slider-card-info-detail").on(
-  //   "afterChange",
-  //   function (event, slick, currentSlide) {
-  //     updateArrows(currentSlide, slick.slideCount);
-  //   }
-  // );
-});
 
 function getSliderDefaultOptionsPesan() {
   return {

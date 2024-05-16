@@ -620,8 +620,8 @@
 }
 
 .custom-img-slick-detail {
-  width: 1.8vh !important;
-  height: 1.9vh !important;
+  width: 1.4vh !important;
+  height: 1.5vh !important;
 }
 
 .custom-img-slick-ads {
@@ -661,7 +661,7 @@
 .img-wrapper-detail {
   display: inline-block;
   border-radius: 50%;
-  padding: 8px;
+  padding: 9px;
   background-color: rgb(241 245 249);
   opacity: 0.9;
 }
