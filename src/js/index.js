@@ -1032,12 +1032,12 @@ function getSliderDetail() {
     swipe: false,
     prevArrow: `<button type="button" class="slick-prev" style="left:4px !important;" onclick="event.stopPropagation();">
                   <div class="img-wrapper-detail">
-                    <img style="margin-right: 1px;" class="custom-img-slick-detail" src="${prevArrowImg}" alt="Previous">
+                    <img style="margin-right: 2px;" class="custom-img-slick-detail" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
     nextArrow: `<button type="button" class="slick-next" style="right:5px !important;" onclick="event.stopPropagation();">
                   <div class="img-wrapper-detail">
-                    <img style="margin-left: 1px;" class="custom-img-slick-detail" src="${nextArrowImg}" alt="Next">
+                    <img style="margin-left: 2px;" class="custom-img-slick-detail" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,
     dotsClass: "slick-dots custom-dots-class",
@@ -4810,32 +4810,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+$(document).ready(function () {
+  var $carousel = $(".slick-initialized.slick-slider.slick-dotted");
+  var $prevArrow = $(".slick-prev.slick-arrow");
+  var $nextArrow = $(".slick-next.slick-arrow");
 
+  console.log($carousel);
 
-$(document).ready(function(){
-    var $carousel = $('.slick-initialized.slick-slider.slick-dotted');
-    var $prevArrow = $('.slick-prev.slick-arrow');
-    var $nextArrow = $('.slick-next.slick-arrow');
+  $carousel.slick({
+    arrows: true,
+    prevArrow: $prevArrow,
+    nextArrow: $nextArrow,
+    appendArrows: ".arrow-container",
+  });
 
-    console.log($carousel);
+  function updateArrows(currentSlide, slideCount) {
+    $prevArrow.toggleClass("hidden", currentSlide === 0);
+    $nextArrow.toggleClass("hidden", currentSlide === slideCount - 1);
+  }
 
-    $carousel.slick({
-      arrows: true,
-      prevArrow: $prevArrow,
-      nextArrow: $nextArrow,
-      appendArrows: '.arrow-container'
-    });
+  // Initial check
+  updateArrows(
+    $carousel.slick("slickCurrentSlide"),
+    $carousel.slick("getSlick").slideCount
+  );
 
-    function updateArrows(currentSlide, slideCount) {
-      $prevArrow.toggleClass('hidden', currentSlide === 0);
-      $nextArrow.toggleClass('hidden', currentSlide === slideCount - 1);
-    }
-
-    // Initial check
-    updateArrows($carousel.slick('slickCurrentSlide'), $carousel.slick('getSlick').slideCount);
-
-    // Update on slide change
-    $carousel.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  // Update on slide change
+  $carousel.on(
+    "beforeChange",
+    function (event, slick, currentSlide, nextSlide) {
       updateArrows(nextSlide, slick.slideCount);
-    });
+    }
+  );
 });
