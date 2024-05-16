@@ -1055,8 +1055,27 @@ function getSliderDetail() {
                   </div>
                 </button>`,
     dotsClass: "slick-dots custom-dots-class",
+    onAfterChange: function (event, slick, currentSlide) {
+      updateArrows(currentSlide, slick.slideCount);
+    },
   };
 }
+
+$(document).ready(function () {
+  // Initialize slider with custom details
+  const slider = $(".slider-card-info-detail").slick(getSliderDetail());
+
+  // Initial state
+  updateArrows(0, $(".slider-card-info-detail").slick("getSlick").slideCount);
+
+  // Update arrows on slide change
+  $(".slider-card-info-detail").on(
+    "afterChange",
+    function (event, slick, currentSlide) {
+      updateArrows(currentSlide, slick.slideCount);
+    }
+  );
+});
 
 function getSliderDefaultOptionsPesan() {
   return {
@@ -1859,37 +1878,6 @@ window.showCardInfoDetail = function (param) {
         setTimeout(function () {
           initSlick(".slider-card-info-detail", getSliderDetail());
           addVideoEventHandlers(".slider-card-info-detail");
-
-          // Fungsi untuk mengupdate panah berdasarkan slide saat ini dan jumlah total slide
-          function updateArrows(currentSlide, slideCount) {
-            if (currentSlide === 0) {
-              $(".slick-prev").css("display", "none").addClass("hidden");
-            } else {
-              $(".slick-prev").css("display", "block").removeClass("hidden");
-            }
-
-            if (currentSlide === slideCount - 1) {
-              $(".slick-next").css("pointer-events", "none").addClass("hidden");
-            } else {
-              $(".slick-next")
-                .css("pointer-events", "all")
-                .removeClass("hidden");
-            }
-          }
-
-          // Inisialisasi update panah saat slider pertama kali dimuat
-          updateArrows(
-            0,
-            $(".slider-card-info-detail").slick("getSlick").slideCount
-          );
-
-          // Update panah pada perubahan slide
-          $(".slider-card-info-detail").on(
-            "afterChange",
-            function (event, slick, currentSlide) {
-              updateArrows(currentSlide, slick.slideCount);
-            }
-          );
 
           $(".slider-card-info-detail").slick("resize");
         }, 100);
@@ -4853,4 +4841,36 @@ document.addEventListener("DOMContentLoaded", function () {
     kontenA.classList.add("hidden");
     kontenB.classList.remove("hidden");
   });
+});
+
+$(document).ready(function () {
+  var $carousel = $(".slick-initialized.slick-slider.slick-dotted");
+  var $prevArrow = $(".slick-prev.slick-arrow");
+  var $nextArrow = $(".slick-next.slick-arrow");
+
+  $carousel.slick({
+    arrows: true,
+    prevArrow: $prevArrow,
+    nextArrow: $nextArrow,
+    appendArrows: ".arrow-container",
+  });
+
+  function updateArrows(currentSlide, slideCount) {
+    $prevArrow.toggleClass("hidden", currentSlide === 0);
+    $nextArrow.toggleClass("hidden", currentSlide === slideCount - 1);
+  }
+
+  // Initial check
+  updateArrows(
+    $carousel.slick("slickCurrentSlide"),
+    $carousel.slick("getSlick").slideCount
+  );
+
+  // Update on slide change
+  $carousel.on(
+    "beforeChange",
+    function (event, slick, currentSlide, nextSlide) {
+      updateArrows(nextSlide, slick.slideCount);
+    }
+  );
 });
