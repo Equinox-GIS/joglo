@@ -1041,13 +1041,8 @@ function getSliderDetail() {
                   </div>
                 </button>`,
     dotsClass: "slick-dots custom-dots-class",
-    onAfterChange: function (slide, index) {
-      console.log(index);
-      if (index === 4) {
-        $(".slick-next").css("pointer-events", "none");
-      } else {
-        $(".slick-next").css("pointer-events", "all");
-      }
+    onAfterChange: function (event, slick, currentSlide) {
+      updateArrows(currentSlide, slick.slideCount);
     },
   };
 }
