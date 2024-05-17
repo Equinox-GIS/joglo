@@ -1284,7 +1284,9 @@ function addClickHandlerToDots() {
 // -------------------Start Slider-------------------
 
 $(document).ready(function () {
-  initSlickCardInfo("slider-card-beranda");
+  // initSlickCardInfo("slider-card-beranda");
+  initSlickFavorit();
+
   // initSlickStoryGaleri();
   cardModeTiga();
   cardModePesan();
@@ -2467,9 +2469,11 @@ document.addEventListener("DOMContentLoaded", function () {
         enable();
         // stopAndResetVideo();
         // Menginisialisasi setiap slider
-        if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
-          initSlickCardInfo("slider-card-beranda");
-        }
+        // if (!$(".slider-card-beranda").hasClass("slick-initialized")) {
+        //   initSlickCardInfo("slider-card-beranda");
+        // }
+
+        initSlickFavorit();
 
         initSlickStoryGaleri();
 
