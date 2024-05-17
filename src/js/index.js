@@ -4868,5 +4868,4 @@ function toggleModal() {
   body.classList.toggle("modal_listing-active");
 }
 
-
 // modal
