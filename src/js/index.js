@@ -1018,23 +1018,7 @@ function getSliderStories() {
 
 // Example of initializing the slider and setting up the wheel event handler
 $(document).ready(function () {
-  var slider = $(".slider-story-galeri");
-  var sliderConfig = getSliderStoryGaleri();
-
-  slider.slick(sliderConfig);
-
-  slider.on("wheel", function (e) {
-    e.preventDefault();
-
-    // Check horizontal wheel movement (deltaX) for left/right navigation
-    if (Math.abs(e.originalEvent.deltaX) > Math.abs(e.originalEvent.deltaY)) {
-      if (e.originalEvent.deltaX > 0) {
-        slider.slick("slickNext");
-      } else {
-        slider.slick("slickPrev");
-      }
-    }
-  });
+  initSlider(".slider-story-galeri", initSlickStoryGaleri());
 });
 
 function getSliderVideo() {
@@ -1185,17 +1169,17 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
-// function initSlickStoryGaleri() {
-//   $(".slider-story-galeri")
-//     .on("init", function () {
-//       setTimeout(function () {
-//         moveDotsToCustomContainer();
-//         addClickHandlerToDots();
-//         disableClickHandlerToDots();
-//       }, 0);
-//     })
-//     .slick(getSliderStoryGaleri());
-// }
+function initSlickStoryGaleri() {
+  $(".slider-story-galeri")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderStoryGaleri());
+}
 
 function initSlickVideo() {
   $(".slider-menu-video")
