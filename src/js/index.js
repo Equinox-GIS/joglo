@@ -1018,23 +1018,7 @@ function getSliderStories() {
 
 // Example of initializing the slider and setting up the wheel event handler
 $(document).ready(function () {
-  var slider = $(".slider-story-galeri");
-  var sliderConfig = getSliderStoryGaleri();
-
-  slider.slick(sliderConfig);
-
-  slider.on("wheel", function (e) {
-    e.preventDefault();
-
-    // Check horizontal wheel movement (deltaX) for left/right navigation
-    if (Math.abs(e.originalEvent.deltaX) > Math.abs(e.originalEvent.deltaY)) {
-      if (e.originalEvent.deltaX > 0) {
-        slider.slick("slickNext");
-      } else {
-        slider.slick("slickPrev");
-      }
-    }
-  });
+  initSlider(".slider-story-galeri", initSlickStoryGaleri());
 });
 
 function getSliderVideo() {
@@ -1185,17 +1169,17 @@ function initSlickFavorit() {
     .slick(getSliderDefaultOptions());
 }
 
-// function initSlickStoryGaleri() {
-//   $(".slider-story-galeri")
-//     .on("init", function () {
-//       setTimeout(function () {
-//         moveDotsToCustomContainer();
-//         addClickHandlerToDots();
-//         disableClickHandlerToDots();
-//       }, 0);
-//     })
-//     .slick(getSliderStoryGaleri());
-// }
+function initSlickStoryGaleri() {
+  $(".slider-story-galeri")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderStoryGaleri());
+}
 
 function initSlickVideo() {
   $(".slider-menu-video")
@@ -1694,7 +1678,7 @@ window.showPostingStories = function (element) {
 function showJudulPostinganListing() {
   var judulRegistrasiPanelLogin = document.querySelectorAll(".judulStory");
   judulRegistrasiPanelLogin.forEach(function (element) {
-    element.textContent = "Listing";
+    element.textContent = "Listing Baru";
   });
 }
 
@@ -4845,3 +4829,43 @@ document.addEventListener("DOMContentLoaded", function () {
     kontenB.classList.remove("hidden");
   });
 });
+
+// fungsi untuk modal listing
+var openmodal = document.querySelectorAll(".modal_listing-open");
+for (var i = 0; i < openmodal.length; i++) {
+  openmodal[i].addEventListener("click", function (event) {
+    event.preventDefault();
+    toggleModal();
+  });
+}
+
+const overlay = document.querySelector(".modal_listing-overlay");
+overlay.addEventListener("click", toggleModal);
+
+var closemodal = document.querySelectorAll(".modal_listing-close");
+for (var i = 0; i < closemodal.length; i++) {
+  closemodal[i].addEventListener("click", toggleModal);
+}
+
+document.onkeydown = function (evt) {
+  evt = evt || window.event;
+  var isEscape = false;
+  if ("key" in evt) {
+    isEscape = evt.key === "Escape" || evt.key === "Esc";
+  } else {
+    isEscape = evt.keyCode === 27;
+  }
+  if (isEscape && document.body.classList.contains("modal_listing-active")) {
+    toggleModal();
+  }
+};
+
+function toggleModal() {
+  const body = document.querySelector("body");
+  const modal = document.querySelector(".modal_listing");
+  modal.classList.toggle("opacity-0");
+  modal.classList.toggle("pointer-events-none");
+  body.classList.toggle("modal_listing-active");
+}
+
+// modal
