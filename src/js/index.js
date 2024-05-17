@@ -66,20 +66,6 @@ nameUserElements.forEach(function (element) {
 //   });
 // }
 
-function updateArrows(currentSlide, slideCount) {
-  if (currentSlide === 0) {
-    $(".slick-prev").hide();
-  } else {
-    $(".slick-prev").show();
-  }
-
-  if (currentSlide === slideCount - 1) {
-    $(".slick-next").hide();
-  } else {
-    $(".slick-next").show();
-  }
-}
-
 document.getElementById("luas1").innerHTML = "<100";
 document.getElementById("btn1").innerHTML = "<100";
 
@@ -900,6 +886,26 @@ function destroySlick(element) {
   }
 }
 
+function initSlider(sliderClass, options) {
+  $(sliderClass)
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(options);
+
+  updateArrows(0, $(sliderClass).slick("getSlick").slideCount);
+
+  $(sliderClass).on("afterChange", function (event, slick, currentSlide) {
+    updateArrows(currentSlide, slick.slideCount);
+  });
+
+  $(sliderClass).slick("resize");
+}
+
 function getSliderDefaultOptions() {
   return {
     dots: true,
@@ -918,6 +924,20 @@ function getSliderDefaultOptions() {
                   </div>
                 </button>`,
   };
+}
+
+function updateArrows(currentSlide, slideCount) {
+  if (currentSlide === 0) {
+    $(".slick-prev").css("display", "none").addClass("hidden");
+  } else {
+    $(".slick-prev").css("display", "block").removeClass("hidden");
+  }
+
+  if (currentSlide === slideCount - 1) {
+    $(".slick-next").css("pointer-events", "none").addClass("hidden");
+  } else {
+    $(".slick-next").css("pointer-events", "all").removeClass("hidden");
+  }
 }
 
 function getSliderAdsReach() {
@@ -1285,7 +1305,7 @@ function addClickHandlerToDots() {
 
 $(document).ready(function () {
   // initSlickCardInfo("slider-card-beranda");
-  initSlickFavorit();
+  initSlider(".slider-favorit", getSliderDefaultOptions());
 
   // initSlickStoryGaleri();
   cardModeTiga();
@@ -1859,50 +1879,17 @@ window.showCardInfoDetail = function (param) {
 
       if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
         setTimeout(function () {
-          initSlick(".slider-card-info-detail", getSliderDetail());
+          initSlider(".slider-card-info-detail", getSliderDetail());
           addVideoEventHandlers(".slider-card-info-detail");
 
-          // Fungsi untuk mengupdate panah berdasarkan slide saat ini dan jumlah total slide
-          function updateArrows(currentSlide, slideCount) {
-            if (currentSlide === 0) {
-              $(".slick-prev").css("display", "none").addClass("hidden");
-            } else {
-              $(".slick-prev").css("display", "block").removeClass("hidden");
-            }
-
-            if (currentSlide === slideCount - 1) {
-              $(".slick-next").css("pointer-events", "none").addClass("hidden");
-            } else {
-              $(".slick-next")
-                .css("pointer-events", "all")
-                .removeClass("hidden");
-            }
+          // Play the first video (if it exists)
+          let firstVideo = $(".slider-card-info-detail").find(
+            "div.slick-current video"
+          );
+          if (firstVideo.length) {
+            firstVideo[0].play();
           }
-
-          // Inisialisasi update panah saat slider pertama kali dimuat
-          updateArrows(
-            0,
-            $(".slider-card-info-detail").slick("getSlick").slideCount
-          );
-
-          // Update panah pada perubahan slide
-          $(".slider-card-info-detail").on(
-            "afterChange",
-            function (event, slick, currentSlide) {
-              updateArrows(currentSlide, slick.slideCount);
-            }
-          );
-
-          $(".slider-card-info-detail").slick("resize");
         }, 100);
-
-        // Play the first video (if it exists)
-        let firstVideo = $(".slider-card-info-detail").find(
-          "div.slick-current video"
-        );
-        if (firstVideo.length) {
-          firstVideo[0].play();
-        }
       }
 
       //
