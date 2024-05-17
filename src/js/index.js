@@ -4860,8 +4860,6 @@ document.onkeydown = function (evt) {
   }
 };
 
-//
-
 function toggleModal() {
   const body = document.querySelector("body");
   const modal = document.querySelector(".modal_listing");
