@@ -1483,8 +1483,7 @@ window.showMessage = function (element) {
 //
 
 window.CloseTabPesan = function () {
-
-   CloseCoBrokingDetail();
+  CloseCoBrokingDetail();
 
   if (lastClickedPesan) {
     document.getElementById("MenuSatuTab").click();
@@ -3074,21 +3073,42 @@ window.ShowCoBroking = function () {
 };
 
 window.ShowCoBrokingDetail = function () {
-  var defaultPesan = document.querySelector(".default_pesan_dua");
-  var detail = document.querySelector(".halaman_co_broking");
+  // var defaultPesan = document.querySelector(".default_pesan_dua");
+  // var detail = document.querySelector(".halaman_co_broking");
+  // var coDetail = document.querySelector(".halaman_co_broking_detail");
+  // var CloseDetail = document.querySelector(".hidden-close-tab-pesan");
+
+  // // Hapus kelas 'hidden' dari detail
+  // detail.classList.add("hidden");
+
+  // // Tambahkan kelas 'hidden' pada defaultPesan
+  // defaultPesan.classList.add("hidden");
+
+  // // Tambahkan kelas 'hidden' pada coDetail
+  // coDetail.classList.remove("hidden");
+
+  // CloseDetail.classList.remove("hidden");
+
+  // konten-co-broking
+  // konten-default-pesan
+  // konten-pesan-orang-1
+  // konten-pesan-orang-2
+  var kontenCoBroking = document.querySelector(".konten-co-broking");
+  var kontenDefaultPesan = document.querySelector(".konten-default-pesan");
+  var kontenPesanOrang1 = document.querySelector(".konten-pesan-orang-1");
+  var kontenPesanOrang2 = document.querySelector(".konten-pesan-orang-2");
+
   var coDetail = document.querySelector(".halaman_co_broking_detail");
-  var CloseDetail = document.querySelector(".hidden-close-tab-pesan");
+  var CloseDetail = document.querySelector(".hidden-close-tab-pesan-co-broking");
 
+  // Sembunyikan konten default pesan
+  kontenCoBroking.classList.add("hidden");
+  kontenDefaultPesan.classList.add("hidden");
+  kontenPesanOrang1.classList.add("hidden");
+  kontenPesanOrang2.classList.add("hidden");
 
-  // Hapus kelas 'hidden' dari detail
-  detail.classList.add("hidden");
-
-  // Tambahkan kelas 'hidden' pada defaultPesan
-  defaultPesan.classList.add("hidden");
-
-  // Tambahkan kelas 'hidden' pada coDetail
+  // Tampilkan konten co broking
   coDetail.classList.remove("hidden");
-
   CloseDetail.classList.remove("hidden");
 
 };
@@ -3111,23 +3131,22 @@ window.MenyukaiPesanThread = function (elem) {
 };
 
 window.CloseCoBrokingDetail = function () {
-  var defaultPesan = document.querySelector(".default_pesan_dua");
-  var detail = document.querySelector(".halaman_co_broking");
+  var kontenCoBroking = document.querySelector(".konten-co-broking");
+  var kontenDefaultPesan = document.querySelector(".konten-default-pesan");
+  var kontenPesanOrang1 = document.querySelector(".konten-pesan-orang-1");
+  var kontenPesanOrang2 = document.querySelector(".konten-pesan-orang-2");
+
   var coDetail = document.querySelector(".halaman_co_broking_detail");
+  var CloseDetail = document.querySelector(".hidden-close-tab-pesan");
 
-  var back_detail = document.querySelector(".hidden-close-tab-pesan");
-
-  // Hapus kelas 'hidden' dari detail
-  detail.classList.add("hidden");
-
-  // Tambahkan kelas 'hidden' pada defaultPesan
-  defaultPesan.classList.remove("hidden");
-
-  // Tambahkan kelas 'hidden' pada coDetail
+  // Sembunyikan konten default pesan
+  kontenCoBroking.classList.remove("hidden");
+  kontenDefaultPesan.classList.add("hidden");
+  kontenPesanOrang1.classList.add("hidden");
+  kontenPesanOrang2.classList.add("hidden");
   coDetail.classList.add("hidden");
+  CloseDetail.classList.add("hidden");
 
-  back_detail.classList.add("hidden");
-  
 
 
 };
@@ -4845,41 +4864,72 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Modal
 
-// Modal 
+window.openModal = function (modalId) {
+  document.getElementById(modalId).classList.remove("hidden");
+  document.getElementById(modalId).classList.add("flex");
+  document.getElementsByTagName("body")[0].classList.add("overflow-y-hidden");
+};
 
-    window.openModal = function (modalId) {
-      document.getElementById(modalId).classList.remove("hidden");
-      document.getElementById(modalId).classList.add("flex");
-      document
-        .getElementsByTagName("body")[0]
-        .classList.add("overflow-y-hidden");
-    };
+window.closeModal = function (modalId) {
+  document.getElementById(modalId).classList.add("hidden");
+  document.getElementById(modalId).classList.remove("flex");
+  document
+    .getElementsByTagName("body")[0]
+    .classList.remove("overflow-y-hidden");
+};
 
-    window.closeModal = function (modalId) {
-      document.getElementById(modalId).classList.add("hidden");
-      document.getElementById(modalId).classList.remove("flex");
-      document
-        .getElementsByTagName("body")[0]
-        .classList.remove("overflow-y-hidden");
-    };
+window.closeModalOnOutsideClick = function (event, modalId) {
+  if (event.target.id === modalId) {
+    closeModal(modalId);
+  }
+};
 
-    window.closeModalOnOutsideClick = function (event, modalId) {
-      if (event.target.id === modalId) {
-        closeModal(modalId);
-      }
-    };
+document.onkeydown = function (event) {
+  event = event || window.event;
+  if (event.keyCode === 27) {
+    document
+      .getElementsByTagName("body")[0]
+      .classList.remove("overflow-y-hidden");
+    let modals = document.getElementsByClassName("fixed");
+    Array.prototype.slice.call(modals).forEach((i) => {
+      i.classList.add("hidden");
+      i.classList.remove("flex");
+    });
+  }
+};
 
-    document.onkeydown = function (event) {
-      event = event || window.event;
-      if (event.keyCode === 27) {
-        document
-          .getElementsByTagName("body")[0]
-          .classList.remove("overflow-y-hidden");
-        let modals = document.getElementsByClassName("fixed");
-        Array.prototype.slice.call(modals).forEach((i) => {
-          i.classList.add("hidden");
-          i.classList.remove("flex");
-        });
-      }
-    };
+function showContent(contentClass) {
+  // Sembunyikan semua konten
+  var allContents = document.querySelectorAll(
+    ".konten-co-broking, .konten-default-pesan, .konten-pesan-orang-1, .konten-pesan-orang-2"
+  );
+  allContents.forEach(function (elem) {
+    elem.classList.add("hidden");
+  });
+
+  // Tampilkan konten yang sesuai
+  var contentToShow = document.querySelector("." + contentClass);
+  if (contentToShow) {
+    contentToShow.classList.remove("hidden");
+  }
+}
+
+// Membuat fungsi global
+window.showContent = showContent;
+
+// Tampilkan konten 'konten-default-pesan' saat halaman dimuat
+document.addEventListener("DOMContentLoaded", function () {
+  showContent("konten-default-pesan");
+});
+
+// Event listener untuk elemen dengan data-attribut
+document.querySelectorAll(".menu-pesan-area").forEach(function (elem) {
+  elem.addEventListener("click", function () {
+    var attribut = this.getAttribute("data-attribut");
+    if (attribut) {
+      showContent("konten-" + attribut);
+    }
+  });
+});
