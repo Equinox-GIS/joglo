@@ -1483,6 +1483,9 @@ window.showMessage = function (element) {
 //
 
 window.CloseTabPesan = function () {
+
+   CloseCoBrokingDetail();
+
   if (lastClickedPesan) {
     document.getElementById("MenuSatuTab").click();
 
@@ -3074,6 +3077,8 @@ window.ShowCoBrokingDetail = function () {
   var defaultPesan = document.querySelector(".default_pesan_dua");
   var detail = document.querySelector(".halaman_co_broking");
   var coDetail = document.querySelector(".halaman_co_broking_detail");
+  var CloseDetail = document.querySelector(".hidden-close-tab-pesan");
+
 
   // Hapus kelas 'hidden' dari detail
   detail.classList.add("hidden");
@@ -3083,6 +3088,9 @@ window.ShowCoBrokingDetail = function () {
 
   // Tambahkan kelas 'hidden' pada coDetail
   coDetail.classList.remove("hidden");
+
+  CloseDetail.classList.remove("hidden");
+
 };
 
 window.MenyukaiPesanThread = function (elem) {
@@ -3107,6 +3115,8 @@ window.CloseCoBrokingDetail = function () {
   var detail = document.querySelector(".halaman_co_broking");
   var coDetail = document.querySelector(".halaman_co_broking_detail");
 
+  var back_detail = document.querySelector(".hidden-close-tab-pesan");
+
   // Hapus kelas 'hidden' dari detail
   detail.classList.add("hidden");
 
@@ -3115,6 +3125,11 @@ window.CloseCoBrokingDetail = function () {
 
   // Tambahkan kelas 'hidden' pada coDetail
   coDetail.classList.add("hidden");
+
+  back_detail.classList.add("hidden");
+  
+
+
 };
 
 // Nama orang pindah ke profil agen
@@ -4831,4 +4846,40 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//
+// Modal 
+
+    window.openModal = function (modalId) {
+      document.getElementById(modalId).classList.remove("hidden");
+      document.getElementById(modalId).classList.add("flex");
+      document
+        .getElementsByTagName("body")[0]
+        .classList.add("overflow-y-hidden");
+    };
+
+    window.closeModal = function (modalId) {
+      document.getElementById(modalId).classList.add("hidden");
+      document.getElementById(modalId).classList.remove("flex");
+      document
+        .getElementsByTagName("body")[0]
+        .classList.remove("overflow-y-hidden");
+    };
+
+    window.closeModalOnOutsideClick = function (event, modalId) {
+      if (event.target.id === modalId) {
+        closeModal(modalId);
+      }
+    };
+
+    document.onkeydown = function (event) {
+      event = event || window.event;
+      if (event.keyCode === 27) {
+        document
+          .getElementsByTagName("body")[0]
+          .classList.remove("overflow-y-hidden");
+        let modals = document.getElementsByClassName("fixed");
+        Array.prototype.slice.call(modals).forEach((i) => {
+          i.classList.add("hidden");
+          i.classList.remove("flex");
+        });
+      }
+    };
