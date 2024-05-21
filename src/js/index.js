@@ -3138,6 +3138,8 @@ window.CloseCoBrokingDetail = function () {
 
   var coDetail = document.querySelector(".halaman_co_broking_detail");
   var CloseDetail = document.querySelector(".hidden-close-tab-pesan");
+  var CloseDetailBroking = document.querySelector(".hidden-close-tab-pesan-co-broking");
+
 
   // Sembunyikan konten default pesan
   kontenCoBroking.classList.remove("hidden");
@@ -3146,6 +3148,8 @@ window.CloseCoBrokingDetail = function () {
   kontenPesanOrang2.classList.add("hidden");
   coDetail.classList.add("hidden");
   CloseDetail.classList.add("hidden");
+  CloseDetailBroking.classList.add("hidden");
+  
 
 
 
