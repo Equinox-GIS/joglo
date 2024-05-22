@@ -906,6 +906,26 @@ function initSlider(sliderClass, options) {
   $(sliderClass).slick("resize");
 }
 
+function initSliderStories(sliderClass, options) {
+  $(sliderClass)
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(options);
+
+  updateArrowsStories(0, $(sliderClass).slick("getSlick").slideCount);
+
+  $(sliderClass).on("afterChange", function (event, slick, currentSlide) {
+    updateArrowsStories(currentSlide, slick.slideCount);
+  });
+
+  $(sliderClass).slick("resize");
+}
+
 function getSliderDefaultOptions() {
   return {
     dots: true,
@@ -913,13 +933,33 @@ function getSliderDefaultOptions() {
     arrows: true,
     pauseOnHover: false,
     swipe: false,
-    prevArrow: `<button type="button" class="slick-prev" onclick="event.stopPropagation();">
+    prevArrow: `<button type="button" class="slick-prev slick-prev-favorit" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
                     <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
-    nextArrow: `<button type="button" class="slick-next" onclick="event.stopPropagation();">
+    nextArrow: `<button type="button" class="slick-next  slick-next-favorit" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+  };
+}
+
+function getSliderStoryGaleri() {
+  return {
+    slidesToShow: 9,
+    slidesToScroll: 5,
+    infinite: false,
+    dots: false,
+    prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-40px !important; opacity:1; onclick="event.stopPropagation();">
+    <div>
+                  <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-42px!important; opacity:1; onclick="event.stopPropagation();">
+                  <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
                     <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,
@@ -928,15 +968,30 @@ function getSliderDefaultOptions() {
 
 function updateArrows(currentSlide, slideCount) {
   if (currentSlide === 0) {
-    $(".slick-prev").css("display", "none").addClass("hidden");
+    $(".slick-prev-favorit").css("display", "none").addClass("hidden");
   } else {
-    $(".slick-prev").css("display", "block").removeClass("hidden");
+    $(".slick-prev-favorit").css("display", "block").removeClass("hidden");
   }
 
   if (currentSlide === slideCount - 1) {
-    $(".slick-next").css("pointer-events", "none").addClass("hidden");
+    $(".slick-next-favorit").css("pointer-events", "none").addClass("hidden");
   } else {
-    $(".slick-next").css("pointer-events", "all").removeClass("hidden");
+    $(".slick-next-favorit").css("pointer-events", "all").removeClass("hidden");
+  }
+}
+
+function updateArrowsStories(currentSlide, slideCount) {
+  if (currentSlide === 0) {
+    $(".slick-prev-story").css("display", "none").addClass("hidden");
+  } else {
+    $(".slick-prev-story").css("display", "block").removeClass("hidden");
+  }
+
+  // Update condition to hide 'next' arrow correctly
+  if (currentSlide >= slideCount - 9) {
+    $(".slick-next-story").css("display", "none").addClass("hidden");
+  } else {
+    $(".slick-next-story").css("display", "block").removeClass("hidden");
   }
 }
 
@@ -966,26 +1021,6 @@ function getSliderAdsReach() {
   });
 
   return sliderConfig;
-}
-
-function getSliderStoryGaleri() {
-  return {
-    slidesToShow: 9,
-    slidesToScroll: 5,
-    infinite: false,
-    dots: false,
-    prevArrow: `<button type="button" class="slick-prev slick-prev-story" style="margin-left:-55px !important; opacity:1; onclick="event.stopPropagation();">
-    <div>
-                  <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
-                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
-                  </div>
-                </button>`,
-    nextArrow: `<button type="button" class="slick-next slick-next-story" style="margin-right:-55px!important; opacity:1; onclick="event.stopPropagation();">
-                  <div class="img-wrapper" style="border: 1.5px solid #afb4b8;">
-                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
-                  </div>
-                </button>`,
-  };
 }
 
 function getSliderStories() {
@@ -1018,7 +1053,14 @@ function getSliderStories() {
 
 // Example of initializing the slider and setting up the wheel event handler
 $(document).ready(function () {
-  initSlider(".slider-story-galeri", initSlickStoryGaleri());
+  var slider = $(".slider-story-galeri");
+
+  slider.on("init reInit afterChange", function (event, slick, currentSlide) {
+    var current = currentSlide ? currentSlide : 0;
+    updateArrowsStories(current, slick.slideCount);
+  });
+
+  slider.slick(getSliderStoryGaleri());
 });
 
 function getSliderVideo() {
@@ -1289,7 +1331,16 @@ function addClickHandlerToDots() {
 
 $(document).ready(function () {
   // initSlickCardInfo("slider-card-beranda");
-  initSlider(".slider-favorit", getSliderDefaultOptions());
+  // initSlider(".slider-favorit", getSliderDefaultOptions());
+
+  var slider = $(".slider-favorit");
+
+  slider.on("init reInit afterChange", function (event, slick, currentSlide) {
+    var current = currentSlide ? currentSlide : 0;
+    updateArrows(current, slick.slideCount);
+  });
+
+  slider.slick(getSliderDefaultOptions());
 
   // initSlickStoryGaleri();
   cardModeTiga();
@@ -3099,7 +3150,9 @@ window.ShowCoBrokingDetail = function () {
   var kontenPesanOrang2 = document.querySelector(".konten-pesan-orang-2");
 
   var coDetail = document.querySelector(".halaman_co_broking_detail");
-  var CloseDetail = document.querySelector(".hidden-close-tab-pesan-co-broking");
+  var CloseDetail = document.querySelector(
+    ".hidden-close-tab-pesan-co-broking"
+  );
 
   // Sembunyikan konten default pesan
   kontenCoBroking.classList.add("hidden");
@@ -3110,7 +3163,6 @@ window.ShowCoBrokingDetail = function () {
   // Tampilkan konten co broking
   coDetail.classList.remove("hidden");
   CloseDetail.classList.remove("hidden");
-
 };
 
 window.MenyukaiPesanThread = function (elem) {
@@ -3138,8 +3190,9 @@ window.CloseCoBrokingDetail = function () {
 
   var coDetail = document.querySelector(".halaman_co_broking_detail");
   var CloseDetail = document.querySelector(".hidden-close-tab-pesan");
-  var CloseDetailBroking = document.querySelector(".hidden-close-tab-pesan-co-broking");
-
+  var CloseDetailBroking = document.querySelector(
+    ".hidden-close-tab-pesan-co-broking"
+  );
 
   // Sembunyikan konten default pesan
   kontenCoBroking.classList.remove("hidden");
@@ -3149,10 +3202,6 @@ window.CloseCoBrokingDetail = function () {
   coDetail.classList.add("hidden");
   CloseDetail.classList.add("hidden");
   CloseDetailBroking.classList.add("hidden");
-  
-
-
-
 };
 
 // Nama orang pindah ke profil agen
