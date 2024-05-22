@@ -341,7 +341,7 @@
 
 /* Layer and Location Icons */
 .btn-layer {
-  background-image: url("../images/layer-map.png");
+  background-image: url("../images/gm1/layer-map.png");
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;
@@ -363,7 +363,7 @@
 }
 
 .btn-stick {
-  background-image: url("../images/stick-map.png") !important;
+  background-image: url("../images/gm1/stick-map.png") !important;
   background-position: 50% !important;
   background-repeat: no-repeat !important;
   display: block !important;

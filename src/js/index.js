@@ -2635,6 +2635,8 @@ document.addEventListener("DOMContentLoaded", function () {
         initSlickFavorit();
         cardModeTigaFavorit();
 
+        console.log("MenuTigaTab");
+
         // stopAndResetVideo();
         enable();
         isTeksBerjalanActive = true;
