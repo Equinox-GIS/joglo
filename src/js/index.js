@@ -1434,9 +1434,6 @@ function addClickHandlerToDots() {
 // -------------------Start Slider-------------------
 
 $(document).ready(function () {
-  // initSlickCardInfo("slider-card-beranda");
-  // initSlider(".slider-favorit", getSliderDefaultOptions());
-
   var slider = $(".slider-favorit");
 
   slider.on("init reInit afterChange", function (event, slick, currentSlide) {
@@ -3015,7 +3012,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
       //   initSlick(".slider-favorit", getSliderDefaultOptions());
       // }
 
-      initSlickModeKetiga();
+      // Inisialisasi slider mode ketiga jika belum diinisialisasi
+      if (!$(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+        initSliderModeKetiga(".slider-card-mode-ketiga", getSliderModeKetiga());
+      } else {
+        $(".slider-card-mode-ketiga").slick("setPosition");
+      }
       //
     } else {
       // Tampilkan mode pertama pada klik kedua
