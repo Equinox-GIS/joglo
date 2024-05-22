@@ -966,6 +966,26 @@ function getSliderDefaultOptions() {
   };
 }
 
+function getSliderModeKetiga() {
+  return {
+    dots: true,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    prevArrow: `<button type="button" class="slick-prev slick-prev-mode-ketiga" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next  slick-next-mode-ketiga" onclick="event.stopPropagation();">
+                  <div class="img-wrapper">
+                    <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+  };
+}
+
 function getSliderStoryGaleri() {
   return {
     slidesToShow: 9,
@@ -984,6 +1004,26 @@ function getSliderStoryGaleri() {
                   </div>
                 </button>`,
   };
+}
+
+function initSliderModeKetiga(sliderClass, options) {
+  $(sliderClass)
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(options);
+
+  updateArrowsModeKetiga(0, $(sliderClass).slick("getSlick").slideCount);
+
+  $(sliderClass).on("afterChange", function (event, slick, currentSlide) {
+    updateArrowsModeKetiga(currentSlide, slick.slideCount);
+  });
+
+  $(sliderClass).slick("resize");
 }
 
 function updateArrows(currentSlide, slideCount) {
@@ -1011,6 +1051,24 @@ function updateArrowsDetail(currentSlide, slideCount) {
     $(".slick-next-detail").css("pointer-events", "none").addClass("hidden");
   } else {
     $(".slick-next-detail").css("pointer-events", "all").removeClass("hidden");
+  }
+}
+
+function updateArrowsModeKetiga(currentSlide, slideCount) {
+  if (currentSlide === 0) {
+    $(".slick-prev-mode-ketiga").css("display", "none").addClass("hidden");
+  } else {
+    $(".slick-prev-mode-ketiga").css("display", "block").removeClass("hidden");
+  }
+
+  if (currentSlide === slideCount - 1) {
+    $(".slick-next-mode-ketiga")
+      .css("pointer-events", "none")
+      .addClass("hidden");
+  } else {
+    $(".slick-next-mode-ketiga")
+      .css("pointer-events", "all")
+      .removeClass("hidden");
   }
 }
 
@@ -1243,6 +1301,18 @@ function initSlickFavorit() {
       }, 0);
     })
     .slick(getSliderDefaultOptions());
+}
+
+function initSlickModeKetiga() {
+  $(".slider-card-mode-ketiga")
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(getSliderModeKetiga());
 }
 
 function initSlickStoryGaleri() {
@@ -2936,17 +3006,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
       secondMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      cardModeTigaFavorit();
-      initSlickAgenDetail();
-      cardModeTiga();
+      // mematikan
+      // cardModeTigaFavorit();
+      // initSlickAgenDetail();
+      // cardModeTiga();
     } else {
       // Tampilkan mode pertama pada klik kedua
       firstMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      cardModeTigaFavorit();
-      initSlickAgenDetail();
-      cardModeTiga();
+      // mematikan
+      // cardModeTigaFavorit();
+      // initSlickAgenDetail();
+      // cardModeTiga();
     }
   };
 
@@ -3531,10 +3603,21 @@ function cardModeTiga() {
     if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
       $(".slider-card-mode-ketiga").slick("setPosition");
     } else {
-      initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+      initSliderModeKetiga(".slider-card-mode-ketiga", getSliderModeKetiga());
     }
   }, 100);
 }
+
+$(document).ready(function () {
+  var slider = $(".slider-card-mode-ketiga");
+
+  slider.on("init reInit afterChange", function (event, slick, currentSlide) {
+    var current = currentSlide ? currentSlide : 0;
+    updateArrows(current, slick.slideCount);
+  });
+
+  slider.slick(getSliderDefaultOptions());
+});
 
 function cardModePesan() {
   setTimeout(function () {
