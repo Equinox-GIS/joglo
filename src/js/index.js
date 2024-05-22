@@ -926,6 +926,26 @@ function initSliderStories(sliderClass, options) {
   $(sliderClass).slick("resize");
 }
 
+function initSliderDetail(sliderClass, options) {
+  $(sliderClass)
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(options);
+
+  updateArrowsDetail(0, $(sliderClass).slick("getSlick").slideCount);
+
+  $(sliderClass).on("afterChange", function (event, slick, currentSlide) {
+    updateArrowsDetail(currentSlide, slick.slideCount);
+  });
+
+  $(sliderClass).slick("resize");
+}
+
 function getSliderDefaultOptions() {
   return {
     dots: true,
@@ -977,6 +997,20 @@ function updateArrows(currentSlide, slideCount) {
     $(".slick-next-favorit").css("pointer-events", "none").addClass("hidden");
   } else {
     $(".slick-next-favorit").css("pointer-events", "all").removeClass("hidden");
+  }
+}
+
+function updateArrowsDetail(currentSlide, slideCount) {
+  if (currentSlide === 0) {
+    $(".slick-prev-detail").css("display", "none").addClass("hidden");
+  } else {
+    $(".slick-prev-detail").css("display", "block").removeClass("hidden");
+  }
+
+  if (currentSlide === slideCount - 1) {
+    $(".slick-next-detail").css("pointer-events", "none").addClass("hidden");
+  } else {
+    $(".slick-next-detail").css("pointer-events", "all").removeClass("hidden");
   }
 }
 
@@ -1090,12 +1124,12 @@ function getSliderDetail() {
     arrows: true,
     pauseOnHover: false,
     swipe: false,
-    prevArrow: `<button type="button" class="slick-prev slick-prev-favorit" style="left:4px !important;" onclick="event.stopPropagation();">
+    prevArrow: `<button type="button" class="slick-prev slick-prev-detail" style="left:4px !important;" onclick="event.stopPropagation();">
                   <div class="img-wrapper-detail">
                     <img style="margin-right: 2px;" class="custom-img-slick-detail" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
-    nextArrow: `<button type="button" class="slick-next slick-next-favorit" style="right:5px !important;" onclick="event.stopPropagation();">
+    nextArrow: `<button type="button" class="slick-next slick-next-detail" style="right:5px !important;" onclick="event.stopPropagation();">
                   <div class="img-wrapper-detail">
                     <img style="margin-left: 2px;" class="custom-img-slick-detail" src="${nextArrowImg}" alt="Next">
                   </div>
@@ -1916,7 +1950,8 @@ window.showCardInfoDetail = function (param) {
 
       if (!$(".slider-card-info-detail").hasClass("slick-initialized")) {
         setTimeout(function () {
-          initSlider(".slider-card-info-detail", getSliderDetail());
+          initSliderDetail(".slider-card-info-detail", getSliderDetail());
+
           addVideoEventHandlers(".slider-card-info-detail");
 
           // Play the first video (if it exists)
