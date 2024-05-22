@@ -978,7 +978,7 @@ function getSliderModeKetiga() {
                     <img style="margin-right: 1px;" class="custom-img-slick" src="${prevArrowImg}" alt="Previous">
                   </div>
                 </button>`,
-    nextArrow: `<button type="button" class="slick-next  slick-next-mode-ketiga" onclick="event.stopPropagation();">
+    nextArrow: `<button type="button" class="slick-next slick-next-mode-ketiga" onclick="event.stopPropagation();">
                   <div class="img-wrapper">
                     <img style="margin-left: 1px;" class="custom-img-slick" src="${nextArrowImg}" alt="Next">
                   </div>
@@ -3010,6 +3010,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
       // cardModeTigaFavorit();
       // initSlickAgenDetail();
       // cardModeTiga();
+
+      // if (!$(".slider-favorit").hasClass("slick-initialized")) {
+      //   initSlick(".slider-favorit", getSliderDefaultOptions());
+      // }
+
+      initSlickModeKetiga();
+      //
     } else {
       // Tampilkan mode pertama pada klik kedua
       firstMode.forEach((el) => {
@@ -3511,15 +3518,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var tabButtonTiga = document.getElementById("detail-statistik-tiga-tab");
   var tabButtonDua = document.getElementById("detail-agenprofil-dua-tab");
 
-  tabButtonDua.addEventListener("click", function () {
-    setTimeout(function () {
-      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
-        $(".slider-card-mode-ketiga").slick("setPosition");
-      } else {
-        initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
-      }
-    }, 100);
-  });
+  // tabButtonDua.addEventListener("click", function () {
+  //   setTimeout(function () {
+  //     if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+  //       $(".slider-card-mode-ketiga").slick("setPosition");
+  //     } else {
+  //       initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+  //     }
+  //   }, 100);
+  // });
 
   tabButtonTiga.addEventListener("click", function () {
     cardModePesanDua();
@@ -3552,15 +3559,15 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
   var tabButtonDua = document.getElementById("btn3-profil-pengaturan");
 
-  tabButtonDua.addEventListener("click", function () {
-    setTimeout(function () {
-      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
-        $(".slider-card-mode-ketiga").slick("setPosition");
-      } else {
-        initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
-      }
-    }, 100);
-  });
+  // tabButtonDua.addEventListener("click", function () {
+  //   setTimeout(function () {
+  //     if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+  //       $(".slider-card-mode-ketiga").slick("setPosition");
+  //     } else {
+  //       initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+  //     }
+  //   }, 100);
+  // });
 });
 
 //
@@ -3572,30 +3579,30 @@ $(document).ready(function () {
 document.addEventListener("DOMContentLoaded", function () {
   var tabButtonTiga = document.getElementById("btn4-profil-pengaturan");
 
-  tabButtonTiga.addEventListener("click", function () {
-    cardModePesanDua();
-    setTimeout(function () {
-      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
-        $(".slider-card-mode-ketiga").slick("setPosition");
-      } else {
-        initSlick(".slider-card-mode-ketiga", getSliderAdsReach());
-      }
-    }, 100);
-  });
+  // tabButtonTiga.addEventListener("click", function () {
+  //   cardModePesanDua();
+  //   setTimeout(function () {
+  //     if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+  //       $(".slider-card-mode-ketiga").slick("setPosition");
+  //     } else {
+  //       initSlick(".slider-card-mode-ketiga", getSliderAdsReach());
+  //     }
+  //   }, 100);
+  // });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
   var tabButtonTiga = document.getElementById("detail-pasang-enam-tab");
 
-  tabButtonTiga.addEventListener("click", function () {
-    setTimeout(function () {
-      if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
-        $(".slider-card-mode-ketiga").slick("setPosition");
-      } else {
-        initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
-      }
-    }, 100);
-  });
+  // tabButtonTiga.addEventListener("click", function () {
+  //   setTimeout(function () {
+  //     if ($(".slider-card-mode-ketiga").hasClass("slick-initialized")) {
+  //       $(".slider-card-mode-ketiga").slick("setPosition");
+  //     } else {
+  //       initSlick(".slider-card-mode-ketiga", getSliderDefaultOptions());
+  //     }
+  //   }, 100);
+  // });
 });
 
 function cardModeTiga() {
@@ -3609,14 +3616,12 @@ function cardModeTiga() {
 }
 
 $(document).ready(function () {
-  var slider = $(".slider-card-mode-ketiga");
-
-  slider.on("init reInit afterChange", function (event, slick, currentSlide) {
-    var current = currentSlide ? currentSlide : 0;
-    updateArrows(current, slick.slideCount);
-  });
-
-  slider.slick(getSliderDefaultOptions());
+  // var slider = $(".slider-card-mode-ketiga");
+  // slider.on("init reInit afterChange", function (event, slick, currentSlide) {
+  //   var current = currentSlide ? currentSlide : 0;
+  //   updateArrows(current, slick.slideCount);
+  // });
+  // slider.slick(getSliderDefaultOptions());
 });
 
 function cardModePesan() {
