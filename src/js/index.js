@@ -3003,7 +3003,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       secondMode.forEach((el) => {
         el.classList.remove("hidden");
       });
-      // mematikan
       // cardModeTigaFavorit();
       // initSlickAgenDetail();
       // cardModeTiga();
