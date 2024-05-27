@@ -2572,7 +2572,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function toggleTab(tab) {
-    
     const parentDiv = tab.closest(".menus");
     const contentDiv = document.getElementById(
       tab.getAttribute("aria-controls")
