@@ -2062,10 +2062,12 @@ window.showCardInfoDetail = function (param) {
       activateMenuDua1("#menu_detail_pertama");
       document.querySelector("#menu_detail_pertama").classList.add("font-bold");
 
-      // 
+      //
 
       activateMenuDua2("#menu_pengaturaan_detail_dua");
-      document.querySelector("#menu_pengaturaan_detail_dua").classList.add("font-bold");
+      document
+        .querySelector("#menu_pengaturaan_detail_dua")
+        .classList.add("font-bold");
 
       break;
 
@@ -4992,9 +4994,7 @@ document
     document.getElementById("fileUpload").click();
   });
 
-
-// 
-
+//
 
 document.addEventListener("DOMContentLoaded", function () {
   // First set of menu functions
@@ -5039,9 +5039,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .forEach((item) => {
         item.classList.remove("font-bold");
       });
-    document.querySelectorAll(".menu-content-detaill_dua").forEach((content) => {
-      content.classList.add("hidden");
-    });
+    document
+      .querySelectorAll(".menu-content-detaill_dua")
+      .forEach((content) => {
+        content.classList.add("hidden");
+      });
     document.querySelector(target).classList.remove("hidden");
   }
 
@@ -5067,8 +5069,6 @@ document.addEventListener("DOMContentLoaded", function () {
     defaultActiveMenu2.classList.add("font-bold");
   }
 });
-
-
 
 // co broking
 
