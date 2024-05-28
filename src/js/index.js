@@ -5010,6 +5010,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // 
+
   document
     .querySelectorAll(".menu_pengaturaan_detail > div")
     .forEach(addMenuEventListener);
@@ -5017,6 +5019,47 @@ document.addEventListener("DOMContentLoaded", function () {
   const defaultActiveMenu = document.querySelector(
     ".btn_default_tab_menu_pengaturan_dua"
   );
+  if (defaultActiveMenu) {
+    const target = defaultActiveMenu.getAttribute("data-target");
+    activateMenuDua(target);
+    defaultActiveMenu.classList.add("font-bold");
+  }
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  function activateMenuDua(target) {
+    document
+      .querySelectorAll(".menu_pengaturaan_detail_dua div")
+      .forEach((item) => {
+        item.classList.remove("font-bold");
+      });
+    document.querySelectorAll(".menu-content-detaill").forEach((content) => {
+      content.classList.add("hidden");
+    });
+    document.querySelector(target).classList.remove("hidden");
+  }
+
+  function addMenuEventListener(menuItem) {
+    menuItem.addEventListener("click", function (event) {
+      event.preventDefault();
+      const target = this.getAttribute("data-target");
+      activateMenuDua(target);
+      this.classList.add("font-bold");
+    });
+  }
+
+  // 
+
+  document
+    .querySelectorAll(".menu_pengaturaan_detail_dua > div")
+    .forEach(addMenuEventListener);
+
+  const defaultActiveMenu = document.querySelector(
+    ".btn_default_tab_menu_pengaturan_dua_dua"
+    );
   if (defaultActiveMenu) {
     const target = defaultActiveMenu.getAttribute("data-target");
     activateMenuDua(target);

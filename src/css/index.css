@@ -1230,9 +1230,9 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   display: block;
 }
 
-.formEditListingg {
+/*.formEditListingg {
   @apply mt-[7.5vh];
-}
+}*/
 
 .mapboxgl-popup-content,
 .custom-popup-content-peta-soaraja {
@@ -1313,6 +1313,6 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   }
 
   .position_gambar_upload {
-    @apply h-[28.5vh];
+    @apply h-[54.5vh];
   }
 }
