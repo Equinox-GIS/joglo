@@ -2059,9 +2059,13 @@ window.showCardInfoDetail = function (param) {
       //   console.log(activateMenuDua());
       //   document.querySelector(targetSelector).classList.add("font-bold");
       // }
-      activateMenuDua("#menu_detail_pertama");
-      // tambahkan font-bold
+      activateMenuDua1("#menu_detail_pertama");
       document.querySelector("#menu_detail_pertama").classList.add("font-bold");
+
+      // 
+
+      activateMenuDua2("#menu_pengaturaan_detail_dua");
+      document.querySelector("#menu_pengaturaan_detail_dua").classList.add("font-bold");
 
       break;
 
@@ -4988,8 +4992,13 @@ document
     document.getElementById("fileUpload").click();
   });
 
+
+// 
+
+
 document.addEventListener("DOMContentLoaded", function () {
-  function activateMenuDua(target) {
+  // First set of menu functions
+  function activateMenuDua1(target) {
     document
       .querySelectorAll(".menu_pengaturaan_detail div")
       .forEach((item) => {
@@ -5001,71 +5010,65 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(target).classList.remove("hidden");
   }
 
-  function addMenuEventListener(menuItem) {
+  function addMenuEventListener1(menuItem) {
     menuItem.addEventListener("click", function (event) {
       event.preventDefault();
       const target = this.getAttribute("data-target");
-      activateMenuDua(target);
+      activateMenuDua1(target);
       this.classList.add("font-bold");
     });
   }
 
-  // 
-
   document
     .querySelectorAll(".menu_pengaturaan_detail > div")
-    .forEach(addMenuEventListener);
+    .forEach(addMenuEventListener1);
 
-  const defaultActiveMenu = document.querySelector(
+  const defaultActiveMenu1 = document.querySelector(
     ".btn_default_tab_menu_pengaturan_dua"
   );
-  if (defaultActiveMenu) {
-    const target = defaultActiveMenu.getAttribute("data-target");
-    activateMenuDua(target);
-    defaultActiveMenu.classList.add("font-bold");
+  if (defaultActiveMenu1) {
+    const target = defaultActiveMenu1.getAttribute("data-target");
+    activateMenuDua1(target);
+    defaultActiveMenu1.classList.add("font-bold");
   }
-});
 
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  function activateMenuDua(target) {
+  // Second set of menu functions
+  function activateMenuDua2(target) {
     document
       .querySelectorAll(".menu_pengaturaan_detail_dua div")
       .forEach((item) => {
         item.classList.remove("font-bold");
       });
-    document.querySelectorAll(".menu-content-detaill").forEach((content) => {
+    document.querySelectorAll(".menu-content-detaill_dua").forEach((content) => {
       content.classList.add("hidden");
     });
     document.querySelector(target).classList.remove("hidden");
   }
 
-  function addMenuEventListener(menuItem) {
+  function addMenuEventListener2(menuItem) {
     menuItem.addEventListener("click", function (event) {
       event.preventDefault();
       const target = this.getAttribute("data-target");
-      activateMenuDua(target);
+      activateMenuDua2(target);
       this.classList.add("font-bold");
     });
   }
 
-  // 
-
   document
     .querySelectorAll(".menu_pengaturaan_detail_dua > div")
-    .forEach(addMenuEventListener);
+    .forEach(addMenuEventListener2);
 
-  const defaultActiveMenu = document.querySelector(
+  const defaultActiveMenu2 = document.querySelector(
     ".btn_default_tab_menu_pengaturan_dua_dua"
-    );
-  if (defaultActiveMenu) {
-    const target = defaultActiveMenu.getAttribute("data-target");
-    activateMenuDua(target);
-    defaultActiveMenu.classList.add("font-bold");
+  );
+  if (defaultActiveMenu2) {
+    const target = defaultActiveMenu2.getAttribute("data-target");
+    activateMenuDua2(target);
+    defaultActiveMenu2.classList.add("font-bold");
   }
 });
+
+
 
 // co broking
 
