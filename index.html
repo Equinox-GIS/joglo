@@ -36871,7 +36871,11 @@
                     <div
                       class="relative w-full mb-2 mt-0.5 flex flex-col mt-[2.2rem]"
                     >
-                      <div class="w-full area_upload border border-red-500">
+                      <!--  -->
+                      <div
+                        class="w-full area_upload cursor-pointer"
+                        onclick="triggerFileInput()"
+                      >
                         <input
                           id="fileElem"
                           type="file"
@@ -36883,8 +36887,7 @@
                           id="drop-area"
                           class="w-full bg-white rounded-lg flex position_gambar_upload justify-center items-center"
                         >
-                          <label
-                            for="fileElem"
+                          <div
                             class="cursor-pointer flex flex-col justify-center"
                           >
                             <div
@@ -36894,20 +36897,22 @@
                                 class="w-full flex justify-center hidden_foto_after_upload"
                               >
                                 <img
-                                  class="w-20 h-20 object-contain"
+                                  class="w-[17rem] h-[13rem] object-contain"
                                   src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
                                 />
                               </div>
                               <div
-                                class="text-xs text-gray-500 hidden_foto_after_upload"
+                                class="w-full text-center text-xs text-gray-500 hidden_foto_after_upload"
                               >
                                 Drop foto di sini
                               </div>
-                              <div class="text-xs text-gray-500 text-center">
+                              <div
+                                class="w-full text-center text-xs text-gray-500"
+                              >
                                 Maksimal 9
                               </div>
                             </div>
-                          </label>
+                          </div>
                           <div
                             class="overflow-hidden w-full h-full flex items-center justify-center relative preview_gambar_upload rounded-lg hidden"
                           >
@@ -36918,6 +36923,7 @@
                           </div>
                         </div>
                       </div>
+                      <!--  -->
 
                       <!-- BTN RESET -->
                       <div

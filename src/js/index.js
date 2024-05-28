@@ -4754,50 +4754,46 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   ["dragenter", "dragover"].forEach((eventName) => {
-    dropArea.addEventListener(eventName, highlight, false);
+    dropArea.addEventListener(
+      eventName,
+      () => dropArea.classList.add(HIGHLIGHT_CLASS),
+      false
+    );
   });
 
   ["dragleave", "drop"].forEach((eventName) => {
-    dropArea.addEventListener(eventName, unhighlight, false);
+    dropArea.addEventListener(
+      eventName,
+      () => dropArea.classList.remove(HIGHLIGHT_CLASS),
+      false
+    );
   });
 
   dropArea.addEventListener("drop", handleDrop, false);
-  fileElem.addEventListener("change", function () {
-    handleFiles(this.files);
-    hideUploadImage();
-    showPreviewElements();
-    showIndikator();
-  });
+  fileElem.addEventListener("change", handleFiles, false);
 
   function preventDefaults(e) {
     e.preventDefault();
     e.stopPropagation();
   }
 
-  function highlight() {
-    dropArea.classList.add(HIGHLIGHT_CLASS);
-  }
-
-  function unhighlight() {
-    dropArea.classList.remove(HIGHLIGHT_CLASS);
-  }
-
   function handleDrop(e) {
-    const dt = e.dataTransfer;
-    const files = dt.files;
-    handleFiles(files);
-    hideUploadImage();
-    showPreviewElements();
-    showIndikator();
+    const files = e.dataTransfer.files;
+    processFiles(files);
   }
 
-  function handleFiles(files) {
+  function handleFiles() {
+    const files = fileElem.files;
+    processFiles(files);
+  }
+
+  function processFiles(files) {
     const currentImagesCount = previewContainer.querySelectorAll("img").length;
     if (currentImagesCount + files.length > MAX_IMAGES) {
       alert("Maximum 9 images allowed.");
       return;
     }
-    Array.from(files).forEach((file, index) => {
+    Array.from(files).forEach((file) => {
       const reader = new FileReader();
       reader.onloadend = function () {
         images.push(reader.result);
@@ -4810,6 +4806,9 @@ document.addEventListener("DOMContentLoaded", function () {
       };
       reader.readAsDataURL(file);
     });
+    hideUploadImage();
+    showPreviewElements();
+    showIndikator();
   }
 
   function addImage(src, index) {
@@ -4818,7 +4817,7 @@ document.addEventListener("DOMContentLoaded", function () {
     img.setAttribute("data-index", index);
     img.classList.add("w-full", "h-full", "object-fill");
     if (index !== 0) {
-      img.classList.add("hidden");
+      img.classList.add(HIDE_CLASS);
     }
     previewContainer.appendChild(img);
   }
@@ -4827,11 +4826,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (images.length > 0) {
       const imgs = previewContainer.querySelectorAll("img");
       imgs.forEach((img) => {
-        if (parseInt(img.getAttribute("data-index")) === index) {
-          img.classList.remove("hidden");
-        } else {
-          img.classList.add("hidden");
-        }
+        img.classList.toggle(
+          HIDE_CLASS,
+          parseInt(img.getAttribute("data-index")) !== index
+        );
       });
     }
     updateNavigationButtons();
@@ -4842,36 +4840,33 @@ document.addEventListener("DOMContentLoaded", function () {
       ".previous_gambar_upload_listing"
     );
     const nextButton = document.querySelector(".next_gambar_upload_listing");
-    if (currentImageIndex === 0) {
-      previousButton.classList.add(HIDE_CLASS);
-    } else {
-      previousButton.classList.remove(HIDE_CLASS);
+    if (previousButton) {
+      previousButton.classList.toggle(HIDE_CLASS, currentImageIndex === 0);
     }
-    if (currentImageIndex === images.length - 1) {
-      nextButton.classList.add(HIDE_CLASS);
-    } else {
-      nextButton.classList.remove(HIDE_CLASS);
+    if (nextButton) {
+      nextButton.classList.toggle(
+        HIDE_CLASS,
+        currentImageIndex === images.length - 1
+      );
     }
   }
 
   function hideUploadImage() {
-    const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
-    hiddenElements.forEach((element) => element.classList.add(HIDE_CLASS));
+    document
+      .querySelectorAll(".hide_gambar_upload")
+      .forEach((element) => element.classList.add(HIDE_CLASS));
   }
 
   function showPreviewElements() {
-    const elementsToShow = [
-      ".preview_gambar_upload",
-      ".next_gambar_upload_listing",
-      ".previous_gambar_upload_listing",
-      ".batal_gambar_upload_listing",
-    ];
-    elementsToShow.forEach((selector) => {
-      const element = document.querySelector(selector);
-      if (element) {
-        element.classList.remove(HIDE_CLASS);
-      }
-    });
+    document
+      .querySelectorAll(
+        ".preview_gambar_upload, .next_gambar_upload_listing, .previous_gambar_upload_listing, .batal_gambar_upload_listing"
+      )
+      .forEach((element) => {
+        if (element) {
+          element.classList.remove(HIDE_CLASS);
+        }
+      });
   }
 
   function showIndikator() {
@@ -4905,35 +4900,25 @@ document.addEventListener("DOMContentLoaded", function () {
       e.stopPropagation();
     }
 
-    // Reset image array and index
     images = [];
     currentImageIndex = 0;
-
-    // Clear the preview container
     previewContainer.innerHTML = "";
     indikatorContainer.innerHTML = "";
-
-    // Reset file input
     fileElem.value = "";
 
-    // Add hidden class to preview elements
-    const elementsToHide = [
-      ".preview_gambar_upload",
-      ".next_gambar_upload_listing",
-      ".previous_gambar_upload_listing",
-      ".batal_gambar_upload_listing",
-      ".indikator_upload_listing",
-    ];
-    elementsToHide.forEach((selector) => {
-      const element = document.querySelector(selector);
-      if (element) {
-        element.classList.add(HIDE_CLASS);
-      }
-    });
+    document
+      .querySelectorAll(
+        ".preview_gambar_upload, .next_gambar_upload_listing, .previous_gambar_upload_listing, .batal_gambar_upload_listing, .indikator_upload_listing"
+      )
+      .forEach((element) => {
+        if (element) {
+          element.classList.add(HIDE_CLASS);
+        }
+      });
 
-    // Remove hidden class from the upload image section
-    const hiddenElements = document.querySelectorAll(".hide_gambar_upload");
-    hiddenElements.forEach((element) => element.classList.remove(HIDE_CLASS));
+    document
+      .querySelectorAll(".hide_gambar_upload")
+      .forEach((element) => element.classList.remove(HIDE_CLASS));
   };
 
   window.showNextImage = function (e) {
@@ -4956,6 +4941,10 @@ document.addEventListener("DOMContentLoaded", function () {
       currentImageIndex--;
       displayImage(currentImageIndex);
     }
+  };
+
+  window.triggerFileInput = function () {
+    fileElem.click();
   };
 });
 
