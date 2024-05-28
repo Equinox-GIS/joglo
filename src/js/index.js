@@ -4743,7 +4743,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const fileElem = document.getElementById("fileElem");
   const previewContainer = document.getElementById("preview-container");
   const indikatorContainer = document.getElementById("indikator_listing");
-  const areaUpload = document.querySelector(".area_upload");
   const HIDE_CLASS = "hidden";
   const HIGHLIGHT_CLASS = "border-blue-500";
   const MAX_IMAGES = 9;
@@ -4839,9 +4838,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateNavigationButtons() {
-    const previousButton = document.querySelector(
-      ".previous_gambar_upload_listing"
-    );
+    const previousButton = document.querySelector(".previous_gambar_upload_listing");
     const nextButton = document.querySelector(".next_gambar_upload_listing");
     if (currentImageIndex === 0) {
       previousButton.classList.add(HIDE_CLASS);
@@ -4861,12 +4858,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showPreviewElements() {
-    const elementsToShow = [
-      ".preview_gambar_upload",
-      ".next_gambar_upload_listing",
-      ".previous_gambar_upload_listing",
-      ".batal_gambar_upload_listing",
-    ];
+    const elementsToShow = [".preview_gambar_upload", ".next_gambar_upload_listing", ".previous_gambar_upload_listing", ".batal_gambar_upload_listing"];
     elementsToShow.forEach((selector) => {
       const element = document.querySelector(selector);
       if (element) {
@@ -4876,9 +4868,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showIndikator() {
-    const indikatorElement = document.querySelector(
-      ".indikator_upload_listing"
-    );
+    const indikatorElement = document.querySelector(".indikator_upload_listing");
     if (indikatorElement) {
       indikatorElement.classList.remove(HIDE_CLASS);
     }
@@ -4888,14 +4878,7 @@ document.addEventListener("DOMContentLoaded", function () {
     indikatorContainer.innerHTML = "";
     images.forEach(() => {
       const span = document.createElement("span");
-      span.classList.add(
-        "flex",
-        "w-1.5",
-        "h-1.5",
-        "me-1.5",
-        "bg-slate-50",
-        "rounded-full"
-      );
+      span.classList.add("flex", "w-1.5", "h-1.5", "me-1.5", "bg-slate-50", "rounded-full");
       indikatorContainer.appendChild(span);
     });
   }
@@ -4918,13 +4901,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fileElem.value = "";
 
     // Add hidden class to preview elements
-    const elementsToHide = [
-      ".preview_gambar_upload",
-      ".next_gambar_upload_listing",
-      ".previous_gambar_upload_listing",
-      ".batal_gambar_upload_listing",
-      ".indikator_upload_listing",
-    ];
+    const elementsToHide = [".preview_gambar_upload", ".next_gambar_upload_listing", ".previous_gambar_upload_listing", ".batal_gambar_upload_listing", ".indikator_upload_listing"];
     elementsToHide.forEach((selector) => {
       const element = document.querySelector(selector);
       if (element) {
@@ -4959,6 +4936,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
+
+
 // PREVIEW IMAGE EDIT PENGATURAN
 
 document
