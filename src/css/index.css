@@ -5,7 +5,8 @@
 /*Reguler*/
 @font-face {
   font-family: "Font SF-Pro reguler";
-  src: url("../font/3/SF-Pro-Text-Regular.otf") format("opentype");
+  src: url("https://www.joglopro.com/bucket/soaraja/image/joglopro/font/3/SF-Pro-Text-Regular.otf")
+    format("opentype");
   /*  font-weight: 400;*/
   font-style: normal;
 }
@@ -13,7 +14,8 @@
 /*Bold3*/
 @font-face {
   font-family: "Font SF-Pro bold";
-  src: url("../font/3/SF-Pro-Display-Heavy.otf") format("opentype");
+  src: url("https://www.joglopro.com/bucket/soaraja/image/joglopro/font/3/SF-Pro-Display-Heavy.otf")
+    format("opentype");
   /*  font-weight: 600;*/
   font-style: normal;
 }
@@ -21,7 +23,8 @@
 /*Medium3*/
 @font-face {
   font-family: "Font SF-Pro medium";
-  src: url("../font/3/SF-Pro-Display-Bold.otf") format("opentype");
+  src: url("https://www.joglopro.com/bucket/soaraja/image/joglopro/font/3/SF-Pro-Display-Bold.otf")
+    format("opentype");
   /*  font-weight: 600;*/
   font-style: normal;
 }
@@ -29,7 +32,8 @@
 /*Medium3*/
 @font-face {
   font-family: "Font Recoleta";
-  src: url("../font/Recoleta-Bold.ttf") format("opentype");
+  src: url("https://www.joglopro.com/bucket/soaraja/image/joglopro/font/Recoleta-Bold.ttf")
+    format("opentype");
   /*  font-weight: 600;*/
   font-style: normal;
 }
@@ -37,14 +41,16 @@
 /*font new*/
 @font-face {
   font-family: "Font Grajon";
-  src: url("../font/Granjon Roman.otf") format("opentype");
+  src: url("https://www.joglopro.com/bucket/soaraja/image/joglopro/font/Granjon Roman.otf")
+    format("opentype");
   /*  font-weight: 600;*/
   font-style: normal;
 }
 /*font new2*/
 @font-face {
   font-family: "Font Grajon Bold";
-  src: url("../font/Granjon Roman Bold.otf") format("opentype");
+  src: url("https://www.joglopro.com/bucket/soaraja/image/joglopro/font/Granjon Roman Bold.otf")
+    format("opentype");
   /*  font-weight: 600;*/
   font-style: normal;
 }
