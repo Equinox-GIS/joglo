@@ -14,6 +14,8 @@ module.exports = {
         lobster: ['"Lobster"'],
         sf_pro_reguler: ["Font SF-Pro reguler"],
         sf_pro_bold: ["Font SF-Pro bold"],
+        sf_pro_reguler_new: ["Font SF-Pro-Text-Regular"],
+        sf_pro_bold_new: ["Font SF-Pro-Text-Bold-Italic"],
         sf_pro_medium: ["Font SF-Pro medium"],
         recoleta: ["Font Recoleta"],
         grajon: ["Font Grajon"],

@@ -55,6 +55,20 @@
   font-style: normal;
 }
 
+/*  */
+
+/*Reguler New SF PRO*/
+@font-face {
+  font-family: "Font SF-Pro-Text-Regular";
+  src: url("../font/4/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Font SF-Pro-Text-Bold-Italic";
+  src: url("../font/4/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
+  font-style: normal;
+}
+
 /* Mengatur Button Slider Card Info */
 .slider-thumbnails {
   margin-left: -15px;
@@ -971,6 +985,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  letter-spacing: 0.03em;
 }
 
 #progress {
