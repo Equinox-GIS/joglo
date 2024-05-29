@@ -946,6 +946,26 @@ function initSliderDetail(sliderClass, options) {
   $(sliderClass).slick("resize");
 }
 
+function initSliderDetailDua(sliderClass, options) {
+  $(sliderClass)
+    .on("init", function () {
+      setTimeout(function () {
+        moveDotsToCustomContainer();
+        addClickHandlerToDots();
+        disableClickHandlerToDots();
+      }, 0);
+    })
+    .slick(options);
+
+  updateArrowsDetailDua(0, $(sliderClass).slick("getSlick").slideCount);
+
+  $(sliderClass).on("afterChange", function (event, slick, currentSlide) {
+    updateArrowsDetailDua(currentSlide, slick.slideCount);
+  });
+
+  $(sliderClass).slick("resize");
+}
+
 function getSliderDefaultOptions() {
   return {
     dots: true,
@@ -1051,6 +1071,24 @@ function updateArrowsDetail(currentSlide, slideCount) {
     $(".slick-next-detail").css("pointer-events", "none").addClass("hidden");
   } else {
     $(".slick-next-detail").css("pointer-events", "all").removeClass("hidden");
+  }
+}
+
+function updateArrowsDetailDua(currentSlide, slideCount) {
+  if (currentSlide === 0) {
+    $(".slick-prev-detail-dua").css("display", "none").addClass("hidden");
+  } else {
+    $(".slick-prev-detail-dua").css("display", "block").removeClass("hidden");
+  }
+
+  if (currentSlide === slideCount - 1) {
+    $(".slick-next-detail-dua")
+      .css("pointer-events", "none")
+      .addClass("hidden");
+  } else {
+    $(".slick-next-detail-dua")
+      .css("pointer-events", "all")
+      .removeClass("hidden");
   }
 }
 
@@ -1188,6 +1226,27 @@ function getSliderDetail() {
                   </div>
                 </button>`,
     nextArrow: `<button type="button" class="slick-next slick-next-detail" style="right:5px !important;" onclick="event.stopPropagation();">
+                  <div class="img-wrapper-detail">
+                    <img style="margin-left: 2px;" class="custom-img-slick-detail" src="${nextArrowImg}" alt="Next">
+                  </div>
+                </button>`,
+    dotsClass: "slick-dots custom-dots-class",
+  };
+}
+
+function getSliderDetailDua() {
+  return {
+    dots: true,
+    infinite: false,
+    arrows: true,
+    pauseOnHover: false,
+    swipe: false,
+    prevArrow: `<button type="button" class="slick-prev slick-prev-detail-dua" style="left:4px !important;" onclick="event.stopPropagation();">
+                  <div class="img-wrapper-detail">
+                    <img style="margin-right: 2px;" class="custom-img-slick-detail" src="${prevArrowImg}" alt="Previous">
+                  </div>
+                </button>`,
+    nextArrow: `<button type="button" class="slick-next slick-next-detail-dua" style="right:5px !important;" onclick="event.stopPropagation();">
                   <div class="img-wrapper-detail">
                     <img style="margin-left: 2px;" class="custom-img-slick-detail" src="${nextArrowImg}" alt="Next">
                   </div>
@@ -4997,6 +5056,27 @@ document.addEventListener("DOMContentLoaded", function () {
       content.classList.add("hidden");
     });
     document.querySelector(target).classList.remove("hidden");
+
+    // Jika elemen target adalah #menu_detail_tujuh, inisialisasi slider
+    if (target === "#menu_detail_tujuh") {
+      console.log("Menu detail tujuh");
+
+      if (!$(".slider-card-info-detail-dua").hasClass("slick-initialized")) {
+        setTimeout(function () {
+          initSliderDetail(".slider-card-info-detail-dua", getSliderDetail());
+
+          addVideoEventHandlers(".slider-card-info-detail-dua");
+
+          // Play the first video (if it exists)
+          let firstVideo = $(".slider-card-info-detail-dua").find(
+            "div.slick-current video"
+          );
+          if (firstVideo.length) {
+            firstVideo[0].play();
+          }
+        }, 100);
+      }
+    }
   }
 
   function addMenuEventListener1(menuItem) {
