@@ -8776,6 +8776,13 @@
                       >
                         Simulasi KPR
                       </div>
+
+                      <div
+                        class="px-4 pb-1 pt-1 text-sm text-black cursor-pointer"
+                        data-target="#menu_detail_sembilan"
+                      >
+                        Simulasi KPR 2
+                      </div>
                     </div>
                   </div>
 
@@ -9408,7 +9415,7 @@
                       class="menu-content-detaill w-full h-[73.5vh] hidden"
                     >
                       <div
-                        class="h-[65vh] overflow-y-auto hide-scrollbar text-black"
+                        class="h-[67vh] overflow-y-auto hide-scrollbar text-black"
                       >
                         <form
                           class="formEditListingg RemoveClassformEditListingg mt-[2.2rem]"
@@ -10141,7 +10148,7 @@
                                 class="w-full !h-[66.2vh] flex items-center relative"
                               >
                                 <img
-                                  class="w-full !h-full rounded-lg"
+                                  class="w-full !h-full rounded-lg object-contain"
                                   src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/Rmh1/rumaha1.jpg"
                                   alt=""
                                 />
@@ -10163,7 +10170,7 @@
                                 class="w-full !h-[66.2vh] flex items-center relative"
                               >
                                 <img
-                                  class="w-full h-full rounded-lg"
+                                  class="w-full h-full rounded-lg object-contain"
                                   src="https://www.joglopro.com/bucket/soaraja/image/joglopro/Hunian/fotoig1.jpg"
                                   alt=""
                                 />
@@ -10199,26 +10206,38 @@
                             <!-- a -->
                             <div>
                               <!-- Penawaran -->
-                              <div class="relative w-full mb-2">
+                              <div class="relative w-full flex flex-row mb-1">
                                 <label
-                                  class="block font-sf_pro_reguler_new text-lg font-bold mb-3"
+                                  class="block font-sf_pro_reguler_new text-lg font-bold mb-1"
                                   for="luas_bangunan_m2"
                                 >
-                                  Penawarannn
+                                  Penawaran
                                 </label>
-                                <input
-                                  value="Rp 215.000.000"
-                                  readonly=""
-                                  disabled=""
-                                  type="text"
-                                  id="luas_bangunan_m2"
-                                  class="border-0 px-4 py-4 text-right text-black bg-gray-200 rounded-lg text-xl focus:outline-none focus:ring-0 w-full"
-                                />
+                              </div>
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-center">
+                                  <label
+                                    class="block text-sm absolute -bottom-0.5 left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Penawarann (Rp)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="215.000.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="luas_bangunan_m2"
+                                    class="border-0 px-2 py-1 text-right text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
                               </div>
 
                               <!--  -->
                               <div
-                                class="text-lg font-sf_pro_reguler_new font-bold my-3"
+                                class="text-lg font-sf_pro_reguler_new font-bold mt-5 mb-1.5"
                               >
                                 Valuasi aset fisik
                               </div>
@@ -10291,7 +10310,7 @@
                               <div class="relative w-full flex flex-row mb-2">
                                 <div class="basis-7/12 flex items-end relative">
                                   <label
-                                    class="block text-xs font-bold absolute -bottom-0.5 left-0"
+                                    class="block text-sm font-bold absolute -bottom-0.5 left-0"
                                     for="luas_bangunan_m2"
                                   >
                                     Nilai Tanah (Rp)
@@ -10400,7 +10419,7 @@
                               <div class="relative w-full flex flex-row mb-2">
                                 <div class="basis-7/12 flex items-end relative">
                                   <label
-                                    class="block text-xs font-bold absolute -bottom-0.5 left-0"
+                                    class="block text-sm font-bold absolute -bottom-0.5 left-0"
                                     for="luas_bangunan_m2"
                                   >
                                     Nilai Bangunan (Rp)
@@ -10422,7 +10441,7 @@
                               <div class="relative w-full flex flex-row mb-2">
                                 <div class="basis-7/12 flex items-end relative">
                                   <label
-                                    class="block text-xs font-bold absolute -bottom-0.5 left-0"
+                                    class="block text-sm font-bold absolute -bottom-0.5 left-0"
                                     for="luas_bangunan_m2"
                                   >
                                     Perkiraan Nilai Aset (Rp)
@@ -10445,7 +10464,7 @@
 
                             <!-- b -->
                             <div class="flex flex-col">
-                              <div class="relative w-full h-[16.3vh]"></div>
+                              <div class="relative w-full h-[11.5vh]"></div>
 
                               <div
                                 class="text-lg font-sf_pro_reguler_new font-bold mb-3"
@@ -10459,6 +10478,18 @@
 
                           <!--  -->
                         </form>
+                      </div>
+                    </div>
+                    <!--  -->
+
+                    <div
+                      id="menu_detail_sembilan"
+                      class="menu-content-detaill w-full h-[73.5vh] hidden"
+                    >
+                      <div
+                        class="h-[67vh] overflow-y-auto hide-scrollbar text-black"
+                      >
+                        KPR 2
                       </div>
                     </div>
 
