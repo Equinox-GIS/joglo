@@ -682,7 +682,7 @@
   display: inline-block;
   border-radius: 50%;
   padding: 9px;
-  background-color: rgb(241 245 249);
+  background-color: rgb(255 255 255);
   opacity: 0.9;
 }
 
@@ -1206,6 +1206,10 @@ body {
 
 .custom-dots-class {
   bottom: 15px !important;
+}
+
+.custom-detail-dots-class {
+  bottom: 40px !important;
 }
 
 /* Chrome, Safari, Edge, Opera */

@@ -1230,7 +1230,7 @@ function getSliderDetail() {
                     <img style="margin-left: 2px;" class="custom-img-slick-detail" src="${nextArrowImg}" alt="Next">
                   </div>
                 </button>`,
-    dotsClass: "slick-dots custom-dots-class",
+    dotsClass: "slick-dots custom-detail-dots-class",
   };
 }
 
