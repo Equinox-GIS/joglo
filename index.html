@@ -2176,8 +2176,7 @@
                     id="chip-tempat-ibadah"
                     class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
                   >
-                    <span
-                      class="font-semibold tracking-wider tracking-[0.090em]"
+                    <span class="font-semibold tracking-wider tracking-[0.12em]"
                       >Ibadah</span
                     >
                   </button>
@@ -2187,8 +2186,7 @@
                     id="chip-belanja"
                     class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
                   >
-                    <span
-                      class="font-semibold tracking-wider tracking-[0.090em]"
+                    <span class="font-semibold tracking-wider tracking-[0.12em]"
                       >Belanja</span
                     >
                   </button>
@@ -2198,8 +2196,7 @@
                     id="chip-sekolah"
                     class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
                   >
-                    <span
-                      class="font-semibold tracking-wider tracking-[0.090em]"
+                    <span class="font-semibold tracking-wider tracking-[0.12em]"
                       >Sekolah</span
                     >
                   </button>
@@ -2209,8 +2206,7 @@
                     id="chip-restoran"
                     class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
                   >
-                    <span
-                      class="font-semibold tracking-wider tracking-[0.090em]"
+                    <span class="font-semibold tracking-wider tracking-[0.12em]"
                       >Restoran</span
                     >
                   </button>
@@ -2220,8 +2216,7 @@
                     id="chip-transportasi"
                     class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
                   >
-                    <span
-                      class="font-semibold tracking-wider tracking-[0.090em]"
+                    <span class="font-semibold tracking-wider tracking-[0.12em]"
                       >Transportasi</span
                     >
                   </button>
@@ -2231,8 +2226,7 @@
                     id="chip-faskes"
                     class="btn-on-map inline-flex justify-center items-center px-4 h-8 text-xs font-medium rounded-full shadow-sm focus:outline-none focus:ring-0 bg-white text-black"
                   >
-                    <span
-                      class="font-semibold tracking-wider tracking-[0.090em]"
+                    <span class="font-semibold tracking-wider tracking-[0.12em]"
                       >Faskes</span
                     >
                   </button>
@@ -8696,7 +8690,7 @@
                                 data-pesan="Mochtar Riady"
                                 onclick="showMessage(this)"
                                 type="button"
-                                class="ml-5 h-6 w-24 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                                class="ml-5 h-6 w-24 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3 tracking-[0.050em]"
                               >
                                 Kirim Pesan
                               </button>
@@ -10782,7 +10776,556 @@
                       <div
                         class="h-[67vh] overflow-y-auto hide-scrollbar text-black"
                       >
-                        KPR 2
+                        <form
+                          class="formEditListingg RemoveClassformEditListingg mt-[2.2rem]"
+                        >
+                          <div class="w-full flex flex-row mb-0.5">
+                            <div class="basis-6/12">
+                              <div
+                                class="text-lg font-sf_pro_reguler_new font-bold"
+                              >
+                                Valuasi aset fisik
+                              </div>
+                            </div>
+                            <div class="basis-6/12">
+                              <div
+                                class="text-lg font-sf_pro_reguler_new font-bold"
+                              >
+                                Valuasi Prediksi AI
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="grid grid-cols-2 gap-y-1 gap-x-5">
+                            <!-- a -->
+                            <div>
+                              <!-- Penawaran -->
+                              <div
+                                class="relative w-full flex flex-row mb-1 hidden"
+                              >
+                                <label
+                                  class="block font-sf_pro_reguler_new text-lg font-bold mb-1"
+                                  for="luas_bangunan_m2"
+                                >
+                                  Penawaran
+                                </label>
+                              </div>
+                              <div
+                                class="relative w-full flex flex-row mb-2 hidden"
+                              >
+                                <div class="basis-7/12 flex items-center">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Penawarann (Rp)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="215.000.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1 text-right text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!--  -->
+                              <div
+                                class="text-lg font-sf_pro_reguler_new font-bold mt-5 mb-1.5 hidden"
+                              >
+                                Valuasi aset fisik
+                              </div>
+
+                              <!-- Luas Tanah (m²) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Luas Tanah (m²)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="120"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Depresiasi Bangunan (%) -->
+
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="perkiraan_njob_m2"
+                                  >
+                                    Perkiraan NJOP (Rp/m²)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="2.000.000"
+                                    type="text"
+                                    id="new_perkiraan_njob_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Angka Pengali NJOP -->
+
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="angka_pengali_njop"
+                                  >
+                                    Angka Pengali NJOP
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="2.5"
+                                    type="text"
+                                    id="new_angka_pengali_njop"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Nilai Tanah (Rp) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm font-bold absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Nilai Tanah (Rp)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="600.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Luas Bangunan (m²) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Luas Bangunan (m²)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="80"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Harga Bangunan (Rp/m²) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Harga Bangunan (Rp/m²)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="3.000.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Usia Bangunan (tahun) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Usia Bangunan (tahun)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="5"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Depresiasi Pertahun (%) -->
+
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="depresiasi_pertahun"
+                                  >
+                                    Depresiasi Pertahun (%)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="2.5"
+                                    type="text"
+                                    id="new_depresiasi_pertahun"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Nilai Bangunan (Rp) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm font-bold absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Nilai Bangunan (Rp)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="216.000.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Perkiraan Nilai Aset (Rp) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm font-bold absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Perkiraan Nilai Aset (Rp)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="800.000.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!--  -->
+                            </div>
+
+                            <!-- b -->
+                            <div>
+                              <!-- Penawaran -->
+                              <div
+                                class="relative w-full flex flex-row mb-1 hidden"
+                              >
+                                <label
+                                  class="block font-sf_pro_reguler_new text-lg font-bold mb-1"
+                                  for="luas_bangunan_m2"
+                                >
+                                  Penawaran
+                                </label>
+                              </div>
+                              <div
+                                class="relative w-full flex flex-row mb-2 hidden"
+                              >
+                                <div class="basis-7/12 flex items-center">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Penawarann (Rp)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="215.000.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1 text-right text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!--  -->
+                              <div
+                                class="text-lg font-sf_pro_reguler_new font-bold mt-5 mb-1.5 hidden"
+                              >
+                                Valuasi aset fisik
+                              </div>
+
+                              <!-- Luas Tanah (m²) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Luas Tanah (m²)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="120"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Depresiasi Bangunan (%) -->
+
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="perkiraan_njob_m2"
+                                  >
+                                    Perkiraan NJOP (Rp/m²)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="2.000.000"
+                                    type="text"
+                                    id="new_perkiraan_njob_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Angka Pengali NJOP -->
+
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="angka_pengali_njop"
+                                  >
+                                    Angka Pengali NJOP
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="2.5"
+                                    type="text"
+                                    id="new_angka_pengali_njop"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Nilai Tanah (Rp) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm font-bold absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Nilai Tanah (Rp)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="600.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Luas Bangunan (m²) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Luas Bangunan (m²)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="80"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Harga Bangunan (Rp/m²) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Harga Bangunan (Rp/m²)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="3.000.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Usia Bangunan (tahun) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Usia Bangunan (tahun)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="5"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Depresiasi Pertahun (%) -->
+
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm absolute bottom-[0.225rem] left-0"
+                                    for="depresiasi_pertahun"
+                                  >
+                                    Depresiasi Pertahun (%)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="2.5"
+                                    type="text"
+                                    id="new_depresiasi_pertahun"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Nilai Bangunan (Rp) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm font-bold absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Nilai Bangunan (Rp)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="216.000.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Perkiraan Nilai Aset (Rp) -->
+                              <div class="relative w-full flex flex-row mb-2">
+                                <div class="basis-7/12 flex items-end relative">
+                                  <label
+                                    class="block text-sm font-bold absolute bottom-[0.225rem] left-0"
+                                    for="luas_bangunan_m2"
+                                  >
+                                    Perkiraan Nilai Aset (Rp)
+                                  </label>
+                                </div>
+                                <div class="basis-5/12">
+                                  <input
+                                    value="800.000.000"
+                                    readonly=""
+                                    disabled=""
+                                    type="text"
+                                    id="new_luas_bangunan_m2"
+                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                  />
+                                </div>
+                              </div>
+
+                              <!--  -->
+                            </div>
+                          </div>
+
+                          <!--  -->
+                        </form>
                       </div>
                     </div>
 
