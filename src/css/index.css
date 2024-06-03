@@ -68,6 +68,11 @@
   src: url("../font/4/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
   font-style: normal;
 }
+@font-face {
+  font-family: "Font SF-Pro-Text-Bold";
+  src: url("../font/4/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-style: normal;
+}
 
 /* Mengatur Button Slider Card Info */
 .slider-thumbnails {
