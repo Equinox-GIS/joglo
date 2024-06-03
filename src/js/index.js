@@ -2074,7 +2074,7 @@ window.showCardInfoDetail = function (param) {
       showElement(".card-info-favorit-dua");
       hideElement(".card-info-detail-favorit-dua");
 
-         if (!$(".slider-card-info-detail-dua").hasClass("slick-initialized")) {
+      if (!$(".slider-card-info-detail-dua").hasClass("slick-initialized")) {
         setTimeout(function () {
           initSliderDetail(".slider-card-info-detail-dua", getSliderDetail());
 
