@@ -1,6 +1,17 @@
 import prevArrowImg from "../images/prev.png";
 import nextArrowImg from "../images/next.png";
-
+//
+import aktifGaleri from "../images/icon_menu_baru/aktif_galeri.png";
+import aktifRealEstate from "../images/icon_menu_baru/aktif_real-estate-agent.png";
+import aktifFavorite from "../images/icon_menu_baru/aktif_favorite.png";
+import aktifMessenger from "../images/icon_menu_baru/aktif_messenger.png";
+import aktifMore from "../images/icon_menu_baru/aktif_more.png";
+//
+import nonaktifGaleri from "../images/icon_menu_baru/nonaktif_aktif_galeri.png";
+import nonaktifRealEstate from "../images/icon_menu_baru/nonaktif_aktif_real-estate-agent.png";
+import nonaktifFavorite from "../images/icon_menu_baru/nonaktif_aktif_favorite.png";
+import nonaktifMessenger from "../images/icon_menu_baru/nonaktif_aktif_messenger.png";
+import nonaktifMore from "../images/icon_menu_baru/nonaktif_aktif_more.png";
 // import StarDisukai from "../images/star-disukai.svg";
 // import StarDisukaiFill from "../images/star-disukai-fill.svg";
 
@@ -2653,6 +2664,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function toggleTab(tab) {
+    // console.log(tab.id);
     const parentDiv = tab.closest(".menus");
     const contentDiv = document.getElementById(
       tab.getAttribute("aria-controls")
@@ -2848,10 +2860,42 @@ document.addEventListener("DOMContentLoaded", function () {
     elements.tabs.forEach((t) => {
       t.classList.remove("bg-aktif-menu");
       t.setAttribute("aria-selected", false);
+      deactivateTab(t); // Fungsi untuk mengubah gambar menjadi nonaktif
     });
     // Add active class to the clicked tab
     tab.classList.add("bg-aktif-menu");
     tab.setAttribute("aria-selected", true);
+    activateTabImage(tab); // Fungsi untuk mengubah gambar menjadi aktif
+  }
+
+  function deactivateTab(tab) {
+    // Ganti gambar tab menjadi nonaktif
+    if (tab.id === "MenuSatuTab") {
+      tab.querySelector("img").src = nonaktifGaleri;
+    } else if (tab.id === "MenuEmpatTab") {
+      tab.querySelector("img").src = nonaktifRealEstate;
+    } else if (tab.id === "MenuTigaTab") {
+      tab.querySelector("img").src = nonaktifFavorite;
+    } else if (tab.id === "MenuTujuhTab") {
+      tab.querySelector("img").src = nonaktifMessenger;
+    } else if (tab.id === "MenuDelapanBelasTab") {
+      tab.querySelector("img").src = nonaktifMore;
+    }
+  }
+
+  function activateTabImage(tab) {
+    // Ganti gambar tab menjadi aktif
+    if (tab.id === "MenuSatuTab") {
+      tab.querySelector("img").src = aktifGaleri;
+    } else if (tab.id === "MenuEmpatTab") {
+      tab.querySelector("img").src = aktifRealEstate;
+    } else if (tab.id === "MenuTigaTab") {
+      tab.querySelector("img").src = aktifFavorite;
+    } else if (tab.id === "MenuTujuhTab") {
+      tab.querySelector("img").src = aktifMessenger;
+    } else if (tab.id === "MenuDelapanBelasTab") {
+      tab.querySelector("img").src = aktifMore;
+    }
   }
 
   elements.tabs.forEach((tab) => {
@@ -2876,6 +2920,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // close konten dropdown button
 
   //
+});
+
+// Set default active tab to MenuSatuTab
+document.addEventListener("DOMContentLoaded", () => {
+  const defaultTab = document.getElementById("MenuSatuTab");
+  activateTab(defaultTab);
 });
 
 // Tag
@@ -5244,35 +5294,34 @@ document.querySelectorAll(".menu-pesan-area").forEach(function (elem) {
   });
 });
 
+// membuat fungsi aktif detail
 
-// membuat fungsi aktif detail 
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".menu_pengaturaan_detail div");
 
-  document.addEventListener('DOMContentLoaded', function() {
-      const tabs = document.querySelectorAll('.menu_pengaturaan_detail div');
-
-      tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-          // Remove active class from all tabs
-          tabs.forEach(t => t.classList.remove('bg_aktif_detail'));
-          // Add active class to the clicked tab
-          tab.classList.add('bg_aktif_detail');
-        });
-      });
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function () {
+      // Remove active class from all tabs
+      tabs.forEach((t) => t.classList.remove("bg_aktif_detail"));
+      // Add active class to the clicked tab
+      tab.classList.add("bg_aktif_detail");
     });
+  });
+});
 
- const sliders = document.querySelectorAll(".slider");
+const sliders = document.querySelectorAll(".slider");
 
-        function progressScript(sliderEl) {
-            const sliderValue = sliderEl.value;
-            const max = sliderEl.max;
-            const min = sliderEl.min;
-            // Menghitung persentase posisi slider
-            const percentage = ((sliderValue - min) / (max - min)) * 100;
-            sliderEl.style.background = `linear-gradient(to right, #0394F7 ${percentage}%, #ccc ${percentage}%)`;
-        }
+function progressScript(sliderEl) {
+  const sliderValue = sliderEl.value;
+  const max = sliderEl.max;
+  const min = sliderEl.min;
+  // Menghitung persentase posisi slider
+  const percentage = ((sliderValue - min) / (max - min)) * 100;
+  sliderEl.style.background = `linear-gradient(to right, #0394F7 ${percentage}%, #ccc ${percentage}%)`;
+}
 
-        sliders.forEach(slider => {
-            slider.addEventListener('input', () => progressScript(slider));
-            // Panggil fungsi saat halaman dimuat
-            progressScript(slider);
-        });
+sliders.forEach((slider) => {
+  slider.addEventListener("input", () => progressScript(slider));
+  // Panggil fungsi saat halaman dimuat
+  progressScript(slider);
+});
