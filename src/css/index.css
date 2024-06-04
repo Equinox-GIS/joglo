@@ -595,6 +595,102 @@
   border: none;
 }
 
+
+
+#ControlRangeSimulasi1 {
+  -webkit-appearance: none;
+  appearance: none; 
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 4px;
+}
+
+#ControlRangeSimulasi1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none; 
+  height: 13px;
+  width: 13px;
+  background-color: #0394F7;
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+#ControlRangeSimulasi1::-moz-range-thumb {
+  height: 13px;
+  width: 13px;
+  background-color: #0394F7;
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+
+#ControlRangeSimulasi2 {
+  -webkit-appearance: none;
+  appearance: none; 
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 4px;
+}
+
+#ControlRangeSimulasi2::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none; 
+  height: 13px;
+  width: 13px;
+  background-color: #0394F7;
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+#ControlRangeSimulasi2::-moz-range-thumb {
+  height: 13px;
+  width: 13px;
+  background-color: #0394F7;
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+#ControlRangeSimulasi3 {
+  -webkit-appearance: none;
+  appearance: none; 
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  height: 4px;
+}
+
+#ControlRangeSimulasi3::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none; 
+  height: 13px;
+  width: 13px;
+  background-color: #0394F7;
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+#ControlRangeSimulasi3::-moz-range-thumb {
+  height: 13px;
+  width: 13px;
+  background-color: #0394F7;
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+
+
+
 .slick-dotted.slick-slider {
   margin-bottom: 0px !important;
 }
@@ -880,9 +976,9 @@
   @apply grid grid-cols-[220px,1fr];
 }
 
-   .bg_aktif_detail {
-      @apply bg-slate-200 rounded-lg;
-    }
+.bg_aktif_detail {
+  @apply bg-slate-200 rounded-lg;
+}
 
 .slider-card-beranda {
   visibility: hidden;

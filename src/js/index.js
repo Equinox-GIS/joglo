@@ -5259,3 +5259,20 @@ document.querySelectorAll(".menu-pesan-area").forEach(function (elem) {
         });
       });
     });
+
+ const sliders = document.querySelectorAll(".slider");
+
+        function progressScript(sliderEl) {
+            const sliderValue = sliderEl.value;
+            const max = sliderEl.max;
+            const min = sliderEl.min;
+            // Menghitung persentase posisi slider
+            const percentage = ((sliderValue - min) / (max - min)) * 100;
+            sliderEl.style.background = `linear-gradient(to right, #0394F7 ${percentage}%, #ccc ${percentage}%)`;
+        }
+
+        sliders.forEach(slider => {
+            slider.addEventListener('input', () => progressScript(slider));
+            // Panggil fungsi saat halaman dimuat
+            progressScript(slider);
+        });
