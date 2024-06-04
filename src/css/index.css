@@ -880,6 +880,10 @@
   @apply grid grid-cols-[220px,1fr];
 }
 
+   .bg_aktif_detail {
+      @apply bg-slate-200 rounded-lg;
+    }
+
 .slider-card-beranda {
   visibility: hidden;
 }
