@@ -5325,3 +5325,28 @@ sliders.forEach((slider) => {
   // Panggil fungsi saat halaman dimuat
   progressScript(slider);
 });
+
+// Header Menu
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons1 = document.querySelectorAll(".btn_chip_header1");
+  const buttons2 = document.querySelectorAll(".btn_chip_header2");
+
+  buttons1.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remove the 'active_btn_peta' class from all buttons in group 1
+      buttons1.forEach((btn) => btn.classList.remove("active_btn_peta"));
+      // Add the 'active_btn_peta' class to the clicked button
+      this.classList.add("active_btn_peta");
+    });
+  });
+
+  buttons2.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remove the 'active_btn_peta' class from all buttons in group 2
+      buttons2.forEach((btn) => btn.classList.remove("active_btn_peta"));
+      // Add the 'active_btn_peta' class to the clicked button
+      this.classList.add("active_btn_peta");
+    });
+  });
+});

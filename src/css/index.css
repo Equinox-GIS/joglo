@@ -595,11 +595,9 @@
   border: none;
 }
 
-
-
 #ControlRangeSimulasi1 {
   -webkit-appearance: none;
-  appearance: none; 
+  appearance: none;
   width: 100%;
   cursor: pointer;
   outline: none;
@@ -609,28 +607,27 @@
 
 #ControlRangeSimulasi1::-webkit-slider-thumb {
   -webkit-appearance: none;
-  appearance: none; 
+  appearance: none;
   height: 13px;
   width: 13px;
-  background-color: #0394F7;
+  background-color: #0394f7;
   border-radius: 50%;
   border: none;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 #ControlRangeSimulasi1::-moz-range-thumb {
   height: 13px;
   width: 13px;
-  background-color: #0394F7;
+  background-color: #0394f7;
   border-radius: 50%;
   border: none;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-
 
 #ControlRangeSimulasi2 {
   -webkit-appearance: none;
-  appearance: none; 
+  appearance: none;
   width: 100%;
   cursor: pointer;
   outline: none;
@@ -640,27 +637,27 @@
 
 #ControlRangeSimulasi2::-webkit-slider-thumb {
   -webkit-appearance: none;
-  appearance: none; 
+  appearance: none;
   height: 13px;
   width: 13px;
-  background-color: #0394F7;
+  background-color: #0394f7;
   border-radius: 50%;
   border: none;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 #ControlRangeSimulasi2::-moz-range-thumb {
   height: 13px;
   width: 13px;
-  background-color: #0394F7;
+  background-color: #0394f7;
   border-radius: 50%;
   border: none;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 #ControlRangeSimulasi3 {
   -webkit-appearance: none;
-  appearance: none; 
+  appearance: none;
   width: 100%;
   cursor: pointer;
   outline: none;
@@ -670,26 +667,23 @@
 
 #ControlRangeSimulasi3::-webkit-slider-thumb {
   -webkit-appearance: none;
-  appearance: none; 
+  appearance: none;
   height: 13px;
   width: 13px;
-  background-color: #0394F7;
+  background-color: #0394f7;
   border-radius: 50%;
   border: none;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 #ControlRangeSimulasi3::-moz-range-thumb {
   height: 13px;
   width: 13px;
-  background-color: #0394F7;
+  background-color: #0394f7;
   border-radius: 50%;
   border: none;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-
-
-
 
 .slick-dotted.slick-slider {
   margin-bottom: 0px !important;
