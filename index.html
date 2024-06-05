@@ -8045,7 +8045,7 @@
                                 <label
                                   for="email-input3"
                                   class="block mb-2 text-sm font-medium text-gray-900"
-                                  >Nama Profil</label
+                                  >Nama Akun</label
                                 >
                                 <input
                                   type="text"
@@ -8357,6 +8357,11 @@
                                         </label>
 
                                         <textarea
+                                          style="
+                                            resize: none;
+                                            margin: 0;
+                                            padding: 0.3rem;
+                                          "
                                           disabled
                                           name="afiliasi"
                                           id="afiliasi_pengaturan"
@@ -8429,7 +8434,7 @@
                                       disabled
                                       name="speliasi-aset"
                                       id="speliasi_aset_pengaturan"
-                                      class="block py-1 px-2 h-[8vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                      class="block py-1 px-2 h-[7vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                                       placeholder="Menteng, Bintaro, Kemang"
                                       required=""
                                       rows="9"
@@ -8452,7 +8457,7 @@
                                     <textarea
                                       name="deskripsi_postingannn"
                                       id="deskripsi_postingannn_pengaturan"
-                                      class="block px-2 h-[65.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                      class="block px-2 h-[66.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                                       required=""
                                       rows="9"
                                     ></textarea>
@@ -8466,41 +8471,77 @@
                                     </div>
                                     <div
                                       class="w-full grid grid-cols-2 tipe-aset-pengaturan-disable mt-0.5"
-                                    >
-                                      <!--  -->
+                                      >
                                       <div class="flex items-center mb-0.5">
                                         <input
-                                          disabled
-                                          id="rumhabaru1"
+                                          disabled=""
+                                          id="neww_ac1"
                                           type="checkbox"
                                           value=""
-                                          class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
                                         />
                                         <label
-                                          for="rumhabaru1"
-                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          for="ac1"
+                                          class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
                                           >Rumah Baru</label
                                         >
                                       </div>
 
-                                      <!--  -->
-                                      <div class="flex items-center">
+                                      <div class="flex items-center mb-0.5">
                                         <input
-                                          disabled
-                                          id="rumahseken1"
+                                          disabled=""
+                                          id="neww_ac1"
                                           type="checkbox"
                                           value=""
-                                          class="w-3.5 h-3.5 text-blue-600 bg-gray-200 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
                                         />
                                         <label
-                                          for="rumahseken1"
-                                          class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                          for="ac1"
+                                          class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
                                           >Rumah Seken</label
                                         >
                                       </div>
 
                                       <!--  -->
                                     </div>
+
+                                       <div
+                                      class="w-full grid grid-cols-2 tipe-aset-pengaturan-disable mt-0.5"
+                                      >
+                                      <div class="flex items-center mb-0.5">
+                                        <input
+                                          disabled=""
+                                          id="neww_ac1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                        />
+                                        <label
+                                          for="ac1"
+                                          class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                          >Apartemen Baru</label
+                                        >
+                                      </div>
+
+                                      <div class="flex items-center mb-0.5">
+                                        <input
+                                          disabled=""
+                                          id="neww_ac1"
+                                          type="checkbox"
+                                          value=""
+                                          class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                        />
+                                        <label
+                                          for="ac1"
+                                          class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                          >Apartemen Seken</label
+                                        >
+                                      </div>
+
+                                      <!--  -->
+                                    </div>
+
+                                  
                                   </div>
                                 </div>
                               </div>
@@ -10537,12 +10578,10 @@
                                 </div>
                                 <div class="basis-5/12">
                                   <input
-                                    readonly=""
-                                    disabled=""
                                     value="2.5"
                                     type="text"
                                     id="angka_pengali_njop"
-                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
                                   />
                                 </div>
                               </div>
@@ -10779,12 +10818,10 @@
                                 </div>
                                 <div class="basis-5/12">
                                   <input
-                                    disabled
-                                    readonly
                                     value="150.000.000"
                                     type="text"
                                     id="new3_perkiraan_njob_m2"
-                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
                                   />
                                 </div>
                               </div>
@@ -10827,12 +10864,10 @@
                                 </div>
                                 <div class="basis-5/12">
                                   <input
-                                    readonly
-                                    disabled
                                     value="15"
                                     type="text"
                                     id="new11_perkiraan_njob_m2"
-                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
                                   />
                                 </div>
                               </div>
@@ -10877,12 +10912,10 @@
                                 </div>
                                 <div class="basis-5/12">
                                   <input
-                                    disabled
-                                    readonly
                                     value="10"
                                     type="text"
                                     id="new12_perkiraan_njob_m2"
-                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
                                   />
                                 </div>
                               </div>
@@ -11013,12 +11046,10 @@
                                 </div>
                                 <div class="basis-5/12">
                                   <input
-                                    disabled
-                                    readonly
                                     value="10.000.000"
                                     type="text"
                                     id="new7_perkiraan_njob_m2"
-                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right remove_style_arrow_inputan"
                                   />
                                 </div>
                               </div>
@@ -25991,7 +26022,7 @@
                             <div class="w-full grid grid-cols-3">
                               <div class="w-full flex flex-col">
                                 <div
-                                  class="w-full flex ml-1 font-sf_pro_reguler_new text-lg"
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                 >
                                   7 Unit
                                 </div>
@@ -26001,7 +26032,7 @@
                               </div>
                               <div class="w-full flex flex-col">
                                 <div
-                                  class="w-full flex ml-1 font-sf_pro_reguler_new text-lg"
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                 >
                                   30 Unit
                                 </div>
@@ -26011,7 +26042,7 @@
                               </div>
                               <div class="w-full flex flex-col">
                                 <div
-                                  class="w-full flex ml-1 font-sf_pro_reguler_new text-lg"
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                 >
                                   33 Unit
                                 </div>
@@ -26023,7 +26054,7 @@
                             <div class="w-full grid grid-cols-3">
                               <div class="w-full flex flex-col">
                                 <div
-                                  class="w-full flex ml-1 font-sf_pro_reguler_new text-lg"
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                 >
                                   Rp 758.000.000
                                 </div>
@@ -26033,7 +26064,7 @@
                               </div>
                               <div class="w-full flex flex-col">
                                 <div
-                                  class="w-full flex ml-1 font-sf_pro_reguler_new text-lg"
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                 >
                                   Rp 66.000.000.000
                                 </div>
@@ -26043,7 +26074,7 @@
                               </div>
                               <div class="w-full flex flex-col">
                                 <div
-                                  class="w-full flex ml-1 font-sf_pro_reguler_new text-lg"
+                                  class="w-full flex ml-1 font-sf_pro_bold text-lg"
                                 >
                                   Rp 30.000.000.000
                                 </div>
