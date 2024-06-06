@@ -5323,6 +5323,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".menu_tab_agen div");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function () {
+      // Remove active class from all tabs
+      tabs.forEach((t) => t.classList.remove("bg_aktif_detail"));
+      // Add active class to the clicked tab
+      tab.classList.add("bg_aktif_detail");
+    });
+  });
+});
+
 const sliders = document.querySelectorAll(".slider");
 
 function progressScript(sliderEl) {
