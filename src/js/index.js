@@ -5309,7 +5309,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll(".menu_pengaturaan_detail_dua div");
 
@@ -5322,7 +5321,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll(".menu_tab_agen div");
