@@ -3424,7 +3424,7 @@
                   >
                     <!-- Stories Pertama -->
                     <div
-                      class="w-full h-[62.4vh] grid grid-cols-4 relative stories_pertama"
+                      class="w-full h-[64vh] grid grid-cols-4 relative stories_pertama"
                     >
                       <div
                         class="absolute self-center flex item-populer justify-between w-full"
@@ -3515,29 +3515,38 @@
                                 src="https://www.joglopro.com/bucket/soaraja/image/joglopro/model/model10.jpg"
                               />
                             </div>
-                            <div class="flex flex-col ml-2">
+                            <div
+                              class="h-full flex flex-col items-center ml-2 border"
+                            >
+                              <div
+                                class="h-full flex items-center text-sm font-semibold text-black cursor-pointer"
+                                onclick="showCardAgent(this)"
+                              >
+                                Steven R K
+                              </div>
+
                               <div class="inline-flex">
-                                <div
+                                <!--   <div
                                   class="text-sm -mt-1 font-semibold text-black cursor-pointer"
                                   onclick="showCardAgent(this)"
-                                >
-                                  Steven R
-                                </div>
+                                  >
+                                  Steven R K
+                                </div> -->
                                 <div
                                   class="flex items-center justify-center ml-1 -mt-1.5"
                                 >
-                                  <div
+                                  <!-- <div
                                     class="w-4 h-4 flex justify-center items-center relative"
-                                  >
+                                    >
                                     <img
                                       src="https://www.joglopro.com/bucket/soaraja/image/joglopro/verif.png"
                                       alt=""
                                     />
-                                  </div>
+                                  </div> -->
                                 </div>
                               </div>
                               <!--  -->
-                              <div class="mb-1 mt-0.5">
+                              <!-- <div class="mb-1 mt-0.5">
                                 <label
                                   for="star-agent-utama"
                                   class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
@@ -3594,33 +3603,42 @@
                                     </label>
                                   </div>
                                 </label>
-                              </div>
+                              </div> -->
 
                               <!--  -->
                             </div>
                           </div>
                           <!--  -->
                           <div
-                            class="w-full h-full flex items-start justify-end"
+                            class="w-full h-full flex items-center justify-end"
                           >
-                            <img
+                            <div class="rotate-[90deg] mt-2">
+                              <img
+                                onclick="EditStoriesPosting(this)"
+                                class="w-5 h-5 object-cover cursor-pointer"
+                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/threedots.png"
+                                alt="Love"
+                              />
+                            </div>
+
+                            <!--  <img
                               class="w-8 h-8 object-contain"
                               src="https://www.joglopro.com/bucket/soaraja/image/joglopro/agent/era2.png"
-                            />
+                            /> -->
                           </div>
                           <!--  -->
                         </div>
                         <!--  -->
 
-                        <div
+                        <!-- <div
                           class="text-gray-500 text-sm pt-2 pb-2.5 w-full grid grid-cols-2"
                         >
                           <div class="">1 jam yang lalu</div>
-                        </div>
+                        </div> -->
 
                         <!--  -->
 
-                        <div class="inline-flex justify-start w-full pb-2.5">
+                        <div class="inline-flex justify-start w-full py-2.5">
                           <div>
                             <h5
                               class="text-lg font-bold tracking-tight text-black"
@@ -3665,10 +3683,14 @@
                           <!--  -->
                           <!--  -->
                           <div class="flex items-end pt-3 pb-4">
-                            <div
+                            <div class="w-full flex justify-between">
+                              <div class="text-sm text-gray-400">
+                                1 jam yang lalu
+                              </div>
+                            </div>
+                            <!-- <div
                               class="grid grid-cols-5 items-center justify-start -ml-1.5 mt-1 gap-2"
-                            >
-                              <!-- Existing heart icon -->
+                              >
                               <div class="flex flex-col items-center">
                                 <img
                                   class="w-5 h-5 object-cover cursor-pointer"
@@ -3677,10 +3699,9 @@
                                 />
                               </div>
 
-                              <!-- Existing share icon -->
                               <div
                                 class="flex h-full flex-col items-start mr-2 ml-1"
-                              >
+                                >
                                 <img
                                   class="w-[1.20rem] h-[1.20rem] object-cover cursor-pointer"
                                   src="https://www.joglopro.com/bucket/soaraja/image/joglopro/share.png"
@@ -3688,10 +3709,9 @@
                                 />
                               </div>
 
-                              <!-- Existing chat bubble icon -->
                               <div
                                 class="flex h-full flex-col items-start -mt-1.5"
-                              >
+                                >
                                 <img
                                   onclick="showMessage(this)"
                                   class="w-6 h-6 object-cover cursor-pointer"
@@ -3699,10 +3719,9 @@
                                   alt="Love"
                                 />
                               </div>
-                              <!--  -->
                               <div
                                 class="flex h-full flex-col items-start -mt-1.5"
-                              >
+                                >
                                 <img
                                   onclick="EditStoriesPosting(this)"
                                   class="w-6 h-6 object-cover cursor-pointer"
@@ -3710,8 +3729,7 @@
                                   alt="Love"
                                 />
                               </div>
-                              <!--  -->
-                            </div>
+                            </div> -->
                           </div>
                         </div>
                         <!--  -->
@@ -3721,7 +3739,7 @@
 
                     <!-- Stories Kedua -->
                     <div
-                      class="w-full h-[62.4vh] grid grid-cols-4 relative stories_kedua"
+                      class="w-full h-[64vh] grid grid-cols-4 relative stories_kedua"
                     >
                       <div
                         class="absolute self-center flex item-populer justify-between w-full"
@@ -4026,7 +4044,7 @@
                   <div
                     class="h-full w-full grid grid-cols-1 StoriesGaleri2 hidden"
                   >
-                    <div class="w-full h-[62.4vh] grid grid-cols-4 relative">
+                    <div class="w-full h-[64vh] grid grid-cols-4 relative">
                       <div
                         class="absolute self-center flex item-populer justify-between w-full"
                       >
@@ -4114,29 +4132,38 @@
                                 src="https://www.joglopro.com/bucket/soaraja/image/joglopro/model/model7.jpg"
                               />
                             </div>
-                            <div class="flex flex-col ml-2">
+                            <div
+                              class="h-full flex flex-col items-center ml-2 border"
+                            >
+                              <div
+                                class="h-full flex items-center text-sm font-semibold text-black cursor-pointer"
+                                onclick="showCardAgent(this)"
+                              >
+                                Mega Aulia R
+                              </div>
+
                               <div class="inline-flex">
-                                <div
+                                <!--   <div
                                   class="text-sm -mt-1 font-semibold text-black cursor-pointer"
                                   onclick="showCardAgent(this)"
-                                >
-                                  Mega Aulia
-                                </div>
+                                  >
+                                  Steven R K
+                                </div> -->
                                 <div
                                   class="flex items-center justify-center ml-1 -mt-1.5"
                                 >
-                                  <div
+                                  <!-- <div
                                     class="w-4 h-4 flex justify-center items-center relative"
-                                  >
+                                    >
                                     <img
                                       src="https://www.joglopro.com/bucket/soaraja/image/joglopro/verif.png"
                                       alt=""
                                     />
-                                  </div>
+                                  </div> -->
                                 </div>
                               </div>
                               <!--  -->
-                              <div class="mb-1 mt-0.5">
+                              <!-- <div class="mb-1 mt-0.5">
                                 <label
                                   for="star-agent-utama"
                                   class="flex flex-row text-xs font-medium cursor-pointer text-gray-900"
@@ -4193,34 +4220,47 @@
                                     </label>
                                   </div>
                                 </label>
-                              </div>
+                              </div> -->
 
                               <!--  -->
                             </div>
                           </div>
                           <!--  -->
                           <div
-                            class="w-full h-full flex items-start justify-end"
+                            class="w-full h-full flex items-center justify-end"
                           >
-                            <img
+                            <div class="rotate-[90deg] mt-2">
+                              <img
+                                onclick="EditStoriesPosting(this)"
+                                class="w-5 h-5 object-cover cursor-pointer"
+                                src="https://www.joglopro.com/bucket/soaraja/image/joglopro/threedots.png"
+                                alt="Love"
+                              />
+                            </div>
+
+                            <!--  <img
                               class="w-8 h-8 object-contain"
                               src="https://www.joglopro.com/bucket/soaraja/image/joglopro/agent/era2.png"
-                            />
+                            /> -->
                           </div>
                           <!--  -->
                         </div>
                         <!--  -->
-                        <div class="text-gray-500 text-sm pt-2 pb-2.5">
-                          23 jam yang lalu
-                        </div>
+
+                        <!-- <div
+                          class="text-gray-500 text-sm pt-2 pb-2.5 w-full grid grid-cols-2"
+                        >
+                          <div class="">1 jam yang lalu</div>
+                        </div> -->
+
                         <!--  -->
 
-                        <div class="inline-flex justify-start w-full pb-2.5">
+                        <div class="inline-flex justify-start w-full py-2.5">
                           <div>
                             <h5
                               class="text-lg font-bold tracking-tight text-black"
                             >
-                              Rp 11.300.000.000
+                              Rp 5.300.000.000
                             </h5>
                           </div>
                         </div>
@@ -4260,10 +4300,14 @@
                           <!--  -->
                           <!--  -->
                           <div class="flex items-end pt-3 pb-4">
-                            <div
+                            <div class="w-full flex justify-between">
+                              <div class="text-sm text-gray-400">
+                                1 jam yang lalu
+                              </div>
+                            </div>
+                            <!-- <div
                               class="grid grid-cols-5 items-center justify-start -ml-1.5 mt-1 gap-2"
-                            >
-                              <!-- Existing heart icon -->
+                              >
                               <div class="flex flex-col items-center">
                                 <img
                                   class="w-5 h-5 object-cover cursor-pointer"
@@ -4272,10 +4316,9 @@
                                 />
                               </div>
 
-                              <!-- Existing share icon -->
                               <div
                                 class="flex h-full flex-col items-start mr-2 ml-1"
-                              >
+                                >
                                 <img
                                   class="w-[1.20rem] h-[1.20rem] object-cover cursor-pointer"
                                   src="https://www.joglopro.com/bucket/soaraja/image/joglopro/share.png"
@@ -4283,10 +4326,9 @@
                                 />
                               </div>
 
-                              <!-- Existing chat bubble icon -->
                               <div
                                 class="flex h-full flex-col items-start -mt-1.5"
-                              >
+                                >
                                 <img
                                   onclick="showMessage(this)"
                                   class="w-6 h-6 object-cover cursor-pointer"
@@ -4294,10 +4336,9 @@
                                   alt="Love"
                                 />
                               </div>
-                              <!--  -->
                               <div
                                 class="flex h-full flex-col items-start -mt-1.5"
-                              >
+                                >
                                 <img
                                   onclick="EditStoriesPosting(this)"
                                   class="w-6 h-6 object-cover cursor-pointer"
@@ -4305,14 +4346,11 @@
                                   alt="Love"
                                 />
                               </div>
-                              <!--  -->
-                            </div>
+                            </div> -->
                           </div>
-                          <!--  -->
                         </div>
                         <!--  -->
                       </div>
-
                       <!--  -->
                     </div>
                   </div>
@@ -8457,7 +8495,7 @@
                                     <textarea
                                       name="deskripsi_postingannn"
                                       id="deskripsi_postingannn_pengaturan"
-                                      class="block px-2 h-[66.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                      class="block px-2 h-[65.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                                       required=""
                                       rows="9"
                                     ></textarea>
@@ -8470,8 +8508,8 @@
                                       Spesialisasi Aset
                                     </div>
                                     <div
-                                      class="w-full grid grid-cols-2 tipe-aset-pengaturan-disable mt-0.5"
-                                      >
+                                      class="w-full grid grid-cols-2 tipe-aset-pengaturan-disable"
+                                    >
                                       <div class="flex items-center mb-0.5">
                                         <input
                                           disabled=""
@@ -8505,9 +8543,9 @@
                                       <!--  -->
                                     </div>
 
-                                       <div
-                                      class="w-full grid grid-cols-2 tipe-aset-pengaturan-disable mt-0.5"
-                                      >
+                                    <div
+                                      class="w-full grid grid-cols-2 tipe-aset-pengaturan-disable mt-3"
+                                    >
                                       <div class="flex items-center mb-0.5">
                                         <input
                                           disabled=""
@@ -8540,8 +8578,6 @@
 
                                       <!--  -->
                                     </div>
-
-                                  
                                   </div>
                                 </div>
                               </div>
@@ -10013,10 +10049,12 @@
                                 </label>
                                 <textarea
                                   disabled
+                                  placeholder="Rumah ini sangat asri, karena berada di lingkungan yang aman dan nyaman serta di dalamnya terdapat fasilitas berupa dapur,, dan lain-lain. Bangunan rumah masih kokoh sehingga Anda tidak perlu melakukan renovasi dalam waktu dekat. Rumah ini sangat asri, karena berada di lingkungan yang aman dan nyaman serta di dalamnya terdapat fasilitas berupa dapur,, dan lain-lain. Bangunan rumah masih kokoh sehingga Anda tidak perlu melakukan renovasi dalam waktu dekat.
+                                  "
                                   readonly
                                   name="deskripsi_postingan_new"
                                   id="neww_deskripsi_postingan_new"
-                                  class="block px-4 remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 deskripsi_postingan_new"
+                                  class="block px-4 remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 deskripsi_postingan_new indent-10 text-justify"
                                   required=""
                                   rows="9"
                                 ></textarea>
@@ -10303,7 +10341,7 @@
                     <!--  -->
                     <div
                       id="menu_detail_pertama"
-                      class="menu-content-detaill w-full h-[62vh] border border-red-500  mt-[2rem] hidden"
+                      class="menu-content-detaill w-full h-[62vh] border border-red-500 mt-[2rem] hidden"
                     >
                       <div class="h-[60.5vh] overflow-y-hidden hide-scrollbar">
                         <div class="relative">
@@ -10643,11 +10681,9 @@
                                 <div class="basis-5/12">
                                   <input
                                     value="3.000.000"
-                                    readonly=""
-                                    disabled=""
                                     type="text"
                                     id="luas_bangunan_m2"
-                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
                                   />
                                 </div>
                               </div>
@@ -10688,11 +10724,9 @@
                                 <div class="basis-5/12">
                                   <input
                                     value="2.5"
-                                    readonly=""
-                                    disabled=""
                                     type="text"
                                     id="depresiasi_pertahun"
-                                    class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full text-right"
                                   />
                                 </div>
                               </div>
@@ -18731,9 +18765,7 @@
                     class="w-full flex justify-between border-b border-gray-300 px-3 py-2"
                   >
                     <!-- judulStory -->
-                    <div
-                      class="font-sf_pro_bold text-2xl judulStory w-80"
-                    >
+                    <div class="font-sf_pro_bold text-2xl judulStory w-80">
                       Postingan
                     </div>
 
@@ -38614,9 +38646,7 @@
                 <!--  -->
 
                 <!-- Form Posting Listing -->
-                <div
-                  class="h-full hide-scrollbar text-black px-3"
-                >
+                <div class="h-full hide-scrollbar text-black px-3">
                   <!-- Restore Konten Lisitng -->
 
                   <!-- Judul Listing -->
@@ -38893,7 +38923,7 @@
                   <div
                     id="menu_detail_duasatu"
                     class="menu-content-detaill_dua w-full h-[73.5vh] overflow-y-hidden hidden"
-                    >
+                  >
                     <!-- uploadddd -->
 
                     <div
@@ -38930,14 +38960,14 @@
                                 />
                               </div>
                               <div
-                                class="w-full text-center text-xl text-gray-500 hidden_foto_after_upload"
+                                class="w-full text-center text-lg text-gray-500 hidden_foto_after_upload"
                               >
                                 Drop foto di sini
                               </div>
                               <div
                                 class="w-full text-center text-xs text-gray-500"
                               >
-                                (Maksimal 9)
+                                (maks. 9)
                               </div>
                             </div>
                           </div>
@@ -39059,8 +39089,8 @@
 
                   <div
                     id="menu_detail_duadua"
-                    class="menu-content-detaill_dua w-full h-[73.5vh] hidden"
-                    >
+                    class="menu-content-detaill_dua w-full h-[67.5vh] overflow-y-auto overflow-x-hidden hide-scrollbar hidden"
+                  >
                     <form
                       class="formEditListingg RemoveClassformEditListingg mt-[2rem]"
                     >
@@ -39069,13 +39099,51 @@
                         <div>
                           <!-- Judul -->
 
+                          <div
+                            class="relative w-full mb-2 flex flex-col -mt-0.5"
+                          >
+                            <div class="w-full flex flex-col">
+                              <div class="grid grid-cols-2">
+                                <div class="flex items-center">
+                                  <input
+                                    checked
+                                    id="default-penjualan-15"
+                                    type="radio"
+                                    value=""
+                                    name="default-penjualan"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label
+                                    for="default-penjualan-15"
+                                    class="ms-2 text-sm text-black"
+                                    >Dijual</label
+                                  >
+                                </div>
+                                <div class="flex items-center">
+                                  <input
+                                    id="default-penjualan-16"
+                                    type="radio"
+                                    value=""
+                                    name="default-penjualan"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label
+                                    for="default-penjualan-16"
+                                    class="ms-2 text-sm text-black"
+                                    >Disewakan</label
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
                           <!-- Tipe Asset -->
 
                           <div class="relative w-full mb-2 flex flex-col">
                             <div class="block text-xs font-bold mb-1.5">
                               Tipe Properti
                             </div>
-                            <div class="w-full flex flex-col mt-1">
+                            <div class="w-full flex flex-col">
                               <div class="grid grid-cols-2">
                                 <div class="flex items-center">
                                   <input
@@ -39140,6 +39208,7 @@
                                     >Apartemen Seken</label
                                   >
                                 </div>
+                                <div></div>
                               </div>
                             </div>
                           </div>
@@ -39159,7 +39228,7 @@
                                 <input
                                   value="2.500.000.000"
                                   type="text"
-                                  id="harga_new"
+                                  id="neww_harga_new"
                                   class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                 />
                               </div>
@@ -39176,7 +39245,7 @@
                                 <input
                                   value="2024"
                                   type="number"
-                                  id="tahun_dibangun_new"
+                                  id="neww_tahun_dibangun_new"
                                   class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                 />
                               </div>
@@ -39196,7 +39265,7 @@
                               readonly=""
                               disabled=""
                               type="text"
-                              id="koordinat_new"
+                              id="neww_koordinat_new"
                               class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                             />
                           </div>
@@ -39214,7 +39283,7 @@
                               readonly=""
                               disabled=""
                               type="text"
-                              id="kelurahan_new"
+                              id="neww_kelurahan_new"
                               class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                             />
                           </div>
@@ -39232,7 +39301,7 @@
                               readonly=""
                               disabled=""
                               type="text"
-                              id="kecamatan_new"
+                              id="neww_kecamatan_new"
                               class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                             />
                           </div>
@@ -39250,7 +39319,7 @@
                               readonly=""
                               disabled=""
                               type="text"
-                              id="kota_new_beda"
+                              id="neww_kota_new_beda"
                               class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                             />
                           </div>
@@ -39262,7 +39331,7 @@
                             <div class="w-full grid grid-cols-3">
                               <div class="flex items-center">
                                 <input
-                                  id="penjual-agen"
+                                  id="neww_penjual-agen"
                                   type="radio"
                                   value="agen"
                                   name="jenis-penjual"
@@ -39277,7 +39346,7 @@
                               <div class="flex items-center">
                                 <input
                                   checked
-                                  id="penjual-pemilik"
+                                  id="neww_penjual-pemilik"
                                   type="radio"
                                   value="pemilik-langsung"
                                   name="jenis-penjual"
@@ -39291,7 +39360,7 @@
                               </div>
                               <div class="flex items-center">
                                 <input
-                                  id="penjual-pengembang"
+                                  id="neww_penjual-pengembang"
                                   type="radio"
                                   value="pengembang"
                                   name="jenis-penjual"
@@ -39323,7 +39392,7 @@
                                   <input
                                     value="300"
                                     type="number"
-                                    id="luas_tanah_new"
+                                    id="neww_luas_tanah_new"
                                     class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                   />
                                 </div>
@@ -39341,7 +39410,7 @@
                                   <input
                                     value="150"
                                     type="number"
-                                    id="luas_bangunan_new"
+                                    id="neww_luas_bangunan_new"
                                     class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                   />
                                 </div>
@@ -39361,7 +39430,7 @@
                                   <input
                                     value="2"
                                     type="number"
-                                    id="kamar_tidur_utama_new"
+                                    id="neww_kamar_tidur_utama_new"
                                     class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                                   />
                                 </div>
@@ -39379,7 +39448,7 @@
                                   <input
                                     value="1"
                                     type="number"
-                                    id="kamar_tidur_tambahan_new"
+                                    id="neww_kamar_tidur_tambahan_new"
                                     class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                                   />
                                 </div>
@@ -39399,7 +39468,7 @@
                                   <input
                                     value="450"
                                     type="number"
-                                    id="listrik_utama_new"
+                                    id="neww_listrik_utama_new"
                                     class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                                   />
                                 </div>
@@ -39414,7 +39483,7 @@
                                     Air
                                   </label>
                                   <select
-                                    id=""
+                                    id="neww_"
                                     class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                                   >
                                     <option value="#">Pilih</option>
@@ -39434,7 +39503,7 @@
                                     Arah Bangunan
                                   </label>
                                   <select
-                                    id=""
+                                    id="neww_"
                                     class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
                                   >
                                     <option value="#">Pilih</option>
@@ -39455,6 +39524,8 @@
 
                         <!-- a -->
                         <div class="flex flex-col">
+                          <!--  -->
+
                           <!-- Deskripsi -->
                           <div class="relative w-full mb-1.5">
                             <label
@@ -39465,14 +39536,14 @@
                             </label>
                             <textarea
                               name="deskripsi_postingan_new"
-                              id="deskripsi_postingan_new"
+                              id="neww_deskripsi_postingan_new"
                               class="block px-4 remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 deskripsi_postingan_new"
                               required=""
                               rows="9"
                             ></textarea>
                           </div>
 
-                          <!--  -->
+                          <!-- uploadddd -->
 
                           <div class="flex flex-row mb-1 mt-1">
                             <!-- Jumlah Kamar Tidur Utama -->
@@ -39485,7 +39556,7 @@
                                   <div class="flex items-center">
                                     <input
                                       checked
-                                      id="jenis-surat-shm"
+                                      id="neww_jenis-surat-shm"
                                       type="radio"
                                       value="shm"
                                       name="jenis-surat"
@@ -39499,7 +39570,7 @@
                                   </div>
                                   <div class="flex items-center">
                                     <input
-                                      id="jenis-surat-shgb"
+                                      id="neww_jenis-surat-shgb"
                                       type="radio"
                                       value="shgb"
                                       name="jenis-surat"
@@ -39525,10 +39596,10 @@
                                   <div class="flex items-center">
                                     <input
                                       checked
-                                      id="jenis-surat-imb"
+                                      id="neww_jenis-surat-imb"
                                       type="checkbox"
                                       class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
-                                      id=""
+                                      id="neww_"
                                     />
                                     <label
                                       for="jenis-surat-imb"
@@ -39539,10 +39610,10 @@
                                   <div class="flex items-center">
                                     <input
                                       checked
-                                      id="jenis-surat-pbb"
+                                      id="neww_jenis-surat-pbb"
                                       type="checkbox"
                                       class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
-                                      id=""
+                                      id="neww_"
                                     />
                                     <label
                                       for="jenis-surat-pbb"
@@ -39568,14 +39639,14 @@
                                 <div class="flex items-center mb-1">
                                   <input
                                     checked
-                                    id="ac1"
+                                    id="neww_ac1"
                                     type="checkbox"
                                     value=""
                                     class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
                                   />
                                   <label
                                     for="ac1"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
                                     >AC</label
                                   >
                                 </div>
@@ -39584,14 +39655,14 @@
                                 <div class="flex items-center mb-1">
                                   <input
                                     checked
-                                    id="canopy1"
+                                    id="neww_canopy1"
                                     type="checkbox"
                                     value=""
                                     class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
                                   />
                                   <label
                                     for="canopy1"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
                                     >Canopy</label
                                   >
                                 </div>
@@ -39600,125 +39671,92 @@
                                 <div class="flex items-center mb-1">
                                   <input
                                     checked
-                                    id="carport123"
+                                    id="neww_carport123"
                                     type="checkbox"
                                     value=""
                                     class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
                                   />
                                   <label
                                     for="carport123"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
                                     >Carport</label
                                   >
                                 </div>
-                              </div>
 
-                              <div class="w-full grid grid-rows-3">
-                                <!-- One Gate System -->
-                                <div class="flex items-center mb-1">
-                                  <input
-                                    id="ogs1"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                  />
-                                  <label
-                                    for="ogs1"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Jet Pump</label
-                                  >
-                                </div>
-
-                                <!-- One Gate System -->
-                                <div class="flex items-center mb-1">
-                                  <input
-                                    id="ogs1"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                  />
-                                  <label
-                                    for="ogs1"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >One Gate System</label
-                                  >
-                                </div>
-
-                                <!-- Rooftop -->
-                                <div class="flex items-center mb-1">
-                                  <input
-                                    id="rooftop1"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                  />
-                                  <label
-                                    for="rooftop1"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Rooftop</label
-                                  >
-                                </div>
-                              </div>
-
-                              <div class="w-full grid grid-rows-3">
                                 <!-- CCTV -->
                                 <div class="flex items-center mb-1">
                                   <input
-                                    id="imb22"
+                                    id="neww_imb22"
                                     type="checkbox"
                                     value=""
                                     class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
                                   />
                                   <label
                                     for="imb22"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
                                     >CCTV</label
                                   >
                                 </div>
 
-                                <!-- Clubhouse -->
                                 <div class="flex items-center mb-1">
                                   <input
-                                    id="clubhouse1"
-                                    type="checkbox"
-                                    value=""
-                                    class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                  />
-                                  <label
-                                    for="clubhouse1"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
-                                    >Club House</label
-                                  >
-                                </div>
-
-                                <!-- JepPump -->
-                                <div class="flex items-center mb-1">
-                                  <input
-                                    id="jetpump"
+                                    id="neww_jetpump"
                                     type="checkbox"
                                     value=""
                                     class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
                                   />
                                   <label
                                     for="jetpump"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
                                     >Garasi</label
                                   >
                                 </div>
+
+                                <!--  -->
                               </div>
 
                               <div class="w-full grid grid-rows-3">
+                                <!-- One Gate System -->
+                                <div class="flex items-center mb-1">
+                                  <input
+                                    id="neww_ogs1"
+                                    type="checkbox"
+                                    value=""
+                                    class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label
+                                    for="ogs1"
+                                    class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                    >Jet Pump</label
+                                  >
+                                </div>
+
+                                <!-- Rooftop -->
+                                <div class="flex items-center mb-1">
+                                  <input
+                                    id="neww_rooftop1"
+                                    type="checkbox"
+                                    value=""
+                                    class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label
+                                    for="rooftop1"
+                                    class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                    >Rooftop</label
+                                  >
+                                </div>
+
                                 <!-- Swimming Pool -->
                                 <div class="flex items-center mb-1">
                                   <input
-                                    id="pool1"
+                                    id="neww_pool1"
                                     type="checkbox"
                                     value=""
                                     class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
                                   />
                                   <label
                                     for="pool1"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
                                     >Swimming Pool</label
                                   >
                                 </div>
@@ -39726,14 +39764,14 @@
                                 <!-- Taman -->
                                 <div class="flex items-center mb-1">
                                   <input
-                                    id="taman1"
+                                    id="neww_taman1"
                                     type="checkbox"
                                     value=""
                                     class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
                                   />
                                   <label
                                     for="taman1"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
                                     >Taman</label
                                   >
                                 </div>
@@ -39741,19 +39779,17 @@
                                 <!-- Toren -->
                                 <div class="flex items-center mb-1">
                                   <input
-                                    id="toren1"
+                                    id="neww_toren1"
                                     type="checkbox"
                                     value=""
                                     class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
                                   />
                                   <label
                                     for="toren1"
-                                    class="ml-2 text-sm cursor-pointer font-medium text-gray-900"
+                                    class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
                                     >Toren</label
                                   >
                                 </div>
-
-                                <!--  -->
                               </div>
                             </div>
                           </div>
@@ -39764,15 +39800,6 @@
                         <!--  -->
 
                         <div class="col-span-2"></div>
-                      </div>
-
-                      <div class="flex justify-center col-span-2 pt-5 pb-6">
-                        <button
-                          type="button"
-                          class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
-                        >
-                          Simpan
-                        </button>
                       </div>
 
                       <!--  -->
