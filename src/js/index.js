@@ -4739,19 +4739,13 @@ document.addEventListener("DOMContentLoaded", function () {
     username_pengaturan: "syariff_091",
     deskripsi_singkat_pengaturan: "Agen berpengalam selama 30 tahun",
     deskripsi_postingannn_pengaturan: `Dijual Rumah Lokasi Bagus Dekat Tol Cibubur di Jalan Kraggan sangatRumah ini sangat asri, karena berada di lingkungan yang aman dan nyaman serta di dalamnya terdapat fasilitas berupa dapur,, dan lain-lain. Bangunan rumah masih kokoh sehingga Anda tidak perlu melakukan renovasi dalam waktu dekat.
-
 Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perkantoran, sekolah, rumah sakit, pusat kuliner, dan lain-lain.
 
 10 menit ke tol cibuburrr
 10 menit ke mall juncion
 10 menit ke RS mitra keluarga
-5 menit ke pasar tradisional kranggan
-Dekat sekolah negeri dan swasta
-Dekat minimarket
-Akses dua mobil
-Lingkungan aman nyaman dan bebas banjir
-
-Lokasi rumah cukup strategis mengingat dekat dengan pusat perbelanjaan, pusat perka`,
+10 menit ke Sekolah Tri Nasional
+5 menit ke pasar tradisional kranggan`,
   };
 
   let saldoNew = document.getElementById("saldo_new");
@@ -4798,6 +4792,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var dataDummyPengaturannnn = {
     listing_new: "ID 78AC61",
     koordinatt_new: "-6.282301, 106.794109",
+    dua_new_harga_new: "500.000.000",
     kelurahannn_new: "Cilandak Barat",
     kecamatan_newwww: "Cilandak ",
     kotaaa_new_beda: "Jakarta Selatan",
@@ -4830,6 +4825,9 @@ Lingkungan aman nyaman dan bebas ba
 
   let koordinattNew = document.getElementById("koordinatt_new");
   koordinattNew.value = dataDummyPengaturannnn.koordinatt_new;
+
+  let dua_new_harga_new = document.getElementById("dua_new_harga_new");
+  dua_new_harga_new.value = dataDummyPengaturannnn.dua_new_harga_new;
 
   let kelurahannnNew = document.getElementById("kelurahannn_new");
   kelurahannnNew.value = dataDummyPengaturannnn.kelurahannn_new;

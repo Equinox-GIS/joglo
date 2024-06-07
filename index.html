@@ -8471,31 +8471,12 @@
                                       class="block text-xs font-bold mb-1"
                                       for="deskripsi_postingannn_pengaturan"
                                     >
-                                      Bio Lengkap (maks. 750 karakter)
+                                      Bio Lengkap (maks. 500 karakter)
                                     </label>
                                     <textarea
                                       name="deskripsi_postingannn"
                                       id="deskripsi_postingannn_pengaturan"
                                       class="block px-2 h-[44.5vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
-                                      required=""
-                                      rows="9"
-                                    ></textarea>
-                                  </div>
-
-                                  <!-- Spesialisasi Asset -->
-                                  <div class="relative w-full mb-1">
-                                    <label
-                                      class="block text-xs font-bold mb-1"
-                                      for="speliasi_aset_pengaturan"
-                                    >
-                                      Spesialisasi Area
-                                    </label>
-                                    <textarea
-                                      disabled=""
-                                      name="speliasi-aset"
-                                      id="speliasi_aset_pengaturan"
-                                      class="block py-1 px-2 h-[7vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
-                                      placeholder="Menteng, Bintaro, Kemang"
                                       required=""
                                       rows="9"
                                     ></textarea>
@@ -8578,6 +8559,25 @@
 
                                       <!--  -->
                                     </div>
+                                  </div>
+
+                                  <!-- Spesialisasi Asset -->
+                                  <div class="relative w-full mb-1">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="speliasi_aset_pengaturan"
+                                    >
+                                      Spesialisasi Area
+                                    </label>
+                                    <textarea
+                                      disabled=""
+                                      name="speliasi-aset"
+                                      id="speliasi_aset_pengaturan"
+                                      class="block py-1 px-2 h-[7vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                      placeholder="Menteng, Bintaro, Kemang"
+                                      required=""
+                                      rows="9"
+                                    ></textarea>
                                   </div>
                                 </div>
                               </div>
@@ -19752,11 +19752,9 @@
                                       Listing ID
                                     </label>
                                     <input
-                                      readonly=""
-                                      disabled=""
                                       type="text"
                                       id="listing_new"
-                                      class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                     />
                                   </div>
 
@@ -19786,11 +19784,9 @@
                                       Harga (Rp)
                                     </label>
                                     <input
-                                      readonly=""
-                                      disabled=""
                                       type="text"
                                       id="dua_new_harga_new"
-                                      class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
                                     />
                                   </div>
 
@@ -19937,9 +19933,11 @@
                                       Deskripsi (maks. 300 karakter)
                                     </label>
                                     <textarea
+                                      readonly
+                                      disabled
                                       name="deskripsi_storiess_new"
                                       id="deskripsi_storiess_new"
-                                      class="block px-2 h-[54vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
+                                      class="block px-2 h-[54vh] remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200"
                                       required=""
                                       rows="9"
                                     ></textarea>
@@ -19950,7 +19948,7 @@
                               </div>
 
                               <div
-                                class="flex justify-center col-span-2 pt-5 pb-6"
+                                class="flex justify-center col-span-2 pt-3 pb-6"
                               >
                                 <button
                                   type="button"
@@ -34198,7 +34196,7 @@
                               name="headerbtn"
                               title=""
                               class="block w-full p-3 ps-10 text-sm text-gray-900 border-none bg-white focus:outline-none focus:ring-0 rounded-lg tracking-[0.060em]"
-                              placeholder="Pencarian Threat"
+                              placeholder="Pencarian Utas"
                               type="search"
                               required
                             />
@@ -34206,7 +34204,7 @@
                               type="submit"
                               class="text-white absolute end-[0.625rem] bottom-[0.6rem] bg-[#0394F7] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[5px] text-xs px-2 py-1"
                             >
-                              Threat Baru
+                              Utas Baru
                             </button>
                           </div>
                         </form>
@@ -34851,7 +34849,7 @@
                               type="text"
                               title=""
                               placeholder="Tuliskan pesan di sini ..."
-                              class="block w-full py-2 border border-gray-300 pl-4 mx-0 text-sm bg-gray-100 rounded-full outline-none focus:outline-none focus:ring-0 focus:border-gray-300"
+                              class="block w-full py-2 border border-gray-300 pl-4 mx-0 text-sm text-gray-400 bg-gray-100 rounded-full outline-none focus:outline-none focus:ring-0 focus:border-gray-300 tracking-[0.030em]"
                               name="message"
                               required=""
                             />
@@ -35102,7 +35100,7 @@
                               type="text"
                               title=""
                               placeholder="Tuliskan pesan di sini ..."
-                              class="block w-full py-2 border border-gray-300 pl-4 mx-0 text-sm bg-gray-100 rounded-full outline-none focus:outline-none focus:ring-0 focus:border-gray-300"
+                              class="block w-full py-2 border border-gray-300 pl-4 mx-0 text-sm text-gray-400 bg-gray-100 rounded-full outline-none focus:outline-none focus:ring-0 focus:border-gray-300 tracking-[0.030em]"
                               name="message"
                               required=""
                             />
