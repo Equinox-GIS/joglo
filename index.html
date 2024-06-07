@@ -2956,13 +2956,7 @@
                     <div class="grid grid-cols-2 gap-2 pb-2">
                       <!-- Card Beranda 1 -->
                       <div class="w-full konten-dijual">
-                        <div
-                          class="flex flex-col cursor-pointer bg-white rounded-lg"
-                          data-card-map="1534"
-                          data-active-tab="1"
-                          data-object-id="1604"
-                          onclick="showCardInfoDetail(this)"
-                        >
+                        <div class="flex flex-col bg-white rounded-lg">
                           <div class="py-1 px-2 h-[7vh]">
                             <div
                               class="w-full h-full grid grid-cols-[1fr,40px]"
@@ -3082,7 +3076,13 @@
                             </div>
                           </div>
 
-                          <div class="w-full h-[27vh] relative">
+                          <div
+                            data-card-map="1534"
+                            data-active-tab="1"
+                            data-object-id="1604"
+                            class="w-full !h-[27vh] relative cursor-pointer"
+                            onclick="showCardInfoDetail(this)"
+                          >
                             <div class="slider-favorit w-full h-full">
                               <div
                                 class="relative h-[27vh] bg-black z-index-10"
@@ -3112,16 +3112,14 @@
                               <!--  -->
                             </div>
                           </div>
-                          <div
-                            class="px-2 pt-[0.3rem] h-[11.3vh]"
-                            style="user-select: none"
-                          >
+                          <!--  -->
+                          <div class="px-2 pt-[0.3rem] h-[11.3vh]">
                             <div
                               class="w-full text-gray-500 text-xs flex justify-between"
                             >
                               <div class="inline-flex"></div>
-                              <div class="inline-flex" onclick="CopyTeks()">
-                                <div class="">
+                              <div class="inline-flex">
+                                <!--  <div class="">
                                   <svg
                                     class="h-4 w-4 text-gray-400 mr-1"
                                     width="24"
@@ -3145,7 +3143,7 @@
                                       d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2"
                                     />
                                   </svg>
-                                </div>
+                                </div> -->
 
                                 <div>
                                   ID <span id="copy_id_iklan">78AC66</span>
@@ -3154,7 +3152,7 @@
                             </div>
                             <div class="flex flex-row justify-between -mt-1">
                               <div>
-                                <a href="#">
+                                <div>
                                   <div class="inline-flex items-center w-full">
                                     <h5
                                       class="text-lg font-bold tracking-tight text-black"
@@ -3187,7 +3185,7 @@
                                       /> -->
                                     </div>
                                   </div>
-                                </a>
+                                </div>
                               </div>
                               <!--    <div class="flex items-center">
                                 <img
