@@ -1824,6 +1824,32 @@ window.showCardAgent = function (element) {
   }
 };
 
+window.CopyTeks = function (element) {
+  console.log("sadsa");
+  event.stopPropagation();
+
+  // Get the text from the span element
+  var text = document.getElementById("copy_id_iklan").textContent;
+
+  // Extract only the numeric part from the text
+  var numericText = text.replace(/\D/g, "");
+
+  // Create a temporary input element to copy the text
+  var tempInput = document.createElement("input");
+  tempInput.value = numericText;
+  document.body.appendChild(tempInput);
+
+  // Select the text and copy it to the clipboard
+  tempInput.select();
+  document.execCommand("copy");
+
+  // Remove the temporary input element
+  document.body.removeChild(tempInput);
+
+  // Optional: alert the user that the text has been copied
+  alert("Telah disalin: " + numericText);
+};
+
 // Tombol Menu Kembali Promo, tab Listing
 window.btnBackPromoListing = function (element) {
   Array.from(document.getElementsByClassName("showKontenPromoAgen")).forEach(
