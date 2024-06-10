@@ -38928,187 +38928,18 @@
                   <!-- Konten Listing -->
                   <div
                     id="menu_detail_duasatu"
-                    class="menu-content-detaill_dua w-full h-[73.5vh] overflow-y-hidden hidden"
+                    class="menu-content-detaill_dua w-full h-full overflow-y-hidden hidden"
                   >
                     <!-- uploadddd -->
 
-                    <div
-                      class="relative w-full mb-2 mt-0.5 flex flex-col mt-[2rem]"
-                    >
-                      <!--  -->
-                      <div
-                        class="w-full area_upload cursor-pointer"
-                        onclick="triggerFileInput()"
-                      >
-                        <input
-                          id="fileElem"
-                          type="file"
-                          class="hidden"
-                          multiple
-                          accept="image/*"
-                        />
-                        <div
-                          id="drop-area"
-                          class="w-full bg-white rounded-lg flex position_gambar_upload justify-center items-center"
-                        >
-                          <div
-                            class="cursor-pointer flex flex-col justify-center"
-                          >
-                            <div
-                              class="hide_gambar_upload w-full flex flex-col justify-center"
-                            >
-                              <div
-                                class="w-full flex justify-center hidden_foto_after_upload"
-                              >
-                                <img
-                                  class="w-[17rem] h-[13rem] object-contain"
-                                  src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
-                                />
-                              </div>
-                              <div
-                                class="w-full text-center text-lg text-gray-500 hidden_foto_after_upload"
-                              >
-                                Drop foto di sini
-                              </div>
-                              <div
-                                class="w-full text-center text-xs text-gray-500"
-                              >
-                                maks. 9
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="overflow-hidden w-full h-full flex items-center justify-center relative preview_gambar_upload rounded-lg hidden"
-                          >
-                            <div
-                              class="w-full h-full"
-                              id="preview-container"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--  -->
-
-                      <!-- BTN RESET -->
-                      <div
-                        class="w-full absolute grid grid-cols-1 top-8 right-3"
-                      >
-                        <div class="w-full flex justify-end">
-                          <button
-                            type="button"
-                            class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center mr-0.5 batal_gambar_upload_listing hidden"
-                            onclick="ResetUploadListing(event)"
-                          >
-                            <svg
-                              class="w-3 h-3 text-gray-400 dark:text-white"
-                              aria-hidden="true"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M6 18 17.94 6M18 18 6.06 6"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-
-                      <!-- BTN PREVIOUS NEXT -->
-                      <div
-                        class="w-full grid grid-cols-2 mt-2 absolute top-1/2 transform -translate-y-1/2"
-                      >
-                        <div class="w-full flex justify-start">
-                          <button
-                            type="button"
-                            class="text-white bg-[#f1f5f9] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 ml-4 previous_gambar_upload_listing hidden"
-                            onclick="showPreviousImage()"
-                          >
-                            <svg
-                              class="w-3.5 h-3.5 text-gray-400"
-                              aria-hidden="true"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="3"
-                                d="m15 19-7-7 7-7"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-
-                        <div class="w-full flex justify-end">
-                          <button
-                            type="button"
-                            class="text-white bg-[#f1f5f9] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 mr-4 next_gambar_upload_listing hidden"
-                            onclick="showNextImage()"
-                          >
-                            <svg
-                              class="w-3.5 h-3.5 text-gray-400"
-                              aria-hidden="true"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="m9 5 7 7-7 7"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-
-                      <!-- Indikator -->
-                      <div class="w-full absolute grid grid-cols-1 bottom-2">
-                        <div class="w-full indikator_upload_listing hidden">
-                          <div
-                            class="w-full flex flex-row justify-center"
-                            id="indikator_listing"
-                          >
-                            <!-- <span class="flex w-1.5 h-1.5 me-1.5 bg-slate-50 rounded-full"></span> -->
-                          </div>
-                        </div>
-                      </div>
-
-                      <!--  -->
-                    </div>
-                  </div>
-
-                  <div
-                    id="menu_detail_duadua"
-                    class="menu-content-detaill_dua w-full h-[67.5vh] overflow-y-auto overflow-x-hidden hide-scrollbar hidden"
-                  >
-                    <!--  -->
-
-                    <form
-                      class="formEditListingg RemoveClassformEditListingg mt-[2rem]"
-                    >
-                      <div class="grid grid-cols-2 gap-y-1 gap-x-3">
-                        <div>
-
+                    <div class="w-full h-[61vh] mt-[2.2rem] grid grid-cols-5">
+                      <div class="col-span-2 w-full h-full">
+                        <div class="grid grid-cols-1">
                           <div
                             class="relative w-full mb-2 flex flex-col -mt-0.5"
-                            >
+                          >
                             <div class="w-full flex flex-col">
+                              <!--  -->
                               <div class="grid grid-cols-2">
                                 <div class="flex items-center">
                                   <input
@@ -39148,6 +38979,7 @@
                               Tipe Properti
                             </div>
                             <div class="w-full flex flex-col">
+                              <!--  -->
                               <div class="grid grid-cols-2">
                                 <div class="flex items-center">
                                   <input
@@ -39179,13 +39011,248 @@
                                   >
                                 </div>
                               </div>
+                              <!--  -->
+                              <div class="grid grid-cols-2">
+                                <div class="flex items-center">
+                                  <input
+                                    id="ff"
+                                    type="radio"
+                                    value=""
+                                    name="property-type"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label
+                                    for="ff"
+                                    class="ms-2 text-sm text-black"
+                                    >Apartemen Baru</label
+                                  >
+                                </div>
+                                <div class="flex items-center">
+                                  <input
+                                    id=""
+                                    type="radio"
+                                    value=""
+                                    name="property-type"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label for="" class="ms-2 text-sm text-black"
+                                    >Apartemen Seken</label
+                                  >
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="grid grid-cols-2">
+                                <div class="flex items-center">
+                                  <input
+                                    id="ff"
+                                    type="radio"
+                                    value=""
+                                    name="property-type"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label
+                                    for="ff"
+                                    class="ms-2 text-sm text-black"
+                                    >Ruko</label
+                                  >
+                                </div>
+                                <div class="flex items-center">
+                                  <input
+                                    id=""
+                                    type="radio"
+                                    value=""
+                                    name="property-type"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label for="" class="ms-2 text-sm text-black"
+                                    >Tanah</label
+                                  >
+                                </div>
+                              </div>
+                              <!--  -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-span-3 w-full h-full">
+                        <div class="relative w-full mb-2 mt-0.5 flex flex-col">
+                          <!--  -->
+                          <div
+                            class="w-full area_upload cursor-pointer"
+                            onclick="triggerFileInput()"
+                          >
+                            <input
+                              id="fileElem"
+                              type="file"
+                              class="hidden"
+                              multiple
+                              accept="image/*"
+                            />
+                            <div
+                              id="drop-area"
+                              class="w-full bg-white rounded-lg flex position_gambar_upload justify-center items-center"
+                            >
+                              <div
+                                class="cursor-pointer flex flex-col justify-center"
+                              >
+                                <div
+                                  class="hide_gambar_upload w-full flex flex-col justify-center"
+                                >
+                                  <div
+                                    class="w-full flex justify-center hidden_foto_after_upload"
+                                  >
+                                    <img
+                                      class="w-[17rem] h-[13rem] object-contain"
+                                      src="https://www.joglopro.com/bucket/soaraja/image/joglopro/landscape.png"
+                                    />
+                                  </div>
+                                  <div
+                                    class="w-full text-center text-lg text-gray-500 hidden_foto_after_upload"
+                                  >
+                                    Drop foto di sini
+                                  </div>
+                                  <div
+                                    class="w-full text-center text-xs text-gray-500"
+                                  >
+                                    maks. 9
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="overflow-hidden w-full h-full flex items-center justify-center relative preview_gambar_upload rounded-lg hidden"
+                              >
+                                <div
+                                  class="w-full h-full"
+                                  id="preview-container"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+
+                          <!-- BTN RESET -->
+                          <div
+                            class="w-full absolute grid grid-cols-1 top-8 right-3"
+                          >
+                            <div class="w-full flex justify-end">
+                              <button
+                                type="button"
+                                class="text-white bg-slate-50 focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center mr-0.5 batal_gambar_upload_listing hidden"
+                                onclick="ResetUploadListing(event)"
+                              >
+                                <svg
+                                  class="w-3 h-3 text-gray-400 dark:text-white"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M6 18 17.94 6M18 18 6.06 6"
+                                  />
+                                </svg>
+                              </button>
                             </div>
                           </div>
 
+                          <!-- BTN PREVIOUS NEXT -->
+                          <div
+                            class="w-full grid grid-cols-2 mt-2 absolute top-1/2 transform -translate-y-1/2"
+                          >
+                            <div class="w-full flex justify-start">
+                              <button
+                                type="button"
+                                class="text-white bg-[#f1f5f9] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 ml-4 previous_gambar_upload_listing hidden"
+                                onclick="showPreviousImage()"
+                              >
+                                <svg
+                                  class="w-3.5 h-3.5 text-gray-400"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="3"
+                                    d="m15 19-7-7 7-7"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+
+                            <div class="w-full flex justify-end">
+                              <button
+                                type="button"
+                                class="text-white bg-[#f1f5f9] focus:ring-0 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center me-2 mr-4 next_gambar_upload_listing hidden"
+                                onclick="showNextImage()"
+                              >
+                                <svg
+                                  class="w-3.5 h-3.5 text-gray-400"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m9 5 7 7-7 7"
+                                  />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <!-- Indikator -->
+                          <div
+                            class="w-full absolute grid grid-cols-1 bottom-2"
+                          >
+                            <div class="w-full indikator_upload_listing hidden">
+                              <div
+                                class="w-full flex flex-row justify-center"
+                                id="indikator_listing"
+                              >
+                                <!-- <span class="flex w-1.5 h-1.5 me-1.5 bg-slate-50 rounded-full"></span> -->
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    id="menu_detail_duadua"
+                    class="menu-content-detaill_dua w-full h-[67.5vh] overflow-y-auto overflow-x-hidden hide-scrollbar hidden"
+                  >
+                    <!--  -->
+
+                    <form
+                      class="formEditListingg RemoveClassformEditListingg mt-[2rem]"
+                    >
+                      <div class="grid grid-cols-2 gap-y-1 gap-x-3">
+                        <div>
                           <!-- Rumah Baru Dijual -->
                           <div
                             class="flex flex-row mb-2 rumahBaru dijual block"
-                            >
+                          >
                             <div class="basis-6/12">
                               <div class="relative w-full">
                                 <label
@@ -39218,10 +39285,285 @@
                             </div>
                           </div>
 
+                          <!-- Rumah Baru -->
+
+                          <!-- Koordinat -->
+                          <div class="relative w-full mb-2 rumahBaru block">
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="koordinat_new"
+                            >
+                              Lokasi (klik di peta)
+                            </label>
+                            <input
+                              value=""
+                              type="text"
+                              id="neww_koordinat_new"
+                              class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!-- Kelurahan -->
+                          <div class="relative w-full mb-2 rumahBaru block">
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="kelurahan_new"
+                            >
+                              Kelurahan
+                            </label>
+                            <input
+                              value="Cilandak Barat"
+                              readonly=""
+                              disabled=""
+                              type="text"
+                              id="neww_kelurahan_new"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!-- Kecamatan -->
+                          <div class="relative w-full mb-2 rumahBaru block">
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="kecamatan_new"
+                            >
+                              Kecamatan
+                            </label>
+                            <input
+                              value="Cilandak"
+                              readonly=""
+                              disabled=""
+                              type="text"
+                              id="neww_kecamatan_new"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!-- Kota -->
+                          <div class="relative w-full mb-2 rumahBaru block">
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="kota_new_beda"
+                            >
+                              Kota
+                            </label>
+                            <input
+                              value="Jakarta Selatan"
+                              readonly=""
+                              disabled=""
+                              type="text"
+                              id="neww_kota_new_beda"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <div
+                            class="relative w-full mb-2 rumahBaru block mt-3"
+                          >
+                            <div class="block text-xs font-bold my-1">
+                              Pemasang Iklan
+                            </div>
+                            <div class="w-full grid grid-cols-3">
+                              <div class="flex items-center">
+                                <input
+                                  id="neww_penjual-agen"
+                                  type="radio"
+                                  value="agen"
+                                  name="jenis-penjual"
+                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="penjual-agen"
+                                  class="ms-2 text-sm text-black"
+                                  >Agen</label
+                                >
+                              </div>
+                              <div class="flex items-center">
+                                <input
+                                  checked
+                                  id="neww_penjual-pemilik"
+                                  type="radio"
+                                  value="pemilik-langsung"
+                                  name="jenis-penjual"
+                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="penjual-pemilik"
+                                  class="ms-2 text-sm text-black"
+                                  >Pemilik</label
+                                >
+                              </div>
+                              <div class="flex items-center">
+                                <input
+                                  id="neww_penjual-pengembang"
+                                  type="radio"
+                                  value="pengembang"
+                                  name="jenis-penjual"
+                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                />
+                                <label
+                                  for="penjual-pengembang"
+                                  class="ms-2 text-sm text-black"
+                                  >Pengembang</label
+                                >
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- Deskripsi bangunan -->
+                          <div
+                            class="w-full flex flex-col rumahBaru block mt-2.5"
+                          >
+                            <!-- Penjual -->
+
+                            <div class="flex flex-row mb-2.5">
+                              <!-- Luas Tanah m2 -->
+                              <div class="basis-6/12">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="luas_tanah_new"
+                                  >
+                                    Luas Tanah (m²)
+                                  </label>
+                                  <input
+                                    value="300"
+                                    type="number"
+                                    id="neww_luas_tanah_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Luas Bangunan m2 -->
+                              <div class="basis-6/12 ml-3">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="luas_bangunan_new"
+                                  >
+                                    Luas Bangunan (m²)
+                                  </label>
+                                  <input
+                                    value="150"
+                                    type="number"
+                                    id="neww_luas_bangunan_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="flex flex-row mb-2.5">
+                              <!-- Jumlah Kamar Tidur Utama -->
+                              <div class="basis-6/12">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="kamar_tidur_utama_new"
+                                  >
+                                    Kamar Tidur
+                                  </label>
+                                  <input
+                                    value="2"
+                                    type="number"
+                                    id="neww_kamar_tidur_utama_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <!-- Jumlah Kamar Tidur Tambahan -->
+                              <div class="basis-6/12 ml-3">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="kamar_tidur_tambahan_new"
+                                  >
+                                    Kamar Mandi
+                                  </label>
+                                  <input
+                                    value="1"
+                                    type="number"
+                                    id="neww_kamar_tidur_tambahan_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="flex flex-row mb-3">
+                              <!-- Jumlah Kamar Tidur Utama -->
+                              <div class="basis-5/12">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="listrik_utama_new"
+                                  >
+                                    Listrik (watt)
+                                  </label>
+                                  <input
+                                    value="450"
+                                    type="number"
+                                    id="neww_listrik_utama_new"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="basis-6/12 ml-2">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="listrik_utama_new"
+                                  >
+                                    Air
+                                  </label>
+                                  <select
+                                    id="neww_"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  >
+                                    <option value="#">Pilih</option>
+                                    <option selected value="PAM">PAM</option>
+                                    <option value="Air Tanah">Air Tanah</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <!-- Jumlah Kamar Tidur Tambahan -->
+                              <div class="basis-6/12 ml-3">
+                                <div class="relative w-full">
+                                  <label
+                                    class="block text-xs font-bold mb-1"
+                                    for="air_tambahan_new"
+                                  >
+                                    Arah Bangunan
+                                  </label>
+                                  <select
+                                    id="neww_"
+                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                  >
+                                    <option value="#">Pilih</option>
+                                    <option value="Utara">Utara</option>
+                                    <option value="Selatan">Selatan</option>
+
+                                    <option selected value="Barat">
+                                      Barat
+                                    </option>
+
+                                    <option value="Timur">Timur</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!--  -->
+                          <!--  -->
                           <!-- Rumah Baru Disewakan -->
                           <div
                             class="flex flex-row mb-2 rumahBaru disewakan hidden"
-                            >
+                          >
                             <div class="basis-6/12">
                               <div class="relative w-full">
                                 <label
@@ -39257,7 +39599,7 @@
                           <!-- Rumah Seken Dijual -->
                           <div
                             class="flex flex-row mb-2 rumahSeken dijual hidden"
-                            >
+                          >
                             <div class="basis-6/12">
                               <div class="relative w-full">
                                 <label
@@ -39293,7 +39635,7 @@
                           <!-- Rumah Seken Disewakan -->
                           <div
                             class="flex flex-row mb-2 rumahSeken disewakan hidden"
-                            >
+                          >
                             <div class="basis-6/12">
                               <div class="relative w-full">
                                 <label
@@ -39364,123 +39706,123 @@
                     <form
                       class="formEditListingg RemoveClassformEditListingg mt-[2rem]"
                     >
-                         <div class="grid grid-cols-[135px,1fr,135px]">
-                      <div>&nbsp;</div>
-                         <div class="w-full flex flex-col justify-center">
-                        <div class="relative w-full mb-2 flex flex-col -mt-0.5">
-                          <div class="w-full flex flex-col">
-                            <div class="grid grid-cols-2">
-                              <div class="flex items-center">
-                                <input
-                                  checked
-                                  id="default-penjualan-15"
-                                  type="radio"
-                                  value=""
-                                  name="default-penjualan"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                />
-                                <label
-                                  for="default-penjualan-15"
-                                  class="ms-2 text-sm text-black"
-                                  >Dijual</label
-                                >
+                      <div class="grid grid-cols-[135px,1fr,135px]">
+                        <div>&nbsp;</div>
+                        <div class="w-full flex flex-col justify-center">
+                          <div
+                            class="relative w-full mb-2 flex flex-col -mt-0.5"
+                          >
+                            <div class="w-full flex flex-col">
+                              <div class="grid grid-cols-2">
+                                <div class="flex items-center">
+                                  <input
+                                    checked
+                                    id="default-penjualan-15"
+                                    type="radio"
+                                    value=""
+                                    name="default-penjualan"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label
+                                    for="default-penjualan-15"
+                                    class="ms-2 text-sm text-black"
+                                    >Dijual</label
+                                  >
+                                </div>
+                                <div class="flex items-center">
+                                  <input
+                                    id="default-penjualan-16"
+                                    type="radio"
+                                    value=""
+                                    name="default-penjualan"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                  />
+                                  <label
+                                    for="default-penjualan-16"
+                                    class="ms-2 text-sm text-black"
+                                    >Disewakan</label
+                                  >
+                                </div>
                               </div>
-                              <div class="flex items-center">
-                                <input
-                                  id="default-penjualan-16"
-                                  type="radio"
-                                  value=""
-                                  name="default-penjualan"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                />
-                                <label
-                                  for="default-penjualan-16"
-                                  class="ms-2 text-sm text-black"
-                                  >Disewakan</label
-                                >
+                            </div>
+                          </div>
+
+                          <div class="relative w-full mb-2 flex flex-col">
+                            <div class="block text-xs font-bold mb-1.5">
+                              Tipe Properti
+                            </div>
+                            <div class="w-full flex flex-col">
+                              <div class="grid grid-cols-2">
+                                <div class="flex items-center">
+                                  <input
+                                    checked
+                                    id="default-radio-11"
+                                    type="radio"
+                                    value=""
+                                    name="default-radio"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                    onclick="showPropertyType('rumahBaru')"
+                                  />
+                                  <label
+                                    for="default-radio-11"
+                                    class="ms-2 text-sm text-black"
+                                    >Rumah Baru</label
+                                  >
+                                </div>
+                                <div class="flex items-center">
+                                  <input
+                                    id="default-radio-12"
+                                    type="radio"
+                                    value=""
+                                    name="default-radio"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                    onclick="showPropertyType('rumahSeken')"
+                                  />
+                                  <label
+                                    for="default-radio-12"
+                                    class="ms-2 text-sm text-black"
+                                    >Rumah Seken</label
+                                  >
+                                </div>
+                              </div>
+                              <div class="grid grid-cols-2 mt-1">
+                                <div class="flex items-center">
+                                  <input
+                                    id="default-radio-13"
+                                    type="radio"
+                                    value=""
+                                    name="default-radio"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                    onclick="showPropertyType('apartemenBaru')"
+                                  />
+                                  <label
+                                    for="default-radio-13"
+                                    class="ms-2 text-sm text-black"
+                                    >Apartemen Baru</label
+                                  >
+                                </div>
+                                <div class="flex items-center">
+                                  <input
+                                    id="default-radio-14"
+                                    type="radio"
+                                    value=""
+                                    name="default-radio"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                    onclick="showPropertyType('apartemenSeken')"
+                                  />
+                                  <label
+                                    for="default-radio-14"
+                                    class="ms-2 text-sm text-black"
+                                    >Apartemen Seken</label
+                                  >
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-
-                        <div class="relative w-full mb-2 flex flex-col">
-                          <div class="block text-xs font-bold mb-1.5">
-                            Tipe Properti
-                          </div>
-                          <div class="w-full flex flex-col">
-                            <div class="grid grid-cols-2">
-                              <div class="flex items-center">
-                                <input
-                                  checked
-                                  id="default-radio-11"
-                                  type="radio"
-                                  value=""
-                                  name="default-radio"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                  onclick="showPropertyType('rumahBaru')"
-                                />
-                                <label
-                                  for="default-radio-11"
-                                  class="ms-2 text-sm text-black"
-                                  >Rumah Baru</label
-                                >
-                              </div>
-                              <div class="flex items-center">
-                                <input
-                                  id="default-radio-12"
-                                  type="radio"
-                                  value=""
-                                  name="default-radio"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                  onclick="showPropertyType('rumahSeken')"
-                                />
-                                <label
-                                  for="default-radio-12"
-                                  class="ms-2 text-sm text-black"
-                                  >Rumah Seken</label
-                                >
-                              </div>
-                            </div>
-                            <div class="grid grid-cols-2 mt-1">
-                              <div class="flex items-center">
-                                <input
-                                  id="default-radio-13"
-                                  type="radio"
-                                  value=""
-                                  name="default-radio"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                  onclick="showPropertyType('apartemenBaru')"
-                                />
-                                <label
-                                  for="default-radio-13"
-                                  class="ms-2 text-sm text-black"
-                                  >Apartemen Baru</label
-                                >
-                              </div>
-                              <div class="flex items-center">
-                                <input
-                                  id="default-radio-14"
-                                  type="radio"
-                                  value=""
-                                  name="default-radio"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                  onclick="showPropertyType('apartemenSeken')"
-                                />
-                                <label
-                                  for="default-radio-14"
-                                  class="ms-2 text-sm text-black"
-                                  >Apartemen Seken</label
-                                >
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
+                        <div>&nbsp;</div>
                       </div>
-                      <div>&nbsp;</div>
-
-                    </div>
-<!-- 
+                      <!--
                       <div class="flex justify-center col-span-2 pt-5 pb-6">
                         <button
                           type="button"

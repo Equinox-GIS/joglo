@@ -5377,36 +5377,28 @@ sliders.forEach((slider) => {
 });
 
 // Header Menu
-
 document.addEventListener("DOMContentLoaded", function () {
   const buttons1 = document.querySelectorAll(".btn_chip_header1");
   const buttons2 = document.querySelectorAll(".btn_chip_header2");
   const buttons3 = document.querySelectorAll(".btn_chip_header3");
 
-  buttons1.forEach((button) => {
-    button.addEventListener("click", function () {
-      // Remove the 'active_btn_peta' class from all buttons in group 1
-      buttons1.forEach((btn) => btn.classList.remove("active_btn_peta"));
-      // Add the 'active_btn_peta' class to the clicked button
-      this.classList.add("active_btn_peta");
+  function toggleActiveClass(buttons) {
+    buttons.forEach((button) => {
+      button.addEventListener("click", function () {
+        if (this.classList.contains("active_btn_peta")) {
+          // Jika tombol sudah memiliki kelas 'active_btn_peta', hapus kelas tersebut
+          this.classList.remove("active_btn_peta");
+        } else {
+          // Jika tombol belum memiliki kelas 'active_btn_peta', hapus kelas tersebut dari semua tombol lain
+          buttons.forEach((btn) => btn.classList.remove("active_btn_peta"));
+          // Tambahkan kelas 'active_btn_peta' ke tombol yang diklik
+          this.classList.add("active_btn_peta");
+        }
+      });
     });
-  });
+  }
 
-  buttons2.forEach((button) => {
-    button.addEventListener("click", function () {
-      // Remove the 'active_btn_peta' class from all buttons in group 2
-      buttons2.forEach((btn) => btn.classList.remove("active_btn_peta"));
-      // Add the 'active_btn_peta' class to the clicked button
-      this.classList.add("active_btn_peta");
-    });
-  });
-
-  buttons3.forEach((button) => {
-    button.addEventListener("click", function () {
-      // Remove the 'active_btn_peta' class from all buttons in group 3
-      buttons3.forEach((btn) => btn.classList.remove("active_btn_peta"));
-      // Add the 'active_btn_peta' class to the clicked button
-      this.classList.add("active_btn_peta");
-    });
-  });
+  toggleActiveClass(buttons1);
+  toggleActiveClass(buttons2);
+  toggleActiveClass(buttons3);
 });
