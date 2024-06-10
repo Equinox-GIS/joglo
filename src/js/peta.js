@@ -775,7 +775,7 @@ buttons.forEach((button) => {
     const category = this.innerText.trim();
 
     // Jika kategori bukan "Ibadah", atur ulang kategori aktif
-    if (category !== "Ibadah") {
+    if (category !== "Rumah") {
       // Cek apakah kategori ini sudah aktif
       const categoryIndex = activeCategories.indexOf(category);
       if (categoryIndex > -1) {
