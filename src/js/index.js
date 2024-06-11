@@ -2745,7 +2745,7 @@ document.addEventListener("DOMContentLoaded", function () {
         teksBerjalan();
         break;
       case "MenuTigaTab":
-        // console.log("MenuTigaTab");
+        console.log("MenuTigaTab");
         closeTab();
         closeTabDisukai();
         // CloseTabPesan();
@@ -2754,7 +2754,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initSlickFavorit();
         cardModeTigaFavorit();
 
-        console.log("MenuTigaTab");
+        // console.log("MenuTigaTab");
 
         // stopAndResetVideo();
         enable();
