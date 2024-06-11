@@ -10394,7 +10394,7 @@
                     <!--  -->
                     <div
                       id="menu_detail_pertama"
-                      class="menu-content-detaill w-full h-[62vh]  mt-[2rem] hidden"
+                      class="menu-content-detaill w-full h-[62vh] mt-[2rem] hidden"
                     >
                       <div class="h-[60.5vh] overflow-y-hidden hide-scrollbar">
                         <div class="relative">
@@ -38928,16 +38928,14 @@
                     id="menu_detail_duasatu"
                     class="menu-content-detaill_dua w-full h-full overflow-y-hidden hidden"
                   >
-                    <!-- uploadddd -->
-
                     <div
-                      class="w-full h-[61vh] overflow-hidden mt-[2rem] grid grid-cols-5"
+                      class="w-full h-[61vh] overflow-hidden mt-[2rem] grid grid-cols-5 border border-red-500"
                     >
-                      <div class="col-span-2 w-full h-full ">
+                      <!-- Data1 -->
+                      <div class="col-span-2 w-full h-full">
                         <div class="grid grid-cols-1">
-                          <div
-                            class="relative w-full mb-10 flex flex-col"
-                          >
+                          <!--  -->
+                          <div class="relative w-full mb-5 flex flex-col">
                             <div class="w-full flex flex-col">
                               <!--  -->
                               <div class="block text-xs font-bold mb-1">
@@ -38978,7 +38976,8 @@
                             </div>
                           </div>
 
-                          <div class="relative w-full mb-2 flex flex-col">
+                          <!--  -->
+                          <div class="relative w-full mb-5 flex flex-col">
                             <div class="block text-xs font-bold mb-1.5">
                               Tipe Properti
                             </div>
@@ -39076,14 +39075,173 @@
                               <!--  -->
                             </div>
                           </div>
+
+                          <!-- RUMAHBARU RUMAHSEKEN DIJUALL -->
+                          <!-- Koordinat -->
+                          <div
+                            class="relative w-full mb-2 rumahBaru rumahSeken dijual block"
+                          >
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="koordinat_new"
+                            >
+                              Lokasi (klik di peta)
+                            </label>
+                            <input
+                              value=""
+                              type="text"
+                              id="neww_koordinat_new"
+                              class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!-- Kelurahan -->
+                          <div
+                            class="relative w-full mb-2 rumahBaru rumahSeken dijual block"
+                          >
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="kelurahan_new"
+                            >
+                              Kelurahan
+                            </label>
+                            <input
+                              value="Cilandak Barat"
+                              readonly=""
+                              disabled=""
+                              type="text"
+                              id="neww_kelurahan_new"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!-- Kecamatan -->
+                          <div
+                            class="relative w-full mb-2 rumahBaru rumahSeken dijual block"
+                          >
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="kecamatan_new"
+                            >
+                              Kecamatan
+                            </label>
+                            <input
+                              value="Cilandak"
+                              readonly=""
+                              disabled=""
+                              type="text"
+                              id="neww_kecamatan_new"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!-- Kota -->
+                          <div
+                            class="relative w-full mb-2 rumahBaru rumahSeken dijual block"
+                          >
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="kota_new_beda"
+                            >
+                              Kota
+                            </label>
+                            <input
+                              value="Jakarta Selatan"
+                              readonly=""
+                              disabled=""
+                              type="text"
+                              id="neww_kota_new_beda"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!-- RUMAHBARU RUMAHSEKEN DISEWA -->
+
+                          <!-- Koordinat -->
+                          <div
+                            class="relative w-full mb-2 rumahBaru rumahSeken disewakan hidden"
+                          >
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="koordinat_new"
+                            >
+                              Lokasi (klik di peta)
+                            </label>
+                            <input
+                              value=""
+                              type="text"
+                              id="neww_koordinat_new"
+                              class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!-- Kelurahan -->
+                          <div
+                            class="relative w-full mb-2 rumahBaru rumahSeken disewakan hidden"
+                          >
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="kelurahan_new"
+                            >
+                              Kelurahan
+                            </label>
+                            <input
+                              value="Cilandak Barat"
+                              readonly=""
+                              disabled=""
+                              type="text"
+                              id="neww_kelurahan_new"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!-- Kecamatan -->
+                          <div
+                            class="relative w-full mb-2 rumahBaru rumahSeken disewakan hidden"
+                          >
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="kecamatan_new"
+                            >
+                              Kecamatan
+                            </label>
+                            <input
+                              value="Cilandak"
+                              readonly=""
+                              disabled=""
+                              type="text"
+                              id="neww_kecamatan_new"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!-- Kota -->
+                          <div
+                            class="relative w-full mb-2 rumahBaru rumahSeken disewakan hidden"
+                          >
+                            <label
+                              class="block text-xs font-bold mb-1"
+                              for="kota_new_beda"
+                            >
+                              Kota
+                            </label>
+                            <input
+                              value="Jakarta Selatan"
+                              readonly=""
+                              disabled=""
+                              type="text"
+                              id="neww_kota_new_beda"
+                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                            />
+                          </div>
+
+                          <!--  -->
+                          <!--  -->
                         </div>
                       </div>
-                      <div
-                        class="col-span-3 w-full h-full "
-                      >
-                        <div
-                          class="relative w-full ml-3 mb-2 mt-0.5 flex flex-col"
-                        >
+
+                      <div class="col-span-3 w-full h-full">
+                        <div class="relative w-full ml-3 mb-2 flex flex-col">
                           <div class="block text-xs font-bold mb-1.5">
                             Drop foto di sini (maks. 9 gambar)
                           </div>
@@ -39247,1212 +39405,1067 @@
                           <!--  -->
                         </div>
                       </div>
+
+                      <!--  -->
                     </div>
                   </div>
 
                   <div
                     id="menu_detail_duadua"
-                    class="menu-content-detaill_dua w-full h-[67.5vh] overflow-y-auto overflow-x-hidden hide-scrollbar hidden"
+                    class="menu-content-detaill_dua w-full h-full overflow-y-hidden hidden"
                   >
-                    <!--  -->
-
-                    <form
-                      class="formEditListingg RemoveClassformEditListingg mt-[2rem]"
+                    <div
+                      class="w-full h-[61vh] overflow-y-auto overflow-x-hidden hide-scrollbar mt-[2rem] grid grid-cols-1 border border-blue-500"
                     >
-                      <div
-                        class="grid grid-cols-2 gap-y-1 gap-x-3 "
-                      >
-                        <div>
-                          <!-- KAWASAN DIJUAL RUMAH BARU RUMAH SEKEN -->
-                          <div
-                            class="flex flex-row mb-2 rumahBaru rumahSeken dijual block"
-                            >
-                            <div class="basis-6/12">
-                              <div class="relative w-full">
-                                <label
-                                  class="block text-xs font-bold mb-1"
-                                  for="harga_new"
-                                  >Harga (Rp)</label
-                                >
-                                <input
-                                  value="2.500.000.000"
-                                  type="text"
-                                  id="neww_harga_new"
-                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                />
-                              </div>
-                            </div>
-                            <div class="basis-6/12 ml-3">
-                              <div class="relative w-full">
-                                <label
-                                  class="block text-xs font-bold mb-1"
-                                  for="tahun_dibangun_new"
-                                  >Tahun Dibangun</label
-                                >
-                                <input
-                                  value="2024"
-                                  type="number"
-                                  id="neww_tahun_dibangun_new"
-                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                />
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <!-- Koordinat -->
-                          <div
-                            class="relative w-full mb-2 rumahBaru rumahSeken dijual block"
-                            >
-                            <label
-                              class="block text-xs font-bold mb-1"
-                              for="koordinat_new"
-                            >
-                              Lokasi (klik di peta)
-                            </label>
-                            <input
-                              value=""
-                              type="text"
-                              id="neww_koordinat_new"
-                              class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                            />
-                          </div>
-
-                          <!-- Kelurahan -->
-                          <div
-                            class="relative w-full mb-2 rumahBaru rumahSeken dijual block"
-                            >
-                            <label
-                              class="block text-xs font-bold mb-1"
-                              for="kelurahan_new"
-                            >
-                              Kelurahan
-                            </label>
-                            <input
-                              value="Cilandak Barat"
-                              readonly=""
-                              disabled=""
-                              type="text"
-                              id="neww_kelurahan_new"
-                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                            />
-                          </div>
-
-                          <!-- Kecamatan -->
-                          <div
-                            class="relative w-full mb-2 rumahBaru rumahSeken dijual block"
-                            >
-                            <label
-                              class="block text-xs font-bold mb-1"
-                              for="kecamatan_new"
-                            >
-                              Kecamatan
-                            </label>
-                            <input
-                              value="Cilandak"
-                              readonly=""
-                              disabled=""
-                              type="text"
-                              id="neww_kecamatan_new"
-                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                            />
-                          </div>
-
-                          <!-- Kota -->
-                          <div
-                            class="relative w-full mb-2 rumahBaru rumahSeken dijual block"
-                            >
-                            <label
-                              class="block text-xs font-bold mb-1"
-                              for="kota_new_beda"
-                            >
-                              Kota
-                            </label>
-                            <input
-                              value="Jakarta Selatan"
-                              readonly=""
-                              disabled=""
-                              type="text"
-                              id="neww_kota_new_beda"
-                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                            />
-                          </div>
-
-                          <!-- Penjual -->
-                          <div
-                            class="relative w-full mb-2 rumahBaru rumahSeken dijual block mt-3"
-                            >
-                            <div class="block text-xs font-bold my-1">
-                              Pemasang Iklan
-                            </div>
-                            <div class="w-full grid grid-cols-3">
-                              <div class="flex items-center">
-                                <input
-                                  id="neww_penjual-agen"
-                                  type="radio"
-                                  value="agen"
-                                  name="jenis-penjual"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                />
-                                <label
-                                  for="penjual-agen"
-                                  class="ms-2 text-sm text-black"
-                                  >Agen</label
-                                >
-                              </div>
-                              <div class="flex items-center">
-                                <input
-                                  checked
-                                  id="neww_penjual-pemilik"
-                                  type="radio"
-                                  value="pemilik-langsung"
-                                  name="jenis-penjual"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                />
-                                <label
-                                  for="penjual-pemilik"
-                                  class="ms-2 text-sm text-black"
-                                  >Pemilik</label
-                                >
-                              </div>
-                              <div class="flex items-center">
-                                <input
-                                  id="neww_penjual-pengembang"
-                                  type="radio"
-                                  value="pengembang"
-                                  name="jenis-penjual"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                />
-                                <label
-                                  for="penjual-pengembang"
-                                  class="ms-2 text-sm text-black"
-                                  >Pengembang</label
-                                >
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- Deskripsi bangunan -->
-                          <div
-                            class="w-full flex flex-col rumahBaru rumahSeken dijual block mt-2.5"
-                            >
-                            <!-- Penjual -->
-
-                            <div class="flex flex-row mb-2.5">
-                              <!-- Luas Tanah m2 -->
-                              <div class="basis-6/12">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="luas_tanah_new"
-                                  >
-                                    Luas Tanah (m²)
-                                  </label>
-                                  <input
-                                    value="300"
-                                    type="number"
-                                    id="neww_luas_tanah_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Luas Bangunan m2 -->
-                              <div class="basis-6/12 ml-3">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="luas_bangunan_new"
-                                  >
-                                    Luas Bangunan (m²)
-                                  </label>
-                                  <input
-                                    value="150"
-                                    type="number"
-                                    id="neww_luas_bangunan_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="flex flex-row mb-2.5">
-                              <!-- Jumlah Kamar Tidur Utama -->
-                              <div class="basis-6/12">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="kamar_tidur_utama_new"
-                                  >
-                                    Kamar Tidur
-                                  </label>
-                                  <input
-                                    value="2"
-                                    type="number"
-                                    id="neww_kamar_tidur_utama_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Jumlah Kamar Tidur Tambahan -->
-                              <div class="basis-6/12 ml-3">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="kamar_tidur_tambahan_new"
-                                  >
-                                    Kamar Mandi
-                                  </label>
-                                  <input
-                                    value="1"
-                                    type="number"
-                                    id="neww_kamar_tidur_tambahan_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="flex flex-row mb-3">
-                              <!-- Jumlah Kamar Tidur Utama -->
-                              <div class="basis-5/12">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="listrik_utama_new"
-                                  >
-                                    Listrik (watt)
-                                  </label>
-                                  <input
-                                    value="450"
-                                    type="number"
-                                    id="neww_listrik_utama_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <div class="basis-6/12 ml-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="listrik_utama_new"
-                                  >
-                                    Air
-                                  </label>
-                                  <select
-                                    id="neww_"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="#">Pilih</option>
-                                    <option selected value="PAM">PAM</option>
-                                    <option value="Air Tanah">Air Tanah</option>
-                                  </select>
-                                </div>
-                              </div>
-
-                              <!-- Jumlah Kamar Tidur Tambahan -->
-                              <div class="basis-6/12 ml-3">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="air_tambahan_new"
-                                  >
-                                    Arah Bangunan
-                                  </label>
-                                  <select
-                                    id="neww_"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="#">Pilih</option>
-                                    <option value="Utara">Utara</option>
-                                    <option value="Selatan">Selatan</option>
-
-                                    <option selected value="Barat">
-                                      Barat
-                                    </option>
-
-                                    <option value="Timur">Timur</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-
-                          <!-- KAWASAN DISEWAKAN RUMAH BARU RUMAH SEKEN -->
-                          <div
-                            class="flex flex-row mb-2 rumahBaru rumahSeken disewakan hidden"
-                            >
-                            <div class="basis-6/12">
-                              <div class="relative w-full">
-                                <label
-                                  class="block text-xs font-bold mb-1"
-                                  for="harga_new"
-                                  >Disewakan Per Tahun (Rp)</label
-                                >
-                                <input
-                                  value="2.500.000.000"
-                                  type="text"
-                                  id="neww_harga_new"
-                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                />
-                              </div>
-                            </div>
-                            <div class="basis-6/12 ml-3">
-                              <div class="relative w-full">
-                                <label
-                                  class="block text-xs font-bold mb-1"
-                                  for="tahun_dibangun_new"
-                                  >Tahun Dibangun</label
-                                >
-                                <input
-                                  value="2024"
-                                  type="number"
-                                  id="neww_tahun_dibangun_new"
-                                  class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                />
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <!-- Koordinat -->
-                          <div
-                            class="relative w-full mb-2 rumahBaru rumahSeken disewakan hidden"
-                            >
-                            <label
-                              class="block text-xs font-bold mb-1"
-                              for="koordinat_new"
-                            >
-                              Lokasi (klik di peta)
-                            </label>
-                            <input
-                              value=""
-                              type="text"
-                              id="neww_koordinat_new"
-                              class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                            />
-                          </div>
-
-                          <!-- Kelurahan -->
-                          <div
-                            class="relative w-full mb-2 rumahBaru rumahSeken disewakan hidden"
-                            >
-                            <label
-                              class="block text-xs font-bold mb-1"
-                              for="kelurahan_new"
-                            >
-                              Kelurahan
-                            </label>
-                            <input
-                              value="Cilandak Barat"
-                              readonly=""
-                              disabled=""
-                              type="text"
-                              id="neww_kelurahan_new"
-                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                            />
-                          </div>
-
-                          <!-- Kecamatan -->
-                          <div
-                            class="relative w-full mb-2 rumahBaru rumahSeken disewakan hidden"
-                            >
-                            <label
-                              class="block text-xs font-bold mb-1"
-                              for="kecamatan_new"
-                            >
-                              Kecamatan
-                            </label>
-                            <input
-                              value="Cilandak"
-                              readonly=""
-                              disabled=""
-                              type="text"
-                              id="neww_kecamatan_new"
-                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                            />
-                          </div>
-
-                          <!-- Kota -->
-                          <div
-                            class="relative w-full mb-2 rumahBaru rumahSeken disewakan hidden"
-                            >
-                            <label
-                              class="block text-xs font-bold mb-1"
-                              for="kota_new_beda"
-                            >
-                              Kota
-                            </label>
-                            <input
-                              value="Jakarta Selatan"
-                              readonly=""
-                              disabled=""
-                              type="text"
-                              id="neww_kota_new_beda"
-                              class="border-0 px-2 py-1.5 text-black bg-gray-200 rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                            />
-                          </div>
-
-                          <!-- Penjual -->
-                          <div
-                            class="relative w-full mb-2 rumahBaru rumahSeken disewakan hidden mt-3"
-                            >
-                            <div class="block text-xs font-bold my-1">
-                              Pemasang Iklan
-                            </div>
-                            <div class="w-full grid grid-cols-3">
-                              <div class="flex items-center">
-                                <input
-                                  id="neww_penjual-agen"
-                                  type="radio"
-                                  value="agen"
-                                  name="jenis-penjual"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                />
-                                <label
-                                  for="penjual-agen"
-                                  class="ms-2 text-sm text-black"
-                                  >Agen</label
-                                >
-                              </div>
-                              <div class="flex items-center">
-                                <input
-                                  checked
-                                  id="neww_penjual-pemilik"
-                                  type="radio"
-                                  value="pemilik-langsung"
-                                  name="jenis-penjual"
-                                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
-                                />
-                                <label
-                                  for="penjual-pemilik"
-                                  class="ms-2 text-sm text-black"
-                                  >Pemilik</label
-                                >
-                              </div>
-                          
-                            </div>
-                          </div>
-
-                          <!-- Deskripsi bangunan -->
-                          <div
-                            class="w-full flex flex-col rumahBaru rumahSeken disewakan hidden mt-2.5"
-                            >
-                            <!-- Penjual -->
-
-                            <div class="flex flex-row mb-2.5">
-                              <!-- Luas Tanah m2 -->
-                              <div class="basis-6/12">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="luas_tanah_new"
-                                  >
-                                    Luas Tanah (m²)
-                                  </label>
-                                  <input
-                                    value="300"
-                                    type="number"
-                                    id="neww_luas_tanah_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Luas Bangunan m2 -->
-                              <div class="basis-6/12 ml-3">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="luas_bangunan_new"
-                                  >
-                                    Luas Bangunan (m²)
-                                  </label>
-                                  <input
-                                    value="150"
-                                    type="number"
-                                    id="neww_luas_bangunan_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="flex flex-row mb-2.5">
-                              <!-- Jumlah Kamar Tidur Utama -->
-                              <div class="basis-6/12">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="kamar_tidur_utama_new"
-                                  >
-                                    Kamar Tidur
-                                  </label>
-                                  <input
-                                    value="2"
-                                    type="number"
-                                    id="neww_kamar_tidur_utama_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <!-- Jumlah Kamar Tidur Tambahan -->
-                              <div class="basis-6/12 ml-3">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="kamar_tidur_tambahan_new"
-                                  >
-                                    Kamar Mandi
-                                  </label>
-                                  <input
-                                    value="1"
-                                    type="number"
-                                    id="neww_kamar_tidur_tambahan_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="flex flex-row mb-3">
-                              <!-- Jumlah Kamar Tidur Utama -->
-                              <div class="basis-5/12">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="listrik_utama_new"
-                                  >
-                                    Listrik (watt)
-                                  </label>
-                                  <input
-                                    value="450"
-                                    type="number"
-                                    id="neww_listrik_utama_new"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  />
-                                </div>
-                              </div>
-
-                              <div class="basis-6/12 ml-2">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="listrik_utama_new"
-                                  >
-                                    Air
-                                  </label>
-                                  <select
-                                    id="neww_"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="#">Pilih</option>
-                                    <option selected value="PAM">PAM</option>
-                                    <option value="Air Tanah">Air Tanah</option>
-                                  </select>
-                                </div>
-                              </div>
-
-                              <!-- Jumlah Kamar Tidur Tambahan -->
-                              <div class="basis-6/12 ml-3">
-                                <div class="relative w-full">
-                                  <label
-                                    class="block text-xs font-bold mb-1"
-                                    for="air_tambahan_new"
-                                  >
-                                    Arah Bangunan
-                                  </label>
-                                  <select
-                                    id="neww_"
-                                    class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
-                                  >
-                                    <option value="#">Pilih</option>
-                                    <option value="Utara">Utara</option>
-                                    <option value="Selatan">Selatan</option>
-
-                                    <option selected value="Barat">
-                                      Barat
-                                    </option>
-
-                                    <option value="Timur">Timur</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-
-
-                          <!--  -->
-                        </div>
-
-                        <div class="flex flex-col">
-                          <!--  -->
-                          <div class="relative w-full mb-1.5">
-                            <label
-                              class="block text-xs font-bold mb-1"
-                              for="deskripsi_postingan_new"
-                              >Deskripsi (maks. 500 karakter)</label
-                            >
-                            <textarea
-                              name="deskripsi_postingan_new"
-                              id="neww_deskripsi_postingan_new"
-                              class="block px-4 remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 deskripsi_postingan_new"
-                              required
-                              rows="9"
-                            ></textarea>
-                          </div>
-
-
-                          <!-- KAWASAN dijual RUMAH BARU RUMAH SEKEN -->
-
-                                <!-- Hak -->
-                              <div class="flex flex-row mb-1 mt-1 rumahBaru rumahSeken dijual block">
-                                <!-- Jumlah Kamar Tidur Utama -->
-                                <div class="basis-6/12">
-                                  <div class="relative w-full">
-                                    <div class="block text-xs font-bold mb-1">
-                                      Sertifikat
-                                    </div>
-                                    <div class="grid grid-cols-2 w-full h-full">
-                                      <div class="flex items-center">
-                                        <input
-                                          checked
-                                          disabled
-                                          readonly
-                                          id="neww_jenis-surat-shm"
-                                          type="radio"
-                                          value="shm"
-                                          name="jenis-surat"
-                                          class="w-4 h-4 text-blue-600 bg-gray-200 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox"
-                                        />
-                                        <label
-                                          for="jenis-surat-shm"
-                                          class="ms-2 text-sm text-black"
-                                          >SHM</label
-                                        >
-                                      </div>
-                                      <div class="flex items-center">
-                                        <input
-                                          disabled
-                                          readonly
-                                          id="neww_jenis-surat-shgb"
-                                          type="radio"
-                                          value="shgb"
-                                          name="jenis-surat"
-                                          class="w-4 h-4 text-blue-600 bg-gray-200 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox"
-                                        />
-                                        <label
-                                          for="jenis-surat-shgb"
-                                          class="ms-2 text-sm text-black"
-                                          >SHGB</label
-                                        >
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!-- Jenis Surat -->
-                                <div class="basis-6/12 ml-3">
-                                  <div class="relative w-full">
-                                    <div class="block text-xs font-bold mb-1">
-                                      Kelengkapan Surat
-                                    </div>
-                                    <div class="grid grid-cols-2 w-full h-full">
-                                      <div class="flex items-center">
-                                        <input
-                                          checked
-                                          id="neww_jenis-surat-imb"
-                                          type="checkbox"
-                                          class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
-                                          id="neww_"
-                                        />
-                                        <label
-                                          for="jenis-surat-imb"
-                                          class="ms-2 text-sm text-black"
-                                          >IMB</label
-                                        >
-                                      </div>
-                                      <div class="flex items-center">
-                                        <input
-                                          checked
-                                          id="neww_jenis-surat-pbb"
-                                          type="checkbox"
-                                          class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
-                                          id="neww_"
-                                        />
-                                        <label
-                                          for="jenis-surat-pbb"
-                                          class="ms-2 text-sm text-black"
-                                          >PBB</label
-                                        >
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <!-- Fasilitas -->
-                              <div class="w-full flex flex-col text-sm mt-1 rumahBaru rumahSeken dijual block">
-                                <div class="block text-xs font-bold mb-1">
-                                  Fasilitas
-                                </div>
-
-                                <div class="w-full grid grid-cols-2">
-                                  <div class="w-full grid grid-rows-3">
-                                    <!-- AC -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        checked
-                                        id="neww_ac1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="ac1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >AC</label
-                                      >
-                                    </div>
-
-                                    <!-- Canopy -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        checked
-                                        id="neww_canopy1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="canopy1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Canopy</label
-                                      >
-                                    </div>
-
-                                    <!-- Carport -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        checked
-                                        disabled
-                                        id="neww_carport123"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="carport123"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Carport</label
-                                      >
-                                    </div>
-
-                                    <!-- CCTV -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_imb22"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="imb22"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >CCTV</label
-                                      >
-                                    </div>
-
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_jetpump"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="jetpump"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Garasi</label
-                                      >
-                                    </div>
-
-                                    <!--  -->
-                                  </div>
-
-                                  <div class="w-full grid grid-rows-3">
-                                    <!-- One Gate System -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_ogs1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="ogs1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Jet Pump</label
-                                      >
-                                    </div>
-
-                                    <!-- Rooftop -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_rooftop1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="rooftop1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Rooftop</label
-                                      >
-                                    </div>
-
-                                    <!-- Swimming Pool -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_pool1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="pool1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Swimming Pool</label
-                                      >
-                                    </div>
-
-                                    <!-- Taman -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_taman1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="taman1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Taman</label
-                                      >
-                                    </div>
-
-                                    <!-- Toren -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_toren1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="toren1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Toren</label
-                                      >
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-
-
-                          <!-- KAWASAN disewakan RUMAH BARU RUMAH SEKEN -->
-
-                                <!-- Hak -->
-                              <div class="flex flex-row mb-1 mt-1 rumahBaru rumahSeken disewakan hidden">
-                                <!-- Jumlah Kamar Tidur Utama -->
-                                <div class="basis-6/12">
-                                  <div class="relative w-full">
-                                    <div class="block text-xs font-bold mb-1">
-                                      Sertifikat
-                                    </div>
-                                    <div class="grid grid-cols-2 w-full h-full">
-                                      <div class="flex items-center">
-                                        <input
-                                          checked
-                                          disabled
-                                          readonly
-                                          id="neww_jenis-surat-shm"
-                                          type="radio"
-                                          value="shm"
-                                          name="jenis-surat"
-                                          class="w-4 h-4 text-blue-600 bg-gray-200 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox"
-                                        />
-                                        <label
-                                          for="jenis-surat-shm"
-                                          class="ms-2 text-sm text-black"
-                                          >SHM</label
-                                        >
-                                      </div>
-                                      <div class="flex items-center">
-                                        <input
-                                          disabled
-                                          readonly
-                                          id="neww_jenis-surat-shgb"
-                                          type="radio"
-                                          value="shgb"
-                                          name="jenis-surat"
-                                          class="w-4 h-4 text-blue-600 bg-gray-200 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox"
-                                        />
-                                        <label
-                                          for="jenis-surat-shgb"
-                                          class="ms-2 text-sm text-black"
-                                          >SHGB</label
-                                        >
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!-- Jenis Surat -->
-                                <div class="basis-6/12 ml-3">
-                                  <div class="relative w-full">
-                                    <div class="block text-xs font-bold mb-1">
-                                      Kelengkapan Surat
-                                    </div>
-                                    <div class="grid grid-cols-2 w-full h-full">
-                                      <div class="flex items-center">
-                                        <input
-                                          checked
-                                          id="neww_jenis-surat-imb"
-                                          type="checkbox"
-                                          class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
-                                          id="neww_"
-                                        />
-                                        <label
-                                          for="jenis-surat-imb"
-                                          class="ms-2 text-sm text-black"
-                                          >IMB</label
-                                        >
-                                      </div>
-                                      <div class="flex items-center">
-                                        <input
-                                          checked
-                                          id="neww_jenis-surat-pbb"
-                                          type="checkbox"
-                                          class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
-                                          id="neww_"
-                                        />
-                                        <label
-                                          for="jenis-surat-pbb"
-                                          class="ms-2 text-sm text-black"
-                                          >PBB</label
-                                        >
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <!-- Fasilitas -->
-                              <div class="w-full flex flex-col text-sm mt-1 rumahBaru rumahSeken disewakan hidden">
-                                <div class="block text-xs font-bold mb-1">
-                                  Fasilitas
-                                </div>
-
-                                <div class="w-full grid grid-cols-2">
-                                  <div class="w-full grid grid-rows-3">
-                                    <!-- AC -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        checked
-                                        id="neww_ac1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="ac1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >AC</label
-                                      >
-                                    </div>
-
-                                    <!-- Canopy -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        checked
-                                        id="neww_canopy1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="canopy1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Canopy</label
-                                      >
-                                    </div>
-
-                                    <!-- Carport -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        checked
-                                        disabled
-                                        id="neww_carport123"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="carport123"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Carport</label
-                                      >
-                                    </div>
-
-                                    <!-- CCTV -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_imb22"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="imb22"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >CCTV</label
-                                      >
-                                    </div>
-
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_jetpump"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="jetpump"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Garasi</label
-                                      >
-                                    </div>
-
-                                    <!--  -->
-                                  </div>
-
-                                  <div class="w-full grid grid-rows-3">
-                                    <!-- One Gate System -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_ogs1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="ogs1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Jet Pump</label
-                                      >
-                                    </div>
-
-                                    <!-- Rooftop -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_rooftop1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="rooftop1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Rooftop</label
-                                      >
-                                    </div>
-
-                                    <!-- Swimming Pool -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_pool1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="pool1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Swimming Pool</label
-                                      >
-                                    </div>
-
-                                    <!-- Taman -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_taman1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="taman1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Taman</label
-                                      >
-                                    </div>
-
-                                    <!-- Toren -->
-                                    <div class="flex items-center mb-1">
-                                      <input
-                                        disabled
-                                        id="neww_toren1"
-                                        type="checkbox"
-                                        value=""
-                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
-                                      />
-                                      <label
-                                        for="toren1"
-                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
-                                        >Toren</label
-                                      >
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                          <!--  -->
-                        </div>
-                      </div>
-                      <div class="flex justify-center col-span-2 pt-5 pb-6">
-                        <button
-                          type="button"
-                          class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                      <!-- Data2 -->
+                      <div class="w-full h-full border border-blue-500">
+                        <form
+                          class="formEditListingg RemoveClassformEditListingg"
                         >
-                          Simpan
-                        </button>
+                          <div class="grid grid-cols-2 gap-y-1 gap-x-3">
+                            <div>
+                              <!-- KAWASAN DIJUAL RUMAH BARU RUMAH SEKEN -->
+                              <div
+                                class="flex flex-row mb-2 rumahBaru rumahSeken dijual block"
+                              >
+                                <div class="basis-6/12">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="harga_new"
+                                      >Harga (Rp)</label
+                                    >
+                                    <input
+                                      value="2.500.000.000"
+                                      type="text"
+                                      id="neww_harga_new"
+                                      class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="basis-6/12 ml-3">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="tahun_dibangun_new"
+                                      >Tahun Dibangun</label
+                                    >
+                                    <input
+                                      value="2024"
+                                      type="number"
+                                      id="neww_tahun_dibangun_new"
+                                      class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Penjual -->
+                              <div
+                                class="relative w-full mb-2 rumahBaru rumahSeken dijual block mt-3"
+                              >
+                                <div class="block text-xs font-bold my-1">
+                                  Pemasang Iklan
+                                </div>
+                                <div class="w-full grid grid-cols-3">
+                                  <div class="flex items-center">
+                                    <input
+                                      id="neww_penjual-agen"
+                                      type="radio"
+                                      value="agen"
+                                      name="jenis-penjual"
+                                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                    />
+                                    <label
+                                      for="penjual-agen"
+                                      class="ms-2 text-sm text-black"
+                                      >Agen</label
+                                    >
+                                  </div>
+                                  <div class="flex items-center">
+                                    <input
+                                      checked
+                                      id="neww_penjual-pemilik"
+                                      type="radio"
+                                      value="pemilik-langsung"
+                                      name="jenis-penjual"
+                                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                    />
+                                    <label
+                                      for="penjual-pemilik"
+                                      class="ms-2 text-sm text-black"
+                                      >Pemilik</label
+                                    >
+                                  </div>
+                                  <div class="flex items-center">
+                                    <input
+                                      id="neww_penjual-pengembang"
+                                      type="radio"
+                                      value="pengembang"
+                                      name="jenis-penjual"
+                                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                    />
+                                    <label
+                                      for="penjual-pengembang"
+                                      class="ms-2 text-sm text-black"
+                                      >Pengembang</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Deskripsi bangunan -->
+                              <div
+                                class="w-full flex flex-col rumahBaru rumahSeken dijual block mt-2.5"
+                              >
+                                <!-- Penjual -->
+
+                                <div class="flex flex-row mb-2.5">
+                                  <!-- Luas Tanah m2 -->
+                                  <div class="basis-6/12">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="luas_tanah_new"
+                                      >
+                                        Luas Tanah (m²)
+                                      </label>
+                                      <input
+                                        value="300"
+                                        type="number"
+                                        id="neww_luas_tanah_new"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <!-- Luas Bangunan m2 -->
+                                  <div class="basis-6/12 ml-3">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="luas_bangunan_new"
+                                      >
+                                        Luas Bangunan (m²)
+                                      </label>
+                                      <input
+                                        value="150"
+                                        type="number"
+                                        id="neww_luas_bangunan_new"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="flex flex-row mb-2.5">
+                                  <!-- Jumlah Kamar Tidur Utama -->
+                                  <div class="basis-6/12">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="kamar_tidur_utama_new"
+                                      >
+                                        Kamar Tidur
+                                      </label>
+                                      <input
+                                        value="2"
+                                        type="number"
+                                        id="neww_kamar_tidur_utama_new"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <!-- Jumlah Kamar Tidur Tambahan -->
+                                  <div class="basis-6/12 ml-3">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="kamar_tidur_tambahan_new"
+                                      >
+                                        Kamar Mandi
+                                      </label>
+                                      <input
+                                        value="1"
+                                        type="number"
+                                        id="neww_kamar_tidur_tambahan_new"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="flex flex-row mb-3">
+                                  <!-- Jumlah Kamar Tidur Utama -->
+                                  <div class="basis-5/12">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="listrik_utama_new"
+                                      >
+                                        Listrik (watt)
+                                      </label>
+                                      <input
+                                        value="450"
+                                        type="number"
+                                        id="neww_listrik_utama_new"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="basis-6/12 ml-2">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="listrik_utama_new"
+                                      >
+                                        Air
+                                      </label>
+                                      <select
+                                        id="neww_"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      >
+                                        <option value="#">Pilih</option>
+                                        <option selected value="PAM">
+                                          PAM
+                                        </option>
+                                        <option value="Air Tanah">
+                                          Air Tanah
+                                        </option>
+                                      </select>
+                                    </div>
+                                  </div>
+
+                                  <!-- Jumlah Kamar Tidur Tambahan -->
+                                  <div class="basis-6/12 ml-3">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="air_tambahan_new"
+                                      >
+                                        Arah Bangunan
+                                      </label>
+                                      <select
+                                        id="neww_"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      >
+                                        <option value="#">Pilih</option>
+                                        <option value="Utara">Utara</option>
+                                        <option value="Selatan">Selatan</option>
+
+                                        <option selected value="Barat">
+                                          Barat
+                                        </option>
+
+                                        <option value="Timur">Timur</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- KAWASAN DISEWAKAN RUMAH BARU RUMAH SEKEN -->
+                              <div
+                                class="flex flex-row mb-2 rumahBaru rumahSeken disewakan hidden"
+                              >
+                                <div class="basis-6/12">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="harga_new"
+                                      >Disewakan Per Tahun (Rp)</label
+                                    >
+                                    <input
+                                      value="2.500.000.000"
+                                      type="text"
+                                      id="neww_harga_new"
+                                      class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="basis-6/12 ml-3">
+                                  <div class="relative w-full">
+                                    <label
+                                      class="block text-xs font-bold mb-1"
+                                      for="tahun_dibangun_new"
+                                      >Tahun Dibangun</label
+                                    >
+                                    <input
+                                      value="2024"
+                                      type="number"
+                                      id="neww_tahun_dibangun_new"
+                                      class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Penjual -->
+                              <div
+                                class="relative w-full mb-2 rumahBaru rumahSeken disewakan hidden mt-3"
+                              >
+                                <div class="block text-xs font-bold my-1">
+                                  Pemasang Iklan
+                                </div>
+                                <div class="w-full grid grid-cols-3">
+                                  <div class="flex items-center">
+                                    <input
+                                      id="neww_penjual-agen"
+                                      type="radio"
+                                      value="agen"
+                                      name="jenis-penjual"
+                                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                    />
+                                    <label
+                                      for="penjual-agen"
+                                      class="ms-2 text-sm text-black"
+                                      >Agen</label
+                                    >
+                                  </div>
+                                  <div class="flex items-center">
+                                    <input
+                                      checked
+                                      id="neww_penjual-pemilik"
+                                      type="radio"
+                                      value="pemilik-langsung"
+                                      name="jenis-penjual"
+                                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-white"
+                                    />
+                                    <label
+                                      for="penjual-pemilik"
+                                      class="ms-2 text-sm text-black"
+                                      >Pemilik</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Deskripsi bangunan -->
+                              <div
+                                class="w-full flex flex-col rumahBaru rumahSeken disewakan hidden mt-2.5"
+                              >
+                                <!-- Penjual -->
+
+                                <div class="flex flex-row mb-2.5">
+                                  <!-- Luas Tanah m2 -->
+                                  <div class="basis-6/12">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="luas_tanah_new"
+                                      >
+                                        Luas Tanah (m²)
+                                      </label>
+                                      <input
+                                        value="300"
+                                        type="number"
+                                        id="neww_luas_tanah_new"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <!-- Luas Bangunan m2 -->
+                                  <div class="basis-6/12 ml-3">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="luas_bangunan_new"
+                                      >
+                                        Luas Bangunan (m²)
+                                      </label>
+                                      <input
+                                        value="150"
+                                        type="number"
+                                        id="neww_luas_bangunan_new"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full remove_style_arrow_inputan"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="flex flex-row mb-2.5">
+                                  <!-- Jumlah Kamar Tidur Utama -->
+                                  <div class="basis-6/12">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="kamar_tidur_utama_new"
+                                      >
+                                        Kamar Tidur
+                                      </label>
+                                      <input
+                                        value="2"
+                                        type="number"
+                                        id="neww_kamar_tidur_utama_new"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <!-- Jumlah Kamar Tidur Tambahan -->
+                                  <div class="basis-6/12 ml-3">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="kamar_tidur_tambahan_new"
+                                      >
+                                        Kamar Mandi
+                                      </label>
+                                      <input
+                                        value="1"
+                                        type="number"
+                                        id="neww_kamar_tidur_tambahan_new"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="flex flex-row mb-3">
+                                  <!-- Jumlah Kamar Tidur Utama -->
+                                  <div class="basis-5/12">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="listrik_utama_new"
+                                      >
+                                        Listrik (watt)
+                                      </label>
+                                      <input
+                                        value="450"
+                                        type="number"
+                                        id="neww_listrik_utama_new"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div class="basis-6/12 ml-2">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="listrik_utama_new"
+                                      >
+                                        Air
+                                      </label>
+                                      <select
+                                        id="neww_"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      >
+                                        <option value="#">Pilih</option>
+                                        <option selected value="PAM">
+                                          PAM
+                                        </option>
+                                        <option value="Air Tanah">
+                                          Air Tanah
+                                        </option>
+                                      </select>
+                                    </div>
+                                  </div>
+
+                                  <!-- Jumlah Kamar Tidur Tambahan -->
+                                  <div class="basis-6/12 ml-3">
+                                    <div class="relative w-full">
+                                      <label
+                                        class="block text-xs font-bold mb-1"
+                                        for="air_tambahan_new"
+                                      >
+                                        Arah Bangunan
+                                      </label>
+                                      <select
+                                        id="neww_"
+                                        class="border-0 px-2 py-1.5 text-black bg-white rounded-lg text-sm focus:outline-none focus:ring-0 w-full"
+                                      >
+                                        <option value="#">Pilih</option>
+                                        <option value="Utara">Utara</option>
+                                        <option value="Selatan">Selatan</option>
+
+                                        <option selected value="Barat">
+                                          Barat
+                                        </option>
+
+                                        <option value="Timur">Timur</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--  -->
+                            </div>
+
+                            <div class="flex flex-col">
+                              <!--  -->
+                              <div class="relative w-full mb-1.5">
+                                <label
+                                  class="block text-xs font-bold mb-1"
+                                  for="deskripsi_postingan_new"
+                                  >Deskripsi (maks. 500 karakter)</label
+                                >
+                                <textarea
+                                  name="deskripsi_postingan_new"
+                                  id="neww_deskripsi_postingan_new"
+                                  class="block px-4 remove-scroll-textarea resize-none w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 deskripsi_postingan_new"
+                                  required
+                                  rows="9"
+                                ></textarea>
+                              </div>
+
+                              <!-- KAWASAN dijual RUMAH BARU RUMAH SEKEN -->
+
+                              <!-- Hak -->
+                              <div
+                                class="flex flex-row mb-1 mt-1 rumahBaru rumahSeken dijual block"
+                              >
+                                <!-- Jumlah Kamar Tidur Utama -->
+                                <div class="basis-6/12">
+                                  <div class="relative w-full">
+                                    <div class="block text-xs font-bold mb-1">
+                                      Sertifikat
+                                    </div>
+                                    <div class="grid grid-cols-2 w-full h-full">
+                                      <div class="flex items-center">
+                                        <input
+                                          checked
+                                          disabled
+                                          readonly
+                                          id="neww_jenis-surat-shm"
+                                          type="radio"
+                                          value="shm"
+                                          name="jenis-surat"
+                                          class="w-4 h-4 text-blue-600 bg-gray-200 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                        />
+                                        <label
+                                          for="jenis-surat-shm"
+                                          class="ms-2 text-sm text-black"
+                                          >SHM</label
+                                        >
+                                      </div>
+                                      <div class="flex items-center">
+                                        <input
+                                          disabled
+                                          readonly
+                                          id="neww_jenis-surat-shgb"
+                                          type="radio"
+                                          value="shgb"
+                                          name="jenis-surat"
+                                          class="w-4 h-4 text-blue-600 bg-gray-200 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                        />
+                                        <label
+                                          for="jenis-surat-shgb"
+                                          class="ms-2 text-sm text-black"
+                                          >SHGB</label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Jenis Surat -->
+                                <div class="basis-6/12 ml-3">
+                                  <div class="relative w-full">
+                                    <div class="block text-xs font-bold mb-1">
+                                      Kelengkapan Surat
+                                    </div>
+                                    <div class="grid grid-cols-2 w-full h-full">
+                                      <div class="flex items-center">
+                                        <input
+                                          checked
+                                          id="neww_jenis-surat-imb"
+                                          type="checkbox"
+                                          class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
+                                          id="neww_"
+                                        />
+                                        <label
+                                          for="jenis-surat-imb"
+                                          class="ms-2 text-sm text-black"
+                                          >IMB</label
+                                        >
+                                      </div>
+                                      <div class="flex items-center">
+                                        <input
+                                          checked
+                                          id="neww_jenis-surat-pbb"
+                                          type="checkbox"
+                                          class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
+                                          id="neww_"
+                                        />
+                                        <label
+                                          for="jenis-surat-pbb"
+                                          class="ms-2 text-sm text-black"
+                                          >PBB</label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Fasilitas -->
+                              <div
+                                class="w-full flex flex-col text-sm mt-1 rumahBaru rumahSeken dijual block"
+                              >
+                                <div class="block text-xs font-bold mb-1">
+                                  Fasilitas
+                                </div>
+
+                                <div class="w-full grid grid-cols-2">
+                                  <div class="w-full grid grid-rows-3">
+                                    <!-- AC -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        checked
+                                        id="neww_ac1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="ac1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >AC</label
+                                      >
+                                    </div>
+
+                                    <!-- Canopy -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        checked
+                                        id="neww_canopy1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="canopy1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Canopy</label
+                                      >
+                                    </div>
+
+                                    <!-- Carport -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        checked
+                                        disabled
+                                        id="neww_carport123"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="carport123"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Carport</label
+                                      >
+                                    </div>
+
+                                    <!-- CCTV -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_imb22"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="imb22"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >CCTV</label
+                                      >
+                                    </div>
+
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_jetpump"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="jetpump"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Garasi</label
+                                      >
+                                    </div>
+
+                                    <!--  -->
+                                  </div>
+
+                                  <div class="w-full grid grid-rows-3">
+                                    <!-- One Gate System -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_ogs1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="ogs1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Jet Pump</label
+                                      >
+                                    </div>
+
+                                    <!-- Rooftop -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_rooftop1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="rooftop1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Rooftop</label
+                                      >
+                                    </div>
+
+                                    <!-- Swimming Pool -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_pool1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="pool1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Swimming Pool</label
+                                      >
+                                    </div>
+
+                                    <!-- Taman -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_taman1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="taman1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Taman</label
+                                      >
+                                    </div>
+
+                                    <!-- Toren -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_toren1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="toren1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Toren</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- KAWASAN disewakan RUMAH BARU RUMAH SEKEN -->
+
+                              <!-- Hak -->
+                              <div
+                                class="flex flex-row mb-1 mt-1 rumahBaru rumahSeken disewakan hidden"
+                              >
+                                <!-- Jumlah Kamar Tidur Utama -->
+                                <div class="basis-6/12">
+                                  <div class="relative w-full">
+                                    <div class="block text-xs font-bold mb-1">
+                                      Sertifikat
+                                    </div>
+                                    <div class="grid grid-cols-2 w-full h-full">
+                                      <div class="flex items-center">
+                                        <input
+                                          checked
+                                          disabled
+                                          readonly
+                                          id="neww_jenis-surat-shm"
+                                          type="radio"
+                                          value="shm"
+                                          name="jenis-surat"
+                                          class="w-4 h-4 text-blue-600 bg-gray-200 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                        />
+                                        <label
+                                          for="jenis-surat-shm"
+                                          class="ms-2 text-sm text-black"
+                                          >SHM</label
+                                        >
+                                      </div>
+                                      <div class="flex items-center">
+                                        <input
+                                          disabled
+                                          readonly
+                                          id="neww_jenis-surat-shgb"
+                                          type="radio"
+                                          value="shgb"
+                                          name="jenis-surat"
+                                          class="w-4 h-4 text-blue-600 bg-gray-200 border-gray-300 focus:border-transparent focus:ring-0 hapus_focus_checkbox"
+                                        />
+                                        <label
+                                          for="jenis-surat-shgb"
+                                          class="ms-2 text-sm text-black"
+                                          >SHGB</label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Jenis Surat -->
+                                <div class="basis-6/12 ml-3">
+                                  <div class="relative w-full">
+                                    <div class="block text-xs font-bold mb-1">
+                                      Kelengkapan Surat
+                                    </div>
+                                    <div class="grid grid-cols-2 w-full h-full">
+                                      <div class="flex items-center">
+                                        <input
+                                          checked
+                                          id="neww_jenis-surat-imb"
+                                          type="checkbox"
+                                          class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
+                                          id="neww_"
+                                        />
+                                        <label
+                                          for="jenis-surat-imb"
+                                          class="ms-2 text-sm text-black"
+                                          >IMB</label
+                                        >
+                                      </div>
+                                      <div class="flex items-center">
+                                        <input
+                                          checked
+                                          id="neww_jenis-surat-pbb"
+                                          type="checkbox"
+                                          class="h-3.5 w-3.5 form-check-input hapus_focus_checkbox focus:border focus:ring-0 focus:ring-offset-0 text-blue-600 border-gray-300 border rounded-sm"
+                                          id="neww_"
+                                        />
+                                        <label
+                                          for="jenis-surat-pbb"
+                                          class="ms-2 text-sm text-black"
+                                          >PBB</label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Fasilitas -->
+                              <div
+                                class="w-full flex flex-col text-sm mt-1 rumahBaru rumahSeken disewakan hidden"
+                              >
+                                <div class="block text-xs font-bold mb-1">
+                                  Fasilitas
+                                </div>
+
+                                <div class="w-full grid grid-cols-2">
+                                  <div class="w-full grid grid-rows-3">
+                                    <!-- AC -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        checked
+                                        id="neww_ac1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="ac1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >AC</label
+                                      >
+                                    </div>
+
+                                    <!-- Canopy -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        checked
+                                        id="neww_canopy1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="canopy1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Canopy</label
+                                      >
+                                    </div>
+
+                                    <!-- Carport -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        checked
+                                        disabled
+                                        id="neww_carport123"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="carport123"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Carport</label
+                                      >
+                                    </div>
+
+                                    <!-- CCTV -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_imb22"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="imb22"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >CCTV</label
+                                      >
+                                    </div>
+
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_jetpump"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="jetpump"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Garasi</label
+                                      >
+                                    </div>
+
+                                    <!--  -->
+                                  </div>
+
+                                  <div class="w-full grid grid-rows-3">
+                                    <!-- One Gate System -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_ogs1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="ogs1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Jet Pump</label
+                                      >
+                                    </div>
+
+                                    <!-- Rooftop -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_rooftop1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="rooftop1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Rooftop</label
+                                      >
+                                    </div>
+
+                                    <!-- Swimming Pool -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_pool1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="pool1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Swimming Pool</label
+                                      >
+                                    </div>
+
+                                    <!-- Taman -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_taman1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="taman1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Taman</label
+                                      >
+                                    </div>
+
+                                    <!-- Toren -->
+                                    <div class="flex items-center mb-1">
+                                      <input
+                                        disabled
+                                        id="neww_toren1"
+                                        type="checkbox"
+                                        value=""
+                                        class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded border-transparent focus:border-transparent focus:ring-0 hapus_focus_checkbox bg-gray-200"
+                                      />
+                                      <label
+                                        for="toren1"
+                                        class="ml-2 mt-[0.150rem] text-sm cursor-pointer font-medium text-gray-900"
+                                        >Toren</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!--  -->
+                            </div>
+                          </div>
+                          <div class="flex justify-center col-span-2 pt-5 pb-6">
+                            <button
+                              type="button"
+                              class="h-8 bg-[#0394F7] hover:bg-[#1877F2] text-white font-medium rounded-[5px] text-xs px-3"
+                            >
+                              Simpan
+                            </button>
+                          </div>
+                        </form>
                       </div>
-                    </form>
+                    </div>
 
                     <!--  -->
                   </div>
