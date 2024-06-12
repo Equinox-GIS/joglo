@@ -5402,3 +5402,8 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleActiveClass(buttons2);
   toggleActiveClass(buttons3);
 });
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('newww_penjual-agen').checked = true;
+        });
