@@ -1437,6 +1437,6 @@ input[name="plan"]:checked ~ .menuKetigaAds {
   }
 
   .position_gambar_upload {
-    @apply h-[33.3vh];
+    @apply h-[41.3vh];
   }
 }
