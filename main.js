@@ -1,4 +1,4 @@
-// import "./src/css/index.css";
+import "./src/css/index.css";
 
 // import js
 // import "./src/js/main.js";
