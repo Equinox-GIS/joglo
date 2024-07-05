@@ -626,33 +626,33 @@
 }
 
 #ControlRangeSimulasi2 {
-  -webkit-appearance: none;
-  appearance: none;
+  /* -webkit-appearance: none; */
+  /* appearance: none;
   width: 100%;
   cursor: pointer;
   outline: none;
   border-radius: 15px;
-  height: 4px;
+  height: 4px; */
 }
 
 #ControlRangeSimulasi2::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
+  /* -webkit-appearance: none; */
+  /* appearance: none;
   height: 13px;
   width: 13px;
   background-color: #0394f7;
   border-radius: 50%;
   border: none;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out; */
 }
 
 #ControlRangeSimulasi2::-moz-range-thumb {
-  height: 13px;
+  /* height: 13px;
   width: 13px;
   background-color: #0394f7;
   border-radius: 50%;
   border: none;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out; */
 }
 
 #ControlRangeSimulasi3 {
